@@ -82,7 +82,7 @@ CallToActionSection.propTypes = {
   titlePart1: PropTypes.string.isRequired,
   titlePart2: PropTypes.string,
   titlePart3: PropTypes.string,
-  description: PropTypes.string.isRquired,
+  description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
 };
 
