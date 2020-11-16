@@ -8,9 +8,32 @@ import {
 import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
-  content: {
+  root: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+    [theme.breakpoints.down('md')]: {
+      paddingTop: theme.spacing(5),
+      paddingBottom: theme.spacing(5),
+    },
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: theme.spacing(4),
+      paddingBottom: theme.spacing(4),
+    },
+  },
+  gridContent: {
     display: 'flex',
     alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      order: '-1',
+    },
+  },
+  gridImage: {
+    [theme.breakpoints.down('md')]: {
+      paddingTop: theme.spacing(6),
+    },
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: theme.spacing(4),
+    },
   },
   title: {
     paddingBottom: theme.spacing(4),
@@ -33,10 +56,11 @@ const useStyles = makeStyles((theme) => ({
 const ImportanceAplications = () => {
   const classes = useStyles();
   return (
-    <Box component="section" py={8}>
+    <Box component="section" className={classes.root}>
       <Container fixed>
         <Grid container>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={false} md={1} />
+          <Grid item xs={12} md={5} className={classes.gridImage}>
             <Box component="figure">
               <Image
                 src="/assets/images/importancia-aplicaciones-moviles.png"
@@ -45,7 +69,7 @@ const ImportanceAplications = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={12} sm={6} className={classes.content}>
+          <Grid item xs={12} md={5} className={classes.gridContent}>
             <Box component="article">
               <Typography variant="h2" className={classes.title}>
                 Importancia de las aplicaciones móviles
@@ -77,6 +101,7 @@ const ImportanceAplications = () => {
               </Typography>
             </Box>
           </Grid>
+          <Grid item xs={false} md={1} />
         </Grid>
       </Container>
     </Box>

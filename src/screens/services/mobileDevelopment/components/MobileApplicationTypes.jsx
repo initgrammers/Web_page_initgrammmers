@@ -1,84 +1,106 @@
-import {
-  makeStyles,
-  Box,
-  Container,
-  Grid,
-  Typography,
-} from '@material-ui/core';
+import { makeStyles, Box, Container, Typography } from '@material-ui/core';
 import Image from 'next/image';
+import ApplicationType from './ApplicationType';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    height: 644,
-    [theme.breakpoints.down('xs')]: {
-      height: 973,
-    },
-  },
-  contentGrid: {
-    height: 580,
+  mainSection: {
     background: theme.palette.secondary.main,
-    [theme.breakpoints.down('xs')]: {
-      height: 909,
-    },
+    marginBottom: theme.spacing(8),
   },
-  content: {
-    display: 'flex',
-    alignItems: 'center',
+  detailsContent: {
+    paddingTop: theme.spacing(6),
   },
-
-  aplicationType: {
-    paddingTop: theme.spacing(8),
+  title: {
+    textAlign: 'center',
+  },
+  applicationType: {
+    textAlign: 'center',
+    paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(2),
   },
-  grid: {
-    height: '100%',
-  },
-  gridImage: {
+  containerImage: {
     position: 'relative',
-    paddingTop: theme.spacing(4),
+    overflow: 'hidden',
+    bottom: `-${theme.spacing(8)}px`,
+    left: theme.spacing(2),
   },
   image: {
-    position: 'absolute',
+    width: 504,
+    height: 607,
+    position: 'relative',
+  },
+  [theme.breakpoints.up('sm')]: {
+    containerImage: {
+      position: 'relative',
+      display: 'flex',
+      justifyContent: 'center',
+    },
+    image: {
+      width: 547,
+      height: 659,
+    },
+  },
+  [theme.breakpoints.up('md')]: {
+    container: {
+      padding: `0 ${theme.spacing(23)}px`,
+    },
+  },
+  [theme.breakpoints.up('lg')]: {
+    container: {
+      display: 'flex',
+      padding: `0 ${theme.spacing(13)}px`,
+    },
+    detailsContent: {
+      flex: 5,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      paddingTop: 0,
+    },
+    containerImage: {
+      flex: 5,
+    },
+    image: {
+      width: 504,
+      height: 607,
+    },
   },
 }));
 
-const MobileAplicationTypes = () => {
+const Banner = () => {
   const classes = useStyles();
   return (
-    <Box component="section" className={classes.root}>
-      <Box className={classes.contentGrid}>
-        <Container className={classes.contentGrid}>
-          <Grid container className={classes.contentGrid}>
-            <Grid item xs={12} md={6} className={classes.content}>
-              <Box component="article">
-                <Typography variant="h2">
-                  Tipos de aplicaciones móviles
-                </Typography>
-                <Typography variant="h3" className={classes.aplicationType}>
-                  App Nativas
-                </Typography>
-
-                <Typography variant="body1">
-                  Dirigido específicamente para un sistema operativo (iOS,
-                  Android), programada bajo un lenguage específico,aprovechan
-                  todas las funcionalidades del dispositivo.
-                </Typography>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={6} className={classes.gridImage}>
-              <Box component="figure" className={classes.image}>
-                <Image
-                  src="/assets/images/tipos-aplicaciones-moviles.png"
-                  width={504}
-                  height={607}
-                />
-              </Box>
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
+    <Box component="section" className={classes.mainSection}>
+      <Container fixed className={classes.container}>
+        <Box className={classes.detailsContent}>
+          {/* <Box component="article">
+            <Typography variant="h2" className={classes.title}>
+              Tipos de aplicaciones móviles
+            </Typography>
+            <Typography variant="h3" className={classes.applicationType}>
+              Aplicaciones nativas
+            </Typography>
+            <Typography variant="body1">
+              Dirigido específicamente para un sistema operativo (iOS, Android),
+              programada bajo un lenguage específico,aprovechan todas las
+              funcionalidades del dispositivo.
+            </Typography>
+          </Box> */}
+          <ApplicationType />
+        </Box>
+        <Box className={classes.containerImage}>
+          <Box component="figure" className={classes.image}>
+            <Image
+              quality={100}
+              priority
+              src="/assets/images/tipos-aplicaciones-moviles.png"
+              layout="fill"
+            />
+          </Box>
+        </Box>
+      </Container>
     </Box>
   );
 };
 
-export default MobileAplicationTypes;
+export default Banner;

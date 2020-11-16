@@ -11,7 +11,7 @@ const Layout = ({ children, navigation }) => (
     </Head>
     <Navigation index={navigation?.index} />
     <main>{children}</main>
-    <CustomFooter />
+    {/* <CustomFooter /> */}
   </div>
 );
 
