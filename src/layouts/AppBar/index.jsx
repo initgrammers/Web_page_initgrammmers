@@ -130,7 +130,7 @@ const Navigation = ({ index }) => {
                   })}
                   onClick={handleClose}
                 >
-                  <Link href="/Services/WebDevelopment">
+                  <Link href="/services/WebDevelopment">
                     <a>Desarrollo de aplicaciones web </a>
                   </Link>
                 </MenuItem>
@@ -140,7 +140,7 @@ const Navigation = ({ index }) => {
                   })}
                   onClick={handleClose}
                 >
-                  <Link href="/Services/MobileDevelopment">
+                  <Link href="/services/MobileDevelopment">
                     <a>Desarrollo de aplicaciones móviles </a>
                   </Link>
                 </MenuItem>

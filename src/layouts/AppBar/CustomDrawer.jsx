@@ -56,7 +56,7 @@ export default function CustomDrawer({
                   [classSelected]: index === 'WebDevelopment',
                 })}
               >
-                <Link href="/Services/WebDevelopment">
+                <Link href="/services/WebDevelopment">
                   <a>Desarrollo de aplicaciones web </a>
                 </Link>
               </ListItem>
@@ -67,7 +67,7 @@ export default function CustomDrawer({
                   [classSelected]: index === 'MobileDevelopment',
                 })}
               >
-                <Link href="/Services/MobileDevelopment">
+                <Link href="/services/MobileDevelopment">
                   <a>Desarrollo de aplicaciones móviles </a>
                 </Link>
               </ListItem>
