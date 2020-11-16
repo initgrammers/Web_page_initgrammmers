@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
 import Box from '@material-ui/core/Box';
@@ -10,29 +11,6 @@ import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-
-const tutorialSteps = [
-  {
-    label: 'Aplicaciones nativas',
-    imgPath:
-      'El desarrollo de estas aplicaciones móviles va dirigido específicamente para un sistema operativo (iOS, Android),  programada bajo un lenguage específico, la ventaja de estas apps es que aprovechan todas las funcionalidades del dispositivo.',
-  },
-  {
-    label: 'Aplicaciones Web',
-    imgPath:
-      'Básicamente es una página web optimizada de tal manera que se puede adaptar a cualquier dispositivo móvil, está optimización es posible a HTML, CSS y Javascript. Se puede acceder a la aplicación web a través de un navegador web ingresando su URL.',
-  },
-  {
-    label: 'Aplicaciones híbridas',
-    imgPath:
-      'Desarrollo de aplicaciones móviles que se programan para funcionar en varias plataformas iOS o Android. Pueden adaptarse a cualquier dispositivo móvil y aprovechar el acceso a las funcionalidades del dispositivo.Las aplicaciones híbridas permiten ahorrar recursos y tiempo de desarrollo.',
-  },
-  {
-    label: 'Aplicaciones PWA',
-    imgPath:
-      'Desarrollo de aplicaciones móviles que combina aspectos de una aplicación nativa y aplicación web. Se desarrollan en lenguajes de programación web por lo que pueden adaptarse a cualquier dispositivo móvil y aprovechar el acceso a las funcionalidades del dispositivo. ',
-  },
-];
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -62,11 +40,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ApplicationType() {
+function ApplicationType({ sectionTitle, typesApplication }) {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = tutorialSteps.length;
+  const maxSteps = typesApplication.length;
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -76,14 +54,14 @@ function ApplicationType() {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleStepChange = (step) => {
-    setActiveStep(step);
+  const handleStepChange = (app) => {
+    setActiveStep(app);
   };
 
   return (
     <Box className={classes.root}>
       <Typography variant="h2" className={classes.title}>
-        Tipos de aplicaciones móviles
+        {sectionTitle}
       </Typography>
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
@@ -92,14 +70,14 @@ function ApplicationType() {
         enableMouseEvents
         interval={2000}
       >
-        {tutorialSteps.map((step, index) => (
+        {typesApplication.map((app, index) => (
           <>
             {Math.abs(activeStep - index) <= 2 ? (
-              <Box key={step.label} component="article">
+              <Box key={app.title} component="article">
                 <Typography variant="h3" className={classes.applicationType}>
-                  {step.label}
+                  {app.title}
                 </Typography>
-                <Typography variant="body1">{step.imgPath}</Typography>
+                <Typography variant="body1">{app.description}</Typography>
               </Box>
             ) : null}
           </>
@@ -147,5 +125,11 @@ function ApplicationType() {
     </Box>
   );
 }
+
+ApplicationType.propTypes = {
+  sectionTitle: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  typesApplication: PropTypes.array.isRequired,
+};
 
 export default ApplicationType;

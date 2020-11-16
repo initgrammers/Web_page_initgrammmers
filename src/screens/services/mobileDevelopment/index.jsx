@@ -1,14 +1,14 @@
 import Banner from './components/Banner';
 import ImportanceApplications from './components/ImportanceApplications';
-import MobileApplicationTypes from './components/MobileApplicationTypes';
-import ApplicationsAtYorFingertips from './components/ApplicationsAtYourFingertips';
+import ApplicationsAtYourFingertips from './sections/ApplicationsAtYourFingertips';
+import MobileApplicationTypes from './sections/MobileApplicationTypes';
 
 const index = () => (
   <>
     <Banner />
     <ImportanceApplications />
     <MobileApplicationTypes />
-    <ApplicationsAtYorFingertips />
+    <ApplicationsAtYourFingertips />
   </>
 );
 

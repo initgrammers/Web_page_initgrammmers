@@ -1,4 +1,5 @@
-import { makeStyles, Box, Container, Typography } from '@material-ui/core';
+import { makeStyles, Box, Container } from '@material-ui/core';
+import PropTypes from 'prop-types';
 import Image from 'next/image';
 import ApplicationType from './ApplicationType';
 
@@ -67,26 +68,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Banner = () => {
+const SectionApplicationTypes = ({ sectionTitle, typesApplication }) => {
   const classes = useStyles();
   return (
     <Box component="section" className={classes.mainSection}>
       <Container fixed className={classes.container}>
         <Box className={classes.detailsContent}>
-          {/* <Box component="article">
-            <Typography variant="h2" className={classes.title}>
-              Tipos de aplicaciones móviles
-            </Typography>
-            <Typography variant="h3" className={classes.applicationType}>
-              Aplicaciones nativas
-            </Typography>
-            <Typography variant="body1">
-              Dirigido específicamente para un sistema operativo (iOS, Android),
-              programada bajo un lenguage específico,aprovechan todas las
-              funcionalidades del dispositivo.
-            </Typography>
-          </Box> */}
-          <ApplicationType />
+          <ApplicationType
+            sectionTitle={sectionTitle}
+            typesApplication={typesApplication}
+          />
         </Box>
         <Box className={classes.containerImage}>
           <Box component="figure" className={classes.image}>
@@ -103,4 +94,10 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+SectionApplicationTypes.propTypes = {
+  sectionTitle: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  typesApplication: PropTypes.array.isRequired,
+};
+
+export default SectionApplicationTypes;

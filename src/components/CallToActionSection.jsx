@@ -5,6 +5,7 @@ import {
   Button,
   Typography,
 } from '@material-ui/core';
+import PropTypes from 'prop-types';
 import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
@@ -45,35 +46,48 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ApplicationsAtYourFingertips = () => {
+const CallToActionSection = ({
+  titlePart1,
+  titlePart2,
+  titlePart3,
+  description,
+  image,
+}) => {
   const classes = useStyles();
   return (
     <Box component="section" className={classes.root}>
       <Container fixed className={classes.content}>
         <Box component="article" className={classes.content}>
           <Typography variant="h1" component="h1" className={classes.title}>
-            El mundo de las
-            <span> aplicaciones móviles </span>
-            al alcance de tu mano
+            {titlePart1}
+            <span>{titlePart2}</span>
+            {titlePart3}
           </Typography>
           <Typography variant="body1" className={classes.description}>
-            El futuro de las aplicaciones móviles para ti, te apoyamos durante
-            todo el proceso
+            {description}
           </Typography>
         </Box>
         <Button variant="contained" className={classes.button}>
           CONTÁCTANOS
         </Button>
         <Box component="figure" className={classes.image}>
-          <Image
-            src="/assets/images/aplicaciones-moviles-al-alcance-de-tu-mano.png"
-            width={500}
-            height={550}
-          />
+          <Image src={image} width={500} height={550} />
         </Box>
       </Container>
     </Box>
   );
 };
 
-export default ApplicationsAtYourFingertips;
+CallToActionSection.propTypes = {
+  titlePart1: PropTypes.string.isRequired,
+  titlePart2: PropTypes.string,
+  titlePart3: PropTypes.string,
+  description: PropTypes.string.isRquired,
+  image: PropTypes.string.isRequired,
+};
+
+CallToActionSection.defaultProps = {
+  titlePart2: '',
+  titlePart3: '',
+};
+export default CallToActionSection;
