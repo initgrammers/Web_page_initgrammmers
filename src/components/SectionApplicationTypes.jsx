@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SectionApplicationTypes = ({ sectionTitle, typesApplication }) => {
+const SectionApplicationTypes = ({ sectionTitle, typesApplication, image }) => {
   const classes = useStyles();
   return (
     <Box component="section" className={classes.mainSection}>
@@ -81,12 +81,7 @@ const SectionApplicationTypes = ({ sectionTitle, typesApplication }) => {
         </Box>
         <Box className={classes.containerImage}>
           <Box component="figure" className={classes.image}>
-            <Image
-              quality={100}
-              priority
-              src="/assets/images/tipos-aplicaciones-moviles.png"
-              layout="fill"
-            />
+            <Image quality={100} priority src={image} layout="fill" />
           </Box>
         </Box>
       </Container>
@@ -98,6 +93,7 @@ SectionApplicationTypes.propTypes = {
   sectionTitle: PropTypes.string.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   typesApplication: PropTypes.array.isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 export default SectionApplicationTypes;

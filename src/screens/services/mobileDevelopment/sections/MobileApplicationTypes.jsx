@@ -27,6 +27,7 @@ const MobileApplicationTypes = () => (
   <SectionApplicationTypes
     sectionTitle="Tipos de aplicaciones móviles"
     typesApplication={typesApplication}
+    image="/assets/images/tipos-aplicaciones-moviles.png"
   />
 );
 
