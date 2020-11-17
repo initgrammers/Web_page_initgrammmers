@@ -20,15 +20,7 @@ const useStyle = makeStyles({
     width: 505,
     position: 'relative',
   },
-  imgBot: {
-    height: 65,
-    width: 300,
-  },
-  container: {
-    position: 'relative',
-    overflow: 'hidden',
-
-  },
+  
   text: {
     height: 260,
     width: 400,
@@ -64,11 +56,7 @@ const IncreaseVisibility = ({
           </Box>
 
         </Box>
-        <Box className={classes.container}>
-          <Box mt={22} className={classes.imgBot}>
-            <Image component="figure" src={image} layout="fill" />
-          </Box>
-        </Box>
+        
       </Container>
     </Box>
   );
