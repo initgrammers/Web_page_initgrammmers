@@ -9,37 +9,11 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import styles from '../assets/styles/ApplicationType';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    color: theme.palette.primary.contrastText,
-    [theme.breakpoints.up('lg')]: {
-      width: 536,
-    },
-  },
-  title: {
-    textAlign: 'center',
-  },
-  applicationType: {
-    textAlign: 'center',
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(2),
-  },
-  stepper: {
-    display: 'flex',
-    justifyContent: 'center',
-    background: 'none',
-    '& .MuiMobileStepper-dot': {
-      backgroundColor: 'rgba(255, 255, 255, 0.6)',
-    },
-    '& .MuiMobileStepper-dotActive': {
-      backgroundColor: theme.palette.primary.contrastText,
-    },
-  },
-}));
-
+const useStyles = makeStyles(styles);
 function ApplicationType({ sectionTitle, typesApplication }) {
   const classes = useStyles();
   const theme = useTheme();
