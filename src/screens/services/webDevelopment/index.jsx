@@ -1,10 +1,12 @@
 import WebApplicationTypes from './sections/WebApplicationTypes';
 import PartOfInternetWorld from './sections/PartOfInternetWorld';
-import AplicationDevelopmentDesign from './sections/AplicationDevelopmentDesign';
+import Banner from './sections/Banner';
+import VisibilityCompany from './sections/VisibilityCompany';
 
 const index = () => (
   <>
-    <AplicationDevelopmentDesign />
+    <Banner />
+    <VisibilityCompany />
     <WebApplicationTypes />
     <PartOfInternetWorld />
   </>
