@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Hidden from '@material-ui/core/Hidden';
+import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -12,16 +13,39 @@ import Button from '@material-ui/core/Button';
 import Link from 'next/link';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import clsx from 'clsx';
-
 import PropTypes from 'prop-types';
+import LogoInitgrammers from '#svg/LogoInitgrammers';
 import CustomDrawer from './CustomDrawer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  main: {
+    background: theme.palette.primary.contrastText,
+    filter: `drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))`,
+    [theme.breakpoints.up('lg')]: {
+      filter: `drop-shadow(9px 9px 16px rgba(0, 0, 0, 0.25)); color: black`,
+    },
+    color: theme.palette.common.black,
+  },
+  logo: {
+    marginRigh: theme.spacing(2),
+  },
+  sectionLogo: {
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'star',
+    [theme.breakpoints.up('sm')]: {
+      justifyContent: 'center',
+    },
+  },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(0),
+    color: theme.palette.primary.main,
+    [theme.breakpoints.up('lg')]: {
+      marginRight: theme.spacing(2),
+    },
   },
   title: {
     flexGrow: 1,
@@ -71,8 +95,14 @@ const Navigation = ({ index }) => {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar className={classes.main}>
           <Hidden mdUp>
+            <Box className={classes.sectionLogo}>
+              <Button className={classes.logo} aria-label="logo Initgrammers">
+                <LogoInitgrammers />
+              </Button>
+            </Box>
+
             <IconButton
               edge="start"
               className={classes.menuButton}
@@ -85,6 +115,10 @@ const Navigation = ({ index }) => {
           </Hidden>
           <Hidden smDown>
             <div className={classes.title}>
+              <Button className={classes.logo} aria-label="logo Initgrammers">
+                <LogoInitgrammers />
+              </Button>
+
               <Button
                 aria-label="Servicios"
                 aria-controls="menu-servicios"
