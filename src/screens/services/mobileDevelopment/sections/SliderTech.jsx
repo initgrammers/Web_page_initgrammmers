@@ -4,37 +4,37 @@ import SecctionContainer from '#Components/Sections/SecctionContainer';
 const data = [
   {
     label: 'Label 1',
-    image: '/assets/svg/html-5.svg',
+    image: '/assets/svg/Flutter.svg',
   },
   {
     label: 'Label 2',
     image:
-      'https://images.squarespace-cdn.com/content/v1/58b2f629be65940cc47d9572/1497923519940-T46HV7G4Y5J2824E0YV6/ke17ZwdGBToddI8pDm48kFQQgP34qnCpeHaeAOzTt7pZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PICHnXC1b9smDvYLPdL-DS7U1pkhCtl83kemXd5r3C5ngKMshLAGzx4R3EDFOm1kBS/starbucks-logo.jpg',
+      '/assets/svg/react-2.svg',
   },
   {
     label: 'Label 3',
     image:
-      'https://assets.entrepreneur.com/images/misc/1464722957_coca_cola_logo.jpg',
+      '/assets/svg/android.svg',
   },
   {
     label: 'Label 4',
     image:
-      'https://www.logaster.com/blog/wp-content/uploads/2018/05/LogoMakr.png',
+      '/assets/svg/firebase-1.svg',
   },
   {
     label: 'Label 5',
     image:
-      'https://static.rfstat.com/renderforest/images/v2/logo-homepage/embleme_3.png',
+      '/assets/svg/angular-icon-1.svg',
   },
   {
     label: 'Label 6',
     image:
-      'https://www.pngfind.com/pngs/m/378-3789685_logos-de-redes-sociales-png-png-download-4000.png',
+      '/assets/svg/apple.svg',
   },
   {
     label: 'Label 7',
     image:
-      'https://e7.pngegg.com/pngimages/335/1001/png-clipart-social-media-facebook-computer-icons-social-network-linkedin-text-logo-internet.png',
+      '/assets/svg/next-js.svg',
   },
   {
     label: 'Label 8',
