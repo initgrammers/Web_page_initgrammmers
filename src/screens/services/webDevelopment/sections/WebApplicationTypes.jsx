@@ -1,5 +1,6 @@
 import React from 'react';
-import SectionApplicationTypes from '#Components/SectionApplicationTypes';
+// import SectionApplicationTypes from '#Components/SectionApplicationTypes';
+import SectionApplicationTypes from '../components/SectionApplicationTypes';
 
 const typesApplication = [
   {

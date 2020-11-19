@@ -35,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
     height: 235,
     position: 'relative',
   },
+  mainImage: {
+    objectFit: 'contain',
+  },
   [theme.breakpoints.up('sm')]: {
     detailsContent: {
       paddingTop: theme.spacing(12),
@@ -106,6 +109,7 @@ const Banner = () => {
               priority
               src="/assets/images/paginas-web-desarrollo-diseno-aplicaciones-web-ecuador.png"
               layout="fill"
+              className={classes.mainImage}
             />
           </Box>
         </Box>
