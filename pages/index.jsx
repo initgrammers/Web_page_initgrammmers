@@ -1,12 +1,12 @@
 import Layout from '../src/layouts';
-import PageMobileDevelopment from '#screens/services/mobileDevelopment/';
+import LandingPage from '#screens/landingPage';
 
-const Index = () => <PageMobileDevelopment />;
+const Index = () => <LandingPage />;
 
 export const getServerSideProps = async () => ({
   props: {
     layoutProps: {
-      navigation: { index: 'MobileDevelopment' },
+      navigation: { index: 'index' },
     },
   },
 });
