@@ -27,18 +27,18 @@ const CustomFooter = () => {
   const services = [
     {
       label: 'Desarrollo de aplicaciones web',
-      href: '/Services/WebDevelopment',
+      href: '/services/WebDevelopment',
     },
     {
       label: 'Desarrollo de aplicaciones móviles',
-      href: '/Services/MobileDevelopment',
+      href: '/services/MobileDevelopment',
     },
     {
       label: 'Desarrollo de aplicaciones PWA',
-      href: '/Services/PWADevelopment',
+      href: '/services/PWADevelopment',
     },
-    { label: 'Marketing y diseño digital', href: '/Services/DigitalMarketing' },
-    { label: 'Diseño UI / UX ', href: '/Services/UXUIDesign' },
+    { label: 'Marketing y diseño digital', href: '/services/DigitalMarketing' },
+    { label: 'Diseño UI / UX ', href: '/services/UXUIDesign' },
     { label: 'Tiendas en línea / E-commerce', href: 'Ecommerce' },
   ];
   const portfolio = [
