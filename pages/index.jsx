@@ -1,7 +1,7 @@
 import Layout from '../src/layouts';
 import PageMobileDevelopment from '#screens/services/mobileDevelopment/';
 
-const index = () => <PageMobileDevelopment />;
+const Index = () => <PageMobileDevelopment />;
 
-index.layout = Layout;
-export default index;
+Index.layout = Layout;
+export default Index;

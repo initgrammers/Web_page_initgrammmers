@@ -2,18 +2,20 @@ import Banner from './components/Banner';
 import ImportanceApplications from './components/ImportanceApplications';
 import ApplicationsAtYourFingertips from './sections/ApplicationsAtYourFingertips';
 import MobileApplicationTypes from './sections/MobileApplicationTypes';
-import SliderHidden from './sections/SliderHidden';
-import Accordion from './sections/Accordion';
+import Questions from './sections/Questions';
+import SliderTech from './sections/SliderTech';
+// TODO delete this component and references
+// import SliderHidden from './sections/SliderHidden';
 
-const index = () => (
+const MobileDevelopment = () => (
   <>
     <Banner />
     <ImportanceApplications />
     <MobileApplicationTypes />
-    <SliderHidden />
+    <SliderTech />
     <ApplicationsAtYourFingertips />
-    <Accordion />
+    <Questions />
   </>
 );
 
-export default index;
+export default MobileDevelopment;

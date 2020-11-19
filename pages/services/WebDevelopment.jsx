@@ -1,7 +1,7 @@
 import Layout from '../../src/layouts';
 import WebDevelopmentPage from '#screens/services/webDevelopment';
 
-const index = () => <WebDevelopmentPage />;
+const Page = () => <WebDevelopmentPage />;
 
-index.layout = Layout;
-export default index;
+Page.layout = Layout;
+export default Page;

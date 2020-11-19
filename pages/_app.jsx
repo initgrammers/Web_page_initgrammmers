@@ -48,6 +48,7 @@ const MyApp = ({ Component, pageProps }) => {
           as="font"
           crossOrigin=""
         />
+        <link href="/fonts/Raleway/fonts.css" rel="stylesheet" />
       </Head>
       <ThemeProvider theme={theme}>
         <Layout {...layoutProps}>
@@ -63,7 +64,9 @@ const MyApp = ({ Component, pageProps }) => {
 
 MyApp.propTypes = {
   Component: PropTypes.func.isRequired,
-  pageProps: PropTypes.shape().isRequired,
+  pageProps: PropTypes.shape(),
 };
-
+MyApp.defaultProps = {
+  pageProps: {},
+};
 export default MyApp;

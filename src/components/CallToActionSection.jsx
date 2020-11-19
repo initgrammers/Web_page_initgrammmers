@@ -8,6 +8,8 @@ import {
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from '../assets/styles/CallToActionType';
+import SecctionContainer from '#Components/Sections/SecctionContainer';
+import Subtitle from './Subtitle';
 
 const useStyles = makeStyles(styles);
 
@@ -19,15 +21,24 @@ const CallToActionSection = ({
   image,
 }) => {
   const classes = useStyles();
+  // TODO Review this component
   return (
-    <Box component="section" className={classes.root}>
+    <SecctionContainer>
       <Container fixed className={classes.content}>
         <Box component="article" className={classes.content}>
-          <Typography variant="h1" component="h1" className={classes.title}>
+          <Subtitle
+            black
+            head={titlePart1}
+            emphasis={titlePart2}
+            tail={titlePart3}
+            align="center"
+            mb={4}
+          />
+          {/* <Typography variant="h1" component="h1" className={classes.title}>
             {titlePart1}
             <span>{titlePart2}</span>
             {titlePart3}
-          </Typography>
+          </Typography> */}
           <Typography variant="body1" className={classes.description}>
             {description}
           </Typography>
@@ -39,7 +50,7 @@ const CallToActionSection = ({
           <Image src={image} width={500} height={550} />
         </Box>
       </Container>
-    </Box>
+    </SecctionContainer>
   );
 };
 
