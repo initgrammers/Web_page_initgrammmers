@@ -4,6 +4,7 @@ import {
   Container,
   Grid,
   Typography,
+  Hidden,
 } from '@material-ui/core';
 import Image from 'next/image';
 import styles from '../styles/ImportanceApplications';
@@ -14,7 +15,7 @@ const ImportanceAplications = () => {
   const classes = useStyles();
   return (
     <Box component="section" className={classes.root}>
-      <Container fixed>
+      <Container fixed className={classes.mainContent}>
         <Grid container>
           <Grid item xs={false} md={1} />
           <Grid item xs={12} md={5} className={classes.gridImage}>
@@ -61,6 +62,15 @@ const ImportanceAplications = () => {
           <Grid item xs={false} md={1} />
         </Grid>
       </Container>
+      <Hidden mdDown>
+        <Box className={classes.containerBackgroundImage}>
+          <Image
+            src="/assets/images/figures/bloque2.png"
+            layout="fill"
+            className={classes.backgroundImage}
+          />
+        </Box>
+      </Hidden>
     </Box>
   );
 };

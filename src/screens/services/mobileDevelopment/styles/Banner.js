@@ -48,9 +48,14 @@ const styles = (theme) => ({
     },
   },
   [theme.breakpoints.up('lg')]: {
+    mainSection: {
+      position: 'relative',
+    },
     container: {
       display: 'flex',
       padding: `0 ${theme.spacing(13)}px`,
+      position: 'relative',
+      zIndex: 1,
     },
     detailsContent: {
       flex: 5,
@@ -66,6 +71,12 @@ const styles = (theme) => ({
       width: 504,
       height: 679,
     },
+  },
+  containerBackgroundImage: {
+    width: `100%`,
+    height: 791,
+    position: 'absolute',
+    bottom: `-${theme.spacing(8)}px`,
   },
 });
 

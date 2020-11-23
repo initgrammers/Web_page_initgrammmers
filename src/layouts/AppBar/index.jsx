@@ -16,6 +16,7 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
 import CustomDrawer from './CustomDrawer';
+import CustomMenu from '#Components/Menu';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -265,6 +266,7 @@ const Navigation = ({ index }) => {
         open={open}
         handleDrawerOpen={handleDrawerOpen}
       />
+      {/* <CustomMenu /> */}
     </div>
   );
 };

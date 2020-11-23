@@ -13,6 +13,10 @@ const styles = (theme) => ({
       paddingBottom: theme.spacing(4),
     },
   },
+  mainContent: {
+    zIndex: 1,
+    position: 'relative',
+  },
   gridContent: {
     display: 'flex',
     alignItems: 'center',
@@ -43,6 +47,18 @@ const styles = (theme) => ({
   },
   figureRight: {
     margin: '0 0 0 15px',
+  },
+  containerBackgroundImage: {
+    width: `100%`,
+    height: 829,
+    position: 'absolute',
+    top: `-1px`,
+  },
+
+  [theme.breakpoints.up('lg')]: {
+    root: {
+      position: 'relative',
+    },
   },
 });
 

@@ -4,6 +4,7 @@ import {
   Container,
   Typography,
   Button,
+  Hidden,
 } from '@material-ui/core';
 import Image from 'next/image';
 import styles from '../styles/Banner';
@@ -14,6 +15,11 @@ const Banner = () => {
   const classes = useStyles();
   return (
     <Box component="section" className={classes.mainSection}>
+      <Hidden mdDown>
+        <Box className={classes.containerBackgroundImage}>
+          <Image src="/assets/images/figures/bloque1.png" layout="fill" />
+        </Box>
+      </Hidden>
       <Container fixed className={classes.container}>
         <Box component="article" className={classes.detailsContent}>
           <Typography variant="h1" className={classes.title}>

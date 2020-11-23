@@ -1,7 +1,7 @@
 import Layout from '../src/layouts';
-import LandingPage from '#screens/landingPage';
+import mobileDevelopment from '#screens/services/mobileDevelopment';
 
-const Index = () => <LandingPage />;
+const Index = () => <mobileDevelopment />;
 
 export const getServerSideProps = async () => ({
   props: {

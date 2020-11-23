@@ -11,8 +11,8 @@ const MobileDevelopment = () => (
   <>
     <Banner />
     <ImportanceApplications />
-    <MobileApplicationTypes />
     <SliderTech />
+    <MobileApplicationTypes />
     <ApplicationsAtYourFingertips />
     <Questions />
   </>

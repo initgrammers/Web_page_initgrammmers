@@ -1,5 +1,5 @@
 import React from 'react';
-import CallToActionSection from '#Components/CallToActionSection';
+import CallToActionSection from '../components/CallToActionSection';
 
 const ApplicationAtYourFingertips = () => (
   <CallToActionSection
