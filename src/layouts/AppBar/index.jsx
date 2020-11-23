@@ -95,7 +95,7 @@ const Navigation = ({ index }) => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      {/* <AppBar position="static">
         <Toolbar className={classes.main}>
           <Hidden mdUp>
             <Box className={classes.sectionLogo}>
@@ -265,8 +265,8 @@ const Navigation = ({ index }) => {
         index={index}
         open={open}
         handleDrawerOpen={handleDrawerOpen}
-      />
-      {/* <CustomMenu /> */}
+      /> */}
+      <CustomMenu />
     </div>
   );
 };
