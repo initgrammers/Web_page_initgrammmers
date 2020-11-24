@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Options = ({ visible }) => {
+const Options = () => {
   const classes = useStyles();
   return (
     <Box className={classes.root}>
