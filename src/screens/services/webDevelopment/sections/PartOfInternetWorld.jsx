@@ -9,6 +9,8 @@ const PartOfInternetWorld = () => (
     description=" El futuro del desarrollo web para ti, te apoyamos durante
   todo el proceso"
     image="/assets/images/forma-parte-del-mundo-del-internet-Initgrammers.png"
+    backgroundImage="/assets/images/figures/webDevelopment/bloque6.png"
+    heightImage={944}
   />
 );
 
