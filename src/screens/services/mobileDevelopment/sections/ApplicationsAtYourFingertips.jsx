@@ -1,5 +1,5 @@
 import React from 'react';
-import CallToActionSection from '../components/CallToActionSection';
+import CallToActionSection from '#Components/CallToActionSection';
 
 const ApplicationAtYourFingertips = () => (
   <CallToActionSection
@@ -9,6 +9,8 @@ const ApplicationAtYourFingertips = () => (
     description=" El futuro de las aplicaciones móviles para ti, te apoyamos durante
   todo el proceso"
     image="/assets/images/aplicaciones-moviles-al-alcance-de-tu-mano.png"
+    backgroundImage="/assets/images/figures/bloque5.png"
+    heightImage={1019}
   />
 );
 

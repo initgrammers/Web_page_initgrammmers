@@ -1,15 +1,10 @@
-import {
-  makeStyles,
-  Box,
-  Container,
-  Button,
-  Typography,
-} from '@material-ui/core';
+import { makeStyles, Box, Button, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from '../assets/styles/CallToActionType';
-import SecctionContainer from '#Components/Sections/SecctionContainer';
-import Subtitle from './Subtitle';
+import Subtitle from '#Components/Subtitle';
+import BackgroundImage from '#Components/BackgroundImage';
+import CustomContainer from '#Components/CustomContainer';
 
 const useStyles = makeStyles(styles);
 
@@ -19,12 +14,15 @@ const CallToActionSection = ({
   titlePart3,
   description,
   image,
+  backgroundImage,
+  heightImage,
 }) => {
   const classes = useStyles();
-  // TODO Review this component
+
   return (
-    <SecctionContainer>
-      <Container fixed className={classes.content}>
+    <Box component="section" position="relative">
+      <BackgroundImage image={backgroundImage} height={heightImage} />
+      <CustomContainer>
         <Box component="article" className={classes.content}>
           <Subtitle
             black
@@ -34,23 +32,18 @@ const CallToActionSection = ({
             align="center"
             mb={4}
           />
-          {/* <Typography variant="h1" component="h1" className={classes.title}>
-            {titlePart1}
-            <span>{titlePart2}</span>
-            {titlePart3}
-          </Typography> */}
           <Typography variant="body1" className={classes.description}>
             {description}
           </Typography>
+          <Button variant="contained" className={classes.button}>
+            CONTÁCTANOS
+          </Button>
+          <Box component="figure" className={classes.image}>
+            <Image src={image} width={500} height={550} />
+          </Box>
         </Box>
-        <Button variant="contained" className={classes.button}>
-          CONTÁCTANOS
-        </Button>
-        <Box component="figure" className={classes.image}>
-          <Image src={image} width={500} height={550} />
-        </Box>
-      </Container>
-    </SecctionContainer>
+      </CustomContainer>
+    </Box>
   );
 };
 
@@ -60,10 +53,14 @@ CallToActionSection.propTypes = {
   titlePart3: PropTypes.string,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  backgroundImage: PropTypes.string,
+  heightImage: PropTypes.number,
 };
 
 CallToActionSection.defaultProps = {
   titlePart2: '',
   titlePart3: '',
+  backgroundImage: '',
+  heightImage: 0,
 };
 export default CallToActionSection;

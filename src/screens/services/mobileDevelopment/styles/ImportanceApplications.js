@@ -48,18 +48,6 @@ const styles = (theme) => ({
   figureRight: {
     margin: '0 0 0 15px',
   },
-  containerBackgroundImage: {
-    width: `100%`,
-    height: 829,
-    position: 'absolute',
-    top: `-1px`,
-  },
-
-  [theme.breakpoints.up('lg')]: {
-    root: {
-      position: 'relative',
-    },
-  },
 });
 
 styles.propTypes = {

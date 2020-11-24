@@ -1,23 +1,14 @@
 import PropTypes from 'prop-types';
 
 const styles = (theme) => ({
-  root: {
-    paddingTop: theme.spacing(16),
-    paddingBottom: theme.spacing(16),
-    [theme.breakpoints.down('md')]: {
-      paddingTop: theme.spacing(13),
-      paddingBottom: theme.spacing(13),
-    },
-    [theme.breakpoints.down('xs')]: {
-      paddingTop: theme.spacing(4),
-      paddingBottom: theme.spacing(4),
-    },
-  },
   content: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
   },
+
   title: {
     paddingBottom: theme.spacing(4),
     textAlign: 'center',
@@ -28,6 +19,7 @@ const styles = (theme) => ({
   description: {
     paddingTop: theme.spacing(6),
     paddingBottom: theme.spacing(4),
+    textAlign: 'center',
   },
   image: {
     paddingTop: theme.spacing(6),

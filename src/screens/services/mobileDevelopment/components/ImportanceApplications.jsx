@@ -1,22 +1,21 @@
-import {
-  makeStyles,
-  Box,
-  Container,
-  Grid,
-  Typography,
-  Hidden,
-} from '@material-ui/core';
+import { makeStyles, Box, Grid, Typography } from '@material-ui/core';
 import Image from 'next/image';
 import styles from '../styles/ImportanceApplications';
+import BackgroundImage from '#Components/BackgroundImage';
+import CustomContainer from '#Components/CustomContainer';
 
 const useStyles = makeStyles(styles);
 
 const ImportanceAplications = () => {
   const classes = useStyles();
   return (
-    <Box component="section" className={classes.root}>
-      <Container fixed className={classes.mainContent}>
-        <Grid container>
+    <Box component="section" position="relative">
+      <BackgroundImage
+        image="/assets/images/figures/bloque2.png"
+        height={829}
+      />
+      <CustomContainer>
+        <Grid container className={classes.root}>
           <Grid item xs={false} md={1} />
           <Grid item xs={12} md={5} className={classes.gridImage}>
             <Box component="figure">
@@ -61,16 +60,7 @@ const ImportanceAplications = () => {
           </Grid>
           <Grid item xs={false} md={1} />
         </Grid>
-      </Container>
-      <Hidden mdDown>
-        <Box className={classes.containerBackgroundImage}>
-          <Image
-            src="/assets/images/figures/bloque2.png"
-            layout="fill"
-            className={classes.backgroundImage}
-          />
-        </Box>
-      </Hidden>
+      </CustomContainer>
     </Box>
   );
 };
