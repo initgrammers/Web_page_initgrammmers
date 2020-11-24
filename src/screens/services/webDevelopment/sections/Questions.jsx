@@ -1,17 +1,8 @@
-import Accordion from '#Components/Accordion';
-import SecctionContainer from '#Components/Sections/SecctionContainer';
-import { questions } from '#constants/services/webDevelopment';
+import FAQ from '#Components/FAQ';
+import { questions } from '#constants/services/MobileDevelopment';
 
 const Questions = () => (
-  <SecctionContainer head="Preguntas" emphasis="frecuentes">
-    {questions.map(({ id, title, details }) => (
-      <Accordion
-        key={id}
-        title={title}
-        details={details}
-      />
-    ))}
-  </SecctionContainer>
+  <FAQ titlePart1="Preguntas" titlePart2="frecuentes" questions={questions} />
 );
 
 export default Questions;

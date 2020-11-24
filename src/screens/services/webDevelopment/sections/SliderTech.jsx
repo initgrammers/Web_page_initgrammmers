@@ -1,11 +1,11 @@
-import Slider from '#Components/ResponsiveSlider';
-import SecctionContainer from '#Components/Sections/SecctionContainer';
-import { MobileTechnologies } from '#constants/services/webDevelopment';
+import SliderTechnologies from '#Components/SliderTechnologies';
+import { WebTechnologies } from '#app/constants/services/WebDevelopment';
 
-const Questions = () => (
-  <SecctionContainer head="Tecnologías con las que trabajamos">
-    <Slider data={MobileTechnologies} />
-  </SecctionContainer>
+const SliderTech = () => (
+  <SliderTechnologies
+    title="Tecnologías con las que trabajamos para el desarrollo web"
+    technologies={WebTechnologies}
+  />
 );
 
-export default Questions;
+export default SliderTech;

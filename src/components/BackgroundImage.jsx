@@ -9,11 +9,15 @@ const BackgroundImage = ({ height, image }) => {
   const classes = useStyles(height);
 
   return (
-    <Hidden mdDown>
-      <Box className={classes.containerBackgroundImage}>
-        <Image src={image} layout="fill" />
-      </Box>
-    </Hidden>
+    <>
+      {height > 0 ? (
+        <Hidden mdDown>
+          <Box className={classes.containerBackgroundImage}>
+            <Image src={image} layout="fill" />
+          </Box>
+        </Hidden>
+      ) : null}
+    </>
   );
 };
 
