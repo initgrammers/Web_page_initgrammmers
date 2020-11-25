@@ -3,6 +3,7 @@ import Image from 'next/image';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 
+// TODO remove styles & dependencies
 const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',

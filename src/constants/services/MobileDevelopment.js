@@ -57,30 +57,33 @@ export const typesApplication = [
   },
 ];
 
-export const questions = [{
-  id: 0,
-  title: '¿Cómo mejoraría mi produccción?',
-  details: ` Tus productos estarían disponibles en todo el mundo, se podrían
+export const questions = [
+  {
+    id: 0,
+    title: '¿Cómo mejoraría mi produccción?',
+    details: ` Tus productos estarían disponibles en todo el mundo, se podrían
               hacer los pedidos con mucha facilildad y efectividad. Con un
               excelente servicio desde q usted se conecta con nosostros.`,
-},
-{
-  id: 1,
-  title: '¿Cómo mejoraría mi produccción?',
-  details: `Tus productos estarían disponibles en todo el mundo, se podrían
+  },
+  {
+    id: 1,
+    title: '¿Cómo mejoraría mi produccción?',
+    details: `Tus productos estarían disponibles en todo el mundo, se podrían
               hacer los pedidos con mucha facilildad y efectividad. Con un
               excelente servicio desde q usted se conecta con nosostros.`,
-},
-{
-  id: 2,
-  title: '¿Cómo mejoraría mi produccción?',
-  details: `Tus productos estarían disponibles en todo el mundo, se podrían
+  },
+  {
+    id: 2,
+    title: '¿Cómo mejoraría mi produccción?',
+    details: `Tus productos estarían disponibles en todo el mundo, se podrían
               hacer los pedidos con mucha facilildad y efectividad. Con un
               excelente servicio desde q usted se conecta con nosostros.`,
-}, {
-  id: 3,
-  title: '¿Cómo mejoraría mi produccción?',
-  details: `Tus productos estarían disponibles en todo el mundo, se podrían
+  },
+  {
+    id: 3,
+    title: '¿Cómo mejoraría mi produccción?',
+    details: `Tus productos estarían disponibles en todo el mundo, se podrían
               hacer los pedidos con mucha facilildad y efectividad. Con un
               excelente servicio desde q usted se conecta con nosostros.`,
-}];
+  },
+];

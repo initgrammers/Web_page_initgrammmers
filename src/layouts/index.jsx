@@ -15,7 +15,7 @@ const Layout = ({ children, navigation }) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
   navigation: PropTypes.shape(),
 };
 
