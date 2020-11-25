@@ -34,6 +34,14 @@ const useStyles = makeStyles((theme) => ({
     background: 'white',
     boxShadow: `rgba(0, 0, 0, 0.25) 0px 4px 4px, rgba(0, 0, 0, 0.25) 0px 4px 4px inset`,
   },
+  sectionLogo: {
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'star',
+    [theme.breakpoints.up('sm')]: {
+      justifyContent: 'center',
+    },
+  },
 }));
 export default function ElevateAppBar(props) {
   const classes = useStyles();

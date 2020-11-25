@@ -1,9 +1,6 @@
-import React from 'react';
-import { makeStyles, Button, Box, Typography } from '@material-ui/core';
+import { makeStyles, Button, Box, Typography, Hidden } from '@material-ui/core';
 import Link from 'next/link';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 
@@ -11,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
   menuApp: {
     display: 'flex',
     alignItems: 'center',
+    width: `100%`,
   },
 
   button: {
@@ -19,6 +17,19 @@ const useStyles = makeStyles((theme) => ({
   },
   services: {
     textTransform: 'capitalize',
+  },
+  sectionMenu: {
+    display: 'flex',
+    flex: 1,
+    alignItems: 'center',
+    marginLeft: theme.spacing(2),
+    justifyContent: 'space-around',
+    [theme.breakpoints.up('lg')]: {
+      justifyContent: 'start',
+    },
+  },
+  contactUs: {
+    marginLeft: theme.spacing(4),
   },
 }));
 
@@ -33,30 +44,55 @@ const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
   const classes = useStyles();
   return (
     <Box className={classes.menuApp}>
-      <Box className={classes.sectionLogo}>
-        <Button className={classes.logo} aria-label="logo Initgrammers">
-          <LogoInitgrammers />
-        </Button>
-      </Box>
-      <Button
-        aria-label="Servicios"
-        aria-controls="menu-servicios"
-        aria-haspopup="true"
-        onClick={handleDrawerOpen}
-        color="inherit"
-        endIcon={showServices ? <ExpandLess /> : <ExpandMore />}
-      >
-        <Typography className={classes.services} variant="body2">
-          Servicios
-        </Typography>
+      <Button className={classes.logo} aria-label="logo Initgrammers">
+        <LogoInitgrammers />
       </Button>
-      {menu.map((item, key) => (
-        <Link key={key} href={item.href}>
-          <a className={classes.button}>
-            <Typography variant="body2">{item.label}</Typography>
-          </a>
-        </Link>
-      ))}
+      <Box className={classes.sectionMenu}>
+        <Button
+          aria-label="Servicios"
+          aria-controls="menu-servicios"
+          aria-haspopup="true"
+          onClick={handleDrawerOpen}
+          color="inherit"
+          endIcon={showServices ? <ExpandLess /> : <ExpandMore />}
+        >
+          <Typography className={classes.services} variant="body2">
+            Servicios
+          </Typography>
+        </Button>
+
+        {menu.map((item, key) => (
+          <Link key={key} href={item.href}>
+            <a className={classes.button}>
+              <Typography variant="body2">{item.label}</Typography>
+            </a>
+          </Link>
+        ))}
+      </Box>
+      <Box>
+        <Button
+          aria-label="Servicios"
+          aria-controls="menu-servicios"
+          aria-haspopup="true"
+          color="inherit"
+        >
+          <Typography className={classes.services} variant="body2">
+            Agenda una ascesoría
+          </Typography>
+        </Button>
+        <Hidden mdDown>
+          <Button
+            aria-label="Contácatanos"
+            aria-haspopup="true"
+            onClick={handleDrawerOpen}
+            color="primary"
+            variant="contained"
+            className={classes.contactUs}
+          >
+            Contáctanos
+          </Button>
+        </Hidden>
+      </Box>
     </Box>
   );
 };
