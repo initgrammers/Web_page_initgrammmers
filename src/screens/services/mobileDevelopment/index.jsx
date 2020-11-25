@@ -4,8 +4,6 @@ import ApplicationsAtYourFingertips from './sections/ApplicationsAtYourFingertip
 import MobileApplicationTypes from './sections/MobileApplicationTypes';
 import Questions from './sections/Questions';
 import SliderTech from './sections/SliderTech';
-// TODO delete this component and references
-// import SliderHidden from './sections/SliderHidden';
 
 const MobileDevelopment = () => (
   <>
