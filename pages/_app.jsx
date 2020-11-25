@@ -6,6 +6,9 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../theme/index';
 import '../src/assets/css/globals.css';
 
+// Here you have ( children ) => children, but nextJS return children into field not on object
+const NoLayout = ({ children }) => children;
+
 const MyApp = ({ Component, pageProps }) => {
   const { layoutProps, ...restPageProps } = pageProps;
   useEffect(() => {
@@ -15,7 +18,7 @@ const MyApp = ({ Component, pageProps }) => {
     }
   }, []);
 
-  const Layout = Component.layout || ((children) => <>{children}</>);
+  const Layout = Component.layout || NoLayout;
 
   return (
     <>

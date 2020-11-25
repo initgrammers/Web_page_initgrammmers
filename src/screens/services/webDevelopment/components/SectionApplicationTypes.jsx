@@ -29,8 +29,7 @@ const SectionApplicationTypes = ({ sectionTitle, typesApplication, image }) => {
 
 SectionApplicationTypes.propTypes = {
   sectionTitle: PropTypes.string.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  typesApplication: PropTypes.array.isRequired,
+  typesApplication: PropTypes.arrayOf().isRequired,
   image: PropTypes.string.isRequired,
 };
 

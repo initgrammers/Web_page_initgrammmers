@@ -9,6 +9,7 @@ import Image from 'next/image';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 
+// TODO remove styles & depencies
 const useStyles = makeStyles((theme) => ({
   detailsContent: {
     paddingTop: theme.spacing(8),
