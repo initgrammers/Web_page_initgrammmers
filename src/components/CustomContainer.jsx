@@ -14,7 +14,7 @@ const CustomContainer = ({ children }) => {
 };
 
 CustomContainer.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.element.isRequired,
 };
 
 export default CustomContainer;

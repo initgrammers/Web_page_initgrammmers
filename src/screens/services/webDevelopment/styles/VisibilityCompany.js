@@ -9,7 +9,7 @@ const styles = (theme) => ({
   },
   description: {
     padding: `${theme.spacing(4)}px 0`,
-    color: theme.palette.primary.contrastText,
+    color: theme.palette.common.black,
   },
   actionButton: {
     color: theme.palette.primary.contrastText,
@@ -18,17 +18,17 @@ const styles = (theme) => ({
   containerImage: {
     display: 'flex',
     justifyContent: 'center',
-    margin: `${theme.spacing(4)}px 0`,
+    padding: `${theme.spacing(4)}px 0`,
   },
   image: {
     width: 288,
     height: 235,
     position: 'relative',
   },
-  mainImage: {
-    objectFit: 'contain',
-  },
   [theme.breakpoints.up('sm')]: {
+    detailsContent: {
+      paddingTop: theme.spacing(12),
+    },
     containerImage: {
       padding: `${theme.spacing(5)}px 0`,
     },
@@ -51,12 +51,11 @@ const styles = (theme) => ({
     },
     containerImage: {
       flex: 5,
-      padding: `${theme.spacing(16)}px 0`,
-      margin: 0,
+      padding: `${theme.spacing(8)}px 0`,
     },
     image: {
       width: 504,
-      height: 504,
+      height: 382,
     },
   },
 });

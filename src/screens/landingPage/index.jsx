@@ -1,9 +1,14 @@
 import Banner from './sections/Banner';
+import OnlineSolution from './components/OnlineSolution';
+import Services from './components/Services';
+import PartnershipModel from './sections/PartnershipModel';
 
 const index = () => (
   <>
     <Banner />
-    <h1>adasdasdasdas</h1>
+    <OnlineSolution />
+    <Services />
+    <PartnershipModel />
   </>
 );
 

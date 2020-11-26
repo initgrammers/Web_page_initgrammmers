@@ -44,7 +44,7 @@ FAQ.propTypes = {
   titlePart1: PropTypes.string.isRequired,
   titlePart2: PropTypes.string,
   titlePart3: PropTypes.string,
-  questions: PropTypes.object.isRequired,
+  questions: PropTypes.array.isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
 };

@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 
 const styles = (theme) => ({
   detailsContent: {
-    paddingTop: theme.spacing(8),
+    paddingTop: theme.spacing(4),
   },
   title: {
     color: theme.palette.primary.contrastText,
   },
   description: {
     padding: `${theme.spacing(4)}px 0`,
-    color: theme.palette.primary.contrastText,
+    color: theme.palette.common.black,
   },
   actionButton: {
     color: theme.palette.primary.contrastText,
@@ -18,23 +18,29 @@ const styles = (theme) => ({
   containerImage: {
     display: 'flex',
     justifyContent: 'center',
-    margin: `${theme.spacing(4)}px 0`,
+    padding: `${theme.spacing(4)}px 0`,
   },
   image: {
     width: 288,
-    height: 235,
+    height: 308,
     position: 'relative',
   },
-  mainImage: {
-    objectFit: 'contain',
-  },
   [theme.breakpoints.up('sm')]: {
+    detailsContent: {
+      paddingTop: theme.spacing(6),
+    },
     containerImage: {
       padding: `${theme.spacing(5)}px 0`,
     },
     image: {
+      width: 411,
+      height: 442,
+    },
+  },
+  [theme.breakpoints.up('md')]: {
+    image: {
       width: 544,
-      height: 449,
+      height: 539,
     },
   },
   [theme.breakpoints.up('lg')]: {
@@ -51,12 +57,11 @@ const styles = (theme) => ({
     },
     containerImage: {
       flex: 5,
-      padding: `${theme.spacing(16)}px 0`,
-      margin: 0,
+      padding: `${theme.spacing(8)}px 0`,
     },
     image: {
       width: 504,
-      height: 504,
+      height: 500,
     },
   },
 });
