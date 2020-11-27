@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const styles = (theme) => ({
   detailsContent: {
-    paddingTop: theme.spacing(8),
+    paddingTop: theme.spacing(4),
   },
   title: {
     color: theme.palette.primary.contrastText,
@@ -18,7 +18,7 @@ const styles = (theme) => ({
   containerImage: {
     display: 'flex',
     justifyContent: 'center',
-    margin: `${theme.spacing(4)}px 0`,
+    padding: `${theme.spacing(4)}px 0`,
   },
   image: {
     width: 288,
@@ -36,6 +36,9 @@ const styles = (theme) => ({
       width: 544,
       height: 449,
     },
+    detailsContent: {
+      paddingTop: theme.spacing(12),
+    },
   },
   [theme.breakpoints.up('lg')]: {
     container: {
@@ -51,7 +54,7 @@ const styles = (theme) => ({
     },
     containerImage: {
       flex: 5,
-      padding: `${theme.spacing(16)}px 0`,
+      padding: `${theme.spacing(8)}px 0 ${theme.spacing(13)}px 0`,
       margin: 0,
     },
     image: {
