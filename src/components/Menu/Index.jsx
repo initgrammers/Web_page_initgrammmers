@@ -11,16 +11,16 @@ import {
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
+import PropTypes from 'prop-types';
 import Options from './Options';
 import OutsideAlerter from '../Outsider';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
 import MenuDesktop from './MenuDesktop';
-import CustomDrawer from './CustomDrawer';
 import styles from '../../assets/styles/Menu';
 
 const useStyles = makeStyles(styles);
 
-export default function CustomMenu({ indexMenu }) {
+const CustomMenu = ({ indexMenu }) => {
   const classes = useStyles();
 
   const [showNav, setShowNav] = useState(false);
@@ -33,7 +33,7 @@ export default function CustomMenu({ indexMenu }) {
 
   return (
     <>
-      <AppBar component="nav">
+      <AppBar component="nav" position="sticky" top={0}>
         <Toolbar className={classes.main}>
           <Hidden mdUp>
             <Box className={classes.sectionLogo}>
@@ -62,15 +62,19 @@ export default function CustomMenu({ indexMenu }) {
         </Toolbar>
         <Fade timeout={800} in={showNav} className={classes.fade}>
           <Box bgcolor="white">
-            {/* <CustomDrawer open={showNav} handleDrawerOpen={handleDrawerOpen} /> */}
-            {/* <Options /> */}
             <OutsideAlerter callback={handleClose}>
               <Options visible={showNav} indexMenu={indexMenu} />
             </OutsideAlerter>
-            sadasd
           </Box>
         </Fade>
       </AppBar>
     </>
   );
-}
+};
+CustomMenu.propTypes = {
+  indexMenu: PropTypes.string,
+};
+CustomMenu.defaultProps = {
+  indexMenu: '',
+};
+export default CustomMenu;
