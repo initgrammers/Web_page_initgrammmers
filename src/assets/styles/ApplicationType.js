@@ -7,6 +7,9 @@ const styles = (theme) => ({
       width: 536,
     },
   },
+  swipeable: {
+    minHeight: 268,
+  },
   title: {
     textAlign: 'center',
   },

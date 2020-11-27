@@ -34,29 +34,34 @@ function ApplicationType({ sectionTitle, typesApplication }) {
 
   return (
     <Box className={classes.root}>
-      <Typography variant="h2" className={classes.title}>
-        {sectionTitle}
-      </Typography>
-      <AutoPlaySwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-        index={activeStep}
-        onChangeIndex={handleStepChange}
-        enableMouseEvents
-        interval={2000}
-      >
-        {typesApplication.map((app, index) => (
-          <>
-            {Math.abs(activeStep - index) <= 2 ? (
-              <Box key={app.title} component="article">
-                <Typography variant="h3" className={classes.applicationType}>
-                  {app.title}
-                </Typography>
-                <Typography variant="body1">{app.description}</Typography>
-              </Box>
-            ) : null}
-          </>
-        ))}
-      </AutoPlaySwipeableViews>
+      <>
+        <Typography variant="h2" className={classes.title}>
+          {sectionTitle}
+        </Typography>
+        <AutoPlaySwipeableViews
+          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+          index={activeStep}
+          onChangeIndex={handleStepChange}
+          enableMouseEvents
+          interval={2000}
+          className={classes.swipeable}
+        >
+          {typesApplication.map((app, index) => (
+            <>
+              {Math.abs(activeStep - index) <= 2 ? (
+                <Box key={app.title} component="article">
+                  <Typography variant="h3" className={classes.applicationType}>
+                    {app.title}
+                  </Typography>
+                  <Typography variant="body1">{app.description}</Typography>
+                </Box>
+              ) : (
+                <>sdsa</>
+              )}
+            </>
+          ))}
+        </AutoPlaySwipeableViews>
+      </>
       <MobileStepper
         className={classes.stepper}
         steps={maxSteps}
@@ -73,9 +78,9 @@ function ApplicationType({ sectionTitle, typesApplication }) {
             disabled={activeStep === maxSteps - 1}
           >
             {theme.direction === 'rtl' ? (
-              <KeyboardArrowLeft />
+              <KeyboardArrowLeft className={classes.button} />
             ) : (
-              <KeyboardArrowRight />
+              <KeyboardArrowRight className={classes.button} />
             )}
           </IconButton>
         }
@@ -89,9 +94,9 @@ function ApplicationType({ sectionTitle, typesApplication }) {
             disabled={activeStep === 0}
           >
             {theme.direction === 'rtl' ? (
-              <KeyboardArrowRight />
+              <KeyboardArrowRight className={classes.button} />
             ) : (
-              <KeyboardArrowLeft />
+              <KeyboardArrowLeft className={classes.button} />
             )}
           </IconButton>
         }
