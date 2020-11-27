@@ -1,29 +1,36 @@
 export const services = [
   {
+    href: '/services/WebDevelopment',
     path: '/assets/images/desarrollo-web.png',
     service: 'Desarrollo Web',
   },
   {
+    href: '/services/UXUIDesign',
     path: '/assets/images/diseno-ux-ui.png',
     service: 'Diseño UX / UX',
   },
   {
+    href: '/services/MobileDevelopment',
     path: '/assets/images/desarrollo-movil.png',
     service: 'Desarrollo Móvil',
   },
   {
+    href: '/services/',
     path: '/assets/images/capacitaciones.png',
     service: 'Capacitaciones',
   },
   {
+    href: '/services/',
     path: '/assets/images/marketing.png',
     service: 'Marketing',
   },
   {
+    href: '/services/',
     path: '/assets/images/posicionamiento-buscadores.png',
     service: 'Posicionamiento en buscadores',
   },
   {
+    href: '/services/',
     path: '/assets/images/e-commerce.png',
     service: 'E-commerce',
   },
