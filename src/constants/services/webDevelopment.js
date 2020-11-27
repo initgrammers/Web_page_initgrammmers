@@ -27,11 +27,6 @@ export const WebTechnologies = [
     label: 'Next.js',
     image: '/assets/svg/next-js.svg',
   },
-  {
-    label: 'WhatsApp',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQunGj_qSj53jScTHWkKAX8WjlSsIuf2CggIw&usqp=CAU',
-  },
 ];
 
 export const questions = [
