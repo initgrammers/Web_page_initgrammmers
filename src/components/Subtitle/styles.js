@@ -13,6 +13,12 @@ const styles = (theme) => ({
       color: theme.palette.primary.light,
     },
   },
+  white: {
+    color: theme.palette.primary.contrastText,
+    '& span': {
+      color: theme.palette.primary.contrastText,
+    },
+  },
 });
 
 styles.propTypes = {

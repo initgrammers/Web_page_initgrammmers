@@ -7,7 +7,18 @@ import styles from './styles';
 const useStyles = makeStyles(styles);
 // TODO review this component for Titles and change in all component
 
-const Subtitle = ({ head, emphasis, tail, variant, component, mb, mt, align, black }) => {
+const Subtitle = ({
+  head,
+  emphasis,
+  tail,
+  variant,
+  component,
+  mb,
+  mt,
+  align,
+  black,
+  white,
+}) => {
   const classes = useStyles();
   return (
     <Box display="flex" mb={mb} mt={mt} justifyContent="center">
@@ -17,6 +28,7 @@ const Subtitle = ({ head, emphasis, tail, variant, component, mb, mt, align, bla
         variant={variant}
         className={clsx(classes.title, {
           [classes.black]: black,
+          [classes.white]: white,
         })}
       >
         {head}
@@ -36,6 +48,7 @@ Subtitle.propTypes = {
   mt: PropTypes.number,
   align: PropTypes.string,
   black: PropTypes.bool,
+  white: PropTypes.bool,
 };
 Subtitle.defaultProps = {
   head: '',
@@ -47,5 +60,6 @@ Subtitle.defaultProps = {
   mt: 0,
   align: 'left',
   black: false,
+  white: false,
 };
 export default Subtitle;
