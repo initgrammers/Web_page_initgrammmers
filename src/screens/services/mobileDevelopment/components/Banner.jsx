@@ -18,7 +18,11 @@ const Banner = () => {
     <Box component="section" className={classes.mainSection}>
       <Hidden mdDown>
         <Box className={classes.containerBackgroundImage}>
-          <Image src="/assets/images/figures/bloque1.png" layout="fill" />
+          <Image
+            quality={100}
+            src="/assets/images/figures/bloque1.png"
+            layout="fill"
+          />
         </Box>
       </Hidden>
       <Container fixed className={classes.container}>

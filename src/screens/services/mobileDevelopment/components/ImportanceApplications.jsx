@@ -20,6 +20,7 @@ const ImportanceAplications = () => {
           <Grid item xs={12} md={5} className={classes.gridImage}>
             <Box component="figure">
               <Image
+                quality={100}
                 src="/assets/images/importancia-aplicaciones-moviles.png"
                 width={504}
                 height={694}
@@ -39,6 +40,7 @@ const ImportanceAplications = () => {
               <Box className={classes.images}>
                 <Box component="figure" className={classes.figureLeft}>
                   <Image
+                    quality={100}
                     src="/assets/images/google-play.png"
                     width={88}
                     height={88}
@@ -46,6 +48,7 @@ const ImportanceAplications = () => {
                 </Box>
                 <Box component="figure" className={classes.figureLeft}>
                   <Image
+                    quality={100}
                     src="/assets/images/apple-store.png"
                     width={88}
                     height={88}

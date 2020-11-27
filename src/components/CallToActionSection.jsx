@@ -42,7 +42,7 @@ const CallToActionSection = ({
           </Link>
 
           <Box component="figure" className={classes.image}>
-            <Image src={image} width={500} height={550} />
+            <Image quality={100} src={image} width={500} height={550} />
           </Box>
         </Box>
       </CustomContainer>

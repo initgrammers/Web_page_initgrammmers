@@ -27,7 +27,6 @@ const useStyle = makeStyles((theme) => ({
     height: 355,
     width: 505,
     position: 'relative',
-
   },
   [theme.breakpoints.down('md')]: {
     move: {
@@ -54,7 +53,6 @@ const useStyle = makeStyles((theme) => ({
     },
     move: {
       marginTop: 32,
-      
     },
     contimage: {
       height: 235,
@@ -70,13 +68,10 @@ const useStyle = makeStyles((theme) => ({
       width: 288,
       marginBottom: 30,
     },
-    
-    
+
     title: {
-      
       width: 288,
       display: 'flex',
-      
     },
   },
 }));
@@ -86,7 +81,8 @@ const DevelopmentDesign = ({
   titlePart2,
   titlePart3,
   description,
-  image }) => {
+  image,
+}) => {
   const classes = useStyle();
 
   return (
@@ -101,9 +97,9 @@ const DevelopmentDesign = ({
                 </Typography>
               </Box>
               <Box>
-              <Typography variant="h3">
-                Bienvenido al mundo del internet.
-              </Typography>
+                <Typography variant="h3">
+                  Bienvenido al mundo del internet.
+                </Typography>
               </Box>
             </Box>
             <Button variant="contained" color="primary">
@@ -111,7 +107,7 @@ const DevelopmentDesign = ({
             </Button>
           </Box>
           <Box className={classes.contimage}>
-            <Image conten="figuer" src={image} layout="fill" />
+            <Image quality={100} conten="figuer" src={image} layout="fill" />
           </Box>
         </Box>
       </Container>

@@ -25,7 +25,7 @@ const PartnershipModel = ({
       <CustomContainer>
         <Box component="article" className={classes.content}>
           <Box component="figure" className={classes.image}>
-            <Image src={image} layout="fill" />
+            <Image quality={100} src={image} layout="fill" />
           </Box>
           <Subtitle
             head={title}
