@@ -23,8 +23,14 @@ const useStyles = makeStyles((theme) => ({
   },
   itemService: {
     marginBottom: theme.spacing(3),
+    '&:last-child': {
+      marginBottom: 0,
+    },
   },
   [theme.breakpoints.between('sm', 'md')]: {
+    content: {
+      padding: `${theme.spacing(5)}px 0`,
+    },
     services: {
       flexDirection: 'row',
       justifyContent: 'center',
@@ -45,6 +51,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   [theme.breakpoints.up('lg')]: {
+    content: {
+      padding: `${theme.spacing(2)}px 0 ${theme.spacing(8)}px 0`,
+    },
     services: {
       flexDirection: 'row',
       paddingTop: theme.spacing(4),
