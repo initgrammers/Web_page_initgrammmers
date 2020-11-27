@@ -1,6 +1,5 @@
 import { Box, makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import { useState, useEffect } from 'react';
 import Slide from './Slide';
 import Image from './Image';
 import styles from './style';

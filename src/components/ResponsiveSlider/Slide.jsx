@@ -57,7 +57,12 @@ const Slide = ({ data, step }) => {
     );
 
   return (
-    <Container onNextStep={onNextStep} onPrevStep={onPrevStep}>
+    <Container
+      onNextStep={onNextStep}
+      onPrevStep={onPrevStep}
+      disableLeft={index.from === 0}
+      disableRight={islimitUp}
+    >
       {renderListSlide(arrayData)}
     </Container>
   );

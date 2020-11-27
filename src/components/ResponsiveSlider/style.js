@@ -23,6 +23,12 @@ const styles = (theme) => ({
     background: `linear-gradient(176.58deg, ${theme.palette.primary.light} 0%,
        ${theme.palette.primary.light} 23.77%, ${theme.palette.secondary.main} 62.24%, ${theme.palette.secondary.light} 87.17%)`,
   },
+  arrow: {
+    color: theme.palette.grey[500],
+  },
+  disableArrow: {
+    color: theme.palette.grey[200],
+  },
 });
 
 styles.propTypes = {
