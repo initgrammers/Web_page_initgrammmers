@@ -1,5 +1,4 @@
 import React from 'react';
-// import SectionApplicationTypes from '#Components/SectionApplicationTypes';
 import SectionApplicationTypes from '../components/SectionApplicationTypes';
 import { typesApplication } from '../../../../constants/services/webDevelopment';
 

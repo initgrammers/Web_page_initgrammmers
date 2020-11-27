@@ -3,12 +3,7 @@ import { ArrowForwardIos, ArrowBackIos } from '@material-ui/icons';
 import PropTypes from 'prop-types';
 
 const Container = ({ onNextStep, onPrevStep, children }) => (
-  <Box
-    display="flex"
-    justifyContent="space-between"
-    alignItems="center"
-    height={110}
-  >
+  <Box display="flex" justifyContent="space-between" alignItems="center">
     <Box onClick={onPrevStep}>
       <ArrowBackIos />
     </Box>

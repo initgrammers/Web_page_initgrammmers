@@ -20,10 +20,6 @@ export const WebTechnologies = [
     image: '/assets/svg/angular-icon-1.svg',
   },
   {
-    label: 'iOS',
-    image: '/assets/svg/apple.svg',
-  },
-  {
     label: 'Next.js',
     image: '/assets/svg/next-js.svg',
   },
