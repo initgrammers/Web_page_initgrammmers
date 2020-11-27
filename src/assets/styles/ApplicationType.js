@@ -8,7 +8,10 @@ const styles = (theme) => ({
     },
   },
   swipeable: {
-    minHeight: 268,
+    minHeight: 334,
+    [theme.breakpoints.up('lg')]: {
+      minHeight: 268,
+    },
   },
   title: {
     textAlign: 'center',

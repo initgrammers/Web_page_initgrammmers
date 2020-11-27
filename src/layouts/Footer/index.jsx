@@ -53,10 +53,14 @@ const CustomFooter = () => {
       <ContactUs />
       <footer className={classes.root}>
         <Container fixed>
-          {/* <img
-            src={LOGO_FOOTER_INITGRAMMERS.image}
-            alt={LOGO_FOOTER_INITGRAMMERS.alt}
-          /> */}
+          <Box className={classes.image}>
+            <figure>
+              <img
+                src="/assets/images/logo_ig_white.png"
+                alt="logo-initgrammers"
+              />
+            </figure>
+          </Box>
           <Grid container spacing={3} className={classes.gridContainer}>
             <Grid item md={6} sm={12}>
               <Typography className={classes.description}>
@@ -64,16 +68,18 @@ const CustomFooter = () => {
                 capacitaciones tecnológicas en software, marketing y diseño
                 digital
               </Typography>
-              <LinkWithIcon
-                href="tel: +593963277297"
-                icon={<PhoneIcon />}
-                label="(+593) 963277297"
-              />
-              <LinkWithIcon
-                href="mailto: info@initgrammers.com"
-                icon={<MailIcon />}
-                label="info@initgrammers.com"
-              />
+              <Box my={4}>
+                <LinkWithIcon
+                  href="tel: +593963277297"
+                  icon={<PhoneIcon />}
+                  label="(+593) 963277297"
+                />
+                <LinkWithIcon
+                  href="mailto: info@initgrammers.com"
+                  icon={<MailIcon />}
+                  label="info@initgrammers.com"
+                />
+              </Box>
               <Box display="flex" mt={2}>
                 <LinkIcon
                   icon={<FacebookIcon className={classes.icon} />}
@@ -90,9 +96,7 @@ const CustomFooter = () => {
               </Box>
             </Grid>
             <Grid item md={3} sm={12}>
-              <Typography variant="h6" className={classes.text}>
-                Servicios
-              </Typography>
+              <Typography className={classes.text}>Servicios</Typography>
               {services.map((item, key) => (
                 <CustomLink key={key} href={item.href}>
                   <Typography className={classes.text}>{item.label}</Typography>
@@ -102,9 +106,7 @@ const CustomFooter = () => {
             <Grid item md={3} sm={12}>
               {portfolio.map((item, key) => (
                 <CustomLink key={key} href={item.href}>
-                  <Typography variant="h6" className={classes.text}>
-                    {item.label}
-                  </Typography>
+                  <Typography className={classes.text}>{item.label}</Typography>
                 </CustomLink>
               ))}
             </Grid>

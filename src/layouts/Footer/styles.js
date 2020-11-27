@@ -49,6 +49,22 @@ const styles = (theme) => ({
   action: {
     marginTop: theme.spacing(1),
   },
+  image: {
+    width: 169,
+    height: 32,
+    [theme.breakpoints.up('sm')]: {
+      margin: 'auto',
+    },
+    [theme.breakpoints.up('md')]: {
+      margin: 'auto',
+    },
+    [theme.breakpoints.down('xs')]: {
+      margin: 0,
+    },
+    [theme.breakpoints.up('lg')]: {
+      margin: 0,
+    },
+  },
 });
 
 styles.propTypes = {
