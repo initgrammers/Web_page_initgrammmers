@@ -95,7 +95,7 @@ const Navigation = ({ index }) => {
         open={open}
         handleDrawerOpen={handleDrawerOpen}
       /> */}
-      <CustomMenu />
+      <CustomMenu indexMenu={index} />
     </div>
   );
 };
