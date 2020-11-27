@@ -55,10 +55,7 @@ const CustomFooter = () => {
         <Container fixed>
           <Box className={classes.image}>
             <figure>
-              <img
-                src="/assets/images/logo_ig_white.png"
-                alt="logo-initgrammers"
-              />
+              <img src="/assets/svg/initgrammers.svg" alt="logo initgrammers" />
             </figure>
           </Box>
           <Grid container spacing={3} className={classes.gridContainer}>

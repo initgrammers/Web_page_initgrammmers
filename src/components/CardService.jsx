@@ -19,7 +19,7 @@ const CardService = ({ image, service }) => {
   return (
     <Box className={classes.card}>
       <Box component="figure">
-        <Image width={188} height={169} src={image} />
+        <Image quality={100} width={188} height={169} src={image} />
       </Box>
       <Typography variant="h4" className={classes.titleService}>
         {service}
