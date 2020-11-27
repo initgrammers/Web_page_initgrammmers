@@ -31,7 +31,6 @@ const styles = (theme) => ({
     flexDirection: 'column',
   },
   selected: {
-    background: `#DADADA`,
     color: theme.palette.primary.main,
     padding: `${theme.spacing(0.5)}px 0`,
     border: 0,
