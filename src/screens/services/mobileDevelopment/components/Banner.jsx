@@ -3,11 +3,10 @@ import {
   Box,
   Container,
   Typography,
-  Button,
   Hidden,
-  Link,
 } from '@material-ui/core';
 import Image from 'next/image';
+import ContactUsButton from '#Components/ContacUsButton';
 import styles from '../styles/Banner';
 
 const useStyles = makeStyles(styles);
@@ -35,13 +34,7 @@ const Banner = () => {
           >
             Tus productos en el bolsillo de tus clientes
           </Typography>
-          <Box>
-            <Link target="_blank" href="https://wa.link/3vbh7y">
-              <Button variant="contained" className={classes.actionButton}>
-                Contáctanos
-              </Button>
-            </Link>
-          </Box>
+          <ContactUsButton color="secondary" />
         </Box>
         <Box className={classes.containerImage}>
           <Box component="figure" className={classes.image}>

@@ -11,10 +11,6 @@ const styles = (theme) => ({
     padding: `${theme.spacing(4)}px 0`,
     color: theme.palette.common.black,
   },
-  actionButton: {
-    color: theme.palette.primary.contrastText,
-    background: theme.palette.secondary.main,
-  },
   containerImage: {
     display: 'flex',
     justifyContent: 'center',

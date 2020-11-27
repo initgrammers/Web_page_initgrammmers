@@ -4,7 +4,7 @@ const styles = (theme) => ({
   menuApp: {
     display: 'flex',
     alignItems: 'center',
-    width: `100%`,
+    width: '100%',
   },
 
   button: {

@@ -1,4 +1,4 @@
-import { makeStyles, Box, Button, Typography, Link } from '@material-ui/core';
+import { makeStyles, Box, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from '../styles/PartnershipModel';
@@ -6,6 +6,7 @@ import Subtitle from '#Components/Subtitle';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import CardPartnership from '#Components/CardPartnership';
+import ContactUsButton from '#Components/ContacUsButton';
 
 const useStyles = makeStyles(styles);
 
@@ -37,11 +38,7 @@ const PartnershipModel = ({
           <Typography variant="body1" className={classes.description}>
             {description}
           </Typography>
-          <Link href="mailto: info@initgrammers.com" target="_blank">
-            <Button variant="contained" color="primary">
-              ESCRÍBENOS
-            </Button>
-          </Link>
+          <ContactUsButton label="Escríbenos" />
 
           <Box className={classes.services}>
             {partnershipModel.map((service) => (
