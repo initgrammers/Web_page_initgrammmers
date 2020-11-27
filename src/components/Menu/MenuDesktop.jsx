@@ -1,37 +1,11 @@
 import { makeStyles, Button, Box, Typography, Hidden } from '@material-ui/core';
 import Link from 'next/link';
-import LogoInitgrammers from '#svg/LogoInitgrammers';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
+import LogoInitgrammers from '#svg/LogoInitgrammers';
+import styles from './styles/MenuDesktop';
 
-const useStyles = makeStyles((theme) => ({
-  menuApp: {
-    display: 'flex',
-    alignItems: 'center',
-    width: `100%`,
-  },
-
-  button: {
-    textTransform: 'capitalize',
-    padding: `0 ${theme.spacing(2)}px`,
-  },
-  services: {
-    textTransform: 'capitalize',
-  },
-  sectionMenu: {
-    display: 'flex',
-    flex: 1,
-    alignItems: 'center',
-    marginLeft: theme.spacing(2),
-    justifyContent: 'space-around',
-    [theme.breakpoints.up('lg')]: {
-      justifyContent: 'start',
-    },
-  },
-  contactUs: {
-    marginLeft: theme.spacing(4),
-  },
-}));
+const useStyles = makeStyles(styles);
 
 const menu = [
   { label: 'Portafolio', href: '#' },
