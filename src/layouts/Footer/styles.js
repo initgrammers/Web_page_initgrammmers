@@ -7,6 +7,9 @@ const styles = (theme) => ({
     height: 'auto',
     background: theme.palette.primary.main,
   },
+  icon: {
+    fontSize: 18,
+  },
   contactUs: {
     padding: theme.spacing(8, 0),
   },
