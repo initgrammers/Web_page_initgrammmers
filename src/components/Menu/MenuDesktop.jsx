@@ -49,16 +49,12 @@ const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
         ))}
       </Box>
       <Box>
-        <Button
-          aria-label="Servicios"
-          aria-controls="menu-servicios"
-          aria-haspopup="true"
-          color="inherit"
-        >
+        <ContactUsButton label="Agenda una ascesoría" variant="text" mr={2}>
           <Typography className={classes.services} variant="body2">
             Agenda una ascesoría
           </Typography>
-        </Button>
+        </ContactUsButton>
+
         <Hidden mdDown>
           <ContactUsButton />
         </Hidden>

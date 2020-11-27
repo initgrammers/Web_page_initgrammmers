@@ -13,6 +13,7 @@ const styles = (theme) => ({
   },
   services: {
     textTransform: 'capitalize',
+    color: theme.palette.common.black,
   },
   sectionMenu: {
     display: 'flex',

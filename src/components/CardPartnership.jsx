@@ -26,7 +26,11 @@ const CardService = ({ image, title, description }) => {
       <Typography variant="h4" className={classes.titlePartnership}>
         {title}
       </Typography>
-      <Typography variant="body2" className={classes.description}>
+      <Typography
+        variant="body2"
+        align="justify"
+        className={classes.description}
+      >
         {description}
       </Typography>
     </Box>
