@@ -58,7 +58,9 @@ const Slide = ({ data, step }) => {
   );
 };
 Slide.propTypes = {
-  data: PropTypes.arrayOf({ image: PropTypes.string, label: PropTypes.string }),
+  data: PropTypes.arrayOf(
+    PropTypes.shape({ image: PropTypes.string, label: PropTypes.string })
+  ),
   step: PropTypes.number,
 };
 

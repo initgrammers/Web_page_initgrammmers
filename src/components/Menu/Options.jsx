@@ -40,15 +40,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Service = ({ title, subtitle, href, icon, indexMenu }) => {
+const Service = ({ title, subtitle, href, icon, indexMenu, id }) => {
   const classes = useStyles();
-
+  console.log(indexMenu, id, '----');
   return (
     <Box display="flex" color="common.black">
       <Link href={href}>
         <a
           className={clsx(classes.service, {
-            [classes.selected]: indexMenu === 'WebDevelopment',
+            [classes.selected]: indexMenu === id,
           })}
         >
           {icon}
@@ -85,16 +85,16 @@ const Options = ({ indexMenu }) => {
         Servicios que ofrecemos
       </Typography>
       <Grid container spacing={4}>
-        {data.map((item, index) =>
-          item.href.includes(indexMenu) ? (
+        {data.map(
+          (item, index) => (
             <Grid item md={4} sm={6} xs={12} key={index}>
               <Service {...item} indexMenu={indexMenu} />
             </Grid>
-          ) : (
-            <Grid item md={4} sm={6} xs={12} key={index}>
-              <Service {...item} />
-            </Grid>
           )
+
+          // <Grid item md={4} sm={6} xs={12} key={index}>
+          //   <Service {...item} />
+          // </Grid>
         )}
       </Grid>
     </Box>
