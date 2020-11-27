@@ -1,15 +1,15 @@
 import { Box, Typography, makeStyles } from '@material-ui/core';
-import PropTypes from 'prop-types';
 import CardService from '#Components/CardService';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import { services } from '#constants/LandingPage';
+import CustomLink from '#Components/CustomLink';
 
 const useStyles = makeStyles((theme) => ({
   services: {
     display: 'flex',
     flexWrap: 'wrap',
-    paddingTop: theme.spacing(2),
+    paddingTop: theme.spacing(4),
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
-      paddingTop: theme.spacing(4),
     },
     itemService: {
       '&:nth-child(odd)': {
@@ -56,7 +55,6 @@ const useStyles = makeStyles((theme) => ({
     },
     services: {
       flexDirection: 'row',
-      paddingTop: theme.spacing(4),
     },
     itemService: {
       '&:nth-child(1n)': {
@@ -114,7 +112,9 @@ const Services = () => {
                 className={classes.itemService}
                 key={service.service}
               >
-                <CardService image={service.path} service={service.service} />
+                <CustomLink href={service.href}>
+                  <CardService image={service.path} service={service.service} />
+                </CustomLink>
               </Box>
             ))}
           </Box>

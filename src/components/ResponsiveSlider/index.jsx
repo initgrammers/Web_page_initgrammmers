@@ -28,7 +28,9 @@ const Slider = ({ data }) => {
 };
 
 Slider.propTypes = {
-  data: PropTypes.arrayOf({ image: PropTypes.string, label: PropTypes.string }),
+  data: PropTypes.arrayOf(
+    PropTypes.shape({ image: PropTypes.string, label: PropTypes.string })
+  ),
 };
 
 Slider.defaultProps = {

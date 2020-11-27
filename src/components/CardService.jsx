@@ -7,6 +7,12 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     width: 188,
+    transition: theme.transitions.create('all', {
+      duration: theme.transitions.duration.shortest,
+    }),
+    '&:hover': {
+      transform: 'scale(1.05)',
+    },
   },
   titleService: {
     textAlign: 'center',

@@ -1,17 +1,12 @@
-import {
-  makeStyles,
-  Button,
-  Box,
-  Typography,
-  Hidden,
-  Link as LinkMaterial,
-} from '@material-ui/core';
+import { makeStyles, Button, Box, Typography, Hidden } from '@material-ui/core';
 import Link from 'next/link';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
+import PropTypes from 'prop-types';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
 import CustomLink from '#Components/CustomLink';
 import styles from './styles/MenuDesktop';
+import ContactUsButton from '#Components/ContacUsButton';
 
 const useStyles = makeStyles(styles);
 
@@ -54,32 +49,24 @@ const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
         ))}
       </Box>
       <Box>
-        <Button
-          aria-label="Servicios"
-          aria-controls="menu-servicios"
-          aria-haspopup="true"
-          color="inherit"
-        >
+        <ContactUsButton label="Agenda una ascesoría" variant="text" mr={2}>
           <Typography className={classes.services} variant="body2">
             Agenda una ascesoría
           </Typography>
-        </Button>
+        </ContactUsButton>
+
         <Hidden mdDown>
-          <LinkMaterial target="_blank" href="https://wa.link/3vbh7y">
-            <Button
-              aria-label="Contácatanos"
-              aria-haspopup="true"
-              color="primary"
-              variant="contained"
-              className={classes.contactUs}
-            >
-              Contáctanos
-            </Button>
-          </LinkMaterial>
+          <ContactUsButton />
         </Hidden>
       </Box>
     </Box>
   );
 };
-
+MenuDesktop.propTypes = {
+  showServices: PropTypes.bool,
+  handleDrawerOpen: PropTypes.func.isRequired,
+};
+MenuDesktop.defaultProps = {
+  showServices: false,
+};
 export default MenuDesktop;

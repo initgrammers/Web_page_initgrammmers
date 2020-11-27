@@ -1,10 +1,11 @@
-import { makeStyles, Box, Button, Typography, Link } from '@material-ui/core';
+import { makeStyles, Box, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from '../assets/styles/CallToActionType';
 import Subtitle from '#Components/Subtitle';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
+import ContactUsButton from './ContacUsButton';
 
 const useStyles = makeStyles(styles);
 
@@ -35,11 +36,12 @@ const CallToActionSection = ({
           <Typography variant="body1" className={classes.description}>
             {description}
           </Typography>
-          <Link target="_blank" href="https://wa.link/3vbh7y">
+          <ContactUsButton />
+          {/* <Link target="_blank" href="https://wa.link/3vbh7y">
             <Button variant="contained" className={classes.button}>
               CONTÁCTANOS
             </Button>
-          </Link>
+          </Link> */}
 
           <Box component="figure" className={classes.image}>
             <Image quality={100} src={image} width={500} height={550} />

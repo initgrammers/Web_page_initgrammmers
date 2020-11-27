@@ -1,9 +1,10 @@
-import { makeStyles, Box, Typography, Button, Link } from '@material-ui/core';
+import { makeStyles, Box, Typography } from '@material-ui/core';
 import Image from 'next/image';
 import styles from '../styles/CarryOutThatProject';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import Subtitle from '#Components/Subtitle';
+import ContactUsButton from '#Components/ContacUsButton';
 
 const useStyles = makeStyles(styles);
 
@@ -37,13 +38,7 @@ const Banner = () => {
               Nuestra pasión por la tecnología y deseo de hacer las cosas
               diferentes
             </Typography>
-            <Box>
-              <Link target="_blank" href="https://wa.link/3vbh7y">
-                <Button variant="contained" className={classes.actionButton}>
-                  Contáctanos
-                </Button>
-              </Link>
-            </Box>
+            <ContactUsButton />
           </Box>
           <Box className={classes.containerImage}>
             <Box component="figure" className={classes.image}>

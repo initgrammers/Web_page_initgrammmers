@@ -29,7 +29,7 @@ const SectionApplicationTypes = ({ sectionTitle, typesApplication, image }) => {
 
 SectionApplicationTypes.propTypes = {
   sectionTitle: PropTypes.string.isRequired,
-  typesApplication: PropTypes.arrayOf().isRequired,
+  typesApplication: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   image: PropTypes.string.isRequired,
 };
 
