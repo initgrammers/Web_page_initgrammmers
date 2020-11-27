@@ -1,7 +1,6 @@
 import { Box } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
-// TODO responsive image and change to Image component from NextJS
 const Image = ({ image, label }) => (
   <Box m={2} display="flex" flexDirection="column" alignItems="center">
     <img

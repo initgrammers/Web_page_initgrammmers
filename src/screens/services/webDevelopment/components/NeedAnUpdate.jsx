@@ -1,32 +1,9 @@
-import { makeStyles, Box, Grid, Typography } from '@material-ui/core';
-import Image from 'next/image';
+import { makeStyles, Box, Typography } from '@material-ui/core';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
+import styles from '../styles/NeedAnUpdate';
 
-// TODO remove styles & dependencies
-const useStyles = makeStyles((theme) => ({
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
-  [theme.breakpoints.up('lg')]: {
-    container: {
-      paddingTop: theme.spacing(26),
-      paddingBottom: theme.spacing(50),
-    },
-    title: {
-      color: theme.palette.primary.main,
-    },
-    description: {
-      width: 400,
-      paddingTop: theme.spacing(4),
-      textAlign: 'center',
-    },
-  },
-}));
+const useStyles = makeStyles(styles);
 
 const NeedAnUpdate = () => {
   const classes = useStyles();

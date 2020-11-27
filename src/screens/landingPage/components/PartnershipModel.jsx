@@ -31,7 +31,7 @@ const PartnershipModel = ({
             head={title}
             component="h2"
             variant="h2"
-            mb="0"
+            mb={0}
             align="center"
           />
           <Typography variant="body1" className={classes.description}>

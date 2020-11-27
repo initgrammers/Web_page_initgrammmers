@@ -5,7 +5,6 @@ import clsx from 'clsx';
 import styles from './styles';
 
 const useStyles = makeStyles(styles);
-// TODO review this component for Titles and change in all component
 
 const Subtitle = ({
   head,

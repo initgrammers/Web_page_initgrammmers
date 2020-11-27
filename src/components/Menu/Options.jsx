@@ -1,67 +1,9 @@
-import { Box, Grid, Link, makeStyles, Typography } from '@material-ui/core';
-import React from 'react';
-
-const Service = ({ title, subtitle, href }) => (
-  <Box display="flex">
-    <Box mr={1} width={24} height={24} bgcolor="gray" />
-    <Box>
-      <Link
-        component="h6"
-        variant="caption"
-        href={href}
-        style={{ cursor: 'pointer', textDecoration: 'none' }}
-      >
-        {title}
-      </Link>
-      <Typography variant="caption" color="textSecondary">
-        {subtitle}
-      </Typography>
-    </Box>
-  </Box>
-);
-
-const data = [
-  {
-    title: 'Comercio digital',
-    subtitle: 'Venda a través de internet',
-    href: '#',
-  },
-  {
-    title: 'Desarrollo de aplicaciones móviles',
-    subtitle: 'Android, iOS, híbridas',
-    href: '#',
-  },
-  {
-    title: 'Desarrollo Web',
-    subtitle: 'Android, iOs, híbridas',
-    href: '#',
-  },
-  {
-    title: 'Diseño UX UI',
-    subtitle: 'Venda a través de internet',
-    href: '#',
-  },
-  {
-    title: 'Capacitaciones',
-    subtitle: 'Aprende con nosotros',
-    href: '#',
-  },
-  {
-    title: 'Diseño publicitario',
-    subtitle: 'Aprende con nosotros',
-    href: '#',
-  },
-  {
-    title: 'Marketing digital',
-    subtitle: 'Posicione su marca',
-    href: '#',
-  },
-  {
-    title: 'SEO',
-    subtitle: 'Posicionamiento en buscadores',
-    href: '#',
-  },
-];
+/* eslint-disable no-confusing-arrow */
+import { Box, Grid, makeStyles, Typography } from '@material-ui/core';
+import PropTypes from 'prop-types';
+import Link from 'next/link';
+import clsx from 'clsx';
+import { data } from '#constants/Menu';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -69,26 +11,98 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     [theme.breakpoints.up('sm')]: {
       height: 392,
-      padding: theme.spacing(7, 10),
+      padding: theme.spacing(5, 10),
     },
+  },
+  title: {
+    marginBottom: theme.spacing(5),
+  },
+  service: {
+    display: 'flex',
+    '&:hover': {
+      color: theme.palette.primary.main,
+      '&>svg': {
+        fill: theme.palette.primary.main,
+      },
+    },
+  },
+  descriptionService: {
+    paddingLeft: theme.spacing(2),
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  selected: {
+    background: `#DADADA`,
+    color: theme.palette.primary.main,
+    padding: `${theme.spacing(0.5)}px 0`,
+    border: 0,
+    borderRadius: 5,
   },
 }));
 
-const Options = () => {
+const Service = ({ title, subtitle, href, icon, indexMenu }) => {
+  const classes = useStyles();
+
+  return (
+    <Box display="flex" color="common.black">
+      <Link href={href}>
+        <a
+          className={clsx(classes.service, {
+            [classes.selected]: indexMenu === 'WebDevelopment',
+          })}
+        >
+          {icon}
+          <Box className={classes.descriptionService}>
+            <Typography component="subtitle1" color="inherit">
+              {title}
+            </Typography>
+            <Typography variant="caption" color="inherit">
+              {subtitle}
+            </Typography>
+          </Box>
+        </a>
+      </Link>
+    </Box>
+  );
+};
+
+Service.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  icon: PropTypes.shape().isRequired,
+  indexMenu: PropTypes.string,
+};
+Service.defaultProps = {
+  indexMenu: '',
+};
+
+const Options = ({ indexMenu }) => {
   const classes = useStyles();
   return (
     <Box className={classes.root}>
-      <Typography color="textPrimary" gutterBottom>
+      <Typography color="primary" className={classes.title}>
         Servicios que ofrecemos
       </Typography>
-      <Grid container spacing={3}>
-        {data.map((item, index) => (
-          <Grid item md={4} sm={6} xs={12} key={index}>
-            <Service {...item} />
-          </Grid>
-        ))}
+      <Grid container spacing={4}>
+        {data.map((item, index) =>
+          item.href.includes(indexMenu) ? (
+            <Grid item md={4} sm={6} xs={12} key={index}>
+              <Service {...item} indexMenu={indexMenu} />
+            </Grid>
+          ) : (
+            <Grid item md={4} sm={6} xs={12} key={index}>
+              <Service {...item} />
+            </Grid>
+          )
+        )}
       </Grid>
     </Box>
   );
 };
+
+Options.propTypes = {
+  indexMenu: PropTypes.string.isRequired,
+};
+
 export default Options;
