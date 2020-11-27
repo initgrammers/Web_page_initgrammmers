@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
       },
       '&:nth-child(1)': {
         marginLeft: 0,
-        marginRight: `${theme.spacing(4.5)}px`,
+        marginRight: 0,
       },
       '&:nth-child(2)': {
         marginLeft: `${theme.spacing(9)}px`,
