@@ -1,4 +1,4 @@
-import { Box, Typography, makeStyles, Button } from '@material-ui/core';
+import { Box, Typography, makeStyles, Button, Link } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import BackgroundImage from '#Components/BackgroundImage';
@@ -35,9 +35,11 @@ const Banner = ({
               {description}
             </Typography>
             <Box>
-              <Button variant="contained" className={classes.actionButton}>
-                Contáctanos
-              </Button>
+              <Link target="_blank" href="https://wa.link/3vbh7y">
+                <Button variant="contained" className={classes.actionButton}>
+                  Contáctanos
+                </Button>
+              </Link>
             </Box>
           </Box>
           <Box className={classes.containerImage}>

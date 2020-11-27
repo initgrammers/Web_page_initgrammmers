@@ -1,4 +1,11 @@
-import { makeStyles, Button, Box, Typography, Hidden } from '@material-ui/core';
+import {
+  makeStyles,
+  Button,
+  Box,
+  Typography,
+  Hidden,
+  Link as LinkMaterial,
+} from '@material-ui/core';
 import Link from 'next/link';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
@@ -58,16 +65,17 @@ const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
           </Typography>
         </Button>
         <Hidden mdDown>
-          <Button
-            aria-label="Contácatanos"
-            aria-haspopup="true"
-            onClick={handleDrawerOpen}
-            color="primary"
-            variant="contained"
-            className={classes.contactUs}
-          >
-            Contáctanos
-          </Button>
+          <LinkMaterial target="_blank" href="https://wa.link/3vbh7y">
+            <Button
+              aria-label="Contácatanos"
+              aria-haspopup="true"
+              color="primary"
+              variant="contained"
+              className={classes.contactUs}
+            >
+              Contáctanos
+            </Button>
+          </LinkMaterial>
         </Hidden>
       </Box>
     </Box>

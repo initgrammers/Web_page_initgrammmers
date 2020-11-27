@@ -1,4 +1,4 @@
-import { makeStyles, Box, Typography, Button } from '@material-ui/core';
+import { makeStyles, Box, Typography, Button, Link } from '@material-ui/core';
 import Image from 'next/image';
 import styles from '../styles/CarryOutThatProject';
 import BackgroundImage from '#Components/BackgroundImage';
@@ -38,9 +38,11 @@ const Banner = () => {
               diferentes
             </Typography>
             <Box>
-              <Button variant="contained" className={classes.actionButton}>
-                Contáctanos
-              </Button>
+              <Link target="_blank" href="https://wa.link/3vbh7y">
+                <Button variant="contained" className={classes.actionButton}>
+                  Contáctanos
+                </Button>
+              </Link>
             </Box>
           </Box>
           <Box className={classes.containerImage}>
