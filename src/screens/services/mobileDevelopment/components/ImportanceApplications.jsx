@@ -16,18 +16,16 @@ const ImportanceAplications = () => {
       />
       <CustomContainer>
         <Grid container className={classes.root}>
-          <Grid item xs={false} md={1} />
-          <Grid item xs={12} md={5} className={classes.gridImage}>
-            <Box component="figure">
+          <Grid item xs={12} lg={6} className={classes.gridImage}>
+            <Box component="figure" className={classes.image}>
               <Image
                 quality={100}
                 src="/assets/images/importancia-aplicaciones-moviles.png"
-                width={504}
-                height={694}
+                layout="fill"
               />
             </Box>
           </Grid>
-          <Grid item xs={12} md={5} className={classes.gridContent}>
+          <Grid item xs={12} lg={6} className={classes.gridContent}>
             <Box component="article">
               <Typography variant="h2" className={classes.title}>
                 Importancia de las aplicaciones móviles
@@ -61,7 +59,6 @@ const ImportanceAplications = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={false} md={1} />
         </Grid>
       </CustomContainer>
     </Box>

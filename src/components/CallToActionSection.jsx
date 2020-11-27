@@ -37,11 +37,6 @@ const CallToActionSection = ({
             {description}
           </Typography>
           <ContactUsButton />
-          {/* <Link target="_blank" href="https://wa.link/3vbh7y">
-            <Button variant="contained" className={classes.button}>
-              CONTÁCTANOS
-            </Button>
-          </Link> */}
 
           <Box component="figure" className={classes.image}>
             <Image quality={100} src={image} width={500} height={550} />

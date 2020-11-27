@@ -66,6 +66,7 @@ const styles = (theme) => ({
     image: {
       width: 504,
       height: 679,
+      marginTop: `-${theme.spacing(2)}px`,
     },
   },
   containerBackgroundImage: {
