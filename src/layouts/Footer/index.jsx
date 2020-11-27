@@ -76,15 +76,15 @@ const CustomFooter = () => {
               />
               <Box display="flex" mt={2}>
                 <LinkIcon
-                  icon={<FacebookIcon />}
-                  href="https://www.facebook.com/"
+                  icon={<FacebookIcon className={classes.icon} />}
+                  href="https://www.facebook.com/InitGrammers/"
                 />
                 <LinkIcon
-                  icon={<LinkedInIcon />}
+                  icon={<LinkedInIcon className={classes.icon} />}
                   href="https://www.linkedin.com/company/initgrammersec"
                 />
                 <LinkIcon
-                  icon={<InstagramIcon />}
+                  icon={<InstagramIcon className={classes.icon} />}
                   href="https://www.instagram.com/initgrammers/"
                 />
               </Box>

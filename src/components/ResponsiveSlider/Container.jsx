@@ -7,16 +7,12 @@ const Container = ({ onNextStep, onPrevStep, children }) => (
     display="flex"
     justifyContent="space-between"
     alignItems="center"
+    height={110}
   >
     <Box onClick={onPrevStep}>
       <ArrowBackIos />
     </Box>
-    <Box
-      display="flex"
-      flex={1}
-      justifyContent="center"
-      alignItems="center"
-    >
+    <Box display="flex" flex={1} justifyContent="center" alignItems="center">
       {children}
     </Box>
     <Box onClick={onNextStep}>

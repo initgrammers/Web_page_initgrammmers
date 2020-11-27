@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
+import CustomLink from '#Components/CustomLink';
 import styles from './styles/MenuDesktop';
 
 const useStyles = makeStyles(styles);
@@ -18,13 +19,11 @@ const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
   const classes = useStyles();
   return (
     <Box className={classes.menuApp}>
-      <Box className={classes.logo}>
-        <Link href="/">
-          <a>
-            <LogoInitgrammers />
-          </a>
-        </Link>
-      </Box>
+      <CustomLink href="/">
+        <Button className={classes.logo} aria-label="logo Initgrammers">
+          <LogoInitgrammers />
+        </Button>
+      </CustomLink>
       <Box className={classes.sectionMenu}>
         <Button
           aria-label="Servicios"

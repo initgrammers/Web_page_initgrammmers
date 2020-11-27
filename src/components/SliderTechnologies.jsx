@@ -24,7 +24,7 @@ const SliderTechnologies = ({
 
 SliderTechnologies.propTypes = {
   title: PropTypes.string.isRequired,
-  technologies: PropTypes.array.isRequired,
+  technologies: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
 };
