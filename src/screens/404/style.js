@@ -8,6 +8,7 @@ const styles = (theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
+    padding: theme.spacing(3),
   },
   image: {
     position: 'relative',

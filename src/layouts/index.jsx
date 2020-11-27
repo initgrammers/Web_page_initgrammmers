@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import Navigation from './AppBar';
-import CustomFooter from './_Footer';
+import CustomFooter from './Footer';
 
 const Layout = ({ children, navigation }) => (
   <>
