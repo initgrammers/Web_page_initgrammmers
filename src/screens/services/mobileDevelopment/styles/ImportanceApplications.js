@@ -23,6 +23,9 @@ const styles = (theme) => ({
     [theme.breakpoints.down('md')]: {
       order: '-1',
     },
+    [theme.breakpoints.up('lg')]: {
+      paddingLeft: theme.spacing(15),
+    },
   },
   gridImage: {
     [theme.breakpoints.down('md')]: {
