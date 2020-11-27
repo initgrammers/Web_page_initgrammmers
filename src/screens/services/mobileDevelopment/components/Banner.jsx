@@ -5,6 +5,7 @@ import {
   Typography,
   Button,
   Hidden,
+  Link,
 } from '@material-ui/core';
 import Image from 'next/image';
 import styles from '../styles/Banner';
@@ -35,9 +36,11 @@ const Banner = () => {
             Tus productos en el bolsillo de tus clientes
           </Typography>
           <Box>
-            <Button variant="contained" className={classes.actionButton}>
-              Contáctanos
-            </Button>
+            <Link target="_blank" href="https://wa.link/3vbh7y">
+              <Button variant="contained" className={classes.actionButton}>
+                Contáctanos
+              </Button>
+            </Link>
           </Box>
         </Box>
         <Box className={classes.containerImage}>

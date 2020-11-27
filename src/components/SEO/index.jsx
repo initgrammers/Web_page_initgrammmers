@@ -18,8 +18,8 @@ const SEO = ({
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     {/* Properties */}
-    {properties.map((item) => (
-      <meta property={item.property} content={item.content} />
+    {properties.map((item, index) => (
+      <meta key={index} property={item.property} content={item.content} />
     ))}
     <meta
       name="google-site-verification"
@@ -30,7 +30,11 @@ const SEO = ({
       content="f6e1m61awoty4uqq75apqhiupih6vb"
     />
     {socialVerifications.map((item) => (
-      <meta property={item.property} content={item.content} />
+      <meta
+        key={item.property}
+        property={item.property}
+        content={item.content}
+      />
     ))}
     <link rel="alternate" href={urlAltern} hrefLang="es-ec" />
     <link rel="alternate" href={urlAltern} hrefLang="x-default" />

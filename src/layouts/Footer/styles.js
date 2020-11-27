@@ -48,6 +48,7 @@ const styles = (theme) => ({
   },
   action: {
     marginTop: theme.spacing(1),
+    color: theme.palette.common.black,
   },
   image: {
     width: 169,

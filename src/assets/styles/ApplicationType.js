@@ -21,6 +21,9 @@ const styles = (theme) => ({
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(2),
   },
+  button: {
+    color: 'white',
+  },
   stepper: {
     display: 'flex',
     justifyContent: 'center',
