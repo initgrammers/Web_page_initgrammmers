@@ -4,9 +4,12 @@ import ApplicationsAtYourFingertips from './sections/ApplicationsAtYourFingertip
 import MobileApplicationTypes from './sections/MobileApplicationTypes';
 import Questions from './sections/Questions';
 import SliderTech from './sections/SliderTech';
+import SEO from '#Components/SEO';
+import MobileDevelopment from '#constants/seo/MobileDevelopment';
 
-const MobileDevelopment = () => (
+const index = () => (
   <>
+    <SEO {...MobileDevelopment} />
     <Banner />
     <ImportanceApplications />
     <SliderTech />
@@ -16,4 +19,4 @@ const MobileDevelopment = () => (
   </>
 );
 
-export default MobileDevelopment;
+export default index;

@@ -42,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Service = ({ title, subtitle, href, icon, indexMenu, id }) => {
   const classes = useStyles();
-  console.log(indexMenu, id, '----');
   return (
     <Box display="flex" color="common.black">
       <Link href={href}>
