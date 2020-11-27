@@ -43,7 +43,7 @@ function ApplicationType({ sectionTitle, typesApplication }) {
           index={activeStep}
           onChangeIndex={handleStepChange}
           enableMouseEvents
-          interval={2000}
+          interval={20000}
           className={classes.swipeable}
         >
           {typesApplication.map((app, index) => (
@@ -56,7 +56,7 @@ function ApplicationType({ sectionTitle, typesApplication }) {
                   <Typography variant="body1">{app.description}</Typography>
                 </Box>
               ) : (
-                <>sdsa</>
+                <></>
               )}
             </>
           ))}
