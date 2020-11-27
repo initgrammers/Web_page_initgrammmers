@@ -13,6 +13,7 @@ const NotFountPage = () => {
         <Subtitle head="No encontramos lo que estabas buscando" white />
         <Box className={classes.image}>
           <Image
+            quality={100}
             src="/assets/images/404.png"
             alt="Picture of the author"
             layout="fill"

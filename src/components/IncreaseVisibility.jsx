@@ -20,7 +20,7 @@ const useStyle = makeStyles({
     width: 505,
     position: 'relative',
   },
-  
+
   text: {
     height: 260,
     width: 400,
@@ -32,7 +32,8 @@ const IncreaseVisibility = ({
   titlePart2,
   titlePart3,
   description,
-  image }) => {
+  image,
+}) => {
   const classes = useStyle();
 
   return (
@@ -40,7 +41,7 @@ const IncreaseVisibility = ({
       <Container>
         <Box className={classes.move}>
           <Box className={classes.img}>
-            <Image component="figure" src={image} layout="fill" />
+            <Image quality={100} src={image} layout="fill" />
           </Box>
           <Box className={classes.text}>
             <Box>
@@ -50,13 +51,15 @@ const IncreaseVisibility = ({
             </Box>
             <Box>
               <Typography>
-                Una buena presencia en línea ayudará a conseguir más clientes potenciales.Nuestro trabajo es crear páginas web con diseños atractivos y funcionales. Una página web permite aque todo el mundo te encuentre y sepa qué es lo que haces y ofreces at us consumidores.
+                Una buena presencia en línea ayudará a conseguir más clientes
+                potenciales.Nuestro trabajo es crear páginas web con diseños
+                atractivos y funcionales. Una página web permite aque todo el
+                mundo te encuentre y sepa qué es lo que haces y ofreces at us
+                consumidores.
               </Typography>
             </Box>
           </Box>
-
         </Box>
-        
       </Container>
     </Box>
   );
