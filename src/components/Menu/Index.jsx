@@ -63,7 +63,11 @@ const CustomMenu = ({ indexMenu }) => {
         <Fade timeout={800} in={showNav} className={classes.fade}>
           <Box bgcolor="white">
             <OutsideAlerter callback={handleClose}>
-              <Options visible={showNav} indexMenu={indexMenu} />
+              <Options
+                visible={showNav}
+                indexMenu={indexMenu}
+                handleDrawerOpen={handleDrawerOpen}
+              />
             </OutsideAlerter>
           </Box>
         </Fade>

@@ -18,9 +18,13 @@ const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
   const classes = useStyles();
   return (
     <Box className={classes.menuApp}>
-      <Button className={classes.logo} aria-label="logo Initgrammers">
-        <LogoInitgrammers />
-      </Button>
+      <Box className={classes.logo}>
+        <Link href="/">
+          <a>
+            <LogoInitgrammers />
+          </a>
+        </Link>
+      </Box>
       <Box className={classes.sectionMenu}>
         <Button
           aria-label="Servicios"

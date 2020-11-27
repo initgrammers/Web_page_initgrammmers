@@ -4,46 +4,28 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { data } from '#constants/Menu';
+import styles from './styles/Options';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    height: 'auto',
-    padding: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
-      height: 392,
-      padding: theme.spacing(5, 10),
-    },
-  },
-  title: {
-    marginBottom: theme.spacing(5),
-  },
-  service: {
-    display: 'flex',
-    '&:hover': {
-      color: theme.palette.primary.main,
-      '&>svg': {
-        fill: theme.palette.primary.main,
-      },
-    },
-  },
-  descriptionService: {
-    paddingLeft: theme.spacing(2),
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  selected: {
-    background: `#DADADA`,
-    color: theme.palette.primary.main,
-    padding: `${theme.spacing(0.5)}px 0`,
-    border: 0,
-    borderRadius: 5,
-  },
-}));
+const useStyles = makeStyles(styles);
 
-const Service = ({ title, subtitle, href, icon, indexMenu, id }) => {
+const Service = ({
+  title,
+  subtitle,
+  href,
+  icon,
+  indexMenu,
+  id,
+  handleDrawerOpen,
+}) => {
   const classes = useStyles();
   return (
-    <Box display="flex" color="common.black">
+    <Box
+      display="flex"
+      color="common.black"
+      component="li"
+      onClick={handleDrawerOpen}
+      className={classes.button}
+    >
       <Link href={href}>
         <a
           className={clsx(classes.service, {
@@ -76,7 +58,7 @@ Service.defaultProps = {
   indexMenu: '',
 };
 
-const Options = ({ indexMenu }) => {
+const Options = ({ indexMenu, handleDrawerOpen }) => {
   const classes = useStyles();
   return (
     <Box className={classes.root}>
@@ -84,17 +66,15 @@ const Options = ({ indexMenu }) => {
         Servicios que ofrecemos
       </Typography>
       <Grid container spacing={4}>
-        {data.map(
-          (item, index) => (
-            <Grid item md={4} sm={6} xs={12} key={index}>
-              <Service {...item} indexMenu={indexMenu} />
-            </Grid>
-          )
-
-          // <Grid item md={4} sm={6} xs={12} key={index}>
-          //   <Service {...item} />
-          // </Grid>
-        )}
+        {data.map((item, index) => (
+          <Grid item md={4} sm={6} xs={12} key={index}>
+            <Service
+              {...item}
+              indexMenu={indexMenu}
+              handleDrawerOpen={handleDrawerOpen}
+            />
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );
