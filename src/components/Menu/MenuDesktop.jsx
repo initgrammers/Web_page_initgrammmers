@@ -1,14 +1,15 @@
 import { makeStyles, Button, Box, Typography, Hidden } from '@material-ui/core';
 import Link from 'next/link';
-import LogoInitgrammers from '#svg/LogoInitgrammers';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
+import LogoInitgrammers from '#svg/LogoInitgrammers';
+import CustomLink from '#Components/CustomLink';
 
 const useStyles = makeStyles((theme) => ({
   menuApp: {
     display: 'flex',
     alignItems: 'center',
-    width: `100%`,
+    width: '100%',
   },
 
   button: {
@@ -44,9 +45,11 @@ const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
   const classes = useStyles();
   return (
     <Box className={classes.menuApp}>
-      <Button className={classes.logo} aria-label="logo Initgrammers">
-        <LogoInitgrammers />
-      </Button>
+      <CustomLink href="/">
+        <Button className={classes.logo} aria-label="logo Initgrammers">
+          <LogoInitgrammers />
+        </Button>
+      </CustomLink>
       <Box className={classes.sectionMenu}>
         <Button
           aria-label="Servicios"

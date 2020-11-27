@@ -84,17 +84,11 @@ const Options = ({ indexMenu }) => {
         Servicios que ofrecemos
       </Typography>
       <Grid container spacing={4}>
-        {data.map(
-          (item, index) => (
-            <Grid item md={4} sm={6} xs={12} key={index}>
-              <Service {...item} indexMenu={indexMenu} />
-            </Grid>
-          )
-
-          // <Grid item md={4} sm={6} xs={12} key={index}>
-          //   <Service {...item} />
-          // </Grid>
-        )}
+        {data.map((item, index) => (
+          <Grid item md={4} sm={6} xs={12} key={index}>
+            <Service {...item} indexMenu={indexMenu} />
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );

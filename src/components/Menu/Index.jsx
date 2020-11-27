@@ -17,6 +17,7 @@ import OutsideAlerter from '../Outsider';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
 import MenuDesktop from './MenuDesktop';
 import styles from '../../assets/styles/Menu';
+import CustomLink from '#Components/CustomLink';
 
 const useStyles = makeStyles(styles);
 
@@ -37,9 +38,11 @@ const CustomMenu = ({ indexMenu }) => {
         <Toolbar className={classes.main}>
           <Hidden mdUp>
             <Box className={classes.sectionLogo}>
-              <Button className={classes.logo} aria-label="logo Initgrammers">
-                <LogoInitgrammers />
-              </Button>
+              <CustomLink href="/">
+                <Button className={classes.logo} aria-label="logo Initgrammers">
+                  <LogoInitgrammers />
+                </Button>
+              </CustomLink>
             </Box>
 
             <IconButton
@@ -60,6 +63,7 @@ const CustomMenu = ({ indexMenu }) => {
             />
           </Hidden>
         </Toolbar>
+
         <Fade timeout={800} in={showNav} className={classes.fade}>
           <Box bgcolor="white">
             <OutsideAlerter callback={handleClose}>
