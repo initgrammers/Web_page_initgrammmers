@@ -93,7 +93,7 @@ const CustomFooter = () => {
               </Box>
             </Grid>
             <Grid item md={3} sm={12}>
-              <Typography className={classes.text}>Servicios</Typography>
+              <Typography className={classes.section}>Servicios</Typography>
               {services.map((item, key) => (
                 <CustomLink key={key} href={item.href}>
                   <Typography className={classes.text}>{item.label}</Typography>
@@ -103,7 +103,9 @@ const CustomFooter = () => {
             <Grid item md={3} sm={12}>
               {portfolio.map((item, key) => (
                 <CustomLink key={key} href={item.href}>
-                  <Typography className={classes.text}>{item.label}</Typography>
+                  <Typography className={classes.section}>
+                    {item.label}
+                  </Typography>
                 </CustomLink>
               ))}
             </Grid>

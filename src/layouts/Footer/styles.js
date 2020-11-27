@@ -23,6 +23,11 @@ const styles = (theme) => ({
   },
   text: {
     marginBottom: theme.spacing(2),
+    fontWeight: '400 !important',
+  },
+  section: {
+    marginBottom: theme.spacing(2),
+    fontWeight: 'bold',
   },
   gridContact: {
     maxWidth: 620,
