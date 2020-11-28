@@ -6,7 +6,6 @@ const styles = (theme) => ({
     height: 'auto',
     padding: theme.spacing(2),
     [theme.breakpoints.up('sm')]: {
-      height: 392,
       padding: theme.spacing(5, 10),
     },
   },
