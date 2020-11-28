@@ -10,12 +10,20 @@ const NeedAnUpdate = () => {
 
   return (
     <Box component="section" position="relative">
-      <BackgroundImage
-        image="/assets/images/necesitas-una-actualizacion.png"
-        height={672}
+      <img
+        loading="lazy"
+        className={classes.background}
+        src="/assets/images/figures/webDevelopment/bloque3.png"
+        alt="background-dino"
+      />
+      <img
+        loading="lazy"
+        className={classes.computer}
+        src="/assets/images/necesitas-una-actualizacion.png"
+        alt="background-computer"
       />
       <CustomContainer>
-        <Box className={classes.container} pt={26} pb={50}>
+        <Box className={classes.container}>
           <Typography variant="h2" className={classes.title}>
             ¿Necesitas una actualización?
           </Typography>
