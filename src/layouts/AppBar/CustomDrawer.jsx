@@ -78,7 +78,7 @@ export default function CustomDrawer({
                   [classSelected]: index === 'UXUIDesign',
                 })}
               >
-                <Link href="/Services/UXUIDesign">
+                <Link href="/services/UXUIDesign">
                   <a>Diseño UI/UX</a>
                 </Link>
               </ListItem>
@@ -89,7 +89,7 @@ export default function CustomDrawer({
                   [classSelected]: index === 'PWADevelopment',
                 })}
               >
-                <Link href="/Services/PWADevelopment">
+                <Link href="/services/PWADevelopment">
                   <a>Desarrollo de aplicaciones PWA </a>
                 </Link>
               </ListItem>
@@ -100,7 +100,7 @@ export default function CustomDrawer({
                   [classSelected]: index === 'Ecommerce',
                 })}
               >
-                <Link href="/Services/Ecommerce">
+                <Link href="/services/Ecommerce">
                   <a>Tiendas en línea / E-commerce </a>
                 </Link>
               </ListItem>
@@ -111,7 +111,7 @@ export default function CustomDrawer({
                   [classSelected]: index === 'DigitalMarketing',
                 })}
               >
-                <Link href="/Services/DigitalMarketing">
+                <Link href="/services/DigitalMarketing">
                   <a>Marketing Digital </a>
                 </Link>
               </ListItem>

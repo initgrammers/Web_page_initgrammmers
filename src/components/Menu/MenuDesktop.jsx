@@ -11,10 +11,10 @@ import ContactUsButton from '#Components/ContacUsButton';
 const useStyles = makeStyles(styles);
 
 const menu = [
-  { label: 'Portafolio', href: '#' },
-  { label: '¿Quiénes somos?', href: '#' },
-  { label: 'Blog', href: '#' },
-  { label: 'Contacto', href: '#' },
+  { label: 'Portafolio', href: '/Portfolio' },
+  { label: '¿Quiénes somos?', href: '/AboutUs' },
+  { label: 'Blog', href: '/Blog' },
+  { label: 'Contacto', href: '/ContactUs' },
 ];
 
 const MenuDesktop = ({ showServices, handleDrawerOpen }) => {

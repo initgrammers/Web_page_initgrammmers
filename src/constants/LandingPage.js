@@ -15,22 +15,22 @@ export const services = [
     service: 'Desarrollo Móvil',
   },
   {
-    href: '/services/',
+    href: '/services/Tranings',
     path: '/assets/images/capacitaciones.png',
     service: 'Capacitaciones',
   },
   {
-    href: '/services/',
+    href: '/services/Marketing',
     path: '/assets/images/marketing.png',
     service: 'Marketing',
   },
   {
-    href: '/services/',
+    href: '/services/SEO',
     path: '/assets/images/posicionamiento-buscadores.png',
     service: 'Posicionamiento en buscadores',
   },
   {
-    href: '/services/',
+    href: '/services/ECommerce',
     path: '/assets/images/e-commerce.png',
     service: 'E-commerce',
   },
