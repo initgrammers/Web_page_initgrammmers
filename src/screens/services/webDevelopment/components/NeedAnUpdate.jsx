@@ -1,5 +1,4 @@
 import { makeStyles, Box, Typography } from '@material-ui/core';
-import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import styles from '../styles/NeedAnUpdate';
 
