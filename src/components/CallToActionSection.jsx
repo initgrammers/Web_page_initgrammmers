@@ -6,6 +6,7 @@ import Subtitle from '#Components/Subtitle';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import ContactUsButton from './ContacUsButton';
+import { contactsLinks } from '#app/constants/contacts';
 
 const useStyles = makeStyles(styles);
 
@@ -36,7 +37,7 @@ const CallToActionSection = ({
           <Typography variant="body1" className={classes.description}>
             {description}
           </Typography>
-          <ContactUsButton />
+          <ContactUsButton href={contactsLinks.general} />
 
           <Box component="figure" className={classes.image}>
             <Image quality={100} src={image} width={500} height={550} />

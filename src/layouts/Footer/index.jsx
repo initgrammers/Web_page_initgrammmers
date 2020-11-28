@@ -19,6 +19,7 @@ import LinkIcon from './components/LinkIcon';
 import CustomLink from '#Components/CustomLink';
 import styles from './styles';
 import ContactUs from './ContactUs';
+import { contactsLinks } from '#app/constants/contacts';
 
 const useStyles = makeStyles(styles);
 const CustomFooter = () => {
@@ -67,12 +68,12 @@ const CustomFooter = () => {
               </Typography>
               <Box my={4}>
                 <LinkWithIcon
-                  href="tel: +593963277297"
+                  href={contactsLinks.callUs}
                   icon={<PhoneIcon />}
                   label="(+593) 963277297"
                 />
                 <LinkWithIcon
-                  href="mailto: info@initgrammers.com"
+                  href={contactsLinks.writeUs}
                   icon={<MailIcon />}
                   label="info@initgrammers.com"
                 />

@@ -7,6 +7,7 @@ import LogoInitgrammers from '#svg/LogoInitgrammers';
 import CustomLink from '#Components/CustomLink';
 import styles from './styles/MenuDesktop';
 import ContactUsButton from '#Components/ContacUsButton';
+import { contactsLinks } from '#app/constants/contacts';
 
 const useStyles = makeStyles(styles);
 
@@ -49,14 +50,19 @@ const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
         ))}
       </Box>
       <Box>
-        <ContactUsButton label="Agenda una ascesoría" variant="text" mr={2}>
+        <ContactUsButton
+          href={contactsLinks.consulting}
+          label="Agenda una ascesoría"
+          variant="text"
+          mr={2}
+        >
           <Typography className={classes.services} variant="body2">
             Agenda una ascesoría
           </Typography>
         </ContactUsButton>
 
         <Hidden mdDown>
-          <ContactUsButton />
+          <ContactUsButton href={contactsLinks.general} />
         </Hidden>
       </Box>
     </Box>
