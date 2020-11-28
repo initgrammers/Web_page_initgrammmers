@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core';
 
-const styles = (theme) => ({
+const styles = makeStyles((theme) => ({
   content: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
   },
 
   title: {
@@ -17,18 +18,52 @@ const styles = (theme) => ({
     },
   },
   description: {
-    paddingTop: theme.spacing(6),
+    paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
     textAlign: 'center',
-  },
-  image: {
-    paddingTop: theme.spacing(6),
   },
   button: {
     background: theme.palette.secondary.main,
     color: theme.palette.primary.contrastText,
   },
-});
+  imageStyle: ({ xs }) => ({
+    marginTop: theme.spacing(4),
+    width: xs.width,
+    height: xs.height,
+    position: 'relative',
+  }),
+  [theme.breakpoints.up('sm')]: {
+    imageStyle: ({ sm }) => ({
+      marginTop: theme.spacing(5),
+      width: sm.width,
+      height: sm.height,
+      position: 'relative',
+    }),
+    content: {
+      paddingTop: theme.spacing(5),
+      paddingBottom: theme.spacing(5),
+    },
+  },
+  [theme.breakpoints.up('md')]: {
+    imageStyle: ({ md }) => ({
+      width: md.width,
+      height: md.height,
+      position: 'relative',
+    }),
+  },
+  [theme.breakpoints.up('lg')]: {
+    imageStyle: ({ lg }) => ({
+      marginTop: theme.spacing(8),
+      width: lg.width,
+      height: lg.height,
+      position: 'relative',
+    }),
+    content: {
+      paddingTop: theme.spacing(8),
+      paddingBottom: theme.spacing(8),
+    },
+  },
+}));
 
 styles.propTypes = {
   theme: PropTypes.shape(),

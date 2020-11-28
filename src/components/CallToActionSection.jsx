@@ -7,8 +7,6 @@ import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import ContactUsButton from './ContacUsButton';
 
-const useStyles = makeStyles(styles);
-
 const CallToActionSection = ({
   titlePart1,
   titlePart2,
@@ -17,8 +15,11 @@ const CallToActionSection = ({
   image,
   backgroundImage,
   heightImage,
+  imageSizes,
 }) => {
-  const classes = useStyles();
+  // const { xs, sm, md, lg } = imageSizes;
+
+  const classes = styles({ ...imageSizes });
 
   return (
     <Box component="section" position="relative">
@@ -31,15 +32,15 @@ const CallToActionSection = ({
             emphasis={titlePart2}
             tail={titlePart3}
             align="center"
-            mb={4}
+            mb={0}
           />
           <Typography variant="body1" className={classes.description}>
             {description}
           </Typography>
           <ContactUsButton />
 
-          <Box component="figure" className={classes.image}>
-            <Image quality={100} src={image} width={500} height={550} />
+          <Box className={classes.imageStyle}>
+            <Image src={image} layout="fill" />
           </Box>
         </Box>
       </CustomContainer>
@@ -55,6 +56,7 @@ CallToActionSection.propTypes = {
   image: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
+  imageSizes: PropTypes.objectOf,
 };
 
 CallToActionSection.defaultProps = {
@@ -62,5 +64,6 @@ CallToActionSection.defaultProps = {
   titlePart3: '',
   backgroundImage: '',
   heightImage: 0,
+  imageSizes: {},
 };
 export default CallToActionSection;
