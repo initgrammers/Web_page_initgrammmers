@@ -31,6 +31,9 @@ const styles = makeStyles((theme) => ({
     width: xs.width,
     height: xs.height,
     position: 'relative',
+    '&>div>img': {
+      objectFit: 'contain',
+    },
   }),
   [theme.breakpoints.up('sm')]: {
     imageStyle: ({ sm }) => ({

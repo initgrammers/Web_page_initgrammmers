@@ -1,4 +1,4 @@
-import { makeStyles, Box, Typography } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from '../assets/styles/CallToActionType';
@@ -18,8 +18,6 @@ const CallToActionSection = ({
   heightImage,
   imageSizes,
 }) => {
-  // const { xs, sm, md, lg } = imageSizes;
-
   const classes = styles({ ...imageSizes });
 
   return (
@@ -41,7 +39,7 @@ const CallToActionSection = ({
           <ContactUsButton href={contactsLinks.general} />
 
           <Box className={classes.imageStyle}>
-            <Image src={image} layout="fill" />
+            <Image quality={100} src={image} layout="fill" />
           </Box>
         </Box>
       </CustomContainer>
@@ -57,7 +55,7 @@ CallToActionSection.propTypes = {
   image: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
-  imageSizes: PropTypes.objectOf,
+  imageSizes: PropTypes.objectOf.isRequired,
 };
 
 CallToActionSection.defaultProps = {
@@ -65,6 +63,5 @@ CallToActionSection.defaultProps = {
   titlePart3: '',
   backgroundImage: '',
   heightImage: 0,
-  imageSizes: {},
 };
 export default CallToActionSection;
