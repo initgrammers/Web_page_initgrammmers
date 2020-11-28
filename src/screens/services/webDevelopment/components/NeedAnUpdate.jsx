@@ -1,5 +1,4 @@
 import { makeStyles, Box, Typography } from '@material-ui/core';
-import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import styles from '../styles/NeedAnUpdate';
 
@@ -10,12 +9,28 @@ const NeedAnUpdate = () => {
 
   return (
     <Box component="section" position="relative">
-      <BackgroundImage
-        image="/assets/images/necesitas-una-actualizacion.png"
-        height={672}
+      <img
+        loading="lazy"
+        className={classes.background}
+        src="/assets/images/figures/webDevelopment/bloque3.png"
+        alt="background-dino"
+      />
+      <Box className={classes.dino}>
+        <img
+          loading="lazy"
+          src="/assets/images/figures/webDevelopment/dino.png"
+          alt="background-dino"
+        />
+      </Box>
+
+      <img
+        loading="lazy"
+        className={classes.computer}
+        src="/assets/images/necesitas-una-actualizacion.png"
+        alt="background-computer"
       />
       <CustomContainer>
-        <Box className={classes.container} pt={26} pb={50}>
+        <Box className={classes.container}>
           <Typography variant="h2" className={classes.title}>
             ¿Necesitas una actualización?
           </Typography>

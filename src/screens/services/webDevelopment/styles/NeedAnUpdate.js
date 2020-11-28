@@ -6,6 +6,40 @@ const styles = (theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(36.75),
+  },
+  background: {
+    position: 'absolute',
+    top: -1,
+    zIndex: 1000,
+    width: '100%',
+    height: 'auto',
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
+  },
+  dino: {
+    position: 'absolute',
+    zIndex: 1000,
+    margin: '0 auto',
+    top: -32,
+    left: 0,
+    display: 'flex',
+    justifyContent: 'center',
+    height: 'auto',
+    width: '100%',
+    objectFit: 'cover',
+  },
+  computer: {
+    position: 'absolute',
+    top: 0,
+    height: '100%',
+    width: '100%',
+    objectFit: 'cover',
+    [theme.breakpoints.up('sm')]: {
+      objectFit: 'fill',
+    },
   },
 
   [theme.breakpoints.up('lg')]: {

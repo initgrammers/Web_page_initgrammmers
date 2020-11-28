@@ -7,6 +7,7 @@ import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import CardPartnership from '#Components/CardPartnership';
 import ContactUsButton from '#Components/ContacUsButton';
+import { contactsLinks } from '#app/constants/contacts';
 
 const useStyles = makeStyles(styles);
 
@@ -38,7 +39,7 @@ const PartnershipModel = ({
           <Typography variant="body1" className={classes.description}>
             {description}
           </Typography>
-          <ContactUsButton label="Escríbenos" />
+          <ContactUsButton label="Escríbenos" href={contactsLinks.writeUs} />
 
           <Box className={classes.services}>
             {partnershipModel.map((service) => (

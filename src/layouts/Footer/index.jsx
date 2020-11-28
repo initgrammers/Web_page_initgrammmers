@@ -19,6 +19,7 @@ import LinkIcon from './components/LinkIcon';
 import CustomLink from '#Components/CustomLink';
 import styles from './styles';
 import ContactUs from './ContactUs';
+import { contactsLinks } from '#app/constants/contacts';
 
 const useStyles = makeStyles(styles);
 const CustomFooter = () => {
@@ -42,10 +43,10 @@ const CustomFooter = () => {
     { label: 'Tiendas en línea / E-commerce', href: 'Ecommerce' },
   ];
   const portfolio = [
-    { label: 'Portafolio', href: '#' },
-    { label: '¿Quiénes somos?', href: '#' },
-    { label: 'Blog', href: '#' },
-    { label: 'Contacto', href: '#' },
+    { label: 'Portafolio', href: '/services/Portfolio' },
+    { label: '¿Quiénes somos?', href: '/services/AboutUs' },
+    { label: 'Blog', href: '/services/Blog' },
+    { label: 'Contacto', href: '/services/ContactUs' },
   ];
 
   return (
@@ -67,12 +68,12 @@ const CustomFooter = () => {
               </Typography>
               <Box my={4}>
                 <LinkWithIcon
-                  href="tel: +593963277297"
+                  href={contactsLinks.callUs}
                   icon={<PhoneIcon />}
                   label="(+593) 963277297"
                 />
                 <LinkWithIcon
-                  href="mailto: info@initgrammers.com"
+                  href={contactsLinks.writeUs}
                   icon={<MailIcon />}
                   label="info@initgrammers.com"
                 />
@@ -93,7 +94,7 @@ const CustomFooter = () => {
               </Box>
             </Grid>
             <Grid item md={3} sm={12}>
-              <Typography className={classes.text}>Servicios</Typography>
+              <Typography className={classes.section}>Servicios</Typography>
               {services.map((item, key) => (
                 <CustomLink key={key} href={item.href}>
                   <Typography className={classes.text}>{item.label}</Typography>
@@ -103,7 +104,9 @@ const CustomFooter = () => {
             <Grid item md={3} sm={12}>
               {portfolio.map((item, key) => (
                 <CustomLink key={key} href={item.href}>
-                  <Typography className={classes.text}>{item.label}</Typography>
+                  <Typography className={classes.section}>
+                    {item.label}
+                  </Typography>
                 </CustomLink>
               ))}
             </Grid>

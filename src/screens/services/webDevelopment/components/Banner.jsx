@@ -5,6 +5,7 @@ import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import styles from '../styles/Banner';
 import ContactUsButton from '#Components/ContacUsButton';
+import { contactsLinks } from '#app/constants/contacts';
 
 const useStyles = makeStyles(styles);
 const Banner = ({
@@ -35,7 +36,7 @@ const Banner = ({
             >
               {description}
             </Typography>
-            <ContactUsButton color="secondary" />
+            <ContactUsButton color="secondary" href={contactsLinks.webPages} />
           </Box>
           <Box className={classes.containerImage}>
             <Box component="figure" className={classes.image}>

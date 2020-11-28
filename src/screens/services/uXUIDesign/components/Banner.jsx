@@ -5,6 +5,7 @@ import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import Subtitle from '#Components/Subtitle';
 import ContactUsButton from '#Components/ContacUsButton';
+import { contactsLinks } from '#app/constants/contacts';
 
 const useStyles = makeStyles(styles);
 
@@ -34,7 +35,7 @@ const Banner = () => {
             >
               Diseño innovador, experiencia única
             </Typography>
-            <ContactUsButton />
+            <ContactUsButton href={contactsLinks.uiuxPages} />
           </Box>
           <Box className={classes.containerImage}>
             <Box component="figure" className={classes.image}>

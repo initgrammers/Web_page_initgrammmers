@@ -1,5 +1,5 @@
 /* eslint-disable no-confusing-arrow */
-import { Box, Grid, makeStyles, Typography } from '@material-ui/core';
+import { Box, Button, Grid, makeStyles, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import clsx from 'clsx';
@@ -19,16 +19,14 @@ const Service = ({
 }) => {
   const classes = useStyles();
   return (
-    <Box
-      display="flex"
-      color="common.black"
-      component="li"
-      onClick={handleDrawerOpen}
-      className={classes.button}
-    >
-      <Link href={href}>
-        <a
-          className={clsx(classes.service, {
+    <Link href={href}>
+      <a className={classes.service}>
+        <Button
+          display="flex"
+          color="common.black"
+          fullWidth
+          onClick={handleDrawerOpen}
+          className={clsx(classes.button, {
             [classes.selected]: indexMenu === id,
           })}
         >
@@ -41,9 +39,9 @@ const Service = ({
               {subtitle}
             </Typography>
           </Box>
-        </a>
-      </Link>
-    </Box>
+        </Button>
+      </a>
+    </Link>
   );
 };
 
@@ -53,9 +51,13 @@ Service.propTypes = {
   href: PropTypes.string.isRequired,
   icon: PropTypes.shape().isRequired,
   indexMenu: PropTypes.string,
+  id: PropTypes.string,
+  handleDrawerOpen: PropTypes.func,
 };
 Service.defaultProps = {
   indexMenu: '',
+  id: '',
+  handleDrawerOpen: () => {},
 };
 
 const Options = ({ indexMenu, handleDrawerOpen }) => {
@@ -82,6 +84,7 @@ const Options = ({ indexMenu, handleDrawerOpen }) => {
 
 Options.propTypes = {
   indexMenu: PropTypes.string.isRequired,
+  handleDrawerOpen: PropTypes.func.isRequired,
 };
 
 export default Options;
