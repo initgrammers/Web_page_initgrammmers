@@ -43,10 +43,10 @@ const CustomFooter = () => {
     { label: 'Tiendas en línea / E-commerce', href: 'Ecommerce' },
   ];
   const portfolio = [
-    { label: 'Portafolio', href: '#' },
-    { label: '¿Quiénes somos?', href: '#' },
-    { label: 'Blog', href: '#' },
-    { label: 'Contacto', href: '#' },
+    { label: 'Portafolio', href: '/services/Portfolio' },
+    { label: '¿Quiénes somos?', href: '/services/AboutUs' },
+    { label: 'Blog', href: '/services/Blog' },
+    { label: 'Contacto', href: '/services/ContactUs' },
   ];
 
   return (

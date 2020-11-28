@@ -10,6 +10,7 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import clsx from 'clsx';
 import Link from 'next/link';
+import CustomLink from '#Components/CustomLink';
 
 const useStyles = makeStyles((theme) => ({
   fullList: {
@@ -118,16 +119,24 @@ export default function CustomDrawer({
             </List>
           </Collapse>
           <ListItem button>
-            <ListItemText primary="Portafolio" />
+            <CustomLink href="/services/Portfolio">
+              <ListItemText primary="Portafolio" />
+            </CustomLink>
           </ListItem>
           <ListItem button>
-            <ListItemText primary="¿Quiénes somos?" />
+            <CustomLink href="/services/AboutUs">
+              <ListItemText primary="¿Quiénes somos?" />
+            </CustomLink>
           </ListItem>
           <ListItem button>
-            <ListItemText primary="Blog" />
+            <CustomLink href="/services/Blog">
+              <ListItemText primary="Blog" />
+            </CustomLink>
           </ListItem>
           <ListItem button>
-            <ListItemText primary="Contacto" />
+            <CustomLink href="/services/ContactUs">
+              <ListItemText primary="Contacto" />
+            </CustomLink>
           </ListItem>
         </List>
       </Drawer>
