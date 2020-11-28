@@ -15,6 +15,14 @@ const NeedAnUpdate = () => {
         src="/assets/images/figures/webDevelopment/bloque3.png"
         alt="background-dino"
       />
+      <Box className={classes.dino}>
+        <img
+          loading="lazy"
+          src="/assets/images/figures/webDevelopment/dino.png"
+          alt="background-dino"
+        />
+      </Box>
+
       <img
         loading="lazy"
         className={classes.computer}

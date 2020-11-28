@@ -19,6 +19,18 @@ const styles = (theme) => ({
       display: 'none',
     },
   },
+  dino: {
+    position: 'absolute',
+    zIndex: 1000,
+    margin: '0 auto',
+    top: -32,
+    left: 0,
+    display: 'flex',
+    justifyContent: 'center',
+    height: 'auto',
+    width: '100%',
+    objectFit: 'cover',
+  },
   computer: {
     position: 'absolute',
     top: 0,
