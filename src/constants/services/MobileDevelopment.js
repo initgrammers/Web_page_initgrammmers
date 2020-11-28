@@ -16,16 +16,8 @@ export const MobileTechnologies = [
     image: '/assets/svg/firebase-1.svg',
   },
   {
-    label: 'Angular',
-    image: '/assets/svg/angular-icon-1.svg',
-  },
-  {
     label: 'iOS',
     image: '/assets/svg/apple.svg',
-  },
-  {
-    label: 'Next.js',
-    image: '/assets/svg/next-js.svg',
   },
 ];
 
@@ -56,61 +48,72 @@ export const questions = [
   {
     id: 0,
     title: '¿Puedo recibir pagos a través de mi aplicación móvil?',
-    details: `Si, durante el desarrollo de aplicaciones móviles podemos integrar una pasarela de pagos a tu aplicación móvil para que puedas vender productos o servicios.`,
+    details:
+      'Si, durante el desarrollo de aplicaciones móviles podemos integrar una pasarela de pagos a tu aplicación móvil para que puedas vender productos o servicios.',
   },
   {
     id: 1,
     title: '¿A qué tiendas de aplicaciones móviles se puede subir mi producto?',
-    details: `Dependiendo del tipo de aplicación que desees,  el desarrollo de aplicaciones móviles puede ser dirigido para que se pueda desplegar la aplicación móvil en una o todas las tiendas de aplicaciones móviles como Google Play Store, App Store de Apple, entre otras, según los requerimientos que tengas.`,
+    details:
+      'Dependiendo del tipo de aplicación que desees,  el desarrollo de aplicaciones móviles puede ser dirigido para que se pueda desplegar la aplicación móvil en una o todas las tiendas de aplicaciones móviles como Google Play Store, App Store de Apple, entre otras, según los requerimientos que tengas.',
   },
   {
     id: 2,
     title:
       '¿Puedo agregar más funcionalidades a mi aplicación después de terminado el desarrollo?',
-    details: `Si, creamos aplicaciones modulares, que permiten que se agreguen nuevas funcionalidades en el futuro, trabajamos con buenas prácticas de código para desarrollar las aplicaciones móviles, lo que te permitirá escalar tu producto en el futuro.`,
+    details:
+      'Si, creamos aplicaciones modulares, que permiten que se agreguen nuevas funcionalidades en el futuro, trabajamos con buenas prácticas de código para desarrollar las aplicaciones móviles, lo que te permitirá escalar tu producto en el futuro.',
   },
   {
     id: 3,
     title: 'Aún  no sé qué tipo de aplicación móvil escoger',
-    details: `No hay problema, contamos con servicio de asesoría y diseño de producto para entender mejor tus necesidades y optimizar tu presupuesto y recursos, así desarrollar la mejor aplicación para solucionar tu problema, contáctanos.`,
+    details:
+      'No hay problema, contamos con servicio de asesoría y diseño de producto para entender mejor tus necesidades y optimizar tu presupuesto y recursos, así desarrollar la mejor aplicación para solucionar tu problema, contáctanos.',
   },
   {
     id: 4,
     title: '¿En qué dispositivos se puede utilizar mi aplicación móvil?',
-    details: `Desarrollamos aplicaciones móviles para todos los dispositivos móviles: tablets, celulares, computadoras.`,
+    details:
+      'Desarrollamos aplicaciones móviles para todos los dispositivos móviles: tablets, celulares, computadoras.',
   },
   {
     id: 5,
     title: 'Aún  no sé qué tipo de aplicación móvil escoger',
-    details: `No hay problema, contamos con servicio de asesoría y diseño de producto para entender mejor tus necesidades y optimizar tu presupuesto y recursos, así desarrollar la mejor aplicación para solucionar tu problema, contáctanos. `,
+    details:
+      'No hay problema, contamos con servicio de asesoría y diseño de producto para entender mejor tus necesidades y optimizar tu presupuesto y recursos, así desarrollar la mejor aplicación para solucionar tu problema, contáctanos. ',
   },
 
   {
     id: 6,
     title: '¿Por qué es importante tener una aplicación móvil?',
-    details: `En los últimos años el desarrollo de aplicaciones móviles se ha posicionado como unas de las herramientas más eficaces para las empresas.Con el mercado en constante crecimiento y las últimas tecnologías, los dispositivos móviles ofrecen cientos de nuevas oportunidades para que las marcas brinden valor a los clientes en momentos de necesidad. Y no es para menos, pues las aplicaciones móviles facilitan la vida de los usuarios, promueven la inter conectividad y mejoran la experiencia en la adquisición de productos y servicios. Anímate a desarrollar una aplicación móvil para tu producto o empresa, te asesoramos a escoger la mejor opción. `,
+    details:
+      'En los últimos años el desarrollo de aplicaciones móviles se ha posicionado como unas de las herramientas más eficaces para las empresas.Con el mercado en constante crecimiento y las últimas tecnologías, los dispositivos móviles ofrecen cientos de nuevas oportunidades para que las marcas brinden valor a los clientes en momentos de necesidad. Y no es para menos, pues las aplicaciones móviles facilitan la vida de los usuarios, promueven la inter conectividad y mejoran la experiencia en la adquisición de productos y servicios. Anímate a desarrollar una aplicación móvil para tu producto o empresa, te asesoramos a escoger la mejor opción. ',
   },
 
   {
     id: 7,
     title: '¿Qué beneficios me trae tener una aplicación móvil? ',
-    details: `El desarrollo de una aplicación móvil otorga grandes beneficios :`,
+    details:
+      'El desarrollo de una aplicación móvil otorga grandes beneficios :',
   },
   {
     id: 8,
     title: '¿Cuánto tiempo para el desarrollo de la app móvil? ',
-    details: `El tiempo de desarrollo de la aplicación móvil puede variar según los requisitos de la misma y la complejidad que conlleva. contáctanos para cotizar una aplicación móvil.`,
+    details:
+      'El tiempo de desarrollo de la aplicación móvil puede variar según los requisitos de la misma y la complejidad que conlleva. contáctanos para cotizar una aplicación móvil.',
   },
   {
     id: 9,
     title:
       '¿Existe algún plan de pagos para el desarrollo de aplicaciones móviles?',
-    details: `Muchos de nuestros clientes son startups o empresas que están comenzando, es por ello que ofrecemos  distintos planes de pago para adaptarnos a nuestros clientes, contáctanos para ofrecerte un mejor servicio. Consulta además por nuestros modelos de partnertship, podemos ser parte de tus equipo dentro de tu empresa.`,
+    details:
+      'Muchos de nuestros clientes son startups o empresas que están comenzando, es por ello que ofrecemos  distintos planes de pago para adaptarnos a nuestros clientes, contáctanos para ofrecerte un mejor servicio. Consulta además por nuestros modelos de partnertship, podemos ser parte de tus equipo dentro de tu empresa.',
   },
   {
     id: 10,
     title: 'Aún  no sé qué tipo de aplicación móvil escoger',
-    details: `No hay problema, contamos con servicio de asesoría y diseño de producto para entender mejor tus necesidades y optimizar tu presupuesto y recursos, así desarrollar la mejor aplicación para solucionar tu problema, contáctanos. `,
+    details:
+      'No hay problema, contamos con servicio de asesoría y diseño de producto para entender mejor tus necesidades y optimizar tu presupuesto y recursos, así desarrollar la mejor aplicación para solucionar tu problema, contáctanos. ',
   },
   {
     id: 11,

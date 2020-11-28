@@ -4,7 +4,7 @@ const styles = (theme) => ({
   menuApp: {
     display: 'flex',
     alignItems: 'center',
-    width: `100%`,
+    width: '100%',
   },
 
   button: {
@@ -13,6 +13,7 @@ const styles = (theme) => ({
   },
   services: {
     textTransform: 'capitalize',
+    color: theme.palette.common.black,
   },
   sectionMenu: {
     display: 'flex',

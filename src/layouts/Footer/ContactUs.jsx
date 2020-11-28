@@ -1,14 +1,14 @@
 import {
   Grid,
   Typography,
-  Button,
   Box,
   makeStyles,
   Container,
-  Link as LinkMaterial,
 } from '@material-ui/core';
+import ContactUsButton from '#Components/ContacUsButton';
 import LinkContactUs from './components/LinkContactUs';
 import styles from './styles';
+import { contactsLinks } from '#app/constants/contacts';
 
 const useStyles = makeStyles(styles);
 
@@ -27,32 +27,28 @@ const ContactUs = () => {
               Que tu empresa alcance la transformación digital que necesita,
               Contáctanos, estamos para ayudarte
             </Typography>
-            <LinkMaterial href="mailto: info@initgrammers.com" target="_blank">
-              <Button variant="contained" color="primary">
-                Escríbenos
-              </Button>
-            </LinkMaterial>
+            <ContactUsButton label="Escríbenos" href={contactsLinks.writeUs} />
           </Box>
         </Grid>
         <Grid item md={5} sm={12}>
           <Box className={classes.borderContactUs}>
             <LinkContactUs
-              question="Necesitas ayuda para arrancar un proyecto?"
+              question="¿Necesitas ayuda para arrancar un proyecto?"
               callToAction="Agendar una asesoría"
-              href="https://wa.link/3vbh7y"
+              href={contactsLinks.startProject}
             />
             <div className={classes.contact}>
               <LinkContactUs
                 question="¿Quieres abrir una tienda virtual?"
                 callToAction="Contactar con nuestro equipo"
-                href="https://wa.link/3vbh7y"
+                href={contactsLinks.teamMessage}
               />
             </div>
 
             <LinkContactUs
               question="Interesado en contratar bajo partnership?"
               callToAction="Escríbenos"
-              href="mailto: info@initgrammers.com"
+              href={contactsLinks.writeUs}
             />
           </Box>
         </Grid>

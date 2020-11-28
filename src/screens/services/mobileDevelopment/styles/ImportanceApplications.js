@@ -23,14 +23,24 @@ const styles = (theme) => ({
     [theme.breakpoints.down('md')]: {
       order: '-1',
     },
+    [theme.breakpoints.up('lg')]: {
+      paddingLeft: theme.spacing(15),
+    },
   },
   gridImage: {
+    display: 'flex',
+    justifyContent: 'center',
     [theme.breakpoints.down('md')]: {
       paddingTop: theme.spacing(6),
     },
     [theme.breakpoints.down('xs')]: {
       paddingTop: theme.spacing(4),
     },
+  },
+  image: {
+    width: 288,
+    height: 392,
+    position: 'relative',
   },
   title: {
     paddingBottom: theme.spacing(4),
@@ -47,6 +57,12 @@ const styles = (theme) => ({
   },
   figureRight: {
     margin: '0 0 0 15px',
+  },
+  [theme.breakpoints.up('lg')]: {
+    image: {
+      width: 504,
+      height: 694,
+    },
   },
 });
 

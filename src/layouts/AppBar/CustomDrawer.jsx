@@ -10,6 +10,7 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import clsx from 'clsx';
 import Link from 'next/link';
+import CustomLink from '#Components/CustomLink';
 
 const useStyles = makeStyles((theme) => ({
   fullList: {
@@ -78,7 +79,7 @@ export default function CustomDrawer({
                   [classSelected]: index === 'UXUIDesign',
                 })}
               >
-                <Link href="/Services/UXUIDesign">
+                <Link href="/services/UXUIDesign">
                   <a>Diseño UI/UX</a>
                 </Link>
               </ListItem>
@@ -89,7 +90,7 @@ export default function CustomDrawer({
                   [classSelected]: index === 'PWADevelopment',
                 })}
               >
-                <Link href="/Services/PWADevelopment">
+                <Link href="/services/PWADevelopment">
                   <a>Desarrollo de aplicaciones PWA </a>
                 </Link>
               </ListItem>
@@ -100,7 +101,7 @@ export default function CustomDrawer({
                   [classSelected]: index === 'Ecommerce',
                 })}
               >
-                <Link href="/Services/Ecommerce">
+                <Link href="/services/Ecommerce">
                   <a>Tiendas en línea / E-commerce </a>
                 </Link>
               </ListItem>
@@ -111,23 +112,31 @@ export default function CustomDrawer({
                   [classSelected]: index === 'DigitalMarketing',
                 })}
               >
-                <Link href="/Services/DigitalMarketing">
+                <Link href="/services/DigitalMarketing">
                   <a>Marketing Digital </a>
                 </Link>
               </ListItem>
             </List>
           </Collapse>
           <ListItem button>
-            <ListItemText primary="Portafolio" />
+            <CustomLink href="/services/Portfolio">
+              <ListItemText primary="Portafolio" />
+            </CustomLink>
           </ListItem>
           <ListItem button>
-            <ListItemText primary="¿Quiénes somos?" />
+            <CustomLink href="/services/AboutUs">
+              <ListItemText primary="¿Quiénes somos?" />
+            </CustomLink>
           </ListItem>
           <ListItem button>
-            <ListItemText primary="Blog" />
+            <CustomLink href="/services/Blog">
+              <ListItemText primary="Blog" />
+            </CustomLink>
           </ListItem>
           <ListItem button>
-            <ListItemText primary="Contacto" />
+            <CustomLink href="/services/ContactUs">
+              <ListItemText primary="Contacto" />
+            </CustomLink>
           </ListItem>
         </List>
       </Drawer>

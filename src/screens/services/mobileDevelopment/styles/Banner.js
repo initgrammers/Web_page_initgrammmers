@@ -18,10 +18,6 @@ const styles = (theme) => ({
     padding: `${theme.spacing(4)}px 0`,
     color: theme.palette.primary.contrastText,
   },
-  actionButton: {
-    color: theme.palette.primary.contrastText,
-    background: theme.palette.secondary.main,
-  },
   containerImage: {
     display: 'flex',
     justifyContent: 'center',
@@ -70,6 +66,7 @@ const styles = (theme) => ({
     image: {
       width: 504,
       height: 679,
+      marginTop: `-${theme.spacing(2)}px`,
     },
   },
   containerBackgroundImage: {

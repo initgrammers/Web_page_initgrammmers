@@ -26,11 +26,20 @@ const styles = (theme) => ({
     height: 229,
     position: 'relative',
     bottom: `-${theme.spacing(8)}px`,
+    marginTop: `-${theme.spacing(4)}px`,
   },
+
   [theme.breakpoints.up('sm')]: {
     image: {
       width: 412,
       height: 327,
+    },
+  },
+  [theme.breakpoints.up('md')]: {
+    image: {
+      margin: 0,
+      width: 388,
+      height: 308,
     },
   },
   [theme.breakpoints.up('lg')]: {

@@ -40,14 +40,12 @@ const styles = (theme) => ({
   },
   [theme.breakpoints.up('md')]: {
     container: {
-      padding: `0 ${theme.spacing(23)}px`,
       alignItems: 'end',
     },
   },
   [theme.breakpoints.up('lg')]: {
     container: {
       display: 'flex',
-      padding: `0 ${theme.spacing(13)}px`,
     },
     detailsContent: {
       flex: 5,

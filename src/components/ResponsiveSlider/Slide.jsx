@@ -32,9 +32,16 @@ const Slide = ({ data, step }) => {
 
   const arrayData = [];
   const limitDown = index.from > index.to ? index.to : index.from;
+  const islimitUp = lengthData - 1 === index.to;
 
-  for (let i = limitDown; i < limitDown + step; i += 1) {
-    arrayData.push(i);
+  if (islimitUp) {
+    for (let i = index.to - step + 1; i <= index.to; i += 1) {
+      arrayData.push(i);
+    }
+  } else {
+    for (let i = limitDown; i < limitDown + step; i += 1) {
+      arrayData.push(i);
+    }
   }
 
   const renderListSlide = (items) =>
@@ -50,11 +57,14 @@ const Slide = ({ data, step }) => {
     );
 
   return (
-    <>
-      <Container onNextStep={onNextStep} onPrevStep={onPrevStep}>
-        {renderListSlide(arrayData)}
-      </Container>
-    </>
+    <Container
+      onNextStep={onNextStep}
+      onPrevStep={onPrevStep}
+      disableLeft={index.from === 0}
+      disableRight={islimitUp}
+    >
+      {renderListSlide(arrayData)}
+    </Container>
   );
 };
 Slide.propTypes = {

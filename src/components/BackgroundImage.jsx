@@ -13,7 +13,7 @@ const BackgroundImage = ({ height, image }) => {
       {height > 0 && (
         <Hidden mdDown>
           <Box className={classes.containerBackgroundImage}>
-            <Image src={image} layout="fill" />
+            <Image quality={100} src={image} layout="fill" />
           </Box>
         </Hidden>
       )}

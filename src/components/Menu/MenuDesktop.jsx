@@ -1,25 +1,21 @@
-import {
-  makeStyles,
-  Button,
-  Box,
-  Typography,
-  Hidden,
-  Link as LinkMaterial,
-} from '@material-ui/core';
+import { makeStyles, Button, Box, Typography, Hidden } from '@material-ui/core';
 import Link from 'next/link';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
+import PropTypes from 'prop-types';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
 import CustomLink from '#Components/CustomLink';
 import styles from './styles/MenuDesktop';
+import ContactUsButton from '#Components/ContacUsButton';
+import { contactsLinks } from '#app/constants/contacts';
 
 const useStyles = makeStyles(styles);
 
 const menu = [
-  { label: 'Portafolio', href: '#' },
-  { label: '¿Quiénes somos?', href: '#' },
-  { label: 'Blog', href: '#' },
-  { label: 'Contacto', href: '#' },
+  { label: 'Portafolio', href: '/Portfolio' },
+  { label: '¿Quiénes somos?', href: '/AboutUs' },
+  { label: 'Blog', href: '/Blog' },
+  { label: 'Contacto', href: '/ContactUs' },
 ];
 
 const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
@@ -54,32 +50,29 @@ const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
         ))}
       </Box>
       <Box>
-        <Button
-          aria-label="Servicios"
-          aria-controls="menu-servicios"
-          aria-haspopup="true"
-          color="inherit"
+        <ContactUsButton
+          href={contactsLinks.consulting}
+          label="Agenda una ascesoría"
+          variant="text"
+          mr={2}
         >
           <Typography className={classes.services} variant="body2">
             Agenda una ascesoría
           </Typography>
-        </Button>
+        </ContactUsButton>
+
         <Hidden mdDown>
-          <LinkMaterial target="_blank" href="https://wa.link/3vbh7y">
-            <Button
-              aria-label="Contácatanos"
-              aria-haspopup="true"
-              color="primary"
-              variant="contained"
-              className={classes.contactUs}
-            >
-              Contáctanos
-            </Button>
-          </LinkMaterial>
+          <ContactUsButton href={contactsLinks.general} />
         </Hidden>
       </Box>
     </Box>
   );
 };
-
+MenuDesktop.propTypes = {
+  showServices: PropTypes.bool,
+  handleDrawerOpen: PropTypes.func.isRequired,
+};
+MenuDesktop.defaultProps = {
+  showServices: false,
+};
 export default MenuDesktop;
