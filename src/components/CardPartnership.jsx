@@ -1,20 +1,9 @@
 import { Box, Typography, makeStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
+import styles from '../assets/styles/CardPartnership';
 
-const useStyles = makeStyles((theme) => ({
-  card: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  titlePartnership: {
-    textAlign: 'center',
-    padding: `${theme.spacing(1)}px 0`,
-    color: theme.palette.primary.main,
-  },
-  description: {},
-}));
+const useStyles = makeStyles(styles);
 
 const CardService = ({ image, title, description }) => {
   const classes = useStyles();
@@ -26,11 +15,7 @@ const CardService = ({ image, title, description }) => {
       <Typography variant="h4" className={classes.titlePartnership}>
         {title}
       </Typography>
-      <Typography
-        variant="body2"
-        align="justify"
-        className={classes.description}
-      >
+      <Typography variant="body2" className={classes.description}>
         {description}
       </Typography>
     </Box>

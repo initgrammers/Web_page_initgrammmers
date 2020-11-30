@@ -1,24 +1,9 @@
 import { Box, Typography, makeStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
+import styles from '../assets/styles/CardService';
 
-const useStyles = makeStyles((theme) => ({
-  card: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: 188,
-    transition: theme.transitions.create('all', {
-      duration: theme.transitions.duration.shortest,
-    }),
-    '&:hover': {
-      transform: 'scale(1.05)',
-    },
-  },
-  titleService: {
-    textAlign: 'center',
-    paddingTop: theme.spacing(1),
-  },
-}));
+const useStyles = makeStyles(styles);
 
 const CardService = ({ image, service }) => {
   const classes = useStyles();

@@ -4,18 +4,9 @@ import Slider from '#Components/ResponsiveSlider';
 import Subtitle from '#Components/Subtitle';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
+import styles from '../assets/styles/SliderTechnologies';
 
-const useStyles = makeStyles((theme) => ({
-  content: {
-    padding: `${theme.spacing(4)}px 0`,
-    [theme.breakpoints.up('sm')]: {
-      padding: `${theme.spacing(5)}px 0`,
-    },
-    [theme.breakpoints.up('lg')]: {
-      padding: `${theme.spacing(8)}px 0`,
-    },
-  },
-}));
+const useStyles = makeStyles(styles);
 
 const SliderTechnologies = ({
   title,
