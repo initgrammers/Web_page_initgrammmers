@@ -26,8 +26,8 @@ const UnforgettableExperiences = () => (
     titlePart2="mundo del internet"
     description=" Diseñamos un producto de principio a fin, te apoyamos durante todo el camino "
     image="/assets/images/experiencias-inolvidables-con-alto-impacto.png"
-    backgroundImage="/assets/images/figures/webDevelopment/bloque6.png"
-    heightImage={944}
+    backgroundImage="/assets/images/figures/uxUiDesign/bloque5.png"
+    heightImage={1046}
     imageSizes={imageSizes}
   />
 );

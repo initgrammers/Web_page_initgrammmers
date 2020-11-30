@@ -17,7 +17,10 @@ const Banner = () => {
       position="relative"
       className={classes.backgroundSection}
     >
-      <BackgroundImage />
+      <BackgroundImage
+        height={664}
+        image="/assets/images/figures/uxUiDesign/bloque1.png"
+      />
       <CustomContainer>
         <Box className={classes.content}>
           <Box component="article" className={classes.contentInformation}>

@@ -1,5 +1,5 @@
 import SliderTechnologies from '#Components/SliderTechnologies';
-import { WebTechnologies } from '../../../../constants/services/webDevelopment';
+import { WebTechnologies } from '#constants/services/webDevelopment';
 
 const SliderTech = () => (
   <SliderTechnologies
