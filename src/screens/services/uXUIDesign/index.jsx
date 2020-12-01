@@ -1,4 +1,4 @@
-import Banner from './components/Banner';
+import Banner from './sections/Banner';
 import Questions from './sections/Questions';
 import InnovativeDesign from './sections/InnovativeDesign';
 import UnforgettableExperiences from './sections/UnforgettableExperiences';

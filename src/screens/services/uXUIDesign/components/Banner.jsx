@@ -1,4 +1,5 @@
 import { makeStyles, Box, Typography } from '@material-ui/core';
+import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from '../styles/Banner';
 import BackgroundImage from '#Components/BackgroundImage';
@@ -9,7 +10,13 @@ import { contactsLinks } from '#app/constants/contacts';
 
 const useStyles = makeStyles(styles);
 
-const Banner = () => {
+const Banner = ({
+  heightImage,
+  backgroundImage,
+  title,
+  description,
+  image,
+}) => {
   const classes = useStyles();
   return (
     <Box
@@ -54,6 +61,19 @@ const Banner = () => {
       </CustomContainer>
     </Box>
   );
+};
+
+Banner.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  backgroundImage: PropTypes.string,
+  heightImage: PropTypes.number,
+};
+
+Banner.defaultProps = {
+  backgroundImage: '',
+  heightImage: 0,
 };
 
 export default Banner;
