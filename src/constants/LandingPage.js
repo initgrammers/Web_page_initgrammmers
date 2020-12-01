@@ -1,5 +1,6 @@
 export const bannerLandingPage = {
-  backgroundImage: '/assets/images/figures/landingPage/bloque1.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606839723/LandingPage/figures/bloque1.png',
   heightImage: 670,
   title: 'Desarrollo y diseño de software al alcande de tus manos',
   description:
@@ -8,12 +9,14 @@ export const bannerLandingPage = {
 };
 
 export const onlineSolution = {
-  backgroundImage: '/assets/images/figures/landingPage/bloque2.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606839723/LandingPage/figures/bloque2.png',
   heightImage: 628,
   title: 'Encuentra la solución en línea',
   description:
     'Fusionamos el diseño y el desarrollo en cada uno de los proyectos. Nuestro trabajo es asesorarte en todo el proceso para que puedas elegir la mejor opción para llevar a cabo esa idea que tienes en mente. A través de la tecnología te ayudamos a cumplir tus objetivos con un trabajo a tiempo y orientado a resultados.',
-  image: '/assets/images/solucion-en-linea.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606839438/LandingPage/solucion-en-linea.png',
   titlePrimaryMain: true,
   descriptionBlack: true,
   imageSizes: {
@@ -39,19 +42,22 @@ export const onlineSolution = {
 
 const partnershipModels = [
   {
-    path: '/assets/images/proyecto-precio-fijo.png',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606839967/LandingPage/proyecto-precio-fijo.png',
     title: 'Proyecto a precio fijo',
     description:
       'Sin cargos ocultos u adicionales, una vez que se ha firmado un contrato con precio definido. ',
   },
   {
-    path: '/assets/images/extension-de-tu-equipo.png',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606839967/LandingPage/extension-de-tu-equipo.png',
     title: 'Extensión de tu equipo',
     description:
       'Te ayudamos a no perder oportunidades y aprovechar el potencial del mercado. Nos unimos a tu equipo de desarrollo para ayudarte a completar tareas.',
   },
   {
-    path: '/assets/images/nos-convertimos-en-tu-equipo.png',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606839967/LandingPage/nos-convertimos-en-tu-equipo.png',
     title: 'Nos convertimos en tu equipo',
     description:
       'Comprometidos con ayudarte a alcanzar el éxito, trabajamos como tu equipo de tecnología, desarrollo y/o  programación. ',
@@ -62,8 +68,10 @@ export const partnershipModel = {
   title: 'Modelos de partnership',
   description:
     'Una asociación perfecta que entrega los resultados esperados de acuerdo a tus necesidades. Tenemos todo lo que necesitas.',
-  image: '/assets/images/modelo-partnership.png',
-  backgroundImage: '/assets/images/figures/landingPage/bloque4.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606839598/LandingPage/modelo-partnership.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606839723/LandingPage/figures/bloque4.png',
   heightImage: 1262,
   partnershipModels,
 };
@@ -71,43 +79,51 @@ export const partnershipModel = {
 const services = [
   {
     href: '/services/WebDevelopment',
-    path: '/assets/images/desarrollo-web.png',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606839497/LandingPage/desarrollo-web.png',
     service: 'Desarrollo Web',
   },
   {
     href: '/services/UXUIDesign',
-    path: '/assets/images/diseno-ux-ui.png',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606839497/LandingPage/diseno-ux-ui.png',
     service: 'Diseño UX / UX',
   },
   {
     href: '/services/MobileDevelopment',
-    path: '/assets/images/desarrollo-movil.png',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606839497/LandingPage/desarrollo-movil.png',
     service: 'Desarrollo Móvil',
   },
   {
     href: '/services/Tranings',
-    path: '/assets/images/capacitaciones.png',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606839497/LandingPage/capacitaciones.png',
     service: 'Capacitaciones',
   },
   {
     href: '/services/Marketing',
-    path: '/assets/images/marketing.png',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606839497/LandingPage/marketing.png',
     service: 'Marketing',
   },
   {
     href: '/services/SEO',
-    path: '/assets/images/posicionamiento-buscadores.png',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606839497/LandingPage/posicionamiento-buscadores.png',
     service: 'Posicionamiento en buscadores',
   },
   {
-    href: '/services/ECommerce',
-    path: '/assets/images/e-commerce.png',
+    href: '/services/E-commerce',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606839497/LandingPage/e-commerce.png',
     service: 'E-commerce',
   },
 ];
 
 export const servicesInitgrammers = {
-  backgroundImage: '/assets/images/figures/landingPage/bloque3.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606839723/LandingPage/figures/bloque3.png',
   heightImage: 665,
   title: 'Integramos diseño y desarrollo para entregar el mejor proyecto',
   services,
@@ -118,7 +134,8 @@ export const carryOutProject = {
   titlePart2: 'llevar a cabo ese proyecto?',
   description:
     'Tomamos una idea y la transformamos en una obra maestra digital. Nuestra pasión por la tecnología y deseo de hacer las cosas diferentes',
-  image: '/assets/images/pensado-como-llevar-a-cabo-tu-proyecto.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606839634/LandingPage/pensado-como-llevar-a-cabo-tu-proyecto.png',
 };
 
 const questions = [

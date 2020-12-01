@@ -49,12 +49,7 @@ const Banner = ({
           </Box>
           <Box className={classes.containerImage}>
             <Box component="figure" className={classes.image}>
-              <Image
-                quality={100}
-                priority
-                src="/assets/images/diseno-ux-ix-interfaces-experiencia-usuario.png"
-                layout="fill"
-              />
+              <Image quality={100} priority src={image} layout="fill" />
             </Box>
           </Box>
         </Box>
