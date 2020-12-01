@@ -1,4 +1,74 @@
-export const services = [
+export const bannerLandingPage = {
+  backgroundImage: '/assets/images/figures/landingPage/bloque1.png',
+  heightImage: 670,
+  title: 'Desarrollo y diseño de software al alcande de tus manos',
+  description:
+    'Descubre el mundo digital, te ayudamos a construir aplicaciones y programas de principio a fin',
+  image: '/assets/images/desarrollo-diseno-software.gif',
+};
+
+export const onlineSolution = {
+  backgroundImage: '/assets/images/figures/landingPage/bloque2.png',
+  heightImage: 628,
+  title: 'Encuentra la solución en línea',
+  description:
+    'Fusionamos el diseño y el desarrollo en cada uno de los proyectos. Nuestro trabajo es asesorarte en todo el proceso para que puedas elegir la mejor opción para llevar a cabo esa idea que tienes en mente. A través de la tecnología te ayudamos a cumplir tus objetivos con un trabajo a tiempo y orientado a resultados.',
+  image: '/assets/images/solucion-en-linea.png',
+  titlePrimaryMain: true,
+  descriptionBlack: true,
+  imageSizes: {
+    xs: {
+      width: 288,
+      height: 308,
+    },
+    sm: {
+      width: 412,
+      height: 442,
+    },
+    md: {
+      width: 544,
+      height: 539,
+    },
+    lg: {
+      width: 504,
+      height: 500,
+    },
+  },
+  isImageRight: true,
+};
+
+const partnershipModels = [
+  {
+    path: '/assets/images/proyecto-precio-fijo.png',
+    title: 'Proyecto a precio fijo',
+    description:
+      'Sin cargos ocultos u adicionales, una vez que se ha firmado un contrato con precio definido. ',
+  },
+  {
+    path: '/assets/images/extension-de-tu-equipo.png',
+    title: 'Extensión de tu equipo',
+    description:
+      'Te ayudamos a no perder oportunidades y aprovechar el potencial del mercado. Nos unimos a tu equipo de desarrollo para ayudarte a completar tareas.',
+  },
+  {
+    path: '/assets/images/nos-convertimos-en-tu-equipo.png',
+    title: 'Nos convertimos en tu equipo',
+    description:
+      'Comprometidos con ayudarte a alcanzar el éxito, trabajamos como tu equipo de tecnología, desarrollo y/o  programación. ',
+  },
+];
+
+export const partnershipModel = {
+  title: 'Modelos de partnership',
+  description:
+    'Una asociación perfecta que entrega los resultados esperados de acuerdo a tus necesidades. Tenemos todo lo que necesitas.',
+  image: '/assets/images/modelo-partnership.png',
+  backgroundImage: '/assets/images/figures/landingPage/bloque4.png',
+  heightImage: 1262,
+  partnershipModels,
+};
+
+const services = [
   {
     href: '/services/WebDevelopment',
     path: '/assets/images/desarrollo-web.png',
@@ -36,26 +106,20 @@ export const services = [
   },
 ];
 
-export const partnershipModels = [
-  {
-    path: '/assets/images/proyecto-precio-fijo.png',
-    title: 'Proyecto a precio fijo',
-    description:
-      'Sin cargos ocultos u adicionales, una vez que se ha firmado un contrato con precio definido. ',
-  },
-  {
-    path: '/assets/images/extension-de-tu-equipo.png',
-    title: 'Extensión de tu equipo',
-    description:
-      'Te ayudamos a no perder oportunidades y aprovechar el potencial del mercado. Nos unimos a tu equipo de desarrollo para ayudarte a completar tareas.',
-  },
-  {
-    path: '/assets/images/nos-convertimos-en-tu-equipo.png',
-    title: 'Nos convertimos en tu equipo',
-    description:
-      'Comprometidos con ayudarte a alcanzar el éxito, trabajamos como tu equipo de tecnología, desarrollo y/o  programación. ',
-  },
-];
+export const servicesInitgrammers = {
+  backgroundImage: '/assets/images/figures/landingPage/bloque3.png',
+  heightImage: 665,
+  title: 'Integramos diseño y desarrollo para entregar el mejor proyecto',
+  services,
+};
+
+export const carryOutProject = {
+  titlePart1: '¿Aún pensando cómo ',
+  titlePart2: 'llevar a cabo ese proyecto?',
+  description:
+    'Tomamos una idea y la transformamos en una obra maestra digital. Nuestra pasión por la tecnología y deseo de hacer las cosas diferentes',
+  image: '/assets/images/pensado-como-llevar-a-cabo-tu-proyecto.png',
+};
 
 const questions = [
   {

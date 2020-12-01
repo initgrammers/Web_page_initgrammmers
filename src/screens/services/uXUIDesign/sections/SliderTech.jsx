@@ -1,5 +1,5 @@
 import SliderTechnologies from '#Components/SliderTechnologies';
-import UxUiTechnologies from '#constants/services/UxUiDesign';
+import { UxUiTechnologies } from '#constants/services/UxUiDesign';
 
 const SliderTech = () => (
   <SliderTechnologies
