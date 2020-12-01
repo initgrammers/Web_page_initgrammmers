@@ -1,4 +1,27 @@
-export const MobileTechnologies = [
+export const bannerMobileDevelopment = {
+  titlePar1: 'Desarrollo y diseño de aplicaciones',
+  titlePart2: ' móviles ',
+  titlePart3: 'iOS y Android',
+  description: 'Tus productos en el bolsillo de tus clientes',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606776672/servicios/desarrollo-movil/diseno-desarrollo-aplicaciones-moviles-ios-android-ecuador_qxip6h.png',
+  backgroundImage: '/assets/images/figures/bloque1.png',
+};
+
+export const importanceApplications = {
+  title: 'Importancia de las aplicaciones móviles',
+  mainImage: '/assets/images/importancia-aplicaciones-moviles.png',
+  description1:
+    'Crear una aplicación móvil para tu empresa te conecta con tus clientes y mejora la experiencia en la compra de productos y servicios.',
+  description2:
+    'Tus productos en las tiendas de aplicaciones móviles a nivel mundial',
+  logo1: '/assets/images/google-play.png',
+  logo2: '/assets/images/apple-store.png',
+  backgroundImage: '/assets/images/figures/bloque2.png',
+  heightImage: 829,
+};
+
+const MobileTechnologies = [
   {
     label: 'Flutter',
     image: '/assets/svg/Flutter.svg',
@@ -21,7 +44,14 @@ export const MobileTechnologies = [
   },
 ];
 
-export const typesApplication = [
+export const technologiesMobileApplication = {
+  title: 'Tecnologías con las que trabajamos para el desarrollo móvil',
+  technologies: MobileTechnologies,
+  backgroundImage: '/assets/images/figures/bloque3.png',
+  heightImage: 364,
+};
+
+const typesApplication = [
   {
     title: 'Aplicaciones nativas',
     description:
@@ -44,7 +74,42 @@ export const typesApplication = [
   },
 ];
 
-export const questions = [
+export const mobileApplicationTypes = {
+  title: 'Tipos de aplicaciones móviles',
+  image: '/assets/images/tipos-aplicaciones-moviles.png',
+  typesApplication: typesApplication,
+};
+
+export const applicationsInYourFingertips = {
+  titlePart1: 'El mundo de las',
+  titlePart2: ' aplicaciones móviles ',
+  titlePart3: 'al alcance de tu mano',
+  description:
+    'El futuro de las aplicaciones móviles para ti, te apoyamos durante todo el proceso',
+  image: '/assets/images/aplicaciones-moviles-al-alcance-de-tu-mano.png',
+  backgroundImage: '/assets/images/figures/webDevelopment/bloque5.png',
+  heightImage: 1019,
+  imageSizes: {
+    xs: {
+      width: 288,
+      height: 316,
+    },
+    sm: {
+      width: 412,
+      height: 453,
+    },
+    md: {
+      width: 412,
+      height: 453,
+    },
+    lg: {
+      width: 500,
+      height: 550,
+    },
+  },
+};
+
+const questions = [
   {
     id: 0,
     title: '¿Puedo recibir pagos a través de mi aplicación móvil?',
@@ -122,3 +187,9 @@ export const questions = [
     ¿Ya tienes una aplicación móvil? Ofrecemos también servicio de mantenimiento y solución de errores para aplicaciones existentes.`,
   },
 ];
+
+export const FAQMobileDevelopment = {
+  titlePart1: 'Preguntas',
+  titlePart2: 'frecuentes',
+  questions: questions,
+};
