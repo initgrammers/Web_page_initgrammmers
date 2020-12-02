@@ -47,18 +47,12 @@ function ApplicationType({ sectionTitle, typesApplication }) {
           className={classes.swipeable}
         >
           {typesApplication.map((app, index) => (
-            <>
-              {Math.abs(activeStep - index) <= 2 ? (
-                <Box key={app.title} component="article">
-                  <Typography variant="h3" className={classes.applicationType}>
-                    {app.title}
-                  </Typography>
-                  <Typography variant="body1">{app.description}</Typography>
-                </Box>
-              ) : (
-                <></>
-              )}
-            </>
+            <Box key={index} component="article">
+              <Typography variant="h3" className={classes.applicationType}>
+                {app.title}
+              </Typography>
+              <Typography variant="body1">{app.description}</Typography>
+            </Box>
           ))}
         </AutoPlaySwipeableViews>
       </>

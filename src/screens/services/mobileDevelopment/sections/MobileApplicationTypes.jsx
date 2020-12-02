@@ -7,6 +7,7 @@ const MobileApplicationTypes = () => (
     sectionTitle={mobileApplicationTypes.title}
     typesApplication={mobileApplicationTypes.typesApplication}
     image={mobileApplicationTypes.image}
+    imageSizes={mobileApplicationTypes.imageSizes}
   />
 );
 

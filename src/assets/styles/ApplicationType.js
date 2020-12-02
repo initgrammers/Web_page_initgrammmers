@@ -4,13 +4,8 @@ const styles = (theme) => ({
   root: {
     color: theme.palette.primary.contrastText,
     [theme.breakpoints.up('lg')]: {
-      width: 536,
-    },
-  },
-  swipeable: {
-    minHeight: 334,
-    [theme.breakpoints.up('lg')]: {
-      minHeight: 268,
+      width: 504,
+      padding: theme.spacing(12, 0),
     },
   },
   title: {

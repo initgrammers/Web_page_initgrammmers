@@ -87,9 +87,27 @@ const typesApplication = [
 
 export const mobileApplicationTypes = {
   title: 'Tipos de aplicaciones móviles',
+  typesApplication: typesApplication,
   image:
     'https://res.cloudinary.com/initgrammers/image/upload/v1606840869/servicios/desarrollo-movil/tipos-aplicaciones-moviles.png',
-  typesApplication: typesApplication,
+  imageSizes: {
+    xs: {
+      width: 504,
+      height: 607,
+    },
+    sm: {
+      width: 547,
+      height: 659,
+    },
+    md: {
+      width: 547,
+      height: 659,
+    },
+    lg: {
+      width: 504,
+      height: 607,
+    },
+  },
 };
 
 export const applicationsInYourFingertips = {

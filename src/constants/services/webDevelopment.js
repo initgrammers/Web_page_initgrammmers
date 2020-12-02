@@ -56,7 +56,7 @@ export const questions = [
   },
 ];
 
-export const typesApplication = [
+const typesApplication = [
   {
     title: 'Aplicación web estática',
     description:
@@ -83,3 +83,28 @@ export const typesApplication = [
       'Es el tipo de aplicación web pensado para tiendas online. Ofrece mayores funcionalidades, porque permite utilizar sistemas para recibir pagos desde tarjetas de crédito, PayPal, efectivo, etc. Además de sincronizarse con la gestión de inventario y logística de envíos podrás controlar desde cualquier parte del mundo la  información de los productos o servicios que tu empresa ofrece.',
   },
 ];
+
+export const webApplicationTypes = {
+  backgroundPrimayLight: true,
+  title: 'Nuestros servicios',
+  typesApplication: typesApplication,
+  image: '/assets/images/tipos-aplicaciones-web.png',
+  imageSizes: {
+    xs: {
+      width: 610,
+      height: 438,
+    },
+    sm: {
+      width: 412,
+      height: 296,
+    },
+    md: {
+      width: 412,
+      height: 296,
+    },
+    lg: {
+      width: 504,
+      height: 362,
+    },
+  },
+};
