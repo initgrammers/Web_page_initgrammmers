@@ -15,7 +15,7 @@ const Slider = ({ data }) => {
   if (matchLG) {
     return (
       <>
-        <Box display="flex" justifyContent="center">
+        <Box display="flex" justifyContent="space-between">
           {data.map((item) => (
             <Image key={item.label} image={item.image} label={item.label} />
           ))}

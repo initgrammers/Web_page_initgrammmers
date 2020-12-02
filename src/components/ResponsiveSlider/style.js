@@ -1,8 +1,18 @@
 import PropTypes from 'prop-types';
 
 const styles = (theme) => ({
+  imagesContent: {
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    [theme.breakpoints.up('sm')]: {
+      justifyContent: 'space-between',
+    },
+  },
+
   containerImage: {
-    margin: theme.spacing(2),
+    margin: theme.spacing(0, 1),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -12,8 +22,8 @@ const styles = (theme) => ({
   },
   image: {
     objectFit: 'cover',
-    maxWidth: 100,
-    maxHeight: 100,
+    maxWidth: 96,
+    maxHeight: 96,
     width: 'auto',
     margin: 'auto',
   },

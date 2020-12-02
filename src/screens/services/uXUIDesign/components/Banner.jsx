@@ -19,15 +19,8 @@ const Banner = ({
 }) => {
   const classes = useStyles();
   return (
-    <Box
-      component="section"
-      position="relative"
-      className={classes.backgroundSection}
-    >
-      <BackgroundImage
-        height={664}
-        image="/assets/images/figures/uxUiDesign/bloque1.png"
-      />
+    <Box component="section" position="relative">
+      <BackgroundImage height={heightImage} image={backgroundImage} />
       <CustomContainer>
         <Box className={classes.content}>
           <Box component="article" className={classes.contentInformation}>
@@ -35,7 +28,7 @@ const Banner = ({
               black
               variant="h1"
               component="h1"
-              emphasis="Diseño UX UI : Interfaces y experiencia de usuario"
+              emphasis={title}
               mb={0}
             />
             <Typography
@@ -43,7 +36,7 @@ const Banner = ({
               component="p"
               className={classes.description}
             >
-              Diseño innovador, experiencia única
+              {description}
             </Typography>
             <ContactUsButton href={contactsLinks.uiuxPages} />
           </Box>
@@ -54,6 +47,7 @@ const Banner = ({
           </Box>
         </Box>
       </CustomContainer>
+      <Box className={classes.bottomSection} />
     </Box>
   );
 };

@@ -14,12 +14,7 @@ const Container = ({
 }) => {
   const classes = useStyle();
   return (
-    <Box
-      display="flex"
-      justifyContent="space-between"
-      alignItems="center"
-      px={3}
-    >
+    <Box display="flex" justifyContent="space-between" alignItems="center">
       <Box onClick={onPrevStep}>
         <ArrowBackIos
           className={clsx(classes.arrow, {
@@ -27,9 +22,7 @@ const Container = ({
           })}
         />
       </Box>
-      <Box display="flex" flex={1} justifyContent="center" alignItems="center">
-        {children}
-      </Box>
+      <Box className={classes.imagesContent}>{children}</Box>
       <Box onClick={onNextStep}>
         <ArrowForwardIos
           className={clsx(classes.arrow, {

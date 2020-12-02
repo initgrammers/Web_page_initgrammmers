@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
 
 const styles = (theme) => ({
-  backgroundSection: {
-    marginBottom: theme.spacing(8),
-  },
   content: {
     paddingTop: theme.spacing(4),
   },
@@ -23,6 +20,10 @@ const styles = (theme) => ({
     height: 343,
     position: 'relative',
     bottom: `-${theme.spacing(8)}px`,
+  },
+  bottomSection: {
+    background: theme.palette.primary.light,
+    height: theme.spacing(8),
   },
   [theme.breakpoints.up('sm')]: {
     image: {

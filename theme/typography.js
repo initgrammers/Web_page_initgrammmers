@@ -8,22 +8,22 @@ export const typography = {
     letterSpacing: '0px',
   },
   h2: {
-    fontWeight: 400,
+    fontWeight: 600,
     fontFamily: 'Raleway',
     fontSize: '2rem',
-    letterSpacing: '0px',
+    letterSpacing: '0.24px',
   },
   h3: {
     fontWeight: 500,
     fontFamily: 'Raleway',
     fontSize: '1.5rem',
-    letterSpacing: '1.25px',
+    letterSpacing: '0px',
   },
   h4: {
-    fontWeight: 500,
+    fontWeight: 400,
     fontFamily: 'Raleway',
     fontSize: '1.25rem',
-    letterSpacing: '0px',
+    letterSpacing: '0.15px',
   },
   h5: {
     fontWeight: 400,
