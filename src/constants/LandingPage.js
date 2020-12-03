@@ -129,11 +129,36 @@ export const servicesInitgrammers = {
   services,
 };
 
+const clients = [
+  {
+    image: '/assets/images/atenas-education.png',
+  },
+  {
+    image: '/assets/images/la-casa-del-carpintero.png',
+  },
+  {
+    image: '/assets/images/JRTEC.png',
+  },
+  {
+    image: '/assets/images/Escuela-Politecnica-Nacional.png',
+  },
+  {
+    image: '/assets/images/solufer.png',
+  },
+];
+
+export const clientsInitgrammers = {
+  title: 'Quienes confiaron en nosotros:',
+  variantTitle: 'h4',
+  titleBlack: true,
+  clients,
+};
+
 export const carryOutProject = {
-  titlePart1: '¿Aún pensando cómo ',
-  titlePart2: 'llevar a cabo ese proyecto?',
+  titlePart1: 'Estamos pendientes de ti ',
+  titlePart2: 'soporte sin coste adicional',
   description:
-    'Tomamos una idea y la transformamos en una obra maestra digital. Nuestra pasión por la tecnología y deseo de hacer las cosas diferentes',
+    'En todos nuestros proyectos ofrecemos soporte durante todo el año y mantenimiento de tus productos sin recargo. ',
   image:
     'https://res.cloudinary.com/initgrammers/image/upload/v1606839634/LandingPage/pensado-como-llevar-a-cabo-tu-proyecto.png',
 };
