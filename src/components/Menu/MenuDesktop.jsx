@@ -29,7 +29,6 @@ const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
       </CustomLink>
       <Box className={classes.sectionMenu}>
         <Button
-          aria-label="Servicios"
           aria-controls="menu-servicios"
           aria-haspopup="true"
           onClick={handleDrawerOpen}

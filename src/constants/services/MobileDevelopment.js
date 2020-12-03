@@ -1,27 +1,68 @@
-export const MobileTechnologies = [
+export const bannerMobileDevelopment = {
+  titlePar1: 'Desarrollo y diseño de aplicaciones',
+  titlePart2: ' móviles ',
+  titlePart3: 'iOS y Android',
+  description: 'Tus productos en el bolsillo de tus clientes',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606776672/servicios/desarrollo-movil/diseno-desarrollo-aplicaciones-moviles-ios-android-ecuador.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606842502/servicios/desarrollo-movil/figures/bloque1.png',
+};
+
+export const importanceApplications = {
+  title: 'Importancia de las aplicaciones móviles',
+  mainImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606840715/servicios/desarrollo-movil/importancia-aplicaciones-moviles.png',
+  description1:
+    'Crear una aplicación móvil para tu empresa te conecta con tus clientes y mejora la experiencia en la compra de productos y servicios.',
+  description2:
+    'Tus productos en las tiendas de aplicaciones móviles a nivel mundial',
+  logo1:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606840714/servicios/desarrollo-movil/google-play.png',
+  logo2:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606840714/servicios/desarrollo-movil/apple-store.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606842502/servicios/desarrollo-movil/figures/bloque2.png',
+  heightImage: 822,
+};
+
+const MobileTechnologies = [
   {
     label: 'Flutter',
-    image: '/assets/svg/Flutter.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606842901/servicios/desarrollo-movil/Flutter.svg',
   },
   {
     label: 'React Native',
-    image: '/assets/svg/react-2.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606842901/servicios/desarrollo-movil/react-native.svg',
   },
   {
     label: 'Android',
-    image: '/assets/svg/android.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606842901/servicios/desarrollo-movil/android.svg',
   },
   {
     label: 'Firebase',
-    image: '/assets/svg/firebase-1.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606842969/servicios/desarrollo-movil/firebase.svg',
   },
   {
     label: 'iOS',
-    image: '/assets/svg/apple.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606842969/servicios/desarrollo-movil/apple.svg',
   },
 ];
 
-export const typesApplication = [
+export const technologiesMobileApplication = {
+  title: 'Tecnologías con las que trabajamos para el desarrollo móvil',
+  technologies: MobileTechnologies,
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606842502/servicios/desarrollo-movil/figures/bloque3.png',
+  heightImage: 364,
+};
+
+const typesApplication = [
   {
     title: 'Aplicaciones nativas',
     description:
@@ -44,7 +85,63 @@ export const typesApplication = [
   },
 ];
 
-export const questions = [
+export const mobileApplicationTypes = {
+  title: 'Tipos de aplicaciones móviles',
+  typesApplication: typesApplication,
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606840869/servicios/desarrollo-movil/tipos-aplicaciones-moviles.png',
+  imageSizes: {
+    xs: {
+      width: 504,
+      height: 607,
+    },
+    sm: {
+      width: 547,
+      height: 659,
+    },
+    md: {
+      width: 547,
+      height: 659,
+    },
+    lg: {
+      width: 504,
+      height: 607,
+    },
+  },
+};
+
+export const applicationsInYourFingertips = {
+  titlePart1: 'El mundo de las',
+  titlePart2: ' aplicaciones móviles ',
+  titlePart3: 'al alcance de tu mano',
+  description:
+    'El futuro de las aplicaciones móviles para ti, te apoyamos durante todo el proceso',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606840977/servicios/desarrollo-movil/aplicaciones-moviles-al-alcance-de-tu-mano.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1606842502/servicios/desarrollo-movil/figures/bloque5.png',
+  heightImage: 1019,
+  imageSizes: {
+    xs: {
+      width: 288,
+      height: 316,
+    },
+    sm: {
+      width: 412,
+      height: 453,
+    },
+    md: {
+      width: 412,
+      height: 453,
+    },
+    lg: {
+      width: 500,
+      height: 550,
+    },
+  },
+};
+
+const questions = [
   {
     id: 0,
     title: '¿Puedo recibir pagos a través de mi aplicación móvil?',
@@ -122,3 +219,9 @@ export const questions = [
     ¿Ya tienes una aplicación móvil? Ofrecemos también servicio de mantenimiento y solución de errores para aplicaciones existentes.`,
   },
 ];
+
+export const FAQMobileDevelopment = {
+  titlePart1: 'Preguntas',
+  titlePart2: 'frecuentes',
+  questions: questions,
+};

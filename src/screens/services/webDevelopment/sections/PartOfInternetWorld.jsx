@@ -22,8 +22,8 @@ const imageSizes = {
 
 const PartOfInternetWorld = () => (
   <CallToActionSection
-    titlePart1="Forma parte del"
-    titlePart2=" mundo del internet"
+    titlePart1="Forma parte "
+    titlePart2="del mundo del internet"
     titlePart3=", empieza hoy"
     description=" El futuro del desarrollo web para ti, te apoyamos durante
   todo el proceso"

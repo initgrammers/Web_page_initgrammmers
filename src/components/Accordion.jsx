@@ -53,8 +53,8 @@ CustomAccordion.defaultProps = {
   title: '',
   details: '',
   children: null,
-  mt: 0,
-  mb: 4,
+  mt: 2,
+  mb: 0,
   borderRadius: 3,
 };
 export default CustomAccordion;

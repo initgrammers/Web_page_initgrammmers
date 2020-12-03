@@ -1,30 +1,40 @@
-export const WebTechnologies = [
+const webTechnologies = [
   {
-    label: 'HTML.5',
-    image: '/assets/svg/html-5.svg',
+    label: 'HTML 5',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844070/servicios/diseno-ux-ui/html-5.svg',
   },
   {
     label: 'Wordpress',
-    image: '/assets/svg/wordpress.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844070/servicios/diseno-ux-ui/wordpress.svg',
   },
   {
     label: 'CSS',
-    image: '/assets/svg/css-3.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844084/servicios/diseno-ux-ui/css-3.svg',
   },
   {
     label: 'Firebase',
-    image: '/assets/svg/firebase-1.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844100/servicios/diseno-ux-ui/firebase.svg',
   },
   {
     label: 'Angular',
-    image: '/assets/svg/angular-icon-1.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844121/servicios/diseno-ux-ui/angular.svg',
   },
   {
     label: 'Next.js',
-    image: '/assets/svg/next-js.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844120/servicios/diseno-ux-ui/next-js.svg',
   },
 ];
 
+export const sliderWebTechnologies = {
+  title: 'Tecnologías con las que trabajamos para el desarrollo web',
+  technologies: webTechnologies,
+};
 export const questions = [
   {
     id: 0,
@@ -56,7 +66,7 @@ export const questions = [
   },
 ];
 
-export const typesApplication = [
+const typesApplication = [
   {
     title: 'Aplicación web estática',
     description:
@@ -83,3 +93,28 @@ export const typesApplication = [
       'Es el tipo de aplicación web pensado para tiendas online. Ofrece mayores funcionalidades, porque permite utilizar sistemas para recibir pagos desde tarjetas de crédito, PayPal, efectivo, etc. Además de sincronizarse con la gestión de inventario y logística de envíos podrás controlar desde cualquier parte del mundo la  información de los productos o servicios que tu empresa ofrece.',
   },
 ];
+
+export const webApplicationTypes = {
+  backgroundPrimayLight: true,
+  title: 'Nuestros servicios',
+  typesApplication: typesApplication,
+  image: '/assets/images/tipos-aplicaciones-web.png',
+  imageSizes: {
+    xs: {
+      width: 610,
+      height: 438,
+    },
+    sm: {
+      width: 412,
+      height: 296,
+    },
+    md: {
+      width: 412,
+      height: 296,
+    },
+    lg: {
+      width: 504,
+      height: 362,
+    },
+  },
+};

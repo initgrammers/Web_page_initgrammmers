@@ -42,18 +42,22 @@ const styles = (theme) => ({
     },
   },
 
+  title: {
+    color: theme.palette.primary.main,
+    textAlign: 'center',
+  },
+  description: {
+    paddingTop: theme.spacing(4),
+    textAlign: 'center',
+  },
+
   [theme.breakpoints.up('lg')]: {
     container: {
       paddingTop: theme.spacing(26),
       paddingBottom: theme.spacing(50),
     },
-    title: {
-      color: theme.palette.primary.main,
-    },
     description: {
       width: 400,
-      paddingTop: theme.spacing(4),
-      textAlign: 'center',
     },
   },
 });

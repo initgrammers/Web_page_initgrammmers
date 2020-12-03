@@ -9,6 +9,7 @@ import Image from 'next/image';
 import ContactUsButton from '#Components/ContacUsButton';
 import styles from '../styles/Banner';
 import { contactsLinks } from '#app/constants/contacts';
+import { bannerMobileDevelopment } from '#constants/services/MobileDevelopment';
 
 const useStyles = makeStyles(styles);
 
@@ -20,24 +21,25 @@ const Banner = () => {
         <Box className={classes.containerBackgroundImage}>
           <Image
             quality={100}
-            src="/assets/images/figures/bloque1.png"
+            src={bannerMobileDevelopment.backgroundImage}
             layout="fill"
+            alt="Initgrammer"
           />
         </Box>
       </Hidden>
       <Container fixed className={classes.container}>
         <Box component="article" className={classes.detailsContent}>
           <Typography variant="h1" className={classes.title}>
-            Desarrollo y diseño de aplicaciones
-            <span> móviles </span>
-            iOS y Android
+            {bannerMobileDevelopment.titlePar1}
+            {bannerMobileDevelopment.titlePart2}
+            {bannerMobileDevelopment.titlePart3}
           </Typography>
           <Typography
             variant="h2"
             component="p"
             className={classes.description}
           >
-            Tus productos en el bolsillo de tus clientes
+            {bannerMobileDevelopment.description}
           </Typography>
           <ContactUsButton color="secondary" href={contactsLinks.mobileApps} />
         </Box>
@@ -46,8 +48,9 @@ const Banner = () => {
             <Image
               quality={100}
               priority
-              src="/assets/images/diseno-desarrollo-aplicaciones-moviles-ios-android-ecuador.png"
+              src={bannerMobileDevelopment.image}
               layout="fill"
+              alt={`${bannerMobileDevelopment.titlePar1} ${bannerMobileDevelopment.titlePart2}${bannerMobileDevelopment.titlePart3}`}
             />
           </Box>
         </Box>

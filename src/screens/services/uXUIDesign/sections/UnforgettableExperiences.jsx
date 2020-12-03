@@ -1,34 +1,15 @@
-import React from 'react';
 import CallToActionSection from '#Components/CallToActionSection';
-
-const imageSizes = {
-  xs: {
-    width: 288,
-    height: 286,
-  },
-  sm: {
-    width: 552,
-    height: 548,
-  },
-  md: {
-    width: 544,
-    height: 540,
-  },
-  lg: {
-    width: 608,
-    height: 537,
-  },
-};
+import { unforgetableExperiences } from '#constants/services/UxUiDesign';
 
 const UnforgettableExperiences = () => (
   <CallToActionSection
-    titlePart1="Experiencias inolvidables con alto impacto, "
-    titlePart2="mundo del internet"
-    description=" Diseñamos un producto de principio a fin, te apoyamos durante todo el camino "
-    image="/assets/images/experiencias-inolvidables-con-alto-impacto.png"
-    backgroundImage="/assets/images/figures/webDevelopment/bloque6.png"
-    heightImage={944}
-    imageSizes={imageSizes}
+    titlePart1={unforgetableExperiences.titlePart1}
+    titlePart2={unforgetableExperiences.titlePart2}
+    description={unforgetableExperiences.description}
+    image={unforgetableExperiences.image}
+    backgroundImage={unforgetableExperiences.backgroundImage}
+    heightImage={unforgetableExperiences.heightImage}
+    imageSizes={unforgetableExperiences.imageSizes}
   />
 );
 

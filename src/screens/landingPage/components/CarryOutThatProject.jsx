@@ -1,4 +1,5 @@
 import { makeStyles, Box, Typography } from '@material-ui/core';
+import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from '../styles/CarryOutThatProject';
 import BackgroundImage from '#Components/BackgroundImage';
@@ -9,7 +10,12 @@ import { contactsLinks } from '#app/constants/contacts';
 
 const useStyles = makeStyles(styles);
 
-const Banner = () => {
+const CarryOutThatProject = ({
+  titlePart1,
+  titlePart2,
+  description,
+  image,
+}) => {
   const classes = useStyles();
   return (
     <Box
@@ -25,8 +31,8 @@ const Banner = () => {
               black
               variant="h1"
               component="h2"
-              head="¿Aún pensando cómo "
-              emphasis="llevar a cabo ese proyecto?"
+              head={titlePart1}
+              emphasis={titlePart2}
               mb={0}
               align="center"
             />
@@ -35,9 +41,7 @@ const Banner = () => {
               component="p"
               className={classes.description}
             >
-              Tomamos una idea y la transformamos en una obra maestra digital.
-              Nuestra pasión por la tecnología y deseo de hacer las cosas
-              diferentes
+              {description}
             </Typography>
             <ContactUsButton href={contactsLinks.landing} />
           </Box>
@@ -46,8 +50,9 @@ const Banner = () => {
               <Image
                 quality={100}
                 priority
-                src="/assets/images/pensado-como-llevar-a-cabo-tu-proyecto.png"
+                src={image}
                 layout="fill"
+                alt={`${titlePart1} ${titlePart2}`}
               />
             </Box>
           </Box>
@@ -57,4 +62,16 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+CarryOutThatProject.propTypes = {
+  titlePart1: PropTypes.string.isRequired,
+  titlePart2: PropTypes.string,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string,
+};
+
+CarryOutThatProject.defaultProps = {
+  titlePart2: '',
+  image: '',
+};
+
+export default CarryOutThatProject;

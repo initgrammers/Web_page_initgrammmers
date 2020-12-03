@@ -5,6 +5,7 @@ import { Button, Link } from '@material-ui/core';
 const ContactUsButton = ({ variant, color, href, label, children, mr }) => (
   <Link
     target="_blank"
+    rel="noopener"
     href={href}
     style={{ textDecoration: 'none', marginRight: mr * 8 }}
   >

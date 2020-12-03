@@ -1,10 +1,9 @@
-import { Box, makeStyles } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import { ArrowForwardIos, ArrowBackIos } from '@material-ui/icons';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import styles from './style';
 
-const useStyle = makeStyles(styles);
 const Container = ({
   onNextStep,
   onPrevStep,
@@ -12,14 +11,9 @@ const Container = ({
   disableLeft,
   disableRight,
 }) => {
-  const classes = useStyle();
+  const classes = styles();
   return (
-    <Box
-      display="flex"
-      justifyContent="space-between"
-      alignItems="center"
-      px={3}
-    >
+    <Box display="flex" justifyContent="space-between" alignItems="center">
       <Box onClick={onPrevStep}>
         <ArrowBackIos
           className={clsx(classes.arrow, {
@@ -27,9 +21,7 @@ const Container = ({
           })}
         />
       </Box>
-      <Box display="flex" flex={1} justifyContent="center" alignItems="center">
-        {children}
-      </Box>
+      <Box className={classes.imagesContent}>{children}</Box>
       <Box onClick={onNextStep}>
         <ArrowForwardIos
           className={clsx(classes.arrow, {

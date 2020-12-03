@@ -11,7 +11,13 @@ const styles = (theme) => ({
     fontSize: 18,
   },
   contactUs: {
-    padding: theme.spacing(8, 0),
+    padding: theme.spacing(4, 0),
+    [theme.breakpoints.up('sm')]: {
+      padding: theme.spacing(5, 0),
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: theme.spacing(8, 0),
+    },
   },
   gridContainer: {
     color: theme.palette.primary.contrastText,

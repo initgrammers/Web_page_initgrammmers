@@ -8,10 +8,10 @@ const LinkContactUs = ({ question, callToAction, href }) => {
   const classes = useStyles();
   return (
     <>
-      <Typography variant="h6" color="primary">
+      <Typography variant="h6" component="h3" color="primary">
         {question}
       </Typography>
-      <Link target="_blank" href={href}>
+      <Link target="_blank" href={href} rel="noopener">
         <Typography variant="body2" className={classes.action}>
           {callToAction}
         </Typography>

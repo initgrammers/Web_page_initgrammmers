@@ -34,6 +34,7 @@ const Banner = () => {
                 priority
                 src="/assets/images/aumenta-la-visibilidad-de-tu-empresa.png"
                 layout="fill"
+                alt="Aumenta la visibilidad de tu empresa"
               />
             </Box>
           </Box>

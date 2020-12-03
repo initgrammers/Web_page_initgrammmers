@@ -5,7 +5,7 @@ import { Box, Link, useTheme } from '@material-ui/core';
 const LinkIcon = ({ icon, href, size }) => {
   const { palette } = useTheme();
   return (
-    <Link href={href} target="_blank">
+    <Link href={href} target="_blank" rel="noopener">
       <Box
         display="flex"
         justifyContent="center"

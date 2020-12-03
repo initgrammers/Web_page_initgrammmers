@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from '../styles/ImportanceApplications';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
+import { importanceApplications } from '#constants/services/MobileDevelopment';
 
 const useStyles = makeStyles(styles);
 
@@ -11,8 +12,8 @@ const ImportanceAplications = () => {
   return (
     <Box component="section" position="relative">
       <BackgroundImage
-        image="/assets/images/figures/bloque2.png"
-        height={829}
+        image={importanceApplications.backgroundImage}
+        height={importanceApplications.heightImage}
       />
       <CustomContainer>
         <Grid container className={classes.root}>
@@ -20,7 +21,7 @@ const ImportanceAplications = () => {
             <Box component="figure" className={classes.image}>
               <Image
                 quality={100}
-                src="/assets/images/importancia-aplicaciones-moviles.png"
+                src={importanceApplications.mainImage}
                 layout="fill"
               />
             </Box>
@@ -28,18 +29,16 @@ const ImportanceAplications = () => {
           <Grid item xs={12} lg={6} className={classes.gridContent}>
             <Box component="article">
               <Typography variant="h2" className={classes.title}>
-                Importancia de las aplicaciones móviles
+                {importanceApplications.title}
               </Typography>
               <Typography variant="body1">
-                Crear una aplicación móvil para tu empresa te conecta con tus
-                clientes y mejora la experiencia en la compra de productos y
-                servicios.
+                {importanceApplications.description1}
               </Typography>
               <Box className={classes.images}>
                 <Box component="figure" className={classes.figureLeft}>
                   <Image
                     quality={100}
-                    src="/assets/images/google-play.png"
+                    src={importanceApplications.logo1}
                     width={88}
                     height={88}
                   />
@@ -47,15 +46,14 @@ const ImportanceAplications = () => {
                 <Box component="figure" className={classes.figureLeft}>
                   <Image
                     quality={100}
-                    src="/assets/images/apple-store.png"
+                    src={importanceApplications.logo2}
                     width={88}
                     height={88}
                   />
                 </Box>
               </Box>
               <Typography variant="body1">
-                Tus productos en las tiendas de aplicaciones móviles a nivel
-                mundial
+                {importanceApplications.description2}
               </Typography>
             </Box>
           </Grid>

@@ -1,25 +1,22 @@
 import { Box, Typography, makeStyles } from '@material-ui/core';
+import PropTypes from 'prop-types';
 import CardService from '#Components/CardService';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
-import { services } from '#constants/LandingPage';
 import CustomLink from '#Components/CustomLink';
 import styles from '../styles/Services';
 
 const useStyles = makeStyles(styles);
 
-const Services = () => {
+const Services = ({ backgroundImage, heightImage, title, services }) => {
   const classes = useStyles();
   return (
     <Box component="section" position="relative">
-      <BackgroundImage
-        image="/assets/images/figures/landingPage/bloque3.png"
-        height={665}
-      />
+      <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
         <Box className={classes.content}>
           <Typography variant="h2" className={classes.title}>
-            Integramos diseño y desarrollo para entregar el mejor proyecto
+            {title}
           </Typography>
           <Box className={classes.services}>
             {services.map((service) => (
@@ -38,6 +35,18 @@ const Services = () => {
       </CustomContainer>
     </Box>
   );
+};
+
+Services.propTypes = {
+  title: PropTypes.string.isRequired,
+  backgroundImage: PropTypes.string,
+  heightImage: PropTypes.number,
+  services: PropTypes.arrayOf.isRequired,
+};
+
+Services.defaultProps = {
+  backgroundImage: '',
+  heightImage: 0,
 };
 
 export default Services;

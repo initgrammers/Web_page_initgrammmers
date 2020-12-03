@@ -17,7 +17,7 @@ const PartnershipModel = ({
   image,
   backgroundImage,
   heightImage,
-  partnershipModel,
+  partnershipModels,
 }) => {
   const classes = useStyles();
 
@@ -27,7 +27,7 @@ const PartnershipModel = ({
       <CustomContainer>
         <Box component="article" className={classes.content}>
           <Box component="figure" className={classes.image}>
-            <Image quality={100} src={image} layout="fill" />
+            <Image quality={100} src={image} layout="fill" alt={title} />
           </Box>
           <Subtitle
             head={title}
@@ -42,7 +42,7 @@ const PartnershipModel = ({
           <ContactUsButton label="Escríbenos" href={contactsLinks.writeUs} />
 
           <Box className={classes.services}>
-            {partnershipModel.map((service) => (
+            {partnershipModels.map((service) => (
               <Box key={service.title} className={classes.modelPartnership}>
                 <CardPartnership
                   image={service.path}
@@ -64,7 +64,7 @@ PartnershipModel.propTypes = {
   image: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
-  partnershipModel: PropTypes.array.isRequired,
+  partnershipModels: PropTypes.arrayOf.isRequired,
 };
 
 PartnershipModel.defaultProps = {

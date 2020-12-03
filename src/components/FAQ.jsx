@@ -29,7 +29,7 @@ const FAQ = ({
             emphasis={titlePart2}
             tail={titlePart3}
             align="center"
-            mb={4}
+            mb={2}
           />
           {questions.map(({ id, title, details }) => (
             <Accordion key={id} title={title} details={details} />

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Container from './Container';
 import Image from './Image';
 
-const Slide = ({ data, step }) => {
+const Slide = ({ data, step, showTitleImage, imageIsLarge }) => {
   const lengthData = data.length;
   const [index, setIndex] = useState({
     from: 0,
@@ -52,6 +52,8 @@ const Slide = ({ data, step }) => {
             key={_index}
             image={data[_index].image}
             label={data[_index].label}
+            showTitleImage={showTitleImage}
+            imageIsLarge={imageIsLarge}
           />
         )
     );
@@ -72,11 +74,15 @@ Slide.propTypes = {
     PropTypes.shape({ image: PropTypes.string, label: PropTypes.string })
   ),
   step: PropTypes.number,
+  showTitleImage: PropTypes.bool,
+  imageIsLarge: PropTypes.bool,
 };
 
 Slide.defaultProps = {
   data: [],
   step: 2,
+  showTitleImage: true,
+  imageIsLarge: false,
 };
 
 export default Slide;

@@ -1,8 +1,12 @@
 import FAQ from '#Components/FAQ';
-import { questions } from '#constants/services/MobileDevelopment';
+import { FAQMobileDevelopment } from '#constants/services/MobileDevelopment';
 
 const Questions = () => (
-  <FAQ titlePart1="Preguntas" titlePart2="frecuentes" questions={questions} />
+  <FAQ
+    titlePart1={FAQMobileDevelopment.titlePart1}
+    titlePart2={FAQMobileDevelopment.titlePart2}
+    questions={FAQMobileDevelopment.questions}
+  />
 );
 
 export default Questions;
