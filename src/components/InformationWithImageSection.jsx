@@ -56,7 +56,13 @@ const InformationWithImageSection = ({
           </Box>
           <Box className={classes.containerImage}>
             <Box component="figure" className={classes.image}>
-              <Image quality={100} priority src={image} layout="fill" />
+              <Image
+                quality={100}
+                priority
+                src={image}
+                layout="fill"
+                alt={title}
+              />
             </Box>
           </Box>
         </Box>

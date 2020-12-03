@@ -44,9 +44,9 @@ const styles = (theme) => ({
 
   title: {
     color: theme.palette.primary.main,
+    textAlign: 'center',
   },
   description: {
-    width: 400,
     paddingTop: theme.spacing(4),
     textAlign: 'center',
   },
@@ -55,6 +55,9 @@ const styles = (theme) => ({
     container: {
       paddingTop: theme.spacing(26),
       paddingBottom: theme.spacing(50),
+    },
+    description: {
+      width: 400,
     },
   },
 });

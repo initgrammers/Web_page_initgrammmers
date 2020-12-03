@@ -1,10 +1,9 @@
-import { Box, makeStyles } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import { ArrowForwardIos, ArrowBackIos } from '@material-ui/icons';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import styles from './style';
 
-const useStyle = makeStyles(styles);
 const Container = ({
   onNextStep,
   onPrevStep,
@@ -12,7 +11,7 @@ const Container = ({
   disableLeft,
   disableRight,
 }) => {
-  const classes = useStyle();
+  const classes = styles();
   return (
     <Box display="flex" justifyContent="space-between" alignItems="center">
       <Box onClick={onPrevStep}>

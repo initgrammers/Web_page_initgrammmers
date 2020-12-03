@@ -25,13 +25,21 @@ const Slider = ({ data, imageIsLarge, showTitleImage }) => {
               image={item.image}
               label={item.label}
               showTitleImage={showTitleImage}
+              imageIsLarge={imageIsLarge}
             />
           ))}
         </Box>
       </>
     );
   }
-  return <Slide data={data} step={steps} />;
+  return (
+    <Slide
+      data={data}
+      step={steps}
+      showTitleImage={showTitleImage}
+      imageIsLarge={imageIsLarge}
+    />
+  );
 };
 
 Slider.propTypes = {

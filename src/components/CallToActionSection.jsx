@@ -39,7 +39,12 @@ const CallToActionSection = ({
           <ContactUsButton href={contactsLinks.general} />
 
           <Box className={classes.imageStyle}>
-            <Image quality={100} src={image} layout="fill" />
+            <Image
+              quality={100}
+              src={image}
+              layout="fill"
+              alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
+            />
           </Box>
         </Box>
       </CustomContainer>

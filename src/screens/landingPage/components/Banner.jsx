@@ -42,6 +42,7 @@ const Banner = ({
                 src={image}
                 layout="fill"
                 className={classes.mainImage}
+                alt={title}
               />
             </Box>
           </Box>

@@ -1,7 +1,7 @@
 export const bannerLandingPage = {
   backgroundImage:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1606839723/LandingPage/figures/bloque1.png',
-  heightImage: 670,
+    'https://res.cloudinary.com/initgrammers/image/upload/v1607008550/LandingPage/figures/bloque1.png',
+  heightImage: 672,
   title: 'Desarrollo y diseño de software al alcande de tus manos',
   description:
     'Descubre el mundo digital, te ayudamos a construir aplicaciones y programas de principio a fin',
@@ -131,18 +131,23 @@ export const servicesInitgrammers = {
 
 const clients = [
   {
+    label: 'Atenas Education',
     image: '/assets/images/atenas-education.png',
   },
   {
+    label: 'La Casa del Carpintero',
     image: '/assets/images/la-casa-del-carpintero.png',
   },
   {
+    label: 'JRTEC',
     image: '/assets/images/JRTEC.png',
   },
   {
+    label: 'Escuela Politécnica Nacional',
     image: '/assets/images/Escuela-Politecnica-Nacional.png',
   },
   {
+    label: 'Solufer Ecuador',
     image: '/assets/images/solufer.png',
   },
 ];

@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 
-const styles = (theme) => ({
+import { makeStyles } from '@material-ui/core';
+
+const styles = makeStyles((theme) => ({
   imagesContent: {
     display: 'flex',
     flex: 1,
@@ -11,14 +13,15 @@ const styles = (theme) => ({
     },
   },
 
-  containerImage: {
+  containerImage: ({ imageIsLarge }) => ({
     margin: theme.spacing(0, 1),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
-  },
+    height: `${imageIsLarge ? 41 : 134}`,
+  }),
   image: {
     objectFit: 'cover',
     maxHeight: 96,
@@ -34,7 +37,7 @@ const styles = (theme) => ({
   showLabel: {
     visibility: 'collapse',
   },
-});
+}));
 
 styles.propTypes = {
   theme: PropTypes.shape(),
