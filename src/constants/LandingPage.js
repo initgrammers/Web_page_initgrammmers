@@ -5,7 +5,8 @@ export const bannerLandingPage = {
   title: 'Desarrollo y diseño de software al alcande de tus manos',
   description:
     'Descubre el mundo digital, te ayudamos a construir aplicaciones y programas de principio a fin',
-  image: '/assets/images/desarrollo-diseno-software.gif',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1607028746/LandingPage/desarrollo-diseno-software.png',
 };
 
 export const onlineSolution = {

@@ -3,10 +3,17 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Router from 'next/router';
+import NProgress from 'nprogress';
 import theme from '../theme/index';
 import '../src/assets/css/globals.css';
 
-// Here you have ( children ) => children, but nextJS return children into field not on object
+Router.events.on('routeChangeStart', () => {
+  NProgress.start();
+});
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
+
 const NoLayout = ({ children }) => children;
 
 const MyApp = ({ Component, pageProps }) => {
@@ -52,6 +59,7 @@ const MyApp = ({ Component, pageProps }) => {
           crossOrigin=""
         />
         <link href="/fonts/Raleway/fonts.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="/assets/nprogress.css" />
       </Head>
       <ThemeProvider theme={theme}>
         <Layout {...layoutProps}>
