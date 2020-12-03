@@ -55,7 +55,7 @@ SliderTechnologies.propTypes = {
   technologies: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
-  variantTitle: PropTypes.number,
+  variantTitle: PropTypes.string,
   titleBlack: PropTypes.bool,
   backgroundGray: PropTypes.bool,
   barIsInvisible: PropTypes.bool,

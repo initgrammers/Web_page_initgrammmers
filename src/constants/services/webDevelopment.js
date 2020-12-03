@@ -1,30 +1,40 @@
-export const WebTechnologies = [
+const webTechnologies = [
   {
-    label: 'HTML.5',
-    image: '/assets/svg/html-5.svg',
+    label: 'HTML 5',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844070/servicios/diseno-ux-ui/html-5.svg',
   },
   {
     label: 'Wordpress',
-    image: '/assets/svg/wordpress.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844070/servicios/diseno-ux-ui/wordpress.svg',
   },
   {
     label: 'CSS',
-    image: '/assets/svg/css-3.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844084/servicios/diseno-ux-ui/css-3.svg',
   },
   {
     label: 'Firebase',
-    image: '/assets/svg/firebase-1.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844100/servicios/diseno-ux-ui/firebase.svg',
   },
   {
     label: 'Angular',
-    image: '/assets/svg/angular-icon-1.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844121/servicios/diseno-ux-ui/angular.svg',
   },
   {
     label: 'Next.js',
-    image: '/assets/svg/next-js.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844120/servicios/diseno-ux-ui/next-js.svg',
   },
 ];
 
+export const sliderWebTechnologies = {
+  title: 'Tecnologías con las que trabajamos para el desarrollo web',
+  technologies: webTechnologies,
+};
 export const questions = [
   {
     id: 0,

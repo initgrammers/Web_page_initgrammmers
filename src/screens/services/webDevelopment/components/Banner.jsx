@@ -46,6 +46,7 @@ const Banner = ({
                 src={image}
                 layout="fill"
                 className={classes.mainImage}
+                alt={`${titlePart1}${titlePart2}${titlePart3}`}
               />
             </Box>
           </Box>

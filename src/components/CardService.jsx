@@ -18,7 +18,7 @@ const CardService = ({ image, service }) => {
           alt={service}
         />
       </Box>
-      <Typography variant="h4" className={classes.titleService}>
+      <Typography variant="h4" component="p" className={classes.titleService}>
         {service}
       </Typography>
     </Box>

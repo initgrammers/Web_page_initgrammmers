@@ -12,7 +12,11 @@ const CardService = ({ image, title, description }) => {
       <Box component="figure">
         <Image quality={100} width={100} height={100} src={image} alt={title} />
       </Box>
-      <Typography variant="h4" className={classes.titlePartnership}>
+      <Typography
+        variant="h4"
+        component="h3"
+        className={classes.titlePartnership}
+      >
         {title}
       </Typography>
       <Typography variant="body2" className={classes.description}>

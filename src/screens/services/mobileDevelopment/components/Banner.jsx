@@ -23,6 +23,7 @@ const Banner = () => {
             quality={100}
             src={bannerMobileDevelopment.backgroundImage}
             layout="fill"
+            alt="Initgrammer"
           />
         </Box>
       </Hidden>
@@ -30,7 +31,7 @@ const Banner = () => {
         <Box component="article" className={classes.detailsContent}>
           <Typography variant="h1" className={classes.title}>
             {bannerMobileDevelopment.titlePar1}
-            <span>{bannerMobileDevelopment.titlePart2}</span>
+            {bannerMobileDevelopment.titlePart2}
             {bannerMobileDevelopment.titlePart3}
           </Typography>
           <Typography
@@ -49,6 +50,7 @@ const Banner = () => {
               priority
               src={bannerMobileDevelopment.image}
               layout="fill"
+              alt={`${bannerMobileDevelopment.titlePar1} ${bannerMobileDevelopment.titlePart2}${bannerMobileDevelopment.titlePart3}`}
             />
           </Box>
         </Box>
