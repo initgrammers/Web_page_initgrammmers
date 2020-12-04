@@ -72,34 +72,19 @@ export const whatIsUxUiDesign = {
 
 const uxUiTechnologies = [
   {
-    label: 'HTML 5',
+    label: 'Figma',
     image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1606844070/servicios/diseno-ux-ui/html-5.svg',
+      'https://res.cloudinary.com/initgrammers/image/upload/v1607085341/servicios/diseno-ux-ui/figma.svg',
   },
   {
-    label: 'Wordpress',
+    label: 'Adobe XD',
     image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1606844070/servicios/diseno-ux-ui/wordpress.svg',
+      'https://res.cloudinary.com/initgrammers/image/upload/v1607085341/servicios/diseno-ux-ui/adobe-xd.svg',
   },
   {
-    label: 'CSS',
+    label: 'Adobe Ilustrator',
     image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1606844084/servicios/diseno-ux-ui/css-3.svg',
-  },
-  {
-    label: 'Firebase',
-    image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1606844100/servicios/diseno-ux-ui/firebase.svg',
-  },
-  {
-    label: 'Angular',
-    image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1606844121/servicios/diseno-ux-ui/angular.svg',
-  },
-  {
-    label: 'Next.js',
-    image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1606844120/servicios/diseno-ux-ui/next-js.svg',
+      'https://res.cloudinary.com/initgrammers/image/upload/v1607085341/servicios/diseno-ux-ui/adobe-illustrator.svg',
   },
 ];
 
@@ -116,23 +101,23 @@ export const uniqueDesignAdaptedToYourBrand = {
   description:
     'Creamos experiencias con alto significado, pensando en los usuarios de los productos y en el proceso que deben seguir para utilizarlo, te ayudamos a desarrollar un plan para ejecutar el proyecto que tienes en mente. ',
   image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1606843570/servicios/diseno-ux-ui/diseno-unico-adaptado-a-tu-marca.png',
+    'https://res.cloudinary.com/initgrammers/image/upload/v1607085601/servicios/diseno-ux-ui/diseno-unico-adaptado-a-tu-marca.png',
   imageSizes: {
     xs: {
       width: 288,
-      height: 229,
+      height: 288,
     },
     sm: {
-      width: 412,
-      height: 385,
+      width: 509,
+      height: 509,
     },
     md: {
-      width: 544,
+      width: 509,
       height: 509,
     },
     lg: {
       width: 504,
-      height: 472,
+      height: 504,
     },
   },
   isImageRight: false,

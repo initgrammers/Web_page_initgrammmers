@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Link } from '@material-ui/core';
+import styles from '#app/assets/styles/ContacUsButton';
 
-const ContactUsButton = ({ variant, color, href, label, children, mr }) => (
-  <Link
-    target="_blank"
-    rel="noopener"
-    href={href}
-    style={{ textDecoration: 'none', marginRight: mr * 8 }}
-  >
-    <Button variant={variant} color={color}>
-      {children || label}
-    </Button>
-  </Link>
-);
+const ContactUsButton = ({ variant, color, href, label, children, mr }) => {
+  const classes = styles({ mr });
+  return (
+    <Link target="_blank" rel="noopener" href={href} className={classes.link}>
+      <Button variant={variant} color={color}>
+        {children || label}
+      </Button>
+    </Link>
+  );
+};
 ContactUsButton.propTypes = {
   variant: PropTypes.oneOf(['contained', 'outlined', 'text']),
   color: PropTypes.oneOf(['primary', 'secondary', 'default', 'inherit']),

@@ -68,7 +68,7 @@ const styles = makeStyles((theme) => ({
     },
     containerImage: {
       flex: 5,
-      alignItems: 'end',
+      alignItems: 'flex-end',
     },
     image: ({ lg }) => ({
       width: lg.width,

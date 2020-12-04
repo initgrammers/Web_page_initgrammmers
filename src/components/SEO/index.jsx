@@ -11,7 +11,10 @@ const SEO = ({
   <Head>
     <meta charSet="utf-8" />
     <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <meta name="robots" content="index, follow" />
 
     <title>{title}</title>
@@ -40,10 +43,13 @@ const SEO = ({
     <link rel="alternate" href={urlAltern} hrefLang="x-default" />
     <link
       rel="shortcut icon"
-      type="image/x-icon"
+      type="image/png"
       href="/assets/images/icono-initgrammers.png"
     />
     <link rel="apple-touch-icon" href="/assets/images/icono-initgrammers.png" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   </Head>
 );
 SEO.propTypes = {

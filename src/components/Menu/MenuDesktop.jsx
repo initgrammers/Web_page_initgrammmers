@@ -12,10 +12,10 @@ import { contactsLinks } from '#app/constants/contacts';
 const useStyles = makeStyles(styles);
 
 const menu = [
-  { label: 'Portafolio', href: '/Portfolio' },
-  { label: '¿Quiénes somos?', href: '/AboutUs' },
-  { label: 'Blog', href: '/Blog' },
-  { label: 'Contacto', href: '/ContactUs' },
+  { label: 'Portafolio', href: '/404' },
+  { label: '¿Quiénes somos?', href: '/404' },
+  { label: 'Blog', href: '/404' },
+  { label: 'Contacto', href: '/404' },
 ];
 
 const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
