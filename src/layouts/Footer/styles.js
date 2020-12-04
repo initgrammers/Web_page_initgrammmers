@@ -77,6 +77,15 @@ const styles = (theme) => ({
       margin: 0,
     },
   },
+
+  linkIcon: {
+    display: 'flex',
+    color: 'white',
+    marginBotton: theme.spacing(2),
+  },
+  iconText: {
+    marginLeft: theme.spacing(2),
+  },
 });
 
 styles.propTypes = {

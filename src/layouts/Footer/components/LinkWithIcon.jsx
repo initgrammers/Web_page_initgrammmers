@@ -1,17 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Link, Typography } from '@material-ui/core';
+import { Box, Link, Typography, makeStyles } from '@material-ui/core';
+import styles from '../styles';
 
-const LinkWithIcon = ({ icon, label, href }) => (
-  <Link href={href} color="inherit">
-    <Box display="flex" style={{ color: 'white' }} mb={2}>
-      {icon}
-      <Typography color="inherit" style={{ marginLeft: 16 }}>
-        {label}
-      </Typography>
-    </Box>
-  </Link>
-);
+const useStyles = makeStyles(styles);
+
+const LinkWithIcon = ({ icon, label, href }) => {
+  const classes = useStyles();
+  return (
+    <Link href={href} color="inherit">
+      <Box className={classes.linkIcon}>
+        {icon}
+        <Typography color="inherit" className={classes.iconText}>
+          {label}
+        </Typography>
+      </Box>
+    </Link>
+  );
+};
 LinkWithIcon.propTypes = {
   icon: PropTypes.node,
   label: PropTypes.string,

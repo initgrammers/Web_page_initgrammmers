@@ -20,7 +20,7 @@ const styles = (theme) => ({
   sectionLogo: {
     display: 'flex',
     flex: 1,
-    justifyContent: 'star',
+    justifyContent: 'start',
     [theme.breakpoints.up('sm')]: {
       justifyContent: 'center',
     },

@@ -10,8 +10,8 @@ const CardService = ({ image, service }) => {
   return (
     <Box className={classes.card}>
       <Box component="figure">
-        <Image
-          quality={100}
+        <img
+          loading="lazy"
           width={188}
           height={169}
           src={image}
