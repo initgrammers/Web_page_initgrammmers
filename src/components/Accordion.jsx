@@ -30,7 +30,9 @@ const CustomAccordion = ({
     >
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon color="primary" />}>
-          <HelpOutlineIcon style={{ marginRight: 8 }} color="primary" />
+          <Box mr={1}>
+            <HelpOutlineIcon color="primary" />
+          </Box>
           <Typography variant="body1">{title}</Typography>
         </AccordionSummary>
         <AccordionDetails>

@@ -6,7 +6,7 @@ import CastForEducation from '@material-ui/icons/CastForEducationOutlined';
 import DeviceHub from '@material-ui/icons/DeviceHubOutlined';
 import Search from '@material-ui/icons/SearchOutlined';
 
-export const data = [
+const data = [
   {
     id: 'webdevelop',
     title: 'Desarrollo Web',
@@ -33,28 +33,30 @@ export const data = [
     id: '4',
     title: 'Comercio digital',
     subtitle: 'Venda a través de internet',
-    href: '#',
+    href: '/404',
     icon: <ShoppingCart />,
   },
   {
     id: '5',
     title: 'Capacitaciones',
     subtitle: 'Aprende con nosotros',
-    href: '#',
+    href: '/404',
     icon: <CastForEducation />,
   },
   {
     id: '6',
     title: 'Marketing digital',
     subtitle: 'Posicione su marca',
-    href: '#',
+    href: '/404',
     icon: <DeviceHub />,
   },
   {
     id: '7',
     title: 'SEO',
     subtitle: 'Posicionamiento en buscadores',
-    href: '#',
+    href: '/404',
     icon: <Search />,
   },
 ];
+
+export default data;

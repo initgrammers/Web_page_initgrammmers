@@ -53,8 +53,14 @@ const MyApp = ({ Component, pageProps }) => {
           as="font"
           crossOrigin=""
         />
-        <link href="/fonts/Raleway/fonts.css" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="/assets/nprogress.css" />
+        {/* <link href="/fonts/Raleway/fonts.css" rel="stylesheet" /> */}
+        <link
+          rel="stylesheet"
+          href="/fonts/Raleway/fonts.css"
+          media="print"
+          onLoad="this.media='all'"
+        />
+        {/* <link rel="stylesheet" type="text/css" href="/assets/nprogress.css" /> */}
       </Head>
       <ThemeProvider theme={theme}>
         <Layout {...layoutProps}>
