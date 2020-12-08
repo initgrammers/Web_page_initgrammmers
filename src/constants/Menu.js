@@ -31,9 +31,9 @@ const data = [
   },
   {
     id: '4',
-    title: 'Comercio digital',
+    title: 'Comercio electrónico',
     subtitle: 'Venda a través de internet',
-    href: '/404',
+    href: '/services/ShopOnline',
     icon: <ShoppingCart />,
   },
   {
