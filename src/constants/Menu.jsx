@@ -6,16 +6,17 @@ import CastForEducation from '@material-ui/icons/CastForEducationOutlined';
 import DeviceHub from '@material-ui/icons/DeviceHubOutlined';
 import Search from '@material-ui/icons/SearchOutlined';
 
-const data = [
+// eslint-disable-next-line import/prefer-default-export
+export const data = [
   {
-    id: 'webdevelop',
+    id: 'WebDevelop',
     title: 'Desarrollo Web',
     subtitle: 'Android, iOs, híbridas',
     href: '/services/WebDevelopment',
     icon: <Devices />,
   },
   {
-    id: '2',
+    id: 'MobileDevelopment',
     title: 'Desarrollo de aplicaciones móviles',
     subtitle: 'Android, iOS, híbridas',
     href: '/services/MobileDevelopment',
@@ -23,7 +24,7 @@ const data = [
   },
 
   {
-    id: '3',
+    id: 'UXUIDesign',
     title: 'Diseño UX UI',
     subtitle: 'Venda a través de internet',
     href: '/services/UXUIDesign',
@@ -40,21 +41,21 @@ const data = [
     id: '5',
     title: 'Capacitaciones',
     subtitle: 'Aprende con nosotros',
-    href: '/404',
+    href: '/services/Training',
     icon: <CastForEducation />,
   },
   {
     id: '6',
     title: 'Marketing digital',
     subtitle: 'Posicione su marca',
-    href: '/404',
+    href: '/services/Marketing',
     icon: <DeviceHub />,
   },
   {
     id: '7',
     title: 'SEO',
     subtitle: 'Posicionamiento en buscadores',
-    href: '/404',
+    href: '/services/SEO',
     icon: <Search />,
   },
 ];
