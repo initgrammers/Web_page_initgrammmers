@@ -6,7 +6,7 @@ const Page = () => <MobileDevelopmentPage />;
 export const getServerSideProps = async () => ({
   props: {
     layoutProps: {
-      navigation: { index: '2' },
+      navigation: { index: 'MobileDevelopment' },
     },
   },
 });
