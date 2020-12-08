@@ -8,7 +8,7 @@ const contactsLinks = {
   consulting: 'https://wa.link/epqpye',
   teamMessage: 'https://wa.link/uc2mmv',
   writeUs:
-    'mailto:info@initgrammers.com?subject=Solicitude de información&body=Hola InitGrammers, \nEstuve navegando en su página web y deseo obtener mayor información de sus servicios.Saludos.',
+    'mailto:info@initgrammers.com?subject=Solicitude de información&body=Hola InitGrammers, estuve navegando en su página web y deseo obtener mayor información de sus servicios.Saludos.',
   startProject: 'https://wa.link/gy9bje',
   callUs: 'tel: +593963277297',
 };

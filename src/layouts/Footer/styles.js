@@ -81,7 +81,7 @@ const styles = (theme) => ({
   linkIcon: {
     display: 'flex',
     color: 'white',
-    marginBotton: theme.spacing(2),
+    marginBottom: theme.spacing(2),
   },
   iconText: {
     marginLeft: theme.spacing(2),

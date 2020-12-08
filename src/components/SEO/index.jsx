@@ -39,6 +39,8 @@ const SEO = ({
         content={item.content}
       />
     ))}
+    <link rel="dns-prefetch" href="https://initgrammers.com" />
+    <link rel="preconnect" href="https://initgrammers.com" />
     <link rel="alternate" href={urlAltern} hrefLang="es-ec" />
     <link rel="alternate" href={urlAltern} hrefLang="x-default" />
     <link
