@@ -30,6 +30,8 @@ const FAQ = ({
             tail={titlePart3}
             align="center"
             mb={2}
+            component="h2"
+            variant="h3"
           />
           {questions.map(({ id, title, details }) => (
             <Accordion key={id} title={title} details={details} />

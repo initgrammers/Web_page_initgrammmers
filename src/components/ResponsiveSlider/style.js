@@ -20,7 +20,7 @@ const styles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
-    height: `${imageIsLarge ? 41 : 134}`,
+    height: `${imageIsLarge ? '41px' : '134px'}`,
   }),
   image: {
     objectFit: 'cover',
