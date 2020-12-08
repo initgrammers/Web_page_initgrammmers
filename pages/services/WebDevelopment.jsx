@@ -6,7 +6,7 @@ const Page = () => <WebDevelopmentPage />;
 export const getServerSideProps = async () => ({
   props: {
     layoutProps: {
-      navigation: { index: 'webdevelop' },
+      navigation: { index: 'WebDevelop' },
     },
   },
 });

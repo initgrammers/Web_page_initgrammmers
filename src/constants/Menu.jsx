@@ -6,16 +6,17 @@ import CastForEducation from '@material-ui/icons/CastForEducationOutlined';
 import DeviceHub from '@material-ui/icons/DeviceHubOutlined';
 import Search from '@material-ui/icons/SearchOutlined';
 
+// eslint-disable-next-line import/prefer-default-export
 export const data = [
   {
-    id: 'webdevelop',
+    id: 'WebDevelop',
     title: 'Desarrollo Web',
     subtitle: 'Android, iOs, híbridas',
     href: '/services/WebDevelopment',
     icon: <Devices />,
   },
   {
-    id: '2',
+    id: 'MobileDevelopment',
     title: 'Desarrollo de aplicaciones móviles',
     subtitle: 'Android, iOS, híbridas',
     href: '/services/MobileDevelopment',
@@ -23,7 +24,7 @@ export const data = [
   },
 
   {
-    id: '3',
+    id: 'UXUIDesign',
     title: 'Diseño UX UI',
     subtitle: 'Venda a través de internet',
     href: '/services/UXUIDesign',
