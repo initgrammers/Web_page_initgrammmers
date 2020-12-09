@@ -31,6 +31,17 @@ const ContactUs = () => {
                 label="Escríbenos"
                 href={contactsLinks.writeUs}
               />
+              <Typography
+                variant="h6"
+                component="p"
+                className={classes.descriptionContact}
+              >
+                Puedes cotizar tu sitio web o aplicación móvil con nuestra calculadora.
+              </Typography>
+              <ContactUsButton
+                label="Calculadora"
+                href="https://www.calconic.com/calculator-widgets/initgrammers-pricing-calculator/5fcfedf80ff8010029aa2d8d?layouts=true"
+              />
             </Box>
           </Grid>
           <Grid item md={5} sm={12}>

@@ -40,7 +40,7 @@ const styles = (theme) => ({
   },
   descriptionContact: {
     marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(9),
+    marginBottom: theme.spacing(3),
   },
   contact: {
     marginTop: theme.spacing(6),
