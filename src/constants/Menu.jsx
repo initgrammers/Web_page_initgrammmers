@@ -32,9 +32,9 @@ export const data = [
   },
   {
     id: '4',
-    title: 'Comercio digital',
+    title: 'Comercio electrónico',
     subtitle: 'Venda a través de internet',
-    href: '/services/Ecommerce',
+    href: '/services/ShopOnline',
     icon: <ShoppingCart />,
   },
   {
