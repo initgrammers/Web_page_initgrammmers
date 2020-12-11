@@ -1,5 +1,5 @@
 import StrategiesSection from '../components/Strategies';
-import { optionStrategies } from '#app/constants/services/Marketing';
+import { optionStrategies } from '#app/constants/services/marketing';
 
 const Strategies = () => (
   <StrategiesSection

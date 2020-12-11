@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionApplicationTypes from '#Components/SectionApplicationTypes';
-import { marketingTypes } from '#constants/services/Marketing';
+import { marketingTypes } from '#app/constants/services/marketing';
 
 const MobileApplicationTypes = () => (
   <SectionApplicationTypes
