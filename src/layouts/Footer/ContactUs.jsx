@@ -4,6 +4,7 @@ import LinkContactUs from './components/LinkContactUs';
 import styles from './styles';
 import { contactsLinks } from '#app/constants/contacts';
 import CustomContainer from '#Components/CustomContainer';
+import Calculator from './Calculator';
 
 const useStyles = makeStyles(styles);
 
@@ -38,10 +39,7 @@ const ContactUs = () => {
               >
                 Puedes cotizar tu sitio web o aplicación móvil con nuestra calculadora.
               </Typography>
-              <ContactUsButton
-                label="Calculadora"
-                href="https://www.calconic.com/calculator-widgets/initgrammers-pricing-calculator/5fcfedf80ff8010029aa2d8d?layouts=true"
-              />
+              <Calculator />
             </Box>
           </Grid>
           <Grid item md={5} sm={12}>
