@@ -1,6 +1,7 @@
 import { Box, Typography, makeStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
+import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import styles from '../styles/Banner';
 import ContactUsButton from '#Components/ContacUsButton';
@@ -8,6 +9,8 @@ import { contactsLinks } from '#app/constants/contacts';
 
 const useStyles = makeStyles(styles);
 const Banner = ({
+  backgroundImage,
+  heightImage,
   titlePart1,
   titlePart2,
   titlePart3,
@@ -17,6 +20,7 @@ const Banner = ({
   const classes = useStyles();
   return (
     <Box component="section" position="relative">
+      <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
         <Box className={classes.container}>
           <Box component="article" className={classes.detailsContent}>

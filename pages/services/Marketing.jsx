@@ -1,5 +1,5 @@
 import Layout from '../../src/layouts';
-import MarketingPage from '../../src/screens/services/marketing';
+import MarketingPage from '#screens/services/marketing';
 
 const Page = () => <MarketingPage />;
 

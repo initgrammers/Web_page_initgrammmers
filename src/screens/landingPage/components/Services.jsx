@@ -41,7 +41,11 @@ Services.propTypes = {
   title: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
-  services: PropTypes.arrayOf.isRequired,
+  services: PropTypes.arrayOf(PropTypes.shape({
+    href: PropTypes.string,
+    path: PropTypes.string,
+    service: PropTypes.string,
+  })).isRequired,
 };
 
 Services.defaultProps = {

@@ -25,7 +25,7 @@ const NotFountPage = () => {
             />
           </Box>
           <Link href="/">
-            <Button variant="h4" component="p" className={classes.button}>
+            <Button variant="text" color="primary" className={classes.button}>
               Volver al inicio
             </Button>
           </Link>

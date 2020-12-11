@@ -1,4 +1,4 @@
-const typesMarketing = [
+const typesApplication = [
   {
     title: 'Interacción con los clientes',
     description:
@@ -29,7 +29,7 @@ const typesMarketing = [
 export const marketingTypes = {
   backgroundPrimayLight: true,
   title: 'Beneficios del marketing digital',
-  typesApplication: typesMarketing,
+  typesApplication: typesApplication,
   image: '/assets/images/beneficios-marketing-digital.png',
   imageSizes: {
     xs: {
@@ -76,6 +76,8 @@ export const optionStrategies = {
   titlePart1: 'Qué estrategias ofrecemos para ti',
   description: 'Impulsa tu marca, no te quiedes fuera del mundo del internet',
   image: '/assets/images/opciones-de-tiendas-online.png',
+  backgroundImage: '/assets/images/figures/shopOnline/bloque3.png',
+  heightImage: 1304,
   imageSizes: {
     xs: {
       width: 288,

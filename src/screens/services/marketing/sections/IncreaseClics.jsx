@@ -26,6 +26,8 @@ const IncreaseClics = () => (
     titlePart2="a un clic de distancia"
     description="Diseñamos y desarrollamos tu tienda online de acuerdo a tus necesidades, no te quedes fuera del mundo digital"
     image="/assets/images/incrementa-ventas.png"
+    backgroundImage="/assets/images/figures/webDevelopment/bloque6.png"
+    heightImage={944}
     imageSizes={imageSizes}
   />
 );

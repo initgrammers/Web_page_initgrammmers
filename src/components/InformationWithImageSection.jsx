@@ -77,7 +77,24 @@ InformationWithImageSection.propTypes = {
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
   image: PropTypes.string.isRequired,
-  imageSizes: PropTypes.objectOf.isRequired,
+  imageSizes: PropTypes.shape({
+    xs: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    sm: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    md: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    lg: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+  }).isRequired,
   backgroundPrimayLight: PropTypes.bool,
   backgroundSecondary: PropTypes.bool,
   isImageRight: PropTypes.bool,

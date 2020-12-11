@@ -20,7 +20,7 @@ const Strategies = ({
   const classes = styles({ ...imageSizes });
 
   return (
-    <Box component="section" position="relative">
+    <Box component="section" position="relative" className={classes.background}>
       <CustomContainer>
         <Box component="article" className={classes.content}>
           <Subtitle
@@ -67,8 +67,31 @@ Strategies.propTypes = {
   titlePart3: PropTypes.string,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  imageSizes: PropTypes.objectOf.isRequired,
-  optionsShoppingOnline: PropTypes.arrayOf.isRequired,
+  imageSizes: PropTypes.shape({
+    xs: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    sm: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    md: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    lg: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+  }).isRequired,
+  optionsShoppingOnline: PropTypes.arrayOf(
+    PropTypes.shape({
+      path: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+    })
+  ).isRequired,
 };
 
 Strategies.defaultProps = {

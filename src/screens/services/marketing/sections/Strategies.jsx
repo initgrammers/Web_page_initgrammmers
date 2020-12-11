@@ -1,5 +1,5 @@
 import StrategiesSection from '../components/Strategies';
-import { optionStrategies } from '#constants/services/marketing';
+import { optionStrategies } from '#app/constants/services/Marketing';
 
 const Strategies = () => (
   <StrategiesSection
@@ -7,6 +7,8 @@ const Strategies = () => (
     titlePart2={optionStrategies.titlePart2}
     description={optionStrategies.description}
     image={optionStrategies.image}
+    backgroundImage={optionStrategies.backgroundImage}
+    heightImage={optionStrategies.heightImage}
     imageSizes={optionStrategies.imageSizes}
     optionsShoppingOnline={optionStrategies.strategies}
   />

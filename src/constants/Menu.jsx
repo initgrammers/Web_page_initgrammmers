@@ -31,7 +31,7 @@ export const data = [
     icon: <Widgets />,
   },
   {
-    id: '4',
+    id: 'ShopOnline',
     title: 'Comercio electrónico',
     subtitle: 'Venda a través de internet',
     href: '/services/ShopOnline',
@@ -45,7 +45,7 @@ export const data = [
     icon: <CastForEducation />,
   },
   {
-    id: '6',
+    id: 'Marketing',
     title: 'Marketing digital',
     subtitle: 'Posicione su marca',
     href: '/services/Marketing',

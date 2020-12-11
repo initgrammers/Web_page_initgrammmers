@@ -64,7 +64,11 @@ PartnershipModel.propTypes = {
   image: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
-  partnershipModels: PropTypes.arrayOf.isRequired,
+  partnershipModels: PropTypes.arrayOf(PropTypes.shape({
+    path: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+  })).isRequired,
 };
 
 PartnershipModel.defaultProps = {

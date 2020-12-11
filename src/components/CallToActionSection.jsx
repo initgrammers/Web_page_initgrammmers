@@ -60,7 +60,24 @@ CallToActionSection.propTypes = {
   image: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
-  imageSizes: PropTypes.objectOf.isRequired,
+  imageSizes: PropTypes.shape({
+    xs: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    sm: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    md: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    lg: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+  }).isRequired,
 };
 
 CallToActionSection.defaultProps = {

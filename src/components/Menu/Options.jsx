@@ -22,7 +22,6 @@ const Service = ({
     <Link href={href}>
       <a className={classes.service}>
         <Button
-          color="common.black"
           fullWidth
           onClick={handleDrawerOpen}
           className={clsx(classes.button, {

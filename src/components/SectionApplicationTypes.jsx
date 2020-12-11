@@ -45,9 +45,31 @@ const SectionApplicationTypes = ({
 
 SectionApplicationTypes.propTypes = {
   sectionTitle: PropTypes.string.isRequired,
-  typesApplication: PropTypes.arrayOf.isRequired,
+  typesApplication: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      description: PropTypes.string,
+    })
+  ).isRequired,
   image: PropTypes.string.isRequired,
-  imageSizes: PropTypes.objectOf.isRequired,
+  imageSizes: PropTypes.shape({
+    xs: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    sm: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    md: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    lg: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+  }).isRequired,
   backgroundPrimayLight: PropTypes.bool,
 };
 
