@@ -34,7 +34,7 @@ const CustomMenu = ({ indexMenu }) => {
 
   return (
     <>
-      <AppBar component="nav" position="sticky">
+      <AppBar component="nav" position="sticky" bgcolor="white">
         <Toolbar className={classes.main}>
           <Hidden mdUp>
             <Box className={classes.sectionLogo}>

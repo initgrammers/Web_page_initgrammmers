@@ -3,14 +3,17 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 
 const styles = (theme) => ({
   root: {
-    height: 'auto',
-    padding: theme.spacing(2),
+    height: '100vh',
+    overflow: 'scroll',
+    padding: theme.spacing(5, 2),
     [theme.breakpoints.up('sm')]: {
+      height: 'auto',
       padding: theme.spacing(5, 10),
+      overflow: 'hidden',
     },
   },
   button: {
-    background: theme.palette.primary.contrastText,
+    background: 'transparent',
     justifyContent: 'flex-start',
     border: 'none',
   },
