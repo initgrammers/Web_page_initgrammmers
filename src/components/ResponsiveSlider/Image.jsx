@@ -6,11 +6,12 @@ const Image = ({ image, label, showTitleImage, imageIsLarge }) => {
   const classes = styles({ imageIsLarge });
 
   return (
-    <Box className={classes.containerImage}>
-      <img className={classes.image} src={image} alt={label} />
-
-      {showTitleImage && <p>{label}</p>}
-    </Box>
+    <>
+      <Box className={classes.containerImage}>
+        <img className={classes.image} src={image} alt={label} />
+        {showTitleImage && <p>{label}</p>}
+      </Box>
+    </>
   );
 };
 Image.propTypes = {

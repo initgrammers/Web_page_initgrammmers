@@ -22,7 +22,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <>
-      <NextNprogress height={6} color="#a3125b" />
+      <NextNprogress height={6} color={theme.palette.primary.main} />
 
       <Head>
         <meta

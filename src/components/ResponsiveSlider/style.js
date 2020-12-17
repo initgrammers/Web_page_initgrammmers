@@ -16,6 +16,7 @@ const styles = makeStyles((theme) => ({
   containerImage: ({ imageIsLarge }) => ({
     margin: theme.spacing(0, 1),
     display: 'flex',
+    flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
