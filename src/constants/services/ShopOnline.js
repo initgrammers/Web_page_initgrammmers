@@ -1,3 +1,56 @@
+const typesApplication = [
+  {
+    title: 'Alcance global',
+    description:
+      'El comportamiento de los seres humanos se ha modificado debido a la prescencia de redes sociales y se ha convertido en un espacio donde las empresas pueden interactuar directamente con sus clientes. ',
+  },
+  {
+    title: ' Aplicación web dinámica',
+    description:
+      'Esta página web se puede conectar a una base de datos para almacenar la información para ser consultada en cualquier momento. Tiene un panel de administración CMS (sistema de gestión de contenidos) para agregar o modificar contenido, así como entradas de blog, noticias, imágenes, etc.',
+  },
+  {
+    title: 'E-commerce',
+    description:
+      'Página web para tiendas online. Permite recibir pagos desde tarjetas de crédito, PayPal, efectivo, etc. Sincronizado con la gestión de inventario y logística de envíos podrás controlar desde cualquier parte del mundo la información de los productos o servicios que tu empresa ofrece.',
+  },
+  {
+    title: 'Portal web app',
+    description:
+      'También conocido como Landing Page, consta de una página web principal con varias secciones o apartados, en donde se muestra contenido como videos, formularios, textos, información de redes sociales, imágenes, etc.',
+  },
+  {
+    title: 'Gestor de Contenidos',
+    description:
+      'Es el tipo de aplicación web pensado para tiendas online. Ofrece mayores funcionalidades, porque permite utilizar sistemas para recibir pagos desde tarjetas de crédito, PayPal, efectivo, etc. Además de sincronizarse con la gestión de inventario y logística de envíos podrás controlar desde cualquier parte del mundo la  información de los productos o servicios que tu empresa ofrece.',
+  },
+];
+
+export const benefitsTypes = {
+  backgroundPrimayLight: false,
+  title: 'Beneficios de tener una tienda en línea',
+  typesApplication: typesApplication,
+  image: '/assets/images/beneficios-marketing-digital.png',
+  imageSizes: {
+    xs: {
+      width: 414,
+      height: 414,
+    },
+    sm: {
+      width: 414,
+      height: 414,
+    },
+    md: {
+      width: 414,
+      height: 414,
+    },
+    lg: {
+      width: 504,
+      height: 504,
+    },
+  },
+};
+
 export const bannerShopOnline = {
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1607008550/LandingPage/figures/bloque1.png',

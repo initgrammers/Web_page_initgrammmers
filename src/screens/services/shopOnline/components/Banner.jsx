@@ -17,7 +17,7 @@ const Banner = ({
 }) => {
   const classes = useStyles();
   return (
-    <Box component="section" position="relative" bgcolor="primary.light">
+    <Box component="section" position="relative" bgcolor="#7aa31a0d">
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
         <Box className={classes.container}>

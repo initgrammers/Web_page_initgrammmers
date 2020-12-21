@@ -5,11 +5,11 @@ const styles = (theme) => ({
     paddingTop: theme.spacing(4),
   },
   title: {
-    color: theme.palette.primary.contrastText,
+    color: theme.palette.primary.light,
   },
   description: {
     padding: `${theme.spacing(4)}px 0`,
-    color: theme.palette.primary.contrastText,
+    color: theme.palette.common.black,
   },
   containerImage: {
     display: 'flex',
