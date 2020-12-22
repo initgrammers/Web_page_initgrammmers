@@ -9,7 +9,7 @@ const MobileApplicationTypes = () => (
     image={benefitsTypes.image}
     imageSizes={benefitsTypes.imageSizes}
     backgroundPrimayLight={benefitsTypes.backgroundPrimayLight}
-    color="red"
+    backgroundGray={benefitsTypes.backgroundGray}
   />
 );
 

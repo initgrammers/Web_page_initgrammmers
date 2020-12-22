@@ -9,6 +9,9 @@ const styles = makeStyles((theme) => ({
   backgroundPrimaryLight: {
     background: theme.palette.primary.light,
   },
+  backgroundGray: {
+    background: theme.palette.secondary.gray,
+  },
   detailsContent: {
     paddingTop: theme.spacing(6),
   },

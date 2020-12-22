@@ -9,12 +9,13 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import clsx from 'clsx';
 import styles from '../assets/styles/ApplicationType';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const useStyles = makeStyles(styles);
-function ApplicationType({ sectionTitle, typesApplication }) {
+function ApplicationType({ sectionTitle, typesApplication, backgroundGray }) {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
@@ -35,7 +36,12 @@ function ApplicationType({ sectionTitle, typesApplication }) {
   return (
     <Box className={classes.root}>
       <>
-        <Typography variant="h2" className={classes.title}>
+        <Typography
+          variant="h2"
+          className={clsx(classes.title, {
+            [classes.titleGray]: backgroundGray,
+          })}
+        >
           {sectionTitle}
         </Typography>
         <AutoPlaySwipeableViews
@@ -48,10 +54,22 @@ function ApplicationType({ sectionTitle, typesApplication }) {
         >
           {typesApplication.map((app, index) => (
             <Box key={index} component="article">
-              <Typography variant="h3" className={classes.applicationType}>
+              <Typography
+                variant="h3"
+                className={clsx(classes.applicationType, {
+                  [classes.backgroundGray]: backgroundGray,
+                })}
+              >
                 {app.title}
               </Typography>
-              <Typography variant="body1">{app.description}</Typography>
+              <Typography
+                variant="body1"
+                className={clsx({
+                  [classes.bodyGray]: backgroundGray,
+                })}
+              >
+                {app.description}
+              </Typography>
             </Box>
           ))}
         </AutoPlaySwipeableViews>
@@ -103,6 +121,10 @@ ApplicationType.propTypes = {
   sectionTitle: PropTypes.string.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   typesApplication: PropTypes.array.isRequired,
+  backgroundGray: PropTypes.bool,
 };
 
+ApplicationType.defaultProps = {
+  backgroundGray: false,
+};
 export default ApplicationType;

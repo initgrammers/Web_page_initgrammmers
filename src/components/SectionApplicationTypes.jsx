@@ -11,15 +11,15 @@ const SectionApplicationTypes = ({
   image,
   imageSizes,
   backgroundPrimayLight,
-  color,
+  backgroundGray,
 }) => {
   const classes = styles({ ...imageSizes });
   return (
     <Box
       component="section"
-      bgcolor="red"
       className={clsx(classes.mainSection, {
         [classes.backgroundPrimaryLight]: backgroundPrimayLight,
+        [classes.backgroundGray]: backgroundGray,
       })}
     >
       <Container fixed className={classes.container}>
@@ -27,6 +27,7 @@ const SectionApplicationTypes = ({
           <ApplicationType
             sectionTitle={sectionTitle}
             typesApplication={typesApplication}
+            backgroundGray={backgroundGray}
           />
         </Box>
         <Box className={classes.containerImage}>
@@ -73,12 +74,12 @@ SectionApplicationTypes.propTypes = {
     }),
   }).isRequired,
   backgroundPrimayLight: PropTypes.bool,
-  color: PropTypes.string,
+  backgroundGray: PropTypes.bool,
 };
 
 SectionApplicationTypes.defaultProps = {
   backgroundPrimayLight: false,
-  color: 'initial',
+  backgroundGray: false,
 };
 
 export default SectionApplicationTypes;

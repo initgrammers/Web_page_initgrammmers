@@ -2,9 +2,6 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core';
 
 const styles = makeStyles((theme) => ({
-  background: {
-    background: 'rgba(163, 18, 91, 0.04)',
-  },
   content: {
     display: 'flex',
     flexDirection: 'column',

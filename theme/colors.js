@@ -12,4 +12,5 @@ export const secondary = {
   light: '#A6DD27',
   contrastText: '#FFFFFF',
   fade: '#7AA31A0D',
+  gray: '#F3F5F9',
 };

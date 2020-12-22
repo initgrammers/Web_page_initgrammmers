@@ -8,8 +8,14 @@ const styles = (theme) => ({
       padding: theme.spacing(12, 0),
     },
   },
+  backgroundGray: {
+    color: theme.palette.primary.light,
+  },
   title: {
     textAlign: 'center',
+  },
+  titleGray: {
+    color: theme.palette.primary.snackBar,
   },
   applicationType: {
     textAlign: 'center',
@@ -18,6 +24,9 @@ const styles = (theme) => ({
   },
   button: {
     color: 'white',
+  },
+  bodyGray: {
+    color: theme.palette.primary.snackBar,
   },
   stepper: {
     display: 'flex',

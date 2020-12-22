@@ -21,7 +21,7 @@ const CallToActionSection = ({
   const classes = styles({ ...imageSizes });
 
   return (
-    <Box component="section" position="relative">
+    <Box component="section" position="relative" className={classes.background}>
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
         <Box component="article" className={classes.content}>

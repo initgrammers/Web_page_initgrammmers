@@ -23,7 +23,7 @@ const OptionsShopping = ({
   const classes = styles({ ...imageSizes });
 
   return (
-    <Box component="section" position="relative" className={classes.background}>
+    <Box component="section" position="relative">
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
         <Box component="article" className={classes.content}>
