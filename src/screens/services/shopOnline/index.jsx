@@ -5,16 +5,18 @@ import Questions from './sections/Questions';
 import SEO from '#Components/SEO';
 import ShopOnlineSeo from '#constants/seo/ShopOnline';
 import OptionsShopping from './sections/OptionsShopping';
+import BenefitsTypes from './sections/BenefitsTypes';
 
-const index = () => (
+const Index = () => (
   <>
     <SEO {...ShopOnlineSeo} />
     <Banner />
     <OpenShop />
+    <BenefitsTypes />
     <OptionsShopping />
     <IncreaseYourSales />
     <Questions />
   </>
 );
 
-export default index;
+export default Index;
