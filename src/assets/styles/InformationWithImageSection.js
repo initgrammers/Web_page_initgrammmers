@@ -8,6 +8,9 @@ const styles = makeStyles((theme) => ({
   backgroundSecondaryMain: {
     background: theme.palette.secondary.main,
   },
+  backgroundSecondaryFade: {
+    background: theme.palette.secondary.fade,
+  },
   container: (props) => ({
     display: 'flex',
     flexDirection: `${props.isImageRight ? 'column' : 'column-reverse'}`,

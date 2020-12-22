@@ -5,13 +5,15 @@ import Questions from './sections/Questions';
 import MarketingSEO from '#constants/seo/Marketing';
 import SEO from '#Components/SEO';
 import Strategies from './sections/Strategies';
+import ImportanceMarketing from './sections/ImportanceMarketing'
 
 const index = () => (
   <>
     <SEO {...MarketingSEO} />
     <Banner />
-    <MarketingTypes />
+    <ImportanceMarketing />
     <Strategies />
+    <MarketingTypes />
     <IncreaseClics />
     <Questions />
   </>

@@ -6,6 +6,7 @@ const Questions = () => (
     titlePart1={FAQUxUiDesign.titlePart1}
     titlePart2={FAQUxUiDesign.titlePart2}
     questions={FAQUxUiDesign.questions}
+    black
   />
 );
 

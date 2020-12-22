@@ -20,7 +20,7 @@ const Strategies = ({
   const classes = styles({ ...imageSizes });
 
   return (
-    <Box component="section" position="relative" className={classes.background}>
+    <Box component="section" position="relative">
       <CustomContainer>
         <Box component="article" className={classes.content}>
           <Subtitle

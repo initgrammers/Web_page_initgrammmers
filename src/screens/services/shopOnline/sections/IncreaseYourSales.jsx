@@ -10,6 +10,7 @@ const UnforgettableExperiences = () => (
     backgroundImage={increaseYourSalesInOneClick.backgroundImage}
     heightImage={increaseYourSalesInOneClick.heightImage}
     imageSizes={increaseYourSalesInOneClick.imageSizes}
+    backgroundColor
   />
 );
 

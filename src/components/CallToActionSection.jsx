@@ -1,6 +1,7 @@
 import { Box, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
+import clsx from 'clsx';
 import styles from '../assets/styles/CallToActionType';
 import Subtitle from '#Components/Subtitle';
 import BackgroundImage from '#Components/BackgroundImage';
@@ -17,11 +18,12 @@ const CallToActionSection = ({
   backgroundImage,
   heightImage,
   imageSizes,
+  backgroundColor,
 }) => {
   const classes = styles({ ...imageSizes });
 
   return (
-    <Box component="section" position="relative" className={classes.background}>
+    <Box component="section" position="relative" className={clsx({ [classes.colorBackgraund]: backgroundColor })}>
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
         <Box component="article" className={classes.content}>
@@ -78,6 +80,7 @@ CallToActionSection.propTypes = {
       height: PropTypes.number,
     }),
   }).isRequired,
+  backgroundColor: PropTypes.bool,
 };
 
 CallToActionSection.defaultProps = {
@@ -85,5 +88,6 @@ CallToActionSection.defaultProps = {
   titlePart3: '',
   backgroundImage: '',
   heightImage: 0,
+  backgroundColor: false,
 };
 export default CallToActionSection;

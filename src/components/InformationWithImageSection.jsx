@@ -20,6 +20,7 @@ const InformationWithImageSection = ({
   titleBlack,
   descriptionPrimaryLight,
   descriptionBlack,
+  backgroundSecondaryFade,
 }) => {
   const classes = styles({ ...imageSizes, isImageRight });
   return (
@@ -29,6 +30,7 @@ const InformationWithImageSection = ({
       className={clsx({
         [classes.backgroundPrimaryLight]: backgroundPrimayLight,
         [classes.backgroundSecondaryMain]: backgroundSecondary,
+        [classes.backgroundSecondaryFade]: backgroundSecondaryFade,
       })}
     >
       <BackgroundImage image={backgroundImage} height={heightImage} />
@@ -97,6 +99,7 @@ InformationWithImageSection.propTypes = {
   }).isRequired,
   backgroundPrimayLight: PropTypes.bool,
   backgroundSecondary: PropTypes.bool,
+  backgroundSecondaryFade: PropTypes.bool,
   isImageRight: PropTypes.bool,
   titlePrimaryMain: PropTypes.bool,
   titleBlack: PropTypes.bool,
@@ -109,6 +112,7 @@ InformationWithImageSection.defaultProps = {
   heightImage: 0,
   backgroundPrimayLight: false,
   backgroundSecondary: false,
+  backgroundSecondaryFade: false,
   isImageRight: false,
   titlePrimaryMain: false,
   titleBlack: false,

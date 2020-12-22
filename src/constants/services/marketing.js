@@ -39,7 +39,8 @@ const typesApplication = [
 ];
 
 export const marketingTypes = {
-  backgroundPrimayLight: true,
+  backgroundPrimayLight: false,
+  backgroundGray: true,
   title: 'Beneficios del marketing digital',
   typesApplication: typesApplication,
   image: '/assets/images/beneficios-marketing-digital.png',
@@ -87,7 +88,7 @@ const strategies = [
 export const optionStrategies = {
   titlePart1: 'Qué estrategias ofrecemos para ti',
   description: 'Impulsa tu marca, no te quiedes fuera del mundo del internet',
-  image: '/assets/images/opciones-de-tiendas-online.png',
+  image: '/assets/images/estrategias-marketing.png',
   backgroundImage: '/assets/images/figures/shopOnline/bloque3.png',
   heightImage: 1304,
   imageSizes: {
@@ -109,4 +110,34 @@ export const optionStrategies = {
     },
   },
   strategies,
+};
+
+export const importanceMarketing = {
+  backgroundImage: '/assets/images/figures/shopOnline/bloque2.png',
+  heightImage: 633,
+  title: 'Tu tienda abierta las 24 horas',
+  description:
+    'Lleva tus productos o servicios de los almacenes físicos a la red y nunca más vuelvas a cerrar, nuestras tiendas están disponibles 24 horas al día los 365 días del año para que no pierdas ninguna oportunidad de realizar una venta.',
+  titlePrimaryMain: true,
+  descriptionBlack: true,
+  image: '/assets/images/importancia-marketing.png',
+  imageSizes: {
+    xs: {
+      width: 288,
+      height: 288,
+    },
+    sm: {
+      width: 414,
+      height: 414,
+    },
+    md: {
+      width: 414,
+      height: 414,
+    },
+    lg: {
+      width: 504,
+      height: 504,
+    },
+  },
+  isImageRight: false,
 };
