@@ -7,7 +7,7 @@ import SliderTech from './sections/SliderTech';
 import SEO from '#Components/SEO';
 import MobileDevelopment from '#constants/seo/MobileDevelopment';
 
-const index = () => (
+const Index = () => (
   <>
     <SEO {...MobileDevelopment} />
     <Banner />
@@ -19,4 +19,4 @@ const index = () => (
   </>
 );
 
-export default index;
+export default Index;

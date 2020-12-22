@@ -4,6 +4,8 @@ export const primary = {
   light: '#E1197E',
   contrastText: '#FFFFFF',
   snackBar: '#323232',
+  fade: '#A3125B0D',
+
 };
 
 export const secondary = {

@@ -1,5 +1,6 @@
 import CallToActionSection from '#Components/CallToActionSection';
 import { increaseYourSalesInOneClick } from '#constants/services/ShopOnline';
+import theme from 'theme';
 
 const UnforgettableExperiences = () => (
   <CallToActionSection
@@ -10,7 +11,7 @@ const UnforgettableExperiences = () => (
     backgroundImage={increaseYourSalesInOneClick.backgroundImage}
     heightImage={increaseYourSalesInOneClick.heightImage}
     imageSizes={increaseYourSalesInOneClick.imageSizes}
-    backgroundColor
+    backgroundColor={theme.palette.primary.fade}
   />
 );
 

@@ -1,44 +1,37 @@
 import { Box, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import styles from '../assets/styles/CallToActionType';
+import styles from '../styles/Strategies';
 import Subtitle from '#Components/Subtitle';
-import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
-import ContactUsButton from './ContacUsButton';
+import ContactUsButton from '#Components/ContacUsButton';
 import { contactsLinks } from '#app/constants/contacts';
+import CardPartnership from '#Components/CardPartnership';
 
-const CallToActionSection = ({
+const Strategies = ({
   titlePart1,
   titlePart2,
   titlePart3,
   description,
   image,
-  backgroundImage,
-  heightImage,
   imageSizes,
-  backgroundColor,
+  optionsShoppingOnline,
 }) => {
   const classes = styles({ ...imageSizes });
 
   return (
-    <Box component="section" position="relative" bgcolor={backgroundColor}>
-      <BackgroundImage image={backgroundImage} height={heightImage} />
+    <Box component="section" position="relative">
       <CustomContainer>
         <Box component="article" className={classes.content}>
           <Subtitle
-            black
             head={titlePart1}
             emphasis={titlePart2}
             tail={titlePart3}
             align="center"
-            mb={0}
+            mb={4}
+            component="h2"
+            variant="h2"
           />
-          <Typography variant="body1" className={classes.description}>
-            {description}
-          </Typography>
-          <ContactUsButton href={contactsLinks.general} />
-
           <Box className={classes.imageStyle}>
             <Image
               quality={100}
@@ -47,20 +40,33 @@ const CallToActionSection = ({
               alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
             />
           </Box>
+          <Typography variant="body1" className={classes.description}>
+            {description}
+          </Typography>
+          <ContactUsButton color="secondary" href={contactsLinks.general} />
+          <Box className={classes.shop}>
+            {optionsShoppingOnline.map((service) => (
+              <Box key={service.title} className={classes.optionsShop}>
+                <CardPartnership
+                  image={service.path}
+                  title={service.title}
+                  description={service.description}
+                />
+              </Box>
+            ))}
+          </Box>
         </Box>
       </CustomContainer>
     </Box>
   );
 };
 
-CallToActionSection.propTypes = {
+Strategies.propTypes = {
   titlePart1: PropTypes.string.isRequired,
   titlePart2: PropTypes.string,
   titlePart3: PropTypes.string,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  backgroundImage: PropTypes.string,
-  heightImage: PropTypes.number,
   imageSizes: PropTypes.shape({
     xs: PropTypes.shape({
       width: PropTypes.number,
@@ -79,14 +85,17 @@ CallToActionSection.propTypes = {
       height: PropTypes.number,
     }),
   }).isRequired,
-  backgroundColor: PropTypes.string,
+  optionsShoppingOnline: PropTypes.arrayOf(
+    PropTypes.shape({
+      path: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+    })
+  ).isRequired,
 };
 
-CallToActionSection.defaultProps = {
+Strategies.defaultProps = {
   titlePart2: '',
   titlePart3: '',
-  backgroundImage: '',
-  heightImage: 0,
-  backgroundColor: '',
 };
-export default CallToActionSection;
+export default Strategies;

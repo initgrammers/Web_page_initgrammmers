@@ -52,7 +52,7 @@ export const data = [
     icon: <DeviceHub />,
   },
   {
-    id: '7',
+    id: 'SEO',
     title: 'SEO',
     subtitle: 'Posicionamiento en buscadores',
     href: '/services/SEO',

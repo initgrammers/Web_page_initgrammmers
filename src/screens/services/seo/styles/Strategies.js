@@ -2,6 +2,9 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core';
 
 const styles = makeStyles((theme) => ({
+  background: {
+    background: 'rgba(163, 18, 91, 0.04)',
+  },
   content: {
     display: 'flex',
     flexDirection: 'column',
@@ -22,22 +25,30 @@ const styles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(4),
     textAlign: 'center',
   },
-  button: {
-    background: theme.palette.secondary.main,
-    color: theme.palette.primary.contrastText,
-  },
+
   imageStyle: ({ xs }) => ({
-    marginTop: theme.spacing(4),
     width: xs.width,
     height: xs.height,
+    marginBottom: theme.spacing(4),
     position: 'relative',
     '&>div>img': {
       objectFit: 'contain',
     },
   }),
+
+  shop: {
+    marginTop: theme.spacing(4),
+  },
+  optionsShop: {
+    '&:nth-child(1n)': {
+      marginBottom: theme.spacing(4),
+    },
+    '&:last-child': {
+      marginBottom: 0,
+    },
+  },
   [theme.breakpoints.up('sm')]: {
     imageStyle: ({ sm }) => ({
-      marginTop: theme.spacing(5),
       width: sm.width,
       height: sm.height,
       position: 'relative',
@@ -56,7 +67,6 @@ const styles = makeStyles((theme) => ({
   },
   [theme.breakpoints.up('lg')]: {
     imageStyle: ({ lg }) => ({
-      marginTop: theme.spacing(8),
       width: lg.width,
       height: lg.height,
       position: 'relative',
@@ -64,6 +74,22 @@ const styles = makeStyles((theme) => ({
     content: {
       paddingTop: theme.spacing(8),
       paddingBottom: theme.spacing(8),
+    },
+    shop: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'space-between',
+    },
+    optionsShop: {
+      width: '320px',
+      paddingLeft: theme.spacing(2),
+      paddingRight: theme.spacing(2),
+      '&:nth-child(3)': {
+        marginBottom: 0,
+      },
+      '&:last-child': {
+        marginBottom: 0,
+      },
     },
   },
 }));
