@@ -1,3 +1,15 @@
+export const bannerWebDevelopment = {
+  backgroundImage:
+    '/assets/images/figures/webDevelopment/bloque1.png',
+  heightImage: 670,
+  titlePart1: 'Páginas Web,',
+  titlePart2: ' diseño y desarrollo de aplicaciones web ',
+  titlePart3: 'en Ecuador',
+  description: 'Bienvenidos al mundo del internet',
+  image:
+    '/assets/images/paginas-web-desarrollo-diseno-aplicaciones-web-ecuador.png',
+};
+
 const webTechnologies = [
   {
     label: 'HTML 5',
@@ -97,7 +109,7 @@ const typesApplication = [
 export const webApplicationTypes = {
   backgroundPrimayLight: true,
   title: 'Nuestros servicios',
-  typesApplication: typesApplication,
+  typesApplication,
   image: '/assets/images/tipos-aplicaciones-web.png',
   imageSizes: {
     xs: {

@@ -1,3 +1,5 @@
+import theme from 'theme';
+
 export const bannerShopOnline = {
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1607008550/LandingPage/figures/bloque1.png',
@@ -6,6 +8,7 @@ export const bannerShopOnline = {
   description: 'Vende en cualquier lugar 24-7',
   image:
     '/assets/images/figures/tienda-online-ecommerce-vende-tus-productos-en-linea.png',
+  backgroundColor: theme.palette.secondary.fade,
 };
 
 export const shopOnline24Hours = {

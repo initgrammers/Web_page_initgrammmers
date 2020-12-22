@@ -12,7 +12,7 @@ const styles = (theme) => ({
   },
   description: {
     padding: `${theme.spacing(4)}px 0`,
-    color: theme.palette.common.black,
+    color: theme.palette.primary.snackBar,
   },
   containerImage: {
     display: 'flex',
@@ -21,7 +21,7 @@ const styles = (theme) => ({
   },
   image: {
     width: 288,
-    height: 235,
+    height: 288,
     position: 'relative',
   },
   mainImage: {
@@ -32,8 +32,8 @@ const styles = (theme) => ({
       margin: `${theme.spacing(5)}px 0`,
     },
     image: {
-      width: 544,
-      height: 449,
+      width: 552,
+      height: 414,
     },
   },
   [theme.breakpoints.up('lg')]: {
@@ -50,11 +50,11 @@ const styles = (theme) => ({
     },
     containerImage: {
       flex: 5,
-      margin: `${theme.spacing(16)}px 0`,
+      margin: `${theme.spacing(8)}px 0`,
     },
     image: {
       width: 504,
-      height: 353,
+      height: 504,
     },
   },
 });

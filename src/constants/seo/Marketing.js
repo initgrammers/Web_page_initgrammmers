@@ -1,4 +1,4 @@
-const title = 'Marketing y y diseño digital Ecuador | Initgrammers';
+const title = 'Marketing y diseño digital Ecuador | Initgrammers';
 const description =
   'Marketing digital en Ecuador, páginas o sitios web, landing page, Atrae, fideliza clientes a tu marca';
 const url =

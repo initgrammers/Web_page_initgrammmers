@@ -1,14 +1,15 @@
-import MarketingBanner from '../components/Banner';
+import MarketingBanner from '#Components/Banner';
+import { bannerMarketing } from '#constants/services/marketing';
 
 const Banner = () => (
   <MarketingBanner
-    backgroundImage="/assets/images/figures/webDevelopment/bloque1.png"
-    heightImage={670}
-    titlePart1="Marketing "
-    titlePart2="y diseño digital "
-    titlePart3="en Ecuador"
-    description="Atrae, fideliza clientes a tu marca"
-    image="/assets/images/marketing-diseno-digital-ecuador.png"
+    backgroundImage={bannerMarketing.backgroundImage}
+    heightImage={bannerMarketing.heightImage}
+    titlePart1={bannerMarketing.titlePart1}
+    titlePart2={bannerMarketing.titlePart2}
+    titlePart3={bannerMarketing.titlePart3}
+    description={bannerMarketing.description}
+    image={bannerMarketing.image}
   />
 );
 

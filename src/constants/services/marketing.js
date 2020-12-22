@@ -1,3 +1,15 @@
+export const bannerMarketing = {
+  backgroundImage:
+    '/assets/images/figures/webDevelopment/bloque1.png',
+  heightImage: 670,
+  titlePart1: 'Marketing ',
+  titlePart2: 'y diseño digital ',
+  titlePart3: 'en Ecuador',
+  description: 'Atrae, fideliza clientes a tu marca',
+  image:
+    '/assets/images/marketing-diseno-digital-ecuador.png',
+};
+
 const typesApplication = [
   {
     title: 'Interacción con los clientes',
