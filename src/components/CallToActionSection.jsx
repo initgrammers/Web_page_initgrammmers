@@ -6,7 +6,7 @@ import Subtitle from '#Components/Subtitle';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import ContactUsButton from './ContacUsButton';
-import { contactsLinks } from '#app/constants/contacts';
+import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 
 const CallToActionSection = ({
   titlePart1,
@@ -37,7 +37,10 @@ const CallToActionSection = ({
           <Typography variant="body1" className={classes.description}>
             {description}
           </Typography>
-          <ContactUsButton href={contactsLinks.general} />
+          <ContactUsButton
+            label={textContactUsButton.whatsapp}
+            href={contactsLinks.general}
+          />
 
           <Box className={classes.imageStyle}>
             <Image
