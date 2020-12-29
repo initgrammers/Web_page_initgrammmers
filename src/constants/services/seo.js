@@ -1,14 +1,9 @@
-import theme from "theme";
-
 export const bannerSEO = {
-  backgroundImage:
-    '/assets/images/figures/webDevelopment/bloque1.png',
+  backgroundImage: '/assets/images/figures/webDevelopment/bloque1.png',
   heightImage: 670,
   title: 'SEO / Posicionamiento en motores de búsqueda',
   description: 'Posiciona tu página web en los primeros resultados de Google',
-  image:
-    '/assets/images/posicionamiento-motores-busqueda.png',
-  backgroundColor: theme.palette.primary.fade,
+  image: '/assets/images/posicionamiento-motores-busqueda.png',
 };
 
 const typesApplication = [
@@ -43,7 +38,7 @@ export const seoBenefitsTypes = {
   backgroundPrimayLight: false,
   backgroundGray: true,
   title: 'Beneficios de implementar SEO',
-  typesApplication: typesApplication,
+  typesApplication,
   image: '/assets/images/beneficios-seo.png',
   imageSizes: {
     xs: {
