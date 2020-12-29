@@ -12,7 +12,7 @@ const LinkIcon = ({ icon, href, size }) => {
         alignItems="center"
         width={size}
         height={size}
-        borderRadius={10}
+        borderRadius={50}
         bgcolor={palette.primary.contrastText}
         ml={2}
       >
