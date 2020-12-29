@@ -86,6 +86,21 @@ const styles = (theme) => ({
   iconText: {
     marginLeft: theme.spacing(2),
   },
+
+  socialMedia: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 50,
+    background: theme.palette.primary.contrastText,
+    marginLeft: theme.spacing(2),
+    '&:hover': {
+      color: '#584b4b',
+      transition: 'all .05s ease-in-out',
+      width: '26px',
+      height: '26px',
+    },
+  },
 });
 
 styles.propTypes = {

@@ -1,21 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Link, useTheme } from '@material-ui/core';
+import { Box, Link, makeStyles } from '@material-ui/core';
+import styles from '../styles';
+
+const useStyles = makeStyles(styles);
 
 const LinkIcon = ({ icon, href, size }) => {
-  const { palette } = useTheme();
+  const classes = useStyles();
   return (
     <Link href={href} target="_blank" rel="noopener">
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        width={size}
-        height={size}
-        borderRadius={50}
-        bgcolor={palette.primary.contrastText}
-        ml={2}
-      >
+      <Box width={size} height={size} className={classes.socialMedia}>
         {icon}
       </Box>
     </Link>
