@@ -97,8 +97,8 @@ const styles = (theme) => ({
     '&:hover': {
       color: '#584b4b',
       transition: 'all .05s ease-in-out',
-      width: '26px',
-      height: '26px',
+      width: '32px',
+      height: '32px',
     },
   },
 });

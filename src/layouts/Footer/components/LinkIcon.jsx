@@ -22,7 +22,7 @@ LinkIcon.propTypes = {
 };
 LinkIcon.defaultProps = {
   icon: <></>,
-  size: 24,
+  size: 30,
   href: '#',
 };
 export default LinkIcon;
