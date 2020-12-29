@@ -8,7 +8,7 @@ import {
 import Image from 'next/image';
 import ContactUsButton from '#Components/ContacUsButton';
 import styles from '../styles/Banner';
-import { contactsLinks } from '#app/constants/contacts';
+import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 import { bannerMobileDevelopment } from '#constants/services/MobileDevelopment';
 
 const useStyles = makeStyles(styles);
@@ -41,7 +41,11 @@ const Banner = () => {
           >
             {bannerMobileDevelopment.description}
           </Typography>
-          <ContactUsButton color="secondary" href={contactsLinks.mobileApps} />
+          <ContactUsButton
+            color="secondary"
+            label={textContactUsButton.whatsapp}
+            href={contactsLinks.mobileApps}
+          />
         </Box>
         <Box className={classes.containerImage}>
           <Box component="figure" className={classes.image}>
