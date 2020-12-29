@@ -4,7 +4,7 @@ import LinkContactUs from './components/LinkContactUs';
 import styles from './styles';
 import { contactsLinks } from '#app/constants/contacts';
 import CustomContainer from '#Components/CustomContainer';
-import Calculator from './Calculator';
+import Calculator from '#Components/Calculator';
 
 const useStyles = makeStyles(styles);
 
@@ -37,7 +37,8 @@ const ContactUs = () => {
                 component="p"
                 className={classes.descriptionContact}
               >
-                Puedes cotizar tu sitio web o aplicación móvil con nuestra calculadora.
+                Puedes cotizar tu sitio web o aplicación móvil con nuestra
+                calculadora.
               </Typography>
               <Calculator />
             </Box>

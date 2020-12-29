@@ -8,6 +8,7 @@ import CustomLink from '#Components/CustomLink';
 import styles from './styles/MenuDesktop';
 import ContactUsButton from '#Components/ContacUsButton';
 import { contactsLinks } from '#app/constants/contacts';
+import Calculator from '#Components/Calculator';
 
 const useStyles = makeStyles(styles);
 
@@ -43,22 +44,15 @@ const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
         {menu.map((item, key) => (
           <Link key={key} href={item.href}>
             <a className={classes.button}>
-              <Typography variant="body2">{item.label}</Typography>
+              <Typography variant="body2" align="center">
+                {item.label}
+              </Typography>
             </a>
           </Link>
         ))}
       </Box>
       <Box>
-        <ContactUsButton
-          href={contactsLinks.consulting}
-          label="Agenda una ascesoría"
-          variant="text"
-          mr={2}
-        >
-          <Typography className={classes.services} variant="body2">
-            Agenda una ascesoría
-          </Typography>
-        </ContactUsButton>
+        <Calculator />
 
         <Hidden mdDown>
           <ContactUsButton href={contactsLinks.general} />
