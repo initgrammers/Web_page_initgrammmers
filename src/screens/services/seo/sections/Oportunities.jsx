@@ -1,6 +1,6 @@
 import React from 'react';
+import { useTheme } from '@material-ui/core';
 import CallToActionSection from '#Components/CallToActionSection';
-import theme from 'theme';
 
 const imageSizes = {
   xs: {
@@ -21,17 +21,20 @@ const imageSizes = {
   },
 };
 
-const IncreaseClics = () => (
-  <CallToActionSection
-    titlePart1="Posiciona tu página web, "
-    titlePart2="y genera más oportunidades de negocio"
-    description="Genera más tráfico a tu web, impulsa tu marca y conviertete en un referente del mercado."
-    image="/assets/images/oportunidades-para-negocio.png"
-    backgroundImage="/assets/images/figures/webDevelopment/bloque6.png"
-    heightImage={944}
-    imageSizes={imageSizes}
-    backgroundColor={theme.palette.secondary.fade}
-  />
-);
+const IncreaseClics = () => {
+  const { palette } = useTheme();
+  return (
+    <CallToActionSection
+      titlePart1="Posiciona tu página web, "
+      titlePart2="y genera más oportunidades de negocio"
+      description="Genera más tráfico a tu web, impulsa tu marca y conviertete en un referente del mercado."
+      image="/assets/images/oportunidades-para-negocio.png"
+      backgroundImage="/assets/images/figures/webDevelopment/bloque6.png"
+      heightImage={944}
+      imageSizes={imageSizes}
+      backgroundColor={palette.secondary.fade}
+    />
+  );
+};
 
 export default IncreaseClics;
