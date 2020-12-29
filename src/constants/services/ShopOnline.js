@@ -1,4 +1,3 @@
-import theme from 'theme';
 const typesApplication = [
   {
     title: 'Alcance global',
@@ -31,7 +30,7 @@ export const benefitsTypes = {
   backgroundPrimayLight: false,
   backgroundGray: true,
   title: 'Beneficios de tener una tienda en línea',
-  typesApplication: typesApplication,
+  typesApplication,
   image: '/assets/images/beneficios-marketing-digital.png',
   imageSizes: {
     xs: {
@@ -61,7 +60,6 @@ export const bannerShopOnline = {
   description: 'Vende en cualquier lugar 24-7',
   image:
     '/assets/images/figures/tienda-online-ecommerce-vende-tus-productos-en-linea.png',
-  backgroundColor: theme.palette.secondary.fade,
 };
 
 export const shopOnline24Hours = {

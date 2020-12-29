@@ -17,6 +17,7 @@ const Banner = ({
   description,
   image,
   backgroundColor,
+  hrefContactUs,
 }) => {
   const classes = useStyles();
   return (
@@ -40,7 +41,7 @@ const Banner = ({
             <ContactUsButton
               color="secondary"
               label={textContactUsButton.whatsapp}
-              href={contactsLinks.webPages}
+              href={hrefContactUs}
             />
           </Box>
           <Box className={classes.containerImage}>
@@ -70,6 +71,7 @@ Banner.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
   backgroundColor: PropTypes.string,
+  hrefContactUs: PropTypes.string,
 };
 
 Banner.defaultProps = {
@@ -81,6 +83,7 @@ Banner.defaultProps = {
   description: '',
   image: '',
   backgroundColor: '',
+  hrefContactUs: `${contactsLinks.general}`,
 };
 
 export default Banner;
