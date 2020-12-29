@@ -14,3 +14,8 @@ const contactsLinks = {
 };
 
 export { contactsLinks };
+
+export const textContactUsButton = {
+  whatsapp: 'Escríbenos al Whatsapp',
+  email: 'Contáctanos por correo',
+};

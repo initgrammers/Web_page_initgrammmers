@@ -7,7 +7,7 @@ import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import CardPartnership from '#Components/CardPartnership';
 import ContactUsButton from '#Components/ContacUsButton';
-import { contactsLinks } from '#app/constants/contacts';
+import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 
 const useStyles = makeStyles(styles);
 
@@ -39,7 +39,10 @@ const PartnershipModel = ({
           <Typography variant="body1" className={classes.description}>
             {description}
           </Typography>
-          <ContactUsButton label="Escríbenos" href={contactsLinks.writeUs} />
+          <ContactUsButton
+            label={textContactUsButton.email}
+            href={contactsLinks.writeUs}
+          />
 
           <Box className={classes.services}>
             {partnershipModels.map((service) => (
@@ -64,11 +67,13 @@ PartnershipModel.propTypes = {
   image: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
-  partnershipModels: PropTypes.arrayOf(PropTypes.shape({
-    path: PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string,
-  })).isRequired,
+  partnershipModels: PropTypes.arrayOf(
+    PropTypes.shape({
+      path: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+    })
+  ).isRequired,
 };
 
 PartnershipModel.defaultProps = {
