@@ -6,7 +6,7 @@ import Subtitle from '#Components/Subtitle';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import ContactUsButton from '#Components/ContacUsButton';
-import { contactsLinks } from '#app/constants/contacts';
+import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 import CardPartnership from '#Components/CardPartnership';
 
 const OptionsShopping = ({
@@ -47,7 +47,10 @@ const OptionsShopping = ({
           <Typography variant="body1" className={classes.description}>
             {description}
           </Typography>
-          <ContactUsButton href={contactsLinks.general} />
+          <ContactUsButton
+            label={textContactUsButton.whatsapp}
+            href={contactsLinks.shopEcommercePage}
+          />
 
           <Box className={classes.shop}>
             {optionsShoppingOnline.map((service) => (
@@ -92,11 +95,13 @@ OptionsShopping.propTypes = {
       height: PropTypes.number,
     }),
   }).isRequired,
-  optionsShoppingOnline: PropTypes.arrayOf(PropTypes.shape({
-    path: PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string,
-  })).isRequired,
+  optionsShoppingOnline: PropTypes.arrayOf(
+    PropTypes.shape({
+      path: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+    })
+  ).isRequired,
 };
 
 OptionsShopping.defaultProps = {

@@ -32,7 +32,10 @@ const Banner = ({
             >
               {description}
             </Typography>
-            <ContactUsButton color="secondary" href={contactsLinks.landing} />
+            <ContactUsButton
+              color="secondary"
+              href={contactsLinks.shopEcommercePage}
+            />
           </Box>
           <Box className={classes.containerImage}>
             <Box component="figure" className={classes.image}>
