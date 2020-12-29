@@ -1,5 +1,6 @@
 import SEOBanner from '#Components/Banner';
 import { bannerSEO } from '#constants/services/seo';
+import { contactsLinks } from '#app/constants/contacts';
 
 const Banner = () => (
   <SEOBanner
@@ -9,6 +10,7 @@ const Banner = () => (
     description={bannerSEO.description}
     image={bannerSEO.image}
     backgroundColor={bannerSEO.backgroundColor}
+    hrefContactUs={contactsLinks.seoPage}
   />
 );
 
