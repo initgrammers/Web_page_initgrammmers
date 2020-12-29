@@ -1,5 +1,6 @@
 import WebDevelopmentBanner from '#Components/Banner';
 import { bannerWebDevelopment } from '#constants/services/webDevelopment';
+import { contactsLinks } from '#app/constants/contacts';
 
 const Banner = () => (
   <WebDevelopmentBanner
@@ -10,6 +11,7 @@ const Banner = () => (
     titlePart3={bannerWebDevelopment.titlePart3}
     description={bannerWebDevelopment.description}
     image={bannerWebDevelopment.image}
+    hrefContactUs={contactsLinks.webPages}
   />
 );
 
