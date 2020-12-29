@@ -5,7 +5,7 @@ import styles from '../styles/Strategies';
 import Subtitle from '#Components/Subtitle';
 import CustomContainer from '#Components/CustomContainer';
 import ContactUsButton from '#Components/ContacUsButton';
-import { contactsLinks } from '#app/constants/contacts';
+import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 import CardPartnership from '#Components/CardPartnership';
 
 const Strategies = ({
@@ -43,7 +43,11 @@ const Strategies = ({
           <Typography variant="body1" className={classes.description}>
             {description}
           </Typography>
-          <ContactUsButton color="secondary" href={contactsLinks.general} />
+          <ContactUsButton
+            color="secondary"
+            label={textContactUsButton.whatsapp}
+            href={contactsLinks.marketingDigitalPage}
+          />
           <Box className={classes.shop}>
             {optionsShoppingOnline.map((service) => (
               <Box key={service.title} className={classes.optionsShop}>

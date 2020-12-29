@@ -5,6 +5,7 @@ export const contactsLinks = {
   mobileApps: 'https://wa.link/lvbu4z',
   uiuxPages: 'https://wa.link/3l5he6',
   shopEcommercePage: 'https://wa.link/vqos7m',
+  marketingDigitalPage: 'https://wa.link/1fn4d2',
   consulting: 'https://wa.link/epqpye',
   teamMessage: 'https://wa.link/uc2mmv',
   writeUs:

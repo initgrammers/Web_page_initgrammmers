@@ -1,5 +1,6 @@
 import MarketingBanner from '#Components/Banner';
 import { bannerMarketing } from '#constants/services/marketing';
+import { contactsLinks } from '#app/constants/contacts';
 
 const Banner = () => (
   <MarketingBanner
@@ -10,6 +11,7 @@ const Banner = () => (
     titlePart3={bannerMarketing.titlePart3}
     description={bannerMarketing.description}
     image={bannerMarketing.image}
+    hrefContactUs={contactsLinks.marketingDigitalPage}
   />
 );
 
