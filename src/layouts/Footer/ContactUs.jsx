@@ -40,7 +40,7 @@ const ContactUs = () => {
                 Puedes cotizar tu sitio web o aplicación móvil con nuestra
                 calculadora.
               </Typography>
-              <Calculator />
+              <Calculator typeButton="contained" />
             </Box>
           </Grid>
           <Grid item md={5} sm={12}>

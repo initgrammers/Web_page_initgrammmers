@@ -1,5 +1,6 @@
 import { Button, makeStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 import styles from './styles';
 
 const useStyles = makeStyles(styles);
@@ -38,7 +39,9 @@ const Calculator = ({ typeButton }) => {
     >
       <Button
         variant={typeButton}
-        className={classes.calculator}
+        className={clsx(classes.calculator, {
+          [classes.whiteText]: typeButton === 'contained',
+        })}
         color="primary"
       >
         Cotiza con nuestra calculadora online

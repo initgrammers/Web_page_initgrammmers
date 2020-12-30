@@ -12,6 +12,10 @@ const styles = (theme) => ({
       marginRight: theme.spacing(2),
     },
   },
+
+  whiteText: {
+    color: theme.palette.primary.contrastText,
+  },
 });
 
 styles.propTypes = {
