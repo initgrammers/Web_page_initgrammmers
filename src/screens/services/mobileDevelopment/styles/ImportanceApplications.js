@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 
 const styles = (theme) => ({
+  background: {
+    background: theme.palette.secondary.fade,
+  },
   root: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),

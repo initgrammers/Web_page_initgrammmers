@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
-const styles = (theme, heightAux) => ({
+const styles = (heightAux) => ({
   containerBackgroundImage: {
-    width: `100%`,
+    width: '100%',
     height: heightAux,
     position: 'absolute',
     top: 0,
