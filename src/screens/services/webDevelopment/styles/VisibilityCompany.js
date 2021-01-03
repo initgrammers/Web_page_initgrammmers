@@ -6,10 +6,15 @@ const styles = (theme) => ({
   },
   title: {
     color: theme.palette.primary.contrastText,
+    textAlign: 'center',
+    [theme.breakpoints.up('lg')]: {
+      textAlign: 'left',
+    },
   },
   description: {
     padding: `${theme.spacing(4)}px 0`,
     color: theme.palette.common.black,
+    textAlign: 'justify',
   },
   containerImage: {
     display: 'flex',

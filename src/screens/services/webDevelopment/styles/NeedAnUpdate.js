@@ -43,7 +43,7 @@ const styles = (theme) => ({
   },
 
   title: {
-    color: theme.palette.primary.main,
+    color: theme.palette.primary.light,
     textAlign: 'center',
   },
   description: {
