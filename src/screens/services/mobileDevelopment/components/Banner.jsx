@@ -35,7 +35,7 @@ const Banner = () => {
             {bannerMobileDevelopment.titlePart3}
           </Typography>
           <Typography
-            variant="h2"
+            variant="h3"
             component="p"
             className={classes.description}
           >
