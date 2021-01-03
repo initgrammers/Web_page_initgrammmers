@@ -35,7 +35,7 @@ export const innovateDesign = {
     },
   },
   isImageRight: true,
-  backgroundPrimayLight: true,
+  backgroundPrimaryLight: true,
 };
 
 export const whatIsUxUiDesign = {
@@ -121,7 +121,8 @@ export const uniqueDesignAdaptedToYourBrand = {
     },
   },
   isImageRight: false,
-  backgroundSecondary: true,
+  backgroundPrimaryFade: true,
+  titlePrimaryMain: true,
   descriptionBlack: true,
 };
 

@@ -8,7 +8,7 @@ const MobileApplicationTypes = () => (
     typesApplication={benefitsTypes.typesApplication}
     image={benefitsTypes.image}
     imageSizes={benefitsTypes.imageSizes}
-    backgroundPrimayLight={benefitsTypes.backgroundPrimayLight}
+    backgroundPrimaryLight={benefitsTypes.backgroundPrimaryLight}
     backgroundGray={benefitsTypes.backgroundGray}
   />
 );

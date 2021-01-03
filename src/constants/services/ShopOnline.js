@@ -27,7 +27,7 @@ const typesApplication = [
 ];
 
 export const benefitsTypes = {
-  backgroundPrimayLight: false,
+  backgroundPrimaryLight: false,
   backgroundGray: true,
   title: 'Beneficios de tener una tienda en línea',
   typesApplication,

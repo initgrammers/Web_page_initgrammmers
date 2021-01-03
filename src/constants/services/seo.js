@@ -35,7 +35,7 @@ const typesApplication = [
 ];
 
 export const seoBenefitsTypes = {
-  backgroundPrimayLight: false,
+  backgroundPrimaryLight: false,
   backgroundGray: true,
   title: 'Beneficios de implementar SEO',
   typesApplication,

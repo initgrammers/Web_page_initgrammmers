@@ -8,7 +8,7 @@ const MobileApplicationTypes = () => (
     typesApplication={webApplicationTypes.typesApplication}
     image={webApplicationTypes.image}
     imageSizes={webApplicationTypes.imageSizes}
-    backgroundPrimayLight={webApplicationTypes.backgroundPrimayLight}
+    backgroundPrimaryLight={webApplicationTypes.backgroundPrimaryLight}
   />
 );
 

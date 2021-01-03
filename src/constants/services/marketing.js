@@ -1,13 +1,11 @@
 export const bannerMarketing = {
-  backgroundImage:
-    '/assets/images/figures/webDevelopment/bloque1.png',
+  backgroundImage: '/assets/images/figures/webDevelopment/bloque1.png',
   heightImage: 670,
   titlePart1: 'Marketing ',
   titlePart2: 'y diseño digital ',
   titlePart3: 'en Ecuador',
   description: 'Atrae, fideliza clientes a tu marca',
-  image:
-    '/assets/images/marketing-diseno-digital-ecuador.png',
+  image: '/assets/images/marketing-diseno-digital-ecuador.png',
 };
 
 const typesApplication = [
@@ -39,7 +37,7 @@ const typesApplication = [
 ];
 
 export const marketingTypes = {
-  backgroundPrimayLight: false,
+  backgroundPrimaryLight: false,
   backgroundGray: true,
   title: 'Beneficios del marketing digital',
   typesApplication: typesApplication,

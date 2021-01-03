@@ -11,6 +11,10 @@ const styles = makeStyles((theme) => ({
   backgroundSecondaryFade: {
     background: theme.palette.secondary.fade,
   },
+  backgroundPrimaryFade: {
+    background: theme.palette.primary.fade,
+  },
+
   container: (props) => ({
     display: 'flex',
     flexDirection: `${props.isImageRight ? 'column' : 'column-reverse'}`,
@@ -78,7 +82,7 @@ const styles = makeStyles((theme) => ({
     container: (props) => ({
       display: 'flex',
       flexDirection: `${props.isImageRight ? 'row' : 'row-reverse'}`,
-      padding: `0 !important`,
+      padding: '0 !important',
     }),
     detailsContent: (props) => ({
       flex: 5,

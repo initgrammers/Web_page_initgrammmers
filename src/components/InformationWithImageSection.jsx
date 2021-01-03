@@ -13,14 +13,15 @@ const InformationWithImageSection = ({
   heightImage,
   image,
   imageSizes,
-  backgroundPrimayLight,
+  backgroundPrimaryLight,
+  backgroundPrimaryFade,
   backgroundSecondary,
+  backgroundSecondaryFade,
   isImageRight,
   titlePrimaryMain,
   titleBlack,
   descriptionPrimaryLight,
   descriptionBlack,
-  backgroundSecondaryFade,
 }) => {
   const classes = styles({ ...imageSizes, isImageRight });
   return (
@@ -28,7 +29,8 @@ const InformationWithImageSection = ({
       component="section"
       position="relative"
       className={clsx({
-        [classes.backgroundPrimaryLight]: backgroundPrimayLight,
+        [classes.backgroundPrimaryLight]: backgroundPrimaryLight,
+        [classes.backgroundPrimaryFade]: backgroundPrimaryFade,
         [classes.backgroundSecondaryMain]: backgroundSecondary,
         [classes.backgroundSecondaryFade]: backgroundSecondaryFade,
       })}
@@ -97,7 +99,8 @@ InformationWithImageSection.propTypes = {
       height: PropTypes.number,
     }),
   }).isRequired,
-  backgroundPrimayLight: PropTypes.bool,
+  backgroundPrimaryLight: PropTypes.bool,
+  backgroundPrimaryFade: PropTypes.bool,
   backgroundSecondary: PropTypes.bool,
   backgroundSecondaryFade: PropTypes.bool,
   isImageRight: PropTypes.bool,
@@ -110,7 +113,8 @@ InformationWithImageSection.propTypes = {
 InformationWithImageSection.defaultProps = {
   backgroundImage: '',
   heightImage: 0,
-  backgroundPrimayLight: false,
+  backgroundPrimaryLight: false,
+  backgroundPrimaryFade: false,
   backgroundSecondary: false,
   backgroundSecondaryFade: false,
   isImageRight: false,

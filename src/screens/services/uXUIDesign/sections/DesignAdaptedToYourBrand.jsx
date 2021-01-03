@@ -8,7 +8,8 @@ const DesignAdaptedToYourBrand = () => (
     image={uniqueDesignAdaptedToYourBrand.image}
     imageSizes={uniqueDesignAdaptedToYourBrand.imageSizes}
     isImageRight={uniqueDesignAdaptedToYourBrand.isImageRight}
-    backgroundSecondary={uniqueDesignAdaptedToYourBrand.backgroundSecondary}
+    backgroundPrimaryFade={uniqueDesignAdaptedToYourBrand.backgroundPrimaryFade}
+    titlePrimaryMain={uniqueDesignAdaptedToYourBrand.titlePrimaryMain}
     descriptionBlack={uniqueDesignAdaptedToYourBrand.descriptionBlack}
   />
 );

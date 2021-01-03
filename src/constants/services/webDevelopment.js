@@ -1,6 +1,5 @@
 export const bannerWebDevelopment = {
-  backgroundImage:
-    '/assets/images/figures/webDevelopment/bloque1.png',
+  backgroundImage: '/assets/images/figures/webDevelopment/bloque1.png',
   heightImage: 670,
   titlePart1: 'Páginas Web,',
   titlePart2: ' diseño y desarrollo de aplicaciones web ',
@@ -107,7 +106,7 @@ const typesApplication = [
 ];
 
 export const webApplicationTypes = {
-  backgroundPrimayLight: true,
+  backgroundPrimaryLight: true,
   title: 'Nuestros servicios',
   typesApplication,
   image: '/assets/images/tipos-aplicaciones-web.png',

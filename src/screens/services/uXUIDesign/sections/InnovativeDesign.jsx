@@ -10,7 +10,7 @@ const InnovativeDesign = () => (
     image={innovateDesign.image}
     imageSizes={innovateDesign.imageSizes}
     isImageRight={innovateDesign.isImageRight}
-    backgroundPrimayLight={innovateDesign.backgroundPrimayLight}
+    backgroundPrimaryLight={innovateDesign.backgroundPrimaryLight}
   />
 );
 

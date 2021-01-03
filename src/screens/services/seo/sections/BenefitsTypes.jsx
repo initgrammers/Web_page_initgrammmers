@@ -8,7 +8,7 @@ const SEOBenefitsTypes = () => (
     typesApplication={seoBenefitsTypes.typesApplication}
     image={seoBenefitsTypes.image}
     imageSizes={seoBenefitsTypes.imageSizes}
-    backgroundPrimayLight={seoBenefitsTypes.backgroundPrimayLight}
+    backgroundPrimaryLight={seoBenefitsTypes.backgroundPrimaryLight}
     backgroundGray={seoBenefitsTypes.backgroundGray}
   />
 );
