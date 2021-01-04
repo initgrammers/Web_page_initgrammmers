@@ -6,7 +6,7 @@ import theme from '../theme/index';
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="es">
+      <Html lang="es" dir="ltr">
         <Head>
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta name="theme-color" content={theme.palette.primary.main} />

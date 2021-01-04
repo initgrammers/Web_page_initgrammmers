@@ -1,13 +1,11 @@
 import FAQ from '#Components/FAQ';
-import { questions } from '#constants/services/MobileDevelopment';
+import { FAQUxUiDesign } from '#constants/services/UxUiDesign';
 
 const Questions = () => (
   <FAQ
-    titlePart1="Preguntas"
-    titlePart2="frecuentes"
-    questions={questions}
-    backgroundImage="/assets/images/figures/landingPage/bloque5.png"
-    heightImage={471}
+    titlePart1={FAQUxUiDesign.titlePart1}
+    titlePart2={FAQUxUiDesign.titlePart2}
+    questions={FAQUxUiDesign.questions}
   />
 );
 

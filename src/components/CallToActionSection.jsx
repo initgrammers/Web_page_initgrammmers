@@ -1,12 +1,12 @@
-import { makeStyles, Box, Button, Typography, Link } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from '../assets/styles/CallToActionType';
 import Subtitle from '#Components/Subtitle';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
-
-const useStyles = makeStyles(styles);
+import ContactUsButton from './ContacUsButton';
+import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 
 const CallToActionSection = ({
   titlePart1,
@@ -16,11 +16,13 @@ const CallToActionSection = ({
   image,
   backgroundImage,
   heightImage,
+  imageSizes,
+  backgroundColor,
 }) => {
-  const classes = useStyles();
+  const classes = styles({ ...imageSizes });
 
   return (
-    <Box component="section" position="relative">
+    <Box component="section" position="relative" bgcolor={backgroundColor}>
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
         <Box component="article" className={classes.content}>
@@ -30,19 +32,23 @@ const CallToActionSection = ({
             emphasis={titlePart2}
             tail={titlePart3}
             align="center"
-            mb={4}
+            mb={0}
           />
           <Typography variant="body1" className={classes.description}>
             {description}
           </Typography>
-          <Link target="_blank" href="https://wa.link/3vbh7y">
-            <Button variant="contained" className={classes.button}>
-              CONTÁCTANOS
-            </Button>
-          </Link>
+          <ContactUsButton
+            label={textContactUsButton.whatsapp}
+            href={contactsLinks.general}
+          />
 
-          <Box component="figure" className={classes.image}>
-            <Image src={image} width={500} height={550} />
+          <Box className={classes.imageStyle}>
+            <Image
+              quality={100}
+              src={image}
+              layout="fill"
+              alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
+            />
           </Box>
         </Box>
       </CustomContainer>
@@ -58,6 +64,25 @@ CallToActionSection.propTypes = {
   image: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
+  imageSizes: PropTypes.shape({
+    xs: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    sm: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    md: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    lg: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+  }).isRequired,
+  backgroundColor: PropTypes.string,
 };
 
 CallToActionSection.defaultProps = {
@@ -65,5 +90,6 @@ CallToActionSection.defaultProps = {
   titlePart3: '',
   backgroundImage: '',
   heightImage: 0,
+  backgroundColor: '',
 };
 export default CallToActionSection;

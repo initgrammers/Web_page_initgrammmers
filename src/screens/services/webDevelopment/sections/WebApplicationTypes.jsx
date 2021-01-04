@@ -1,13 +1,14 @@
 import React from 'react';
-// import SectionApplicationTypes from '#Components/SectionApplicationTypes';
-import SectionApplicationTypes from '../components/SectionApplicationTypes';
-import { typesApplication } from '#app/constants/services/WebDevelopment';
+import SectionApplicationTypes from '#Components/SectionApplicationTypes';
+import { webApplicationTypes } from '#constants/services/webDevelopment';
 
 const MobileApplicationTypes = () => (
   <SectionApplicationTypes
-    sectionTitle="Nuestros servicios"
-    typesApplication={typesApplication}
-    image="/assets/images/tipos-aplicaciones-web.png"
+    sectionTitle={webApplicationTypes.title}
+    typesApplication={webApplicationTypes.typesApplication}
+    image={webApplicationTypes.image}
+    imageSizes={webApplicationTypes.imageSizes}
+    backgroundPrimaryLight={webApplicationTypes.backgroundPrimaryLight}
   />
 );
 

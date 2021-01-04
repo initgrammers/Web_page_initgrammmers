@@ -11,7 +11,13 @@ const styles = (theme) => ({
     fontSize: 18,
   },
   contactUs: {
-    padding: theme.spacing(8, 0),
+    padding: theme.spacing(4, 0),
+    [theme.breakpoints.up('sm')]: {
+      padding: theme.spacing(5, 0),
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: theme.spacing(8, 0),
+    },
   },
   gridContainer: {
     color: theme.palette.primary.contrastText,
@@ -23,13 +29,18 @@ const styles = (theme) => ({
   },
   text: {
     marginBottom: theme.spacing(2),
+    fontWeight: '400 !important',
+  },
+  section: {
+    marginBottom: theme.spacing(2),
+    fontWeight: 'bold',
   },
   gridContact: {
     maxWidth: 620,
   },
   descriptionContact: {
     marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(9),
+    marginBottom: theme.spacing(3),
   },
   contact: {
     marginTop: theme.spacing(6),
@@ -64,6 +75,30 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.up('lg')]: {
       margin: 0,
+    },
+  },
+
+  linkIcon: {
+    display: 'flex',
+    color: 'white',
+    marginBottom: theme.spacing(2),
+  },
+  iconText: {
+    marginLeft: theme.spacing(2),
+  },
+
+  socialMedia: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 50,
+    background: theme.palette.primary.contrastText,
+    marginLeft: theme.spacing(2),
+    '&:hover': {
+      color: '#584b4b',
+      transition: 'all .05s ease-in-out',
+      width: '32px',
+      height: '32px',
     },
   },
 });

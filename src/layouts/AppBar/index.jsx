@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
-import CustomMenu from '#Components/Menu';
+import Menu from '../../components/Menu/Index';
 
-const Navigation = ({ index }) => <CustomMenu indexMenu={index} />;
+const Navigation = ({ index }) => (
+  <>
+    <Menu indexMenu={index} />
+  </>
+);
 Navigation.propTypes = {
   index: PropTypes.string,
 };

@@ -1,11 +1,8 @@
 import PropTypes from 'prop-types';
 
 const styles = (theme) => ({
-  backgroundSection: {
-    marginBottom: theme.spacing(8),
-  },
   content: {
-    paddingTop: theme.spacing(12),
+    paddingTop: theme.spacing(4),
   },
   description: {
     padding: `${theme.spacing(4)}px 0`,
@@ -24,15 +21,22 @@ const styles = (theme) => ({
     position: 'relative',
     bottom: `-${theme.spacing(8)}px`,
   },
+  bottomSection: {
+    background: theme.palette.primary.light,
+    height: theme.spacing(8),
+  },
   [theme.breakpoints.up('sm')]: {
     image: {
       width: 412,
       height: 490,
     },
+    content: {
+      paddingTop: theme.spacing(8),
+    },
   },
   [theme.breakpoints.up('lg')]: {
     content: {
-      paddingTop: theme.spacing(8),
+      paddingTop: theme.spacing(0),
       display: 'flex',
     },
     contentInformation: {

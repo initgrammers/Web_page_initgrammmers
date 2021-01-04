@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import NextNprogress from 'nextjs-progressbar';
 import theme from '../theme/index';
 import '../src/assets/css/globals.css';
 
-// Here you have ( children ) => children, but nextJS return children into field not on object
 const NoLayout = ({ children }) => children;
 
 const MyApp = ({ Component, pageProps }) => {
@@ -22,10 +22,12 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <>
+      <NextNprogress height={6} color={theme.palette.primary.main} />
+
       <Head>
         <meta
           name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+          content="minimum-scale=1, initial-scale=1, width=device-width, viewport-fit=cover, shrink-to-fit=no"
         />
         <link
           rel="preload"
@@ -51,7 +53,12 @@ const MyApp = ({ Component, pageProps }) => {
           as="font"
           crossOrigin=""
         />
-        <link href="/fonts/Raleway/fonts.css" rel="stylesheet" />
+        <link
+          rel="stylesheet"
+          href="/fonts/Raleway/fonts.css"
+          media="print"
+          onLoad="this.media='all'"
+        />
       </Head>
       <ThemeProvider theme={theme}>
         <Layout {...layoutProps}>

@@ -2,25 +2,20 @@ import PropTypes from 'prop-types';
 
 const styles = (theme) => ({
   mainSection: {
-    background: theme.palette.primary.light,
+    background: theme.palette.primary.contrastText,
     marginBottom: theme.spacing(8),
   },
   detailsContent: {
     paddingTop: theme.spacing(8),
   },
   title: {
-    color: theme.palette.primary.contrastText,
+    color: theme.palette.primary.light,
     '& span': {
       color: theme.palette.secondary.light,
     },
   },
   description: {
     padding: `${theme.spacing(4)}px 0`,
-    color: theme.palette.primary.contrastText,
-  },
-  actionButton: {
-    color: theme.palette.primary.contrastText,
-    background: theme.palette.secondary.main,
   },
   containerImage: {
     display: 'flex',
@@ -70,10 +65,11 @@ const styles = (theme) => ({
     image: {
       width: 504,
       height: 679,
+      marginTop: `-${theme.spacing(2)}px`,
     },
   },
   containerBackgroundImage: {
-    width: `100%`,
+    width: '100%',
     height: 791,
     position: 'absolute',
     bottom: `-${theme.spacing(8)}px`,

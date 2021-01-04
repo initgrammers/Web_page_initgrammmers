@@ -1,16 +1,20 @@
 import PropTypes from 'prop-types';
+import { fade } from '@material-ui/core/styles/colorManipulator';
 
 const styles = (theme) => ({
   root: {
-    height: 'auto',
-    padding: theme.spacing(2),
+    height: '100vh',
+    overflow: 'scroll',
+    padding: theme.spacing(5, 2),
     [theme.breakpoints.up('sm')]: {
-      height: 392,
+      height: 'auto',
       padding: theme.spacing(5, 10),
+      overflow: 'hidden',
     },
   },
   button: {
-    background: theme.palette.primary.contrastText,
+    background: 'transparent',
+    justifyContent: 'flex-start',
     border: 'none',
   },
   title: {
@@ -18,6 +22,16 @@ const styles = (theme) => ({
   },
   service: {
     display: 'flex',
+    transition: theme.transitions.create('background', {
+      duration: 1,
+    }),
+    '&:active': {
+      background: fade(theme.palette.primary.main, 0.1),
+      '&>div': {
+        color: 'black',
+        background: fade(theme.palette.primary.main, 0),
+      },
+    },
     '&:hover': {
       color: theme.palette.primary.main,
       '&>svg': {
@@ -26,14 +40,16 @@ const styles = (theme) => ({
     },
   },
   descriptionService: {
+    textAlign: 'left',
+    textTransform: 'capitalize',
     paddingLeft: theme.spacing(2),
     display: 'flex',
     flexDirection: 'column',
   },
   selected: {
     color: theme.palette.primary.main,
-    padding: `${theme.spacing(0.5)}px 0`,
     border: 0,
+    background: 'rgba(0,0,0,0.1)',
     borderRadius: 5,
   },
 });

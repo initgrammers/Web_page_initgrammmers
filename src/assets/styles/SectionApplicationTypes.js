@@ -1,9 +1,16 @@
 import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core';
 
-const styles = (theme) => ({
+const styles = makeStyles((theme) => ({
   mainSection: {
     background: theme.palette.secondary.main,
     marginBottom: theme.spacing(8),
+  },
+  backgroundPrimaryLight: {
+    background: theme.palette.primary.light,
+  },
+  backgroundGray: {
+    background: theme.palette.secondary.gray,
   },
   detailsContent: {
     paddingTop: theme.spacing(6),
@@ -21,32 +28,35 @@ const styles = (theme) => ({
     overflow: 'hidden',
     bottom: `-${theme.spacing(8)}px`,
     left: theme.spacing(2),
+    marginTop: `-${theme.spacing(4)}px`,
   },
-  image: {
-    width: 504,
-    height: 607,
+
+  image: ({ xs }) => ({
+    width: xs.width,
+    height: xs.height,
     position: 'relative',
-  },
+  }),
+
   [theme.breakpoints.up('sm')]: {
     containerImage: {
       position: 'relative',
       display: 'flex',
       justifyContent: 'center',
     },
-    image: {
-      width: 547,
-      height: 659,
-    },
+    image: ({ sm }) => ({
+      width: sm.width,
+      height: sm.height,
+    }),
   },
   [theme.breakpoints.up('md')]: {
-    container: {
-      padding: `0 ${theme.spacing(23)}px`,
-    },
+    image: ({ md }) => ({
+      width: md.width,
+      height: md.height,
+    }),
   },
   [theme.breakpoints.up('lg')]: {
     container: {
       display: 'flex',
-      padding: `0 ${theme.spacing(13)}px`,
     },
     detailsContent: {
       flex: 5,
@@ -57,13 +67,14 @@ const styles = (theme) => ({
     },
     containerImage: {
       flex: 5,
+      alignItems: 'flex-end',
     },
-    image: {
-      width: 504,
-      height: 607,
-    },
+    image: ({ lg }) => ({
+      width: lg.width,
+      height: lg.height,
+    }),
   },
-});
+}));
 
 styles.propTypes = {
   theme: PropTypes.shape(),

@@ -3,12 +3,13 @@ import {
   Box,
   Container,
   Typography,
-  Button,
   Hidden,
-  Link,
 } from '@material-ui/core';
 import Image from 'next/image';
+import ContactUsButton from '#Components/ContacUsButton';
 import styles from '../styles/Banner';
+import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
+import { bannerMobileDevelopment } from '#constants/services/MobileDevelopment';
 
 const useStyles = makeStyles(styles);
 
@@ -18,38 +19,42 @@ const Banner = () => {
     <Box component="section" className={classes.mainSection}>
       <Hidden mdDown>
         <Box className={classes.containerBackgroundImage}>
-          <Image src="/assets/images/figures/bloque1.png" layout="fill" />
+          <Image
+            quality={100}
+            src={bannerMobileDevelopment.backgroundImage}
+            layout="fill"
+            alt="Initgrammer"
+          />
         </Box>
       </Hidden>
       <Container fixed className={classes.container}>
         <Box component="article" className={classes.detailsContent}>
           <Typography variant="h1" className={classes.title}>
-            Desarrollo y diseño de aplicaciones
-            <span> móviles </span>
-            iOS y Android
+            {bannerMobileDevelopment.titlePar1}
+            {bannerMobileDevelopment.titlePart2}
+            {bannerMobileDevelopment.titlePart3}
           </Typography>
           <Typography
-            variant="h2"
+            variant="h3"
             component="p"
             className={classes.description}
           >
-            Tus productos en el bolsillo de tus clientes
+            {bannerMobileDevelopment.description}
           </Typography>
-          <Box>
-            <Link target="_blank" href="https://wa.link/3vbh7y">
-              <Button variant="contained" className={classes.actionButton}>
-                Contáctanos
-              </Button>
-            </Link>
-          </Box>
+          <ContactUsButton
+            color="secondary"
+            label={textContactUsButton.whatsapp}
+            href={contactsLinks.mobileApps}
+          />
         </Box>
         <Box className={classes.containerImage}>
           <Box component="figure" className={classes.image}>
             <Image
               quality={100}
               priority
-              src="/assets/images/diseno-desarrollo-aplicaciones-moviles-ios-android-ecuador.png"
+              src={bannerMobileDevelopment.image}
               layout="fill"
+              alt={`${bannerMobileDevelopment.titlePar1} ${bannerMobileDevelopment.titlePart2}${bannerMobileDevelopment.titlePart3}`}
             />
           </Box>
         </Box>

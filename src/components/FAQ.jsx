@@ -15,6 +15,7 @@ const FAQ = ({
   questions,
   backgroundImage,
   heightImage,
+  black,
 }) => {
   const classes = useStyles();
 
@@ -24,12 +25,14 @@ const FAQ = ({
       <CustomContainer>
         <Box component="article" className={classes.content}>
           <Subtitle
-            black
+            black={black}
             head={titlePart1}
             emphasis={titlePart2}
             tail={titlePart3}
             align="center"
-            mb={4}
+            mb={2}
+            component="h2"
+            variant="h3"
           />
           {questions.map(({ id, title, details }) => (
             <Accordion key={id} title={title} details={details} />
@@ -47,6 +50,7 @@ FAQ.propTypes = {
   questions: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
+  black: PropTypes.bool,
 };
 
 FAQ.defaultProps = {
@@ -54,5 +58,6 @@ FAQ.defaultProps = {
   titlePart3: '',
   backgroundImage: '',
   heightImage: 0,
+  black: false,
 };
 export default FAQ;

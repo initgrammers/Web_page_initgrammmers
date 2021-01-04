@@ -1,25 +1,22 @@
-import {
-  makeStyles,
-  Button,
-  Box,
-  Typography,
-  Hidden,
-  Link as LinkMaterial,
-} from '@material-ui/core';
+import { makeStyles, Button, Box, Typography, Hidden } from '@material-ui/core';
 import Link from 'next/link';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
+import PropTypes from 'prop-types';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
 import CustomLink from '#Components/CustomLink';
 import styles from './styles/MenuDesktop';
+import ContactUsButton from '#Components/ContacUsButton';
+import { contactsLinks } from '#app/constants/contacts';
+import Calculator from '#Components/Calculator';
 
 const useStyles = makeStyles(styles);
 
 const menu = [
-  { label: 'Portafolio', href: '#' },
-  { label: '¿Quiénes somos?', href: '#' },
-  { label: 'Blog', href: '#' },
-  { label: 'Contacto', href: '#' },
+  { label: 'Portafolio', href: '/404' },
+  { label: '¿Quiénes somos?', href: '/404' },
+  { label: 'Blog', href: '/404' },
+  { label: 'Contacto', href: '/404' },
 ];
 
 const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
@@ -33,7 +30,6 @@ const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
       </CustomLink>
       <Box className={classes.sectionMenu}>
         <Button
-          aria-label="Servicios"
           aria-controls="menu-servicios"
           aria-haspopup="true"
           onClick={handleDrawerOpen}
@@ -48,38 +44,28 @@ const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
         {menu.map((item, key) => (
           <Link key={key} href={item.href}>
             <a className={classes.button}>
-              <Typography variant="body2">{item.label}</Typography>
+              <Typography variant="body2" align="center">
+                {item.label}
+              </Typography>
             </a>
           </Link>
         ))}
       </Box>
       <Box>
-        <Button
-          aria-label="Servicios"
-          aria-controls="menu-servicios"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <Typography className={classes.services} variant="body2">
-            Agenda una ascesoría
-          </Typography>
-        </Button>
+        <Calculator />
+
         <Hidden mdDown>
-          <LinkMaterial target="_blank" href="https://wa.link/3vbh7y">
-            <Button
-              aria-label="Contácatanos"
-              aria-haspopup="true"
-              color="primary"
-              variant="contained"
-              className={classes.contactUs}
-            >
-              Contáctanos
-            </Button>
-          </LinkMaterial>
+          <ContactUsButton href={contactsLinks.general} />
         </Hidden>
       </Box>
     </Box>
   );
 };
-
+MenuDesktop.propTypes = {
+  showServices: PropTypes.bool,
+  handleDrawerOpen: PropTypes.func.isRequired,
+};
+MenuDesktop.defaultProps = {
+  showServices: false,
+};
 export default MenuDesktop;

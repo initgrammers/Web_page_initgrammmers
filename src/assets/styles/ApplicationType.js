@@ -4,17 +4,18 @@ const styles = (theme) => ({
   root: {
     color: theme.palette.primary.contrastText,
     [theme.breakpoints.up('lg')]: {
-      width: 536,
+      width: 504,
+      padding: theme.spacing(12, 0),
     },
   },
-  swipeable: {
-    minHeight: 334,
-    [theme.breakpoints.up('lg')]: {
-      minHeight: 268,
-    },
+  backgroundGray: {
+    color: theme.palette.primary.light,
   },
   title: {
     textAlign: 'center',
+  },
+  titleGray: {
+    color: theme.palette.primary.snackBar,
   },
   applicationType: {
     textAlign: 'center',
@@ -23,6 +24,9 @@ const styles = (theme) => ({
   },
   button: {
     color: 'white',
+  },
+  bodyGray: {
+    color: theme.palette.primary.snackBar,
   },
   stepper: {
     display: 'flex',

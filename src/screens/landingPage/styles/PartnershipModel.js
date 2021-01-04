@@ -35,8 +35,15 @@ const styles = (theme) => ({
     '&:nth-child(1n)': {
       marginBottom: theme.spacing(4),
     },
+    '&:last-child': {
+      marginBottom: 0,
+    },
   },
   [theme.breakpoints.up('sm')]: {
+    content: {
+      paddingTop: theme.spacing(5),
+      paddingBottom: theme.spacing(5),
+    },
     image: {
       width: 552,
       height: 525,
@@ -48,6 +55,10 @@ const styles = (theme) => ({
     },
   },
   [theme.breakpoints.up('lg')]: {
+    content: {
+      paddingTop: theme.spacing(8),
+      paddingBottom: theme.spacing(8),
+    },
     image: {
       width: 608,
       height: 577,
@@ -58,6 +69,11 @@ const styles = (theme) => ({
       display: 'flex',
       justifyContent: 'space-between',
       width: `100%`,
+    },
+    modelPartnership: {
+      '&:nth-child(1n)': {
+        marginBottom: 0,
+      },
     },
   },
 });

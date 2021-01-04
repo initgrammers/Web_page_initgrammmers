@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Container from './Container';
 import Image from './Image';
 
-const Slide = ({ data, step }) => {
+const Slide = ({ data, step, showTitleImage, imageIsLarge }) => {
   const lengthData = data.length;
   const [index, setIndex] = useState({
     from: 0,
@@ -32,9 +32,16 @@ const Slide = ({ data, step }) => {
 
   const arrayData = [];
   const limitDown = index.from > index.to ? index.to : index.from;
+  const islimitUp = lengthData - 1 === index.to;
 
-  for (let i = limitDown; i < limitDown + step; i += 1) {
-    arrayData.push(i);
+  if (islimitUp) {
+    for (let i = index.to - step + 1; i <= index.to; i += 1) {
+      arrayData.push(i);
+    }
+  } else {
+    for (let i = limitDown; i < limitDown + step; i += 1) {
+      arrayData.push(i);
+    }
   }
 
   const renderListSlide = (items) =>
@@ -45,16 +52,21 @@ const Slide = ({ data, step }) => {
             key={_index}
             image={data[_index].image}
             label={data[_index].label}
+            showTitleImage={showTitleImage}
+            imageIsLarge={imageIsLarge}
           />
         )
     );
 
   return (
-    <>
-      <Container onNextStep={onNextStep} onPrevStep={onPrevStep}>
-        {renderListSlide(arrayData)}
-      </Container>
-    </>
+    <Container
+      onNextStep={onNextStep}
+      onPrevStep={onPrevStep}
+      disableLeft={index.from === 0}
+      disableRight={islimitUp}
+    >
+      {renderListSlide(arrayData)}
+    </Container>
   );
 };
 Slide.propTypes = {
@@ -62,11 +74,15 @@ Slide.propTypes = {
     PropTypes.shape({ image: PropTypes.string, label: PropTypes.string })
   ),
   step: PropTypes.number,
+  showTitleImage: PropTypes.bool,
+  imageIsLarge: PropTypes.bool,
 };
 
 Slide.defaultProps = {
   data: [],
   step: 2,
+  showTitleImage: true,
+  imageIsLarge: false,
 };
 
 export default Slide;

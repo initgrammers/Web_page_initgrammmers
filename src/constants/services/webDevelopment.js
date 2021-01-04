@@ -1,34 +1,51 @@
-export const WebTechnologies = [
+export const bannerWebDevelopment = {
+  backgroundImage: '/assets/images/figures/webDevelopment/bloque1.png',
+  heightImage: 670,
+  titlePart1: 'Páginas Web,',
+  titlePart2: ' diseño y desarrollo de aplicaciones web ',
+  titlePart3: 'en Ecuador',
+  description: 'Bienvenidos al mundo del internet',
+  image:
+    '/assets/images/paginas-web-desarrollo-diseno-aplicaciones-web-ecuador.png',
+};
+
+const webTechnologies = [
   {
-    label: 'HTML.5',
-    image: '/assets/svg/html-5.svg',
+    label: 'HTML 5',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844070/servicios/diseno-ux-ui/html-5.svg',
   },
   {
     label: 'Wordpress',
-    image: '/assets/svg/wordpress.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844070/servicios/diseno-ux-ui/wordpress.svg',
   },
   {
     label: 'CSS',
-    image: '/assets/svg/css-3.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844084/servicios/diseno-ux-ui/css-3.svg',
   },
   {
     label: 'Firebase',
-    image: '/assets/svg/firebase-1.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844100/servicios/diseno-ux-ui/firebase.svg',
   },
   {
     label: 'Angular',
-    image: '/assets/svg/angular-icon-1.svg',
-  },
-  {
-    label: 'iOS',
-    image: '/assets/svg/apple.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844121/servicios/diseno-ux-ui/angular.svg',
   },
   {
     label: 'Next.js',
-    image: '/assets/svg/next-js.svg',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844120/servicios/diseno-ux-ui/next-js.svg',
   },
 ];
 
+export const sliderWebTechnologies = {
+  title: 'Tecnologías con las que trabajamos para el desarrollo web',
+  technologies: webTechnologies,
+};
 export const questions = [
   {
     id: 0,
@@ -60,30 +77,55 @@ export const questions = [
   },
 ];
 
-export const typesApplication = [
+const typesApplication = [
   {
     title: 'Aplicación web estática',
     description:
-      'Este tipo de aplicación muestra información específica y está planificada para que se realicen los menores cambios posibles. Por lo general se desarrollan en HTML, CSS y JavaScript, y pueden integrar contenido como videos, imágenes animadas, sliders, mapas, etc. Son ideales para proyectos, portafolios e información de tipo estático, lo que permite reducir la cantidad de recursos como tiempo y dinero. ',
+      'Página web que muestra información específica y está planificada para que se realicen los menores cambios posibles. Pueden integrar contenido como videos, animaciones, sliders, mapas. Ideales para mostrar informació estática y reduce la cantidad de recursos como tiempo y dinero.',
   },
   {
     title: ' Aplicación web dinámica',
     description:
-      'Ofrecen una mayor versatilidad para los usuarios, integran una amplia gama de funcionalidades, adaptándose a las necesidades de los clientes. Tiene la ventaja de poder conectarse a una base de datos donde almacena la información que puede ser consultada en cualquier momento.  Pueden ser gestionadas por cualquier persona debido a que cuenta con un panel de administración denominado CMS (sistema de gestión de contenidos), que permite agregar o modificar contenido, así como entradas de blog, noticias, imágenes, etc.',
+      'Esta página web se puede conectar a una base de datos para almacenar la información para ser consultada en cualquier momento. Tiene un panel de administración CMS (sistema de gestión de contenidos) para agregar o modificar contenido, así como entradas de blog, noticias, imágenes, etc.',
   },
   {
     title: 'E-commerce',
     description:
-      'Es el tipo de aplicación web pensado para tiendas online. Ofrece mayores funcionalidades, porque permite utilizar sistemas para recibir pagos desde tarjetas de crédito, PayPal, efectivo, etc. Además de sincronizarse con la gestión de inventario y logística de envíos podrás controlar desde cualquier parte del mundo la  información de los productos o servicios que tu empresa ofrece.',
+      'Página web para tiendas online. Permite recibir pagos desde tarjetas de crédito, PayPal, efectivo, etc. Sincronizado con la gestión de inventario y logística de envíos podrás controlar desde cualquier parte del mundo la información de los productos o servicios que tu empresa ofrece.',
   },
   {
     title: 'Portal web app',
     description:
-      'También conocido como Landing Page, consta de una página principal con varias secciones o apartados, en donde se muestra todo el contenido de la misma. Dicho contenido puede albergar videos, formularios, textos, información de redes sociales, imágenes, etc.',
+      'También conocido como Landing Page, consta de una página web principal con varias secciones o apartados, en donde se muestra contenido como videos, formularios, textos, información de redes sociales, imágenes, etc.',
   },
   {
-    title: 'Aplicación web con “Gestor de Contenidos”',
+    title: 'Gestor de Contenidos',
     description:
       'Es el tipo de aplicación web pensado para tiendas online. Ofrece mayores funcionalidades, porque permite utilizar sistemas para recibir pagos desde tarjetas de crédito, PayPal, efectivo, etc. Además de sincronizarse con la gestión de inventario y logística de envíos podrás controlar desde cualquier parte del mundo la  información de los productos o servicios que tu empresa ofrece.',
   },
 ];
+
+export const webApplicationTypes = {
+  backgroundPrimaryLight: true,
+  title: 'Nuestros servicios',
+  typesApplication,
+  image: '/assets/images/tipos-aplicaciones-web.png',
+  imageSizes: {
+    xs: {
+      width: 610,
+      height: 438,
+    },
+    sm: {
+      width: 412,
+      height: 296,
+    },
+    md: {
+      width: 412,
+      height: 296,
+    },
+    lg: {
+      width: 504,
+      height: 362,
+    },
+  },
+};
