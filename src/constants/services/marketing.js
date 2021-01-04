@@ -40,7 +40,7 @@ export const marketingTypes = {
   backgroundPrimaryLight: false,
   backgroundGray: true,
   title: 'Beneficios del marketing digital',
-  typesApplication: typesApplication,
+  typesApplication,
   image: '/assets/images/beneficios-marketing-digital.png',
   imageSizes: {
     xs: {
@@ -113,9 +113,9 @@ export const optionStrategies = {
 export const importanceMarketing = {
   backgroundImage: '/assets/images/figures/shopOnline/bloque2.png',
   heightImage: 633,
-  title: 'Tu tienda abierta las 24 horas',
+  title: '¿ Por qué el marketing digtial es importante para mi empresa ?',
   description:
-    'Lleva tus productos o servicios de los almacenes físicos a la red y nunca más vuelvas a cerrar, nuestras tiendas están disponibles 24 horas al día los 365 días del año para que no pierdas ninguna oportunidad de realizar una venta.',
+    'En la actualidad, las redes sociales y el internet han pasado a formar parte de nuestro diario vivir, no solo para diversión, entretenimiento, trabajo, sino también para realizar negocios, es por ello que tener una buena presencia en internet posicionará tu marca sobre las demás, aumentando tu visibilidad, y a través de ello incrementar tus ventas. Para ello es necesario que cuentes con una buena estrategia de marketing con el fin de identificar las acciones a realizar.',
   titlePrimaryMain: true,
   descriptionBlack: true,
   image: '/assets/images/importancia-marketing.png',
