@@ -49,9 +49,6 @@ const styles = makeStyles((theme) => ({
     }),
   },
   [theme.breakpoints.up('md')]: {
-    container: {
-      padding: `0 ${theme.spacing(23)}px`,
-    },
     image: ({ md }) => ({
       width: md.width,
       height: md.height,
@@ -60,7 +57,6 @@ const styles = makeStyles((theme) => ({
   [theme.breakpoints.up('lg')]: {
     container: {
       display: 'flex',
-      padding: `0 ${theme.spacing(13)}px`,
     },
     detailsContent: {
       flex: 5,

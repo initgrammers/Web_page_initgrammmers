@@ -27,7 +27,8 @@ const typesApplication = [
 ];
 
 export const benefitsTypes = {
-  backgroundPrimaryLight: false,
+  backgroundImage: '/assets/images/figures/shopOnline/bloque3.png',
+  heightImage: 614,
   backgroundGray: true,
   title: 'Beneficios de tener una tienda en línea',
   typesApplication,
@@ -97,7 +98,7 @@ export const increaseYourSalesInOneClick = {
   description:
     ' Diseñamos y desarrollamos tu tienda online de acuerdo a tus necesidades, no te quedes fuera del mundo digital ',
   image: '/assets/images/incrementa-tus-ventas-con-tiendas-online.png',
-  backgroundImage: '/assets/images/figures/shopOnline/bloque4.png',
+  backgroundImage: '/assets/images/figures/shopOnline/bloque5.png',
   heightImage: 1024,
   imageSizes: {
     xs: {
@@ -151,8 +152,8 @@ export const optionsShopOnline = {
   description:
     'Te ofrecemos varias opciones para que empieces a vender de forma online, e incrementes tus ganancias',
   image: '/assets/images/opciones-de-tiendas-online.png',
-  backgroundImage: '/assets/images/figures/shopOnline/bloque3.png',
-  heightImage: 1304,
+  backgroundImage: '/assets/images/figures/shopOnline/bloque4.png',
+  heightImage: 1328,
   imageSizes: {
     xs: {
       width: 288,
