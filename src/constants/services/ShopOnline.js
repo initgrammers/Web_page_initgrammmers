@@ -31,7 +31,7 @@ export const benefitsTypes = {
   backgroundGray: true,
   title: 'Beneficios de tener una tienda en línea',
   typesApplication,
-  image: '/assets/images/beneficios-marketing-digital.png',
+  image: '/assets/images/beneficios-tiendas-en-linea-ecommerce.png',
   imageSizes: {
     xs: {
       width: 414,
