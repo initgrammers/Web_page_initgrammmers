@@ -53,9 +53,8 @@ export const benefitsTypes = {
 };
 
 export const bannerShopOnline = {
-  backgroundImage:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1607008550/LandingPage/figures/bloque1.png',
-  heightImage: 672,
+  backgroundImage: '/assets/images/figures/shopOnline/bloque1.png',
+  heightImage: 660,
   title: 'Crear tienda online:  vende tus productos en línea',
   description: 'Vende en cualquier lugar 24-7',
   image:
