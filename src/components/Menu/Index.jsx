@@ -18,7 +18,6 @@ import LogoInitgrammers from '#svg/LogoInitgrammers';
 import MenuDesktop from './MenuDesktop';
 import styles from '../../assets/styles/Menu';
 import CustomLink from '#Components/CustomLink';
-import Calculator from '#Components/Calculator';
 
 const useStyles = makeStyles(styles);
 
