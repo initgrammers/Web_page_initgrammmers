@@ -87,8 +87,8 @@ export const optionStrategies = {
   titlePart1: 'Qué estrategias ofrecemos para ti',
   description: 'Impulsa tu marca, no te quiedes fuera del mundo del internet',
   image: '/assets/images/estrategias-marketing.png',
-  backgroundImage: '/assets/images/figures/shopOnline/bloque3.png',
-  heightImage: 1304,
+  backgroundImage: '/assets/images/figures/digitalMarketing/bloque3.png',
+  heightImage: 1246,
   imageSizes: {
     xs: {
       width: 288,

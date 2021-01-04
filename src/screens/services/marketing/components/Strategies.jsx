@@ -5,6 +5,7 @@ import styles from '../styles/Strategies';
 import Subtitle from '#Components/Subtitle';
 import CustomContainer from '#Components/CustomContainer';
 import ContactUsButton from '#Components/ContacUsButton';
+import BackgroundImage from '#Components/BackgroundImage';
 import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 import CardPartnership from '#Components/CardPartnership';
 
@@ -16,11 +17,14 @@ const Strategies = ({
   image,
   imageSizes,
   optionsShoppingOnline,
+  backgroundImage,
+  heightImage,
 }) => {
   const classes = styles({ ...imageSizes });
 
   return (
     <Box component="section" position="relative">
+      <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
         <Box component="article" className={classes.content}>
           <Subtitle
@@ -66,6 +70,8 @@ const Strategies = ({
 };
 
 Strategies.propTypes = {
+  backgroundImage: PropTypes.string,
+  heightImage: PropTypes.number,
   titlePart1: PropTypes.string.isRequired,
   titlePart2: PropTypes.string,
   titlePart3: PropTypes.string,
@@ -99,6 +105,8 @@ Strategies.propTypes = {
 };
 
 Strategies.defaultProps = {
+  backgroundImage: '',
+  heightImage: 0,
   titlePart2: '',
   titlePart3: '',
 };
