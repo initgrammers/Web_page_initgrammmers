@@ -8,7 +8,6 @@ import CustomLink from '#Components/CustomLink';
 import styles from './styles/MenuDesktop';
 import ContactUsButton from '#Components/ContacUsButton';
 import { contactsLinks } from '#app/constants/contacts';
-import Calculator from '#Components/Calculator';
 
 const useStyles = makeStyles(styles);
 
@@ -52,8 +51,6 @@ const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
         ))}
       </Box>
       <Box>
-        <Calculator implementation="js" />
-
         <Hidden mdDown>
           <ContactUsButton href={contactsLinks.general} />
         </Hidden>

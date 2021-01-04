@@ -4,6 +4,7 @@ import LinkContactUs from './components/LinkContactUs';
 import styles from './styles';
 import { contactsLinks } from '#app/constants/contacts';
 import CustomContainer from '#Components/CustomContainer';
+import Calculator from '#Components/Calculator';
 
 const useStyles = makeStyles(styles);
 
@@ -31,6 +32,15 @@ const ContactUs = () => {
                 label="Escríbenos"
                 href={contactsLinks.writeUs}
               />
+              <Typography
+                variant="h6"
+                component="p"
+                className={classes.descriptionContact}
+              >
+                Puedes cotizar tu sitio web o aplicación móvil con nuestra
+                calculadora.
+              </Typography>
+              <Calculator typeButton="contained" />
             </Box>
           </Grid>
           <Grid item md={5} sm={12}>
