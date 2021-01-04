@@ -3,9 +3,9 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 
 const styles = (theme) => ({
   root: {
-    height: '100vh',
+    height: '90vh',
     overflow: 'scroll',
-    padding: theme.spacing(5, 2),
+    padding: theme.spacing(2, 2),
     [theme.breakpoints.up('sm')]: {
       height: 'auto',
       padding: theme.spacing(5, 10),

@@ -18,7 +18,6 @@ import LogoInitgrammers from '#svg/LogoInitgrammers';
 import MenuDesktop from './MenuDesktop';
 import styles from '../../assets/styles/Menu';
 import CustomLink from '#Components/CustomLink';
-import Calculator from '#Components/Calculator';
 
 const useStyles = makeStyles(styles);
 
@@ -64,11 +63,6 @@ const CustomMenu = ({ indexMenu }) => {
             />
           </Hidden>
         </Toolbar>
-        <Hidden mdUp>
-          <Box className={classes.calculator}>
-            <Calculator typeButton="contained" />
-          </Box>
-        </Hidden>
 
         <Fade timeout={800} in={showNav} className={classes.fade}>
           <Box bgcolor="white">
