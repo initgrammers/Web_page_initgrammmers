@@ -37,7 +37,8 @@ const typesApplication = [
 ];
 
 export const marketingTypes = {
-  backgroundPrimaryLight: false,
+  backgroundImage: '/assets/images/figures/digitalMarketing/bloque4.png',
+  heightImage: 578,
   backgroundGray: true,
   title: 'Beneficios del marketing digital',
   typesApplication,

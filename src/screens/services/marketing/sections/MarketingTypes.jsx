@@ -4,6 +4,8 @@ import { marketingTypes } from '#app/constants/services/marketing';
 
 const MobileApplicationTypes = () => (
   <SectionApplicationTypes
+    backgroundImage={marketingTypes.backgroundImage}
+    heightImage={marketingTypes.heightImage}
     sectionTitle={marketingTypes.title}
     typesApplication={marketingTypes.typesApplication}
     image={marketingTypes.image}
