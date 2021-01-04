@@ -1,6 +1,6 @@
 export const bannerMarketing = {
-  backgroundImage: '/assets/images/figures/webDevelopment/bloque1.png',
-  heightImage: 670,
+  backgroundImage: '/assets/images/figures/digitalMarketing/bloque1.png',
+  heightImage: 664,
   titlePart1: 'Marketing ',
   titlePart2: 'y diseño digital ',
   titlePart3: 'en Ecuador',
@@ -111,8 +111,8 @@ export const optionStrategies = {
 };
 
 export const importanceMarketing = {
-  backgroundImage: '/assets/images/figures/shopOnline/bloque2.png',
-  heightImage: 633,
+  backgroundImage: '/assets/images/figures/digitalMarketing/bloque2.png',
+  heightImage: 632,
   title: '¿ Por qué el marketing digtial es importante para mi empresa ?',
   description:
     'En la actualidad, las redes sociales y el internet han pasado a formar parte de nuestro diario vivir, no solo para diversión, entretenimiento, trabajo, sino también para realizar negocios, es por ello que tener una buena presencia en internet posicionará tu marca sobre las demás, aumentando tu visibilidad, y a través de ello incrementar tus ventas. Para ello es necesario que cuentes con una buena estrategia de marketing con el fin de identificar las acciones a realizar.',
