@@ -15,6 +15,7 @@ const Banner = () => {
       image={bannerSEO.image}
       backgroundColor={palette.primary.fade}
       hrefContactUs={contactsLinks.seoPage}
+      buttonColor={bannerSEO.buttonColor}
     />
   );
 };

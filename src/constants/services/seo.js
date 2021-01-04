@@ -1,9 +1,10 @@
 export const bannerSEO = {
-  backgroundImage: '/assets/images/figures/webDevelopment/bloque1.png',
-  heightImage: 670,
+  backgroundImage: '/assets/images/figures/shopOnline/bloque1.png',
+  heightImage: 660,
   title: 'SEO / Posicionamiento en motores de búsqueda',
   description: 'Posiciona tu página web en los primeros resultados de Google',
   image: '/assets/images/posicionamiento-motores-busqueda.png',
+  buttonColor: 'primary',
 };
 
 const typesApplication = [

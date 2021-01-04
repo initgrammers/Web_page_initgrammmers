@@ -17,6 +17,7 @@ const Banner = ({
   description,
   image,
   backgroundColor,
+  buttonColor,
   hrefContactUs,
 }) => {
   const classes = useStyles();
@@ -39,7 +40,7 @@ const Banner = ({
               {description}
             </Typography>
             <ContactUsButton
-              color="secondary"
+              color={buttonColor}
               label={textContactUsButton.whatsapp}
               href={hrefContactUs}
             />
@@ -71,6 +72,7 @@ Banner.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
   backgroundColor: PropTypes.string,
+  buttonColor: PropTypes.string,
   hrefContactUs: PropTypes.string,
 };
 
@@ -83,6 +85,7 @@ Banner.defaultProps = {
   description: '',
   image: '',
   backgroundColor: '',
+  buttonColor: 'secondary',
   hrefContactUs: `${contactsLinks.general}`,
 };
 
