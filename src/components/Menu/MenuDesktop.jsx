@@ -52,7 +52,7 @@ const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
         ))}
       </Box>
       <Box>
-        <Calculator />
+        <Calculator implementation="js" />
 
         <Hidden mdDown>
           <ContactUsButton href={contactsLinks.general} />

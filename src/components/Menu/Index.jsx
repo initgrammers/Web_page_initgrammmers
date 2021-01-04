@@ -66,7 +66,7 @@ const CustomMenu = ({ indexMenu }) => {
         </Toolbar>
         <Hidden mdUp>
           <Box className={classes.calculator}>
-            <Calculator typeButton="contained" />
+            <Calculator typeButton="contained" implementation="js" />
           </Box>
         </Hidden>
 
