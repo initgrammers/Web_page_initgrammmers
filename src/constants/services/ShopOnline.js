@@ -27,12 +27,14 @@ const typesApplication = [
 ];
 
 export const benefitsTypes = {
-  backgroundImage: '/assets/images/figures/shopOnline/bloque3.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609855473/servicios/tiendas-en-linea/figures/bloque3.png',
   heightImage: 614,
   backgroundGray: true,
   title: 'Beneficios de tener una tienda en línea',
   typesApplication,
-  image: '/assets/images/beneficios-tiendas-en-linea-ecommerce.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609855990/servicios/tiendas-en-linea/beneficios-tiendas-en-linea-ecommerce.png',
   imageSizes: {
     xs: {
       width: 414,
@@ -54,23 +56,26 @@ export const benefitsTypes = {
 };
 
 export const bannerShopOnline = {
-  backgroundImage: '/assets/images/figures/shopOnline/bloque1.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609855473/servicios/tiendas-en-linea/figures/bloque1.png',
   heightImage: 660,
   title: 'Crear tienda online:  vende tus productos en línea',
   description: 'Vende en cualquier lugar 24-7',
   image:
-    '/assets/images/figures/tienda-online-ecommerce-vende-tus-productos-en-linea.png',
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609855991/servicios/tiendas-en-linea/tienda-online-ecommerce-vende-tus-productos-en-linea.png',
 };
 
 export const shopOnline24Hours = {
-  backgroundImage: '/assets/images/figures/shopOnline/bloque2.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609855473/servicios/tiendas-en-linea/figures/bloque2.png',
   heightImage: 633,
   title: 'Tu tienda abierta las 24 horas',
   description:
     'Lleva tus productos o servicios de los almacenes físicos a la red y nunca más vuelvas a cerrar, nuestras tiendas están disponibles 24 horas al día los 365 días del año para que no pierdas ninguna oportunidad de realizar una venta.',
   titlePrimaryMain: true,
   descriptionBlack: true,
-  image: '/assets/images/tu-tienda-abierta-las-24-horas.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609855990/servicios/tiendas-en-linea/tu-tienda-abierta-las-24-horas.png',
   imageSizes: {
     xs: {
       width: 288,
@@ -97,8 +102,10 @@ export const increaseYourSalesInOneClick = {
   titlePart2: ' a un click de distancia',
   description:
     ' Diseñamos y desarrollamos tu tienda online de acuerdo a tus necesidades, no te quedes fuera del mundo digital ',
-  image: '/assets/images/incrementa-tus-ventas-con-tiendas-online.png',
-  backgroundImage: '/assets/images/figures/shopOnline/bloque5.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609855991/servicios/tiendas-en-linea/incrementa-tus-ventas-con-tiendas-online.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609855473/servicios/tiendas-en-linea/figures/bloque5.png',
   heightImage: 1024,
   imageSizes: {
     xs: {
@@ -122,25 +129,29 @@ export const increaseYourSalesInOneClick = {
 
 const optionsShopping = [
   {
-    path: '/assets/images/woocommerce.svg',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609855917/servicios/tiendas-en-linea/woocommerce.svg',
     title: 'Tienda online E-commerce',
     description:
       'Es un sitio web e-commerce, dedicado a la venta de productos o servicios de forma digital, posee un sistema de administración de productos, clientes, distintos métodos de pago, inventario de productos, cupones de descuento, etc',
   },
   {
-    path: '/assets/images/facebook.svg',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609855917/servicios/tiendas-en-linea/facebook.svg',
     title: 'Facebook shops',
     description:
       'Tienda online dentro de Facebook, ideal para comerciantes y minoristas. Puedes agregar un catálogo de productos, realizar el inventario, comunicarte con los clientes, obtener estadísticas.',
   },
   {
-    path: '/assets/images/instagram.svg',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609855917/servicios/tiendas-en-linea/instagram.svg',
     title: 'Instagram shops',
     description:
       'Es una herramienta de Instagram que te permite promocionar tus productos en dicha plataforma, de forma rápida y segura. Puedes agregar productos, etiquetas, ver estadísticas.',
   },
   {
-    path: '/assets/images/whatsapp.svg',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609855917/servicios/tiendas-en-linea/whatsapp.svg',
     title: 'WhatsApp Business',
     description:
       'Cuenta con un catálogo de productos, mensajes predefinidos, respuestas rápidas a preguntas frecuentes, etiquetas para la gestión de cliente. ',
@@ -151,8 +162,10 @@ export const optionsShopOnline = {
   titlePart1: 'Opciones de tiendas online',
   description:
     'Te ofrecemos varias opciones para que empieces a vender de forma online, e incrementes tus ganancias',
-  image: '/assets/images/opciones-de-tiendas-online.png',
-  backgroundImage: '/assets/images/figures/shopOnline/bloque4.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609855991/servicios/tiendas-en-linea/opciones-de-tiendas-online.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609855473/servicios/tiendas-en-linea/figures/bloque4.png',
   heightImage: 1328,
   imageSizes: {
     xs: {
