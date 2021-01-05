@@ -1,6 +1,6 @@
 export const bannerSEO = {
-  backgroundImage: '/assets/images/figures/shopOnline/bloque1.png',
-  heightImage: 660,
+  backgroundImage: '/assets/images/figures/seo/bloque1.png',
+  heightImage: 664,
   title: 'SEO / Posicionamiento en motores de búsqueda',
   description: 'Posiciona tu página web en los primeros resultados de Google',
   image: '/assets/images/posicionamiento-motores-busqueda.png',
@@ -36,7 +36,8 @@ const typesApplication = [
 ];
 
 export const seoBenefitsTypes = {
-  backgroundPrimaryLight: false,
+  backgroundImage: '/assets/images/figures/seo/bloque3.png',
+  heightImage: 598,
   backgroundGray: true,
   title: 'Beneficios de implementar SEO',
   typesApplication,
@@ -110,8 +111,8 @@ export const optionStrategies = {
 };
 
 export const importanceSEO = {
-  backgroundImage: '/assets/images/figures/shopOnline/bloque2.png',
-  heightImage: 633,
+  backgroundImage: '/assets/images/figures/seo/bloque2.png',
+  heightImage: 516,
   title: '¿Importancia del SEO para el crecimiento de mi empresa / negocio?',
   description:
     'El SEO o también conocido como posicionamiento en motores de búsqueda ayuda a que un sitio o página web se encuentre en los primeros resultados de Google, por ende hay gran probabilidad de que los usuarios den click en el enlace de tu página web, lo que implica que el tráfico a tu página web va a incrementar, y tengas más oportunidades de negocio.',
@@ -140,8 +141,8 @@ export const importanceSEO = {
 };
 
 export const whatIsSEO = {
-  backgroundImage: '/assets/images/figures/shopOnline/bloque2.png',
-  heightImage: 633,
+  backgroundImage: '/assets/images/figures/seo/bloque4.png',
+  heightImage: 632,
   title: '¿Qué es SEO (Search Engine Optimization)?',
   description:
     'SEO (Search Engine Optimization)  que significa “optimización para motores de búsqueda” son las técnicas, estrategias y acciones destinadas a mejorar el posicionamiento, visibilidad de un sitio web en los resultados de los buscadores de Google, Bing, Yahoo, etc. Lo que permite que el sitio web se encuentre entre las primeras posiciones de los resultados de los buscadores de acuerdo a una consulta específica.',
