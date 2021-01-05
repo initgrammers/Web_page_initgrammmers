@@ -5,21 +5,21 @@ import Widgets from '@material-ui/icons/WidgetsOutlined';
 import CastForEducation from '@material-ui/icons/CastForEducationOutlined';
 import DeviceHub from '@material-ui/icons/DeviceHubOutlined';
 import Search from '@material-ui/icons/SearchOutlined';
+import routes from '#app/routes/';
 
-// eslint-disable-next-line import/prefer-default-export
-export const data = [
+const data = [
   {
     id: 'WebDevelop',
     title: 'Desarrollo Web',
     subtitle: 'Android, iOs, híbridas',
-    href: '/services/WebDevelopment',
+    href: routes.services.webDevelopment,
     icon: <Devices />,
   },
   {
     id: 'MobileDevelopment',
     title: 'Desarrollo de aplicaciones móviles',
     subtitle: 'Android, iOS, híbridas',
-    href: '/services/MobileDevelopment',
+    href: routes.services.mobileDevelopment,
     icon: <AddToHomeScreen />,
   },
 
@@ -27,35 +27,35 @@ export const data = [
     id: 'UXUIDesign',
     title: 'Diseño UX UI',
     subtitle: 'Venda a través de internet',
-    href: '/services/UXUIDesign',
+    href: routes.services.uxUiDesign,
     icon: <Widgets />,
   },
   {
     id: 'ShopOnline',
     title: 'Comercio electrónico',
     subtitle: 'Venda a través de internet',
-    href: '/services/ShopOnline',
+    href: routes.services.shopOnline,
     icon: <ShoppingCart />,
   },
   {
     id: '5',
     title: 'Capacitaciones',
     subtitle: 'Aprende con nosotros',
-    href: '/services/Training',
+    href: routes.services.trainings,
     icon: <CastForEducation />,
   },
   {
     id: 'Marketing',
     title: 'Marketing digital',
     subtitle: 'Posicione su marca',
-    href: '/services/Marketing',
+    href: routes.services.marketingDigital,
     icon: <DeviceHub />,
   },
   {
     id: 'SEO',
     title: 'SEO',
     subtitle: 'Posicionamiento en buscadores',
-    href: '/services/SEO',
+    href: routes.services.seo,
     icon: <Search />,
   },
 ];

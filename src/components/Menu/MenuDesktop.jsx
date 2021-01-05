@@ -8,14 +8,15 @@ import CustomLink from '#Components/CustomLink';
 import styles from './styles/MenuDesktop';
 import ContactUsButton from '#Components/ContacUsButton';
 import { contactsLinks } from '#app/constants/contacts';
+import routes from '#app/routes/';
 
 const useStyles = makeStyles(styles);
 
 const menu = [
-  { label: 'Portafolio', href: '/404' },
-  { label: '¿Quiénes somos?', href: '/404' },
-  { label: 'Blog', href: '/404' },
-  { label: 'Contacto', href: '/404' },
+  { label: 'Portafolio', href: routes.portfolio },
+  // { label: '¿Quiénes somos?', href: routes.aboutUs },
+  // { label: 'Blog', href: routes.blog },
+  // { label: 'Contacto', href: routes.contact },
 ];
 
 const MenuDesktop = ({ showServices, handleDrawerOpen }) => {
