@@ -1,36 +1,17 @@
 import React from 'react';
 import CallToActionSection from '#Components/CallToActionSection';
-
-const imageSizes = {
-  xs: {
-    width: 288,
-    height: 235,
-  },
-  sm: {
-    width: 552,
-    height: 449,
-  },
-  md: {
-    width: 544,
-    height: 443,
-  },
-  lg: {
-    width: 608,
-    height: 496,
-  },
-};
+import { partOfInternet } from '#constants/services/webDevelopment';
 
 const PartOfInternetWorld = () => (
   <CallToActionSection
-    titlePart1="Forma parte "
-    titlePart2="del mundo del internet"
-    titlePart3=", empieza hoy"
-    description=" El futuro del desarrollo web para ti, te apoyamos durante
-  todo el proceso"
-    image="/assets/images/forma-parte-del-mundo-del-internet-Initgrammers.png"
-    backgroundImage="/assets/images/figures/webDevelopment/bloque6.png"
-    heightImage={944}
-    imageSizes={imageSizes}
+    titlePart1={partOfInternet.titlePart1}
+    titlePart2={partOfInternet.titlePart2}
+    titlePart3={partOfInternet.titlePart3}
+    description={partOfInternet.description}
+    image={partOfInternet.image}
+    backgroundImage={partOfInternet.backgroundImage}
+    heightImage={partOfInternet.heightImage}
+    imageSizes={partOfInternet.imageSizes}
   />
 );
 

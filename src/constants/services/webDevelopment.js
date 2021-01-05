@@ -1,44 +1,68 @@
 export const bannerWebDevelopment = {
-  backgroundImage: '/assets/images/figures/webDevelopment/bloque1.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609857474/servicios/desarrollo-web/figures/bloque1.png',
   heightImage: 670,
   titlePart1: 'Páginas Web,',
   titlePart2: ' diseño y desarrollo de aplicaciones web ',
   titlePart3: 'en Ecuador',
   description: 'Bienvenidos al mundo del internet',
   image:
-    '/assets/images/paginas-web-desarrollo-diseno-aplicaciones-web-ecuador.png',
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609857584/servicios/desarrollo-web/paginas-web-desarrollo-diseno-aplicaciones-web-ecuador.png',
+};
+
+export const visibilityCompany = {
+  title: 'Aumenta la visibilidad de tu empresa',
+  description:
+    'Una buena presencia en línea ayudará a conseguir más clientes potenciales. Nuestro trabajo es crear páginas web con diseños atractivos y funcionales. Una página web permite que todo el mundo te encuentre y sepa qué es lo que haces y ofreces a tus consumidores.',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609857584/servicios/desarrollo-web/aumenta-la-visibilidad-de-tu-empresa.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609857474/servicios/desarrollo-web/figures/bloque2.png',
+  heightImage: 511,
+};
+
+export const needAnUpdateWebDevelopment = {
+  title: '¿Necesitas una actualización?',
+  description:
+    'Un sitio web desactualizado tarda más en cargarse y no funciona correctamente. Te asesoramos en mejorar la imagen y rendimiento de tu web.',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609857584/servicios/desarrollo-web/necesitas-una-actualizacion.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609857474/servicios/desarrollo-web/figures/bloque3.png',
+  ornamentImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609857474/servicios/desarrollo-web/figures/dino.png',
 };
 
 const webTechnologies = [
   {
     label: 'HTML 5',
     image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1606844070/servicios/diseno-ux-ui/html-5.svg',
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844070/servicios/desarrollo-web/html-5.svg',
   },
   {
     label: 'Wordpress',
     image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1606844070/servicios/diseno-ux-ui/wordpress.svg',
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844070/servicios/desarrollo-web/wordpress.svg',
   },
   {
     label: 'CSS',
     image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1606844084/servicios/diseno-ux-ui/css-3.svg',
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844084/servicios/desarrollo-web/css-3.svg',
   },
   {
     label: 'Firebase',
     image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1606844100/servicios/diseno-ux-ui/firebase.svg',
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844100/servicios/desarrollo-web/firebase.svg',
   },
   {
     label: 'Angular',
     image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1606844121/servicios/diseno-ux-ui/angular.svg',
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844121/servicios/desarrollo-web/angular.svg',
   },
   {
     label: 'Next.js',
     image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1606844120/servicios/diseno-ux-ui/next-js.svg',
+      'https://res.cloudinary.com/initgrammers/image/upload/v1606844120/servicios/desarrollo-web/next-js.svg',
   },
 ];
 
@@ -109,7 +133,8 @@ export const webApplicationTypes = {
   backgroundPrimaryLight: true,
   title: 'Nuestros servicios',
   typesApplication,
-  image: '/assets/images/tipos-aplicaciones-web.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609857584/servicios/desarrollo-web/tipos-aplicaciones-web.png',
   imageSizes: {
     xs: {
       width: 610,
@@ -128,4 +153,37 @@ export const webApplicationTypes = {
       height: 362,
     },
   },
+};
+
+const imageSizesPartOfInternet = {
+  xs: {
+    width: 288,
+    height: 235,
+  },
+  sm: {
+    width: 552,
+    height: 449,
+  },
+  md: {
+    width: 544,
+    height: 443,
+  },
+  lg: {
+    width: 608,
+    height: 496,
+  },
+};
+
+export const partOfInternet = {
+  titlePart1: 'Forma parte ',
+  titlePart2: 'del mundo del internet',
+  titlePart3: ', empieza hoy',
+  description:
+    ' El futuro del desarrollo web para ti, te apoyamos durante todo el proceso',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609857584/servicios/desarrollo-web/forma-parte-del-mundo-del-internet-Initgrammers.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609857474/servicios/desarrollo-web/figures/bloque6.png',
+  heightImage: 944,
+  imageSizes: imageSizesPartOfInternet,
 };
