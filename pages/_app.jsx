@@ -33,25 +33,25 @@ const MyApp = ({ Component, pageProps }) => {
           rel="preload"
           href="/fonts/Raleway/Raleway-Regular.woff2"
           as="font"
-          crossOrigin=""
+          crossOrigin="anonymous"
         />
         <link
           rel="preload"
           href="/fonts/Raleway/Raleway-Medium.woff2"
           as="font"
-          crossOrigin=""
+          crossOrigin="anonymous"
         />
         <link
           rel="preload"
           href="/fonts/Raleway/Raleway-SemiBold.woff2"
           as="font"
-          crossOrigin=""
+          crossOrigin="anonymous"
         />
         <link
           rel="preload"
           href="/fonts/Raleway/Raleway-Bold.woff2"
           as="font"
-          crossOrigin=""
+          crossOrigin="anonymous"
         />
         <link
           rel="stylesheet"
