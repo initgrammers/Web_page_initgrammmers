@@ -1,3 +1,5 @@
+import routes from '#app/routes/';
+
 export const bannerLandingPage = {
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1607008550/LandingPage/figures/bloque1.png',
@@ -79,46 +81,46 @@ export const partnershipModel = {
 
 const services = [
   {
-    href: '/services/WebDevelopment',
+    href: routes.services.webDevelopment,
     path:
       'https://res.cloudinary.com/initgrammers/image/upload/v1606839497/LandingPage/desarrollo-web.png',
     service: 'Desarrollo Web',
   },
   {
-    href: '/services/UXUIDesign',
+    href: routes.services.uxUiDesign,
     path:
       'https://res.cloudinary.com/initgrammers/image/upload/v1606839497/LandingPage/diseno-ux-ui.png',
     service: 'Diseño UX / UX',
   },
   {
-    href: '/services/MobileDevelopment',
+    href: routes.services.mobileDevelopment,
     path:
       'https://res.cloudinary.com/initgrammers/image/upload/v1606839497/LandingPage/desarrollo-movil.png',
     service: 'Desarrollo Móvil',
   },
   {
-    href: '/services/Tranings',
+    href: routes.services.trainings,
     path:
       'https://res.cloudinary.com/initgrammers/image/upload/v1606839497/LandingPage/capacitaciones.png',
     service: 'Capacitaciones',
   },
   {
-    href: '/services/Marketing',
+    href: routes.services.marketingDigital,
     path:
       'https://res.cloudinary.com/initgrammers/image/upload/v1606839497/LandingPage/marketing.png',
-    service: 'Marketing',
+    service: 'Marketing Digital',
   },
   {
-    href: '/services/SEO',
+    href: routes.services.seo,
     path:
       'https://res.cloudinary.com/initgrammers/image/upload/v1606839497/LandingPage/posicionamiento-buscadores.png',
-    service: 'Posicionamiento en buscadores',
+    service: 'Posicionamiento en buscadores / SEO',
   },
   {
-    href: '/services/E-commerce',
+    href: routes.services.shopOnline,
     path:
       'https://res.cloudinary.com/initgrammers/image/upload/v1606839497/LandingPage/e-commerce.png',
-    service: 'E-commerce',
+    service: 'Comercio Electrónico',
   },
 ];
 
