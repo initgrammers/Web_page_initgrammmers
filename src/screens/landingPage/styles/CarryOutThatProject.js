@@ -23,7 +23,7 @@ const styles = (theme) => ({
   },
   image: {
     width: 288,
-    height: 229,
+    height: 288,
     position: 'relative',
     bottom: `-${theme.spacing(8)}px`,
     marginTop: `-${theme.spacing(4)}px`,
@@ -31,15 +31,15 @@ const styles = (theme) => ({
 
   [theme.breakpoints.up('sm')]: {
     image: {
-      width: 412,
-      height: 327,
+      width: 414,
+      height: 414,
     },
   },
   [theme.breakpoints.up('md')]: {
     image: {
       margin: 0,
-      width: 388,
-      height: 308,
+      width: 414,
+      height: 414,
     },
   },
   [theme.breakpoints.up('lg')]: {
@@ -50,9 +50,12 @@ const styles = (theme) => ({
     contentInformation: {
       paddingRight: theme.spacing(2),
     },
+    containerImage: {
+      marginTop: `-${theme.spacing(8)}px`,
+    },
     image: {
-      width: 502,
-      height: 402,
+      width: 504,
+      height: 504,
     },
   },
 });
