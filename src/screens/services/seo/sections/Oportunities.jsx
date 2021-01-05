@@ -29,8 +29,8 @@ const IncreaseClics = () => {
       titlePart2="y genera más oportunidades de negocio"
       description="Genera más tráfico a tu web, impulsa tu marca y conviertete en un referente del mercado."
       image="/assets/images/oportunidades-para-negocio.png"
-      backgroundImage="/assets/images/figures/webDevelopment/bloque6.png"
-      heightImage={944}
+      backgroundImage="/assets/images/figures/seo/bloque5.png"
+      heightImage={895}
       imageSizes={imageSizes}
       backgroundColor={palette.secondary.fade}
     />
