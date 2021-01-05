@@ -20,6 +20,7 @@ import CustomLink from '#Components/CustomLink';
 import styles from './styles';
 import ContactUs from './ContactUs';
 import { contactsLinks } from '#app/constants/contacts';
+import routes from '#app/routes/';
 
 const useStyles = makeStyles(styles);
 const CustomFooter = () => {
@@ -28,25 +29,39 @@ const CustomFooter = () => {
   const services = [
     {
       label: 'Desarrollo de aplicaciones web',
-      href: '/services/WebDevelopment',
+      href: routes.services.webDevelopment,
     },
     {
       label: 'Desarrollo de aplicaciones móviles',
-      href: '/services/MobileDevelopment',
+      href: routes.services.mobileDevelopment,
     },
     {
-      label: 'Desarrollo de aplicaciones PWA',
-      href: '/services/PWADevelopment',
+      label: 'Diseño UI / UX ',
+      href: routes.services.uxUiDesign,
     },
-    { label: 'Marketing y diseño digital', href: '/services/DigitalMarketing' },
-    { label: 'Diseño UI / UX ', href: '/services/UXUIDesign' },
-    { label: 'Tiendas en línea / E-commerce', href: 'Ecommerce' },
+    {
+      label: 'Comercio Electrónico',
+      href: routes.services.shopOnline,
+    },
+    {
+      label: 'Capacitaciones',
+      href: routes.services.trainings,
+    },
+    {
+      label: 'Marketing Digital',
+      href: routes.services.marketingDigital,
+    },
+    {
+      label: 'SEO',
+      href: routes.services.seo,
+    },
   ];
+
   const portfolio = [
-    { label: 'Portafolio', href: '/services/Portfolio' },
-    { label: '¿Quiénes somos?', href: '/services/AboutUs' },
-    { label: 'Blog', href: '/services/Blog' },
-    { label: 'Contacto', href: '/services/ContactUs' },
+    { label: 'Portafolio', href: routes.portfolio },
+    // { label: '¿Quiénes somos?', href: routes.aboutUs },
+    // { label: 'Blog', href: routes.blog },
+    // { label: 'Contacto', href: routes.contact },
   ];
 
   return (
