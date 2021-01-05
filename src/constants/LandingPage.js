@@ -17,7 +17,7 @@ export const onlineSolution = {
   description:
     'Fusionamos el diseño y el desarrollo en cada uno de los proyectos. Nuestro trabajo es asesorarte en todo el proceso para que puedas elegir la mejor opción para llevar a cabo esa idea que tienes en mente. A través de la tecnología te ayudamos a cumplir tus objetivos con un trabajo a tiempo y orientado a resultados.',
   image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1606839438/LandingPage/solucion-en-linea.png',
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609863472/LandingPage/solucion-en-linea.png',
   titlePrimaryMain: true,
   descriptionBlack: true,
   imageSizes: {
@@ -70,7 +70,7 @@ export const partnershipModel = {
   description:
     'Una asociación perfecta que entrega los resultados esperados de acuerdo a tus necesidades. Tenemos todo lo que necesitas.',
   image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1606839598/LandingPage/modelo-partnership.png',
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609863472/LandingPage/modelo-partnership.png',
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1606839723/LandingPage/figures/bloque4.png',
   heightImage: 1262,
@@ -133,23 +133,28 @@ export const servicesInitgrammers = {
 const clients = [
   {
     label: 'Atenas Education',
-    image: '/assets/images/atenas-education.png',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609862938/LandingPage/atenas-education.png',
   },
   {
     label: 'La Casa del Carpintero',
-    image: '/assets/images/la-casa-del-carpintero.png',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609862948/LandingPage/la-casa-del-carpintero.png',
   },
   {
     label: 'JRTEC',
-    image: '/assets/images/JRTEC.png',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609862943/LandingPage/JRTEC.png',
   },
   {
     label: 'Escuela Politécnica Nacional',
-    image: '/assets/images/Escuela-Politecnica-Nacional.png',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609862939/LandingPage/Escuela-Politecnica-Nacional.png',
   },
   {
     label: 'Solufer Ecuador',
-    image: '/assets/images/solufer.png',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609862938/LandingPage/solufer.png',
   },
 ];
 
@@ -166,7 +171,7 @@ export const carryOutProject = {
   description:
     'En todos nuestros proyectos ofrecemos soporte durante todo el año y mantenimiento de tus productos sin recargo. ',
   image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1606839634/LandingPage/pensado-como-llevar-a-cabo-tu-proyecto.png',
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609863472/LandingPage/soporte-adicional-sin-costo.png',
 };
 
 const questions = [

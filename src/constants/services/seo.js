@@ -1,9 +1,11 @@
 export const bannerSEO = {
-  backgroundImage: '/assets/images/figures/seo/bloque1.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque1.png',
   heightImage: 664,
   title: 'SEO / Posicionamiento en motores de búsqueda',
   description: 'Posiciona tu página web en los primeros resultados de Google',
-  image: '/assets/images/posicionamiento-motores-busqueda.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/posicionamiento-motores-busqueda.png',
   buttonColor: 'primary',
 };
 
@@ -36,12 +38,14 @@ const typesApplication = [
 ];
 
 export const seoBenefitsTypes = {
-  backgroundImage: '/assets/images/figures/seo/bloque3.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque3.png',
   heightImage: 598,
   backgroundGray: true,
   title: 'Beneficios de implementar SEO',
   typesApplication,
-  image: '/assets/images/beneficios-seo.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/beneficios-seo.png',
   imageSizes: {
     xs: {
       width: 414,
@@ -111,14 +115,16 @@ export const optionStrategies = {
 };
 
 export const importanceSEO = {
-  backgroundImage: '/assets/images/figures/seo/bloque2.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque2.png',
   heightImage: 516,
   title: '¿Importancia del SEO para el crecimiento de mi empresa / negocio?',
   description:
     'El SEO o también conocido como posicionamiento en motores de búsqueda ayuda a que un sitio o página web se encuentre en los primeros resultados de Google, por ende hay gran probabilidad de que los usuarios den click en el enlace de tu página web, lo que implica que el tráfico a tu página web va a incrementar, y tengas más oportunidades de negocio.',
   titlePrimaryMain: true,
   descriptionBlack: true,
-  image: '/assets/images/importancia-seo.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609854276/servicios/seo/importancia-seo.png',
   imageSizes: {
     xs: {
       width: 288,
@@ -141,14 +147,16 @@ export const importanceSEO = {
 };
 
 export const whatIsSEO = {
-  backgroundImage: '/assets/images/figures/seo/bloque4.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque4.png',
   heightImage: 632,
   title: '¿Qué es SEO (Search Engine Optimization)?',
   description:
     'SEO (Search Engine Optimization)  que significa “optimización para motores de búsqueda” son las técnicas, estrategias y acciones destinadas a mejorar el posicionamiento, visibilidad de un sitio web en los resultados de los buscadores de Google, Bing, Yahoo, etc. Lo que permite que el sitio web se encuentre entre las primeras posiciones de los resultados de los buscadores de acuerdo a una consulta específica.',
   titlePrimaryMain: true,
   descriptionBlack: true,
-  image: '/assets/images/que-es-seo.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609854276/servicios/seo/que-es-seo.png',
   imageSizes: {
     xs: {
       width: 288,
@@ -168,4 +176,35 @@ export const whatIsSEO = {
     },
   },
   isImageRight: false,
+};
+
+const imageSizesOportunitiesSEO = {
+  xs: {
+    width: 288,
+    height: 235,
+  },
+  sm: {
+    width: 552,
+    height: 449,
+  },
+  md: {
+    width: 544,
+    height: 443,
+  },
+  lg: {
+    width: 608,
+    height: 496,
+  },
+};
+export const oportunitieSEO = {
+  titlePart1: 'Posiciona tu página web, ',
+  titlePart2: 'y genera más oportunidades de negocio',
+  description:
+    'Genera más tráfico a tu web, impulsa tu marca y conviertete en un referente del mercado.',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/oportunidades-para-negocio.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque5.png',
+  heightImage: 895,
+  imageSizes: imageSizesOportunitiesSEO,
 };

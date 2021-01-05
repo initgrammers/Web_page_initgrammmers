@@ -1,11 +1,13 @@
 export const bannerMarketing = {
-  backgroundImage: '/assets/images/figures/digitalMarketing/bloque1.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609856760/servicios/marketing-digital/figures/bloque1.png',
   heightImage: 664,
   titlePart1: 'Marketing ',
   titlePart2: 'y diseño digital ',
   titlePart3: 'en Ecuador',
   description: 'Atrae, fideliza clientes a tu marca',
-  image: '/assets/images/marketing-diseno-digital-ecuador.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609856733/servicios/marketing-digital/marketing-diseno-digital-ecuador.png',
 };
 
 const typesApplication = [
@@ -37,12 +39,14 @@ const typesApplication = [
 ];
 
 export const marketingTypes = {
-  backgroundImage: '/assets/images/figures/digitalMarketing/bloque4.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609856760/servicios/marketing-digital/figures/bloque4.png',
   heightImage: 578,
   backgroundGray: true,
   title: 'Beneficios del marketing digital',
   typesApplication,
-  image: '/assets/images/beneficios-marketing-digital.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609856732/servicios/marketing-digital/beneficios-marketing-digital.png',
   imageSizes: {
     xs: {
       width: 414,
@@ -65,19 +69,22 @@ export const marketingTypes = {
 
 const strategies = [
   {
-    path: '/assets/images/redes-sociales.svg',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609856732/servicios/marketing-digital/redes-sociales.svg',
     title: 'Redes sociales',
     description:
       'Genere una comunidad online , establezca un canal de comunicación con sus potenciales clientes en redes sociales como Facebook, Linkedin, Twitter e Instagram. Converse sobre sus productos y realice ventas online.',
   },
   {
-    path: '/assets/images/medios-digitales.svg',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609856732/servicios/marketing-digital/medios-digitales.svg',
     title: 'Plan de medios digitales',
     description:
       'Te ayudamos a que tu marca sea reconocida por más personas y obtener más clientes potenciales, a través de estrategias proveemos las herramientas para generar contactos y convertirlos en tus clientes.',
   },
   {
-    path: '/assets/images/posicionamiento-seo.svg',
+    path:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609856732/servicios/marketing-digital/posicionamiento-seo.svg',
     title: 'Posicionamiento en buscadores SEO',
     description:
       'El primer lugar al que van los clientes cuando necesitan algo es Google, Realizamos un análisis de las palabras clave y te ayudamos a mejorar tu posición en los resultados de la búsqueda.',
@@ -87,8 +94,10 @@ const strategies = [
 export const optionStrategies = {
   titlePart1: 'Qué estrategias ofrecemos para ti',
   description: 'Impulsa tu marca, no te quiedes fuera del mundo del internet',
-  image: '/assets/images/estrategias-marketing.png',
-  backgroundImage: '/assets/images/figures/digitalMarketing/bloque3.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609856733/servicios/marketing-digital/estrategias-marketing.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609856760/servicios/marketing-digital/figures/bloque3.png',
   heightImage: 1246,
   imageSizes: {
     xs: {
@@ -112,14 +121,16 @@ export const optionStrategies = {
 };
 
 export const importanceMarketing = {
-  backgroundImage: '/assets/images/figures/digitalMarketing/bloque2.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609856760/servicios/marketing-digital/figures/bloque2.png',
   heightImage: 632,
   title: '¿ Por qué el marketing digtial es importante para mi empresa ?',
   description:
     'En la actualidad, las redes sociales y el internet han pasado a formar parte de nuestro diario vivir, no solo para diversión, entretenimiento, trabajo, sino también para realizar negocios, es por ello que tener una buena presencia en internet posicionará tu marca sobre las demás, aumentando tu visibilidad, y a través de ello incrementar tus ventas. Para ello es necesario que cuentes con una buena estrategia de marketing con el fin de identificar las acciones a realizar.',
   titlePrimaryMain: true,
   descriptionBlack: true,
-  image: '/assets/images/importancia-marketing.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609856733/servicios/marketing-digital/Importancia-marketing.png',
   imageSizes: {
     xs: {
       width: 288,
@@ -139,4 +150,36 @@ export const importanceMarketing = {
     },
   },
   isImageRight: false,
+};
+
+const imageSizesIncreaseSales = {
+  xs: {
+    width: 288,
+    height: 235,
+  },
+  sm: {
+    width: 552,
+    height: 449,
+  },
+  md: {
+    width: 544,
+    height: 443,
+  },
+  lg: {
+    width: 608,
+    height: 496,
+  },
+};
+
+export const increaseSalesMarketingDigital = {
+  titlePart1: 'Incremente tus ventas, ',
+  titlePart2: 'a un clic de distancia',
+  description:
+    'Diseñamos y desarrollamos tu tienda online de acuerdo a tus necesidades, no te quedes fuera del mundo digital',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609856733/servicios/marketing-digital/incrementa-ventas.png',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609856761/servicios/marketing-digital/figures/bloque5.png',
+  heightImage: 932,
+  imageSizes: imageSizesIncreaseSales,
 };

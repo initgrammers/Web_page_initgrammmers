@@ -1,34 +1,16 @@
 import React from 'react';
 import CallToActionSection from '#Components/CallToActionSection';
-
-const imageSizes = {
-  xs: {
-    width: 288,
-    height: 235,
-  },
-  sm: {
-    width: 552,
-    height: 449,
-  },
-  md: {
-    width: 544,
-    height: 443,
-  },
-  lg: {
-    width: 608,
-    height: 496,
-  },
-};
+import { increaseSalesMarketingDigital } from '#app/constants/services/marketing';
 
 const IncreaseClics = () => (
   <CallToActionSection
-    titlePart1="Incremente tus ventas, "
-    titlePart2="a un clic de distancia"
-    description="Diseñamos y desarrollamos tu tienda online de acuerdo a tus necesidades, no te quedes fuera del mundo digital"
-    image="/assets/images/incrementa-ventas.png"
-    backgroundImage="/assets/images/figures/digitalMarketing/bloque5.png"
-    heightImage={932}
-    imageSizes={imageSizes}
+    titlePart1={increaseSalesMarketingDigital.titlePart1}
+    titlePart2={increaseSalesMarketingDigital.titlePart2}
+    description={increaseSalesMarketingDigital.description}
+    image={increaseSalesMarketingDigital.image}
+    backgroundImage={increaseSalesMarketingDigital.backgroundImage}
+    heightImage={increaseSalesMarketingDigital.heightImage}
+    imageSizes={increaseSalesMarketingDigital.imageSizes}
   />
 );
 
