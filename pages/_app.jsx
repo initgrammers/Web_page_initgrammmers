@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
@@ -6,6 +7,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import NextNprogress from 'nextjs-progressbar';
 import theme from '../theme/index';
 import '../src/assets/css/globals.css';
+import * as gtag from '#app/lib/gtag';
 
 const NoLayout = ({ children }) => children;
 
@@ -17,6 +19,17 @@ const MyApp = ({ Component, pageProps }) => {
       jssStyles.parentElement.removeChild(jssStyles);
     }
   }, []);
+
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
 
   const Layout = Component.layout || NoLayout;
 
