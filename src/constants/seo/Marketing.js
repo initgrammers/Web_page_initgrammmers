@@ -2,7 +2,7 @@ const title = 'Marketing y diseño digital Ecuador | Initgrammers';
 const description =
   'Marketing digital en Ecuador, páginas o sitios web, landing page, Atrae, fideliza clientes a tu marca';
 const url =
-  'https://initgrammers.com/servicios/marketing-digital-ecuador.html';
+  'https://initgrammers.com/servicios/marketing-diseno-digital-ecuador';
 
 const image =
   'https://seo-web-page.web.app/assets/images/marketing-diseno-digital-ecuador.jpg';
@@ -27,6 +27,10 @@ const MarketingSEO = {
     {
       property: 'og:image',
       content: image,
+    },
+    {
+      property: 'og:type',
+      content: 'website',
     },
     {
       property: 'twitter:url',

@@ -2,8 +2,7 @@ const title = 'SEO / Posicionamiento en motores de búsqueda | Initgrammers';
 
 const description =
   'Posiciona tu página web en los primeros resultados de Google';
-const url =
-  'https://initgrammers.com/servicios/SEO.html';
+const url = 'https://initgrammers.com/servicios/seo-ecuador';
 
 const image =
   'https://seo-web-page.web.app/assets/images/posicionamiento-motores-busqueda.jpg';
@@ -28,6 +27,10 @@ const SEOsearch = {
     {
       property: 'og:image',
       content: image,
+    },
+    {
+      property: 'og:type',
+      content: 'website',
     },
     {
       property: 'twitter:url',
