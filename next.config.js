@@ -8,11 +8,12 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: '/servicios/desarrollo-aplicaciones-web-ecuador',
+        source: '/servicios/desarrollo-aplicaciones-y-paginas-web-ecuador',
         destination: '/services/WebDevelopment',
       },
       {
-        source: '/servicios/desarrollo-aplicaciones-moviles-ecuador',
+        source:
+          '/servicios/desarrollo-aplicaciones-moviles-ios-android-ecuador',
         destination: '/services/MobileDevelopment',
       },
       {
@@ -20,12 +21,12 @@ module.exports = {
         destination: '/services/UXUIDesign',
       },
       {
-        source: '/servicios/comercio-electronico-ecuador',
+        source: '/servicios/tiendas-en-linea-ecuador',
         destination: '/services/ShopOnline',
       },
       {
         source: '/servicios/capacitaciones-ecuador',
-        destination: '/services/404',
+        destination: '/404',
       },
       {
         source: '/servicios/marketing-diseno-digital-ecuador',

@@ -1,7 +1,11 @@
+import routes from '#app/routes';
+
 const title = 'Diseño UX UI en Ecuador | Initgrammers';
+
 const description =
   'Diseño UI/UX de aplicaciones web y móviles en Ecuador. Le ayudamos a crear una experiencia ideal para sus productos con interfaces estéticas.';
-const url = 'https://initgrammers.com/servicios/diseno-ui-ux-ecuador.html';
+
+const url = `https://initgrammers.com${routes.services.uxUiDesign}`;
 
 const image =
   'https://seo-web-page.web.app/assets/images/desarrollo-aplicaciones-web-ecuador.jpg';
@@ -26,6 +30,10 @@ const LandingPageSEO = {
     {
       property: 'og:image',
       content: image,
+    },
+    {
+      property: 'og:type',
+      content: 'website',
     },
     {
       property: 'twitter:url',

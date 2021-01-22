@@ -41,8 +41,8 @@ const SEO = ({
     ))}
     <link rel="dns-prefetch" href="https://initgrammers.com" />
     <link rel="preconnect" href="https://initgrammers.com" />
-    <link rel="alternate" href={urlAltern} hrefLang="es-ec" />
-    <link rel="alternate" href={urlAltern} hrefLang="x-default" />
+    <link rel="alternate" hrefLang="es-ec" href={urlAltern} />
+    <link rel="alternate" hrefLang="x-default" href={urlAltern} />
     <link
       rel="shortcut icon"
       type="image/png"

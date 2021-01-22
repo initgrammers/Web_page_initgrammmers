@@ -28,6 +28,10 @@ const LandingPageSEO = {
       content: image,
     },
     {
+      property: 'og:type',
+      content: 'website',
+    },
+    {
       property: 'twitter:url',
       content: url,
     },
