@@ -1,7 +1,11 @@
+import routes from '#app/routes';
+
 const title = 'En Construcción | InitGrammers';
+
 const description =
   'Desarrollo de aplicaciones móviles para Android y iOS, sitios web, diseño UI/UX, tiendas online, marketing digital, software a medida en Ecuador ';
-const url = 'https://initgrammers.com/';
+
+const url = `https://initgrammers.com${routes.services.trainings}`;
 
 const image =
   'https://seo-web-page.web.app/assets/images/desarrollo-aplicaciones-web-ecuador.jpg';

@@ -1,8 +1,9 @@
+import routes from '#app/routes';
+
 const title = 'Marketing y diseño digital Ecuador | Initgrammers';
 const description =
   'Marketing digital en Ecuador, páginas o sitios web, landing page, Atrae, fideliza clientes a tu marca';
-const url =
-  'https://initgrammers.com/servicios/marketing-diseno-digital-ecuador';
+const url = `https://initgrammers.com${routes.services.marketingDigital}`;
 
 const image =
   'https://seo-web-page.web.app/assets/images/marketing-diseno-digital-ecuador.jpg';

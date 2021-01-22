@@ -1,8 +1,11 @@
+import routes from '#app/routes';
+
 const title = 'Desarrollo de aplicaciones web Ecuador | Initgrammers';
+
 const description =
   'Diseño y desarrollo de aplicaciones web en Ecuador, páginas o sitios web, landing page, desarrollo web con CMS (WordPress, Joomla) y software a medida';
-const url =
-  'https://initgrammers.com/servicios/desarrollo-aplicaciones-web-ecuador';
+
+const url = `https://initgrammers.com${routes.services.webDevelopment}`;
 
 const image =
   'https://seo-web-page.web.app/assets/images/desarrollo-aplicaciones-web-ecuador.jpg';

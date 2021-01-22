@@ -32,7 +32,7 @@ const data = [
   },
   {
     id: 'ShopOnline',
-    title: 'Comercio electrónico',
+    title: 'Tiendas en linea',
     subtitle: 'Venda a través de internet',
     href: routes.services.shopOnline,
     icon: <ShoppingCart />,
