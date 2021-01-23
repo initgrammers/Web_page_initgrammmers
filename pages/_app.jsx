@@ -8,6 +8,7 @@ import NextNprogress from 'nextjs-progressbar';
 import theme from '../theme/index';
 import '../src/assets/css/globals.css';
 import * as gtag from '#app/lib/gtag';
+import FacebookPixel from '#Components/FacebookPixel';
 
 const NoLayout = ({ children }) => children;
 
@@ -74,12 +75,14 @@ const MyApp = ({ Component, pageProps }) => {
         />
       </Head>
       <ThemeProvider theme={theme}>
-        <Layout {...layoutProps}>
-          <>
-            <CssBaseline />
-            <Component {...restPageProps} />
-          </>
-        </Layout>
+        <FacebookPixel>
+          <Layout {...layoutProps}>
+            <>
+              <CssBaseline />
+              <Component {...restPageProps} />
+            </>
+          </Layout>
+        </FacebookPixel>
       </ThemeProvider>
     </>
   );
