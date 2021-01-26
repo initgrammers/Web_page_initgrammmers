@@ -40,42 +40,42 @@ const teamPlayer = [
     title: 'CEO y Fundador',
     image:
       'https://res.cloudinary.com/initgrammers/image/upload/v1611680064/quienes-somos/henry-villavicencio.png',
-    href: '#',
+    href: 'https://ec.linkedin.com/in/henry-villavicencio-catota-a7b76516b',
   },
   {
     name: 'Andrea Jurado',
     title: 'Marketing y Diseño Digital',
     image:
       'https://res.cloudinary.com/initgrammers/image/upload/v1611680063/quienes-somos/andrea-jurado.png',
-    href: '#',
+    href: 'https://www.linkedin.com/in/andreajurado-n/',
   },
   {
     name: 'Oscar España',
     title: 'Diseñador UI/UX',
     image:
       'https://res.cloudinary.com/initgrammers/image/upload/v1611680064/quienes-somos/oscar-espana.png',
-    href: '#',
+    href: 'https://www.linkedin.com/in/oscar-españa-56aa77172/',
   },
   {
     name: 'Cristian Ronda',
     title: 'Desarrollador Frontend',
     image:
       'https://res.cloudinary.com/initgrammers/image/upload/v1611680063/quienes-somos/cristian-ronda.png',
-    href: '#',
+    href: 'https://www.linkedin.com/in/cristian-ronda-169414180/',
   },
   {
     name: 'Julio Gonzalez',
     title: 'Desarrollador Backend',
     image:
       'https://res.cloudinary.com/initgrammers/image/upload/v1611680064/quienes-somos/julio-gonzalez.png',
-    href: '#',
+    href: 'https://www.linkedin.com/in/julio-gonzález-8a64a3199/',
   },
   {
     name: 'Juan Carlos Guaña',
     title: 'Project Manager',
     image:
       'https://res.cloudinary.com/initgrammers/image/upload/v1611680064/quienes-somos/juan-carlos-guana.png',
-    href: '#',
+    href: 'https://www.linkedin.com/in/juan-carlos-guana/',
   },
 ];
 

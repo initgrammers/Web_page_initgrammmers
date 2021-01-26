@@ -22,7 +22,7 @@ const CardTeam = ({ name, title, image, href }) => {
       <Typography className={classes.description} variant="body2">
         {title}
       </Typography>
-      <IconButton className={classes.linkedin} href={href}>
+      <IconButton target="_blank" className={classes.linkedin} href={href}>
         <LinkedInIcon />
       </IconButton>
     </Box>
