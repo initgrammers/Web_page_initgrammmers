@@ -1,75 +1,136 @@
 export const bannerAboutUs = {
   backgroundImage:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1609855473/servicios/tiendas-en-linea/figures/bloque1.png',
-  heightImage: 660,
+    'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque1.png',
+  heightImage: 664,
   title: '¿Quiénes somos?',
   description: 'Conoce un poco sobre InitGrammers',
-  image: '/assets/images/quienes-somos.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1611682178/quienes-somos/quienes-somos.png',
 };
 
 const mision = {
   title: 'Misión',
   description:
     'Brindar soluciones de alto impacto mediante el uso de la tecnología',
-  image: '/assets/images/mision.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1611680188/quienes-somos/mision.png',
+  colorTitleIsSecondary: false,
 };
 
 const vision = {
   title: 'Visión',
   description:
     'Ser un referente de innovación de Latinoamérica que impulse el desarrollo tecnológico del mundo',
-  image: '/assets/images/vision.png',
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1611680177/quienes-somos/vision.png',
+  colorTitleIsSecondary: true,
 };
 
 export const misionVision = {
   mision,
   vision,
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque2.png',
+  heightImage: 338,
 };
 
 const teamPlayer = [
   {
     name: 'Henry Villavicencio',
     title: 'CEO y Fundador',
-    image: '/assets/images/henry-villavicencio.png',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611680064/quienes-somos/henry-villavicencio.png',
     href: '#',
   },
   {
     name: 'Andrea Jurado',
     title: 'Marketing y Diseño Digital',
-    image: '/assets/images/andrea-jurado.png',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611680063/quienes-somos/andrea-jurado.png',
     href: '#',
   },
   {
     name: 'Oscar España',
     title: 'Diseñador UI/UX',
-    image: '/assets/images/oscar-espana.png',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611680064/quienes-somos/oscar-espana.png',
     href: '#',
   },
   {
     name: 'Cristian Ronda',
     title: 'Desarrollador Frontend',
-    image: '/assets/images/cristian-ronda.png',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611680063/quienes-somos/cristian-ronda.png',
     href: '#',
   },
   {
     name: 'Julio Gonzalez',
     title: 'Desarrollador Backend',
-    image: '/assets/images/julio-gonzalez.png',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611680064/quienes-somos/julio-gonzalez.png',
     href: '#',
   },
   {
     name: 'Juan Carlos Guaña',
     title: 'Project Manager',
-    image: '/assets/images/juan-carlos-guana.png',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611680064/quienes-somos/juan-carlos-guana.png',
     href: '#',
   },
 ];
 
 export const team = {
   teamPlayer,
+  title: 'Equipo de trabajo',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque3.png',
+  heightImage: 994,
 };
 
-export const FAQUxUiDesign = {
-  titlePart1: 'Preguntas',
-  titlePart2: 'frecuentes',
+const valores = [
+  {
+    description: 'Difundir el conocimiento tecnológico',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611680184/quienes-somos/difundir-conocimiento.png',
+    isBorderSecondary: true,
+  },
+  {
+    description:
+      'Generar un ambiente laboral de calidad, diverso y respetuoso ',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611680178/quienes-somos/ambiente-laboral-de-calidad.png',
+    isBorderSecondary: false,
+  },
+  {
+    description: 'Entregar nuestras soluciones responsablemente y a tiempo',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611680176/quienes-somos/soluciones-responsables.png',
+    isBorderSecondary: true,
+  },
+  {
+    description: 'Ofrecer soluciones con integridad y ética ',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611680186/quienes-somos/integridad.png',
+    isBorderSecondary: false,
+  },
+  {
+    description: 'Trabajar con pasión por lo que hacemos ',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611680177/quienes-somos/trabajar-con-pasion.png',
+    isBorderSecondary: true,
+  },
+  {
+    description: 'Nunca parar de aprender y perseverar en nuestro trabajo ',
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611680182/quienes-somos/aprender-y-perseverar.png',
+    isBorderSecondary: false,
+  },
+];
+
+export const valoresInitgrammers = {
+  valores,
+  title: 'Nuestro valores',
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque4.png',
+  heightImage: 648,
 };

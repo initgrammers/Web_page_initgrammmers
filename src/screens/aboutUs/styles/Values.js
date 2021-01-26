@@ -4,22 +4,21 @@ const styles = (theme) => ({
   section: {
     padding: theme.spacing(4, 0),
   },
-  containerMisionVision: {
+  values: {
     display: 'flex',
-    flexDirection: 'column',
+    flexWrap: 'wrap',
     justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: `-${theme.spacing(3)}px`,
+    marginBottom: `-${theme.spacing(4)}px`,
+  },
+  title: {
+    paddingBottom: theme.spacing(4),
   },
   [theme.breakpoints.up('sm')]: {
     section: {
       padding: theme.spacing(5, 0),
     },
-    containerMisionVision: {
-      display: 'flex',
-      flexDirection: 'row',
+    values: {
       justifyContent: 'space-between',
-      alignItems: 'center',
     },
   },
   [theme.breakpoints.up('lg')]: {

@@ -2,12 +2,12 @@ import { makeStyles, Box, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
-import CardTeam from '#Components/CardTeam';
-import styles from '../styles/Team';
+import CardValue from '#Components/CardValue';
+import styles from '../styles/Values';
 
 const useStyles = makeStyles(styles);
 
-const TeamAboutUs = ({ title, teamPlayer, backgroundImage, heightImage }) => {
+const Values = ({ title, values, backgroundImage, heightImage }) => {
   const classes = useStyles();
 
   return (
@@ -19,13 +19,12 @@ const TeamAboutUs = ({ title, teamPlayer, backgroundImage, heightImage }) => {
             {title}
           </Typography>
 
-          <Box className={classes.team}>
-            {teamPlayer.map((cardUser) => (
-              <CardTeam
+          <Box className={classes.values}>
+            {values.map((cardUser) => (
+              <CardValue
                 image={cardUser.image}
-                title={cardUser.title}
-                name={cardUser.name}
-                href={cardUser.href}
+                description={cardUser.description}
+                isBorderSecondary={cardUser.isBorderSecondary}
               />
             ))}
           </Box>
@@ -35,22 +34,22 @@ const TeamAboutUs = ({ title, teamPlayer, backgroundImage, heightImage }) => {
   );
 };
 
-TeamAboutUs.propTypes = {
+Values.propTypes = {
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
   title: PropTypes.string.isRequired,
-  teamPlayer: PropTypes.arrayOf(
+  values: PropTypes.arrayOf(
     PropTypes.shape({
-      title: PropTypes.string,
+      description: PropTypes.string,
       image: PropTypes.string,
-      name: PropTypes.string,
-      href: PropTypes.string,
+      isBorderSecondary: PropTypes.bool,
     })
   ).isRequired,
 };
 
-TeamAboutUs.defaultProps = {
+Values.defaultProps = {
   backgroundImage: '',
   heightImage: 0,
 };
-export default TeamAboutUs;
+
+export default Values;

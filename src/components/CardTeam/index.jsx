@@ -1,6 +1,7 @@
 import { Typography, Box, makeStyles, IconButton } from '@material-ui/core';
+import PropTypes from 'prop-types';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import styles from '../styles/CardTeam';
+import styles from './CardTeam';
 
 const useStyles = makeStyles(styles);
 const CardTeam = ({ name, title, image, href }) => {
@@ -21,11 +22,22 @@ const CardTeam = ({ name, title, image, href }) => {
       <Typography className={classes.description} variant="body2">
         {title}
       </Typography>
-      <IconButton className={classes.linkedin} href="/">
+      <IconButton className={classes.linkedin} href={href}>
         <LinkedInIcon />
       </IconButton>
     </Box>
   );
+};
+
+CardTeam.propTypes = {
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  href: PropTypes.string,
+};
+
+CardTeam.defaultProps = {
+  href: '#',
 };
 
 export default CardTeam;
