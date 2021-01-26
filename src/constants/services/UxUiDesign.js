@@ -79,7 +79,7 @@ const uxUiTechnologies = [
   {
     label: 'Adobe XD',
     image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1607085341/servicios/diseno-ux-ui/adobe-xd.svg',
+      '/assets/images/adobe.svg',
   },
   {
     label: 'Adobe Ilustrator',
