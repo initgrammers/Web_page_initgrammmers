@@ -77,6 +77,11 @@ const uxUiTechnologies = [
       'https://res.cloudinary.com/initgrammers/image/upload/v1607085341/servicios/diseno-ux-ui/figma.svg',
   },
   {
+    label: 'Zeplin',
+    image:
+      '/assets/images/zeplin.svg',
+  },
+  {
     label: 'Adobe XD',
     image:
       '/assets/images/adobe.svg',
