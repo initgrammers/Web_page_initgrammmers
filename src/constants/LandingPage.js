@@ -179,40 +179,52 @@ export const carryOutProject = {
 const questions = [
   {
     id: 0,
-    title: '¿Puedo recibir pagos a través de mi aplicación móvil?',
+    title: '¿Cómo me apoyan en el proceso de desarrollo de un proyecto?',
     details:
-      'Si, durante el desarrollo de aplicaciones móviles podemos integrar una pasarela de pagos a tu aplicación móvil para que puedas vender productos o servicios.',
+      'Te asesoramos para alcanzar el éxito, ya sea que necesites desarrollo de aplicaciones móviles, una tienda electrónica, una página web, diseño UX UI, capacitaciones, posicionamiento en buscadores o más. Somos parte de todo el proceso contigo, utilizando metodologías de trabajo ágiles, te ayudado a crear el mejor producto y a alcanzar el éxito.',
   },
   {
     id: 1,
-    title: '¿A qué tiendas de aplicaciones móviles se puede subir mi producto?',
+    title: '¿En qué consisten los modelos de partnership?',
     details:
-      'Dependiendo del tipo de aplicación que desees,  el desarrollo de aplicaciones móviles puede ser dirigido para que se pueda desplegar la aplicación móvil en una o todas las tiendas de aplicaciones móviles como Google Play Store, App Store de Apple, entre otras, según los requerimientos que tengas.',
+      'Un modelo de partnership nos permite adaptarnos a tus necesidades para ofrecerte el mejor servicio, esta asociación puede ser un proyecto a precio fijo con contratos establecidos, o podemos unirnos a tu equipo de desarrollo para brindar una mano. ¿No tienes equipo de IT? No hay problema, podemos convertirnos en tu equipo de tecnología para ayudarte a completar los proyectos.',
   },
   {
     id: 2,
     title:
-      '¿Puedo agregar más funcionalidades a mi aplicación después de terminado el desarrollo?',
+      '¿Pueden ayudarme a crear una página web para mi negocio?',
     details:
-      'Si, creamos aplicaciones modulares, que permiten que se agreguen nuevas funcionalidades en el futuro, trabajamos con buenas prácticas de código para desarrollar las aplicaciones móviles, lo que te permitirá escalar tu producto en el futuro.',
+      'Sí, ofrecemos el servicio de desarrollo y programación de páginas web.',
   },
   {
     id: 3,
-    title: 'Aún  no sé qué tipo de aplicación móvil escoger',
+    title: '¿Qué tipo de capacitaciones ofrecen?',
     details:
-      'No hay problema, contamos con servicio de asesoría y diseño de producto para entender mejor tus necesidades y optimizar tu presupuesto y recursos, así desarrollar la mejor aplicación para solucionar tu problema, contáctanos.',
+      'Ofrecemos capacitaciones en tecnología en línea para personas de todas las edades, en temas de programación y diseño digital. Escríbenos para recibir más información.',
   },
   {
     id: 4,
-    title: '¿En qué dispositivos se puede utilizar mi aplicación móvil?',
+    title: '¿Quiero contratar el servicio de programación, pero no tengo una interfaz gráfica para mi proyecto, me pueden ayudar?',
     details:
-      'Desarrollamos aplicaciones móviles para todos los dispositivos móviles: tablets, celulares, computadoras.',
+      'Fusionamos el diseño y el desarrollo en cada uno de los proyectos siguiendo las normas de las más recientes tecnologías. Nuestro trabajo es asesorarte para que puedas elegir la mejor opción para llevar a cabo esa idea que tienes en mente. A través de la tecnología te ayudamos a cumplir tus objetivos con un trabajo a tiempo y orientado a resultados.',
   },
   {
     id: 5,
-    title: 'Aún  no sé qué tipo de aplicación móvil escoger',
+    title: '¿Cuánto tiempo se tardan en desarrollar un proyecto?',
     details:
-      'No hay problema, contamos con servicio de asesoría y diseño de producto para entender mejor tus necesidades y optimizar tu presupuesto y recursos, así desarrollar la mejor aplicación para solucionar tu problema, contáctanos. ',
+      'Dependiendo de los requerimientos del proyecto y los servicios que requieran, sea programación, diseño, guías de marca, etc. Un proyecto puede variar su duración, contáctanos para recibir una estimación de costos y tiempo de tu proyecto. ',
+  },
+  {
+    id: 6,
+    title: '¿Qué tipo de aplicaciones móviles pueden desarrollar?',
+    details:
+      'Nos enorgullecemos de poder manejar múltiples tecnologías y servicios, aplicaciones móviles para Android, iOS o de tipo multiplataforma.',
+  },
+  {
+    id: 7,
+    title: '¿Qué servicios de programación ofrecen?',
+    details:
+      'Contamos con un equipo multidisciplinario, programadores Backend, Frontend y Full Stack, lo que asegura el éxito del desarrollo de tu proyecto o software. ',
   },
 ];
 

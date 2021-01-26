@@ -191,40 +191,28 @@ export const optionsShopOnline = {
 const questions = [
   {
     id: 0,
-    title: '¿Puedo recibir pagos a través de mi aplicación móvil?',
+    title: '¿Qué plataforma usan para crear la Tienda Online E-commerce?',
     details:
-      'Si, durante el desarrollo de aplicaciones móviles podemos integrar una pasarela de pagos a tu aplicación móvil para que puedas vender productos o servicios.',
+      'Usamos WordPress (sistema de gestión de contenidos) en conjunto con WooCommerce, para la creación de tiendas virtuales, es fácil de usar, y contiene características de utilidad tanto para el cliente como administrador.',
   },
   {
     id: 1,
-    title: '¿A qué tiendas de aplicaciones móviles se puede subir mi producto?',
+    title: '¿Puedo crear una tienda online en Facebook shops e Instagram shops sin tener un e-commerce?',
     details:
-      'Dependiendo del tipo de aplicación que desees,  el desarrollo de aplicaciones móviles puede ser dirigido para que se pueda desplegar la aplicación móvil en una o todas las tiendas de aplicaciones móviles como Google Play Store, App Store de Apple, entre otras, según los requerimientos que tengas.',
+      'Si, Facebook e Instagram tiene la funcionalidad de comprar en la misma red social, sin tener que dirigirte a un sitio web e-commerce para finalizar la compra.',
   },
   {
     id: 2,
     title:
-      '¿Puedo agregar más funcionalidades a mi aplicación después de terminado el desarrollo?',
+      '¿Tengo un negocio, pero no tengo muy claro cuál es la mejor opción de tienda online para mí?',
     details:
-      'Si, creamos aplicaciones modulares, que permiten que se agreguen nuevas funcionalidades en el futuro, trabajamos con buenas prácticas de código para desarrollar las aplicaciones móviles, lo que te permitirá escalar tu producto en el futuro.',
+      'No hay problema, contamos con servicio de asesoría para entender mejor tus necesidades y optimizar tu presupuesto, recursos, y así definir cual es la mejor opción para ti, contáctanos.',
   },
   {
     id: 3,
-    title: 'Aún  no sé qué tipo de aplicación móvil escoger',
+    title: '¿Si contrato la tienda online e-commerce, voy a recibir alguna asesoría que me expliquen cómo usar dicha tienda?',
     details:
-      'No hay problema, contamos con servicio de asesoría y diseño de producto para entender mejor tus necesidades y optimizar tu presupuesto y recursos, así desarrollar la mejor aplicación para solucionar tu problema, contáctanos.',
-  },
-  {
-    id: 4,
-    title: '¿En qué dispositivos se puede utilizar mi aplicación móvil?',
-    details:
-      'Desarrollamos aplicaciones móviles para todos los dispositivos móviles: tablets, celulares, computadoras.',
-  },
-  {
-    id: 5,
-    title: 'Aún  no sé qué tipo de aplicación móvil escoger',
-    details:
-      'No hay problema, contamos con servicio de asesoría y diseño de producto para entender mejor tus necesidades y optimizar tu presupuesto y recursos, así desarrollar la mejor aplicación para solucionar tu problema, contáctanos. ',
+      'Si, una vez que te entregamos la tienda online E-commerce, el siguiente paso es realizar una capacitación básica de como usar la tienda, con el fin de que puedas subir tus nuevos productos a la tienda, además de la administración básica. Esta capacitación es gratuita y viene establecida en el contrato.',
   },
 ];
 export const FAQUxUiDesign = {

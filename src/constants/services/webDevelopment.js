@@ -70,36 +70,6 @@ export const sliderWebTechnologies = {
   title: 'Tecnologías con las que trabajamos para el desarrollo web',
   technologies: webTechnologies,
 };
-export const questions = [
-  {
-    id: 0,
-    title: '¿Cómo mejoraría mi produccción?',
-    details: ` Tus productos estarían disponibles en todo el mundo, se podrían
-                hacer los pedidos con mucha facilildad y efectividad. Con un
-                excelente servicio desde q usted se conecta con nosostros.`,
-  },
-  {
-    id: 1,
-    title: '¿Cómo mejoraría mi produccción?',
-    details: `Tus productos estarían disponibles en todo el mundo, se podrían
-                hacer los pedidos con mucha facilildad y efectividad. Con un
-                excelente servicio desde q usted se conecta con nosostros.`,
-  },
-  {
-    id: 2,
-    title: '¿Cómo mejoraría mi produccción?',
-    details: `Tus productos estarían disponibles en todo el mundo, se podrían
-                hacer los pedidos con mucha facilildad y efectividad. Con un
-                excelente servicio desde q usted se conecta con nosostros.`,
-  },
-  {
-    id: 3,
-    title: '¿Cómo mejoraría mi produccción?',
-    details: `Tus productos estarían disponibles en todo el mundo, se podrían
-                hacer los pedidos con mucha facilildad y efectividad. Con un
-                excelente servicio desde q usted se conecta con nosostros.`,
-  },
-];
 
 const typesApplication = [
   {
@@ -186,4 +156,63 @@ export const partOfInternet = {
     'https://res.cloudinary.com/initgrammers/image/upload/v1609857474/servicios/desarrollo-web/figures/bloque6.png',
   heightImage: 944,
   imageSizes: imageSizesPartOfInternet,
+};
+
+export const questions = [
+  {
+    id: 0,
+    title: '¿Cuáles son los beneficios de tener una página web? ',
+    details:
+      'Una página web añade valor a tus productos y/o servicios, también nos ayuda a promocionar productos y/o servicios a los clientes, pero además nos ayuda a conseguir nuevos clientes y ahorrar muchísimo en publicidad.',
+  },
+  {
+    id: 1,
+    title: '¿Puedo recibir pagos por ventas en mi página web? ',
+    details:
+      'Si, te ayudamos a crear una página web para desplegar una tienda e-commerce, donde puedes ofertar tus productos y recibir pagos, para conocer más sobre este tipo de tienda click aquí.',
+  },
+  {
+    id: 2,
+    title: '¿Puedo mostrar el catálogo de mis productos en la página web?',
+    details:
+      'Si, te ayudamos a escoger entre varias opciones para mostrar el catálogo de tus productos en tu página web, de acuerdo a tu marca y el diseño más atractivo para llegar a tus clientes',
+  },
+  {
+    id: 3,
+    title:
+      '¿Pueden mis clientes contactarme a través de WhatsApp desde mi página?',
+    details:
+      'Si, colocamos un botón de WhatsApp en las páginas web, donde tus clientes pueden contactarse contigo a cualquier hora. ',
+  },
+  {
+    id: 4,
+    title: 'Ya tengo una página ¿Pueden ayudarme a mejorarla?',
+    details:
+      'Mantener actualizado tu sitio web es primordial, pues un diseño antiguo o desorganizado puede proyecta una  imagen incorrecta de tu negocio y quienes visitan tu sitio no se quedan por la apariencia desactualizada o largos tiempos de carga. Te asesoramos en mejorar la imagen de tu página web para que tenga un diseño atractivo y  contenido actualizado. ',
+  },
+  {
+    id: 5,
+    title: '¿Por que una página web es una buena opción para tu empresa?',
+    details:
+      'Para cualquier organización empresarial, su sitio web es la primera impresión y habla sobre el trabajo que ha realizado, brinda credibilidad ante clientes potenciales y ayuda a posicionarse en los buscadores. Una buena presencia en línea comienza con un sitio web, el cual  ayuda a conseguir más visitantes y clientes nuevos. Por lo tanto, desarrollar un sitio web de calidad es una necesidad hoy en día para tener una ventaja sobre la competencia. ',
+  },
+  {
+    id: 6,
+    title: '¿Como puedo tener un dominio con el nombre de mi negocio?',
+    details:
+      'Si aún no tienes un dominio a nombre de tu negocio te asesoramos para conseguir uno para que tus clientes puedan recordarlo y encontrarlo fácilmente.',
+  },
+  {
+    id: 7,
+    title:
+      '¿Pueden ayudarme para salir entre los primeros resultados en Google?',
+    details:
+      'Si, ofrecemos asesoría en SEO para que tu página web salga en los primeros resultados, el posicionamiento de tu marca en línea te ayudará a conseguir más clientes.',
+  },
+];
+
+export const FAQWeb = {
+  titlePart1: 'Preguntas',
+  titlePart2: 'frecuentes',
+  questions,
 };
