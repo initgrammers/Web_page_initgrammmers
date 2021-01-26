@@ -32,6 +32,8 @@ const CallToActionSection = ({
             emphasis={titlePart2}
             tail={titlePart3}
             align="center"
+            variant="h1"
+            component="h2"
             mb={0}
           />
           <Typography variant="body1" className={classes.description}>

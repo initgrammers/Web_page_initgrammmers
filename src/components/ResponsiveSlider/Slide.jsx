@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Container from './Container';
 import Image from './Image';
@@ -7,23 +7,30 @@ const Slide = ({ data, step, showTitleImage, imageIsLarge }) => {
   const lengthData = data.length;
   const [index, setIndex] = useState({
     from: 0,
-    to: 1,
+    to: step,
   });
+
+  useEffect(() => {
+    setIndex({
+      from: 0,
+      to: step,
+    });
+  }, [step]);
 
   const onNextStep = () =>
     setIndex((prev) => {
-      const newFrom = prev.from + step;
-      const newTo = prev.to + step;
-      if (newTo > lengthData - 1 || newFrom > lengthData - 1) {
-        return { from: lengthData - step, to: lengthData - 1 };
+      const newFrom = prev.from + step - 1;
+      const newTo = prev.to + step - 1;
+      if (newTo >= lengthData - 1 || newFrom >= lengthData - 1) {
+        return { from: lengthData - step, to: lengthData };
       }
       return { from: newFrom, to: newTo };
     });
 
   const onPrevStep = () =>
     setIndex((prev) => {
-      const newFrom = prev.from - step;
-      const newTo = prev.to - step;
+      const newFrom = prev.from - step + 1;
+      const newTo = prev.to - step + 1;
       if (newTo <= 0 || newFrom <= 0) {
         return { from: 0, to: step };
       }
@@ -32,10 +39,10 @@ const Slide = ({ data, step, showTitleImage, imageIsLarge }) => {
 
   const arrayData = [];
   const limitDown = index.from > index.to ? index.to : index.from;
-  const islimitUp = lengthData - 1 === index.to;
+  const islimitUp = lengthData <= index.to;
 
   if (islimitUp) {
-    for (let i = index.to - step + 1; i <= index.to; i += 1) {
+    for (let i = index.to - step; i <= index.to - 1; i += 1) {
       arrayData.push(i);
     }
   } else {
