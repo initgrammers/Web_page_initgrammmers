@@ -30,7 +30,7 @@ const Service = ({
         >
           {icon}
           <Box className={classes.descriptionService}>
-            <Typography component="subtitle1" color="inherit">
+            <Typography variant="subtitle1" color="inherit">
               {title}
             </Typography>
             <Typography variant="caption" color="inherit">

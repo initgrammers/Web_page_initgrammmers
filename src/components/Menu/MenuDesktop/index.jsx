@@ -40,6 +40,7 @@ const MenuDesktop = ({
           {menuInitgrammers.menu.map((item, key) =>
             item?.items?.length > 0 ? (
               <Button
+                key={key}
                 aria-controls="menu-servicios"
                 aria-haspopup="true"
                 onClick={handleDrawerOpen}
