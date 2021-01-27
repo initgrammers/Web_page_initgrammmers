@@ -9,7 +9,7 @@ const styles = (theme) => ({
 
   button: {
     textTransform: 'capitalize',
-    padding: `0 ${theme.spacing(2)}px`,
+    margin: `0 ${theme.spacing(2)}px`,
   },
   services: {
     textTransform: 'capitalize',

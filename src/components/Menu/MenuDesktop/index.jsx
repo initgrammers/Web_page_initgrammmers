@@ -1,3 +1,4 @@
+/* eslint-disable no-confusing-arrow */
 import {
   makeStyles,
   Button,
@@ -6,7 +7,6 @@ import {
   Hidden,
   Fade,
 } from '@material-ui/core';
-import Link from 'next/link';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import PropTypes from 'prop-types';
@@ -15,18 +15,11 @@ import CustomLink from '#Components/CustomLink';
 import styles from '../styles/MenuDesktop';
 import ContactUsButton from '#Components/ContacUsButton';
 import { contactsLinks } from '#app/constants/contacts';
-import routes from '#app/routes/';
 import Options from './Options';
 import OutsideAlerter from './Outsider';
+import { menuInitgrammers } from '#constants/Menu';
 
 const useStyles = makeStyles(styles);
-
-const menu = [
-  { label: 'Portafolio', href: routes.portfolio },
-  // { label: '¿Quiénes somos?', href: routes.aboutUs },
-  // { label: 'Blog', href: routes.blog },
-  // { label: 'Contacto', href: routes.contact },
-];
 
 const MenuDesktop = ({
   showServices,
@@ -44,27 +37,29 @@ const MenuDesktop = ({
           </Button>
         </CustomLink>
         <Box className={classes.sectionMenu}>
-          <Button
-            aria-controls="menu-servicios"
-            aria-haspopup="true"
-            onClick={handleDrawerOpen}
-            color="inherit"
-            endIcon={showServices ? <ExpandLess /> : <ExpandMore />}
-          >
-            <Typography className={classes.services} variant="body2">
-              Servicios
-            </Typography>
-          </Button>
-
-          {menu.map((item, key) => (
-            <Link key={key} href={item.href}>
-              <a className={classes.button}>
-                <Typography variant="body2" align="center">
-                  {item.label}
+          {menuInitgrammers.menu.map((item, key) =>
+            item?.items?.length > 0 ? (
+              <Button
+                aria-controls="menu-servicios"
+                aria-haspopup="true"
+                onClick={handleDrawerOpen}
+                color="inherit"
+                endIcon={showServices ? <ExpandLess /> : <ExpandMore />}
+              >
+                <Typography className={classes.services} variant="body2">
+                  Servicios
                 </Typography>
-              </a>
-            </Link>
-          ))}
+              </Button>
+            ) : (
+              <CustomLink key={key} href={item.href}>
+                <Button onClick={handleClose} className={classes.button}>
+                  <Typography variant="body2" align="center">
+                    {item.title}
+                  </Typography>
+                </Button>
+              </CustomLink>
+            )
+          )}
         </Box>
         <Box>
           <Hidden mdDown>
