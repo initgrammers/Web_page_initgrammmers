@@ -20,8 +20,9 @@ const TeamAboutUs = ({ title, teamPlayer, backgroundImage, heightImage }) => {
           </Typography>
 
           <Box className={classes.team}>
-            {teamPlayer.map((cardUser) => (
+            {teamPlayer.map((cardUser, key) => (
               <CardTeam
+                key={key}
                 image={cardUser.image}
                 title={cardUser.title}
                 name={cardUser.name}

@@ -20,11 +20,12 @@ const Values = ({ title, values, backgroundImage, heightImage }) => {
           </Typography>
 
           <Box className={classes.values}>
-            {values.map((cardUser) => (
+            {values.map((valueInitgrammers, key) => (
               <CardValue
-                image={cardUser.image}
-                description={cardUser.description}
-                isBorderSecondary={cardUser.isBorderSecondary}
+                key={key}
+                image={valueInitgrammers.image}
+                description={valueInitgrammers.description}
+                isBorderSecondary={valueInitgrammers.isBorderSecondary}
               />
             ))}
           </Box>
