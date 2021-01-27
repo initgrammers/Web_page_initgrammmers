@@ -28,6 +28,15 @@ const styles = (theme) => ({
   contactUs: {
     marginLeft: theme.spacing(4),
   },
+  fade: {
+    position: 'absolute',
+    top: '100%',
+    left: 0,
+    width: '100%',
+    background: 'white',
+    boxShadow:
+      'rgba(0, 0, 0, 0.25) 0px 4px 4px, rgba(0, 0, 0, 0.25) 0px 4px 4px inset',
+  },
 });
 
 styles.propTypes = {

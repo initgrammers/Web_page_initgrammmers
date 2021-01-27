@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import clsx from 'clsx';
 import data from '#constants/Menu';
-import styles from './styles/Options';
+import styles from '../styles/Options';
 
 const useStyles = makeStyles(styles);
 
