@@ -25,6 +25,7 @@ const styles = (theme) => ({
     alignItems: 'center',
     height: 56,
   },
+  appbar: { background: 'white', position: 'relative' },
 });
 
 styles.propTypes = {

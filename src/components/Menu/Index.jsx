@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import MenuDesktop from './MenuDesktop';
 import styles from '../../assets/styles/Menu';
 import MobileMenu from './MenuMobile';
+import CustomDrawer from './MenuMobile/CustomDrawer';
+import OutsideAlerter from './MenuDesktop/Outsider';
 
 const useStyles = makeStyles(styles);
 
@@ -20,7 +22,7 @@ const CustomMenu = ({ indexMenu }) => {
 
   return (
     <>
-      <AppBar component="nav" position="sticky" bgcolor="white">
+      <AppBar component="nav" position="sticky" className={classes.appbar}>
         <Toolbar className={classes.main}>
           <Hidden mdUp>
             <MobileMenu
@@ -39,6 +41,15 @@ const CustomMenu = ({ indexMenu }) => {
             />
           </Hidden>
         </Toolbar>
+        <Hidden mdUp>
+          <OutsideAlerter callback={handleClose}>
+            <CustomDrawer
+              open={showNav}
+              onClose={handleClose}
+              indexMenu={indexMenu}
+            />
+          </OutsideAlerter>
+        </Hidden>
       </AppBar>
     </>
   );

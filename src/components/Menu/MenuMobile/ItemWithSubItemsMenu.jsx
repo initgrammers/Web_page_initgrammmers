@@ -39,13 +39,13 @@ const ItemWithSubItemsMenu = ({
   return (
     <>
       {subMenu.length > 0 ? (
-        <ListItem button onClick={handleClick}>
+        <ListItem className={clsx(classes.nested)} button onClick={handleClick}>
           <ListItemText primary={titleMenu} />
           {hasSubmenu}
         </ListItem>
       ) : (
         <CustomLink ref={ref} href={href}>
-          <ListItem button onClick={onClose}>
+          <ListItem className={clsx(classes.nested)} button onClick={onClose}>
             <ListItemText primary={titleMenu} />
           </ListItem>
         </CustomLink>

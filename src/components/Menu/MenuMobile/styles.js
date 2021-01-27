@@ -5,8 +5,15 @@ const styles = (theme) => ({
     justifyContent: 'space-between',
   },
   drawer: {
-    flexShrink: 0,
+    position: 'absolute',
+    top: '103%',
+    left: 0,
+    background: 'white',
     width: '100%',
+  },
+  nested: {
+    color: theme.palette.primary.snackBar,
+    paddingLeft: theme.spacing(4),
   },
   selected: {
     color: theme.palette.primary.contrastText,
@@ -18,9 +25,7 @@ const styles = (theme) => ({
       background: theme.palette.primary.main,
     },
   },
-  nested: {
-    paddingLeft: theme.spacing(4),
-  },
+
   button: {
     color: theme.palette.primary.main,
     margin: 0,

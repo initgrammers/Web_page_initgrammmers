@@ -1,23 +1,15 @@
 import PropTypes from 'prop-types';
-import { makeStyles, Drawer } from '@material-ui/core';
+import { Collapse, makeStyles } from '@material-ui/core';
 import ListMenu from './ListMenu';
 import styles from './styles';
 
 const useStyles = makeStyles(styles);
-
 const CustomDrawer = ({ open, onClose, indexMenu }) => {
   const classes = useStyles();
-
   return (
-    <Drawer
-      className={classes.drawer}
-      anchor="top"
-      variant="temporary"
-      open={open || false}
-      onClose={onClose || null}
-    >
+    <Collapse in={open} className={classes.drawer} unmountOnExit>
       <ListMenu indexMenu={indexMenu} onClose={onClose} />
-    </Drawer>
+    </Collapse>
   );
 };
 

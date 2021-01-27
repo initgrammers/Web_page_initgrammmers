@@ -3,18 +3,12 @@ import { Button, Box, makeStyles } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
-import MobileDrawer from './CustomDrawer';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
 import styles from './styles';
 
 const useStyles = makeStyles(styles);
 
-const AppBarMobile = ({
-  showDrawer,
-  handleDrawerOpen,
-  handleClose,
-  indexMenu,
-}) => {
+const AppBarMobile = ({ showDrawer, handleDrawerOpen }) => {
   const classes = useStyles();
 
   return (
@@ -33,11 +27,6 @@ const AppBarMobile = ({
           <LogoInitgrammers />
         </Button>
       </Box>
-      <MobileDrawer
-        open={showDrawer}
-        onClose={handleClose}
-        indexMenu={indexMenu}
-      />
     </>
   );
 };
@@ -45,8 +34,6 @@ const AppBarMobile = ({
 AppBarMobile.propTypes = {
   showDrawer: PropTypes.bool,
   handleDrawerOpen: PropTypes.func.isRequired,
-  handleClose: PropTypes.func.isRequired,
-  indexMenu: PropTypes.string.isRequired,
 };
 AppBarMobile.defaultProps = {
   showDrawer: false,
