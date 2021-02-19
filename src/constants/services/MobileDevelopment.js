@@ -223,5 +223,5 @@ const questions = [
 export const FAQMobileDevelopment = {
   titlePart1: 'Preguntas',
   titlePart2: 'frecuentes',
-  questions: questions,
+  questions,
 };
