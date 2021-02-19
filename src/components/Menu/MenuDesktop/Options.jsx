@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import clsx from 'clsx';
 import data from '#constants/Menu';
-import styles from './styles/Options';
+import styles from '../styles/Options';
 
 const useStyles = makeStyles(styles);
 
@@ -30,7 +30,7 @@ const Service = ({
         >
           {icon}
           <Box className={classes.descriptionService}>
-            <Typography component="subtitle1" color="inherit">
+            <Typography variant="subtitle1" color="inherit">
               {title}
             </Typography>
             <Typography variant="caption" color="inherit">

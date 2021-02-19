@@ -1,23 +1,11 @@
 import React, { useState } from 'react';
-import {
-  Button,
-  Fade,
-  Box,
-  Hidden,
-  Toolbar,
-  AppBar,
-  makeStyles,
-} from '@material-ui/core';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
+import { Hidden, Toolbar, AppBar, makeStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import Options from './Options';
-import OutsideAlerter from '../Outsider';
-import LogoInitgrammers from '#svg/LogoInitgrammers';
 import MenuDesktop from './MenuDesktop';
 import styles from '../../assets/styles/Menu';
-import CustomLink from '#Components/CustomLink';
+import MobileMenu from './MenuMobile';
+import CustomDrawer from './MenuMobile/CustomDrawer';
+import OutsideAlerter from './MenuDesktop/Outsider';
 
 const useStyles = makeStyles(styles);
 
@@ -34,47 +22,34 @@ const CustomMenu = ({ indexMenu }) => {
 
   return (
     <>
-      <AppBar component="nav" position="sticky" bgcolor="white">
+      <AppBar component="nav" position="sticky" className={classes.appbar}>
         <Toolbar className={classes.main}>
           <Hidden mdUp>
-            <Box className={classes.sectionLogo}>
-              <CustomLink href="/">
-                <Button className={classes.logo} aria-label="logo Initgrammers">
-                  <LogoInitgrammers />
-                </Button>
-              </CustomLink>
-            </Box>
-
-            <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="menu"
-              onClick={handleDrawerOpen}
-            >
-              {showNav ? <CloseIcon /> : <MenuIcon />}
-            </IconButton>
+            <MobileMenu
+              showDrawer={showNav}
+              handleDrawerOpen={handleDrawerOpen}
+              handleClose={handleClose}
+              indexMenu={indexMenu}
+            />
           </Hidden>
-
           <Hidden smDown>
             <MenuDesktop
               showServices={showNav}
               handleDrawerOpen={handleDrawerOpen}
+              handleClose={handleClose}
+              indexMenu={indexMenu}
             />
           </Hidden>
         </Toolbar>
-
-        <Fade timeout={800} in={showNav} className={classes.fade}>
-          <Box bgcolor="white">
-            <OutsideAlerter callback={handleClose}>
-              <Options
-                visible={showNav}
-                indexMenu={indexMenu}
-                handleDrawerOpen={handleDrawerOpen}
-              />
-            </OutsideAlerter>
-          </Box>
-        </Fade>
+        <Hidden mdUp>
+          <OutsideAlerter callback={handleClose}>
+            <CustomDrawer
+              open={showNav}
+              onClose={handleClose}
+              indexMenu={indexMenu}
+            />
+          </OutsideAlerter>
+        </Hidden>
       </AppBar>
     </>
   );

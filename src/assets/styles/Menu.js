@@ -9,15 +9,6 @@ const styles = (theme) => ({
     },
     color: theme.palette.common.black,
   },
-  fade: {
-    position: 'absolute',
-    top: '100%',
-    left: 0,
-    width: '100%',
-    background: 'white',
-    boxShadow:
-      'rgba(0, 0, 0, 0.25) 0px 4px 4px, rgba(0, 0, 0, 0.25) 0px 4px 4px inset',
-  },
   sectionLogo: {
     display: 'flex',
     flex: 1,
@@ -34,6 +25,7 @@ const styles = (theme) => ({
     alignItems: 'center',
     height: 56,
   },
+  appbar: { background: 'white', position: 'relative' },
 });
 
 styles.propTypes = {
