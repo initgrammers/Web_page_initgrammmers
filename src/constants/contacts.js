@@ -7,6 +7,7 @@ export const contactsLinks = {
   shopEcommercePage: 'https://wa.link/vqos7m',
   marketingDigitalPage: 'https://wa.link/1fn4d2',
   seoPage: 'https://wa.link/yfa9q0',
+  aboutUsPage: 'https://wa.link/yfa9q0',
   consulting: 'https://wa.link/epqpye',
   teamMessage: 'https://wa.link/uc2mmv',
   writeUs:

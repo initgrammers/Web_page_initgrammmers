@@ -17,7 +17,7 @@ const styles = (theme) => ({
   containerImage: {
     display: 'flex',
     justifyContent: 'center',
-    margin: `${theme.spacing(4)}px 0`,
+    padding: `${theme.spacing(4)}px 0`,
   },
   image: {
     width: 288,
