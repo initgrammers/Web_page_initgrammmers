@@ -208,3 +208,18 @@ export const oportunitieSEO = {
   heightImage: 895,
   imageSizes: imageSizesOportunitiesSEO,
 };
+
+export const questions = [
+  {
+    id: 0,
+    title: '¿Si contrato el servicio de SEO, mi página se encontrará en la primera posición de las búsquedas en Google?',
+    details:
+      'No te podemos asegurar que se encuentre en la primera posición de un día para el otro, ya que el SEO es un proceso a mediano a largo plazo, sin embargo, te ayudaremos a que tu página web se encuentre entre las primeras posiciones de los resultados de las búsquedas.',
+  },
+];
+
+export const FAQSEO = {
+  titlePart1: 'Preguntas',
+  titlePart2: 'frecuentes',
+  questions,
+};

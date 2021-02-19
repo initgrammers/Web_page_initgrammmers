@@ -60,4 +60,25 @@ const data = [
   },
 ];
 
+const aboutUs = {
+  id: 'AboutUs',
+  title: 'Quiénes somos',
+  href: routes.services.seo,
+};
+
+const portfolio = {
+  id: 'portfolio',
+  title: 'Portafolio',
+  href: routes.services.webDevelopment,
+};
+
+export const menuServices = {
+  title: 'Servicios',
+  items: data,
+};
+
+export const menuInitgrammers = {
+  menu: [menuServices, aboutUs, portfolio],
+};
+
 export default data;

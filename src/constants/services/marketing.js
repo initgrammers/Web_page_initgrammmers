@@ -183,3 +183,24 @@ export const increaseSalesMarketingDigital = {
   heightImage: 932,
   imageSizes: imageSizesIncreaseSales,
 };
+
+export const questions = [
+  {
+    id: 0,
+    title: '¿Realizan campañas de publicidad en Facebook e Instagram?',
+    details:
+      'Si, te ayudamos a crear publicidad de tus eventos, publicaciones de acuerdo a tus necesidades, segmentación de público, además podrás medir el impacto de la publicidad.',
+  },
+  {
+    id: 1,
+    title: '¿Si contrato el servicio de SEO, mi página se encontrará en la primera posición de las búsquedas en Google?',
+    details:
+      'No te podemos asegurar que se encuentre en la primera posición de un día para el otro, ya que el SEO es un proceso a mediano a largo plazo, sin embargo, te ayudaremos a que tu página web se encuentre entre las primeras posiciones de los resultados de las búsquedas.',
+  },
+];
+
+export const FAQMarketing = {
+  titlePart1: 'Preguntas',
+  titlePart2: 'frecuentes',
+  questions,
+};

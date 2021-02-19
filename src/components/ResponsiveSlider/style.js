@@ -21,6 +21,7 @@ const styles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
+    fontSize: '0.8rem',
     height: `${imageIsLarge ? '41px' : '134px'}`,
   }),
   image: {

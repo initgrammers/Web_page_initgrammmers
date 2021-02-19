@@ -1,11 +1,11 @@
 import FAQ from '#Components/FAQ';
-import { FAQLandingPage } from '#constants/LandingPage';
+import { FAQSEO } from '#constants/services/seo';
 
 const Questions = () => (
   <FAQ
-    titlePart1={FAQLandingPage.titlePart1}
-    titlePart2={FAQLandingPage.titlePart2}
-    questions={FAQLandingPage.questions}
+    titlePart1={FAQSEO.titlePart1}
+    titlePart2={FAQSEO.titlePart2}
+    questions={FAQSEO.questions}
   />
 );
 

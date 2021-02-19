@@ -1,5 +1,5 @@
 import FAQ from '#Components/FAQ';
-import { FAQUxUiDesign } from '#constants/services/UxUiDesign';
+import { FAQUxUiDesign } from '#constants/services/ShopOnline';
 
 const Questions = () => (
   <FAQ
