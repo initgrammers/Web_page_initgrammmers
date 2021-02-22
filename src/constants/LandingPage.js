@@ -4,7 +4,7 @@ export const bannerLandingPage = {
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1607008550/LandingPage/figures/bloque1.png',
   heightImage: 672,
-  title: 'Desarrollo y diseño de software al alcande de tus manos',
+  title: 'Desarrollo y diseño de aplicaciones al alcande de tus manos',
   description:
     'Descubre el mundo digital, te ayudamos a construir aplicaciones y programas de principio a fin',
   image:
@@ -191,8 +191,7 @@ const questions = [
   },
   {
     id: 2,
-    title:
-      '¿Pueden ayudarme a crear una página web para mi negocio?',
+    title: '¿Pueden ayudarme a crear una página web para mi negocio?',
     details:
       'Sí, ofrecemos el servicio de desarrollo y programación de páginas web.',
   },
@@ -204,7 +203,8 @@ const questions = [
   },
   {
     id: 4,
-    title: '¿Quiero contratar el servicio de programación, pero no tengo una interfaz gráfica para mi proyecto, me pueden ayudar?',
+    title:
+      '¿Quiero contratar el servicio de programación, pero no tengo una interfaz gráfica para mi proyecto, me pueden ayudar?',
     details:
       'Fusionamos el diseño y el desarrollo en cada uno de los proyectos siguiendo las normas de las más recientes tecnologías. Nuestro trabajo es asesorarte para que puedas elegir la mejor opción para llevar a cabo esa idea que tienes en mente. A través de la tecnología te ayudamos a cumplir tus objetivos con un trabajo a tiempo y orientado a resultados.',
   },
