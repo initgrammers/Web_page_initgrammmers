@@ -50,7 +50,7 @@ NeedAnUpdate.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  backgroundImage: PropTypes.isRequired,
+  backgroundImage: PropTypes.string.isRequired,
   ornamentImage: PropTypes.string.isRequired,
 };
 
