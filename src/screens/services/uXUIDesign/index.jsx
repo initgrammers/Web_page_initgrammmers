@@ -7,6 +7,10 @@ import UxUiDesign from './sections/UxUiDesign';
 import SliderTech from './sections/SliderTech';
 import SEO from '#Components/SEO';
 import UxUiDesignSeo from '#constants/seo/UxUiDesign';
+import Organization from '#Components/StructuredData/Organization';
+import WebSite from '#Components/StructuredData/WebSite';
+import Article from '#Components/StructuredData/Article';
+import { innovateDesign } from '#constants/services/UxUiDesign';
 
 const index = () => (
   <>
@@ -18,6 +22,15 @@ const index = () => (
     <DesignAdaptedToYourBrand />
     <UnforgettableExperiences />
     <Questions />
+
+    <Organization />
+    <WebSite title={UxUiDesignSeo.title} url={UxUiDesignSeo.urlAltern} />
+    <Article
+      title={UxUiDesignSeo.title}
+      description={UxUiDesignSeo.description}
+      url={UxUiDesignSeo.urlAltern}
+      mainArticle={innovateDesign.description}
+    />
   </>
 );
 
