@@ -5,6 +5,8 @@ import Subtitle from '#Components/Subtitle';
 import Link from '#Components/CustomLink';
 import SEO from '#Components/SEO';
 import Building from '#app/constants/seo/Building';
+import Organization from '#Components/StructuredData/Organization';
+import WebSite from '#Components/StructuredData/WebSite';
 
 const useStyles = makeStyles(styles);
 const NotFountPage = () => {
@@ -31,6 +33,9 @@ const NotFountPage = () => {
           </Link>
         </Box>
       </Box>
+
+      <Organization />
+      <WebSite title={Building.title} url={Building.urlAltern} />
     </>
   );
 };

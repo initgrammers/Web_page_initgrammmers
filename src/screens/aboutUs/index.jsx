@@ -4,6 +4,8 @@ import SEO from '#Components/SEO';
 import AboutUsSeo from '#constants/seo/AboutUs';
 import Team from './sections/Team';
 import Values from './sections/Values';
+import Organization from '#Components/StructuredData/Organization';
+import WebSite from '#Components/StructuredData/WebSite';
 
 const Index = () => (
   <>
@@ -12,6 +14,9 @@ const Index = () => (
     <MisionVision />
     <Team />
     <Values />
+
+    <Organization />
+    <WebSite title={AboutUsSeo.title} url={AboutUsSeo.urlAltern} />
   </>
 );
 
