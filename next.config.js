@@ -36,6 +36,10 @@ module.exports = {
         source: '/servicios/seo-ecuador',
         destination: '/services/SEO',
       },
+      {
+        source: '/quienes-somos',
+        destination: '/AboutUs',
+      },
     ];
   },
 };

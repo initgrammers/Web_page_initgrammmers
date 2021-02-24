@@ -9,6 +9,7 @@ import theme from '../theme/index';
 import '../src/assets/css/globals.css';
 import * as gtag from '#app/lib/gtag';
 import FacebookPixel from '#Components/FacebookPixel';
+import HeatMap from '#Components/HeatMap';
 
 const NoLayout = ({ children }) => children;
 
@@ -76,12 +77,14 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
       <ThemeProvider theme={theme}>
         <FacebookPixel>
-          <Layout {...layoutProps}>
-            <>
-              <CssBaseline />
-              <Component {...restPageProps} />
-            </>
-          </Layout>
+          <HeatMap>
+            <Layout {...layoutProps}>
+              <>
+                <CssBaseline />
+                <Component {...restPageProps} />
+              </>
+            </Layout>
+          </HeatMap>
         </FacebookPixel>
       </ThemeProvider>
     </>

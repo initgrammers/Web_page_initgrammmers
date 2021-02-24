@@ -1,4 +1,4 @@
-const title = 'Bienvenido | InitGrammers';
+const title = 'Diseño, desarrollo de aplicaciones web y móviles - InitGrammers';
 const description =
   'Desarrollo de aplicaciones móviles para Android y iOS, sitios web, diseño UI/UX, tiendas online, marketing digital, software a medida en Ecuador ';
 const url = 'https://initgrammers.com/';

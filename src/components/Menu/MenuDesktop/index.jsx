@@ -41,8 +41,6 @@ const MenuDesktop = ({
             item?.items?.length > 0 ? (
               <Button
                 key={key}
-                aria-controls="menu-servicios"
-                aria-haspopup="true"
                 onClick={handleDrawerOpen}
                 color="inherit"
                 endIcon={showServices ? <ExpandLess /> : <ExpandMore />}

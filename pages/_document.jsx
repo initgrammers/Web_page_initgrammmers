@@ -9,7 +9,7 @@ import { FB_PIXEL_ID } from '#app/lib/facebookPixel';
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="es" dir="ltr">
+      <Html lang="es-ec" dir="ltr">
         <Head>
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta name="theme-color" content={theme.palette.primary.main} />

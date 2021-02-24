@@ -8,7 +8,7 @@ const useStyles = makeStyles(styles);
 const LinkIcon = ({ icon, href, size }) => {
   const classes = useStyles();
   return (
-    <Link href={href} target="_blank" rel="noopener">
+    <Link href={href} target="_blank" rel="noopener" aria-label="Initgrammers">
       <Box width={size} height={size} className={classes.socialMedia}>
         {icon}
       </Box>

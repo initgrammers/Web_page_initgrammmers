@@ -7,6 +7,11 @@ import Questions from './sections/Questions';
 import NeedAnUpdate from './sections/NeedAnUpdate';
 import WebDevelopment from '#constants/seo/WebDevelopment';
 import SEO from '#Components/SEO';
+import Organization from '#Components/StructuredData/Organization';
+import WebSite from '#Components/StructuredData/WebSite';
+import Article from '#Components/StructuredData/Article';
+import FAQPage from '#Components/StructuredData/FAQPage';
+import { visibilityCompany } from '#constants/services/webDevelopment';
 
 const index = () => (
   <>
@@ -18,6 +23,17 @@ const index = () => (
     <SliderTech />
     <PartOfInternetWorld />
     <Questions />
+
+    <Organization />
+    <WebSite title={WebDevelopment.title} url={WebDevelopment.urlAltern} />
+    <Article
+      title={WebDevelopment.title}
+      description={WebDevelopment.description}
+      url={WebDevelopment.urlAltern}
+      mainArticle={visibilityCompany.description}
+    />
+
+    <FAQPage />
   </>
 );
 

@@ -7,6 +7,10 @@ import CarryOutThatProject from './sections/CarryOutThatProject';
 import Questions from './sections/Questions';
 import SEO from '#Components/SEO';
 import LandingPage from '#constants/seo/LandingPage';
+import Organization from '#Components/StructuredData/Organization';
+import WebSite from '#Components/StructuredData/WebSite';
+import Article from '#Components/StructuredData/Article';
+import { onlineSolution } from '#constants/LandingPage';
 
 const index = () => (
   <>
@@ -18,6 +22,15 @@ const index = () => (
     <SliderClients />
     <CarryOutThatProject />
     <Questions />
+
+    <Organization />
+    <WebSite title={LandingPage.title} url={LandingPage.urlAltern} />
+    <Article
+      title={LandingPage.title}
+      description={LandingPage.description}
+      url={LandingPage.urlAltern}
+      mainArticle={onlineSolution.description}
+    />
   </>
 );
 

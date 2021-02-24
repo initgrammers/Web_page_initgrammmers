@@ -63,13 +63,13 @@ const data = [
 const aboutUs = {
   id: 'AboutUs',
   title: 'Quiénes somos',
-  href: routes.services.seo,
+  href: routes.aboutUs,
 };
 
 const portfolio = {
   id: 'portfolio',
   title: 'Portafolio',
-  href: routes.services.webDevelopment,
+  href: routes.portfolio,
 };
 
 export const menuServices = {
