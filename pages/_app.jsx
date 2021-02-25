@@ -77,14 +77,14 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
       <ThemeProvider theme={theme}>
         <FacebookPixel>
-          <HeatMap>
-            <Layout {...layoutProps}>
-              <>
-                <CssBaseline />
-                <Component {...restPageProps} />
-              </>
-            </Layout>
-          </HeatMap>
+          {/* <HeatMap> */}
+          <Layout {...layoutProps}>
+            <>
+              <CssBaseline />
+              <Component {...restPageProps} />
+            </>
+          </Layout>
+          {/* </HeatMap> */}
         </FacebookPixel>
       </ThemeProvider>
     </>
