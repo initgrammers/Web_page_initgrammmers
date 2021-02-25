@@ -4,7 +4,7 @@ export const bannerLandingPage = {
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1607008550/LandingPage/figures/bloque1.png',
   heightImage: 672,
-  title: 'Desarrollo y diseño de aplicaciones al alcande de tus manos',
+  title: 'Desarrollo y diseño de aplicaciones al alcance de tus manos',
   description:
     'Descubre el mundo digital, te ayudamos a construir aplicaciones y programas de principio a fin',
   image:
