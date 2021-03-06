@@ -44,6 +44,16 @@ const MyApp = ({ Component, pageProps }) => {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, viewport-fit=cover, shrink-to-fit=no"
         />
+        <link rel="dns-prefetch" href="https://initgrammers.com" />
+        <link rel="preconnect" href="https://initgrammers.com" />
+
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com/"
+          crossOrigin
+        />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
+
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com/" />
         <link
