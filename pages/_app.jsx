@@ -44,15 +44,6 @@ const MyApp = ({ Component, pageProps }) => {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, viewport-fit=cover, shrink-to-fit=no"
         />
-        <link rel="dns-prefetch" href="https://initgrammers.com" />
-        <link rel="preconnect" href="https://initgrammers.com" />
-
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com/"
-          crossOrigin
-        />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
 
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com/" />
@@ -60,6 +51,43 @@ const MyApp = ({ Component, pageProps }) => {
           href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
+
+        <link rel="dns-prefetch" href="https://initgrammers.com" />
+        <link rel="preconnect" href="https://initgrammers.com" crossOrigin />
+
+        <link rel="dns-prefetch" href="https://res.cloudinary.com/" />
+        <link rel="preconnect" href="https://res.cloudinary.com/" crossOrigin />
+
+        <link rel="dns-prefetch" href="https://cdn.calconic.com/" />
+        <link rel="preconnect" href="https://cdn.calconic.com/" crossOrigin />
+
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com/" />
+        <link
+          rel="preconnect"
+          href="https://www.googletagmanager.com/"
+          crossOrigin
+        />
+
+        <link rel="dns-prefetch" href="https://www.google-analytics.com/" />
+        <link
+          rel="preconnect"
+          href="https://www.google-analytics.com/"
+          crossOrigin
+        />
+
+        <link rel="dns-prefetch" href="https://connect.facebook.net/" />
+        <link
+          rel="preconnect"
+          href="https://connect.facebook.net/"
+          crossOrigin
+        />
+
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com/"
+          crossOrigin
+        />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
       </Head>
       <ThemeProvider theme={theme}>
         <FacebookPixel>
