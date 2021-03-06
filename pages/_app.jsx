@@ -45,7 +45,11 @@ const MyApp = ({ Component, pageProps }) => {
           content="minimum-scale=1, initial-scale=1, width=device-width, viewport-fit=cover, shrink-to-fit=no"
         />
 
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com/"
+          crossOrigin="true"
+        />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com/" />
         <link
           href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
@@ -53,13 +57,25 @@ const MyApp = ({ Component, pageProps }) => {
         />
 
         <link rel="dns-prefetch" href="https://initgrammers.com" />
-        <link rel="preconnect" href="https://initgrammers.com" crossOrigin />
+        <link
+          rel="preconnect"
+          href="https://initgrammers.com"
+          crossOrigin="true"
+        />
 
         <link rel="dns-prefetch" href="https://res.cloudinary.com/" />
-        <link rel="preconnect" href="https://res.cloudinary.com/" crossOrigin />
+        <link
+          rel="preconnect"
+          href="https://res.cloudinary.com/"
+          crossOrigin="true"
+        />
 
         <link rel="dns-prefetch" href="https://cdn.calconic.com/" />
-        <link rel="preconnect" href="https://cdn.calconic.com/" crossOrigin />
+        <link
+          rel="preconnect"
+          href="https://cdn.calconic.com/"
+          crossOrigin="true"
+        />
 
         <link rel="dns-prefetch" href="https://www.googletagmanager.com/" />
         <link
