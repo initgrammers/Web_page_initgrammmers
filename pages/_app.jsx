@@ -44,35 +44,11 @@ const MyApp = ({ Component, pageProps }) => {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, viewport-fit=cover, shrink-to-fit=no"
         />
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com/" />
         <link
-          rel="preload"
-          href="/fonts/Raleway/Raleway-Regular.woff2"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Raleway/Raleway-Medium.woff2"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Raleway/Raleway-SemiBold.woff2"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Raleway/Raleway-Bold.woff2"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
+          href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
           rel="stylesheet"
-          href="/fonts/Raleway/fonts.css"
-          media="print"
-          onLoad="this.media='all'"
         />
       </Head>
       <ThemeProvider theme={theme}>
