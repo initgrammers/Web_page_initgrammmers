@@ -8,7 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
+import autoPlay from 'react-swipeable-views-utils';
 import clsx from 'clsx';
 import styles from '../assets/styles/ApplicationType';
 

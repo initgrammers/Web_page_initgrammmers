@@ -81,27 +81,27 @@ const MyApp = ({ Component, pageProps }) => {
         <link
           rel="preconnect"
           href="https://www.googletagmanager.com/"
-          crossOrigin
+          crossOrigin="true"
         />
 
         <link rel="dns-prefetch" href="https://www.google-analytics.com/" />
         <link
           rel="preconnect"
           href="https://www.google-analytics.com/"
-          crossOrigin
+          crossOrigin="true"
         />
 
         <link rel="dns-prefetch" href="https://connect.facebook.net/" />
         <link
           rel="preconnect"
           href="https://connect.facebook.net/"
-          crossOrigin
+          crossOrigin="true"
         />
 
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com/"
-          crossOrigin
+          crossOrigin="true"
         />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
       </Head>
