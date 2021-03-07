@@ -1,12 +1,8 @@
-import React from 'react';
-import {
-  Grid,
-  Typography,
-  Box,
-  makeStyles,
-  Container,
-} from '@material-ui/core';
-// import { LOGO_FOOTER_INITGRAMMERS } from '../../constants/services/imageFooter';
+import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import LinkWithIcon from './components/LinkWithIcon';
 import {
   PhoneIcon,

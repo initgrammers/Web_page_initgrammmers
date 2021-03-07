@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { Hidden, Toolbar, AppBar, makeStyles } from '@material-ui/core';
+import Hidden from '@material-ui/core/Hidden';
+import Toolbar from '@material-ui/core/Toolbar';
+import AppBar from '@material-ui/core/AppBar';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import MenuDesktop from './MenuDesktop';
 import styles from '../../assets/styles/Menu';

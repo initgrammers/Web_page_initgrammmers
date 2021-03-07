@@ -1,4 +1,5 @@
-import { makeStyles, Box } from '@material-ui/core';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import Box from '@material-ui/core/Box';
 import PropTypes from 'prop-types';
 import styles from '../assets/styles/FAQ';
 import Subtitle from '#Components/Subtitle';
