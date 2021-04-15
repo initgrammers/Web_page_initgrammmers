@@ -1,7 +1,9 @@
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import PropTypes from 'prop-types';
-import Navigation from './AppBar';
-import CustomFooter from './Footer';
+
+const Navigation = dynamic(() => import('./AppBar'));
+const CustomFooter = dynamic(() => import('./Footer'));
 
 const Layout = ({ children, navigation }) => (
   <>
