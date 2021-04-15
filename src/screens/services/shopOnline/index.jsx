@@ -1,15 +1,17 @@
+import dynamic from 'next/dynamic';
 import Banner from './sections/Banner';
-import OpenShop from './sections/OpenShop';
-import IncreaseYourSales from './sections/IncreaseYourSales';
-import Questions from './sections/Questions';
 import SEO from '#Components/SEO';
 import ShopOnlineSeo from '#constants/seo/ShopOnline';
-import OptionsShopping from './sections/OptionsShopping';
-import BenefitsTypes from './sections/BenefitsTypes';
 import Organization from '#Components/StructuredData/Organization';
 import WebSite from '#Components/StructuredData/WebSite';
 import Article from '#Components/StructuredData/Article';
 import { shopOnline24Hours } from '#constants/services/ShopOnline';
+
+const OpenShop = dynamic(() => import('./sections/OpenShop'));
+const BenefitsTypes = dynamic(() => import('./sections/BenefitsTypes'));
+const OptionsShopping = dynamic(() => import('./sections/OptionsShopping'));
+const IncreaseYourSales = dynamic(() => import('./sections/IncreaseYourSales'));
+const Questions = dynamic(() => import('./sections/Questions'));
 
 const Index = () => (
   <>

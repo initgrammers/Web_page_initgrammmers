@@ -1,15 +1,17 @@
-import BenefitsTypes from './sections/BenefitsTypes';
-import Oportunities from './sections/Oportunities';
+import dynamic from 'next/dynamic';
 import Banner from './sections/Banner';
-import Questions from './sections/Questions';
 import SEOsearch from '#constants/seo/SEO';
 import SEO from '#Components/SEO';
-import ImportanceSEO from './sections/ImportanceSEO';
-import WhatIsSEO from './sections/WhatIsSEO';
 import Organization from '#Components/StructuredData/Organization';
 import WebSite from '#Components/StructuredData/WebSite';
 import Article from '#Components/StructuredData/Article';
 import { importanceSEO } from '#constants/services/seo';
+
+const ImportanceSEO = dynamic(() => import('./sections/ImportanceSEO'));
+const BenefitsTypes = dynamic(() => import('./sections/BenefitsTypes'));
+const WhatIsSEO = dynamic(() => import('./sections/WhatIsSEO'));
+const Oportunities = dynamic(() => import('./sections/Oportunities'));
+const Questions = dynamic(() => import('./sections/Questions'));
 
 const index = () => (
   <>

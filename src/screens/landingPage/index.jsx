@@ -1,16 +1,21 @@
+import dynamic from 'next/dynamic';
 import Banner from './sections/Banner';
-import OnlineSolution from './sections/OnlineSolution';
-import Services from './sections/Services';
-import PartnershipModel from './sections/PartnershipModel';
-import SliderClients from './sections/SliderClients';
-import CarryOutThatProject from './sections/CarryOutThatProject';
-import Questions from './sections/Questions';
 import SEO from '#Components/SEO';
 import LandingPage from '#constants/seo/LandingPage';
 import Organization from '#Components/StructuredData/Organization';
 import WebSite from '#Components/StructuredData/WebSite';
 import Article from '#Components/StructuredData/Article';
 import { onlineSolution } from '#constants/LandingPage';
+
+const OnlineSolution = dynamic(() => import('./sections/OnlineSolution'));
+const Services = dynamic(() => import('./sections/Services'));
+const PartnershipModel = dynamic(() => import('./sections/PartnershipModel'));
+const SliderClients = dynamic(() => import('./sections/SliderClients'));
+const CarryOutThatProject = dynamic(() =>
+  import('./sections/CarryOutThatProject')
+);
+
+const Questions = dynamic(() => import('./sections/Questions'));
 
 const index = () => (
   <>
