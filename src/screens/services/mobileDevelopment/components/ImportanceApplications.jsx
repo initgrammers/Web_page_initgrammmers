@@ -26,6 +26,7 @@ const ImportanceAplications = () => {
                 quality={100}
                 src={importanceApplications.mainImage}
                 layout="fill"
+                alt={importanceApplications.title}
               />
             </Box>
           </Grid>
@@ -44,6 +45,8 @@ const ImportanceAplications = () => {
                     src={importanceApplications.logo1}
                     width={88}
                     height={88}
+                    layout="fixed"
+                    alt="Google Play"
                   />
                 </Box>
                 <Box component="figure" className={classes.figureLeft}>
@@ -52,6 +55,8 @@ const ImportanceAplications = () => {
                     src={importanceApplications.logo2}
                     width={88}
                     height={88}
+                    layout="fixed"
+                    alt="Apple Store"
                   />
                 </Box>
               </Box>

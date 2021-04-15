@@ -8,7 +8,6 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import PropTypes from 'prop-types';
-import Image from 'next/image';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
 import CustomLink from '#Components/CustomLink';
 import styles from '../styles/MenuDesktop';
@@ -31,13 +30,7 @@ const MenuDesktop = ({
     <>
       <Box className={classes.menuApp}>
         <CustomLink href="/">
-          <Image
-            src="/assets/svg/logo-initgrammers.svg"
-            width="140"
-            height="24"
-            alt="logo"
-            priority
-          />
+          <LogoInitgrammers />
         </CustomLink>
         <Box className={classes.sectionMenu}>
           {menuInitgrammers.menu.map((item, key) =>
@@ -60,8 +53,7 @@ const MenuDesktop = ({
                   </Typography>
                 </Button>
               </CustomLink>
-            )
-          )}
+            ))}
         </Box>
         <Box>
           <Hidden mdDown>
