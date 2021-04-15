@@ -8,7 +8,7 @@ const Image = ({ image, label, showTitleImage, imageIsLarge }) => {
   return (
     <>
       <Box className={classes.containerImage}>
-        <img className={classes.image} src={image} alt={label} />
+        <img className={classes.image} src={image} alt={label} loading="lazy" />
         {showTitleImage && <p>{label}</p>}
       </Box>
     </>
