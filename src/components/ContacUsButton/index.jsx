@@ -1,6 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Link } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import Link from '@material-ui/core/Link';
 import styles from '#app/assets/styles/ContacUsButton';
 
 const ContactUsButton = ({ variant, color, href, label, children, mr }) => {

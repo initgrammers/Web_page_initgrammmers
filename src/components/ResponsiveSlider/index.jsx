@@ -26,6 +26,7 @@ const Slider = ({ data, imageIsLarge, showTitleImage }) => {
               label={item.label}
               showTitleImage={showTitleImage}
               imageIsLarge={imageIsLarge}
+              layout="fill"
             />
           ))}
         </Box>

@@ -4,7 +4,7 @@ export const bannerMobileDevelopment = {
   titlePart3: 'iOS y Android',
   description: 'Tus productos en el bolsillo de tus clientes',
   image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1606776672/servicios/desarrollo-movil/diseno-desarrollo-aplicaciones-moviles-ios-android-ecuador.png',
+    'https://res.cloudinary.com/initgrammers/image/upload/v1618501400/servicios/desarrollo-movil/diseno-desarrollo-aplicaciones-moviles-ios-android-ecuador.png',
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1606842502/servicios/desarrollo-movil/figures/bloque1.png',
 };
@@ -12,7 +12,7 @@ export const bannerMobileDevelopment = {
 export const importanceApplications = {
   title: 'Importancia de las aplicaciones móviles',
   mainImage:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1606840715/servicios/desarrollo-movil/importancia-aplicaciones-moviles.png',
+    'https://res.cloudinary.com/initgrammers/image/upload/v1618501401/servicios/desarrollo-movil/importancia-aplicaciones-moviles.png',
   description1:
     'Crear una aplicación móvil para tu empresa te conecta con tus clientes y mejora la experiencia en la compra de productos y servicios.',
   description2:
@@ -87,9 +87,9 @@ const typesApplication = [
 
 export const mobileApplicationTypes = {
   title: 'Tipos de aplicaciones móviles',
-  typesApplication: typesApplication,
+  typesApplication,
   image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1606840869/servicios/desarrollo-movil/tipos-aplicaciones-moviles.png',
+    'https://res.cloudinary.com/initgrammers/image/upload/v1618501400/servicios/desarrollo-movil/tipos-aplicaciones-moviles.png',
   imageSizes: {
     xs: {
       width: 504,
@@ -117,7 +117,7 @@ export const applicationsInYourFingertips = {
   description:
     'El futuro de las aplicaciones móviles para ti, te apoyamos durante todo el proceso',
   image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1606840977/servicios/desarrollo-movil/aplicaciones-moviles-al-alcance-de-tu-mano.png',
+    'https://res.cloudinary.com/initgrammers/image/upload/v1618501401/servicios/desarrollo-movil/aplicaciones-moviles-al-alcance-de-tu-mano.png',
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1606842502/servicios/desarrollo-movil/figures/bloque5.png',
   heightImage: 1019,

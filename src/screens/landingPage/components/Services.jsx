@@ -1,4 +1,6 @@
-import { Box, Typography, makeStyles } from '@material-ui/core';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import CardService from '#Components/CardService';
 import BackgroundImage from '#Components/BackgroundImage';
@@ -41,11 +43,13 @@ Services.propTypes = {
   title: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
-  services: PropTypes.arrayOf(PropTypes.shape({
-    href: PropTypes.string,
-    path: PropTypes.string,
-    service: PropTypes.string,
-  })).isRequired,
+  services: PropTypes.arrayOf(
+    PropTypes.shape({
+      href: PropTypes.string,
+      path: PropTypes.string,
+      service: PropTypes.string,
+    })
+  ).isRequired,
 };
 
 Services.defaultProps = {

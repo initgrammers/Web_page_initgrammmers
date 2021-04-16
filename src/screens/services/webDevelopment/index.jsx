@@ -1,10 +1,5 @@
-import WebApplicationTypes from './sections/WebApplicationTypes';
-import PartOfInternetWorld from './sections/PartOfInternetWorld';
+import dynamic from 'next/dynamic';
 import Banner from './sections/Banner';
-import VisibilityCompany from './sections/VisibilityCompany';
-import SliderTech from './sections/SliderTech';
-import Questions from './sections/Questions';
-import NeedAnUpdate from './sections/NeedAnUpdate';
 import WebDevelopment from '#constants/seo/WebDevelopment';
 import SEO from '#Components/SEO';
 import Organization from '#Components/StructuredData/Organization';
@@ -12,6 +7,17 @@ import WebSite from '#Components/StructuredData/WebSite';
 import Article from '#Components/StructuredData/Article';
 import FAQPage from '#Components/StructuredData/FAQPage';
 import { visibilityCompany } from '#constants/services/webDevelopment';
+
+const VisibilityCompany = dynamic(() => import('./sections/VisibilityCompany'));
+const NeedAnUpdate = dynamic(() => import('./sections/NeedAnUpdate'));
+const WebApplicationTypes = dynamic(() =>
+  import('./sections/WebApplicationTypes')
+);
+const SliderTech = dynamic(() => import('./sections/SliderTech'));
+const PartOfInternetWorld = dynamic(() =>
+  import('./sections/PartOfInternetWorld')
+);
+const Questions = dynamic(() => import('./sections/Questions'));
 
 const index = () => (
   <>

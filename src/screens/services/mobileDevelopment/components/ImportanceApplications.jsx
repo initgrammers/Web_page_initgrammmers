@@ -1,4 +1,7 @@
-import { makeStyles, Box, Grid, Typography } from '@material-ui/core';
+import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import Image from 'next/image';
 import styles from '../styles/ImportanceApplications';
 import BackgroundImage from '#Components/BackgroundImage';
@@ -23,6 +26,7 @@ const ImportanceAplications = () => {
                 quality={100}
                 src={importanceApplications.mainImage}
                 layout="fill"
+                alt={importanceApplications.title}
               />
             </Box>
           </Grid>
@@ -41,6 +45,8 @@ const ImportanceAplications = () => {
                     src={importanceApplications.logo1}
                     width={88}
                     height={88}
+                    layout="fixed"
+                    alt="Google Play"
                   />
                 </Box>
                 <Box component="figure" className={classes.figureLeft}>
@@ -49,6 +55,8 @@ const ImportanceAplications = () => {
                     src={importanceApplications.logo2}
                     width={88}
                     height={88}
+                    layout="fixed"
+                    alt="Apple Store"
                   />
                 </Box>
               </Box>

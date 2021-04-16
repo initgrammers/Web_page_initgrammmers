@@ -44,36 +44,66 @@ const MyApp = ({ Component, pageProps }) => {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, viewport-fit=cover, shrink-to-fit=no"
         />
+
         <link
-          rel="preload"
-          href="/fonts/Raleway/Raleway-Regular.woff2"
-          as="font"
-          crossOrigin="anonymous"
+          rel="preconnect"
+          href="https://fonts.gstatic.com/"
+          crossOrigin="true"
         />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com/" />
         <link
-          rel="preload"
-          href="/fonts/Raleway/Raleway-Medium.woff2"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Raleway/Raleway-SemiBold.woff2"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Raleway/Raleway-Bold.woff2"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
+          href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
           rel="stylesheet"
-          href="/fonts/Raleway/fonts.css"
-          media="print"
-          onLoad="this.media='all'"
         />
+
+        <link rel="dns-prefetch" href="https://initgrammers.com" />
+        <link
+          rel="preconnect"
+          href="https://initgrammers.com"
+          crossOrigin="true"
+        />
+
+        <link rel="dns-prefetch" href="https://res.cloudinary.com/" />
+        <link
+          rel="preconnect"
+          href="https://res.cloudinary.com/"
+          crossOrigin="true"
+        />
+
+        <link rel="dns-prefetch" href="https://cdn.calconic.com/" />
+        <link
+          rel="preconnect"
+          href="https://cdn.calconic.com/"
+          crossOrigin="true"
+        />
+
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com/" />
+        <link
+          rel="preconnect"
+          href="https://www.googletagmanager.com/"
+          crossOrigin="true"
+        />
+
+        <link rel="dns-prefetch" href="https://www.google-analytics.com/" />
+        <link
+          rel="preconnect"
+          href="https://www.google-analytics.com/"
+          crossOrigin="true"
+        />
+
+        <link rel="dns-prefetch" href="https://connect.facebook.net/" />
+        <link
+          rel="preconnect"
+          href="https://connect.facebook.net/"
+          crossOrigin="true"
+        />
+
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com/"
+          crossOrigin="true"
+        />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
       </Head>
       <ThemeProvider theme={theme}>
         <FacebookPixel>

@@ -1,5 +1,5 @@
 export const typography = {
-  fontFamily: ['Raleway', 'Montserrat', 'sans-serif'].join(','),
+  fontFamily: ['Raleway', 'sans-serif'].join(','),
 
   h1: {
     fontWeight: 700,

@@ -26,7 +26,7 @@ export const needAnUpdateWebDevelopment = {
   description:
     'Un sitio web desactualizado tarda más en cargarse y no funciona correctamente. Te asesoramos en mejorar la imagen y rendimiento de tu web.',
   image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1609857584/servicios/desarrollo-web/necesitas-una-actualizacion.png',
+    'https://res.cloudinary.com/initgrammers/image/upload/v1618505016/servicios/desarrollo-web/necesitas-una-actualizacion-web.png',
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609857474/servicios/desarrollo-web/figures/bloque3.png',
   ornamentImage:

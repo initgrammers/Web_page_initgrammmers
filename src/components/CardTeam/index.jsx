@@ -1,4 +1,7 @@
-import { Typography, Box, makeStyles, IconButton } from '@material-ui/core';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import styles from './CardTeam';

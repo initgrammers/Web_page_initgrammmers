@@ -1,4 +1,4 @@
-import { Box } from '@material-ui/core';
+import Box from '@material-ui/core/Box';
 import { ArrowForwardIos, ArrowBackIos } from '@material-ui/icons';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';

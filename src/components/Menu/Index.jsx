@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
-import { Hidden, Toolbar, AppBar, makeStyles } from '@material-ui/core';
+import Hidden from '@material-ui/core/Hidden';
+import Toolbar from '@material-ui/core/Toolbar';
+import AppBar from '@material-ui/core/AppBar';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
-import MenuDesktop from './MenuDesktop';
+import dynamic from 'next/dynamic';
 import styles from '../../assets/styles/Menu';
-import MobileMenu from './MenuMobile';
-import CustomDrawer from './MenuMobile/CustomDrawer';
 import OutsideAlerter from './MenuDesktop/Outsider';
+
+const MobileMenu = dynamic(() => import('./MenuMobile'));
+const MenuDesktop = dynamic(() => import('./MenuDesktop'));
+const CustomDrawer = dynamic(() => import('./MenuMobile/CustomDrawer'));
 
 const useStyles = makeStyles(styles);
 
