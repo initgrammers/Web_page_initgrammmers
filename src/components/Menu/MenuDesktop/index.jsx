@@ -1,12 +1,10 @@
 /* eslint-disable no-confusing-arrow */
-import {
-  makeStyles,
-  Button,
-  Box,
-  Typography,
-  Hidden,
-  Fade,
-} from '@material-ui/core';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import Hidden from '@material-ui/core/Hidden';
+import Fade from '@material-ui/core/Fade';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import PropTypes from 'prop-types';
@@ -32,9 +30,7 @@ const MenuDesktop = ({
     <>
       <Box className={classes.menuApp}>
         <CustomLink href="/">
-          <Button className={classes.logo} aria-label="logo Initgrammers">
-            <LogoInitgrammers />
-          </Button>
+          <LogoInitgrammers />
         </CustomLink>
         <Box className={classes.sectionMenu}>
           {menuInitgrammers.menu.map((item, key) =>
@@ -57,8 +53,7 @@ const MenuDesktop = ({
                   </Typography>
                 </Button>
               </CustomLink>
-            )
-          )}
+            ))}
         </Box>
         <Box>
           <Hidden mdDown>

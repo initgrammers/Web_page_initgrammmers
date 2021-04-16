@@ -1,16 +1,22 @@
+import dynamic from 'next/dynamic';
 import Banner from './sections/Banner';
-import Questions from './sections/Questions';
-import InnovativeDesign from './sections/InnovativeDesign';
-import UnforgettableExperiences from './sections/UnforgettableExperiences';
-import DesignAdaptedToYourBrand from './sections/DesignAdaptedToYourBrand';
-import UxUiDesign from './sections/UxUiDesign';
-import SliderTech from './sections/SliderTech';
 import SEO from '#Components/SEO';
 import UxUiDesignSeo from '#constants/seo/UxUiDesign';
 import Organization from '#Components/StructuredData/Organization';
 import WebSite from '#Components/StructuredData/WebSite';
 import Article from '#Components/StructuredData/Article';
 import { innovateDesign } from '#constants/services/UxUiDesign';
+
+const InnovativeDesign = dynamic(() => import('./sections/InnovativeDesign'));
+const UxUiDesign = dynamic(() => import('./sections/UxUiDesign'));
+const SliderTech = dynamic(() => import('./sections/SliderTech'));
+const DesignAdaptedToYourBrand = dynamic(() =>
+  import('./sections/DesignAdaptedToYourBrand')
+);
+const UnforgettableExperiences = dynamic(() =>
+  import('./sections/UnforgettableExperiences')
+);
+const Questions = dynamic(() => import('./sections/Questions'));
 
 const index = () => (
   <>

@@ -1,6 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Link, Typography, makeStyles } from '@material-ui/core';
+import Link from '@material-ui/core/Link';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import styles from '../styles';
 
 const useStyles = makeStyles(styles);

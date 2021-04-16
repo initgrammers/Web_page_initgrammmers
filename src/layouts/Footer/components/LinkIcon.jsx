@@ -1,6 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Link, makeStyles } from '@material-ui/core';
+import Box from '@material-ui/core/Box';
+import Link from '@material-ui/core/Link';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import styles from '../styles';
 
 const useStyles = makeStyles(styles);

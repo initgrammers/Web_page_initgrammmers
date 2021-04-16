@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { List } from '@material-ui/core';
+import List from '@material-ui/core/List';
 import { menuInitgrammers } from '#constants/Menu';
 import ItemWithSubItemsMenu from './ItemWithSubItemsMenu';
 

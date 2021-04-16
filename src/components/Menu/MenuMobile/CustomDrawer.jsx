@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { Collapse, makeStyles } from '@material-ui/core';
+import Collapse from '@material-ui/core/Collapse';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import ListMenu from './ListMenu';
 import styles from './styles';
 
