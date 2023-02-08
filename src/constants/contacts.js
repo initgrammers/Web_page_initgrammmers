@@ -13,7 +13,7 @@ export const contactsLinks = {
   writeUs:
     'mailto:info@initgrammers.com?subject=Solicitud de información&body=Hola InitGrammers, estuve navegando en su página web y deseo obtener mayor información de sus servicios.Saludos.',
   startProject: 'https://wa.link/gy9bje',
-  callUs: 'tel: +593963277297',
+  callUs: 'tel: +593978847449',
 };
 
 export const textContactUsButton = {

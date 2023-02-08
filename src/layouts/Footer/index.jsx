@@ -81,7 +81,7 @@ const CustomFooter = () => {
                 <LinkWithIcon
                   href={contactsLinks.callUs}
                   icon={<PhoneIcon />}
-                  label="(+593) 963277297"
+                  label="(+593) 978847449"
                 />
                 <LinkWithIcon
                   href={contactsLinks.writeUs}
