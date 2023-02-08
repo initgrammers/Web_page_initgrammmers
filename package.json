@@ -45,6 +45,6 @@
     "prettier": "2.1.2"
   },
   "engines": {
-    "node": ">= 16"
+    "node": "16.x"
   }
 }
