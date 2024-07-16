@@ -5,11 +5,16 @@ import { ServerStyleSheets } from '@material-ui/core/styles';
 import theme from '../theme/index';
 import { GA_TRACKING_ID } from '#app/lib/gtag';
 import { FB_PIXEL_ID } from '#app/lib/facebookPixel';
+import nextI18nextConfig from 'next-i18next.config';
 
 class MyDocument extends Document {
+
   render() {
+    const { locale } = this.props.__NEXT_DATA__;
+    const currentLocale = locale || nextI18nextConfig.i18n.defaultLocale;
+    
     return (
-      <Html lang="es-ec" dir="ltr">
+      <Html lang={currentLocale} dir="ltr">
         <Head>
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta name="theme-color" content={theme.palette.primary.main} />

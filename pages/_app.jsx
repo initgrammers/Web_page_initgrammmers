@@ -6,6 +6,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import NextNprogress from 'nextjs-progressbar';
 import theme from '../theme/index';
+import { appWithTranslation } from 'next-i18next'
 import '../src/assets/css/globals.css';
 import * as gtag from '#app/lib/gtag';
 import FacebookPixel from '#Components/FacebookPixel';
@@ -128,4 +129,4 @@ MyApp.propTypes = {
 MyApp.defaultProps = {
   pageProps: {},
 };
-export default MyApp;
+export default appWithTranslation(MyApp);

@@ -2,13 +2,15 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
+const { i18n } = require('./next-i18next.config')
+
 module.exports = withBundleAnalyzer({
   images: {
     domains: ['res.cloudinary.com'],
     path: '/_next/image',
     loader: 'default',
   },
-
+  i18n,
   async rewrites() {
     return [
       {
