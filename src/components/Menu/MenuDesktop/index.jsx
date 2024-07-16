@@ -15,7 +15,9 @@ import ContactUsButton from '#Components/ContacUsButton';
 import { contactsLinks } from '#app/constants/contacts';
 import Options from './Options';
 import OutsideAlerter from './Outsider';
-import { menuInitgrammers } from '#constants/Menu';
+import useMenu from '#constants/Menu';
+import LanguageSelector from '#Components/LanguageSelector';
+import { useTranslation } from 'next-i18next';
 
 const useStyles = makeStyles(styles);
 
@@ -26,6 +28,8 @@ const MenuDesktop = ({
   handleClose,
 }) => {
   const classes = useStyles();
+  const {menuInitgrammers} = useMenu();
+  const { t } = useTranslation();
   return (
     <>
       <Box className={classes.menuApp}>
@@ -42,7 +46,7 @@ const MenuDesktop = ({
                 endIcon={showServices ? <ExpandLess /> : <ExpandMore />}
               >
                 <Typography className={classes.services} variant="body2">
-                  Servicios
+                  {t('services')}
                 </Typography>
               </Button>
             ) : (
@@ -55,7 +59,8 @@ const MenuDesktop = ({
               </CustomLink>
             ))}
         </Box>
-        <Box>
+        <LanguageSelector />
+        <Box marginLeft={3}>
           <Hidden mdDown>
             <ContactUsButton href={contactsLinks.general} />
           </Hidden>

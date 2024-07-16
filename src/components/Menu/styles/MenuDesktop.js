@@ -6,7 +6,11 @@ const styles = (theme) => ({
     alignItems: 'center',
     width: '100%',
   },
-
+  languageMenu: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: 'fit-content'
+  },
   button: {
     textTransform: 'capitalize',
     margin: `0 ${theme.spacing(2)}px`,

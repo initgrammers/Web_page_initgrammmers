@@ -7,8 +7,8 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import clsx from 'clsx';
-import data from '#constants/Menu';
 import styles from '../styles/Options';
+import useMenu from '#constants/Menu';
 
 const useStyles = makeStyles(styles);
 
@@ -64,6 +64,7 @@ Service.defaultProps = {
 
 const Options = ({ indexMenu, handleDrawerOpen }) => {
   const classes = useStyles();
+  const {data} = useMenu();
   return (
     <Box className={classes.root}>
       <Typography color="primary" className={classes.title}>

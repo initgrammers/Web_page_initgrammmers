@@ -6,79 +6,86 @@ import CastForEducation from '@material-ui/icons/CastForEducationOutlined';
 import DeviceHub from '@material-ui/icons/DeviceHubOutlined';
 import Search from '@material-ui/icons/SearchOutlined';
 import routes from '#app/routes/';
+import { useTranslation } from 'next-i18next';
 
-const data = [
-  {
-    id: 'WebDevelop',
-    title: 'Desarrollo Web',
-    subtitle: 'Android, iOs, híbridas',
-    href: routes.services.webDevelopment,
-    icon: <Devices />,
-  },
-  {
-    id: 'MobileDevelopment',
-    title: 'Desarrollo de aplicaciones móviles',
-    subtitle: 'Android, iOS, híbridas',
-    href: routes.services.mobileDevelopment,
-    icon: <AddToHomeScreen />,
-  },
+const useMenu = () => {
+  const { t } = useTranslation();
+  const data = [
+    {
+      id: 'WebDevelop',
+      title: t('webDevelopment'),
+      subtitle: 'Android, iOs, híbridas',
+      href: routes.services.webDevelopment,
+      icon: <Devices />,
+    },
+    {
+      id: 'MobileDevelopment',
+      title: t('mobileDevelopment'),
+      subtitle: 'Android, iOS, híbridas',
+      href: routes.services.mobileDevelopment,
+      icon: <AddToHomeScreen />,
+    },
+  
+    {
+      id: 'UXUIDesign',
+      title: t('ux/uiDesign'),
+      subtitle: 'Venda a través de internet',
+      href: routes.services.uxUiDesign,
+      icon: <Widgets />,
+    },
+    // {
+    //   id: 'ShopOnline',
+    //   title: 'Tiendas en linea',
+    //   subtitle: 'Venda a través de internet',
+    //   href: routes.services.shopOnline,
+    //   icon: <ShoppingCart />,
+    // },
+    {
+      id: '5',
+      title: t('training'),
+      subtitle: 'Aprende con nosotros',
+      href: routes.services.trainings,
+      icon: <CastForEducation />,
+    },
+    // {
+    //   id: 'Marketing',
+    //   title: 'Marketing digital',
+    //   subtitle: 'Posicione su marca',
+    //   href: routes.services.marketingDigital,
+    //   icon: <DeviceHub />,
+    // },
+    // {
+    //   id: 'SEO',
+    //   title: 'SEO',
+    //   subtitle: 'Posicionamiento en buscadores',
+    //   href: routes.services.seo,
+    //   icon: <Search />,
+    // },
+  ];
+  
+  const aboutUs = {
+    id: 'AboutUs',
+    title: t('aboutUs'),
+    href: routes.aboutUs,
+  };
+  
+  const portfolio = {
+    id: 'portfolio',
+    title: t('portfolio'),
+    href: routes.portfolio,
+  };
+  
+  const menuServices = {
+    title: t('services'),
+    items: data,
+  };
+  
+  const menuInitgrammers = {
+    menu: [menuServices, aboutUs, portfolio],
+  };
 
-  {
-    id: 'UXUIDesign',
-    title: 'Diseño UX UI',
-    subtitle: 'Venda a través de internet',
-    href: routes.services.uxUiDesign,
-    icon: <Widgets />,
-  },
-  {
-    id: 'ShopOnline',
-    title: 'Tiendas en linea',
-    subtitle: 'Venda a través de internet',
-    href: routes.services.shopOnline,
-    icon: <ShoppingCart />,
-  },
-  {
-    id: '5',
-    title: 'Capacitaciones',
-    subtitle: 'Aprende con nosotros',
-    href: routes.services.trainings,
-    icon: <CastForEducation />,
-  },
-  {
-    id: 'Marketing',
-    title: 'Marketing digital',
-    subtitle: 'Posicione su marca',
-    href: routes.services.marketingDigital,
-    icon: <DeviceHub />,
-  },
-  {
-    id: 'SEO',
-    title: 'SEO',
-    subtitle: 'Posicionamiento en buscadores',
-    href: routes.services.seo,
-    icon: <Search />,
-  },
-];
+  return { data, menuServices, menuInitgrammers }
+}
 
-const aboutUs = {
-  id: 'AboutUs',
-  title: 'Quiénes somos',
-  href: routes.aboutUs,
-};
 
-const portfolio = {
-  id: 'portfolio',
-  title: 'Portafolio',
-  href: routes.portfolio,
-};
-
-export const menuServices = {
-  title: 'Servicios',
-  items: data,
-};
-
-export const menuInitgrammers = {
-  menu: [menuServices, aboutUs, portfolio],
-};
-
-export default data;
+export default useMenu;
