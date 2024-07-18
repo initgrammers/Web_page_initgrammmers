@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
+import theme from '../../shared/config/MuiThemeProvider/theme';
 
-const styles = (theme) => ({
+const styles ={
   mainContent: {
+    display: 'flex',
     position: 'relative',
     zIndex: 1,
     [theme.breakpoints.up('md')]: {
@@ -11,7 +13,7 @@ const styles = (theme) => ({
       padding: `0 ${theme.spacing(16)}px`,
     },
   },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

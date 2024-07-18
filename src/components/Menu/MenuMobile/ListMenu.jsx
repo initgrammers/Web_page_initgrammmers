@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import List from '@material-ui/core/List';
 import { menuInitgrammers } from '#constants/Menu';
 import ItemWithSubItemsMenu from './ItemWithSubItemsMenu';
+import { List } from '@mui/material';
 
 const ListMenu = ({ indexMenu, onClose }) => (
   <List component="nav">

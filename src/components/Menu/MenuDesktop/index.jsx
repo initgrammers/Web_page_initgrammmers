@@ -25,33 +25,33 @@ const MenuDesktop = ({
         <CustomLink href="/">
           <LogoInitgrammers />
         </CustomLink>
-        <Box sx={styles.sectionMenu}>
-          {menuInitgrammers.menu.map((item, key) =>
-            item?.items?.length > 0 ? (
-              <Button
-                key={key}
-                onClick={handleDrawerOpen}
-                color="inherit"
-                endIcon={showServices ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-              >
-                <Typography sx={styles.services} variant="body2">
-                  Servicios
-                </Typography>
-              </Button>
-            ) : (
-              <CustomLink key={key} href={item.href}>
-                <Button onClick={handleClose} sx={styles.button}>
-                  <Typography variant="body2" align="center" sx={styles.services}>
-                    {item.title}
+        <Box display='flex' justifyContent='space-between'>
+          <Box display='flex' sx={styles.sectionMenu} gap={3}>
+            {menuInitgrammers.menu.map((item, key) =>
+              item?.items?.length > 0 ? (
+                <Button
+                  key={key}
+                  onClick={handleDrawerOpen}
+                  color="inherit"
+                  endIcon={showServices ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                >
+                  <Typography sx={styles.services} variant="body2">
+                    Servicios
                   </Typography>
                 </Button>
-              </CustomLink>
-            ))}
-        </Box>
-        <Box>
-          <Hidden mdDown>
-            <ContactUsButton href={contactsLinks.general} />
-          </Hidden>
+              ) : (
+                <CustomLink key={key} href={item.href}>
+                  <Button onClick={handleClose} sx={styles.button}>
+                    <Typography variant="body2" align="center" sx={styles.services}>
+                      {item.title}
+                    </Typography>
+                  </Button>
+                </CustomLink>
+              ))}
+          </Box>
+          <Box sx={{ display: {xs: 'none', md: 'flex'} }}>
+              <ContactUsButton href={contactsLinks.general} />
+          </Box>
         </Box>
       </Box>
       <Fade timeout={800} in={showServices} sx={styles.fade}>

@@ -1,11 +1,10 @@
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import clsx from 'clsx';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import styles from '../assets/styles/InformationWithImageSection';
+import { Box, Typography } from '@mui/material';
 
 const InformationWithImageSection = ({
   title,
@@ -24,43 +23,43 @@ const InformationWithImageSection = ({
   descriptionPrimaryLight,
   descriptionBlack,
 }) => {
-  const classes = styles({ ...imageSizes, isImageRight });
+  const componentStyles = styles(
+    { imageSizes, isImageRight }, // Pass imageSizes and isImageRight
+    { backgroundPrimaryLight, backgroundPrimaryFade, backgroundSecondary, backgroundSecondaryFade, titlePrimaryMain, titleBlack, descriptionPrimaryLight, descriptionBlack } // Pass other props to styles function
+  );
   return (
     <Box
       component="section"
       position="relative"
-      className={clsx({
-        [classes.backgroundPrimaryLight]: backgroundPrimaryLight,
-        [classes.backgroundPrimaryFade]: backgroundPrimaryFade,
-        [classes.backgroundSecondaryMain]: backgroundSecondary,
-        [classes.backgroundSecondaryFade]: backgroundSecondaryFade,
-      })}
+      sx={componentStyles.container}
     >
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
-        <Box className={classes.container}>
-          <Box component="article" className={classes.detailsContent}>
+        <Box sx={componentStyles.container}>
+          <Box component="article" sx={componentStyles.detailsContent}>
             <Typography
               variant="h2"
-              className={clsx(classes.title, {
-                [classes.textPrimaryMain]: titlePrimaryMain,
-                [classes.textBlack]: titleBlack,
-              })}
+              sx={{
+                ...componentStyles.title,
+                ...(titlePrimaryMain && componentStyles.textPrimaryMain),
+                ...(titleBlack && componentStyles.textBlack),
+              }}
             >
               {title}
             </Typography>
             <Typography
               variant="body1"
-              className={clsx(classes.description, {
-                [classes.textPrimaryMain]: descriptionPrimaryLight,
-                [classes.textBlack]: descriptionBlack,
-              })}
+              sx={{
+                ...componentStyles.title,
+                ...(titlePrimaryMain && componentStyles.textPrimaryMain),
+                ...(titleBlack && componentStyles.textBlack),
+              }}
             >
               {description}
             </Typography>
           </Box>
-          <Box className={classes.containerImage}>
-            <Box component="figure" className={classes.image}>
+          <Box sx={componentStyles.containerImage}>
+            <Box component="figure" sx={componentStyles.image}>
               <Image
                 quality={100}
                 priority

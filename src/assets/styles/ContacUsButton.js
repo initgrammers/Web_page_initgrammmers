@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import theme from '../../shared/config/MuiThemeProvider/theme'
 
 const styles = {
-  link: {
+  link: ({ mr }) => ({
     textDecoration: 'none',
-    marginRight: `${theme.spacing(1)}`,
-  },
+    marginRight: `${mr * theme.spacing(1)}`,
+  }),
 };
 
 styles.propTypes = {

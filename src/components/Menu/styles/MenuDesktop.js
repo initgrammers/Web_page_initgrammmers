@@ -17,7 +17,6 @@ const styles = {
     color: theme.palette.common.black,
   },
   sectionMenu: {
-    display: 'flex',
     flex: 1,
     alignItems: 'center',
     marginLeft: theme.spacing(2),

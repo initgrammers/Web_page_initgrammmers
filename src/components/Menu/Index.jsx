@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import dynamic from 'next/dynamic';
 import styles from '../../assets/styles/Menu';
 import OutsideAlerter from './MenuDesktop/Outsider';
-import { AppBar, Hidden, Toolbar } from '@mui/material';
+import { AppBar, Box, Toolbar } from '@mui/material';
 
 const MobileMenu = dynamic(() => import('./MenuMobile'));
 const MenuDesktop = dynamic(() => import('./MenuDesktop'));
@@ -30,24 +30,24 @@ const CustomMenu = ({ indexMenu }) => {
         <Toolbar
           sx={styles.main}
         >
-          <Hidden mdUp>
+          <Box sx={{display: {xs: 'block', md: 'none'}}}>
             <MobileMenu
               showDrawer={showNav}
               handleDrawerOpen={handleDrawerOpen}
               handleClose={handleClose}
               indexMenu={indexMenu}
             />
-          </Hidden>
-          <Hidden smDown>
+          </Box>
+          <Box sx={{display: {xs: 'none', md: 'block'}}}>
             <MenuDesktop
               showServices={showNav}
               handleDrawerOpen={handleDrawerOpen}
               handleClose={handleClose}
               indexMenu={indexMenu}
             />
-          </Hidden>
+          </Box>
         </Toolbar>
-        <Hidden mdUp>
+        <Box sx={{display: {xs: 'block', md: 'none'}}}>
           <OutsideAlerter callback={handleClose}>
             <CustomDrawer
               open={showNav}
@@ -55,7 +55,7 @@ const CustomMenu = ({ indexMenu }) => {
               indexMenu={indexMenu}
             />
           </OutsideAlerter>
-        </Hidden>
+        </Box>
       </AppBar>
     </>
   );

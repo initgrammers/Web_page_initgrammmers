@@ -1,6 +1,3 @@
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import BackgroundImage from '#Components/BackgroundImage';
@@ -8,8 +5,9 @@ import CustomContainer from '#Components/CustomContainer';
 import styles from '../styles/Banner';
 import ContactUsButton from '#Components/ContacUsButton';
 import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
+import { Box, Typography } from '@mui/material';
+import { primary } from '#app/shared/config/theme/colors';
 
-const useStyles = makeStyles(styles);
 const Banner = ({
   backgroundImage,
   heightImage,
@@ -17,20 +15,19 @@ const Banner = ({
   description,
   image,
 }) => {
-  const classes = useStyles();
   return (
-    <Box component="section" position="relative" bgcolor="primary.light">
+    <Box component="section" position="relative" sx={{background: primary.light}}>
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
-        <Box className={classes.container}>
-          <Box component="article" className={classes.detailsContent}>
-            <Typography variant="h1" className={classes.title}>
+        <Box >
+          <Box component="artie" sx={styles.detailsContent}>
+            <Typography variant="h1" sx={styles.title}>
               {title}
             </Typography>
             <Typography
               variant="h3"
               component="p"
-              className={classes.description}
+              sx={styles.description}
             >
               {description}
             </Typography>
@@ -40,14 +37,14 @@ const Banner = ({
               href={contactsLinks.landing}
             />
           </Box>
-          <Box className={classes.containerImage}>
-            <Box component="figure" className={classes.image}>
+          <Box sx={styles.containerImage}>
+            <Box component="figure" sx={styles.image}>
               <Image
                 quality={100}
                 priority
                 src={image}
                 layout="fill"
-                className={classes.mainImage}
+                sx={styles.mainImage}
                 alt={title}
               />
             </Box>

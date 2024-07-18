@@ -1,23 +1,18 @@
-import Box from '@material-ui/core/Box';
-import Hidden from '@material-ui/core/Hidden';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from '../assets/styles/BackgroundImage';
-
-const useStyles = ({ height }) => makeStyles((theme) => styles(theme, height));
+import { Box } from '@mui/material';
 
 const BackgroundImage = ({ height, image, alt }) => {
-  const classes = useStyles(height);
 
   return (
     <>
       {height > 0 && (
-        <Hidden mdDown>
-          <Box className={classes.containerBackgroundImage}>
+        <Box sx={{display:{xs: 'none', md: 'flex'}}}>
+          <Box sx={styles(height).containerBackgroundImage}>
             <Image quality={100} src={image} layout="fill" alt={alt} />
           </Box>
-        </Hidden>
+        </Box>
       )}
     </>
   );

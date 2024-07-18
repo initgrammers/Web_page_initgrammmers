@@ -1,4 +1,6 @@
-const styles = (theme) => ({
+import theme from '../../../shared/config/MuiThemeProvider/theme'
+
+const styles = {
   sectionLogo: {
     display: 'flex',
     flex: 1,
@@ -30,6 +32,6 @@ const styles = (theme) => ({
     color: theme.palette.primary.main,
     margin: 0,
   },
-});
+};
 
 export default styles;

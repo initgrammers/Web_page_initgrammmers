@@ -1,115 +1,94 @@
-import PropTypes from 'prop-types';
-import makeStyles from '@material-ui/core/styles/makeStyles';
+// styles.js
+import { css } from '@mui/material/styles';
+import theme from '../../shared/config/MuiThemeProvider/theme';
+import { primary, secondary } from '#app/shared/config/theme/colors';
 
-const styles = makeStyles((theme) => ({
-  backgroundPrimaryLight: {
-    background: theme.palette.primary.light,
-  },
-  backgroundSecondaryMain: {
-    background: theme.palette.secondary.main,
-  },
-  backgroundSecondaryFade: {
-    background: theme.palette.secondary.fade,
-  },
-  backgroundPrimaryFade: {
-    background: theme.palette.primary.fade,
-  },
+const styles = (props) => ({
+  backgroundPrimaryLight: css`
+    background-color: ${theme.palette.primary.light};
+  `,
+  backgroundSecondaryMain: css`
+    background-color: ${theme.palette.secondary.main};
+  `,
+  backgroundSecondaryFade: css`
+    background-color: ${theme.palette.secondary.fade};
+  `,
+  backgroundPrimaryFade: css`
+    background-color: ${theme.palette.primary.fade};
+  `,
 
-  container: (props) => ({
-    display: 'flex',
-    flexDirection: `${props.isImageRight ? 'column' : 'column-reverse'}`,
-    padding: theme.spacing(4, 0),
-  }),
-  title: {
-    color: theme.palette.primary.contrastText,
-    textAlign: 'center',
-  },
-  description: {
-    padding: `${theme.spacing(4)}px 0 0 0`,
-    textAlign: 'justify',
-    color: theme.palette.primary.contrastText,
-  },
-  textPrimaryMain: {
-    color: theme.palette.primary.light,
-  },
-  textBlack: {
-    color: theme.palette.text.primary,
-  },
+  container: css`
+    display: flex;
+    flex-direction: ${props.isImageRight ? 'column-reverse' : 'column'}; /* Cambia el orden si la imagen está a la derecha */
+    padding: ${theme.spacing(4, 0)}; /* Espacio vertical y horizontal */
+    ${theme.breakpoints.up('sm')} {
+      padding: ${theme.spacing(5, 0)}; /* Ajusta el espacio en pantallas más grandes */
+    }
+    ${theme.breakpoints.up('lg')} {
+      flex-direction: ${props.isImageRight ? 'row' : 'row-reverse'}; /* Cambia a fila en pantallas grandes */
+      padding: 0; 
+    }
+  `,
+  title: css`
+    color: ${theme.palette.primary.contrastText}; /* Color de texto contrastante */
+    text-align: center;
+  `,
+  description: css`
+    padding: ${theme.spacing(4)}px 0 0 0; /* Espacio superior */
+    text-align: justify;
+    color: ${theme.palette.primary.contrastText};
+  `,
+  textPrimaryMain: css`
+    color: ${theme.palette.primary.main}; /* Color primario principal */
+  `,
+  textBlack: css`
+    color: '${theme.palette.text.primary}'; /* Color de texto primario */
+  `,
 
   actionButton: {
     color: theme.palette.primary.contrastText,
     background: theme.palette.secondary.main,
   },
-  containerImage: (props) => ({
-    display: 'flex',
-    justifyContent: 'center',
-    padding: `${
-      props.isImageRight
-        ? `${theme.spacing(4)}px 0 0 0`
-        : `0 0 ${theme.spacing(5)}px 0`
-    }`,
-  }),
-  image: ({ xs }) => ({
-    width: xs.width,
-    height: xs.height,
-    position: 'relative',
-  }),
-  [theme.breakpoints.up('sm')]: {
-    container: {
-      padding: `${theme.spacing(5)}px 0 !important`,
-    },
-    containerImage: (props) => ({
-      display: 'flex',
-      justifyContent: 'center',
-      padding: `${
-        props.isImageRight
-          ? `${theme.spacing(5)}px 0 0 0`
-          : `0 0 ${theme.spacing(5)}px 0`
-      }`,
-    }),
-    image: ({ sm }) => ({
-      width: sm.width,
-      height: sm.height,
-    }),
-  },
-  [theme.breakpoints.up('md')]: {
-    image: ({ md }) => ({
-      width: md.width,
-      height: md.height,
-    }),
-  },
-  [theme.breakpoints.up('lg')]: {
-    container: (props) => ({
-      display: 'flex',
-      flexDirection: `${props.isImageRight ? 'row' : 'row-reverse'}`,
-      padding: '0 !important',
-    }),
-    detailsContent: (props) => ({
-      flex: 5,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      paddingTop: 0,
-      padding: `${
-        !props.isImageRight
-          ? `0 0 0 ${theme.spacing(2)}px`
-          : `0 ${theme.spacing(2)}px 0 0`
-      }`,
-      paddingRight: theme.spacing(2),
-    }),
-    containerImage: {
-      flex: 5,
-      padding: `${theme.spacing(8)}px 0 !important`,
-    },
-    image: ({ lg }) => ({
-      width: lg.width,
-      height: lg.height,
-    }),
-  },
-}));
 
-styles.propTypes = {
-  theme: PropTypes.shape(),
-};
+  containerImage: css`
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    padding: ${props.isImageRight ? theme.spacing(4, 0, 0, 0) : theme.spacing(0, 0, 5, 0)};
+    ${theme.breakpoints.up('sm')} {
+      padding: ${props.isImageRight ? theme.spacing(5, 0, 0, 0) : theme.spacing(0, 0, 5, 0)};
+    }
+    ${theme.breakpoints.up('lg')} {
+      flex: 5; /* Ocupa 5 partes del espacio disponible */
+      padding: ${theme.spacing(8, 0)}; /* Ajusta el espacio en pantallas grandes */
+    }
+  `,
+  image: css`
+    width: ${props.imageSizes.xs.width}px;
+    height: ${props.imageSizes.xs.height}px;
+    position: relative;
+
+    ${theme.breakpoints.up('sm')} {
+      width: ${props.imageSizes.sm.width}px;
+      height: ${props.imageSizes.sm.height}px;
+    }
+    ${theme.breakpoints.up('md')} {
+      width: ${props.imageSizes.md.width}px;
+      height: ${props.imageSizes.md.height}px;
+    }
+    ${theme.breakpoints.up('lg')} {
+      width: ${props.imageSizes.lg.width}px;
+      height: ${props.imageSizes.lg.height}px;
+    }
+  `,
+  detailsContent: css`
+    ${theme.breakpoints.up('lg')} {
+      flex: 5; /* Ocupa 5 partes del espacio disponible */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 ${theme.spacing(2)}px 0 ${props.isImageRight ? 0 : theme.spacing(2)}px; /* Ajusta el espacio a la derecha o izquierda según la posición de la imagen */
+    }
+  `,
+});
 
 export default styles;

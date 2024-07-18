@@ -4,7 +4,7 @@ import { Button, Link } from '@mui/material';
 
 const ContactUsButton = ({ variant, color, href, label, children, mr }) => {
   return (
-    <Link target="_blank" rel="noopener" href={href} sx={styles.link}>
+    <Link target="_blank" rel="noopener" href={href} sx={styles.link(mr)}>
       <Button variant={variant} color={color}>
         {children || label}
       </Button>
