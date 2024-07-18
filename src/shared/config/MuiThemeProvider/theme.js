@@ -1,9 +1,8 @@
-import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
-import responsiveFontSizes from '@material-ui/core/styles/responsiveFontSizes';
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import { primary, secondary } from '../theme/colors';
 import { typography } from '../theme/typography';
 
-const defaultTheme = createMuiTheme({
+let theme = createTheme({
   typography,
   palette: {
     primary,
@@ -11,29 +10,26 @@ const defaultTheme = createMuiTheme({
   },
 });
 
-const { breakpoints } = defaultTheme;
+theme = responsiveFontSizes(theme); 
 
-const theme = {
-  ...defaultTheme,
-  overrides: {
-    MuiTypography: {
-      h1: {
-        [breakpoints.down('xs')]: {
-          letterSpacing: '-0.87px',
-        },
-      },
-      h2: {
-        [breakpoints.down('md')]: {
-          fontWeight: 500,
-          letterSpacing: '0.18px',
-        },
-      },
-      h3: {
-        [breakpoints.down('md')]: {
-          fontWeight: 400,
-        },
-      },
-    },
+theme.typography.h1 = {
+  [theme.breakpoints.down('xs')]: {
+    letterSpacing: '-0.87px',
   },
 };
-export default responsiveFontSizes(theme);
+
+theme.typography.h2 = {
+  [theme.breakpoints.down('md')]: {
+    fontWeight: 500,
+    letterSpacing: '0.18px',
+  },
+};
+
+
+theme.typography.h3 = {
+  [theme.breakpoints.down('md')]: {
+    fontWeight: 400,
+  },
+};
+
+export default theme; 
