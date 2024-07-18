@@ -11,7 +11,7 @@ const Layout = ({ children, navigation }) => (
       <title>InitGrammers</title>
     </Head>
     <Navigation index={navigation?.index} />
-    <main>{children}</main>
+      <main>{children}</main>
     <CustomFooter />
   </>
 );

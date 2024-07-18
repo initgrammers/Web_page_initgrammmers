@@ -1,21 +1,16 @@
+"use client"
 import React, { useState } from 'react';
-import Hidden from '@material-ui/core/Hidden';
-import Toolbar from '@material-ui/core/Toolbar';
-import AppBar from '@material-ui/core/AppBar';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import dynamic from 'next/dynamic';
 import styles from '../../assets/styles/Menu';
 import OutsideAlerter from './MenuDesktop/Outsider';
+import { AppBar, Hidden, Toolbar } from '@mui/material';
 
 const MobileMenu = dynamic(() => import('./MenuMobile'));
 const MenuDesktop = dynamic(() => import('./MenuDesktop'));
 const CustomDrawer = dynamic(() => import('./MenuMobile/CustomDrawer'));
 
-const useStyles = makeStyles(styles);
-
 const CustomMenu = ({ indexMenu }) => {
-  const classes = useStyles();
 
   const [showNav, setShowNav] = useState(false);
 
@@ -27,8 +22,14 @@ const CustomMenu = ({ indexMenu }) => {
 
   return (
     <>
-      <AppBar component="nav" position="sticky" className={classes.appbar}>
-        <Toolbar className={classes.main}>
+      <AppBar
+        component="nav"
+        position="sticky"
+        sx={styles.appbar}
+      >
+        <Toolbar
+          sx={styles.main}
+        >
           <Hidden mdUp>
             <MobileMenu
               showDrawer={showNav}

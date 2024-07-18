@@ -1,20 +1,17 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+'use client';
+import { CacheProvider } from '@emotion/react';
+import { MuiThemeProvider } from '#app/shared/config/MuiThemeProvider';
+import { usePathname } from 'next/navigation';
 import PropTypes from 'prop-types';
-import Head from 'next/head';
-import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import NextNprogress from 'nextjs-progressbar';
-import theme from '../theme/index';
-import '../src/assets/css/globals.css';
-import * as gtag from '#app/lib/gtag';
-import FacebookPixel from '#Components/FacebookPixel';
-import HeatMap from '#Components/HeatMap';
+import './globals.css';
+import { useEffect } from 'react';
+import Layout from '#Layouts/index';
+import createEmotionCache from '#app/shared/config/createEmotionCache';
 
-const NoLayout = ({ children }) => children;
+const clientSideEmotionCache = createEmotionCache();
 
-const MyApp = ({ Component, pageProps }) => {
-  const { layoutProps, ...restPageProps } = pageProps;
+export default function RootLayout({ children }) {
+  // const pathname = usePathname();
   useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
@@ -22,28 +19,24 @@ const MyApp = ({ Component, pageProps }) => {
     }
   }, []);
 
-  const router = useRouter();
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      gtag.pageview(url);
-    };
-    router.events.on('routeChangeComplete', handleRouteChange);
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router.events]);
-
-  const Layout = Component.layout || NoLayout;
+  // useEffect(() => {
+  //   const handleRouteChange = (url) => {
+  //     gtag.pageview(url);
+  //   };
+  //   handleRouteChange();
+  // }, [pathname]);
 
   return (
-    <>
-      <NextNprogress height={6} color={theme.palette.primary.main} />
-
-      <Head>
+    <html lang="es">
+      <head>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, viewport-fit=cover, shrink-to-fit=no"
         />
+        <meta
+          name='emotion-insertion-point'
+        >
+        </meta>
 
         <link
           rel="preconnect"
@@ -104,28 +97,19 @@ const MyApp = ({ Component, pageProps }) => {
           crossOrigin="true"
         />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
-      </Head>
-      <ThemeProvider theme={theme}>
-        <FacebookPixel>
-          {/* <HeatMap> */}
-          <Layout {...layoutProps}>
-            <>
-              <CssBaseline />
-              <Component {...restPageProps} />
-            </>
-          </Layout>
-          {/* </HeatMap> */}
-        </FacebookPixel>
-      </ThemeProvider>
-    </>
+      </head>
+      <body>
+        <CacheProvider value={clientSideEmotionCache}>{children}</CacheProvider>
+      </body>
+    </html>
   );
+}
+
+RootLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+  layoutProps: PropTypes.object,
 };
 
-MyApp.propTypes = {
-  Component: PropTypes.func.isRequired,
-  pageProps: PropTypes.shape(),
+RootLayout.defaultProps = {
+  layoutProps: {},
 };
-MyApp.defaultProps = {
-  pageProps: {},
-};
-export default MyApp;

@@ -3,12 +3,12 @@ import Link from 'next/link';
 import { forwardRef } from 'react';
 
 const CustomLink = forwardRef(({ children, href }, ref) => (
-  <Link href={href}>
-    <a>{children}</a>
+  <Link href={href} passHref legacyBehavior>
+    <a ref={ref}>{children}</a>
   </Link>
 ));
 CustomLink.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.node,
   href: PropTypes.string,
 };
 CustomLink.defaultProps = {

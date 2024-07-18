@@ -23,7 +23,7 @@ const Service = ({
 }) => {
   const classes = useStyles();
   return (
-    <Link href={href}>
+    <Link href={href} legacyBehavior>
       <a className={classes.service}>
         <Button
           fullWidth

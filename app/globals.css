@@ -1,0 +1,22 @@
+html,
+body {
+  max-width: 1920px;
+  padding: 0;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}

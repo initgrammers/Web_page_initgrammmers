@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import theme from '../../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   menuApp: {
     display: 'flex',
     alignItems: 'center',
@@ -37,7 +38,7 @@ const styles = (theme) => ({
     boxShadow:
       'rgba(0, 0, 0, 0.25) 0px 4px 4px, rgba(0, 0, 0, 0.25) 0px 4px 4px inset',
   },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape().isRequired,

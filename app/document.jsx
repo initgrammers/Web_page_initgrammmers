@@ -1,27 +1,23 @@
-/* eslint-disable react/no-danger */
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
-import theme from '../theme/index';
-import { GA_TRACKING_ID } from '#app/lib/gtag';
-import { FB_PIXEL_ID } from '#app/lib/facebookPixel';
 
-class MyDocument extends Document {
-  render() {
-    return (
-      <Html lang="es-ec" dir="ltr">
-        <Head>
-          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-          <meta name="theme-color" content={theme.palette.primary.main} />
 
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
+export default function Document() {
+  return (
+    <Html lang="es-ec" dir="ltr">
+      <Head>
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="theme-color" content={theme.palette.primary.main} />
+
+        {/* Global Site Tag (gtag.js) - Google Analytics */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -29,13 +25,13 @@ class MyDocument extends Document {
               page_path: window.location.pathname,
             });
           `,
-            }}
-          />
+          }}
+        />
 
-          {/* Global Site Code Pixel - Facebook Pixel */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
+        {/* Global Site Code Pixel - Facebook Pixel */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
                 !function(f,b,e,v,n,t,s)
                 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
                 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -46,28 +42,27 @@ class MyDocument extends Document {
                 'https://connect.facebook.net/en_US/fbevents.js');
                 fbq('init', ${FB_PIXEL_ID});
               `,
-            }}
+          }}
+        />
+        <noscript>
+          <img
+            height="1"
+            alt="facebook pixel"
+            width="1"
+            style={{ display: 'none' }}
+            src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
           />
-          <noscript>
-            <img
-              height="1"
-              alt="facebook pixel"
-              width="1"
-              style={{ display: 'none' }}
-              src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
-            />
-          </noscript>
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
+        </noscript>
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
 }
 
-MyDocument.getInitialProps = async (ctx) => {
+Document.getInitialProps = async (ctx) => {
   const sheets = new ServerStyleSheets();
   const originalRenderPage = ctx.renderPage;
 
@@ -86,5 +81,3 @@ MyDocument.getInitialProps = async (ctx) => {
     ],
   };
 };
-
-export default MyDocument;

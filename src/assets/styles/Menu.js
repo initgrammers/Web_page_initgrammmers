@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import theme from '../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   main: {
     background: theme.palette.primary.contrastText,
     filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
@@ -26,7 +27,7 @@ const styles = (theme) => ({
     height: 56,
   },
   appbar: { background: 'white', position: 'relative' },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

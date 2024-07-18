@@ -1,7 +1,7 @@
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import responsiveFontSizes from '@material-ui/core/styles/responsiveFontSizes';
-import { primary, secondary } from './colors';
-import { typography } from './typography';
+import { primary, secondary } from '../theme/colors';
+import { typography } from '../theme/typography';
 
 const defaultTheme = createMuiTheme({
   typography,

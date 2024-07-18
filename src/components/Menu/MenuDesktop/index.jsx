@@ -1,12 +1,6 @@
 /* eslint-disable no-confusing-arrow */
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import Hidden from '@material-ui/core/Hidden';
-import Fade from '@material-ui/core/Fade';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import PropTypes from 'prop-types';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
 import CustomLink from '#Components/CustomLink';
@@ -16,8 +10,8 @@ import { contactsLinks } from '#app/constants/contacts';
 import Options from './Options';
 import OutsideAlerter from './Outsider';
 import { menuInitgrammers } from '#constants/Menu';
+import { Box, Button, Fade, Hidden, Typography } from '@mui/material';
 
-const useStyles = makeStyles(styles);
 
 const MenuDesktop = ({
   showServices,
@@ -25,30 +19,29 @@ const MenuDesktop = ({
   indexMenu,
   handleClose,
 }) => {
-  const classes = useStyles();
   return (
     <>
-      <Box className={classes.menuApp}>
+      <Box sx={styles.menuApp}>
         <CustomLink href="/">
           <LogoInitgrammers />
         </CustomLink>
-        <Box className={classes.sectionMenu}>
+        <Box sx={styles.sectionMenu}>
           {menuInitgrammers.menu.map((item, key) =>
             item?.items?.length > 0 ? (
               <Button
                 key={key}
                 onClick={handleDrawerOpen}
                 color="inherit"
-                endIcon={showServices ? <ExpandLess /> : <ExpandMore />}
+                endIcon={showServices ? <ExpandLessIcon /> : <ExpandMoreIcon />}
               >
-                <Typography className={classes.services} variant="body2">
+                <Typography sx={styles.services} variant="body2">
                   Servicios
                 </Typography>
               </Button>
             ) : (
               <CustomLink key={key} href={item.href}>
-                <Button onClick={handleClose} className={classes.button}>
-                  <Typography variant="body2" align="center">
+                <Button onClick={handleClose} sx={styles.button}>
+                  <Typography variant="body2" align="center" sx={styles.services}>
                     {item.title}
                   </Typography>
                 </Button>
@@ -61,7 +54,7 @@ const MenuDesktop = ({
           </Hidden>
         </Box>
       </Box>
-      <Fade timeout={800} in={showServices} className={classes.fade}>
+      <Fade timeout={800} in={showServices} sx={styles.fade}>
         <Box bgcolor="white">
           <OutsideAlerter callback={handleClose}>
             <Options

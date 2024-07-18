@@ -1,23 +1,13 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+// app/components/FacebookPixel.js
+'use client';
+import { useLayoutEffect } from 'react';
 import * as fbq from '#app/lib/facebookPixel';
 
-const handleRouteChange = () => {
-  fbq.pageview();
-};
-
 const FacebookPixel = ({ children }) => {
-  const router = useRouter();
-
-  useEffect(() => {
-    // This pageview only trigger first time (it is important for Pixel to have real information)
+  useLayoutEffect(() => {
+    fbq.initialize(fbq.FB_PIXEL_ID);
     fbq.pageview();
-
-    router.events.on('routeChangeComplete', handleRouteChange);
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router.events]);
+  }, []);
 
   return children;
 };

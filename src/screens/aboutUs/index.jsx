@@ -1,3 +1,4 @@
+"use client"
 import Banner from './sections/Banner';
 import MisionVision from './sections/MisionVision';
 import SEO from '#Components/SEO';
