@@ -1,6 +1,6 @@
-import { useTheme } from '@material-ui/core';
 import MisionVision from '../components/MisionVision';
 import { misionVision } from '#constants/AboutUs';
+import { useTheme } from '@mui/material';
 
 const MisionVisionSection = () => {
   const { palette } = useTheme();

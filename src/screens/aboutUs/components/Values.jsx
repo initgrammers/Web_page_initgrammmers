@@ -1,27 +1,21 @@
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import CardValue from '#Components/CardValue';
 import styles from '../styles/Values';
-
-const useStyles = makeStyles(styles);
+import { Box, Typography } from '@mui/material';
 
 const Values = ({ title, values, backgroundImage, heightImage }) => {
-  const classes = useStyles();
-
   return (
-    <Box component="section" position="relative" className={classes.section}>
+    <Box component="section" position="relative" sx={styles.section}>
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
         <Box>
-          <Typography variant="h2" align="center" className={classes.title}>
+          <Typography variant="h2" align="center" sx={styles.title}>
             {title}
           </Typography>
 
-          <Box className={classes.values}>
+          <Box sx={styles.values}>
             {values.map((valueInitgrammers, key) => (
               <CardValue
                 key={key}

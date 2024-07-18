@@ -1,12 +1,10 @@
-import Box from '@material-ui/core/Box';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import Purpose from '#Components/Purpose';
+import { Box } from '@mui/material';
 import styles from '../styles/MisionVision';
 
-const useStyles = makeStyles(styles);
 
 const MisionVision = ({
   backgroundImage,
@@ -22,12 +20,11 @@ const MisionVision = ({
   backgroundColorVision,
   colorTitleIsSecondaryVision,
 }) => {
-  const classes = useStyles();
   return (
-    <Box component="section" position="relative" className={classes.section}>
+    <Box component="section" position="relative" sx={styles.section}>
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
-        <Box className={classes.containerMisionVision}>
+        <Box sx={styles.containerMisionVision}>
           <Purpose
             backgroundColor={backgroundColorMision}
             title={misionTitle}
