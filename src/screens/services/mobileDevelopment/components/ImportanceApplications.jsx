@@ -1,27 +1,21 @@
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import Image from 'next/image';
 import styles from '../styles/ImportanceApplications';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import { importanceApplications } from '#constants/services/MobileDevelopment';
-
-const useStyles = makeStyles(styles);
+import { Box, Grid, Typography } from '@mui/material';
 
 const ImportanceAplications = () => {
-  const classes = useStyles();
   return (
-    <Box component="section" position="relative" className={classes.background}>
+    <Box component="section" position="relative" sx={styles.background}>
       <BackgroundImage
         image={importanceApplications.backgroundImage}
         height={importanceApplications.heightImage}
       />
       <CustomContainer>
-        <Grid container className={classes.root}>
-          <Grid item xs={12} lg={6} className={classes.gridImage}>
-            <Box component="figure" className={classes.image}>
+        <Grid container sx={styles.root}>
+          <Grid item xs={12} lg={6} sx={styles.gridImage}>
+            <Box component="figure" sx={styles.image}>
               <Image
                 quality={100}
                 src={importanceApplications.mainImage}
@@ -30,16 +24,16 @@ const ImportanceAplications = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={12} lg={6} className={classes.gridContent}>
+          <Grid item xs={12} lg={6} sx={styles.gridContent}>
             <Box component="article">
-              <Typography variant="h2" className={classes.title}>
+              <Typography variant="h2" sx={styles.title}>
                 {importanceApplications.title}
               </Typography>
               <Typography variant="body1">
                 {importanceApplications.description1}
               </Typography>
-              <Box className={classes.images}>
-                <Box component="figure" className={classes.figureLeft}>
+              <Box sx={styles.images}>
+                <Box component="figure" sx={styles.figureLeft}>
                   <Image
                     quality={100}
                     src={importanceApplications.logo1}
@@ -49,7 +43,7 @@ const ImportanceAplications = () => {
                     alt="Google Play"
                   />
                 </Box>
-                <Box component="figure" className={classes.figureLeft}>
+                <Box component="figure" sx={styles.figureLeft}>
                   <Image
                     quality={100}
                     src={importanceApplications.logo2}
