@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import theme from '../../../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
@@ -60,7 +61,7 @@ const styles = (theme) => ({
       width: 400,
     },
   },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

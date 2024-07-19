@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import makeStyles from '@material-ui/core/styles/makeStyles';
+import theme from '../../shared/config/MuiThemeProvider/theme'
 
-const styles = makeStyles((theme) => ({
+const styles = {
   mainSection: {
     background: theme.palette.secondary.main,
     marginBottom: theme.spacing(8),
@@ -31,11 +31,11 @@ const styles = makeStyles((theme) => ({
     marginTop: `-${theme.spacing(4)}px`,
   },
 
-  image: ({ xs }) => ({
-    width: xs.width,
-    height: xs.height,
-    position: 'relative',
-  }),
+  // image: ({ xs }) => ({
+  //   width: xs.width,
+  //   height: xs.height,
+  //   position: 'relative',
+  // }),
 
   [theme.breakpoints.up('sm')]: {
     containerImage: {
@@ -74,7 +74,7 @@ const styles = makeStyles((theme) => ({
       height: lg.height,
     }),
   },
-}));
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

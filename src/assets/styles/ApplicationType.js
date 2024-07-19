@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import theme from '../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   root: {
     color: theme.palette.primary.contrastText,
     [theme.breakpoints.up('lg')]: {
@@ -39,7 +40,7 @@ const styles = (theme) => ({
       backgroundColor: theme.palette.primary.contrastText,
     },
   },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),
