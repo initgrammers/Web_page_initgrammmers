@@ -1,3 +1,4 @@
+"use client"
 import dynamic from 'next/dynamic';
 import Banner from './components/Banner';
 import SEO from '#Components/SEO';

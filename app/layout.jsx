@@ -99,7 +99,11 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
       </head>
       <body>
-        <CacheProvider value={clientSideEmotionCache}>{children}</CacheProvider>
+        <MuiThemeProvider>
+          <CacheProvider value={clientSideEmotionCache}>
+            {children}
+          </CacheProvider>
+        </MuiThemeProvider>
       </body>
     </html>
   );

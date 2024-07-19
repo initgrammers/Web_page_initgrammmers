@@ -4,9 +4,9 @@ import { MuiThemeProvider } from '#app/shared/config/MuiThemeProvider';
 
 export default function Home() {
   return (
-    <MuiThemeProvider>
+    // <MuiThemeProvider>
       <LandingPage />
-    </MuiThemeProvider>
+    // </MuiThemeProvider>
   );
 }
 

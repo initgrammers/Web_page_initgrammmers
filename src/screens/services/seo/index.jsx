@@ -1,3 +1,4 @@
+"use client"
 import dynamic from 'next/dynamic';
 import Banner from './sections/Banner';
 import SEOsearch from '#constants/seo/SEO';
