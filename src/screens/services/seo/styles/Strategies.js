@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import makeStyles from '@material-ui/core/styles/makeStyles';
+import theme from '../../shared/config/MuiThemeProvider/theme'
 
-const styles = makeStyles((theme) => ({
+const styles = {
   background: {
     background: 'rgba(163, 18, 91, 0.04)',
   },
@@ -92,7 +92,7 @@ const styles = makeStyles((theme) => ({
       },
     },
   },
-}));
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

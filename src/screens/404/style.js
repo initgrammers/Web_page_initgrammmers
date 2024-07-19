@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import theme from '../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   root: {
     width: '100%',
     height: '90vh',
@@ -19,7 +20,7 @@ const styles = (theme) => ({
   button: {
     color: 'white',
   },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

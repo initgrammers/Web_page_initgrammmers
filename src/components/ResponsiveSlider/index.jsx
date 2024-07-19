@@ -1,7 +1,7 @@
-import { Box, useMediaQuery, useTheme } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Slide from './Slide';
 import Image from './Image';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 
 const Slider = ({ data, imageIsLarge, showTitleImage }) => {
   const { breakpoints } = useTheme();

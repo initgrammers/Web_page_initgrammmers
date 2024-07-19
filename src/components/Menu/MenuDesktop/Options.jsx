@@ -1,16 +1,10 @@
 /* eslint-disable no-confusing-arrow */
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import clsx from 'clsx';
 import data from '#constants/Menu';
 import styles from '../styles/Options';
-
-const useStyles = makeStyles(styles);
+import { Box, Button, Grid, Typography } from '@mui/material';
 
 const Service = ({
   title,
@@ -21,19 +15,18 @@ const Service = ({
   id,
   handleDrawerOpen,
 }) => {
-  const classes = useStyles();
   return (
     <Link href={href} legacyBehavior>
-      <a className={classes.service}>
+      <a style={styles.service}>
         <Button
           fullWidth
           onClick={handleDrawerOpen}
-          className={clsx(classes.button, {
-            [classes.selected]: indexMenu === id,
+          sx={clsx(styles.button, {
+            [styles.selected]: indexMenu === id,
           })}
         >
           {icon}
-          <Box className={classes.descriptionService}>
+          <Box sx={styles.descriptionService}>
             <Typography variant="subtitle1" color="inherit">
               {title}
             </Typography>
@@ -63,10 +56,9 @@ Service.defaultProps = {
 };
 
 const Options = ({ indexMenu, handleDrawerOpen }) => {
-  const classes = useStyles();
   return (
-    <Box className={classes.root}>
-      <Typography color="primary" className={classes.title}>
+    <Box sx={styles.root}>
+      <Typography color="primary" sx={styles.title}>
         Servicios que ofrecemos
       </Typography>
       <Grid container spacing={4}>

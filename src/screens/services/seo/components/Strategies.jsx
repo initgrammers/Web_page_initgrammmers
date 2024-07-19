@@ -1,4 +1,3 @@
-import { Box, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from '../styles/Strategies';
@@ -7,6 +6,7 @@ import CustomContainer from '#Components/CustomContainer';
 import ContactUsButton from '#Components/ContacUsButton';
 import { contactsLinks } from '#app/constants/contacts';
 import CardPartnership from '#Components/CardPartnership';
+import { Box, Typography } from '@mui/material';
 
 const Strategies = ({
   titlePart1,
@@ -17,12 +17,10 @@ const Strategies = ({
   imageSizes,
   optionsShoppingOnline,
 }) => {
-  const classes = styles({ ...imageSizes });
-
   return (
     <Box component="section" position="relative">
       <CustomContainer>
-        <Box component="article" className={classes.content}>
+        <Box component="article" sx={styles.content}>
           <Subtitle
             head={titlePart1}
             emphasis={titlePart2}
@@ -32,7 +30,7 @@ const Strategies = ({
             component="h2"
             variant="h2"
           />
-          <Box className={classes.imageStyle}>
+          <Box sx={styles.imageStyle}>
             <Image
               quality={100}
               src={image}
@@ -40,13 +38,13 @@ const Strategies = ({
               alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
             />
           </Box>
-          <Typography variant="body1" className={classes.description}>
+          <Typography variant="body1" sx={styles.description}>
             {description}
           </Typography>
           <ContactUsButton color="secondary" href={contactsLinks.general} />
-          <Box className={classes.shop}>
+          <Box sx={styles.shop}>
             {optionsShoppingOnline.map((service) => (
-              <Box key={service.title} className={classes.optionsShop}>
+              <Box key={service.title} sx={styles.optionsShop}>
                 <CardPartnership
                   image={service.path}
                   title={service.title}

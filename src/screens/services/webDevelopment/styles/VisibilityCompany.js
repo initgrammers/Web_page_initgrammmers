@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import theme from '../../../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   detailsContent: {
     paddingTop: theme.spacing(8),
   },
@@ -59,7 +60,7 @@ const styles = (theme) => ({
       height: 382,
     },
   },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

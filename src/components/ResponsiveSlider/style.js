@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import makeStyles from '@material-ui/core/styles/makeStyles';
+import theme from '../../shared/config/MuiThemeProvider/theme'
 
-const styles = makeStyles((theme) => ({
+const styles ={
   imagesContent: {
     display: 'flex',
     flex: 1,
@@ -38,7 +38,7 @@ const styles = makeStyles((theme) => ({
   showLabel: {
     visibility: 'collapse',
   },
-}));
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

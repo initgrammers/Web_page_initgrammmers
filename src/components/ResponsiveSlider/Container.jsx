@@ -1,8 +1,9 @@
-import Box from '@material-ui/core/Box';
-import { ArrowForwardIos, ArrowBackIos } from '@material-ui/icons';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import styles from './style';
+import { Box } from '@mui/material';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Container = ({
   onNextStep,
@@ -11,21 +12,20 @@ const Container = ({
   disableLeft,
   disableRight,
 }) => {
-  const classes = styles();
   return (
     <Box display="flex" justifyContent="space-between" alignItems="center">
       <Box onClick={onPrevStep}>
-        <ArrowBackIos
-          className={clsx(classes.arrow, {
-            [classes.disableArrow]: disableLeft,
+        <ArrowBackIosIcon
+          sx={clsx(styles.arrow, {
+            [styles.disableArrow]: disableLeft,
           })}
         />
       </Box>
-      <Box className={classes.imagesContent}>{children}</Box>
+      <Box sx={styles.imagesContent}>{children}</Box>
       <Box onClick={onNextStep}>
-        <ArrowForwardIos
-          className={clsx(classes.arrow, {
-            [classes.disableArrow]: disableRight,
+        <ArrowForwardIosIcon
+          sx={clsx(styles.arrow, {
+            [styles.disableArrow]: disableRight,
           })}
         />
       </Box>

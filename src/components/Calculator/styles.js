@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import theme from '../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   calculator: {
     fontSize: '0.875rem',
     fontWeight: '400',
@@ -16,7 +17,7 @@ const styles = (theme) => ({
   whiteText: {
     color: theme.palette.primary.contrastText,
   },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

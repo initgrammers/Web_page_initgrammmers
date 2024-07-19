@@ -1,7 +1,7 @@
-import { useTheme } from '@material-ui/core';
 import SEOBanner from '#Components/Banner';
 import { bannerSEO } from '#constants/services/seo';
 import { contactsLinks } from '#app/constants/contacts';
+import { useTheme } from '@mui/material';
 
 const Banner = () => {
   const { palette } = useTheme();
