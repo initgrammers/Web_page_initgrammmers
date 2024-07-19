@@ -1,7 +1,12 @@
 /* eslint-disable react/no-danger */
 import PropTypes from 'prop-types';
 
-const Article = ({ title, description, url, mainArticle }) => (
+const Article = ({ 
+  title = 'Diseño, desarrollo de aplicaciones web y móviles - InitGrammers',
+  description, 
+  url, 
+  mainArticle 
+}) => (
   <>
     <script
       type="application/ld+json"
@@ -46,10 +51,6 @@ Article.propTypes = {
   description: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   mainArticle: PropTypes.string.isRequired,
-};
-
-Article.defaultProps = {
-  title: 'Diseño, desarrollo de aplicaciones web y móviles - InitGrammers',
 };
 
 export default Article;

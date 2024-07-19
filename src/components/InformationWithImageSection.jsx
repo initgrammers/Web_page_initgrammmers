@@ -9,19 +9,19 @@ import { Box, Typography } from '@mui/material';
 const InformationWithImageSection = ({
   title,
   description,
-  backgroundImage,
-  heightImage,
+  backgroundImage = '',
+  heightImage = 0,
   image,
   imageSizes,
-  backgroundPrimaryLight,
-  backgroundPrimaryFade,
-  backgroundSecondary,
-  backgroundSecondaryFade,
-  isImageRight,
-  titlePrimaryMain,
-  titleBlack,
-  descriptionPrimaryLight,
-  descriptionBlack,
+  backgroundPrimaryLight = false,
+  backgroundPrimaryFade = false,
+  backgroundSecondary = false,
+  backgroundSecondaryFade = false,
+  isImageRight = false,
+  titlePrimaryMain = false,
+  titleBlack = false,
+  descriptionPrimaryLight = false,
+  descriptionBlack = false,
 }) => {
   const componentStyles = styles(
     { imageSizes, isImageRight }, // Pass imageSizes and isImageRight
@@ -56,7 +56,7 @@ const InformationWithImageSection = ({
                 quality={100}
                 priority
                 src={image}
-                layout="fill"
+                fill
                 alt={title}
               />
             </Box>
@@ -100,20 +100,6 @@ InformationWithImageSection.propTypes = {
   titleBlack: PropTypes.bool,
   descriptionPrimaryLight: PropTypes.bool,
   descriptionBlack: PropTypes.bool,
-};
-
-InformationWithImageSection.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
-  backgroundPrimaryLight: false,
-  backgroundPrimaryFade: false,
-  backgroundSecondary: false,
-  backgroundSecondaryFade: false,
-  isImageRight: false,
-  titlePrimaryMain: false,
-  titleBlack: false,
-  descriptionPrimaryLight: false,
-  descriptionBlack: false,
 };
 
 export default InformationWithImageSection;

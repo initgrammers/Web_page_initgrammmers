@@ -9,11 +9,11 @@ import { Box, Typography } from '@mui/material';
 import { primary } from '#app/shared/config/theme/colors';
 
 const Banner = ({
-  backgroundImage,
-  heightImage,
-  title,
-  description,
-  image,
+  backgroundImage = '',
+  heightImage = 0,
+  title = '',
+  description = '',
+  image = '',
 }) => {
   return (
     <Box component="section" position="relative" sx={{background: primary.light}}>
@@ -43,7 +43,7 @@ const Banner = ({
                 quality={100}
                 priority
                 src={image}
-                layout="fill"
+                fill
                 sx={styles.mainImage}
                 alt={title}
               />
@@ -61,14 +61,6 @@ Banner.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
-};
-
-Banner.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
-  title: '',
-  description: '',
-  image: '',
 };
 
 export default Banner;

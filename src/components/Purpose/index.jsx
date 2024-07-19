@@ -8,7 +8,7 @@ const Purpose = ({
   description,
   image,
   backgroundColor,
-  colorTitleIsSecondary,
+  colorTitleIsSecondary = false,
 }) => {
   return (
     <Box sx={styles.cardPurpose} bgcolor={backgroundColor}>
@@ -34,10 +34,6 @@ Purpose.propTypes = {
   image: PropTypes.string.isRequired,
   backgroundColor: PropTypes.string.isRequired,
   colorTitleIsSecondary: PropTypes.bool,
-};
-
-Purpose.defaultProps = {
-  colorTitleIsSecondary: false,
 };
 
 export default Purpose;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 import { Button } from '@mui/material';
 
-const Calculator = ({ typeButton }) => {
+const Calculator = ({ typeButton = 'text' }) => {
   (() => {
     if (process.browser) {
       let j;
@@ -48,10 +48,6 @@ const Calculator = ({ typeButton }) => {
 
 Calculator.propTypes = {
   typeButton: PropTypes.string,
-};
-
-Calculator.defaultProps = {
-  typeButton: 'text',
 };
 
 export default Calculator;

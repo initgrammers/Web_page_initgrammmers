@@ -11,12 +11,12 @@ import { Box, Typography } from '@mui/material';
 
 const OptionsShopping = ({
   titlePart1,
-  titlePart2,
-  titlePart3,
   description,
   image,
-  backgroundImage,
-  heightImage,
+  titlePart2 = '',
+  titlePart3 = '',
+  backgroundImage = '',
+  heightImage = 0,
   imageSizes,
   optionsShoppingOnline,
 }) => {
@@ -29,7 +29,7 @@ const OptionsShopping = ({
             <Image
               quality={100}
               src={image}
-              layout="fill"
+              fill
               alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
             />
           </Box>
@@ -102,10 +102,4 @@ OptionsShopping.propTypes = {
   ).isRequired,
 };
 
-OptionsShopping.defaultProps = {
-  titlePart2: '',
-  titlePart3: '',
-  backgroundImage: '',
-  heightImage: 0,
-};
 export default OptionsShopping;

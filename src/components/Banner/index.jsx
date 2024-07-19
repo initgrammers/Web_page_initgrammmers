@@ -8,16 +8,16 @@ import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 import { Box, Typography } from '@mui/material';
 
 const Banner = ({
-  backgroundImage,
-  heightImage,
-  titlePart1,
-  titlePart2,
-  titlePart3,
-  description,
-  image,
-  backgroundColor,
-  buttonColor,
-  hrefContactUs,
+  backgroundImage = '',
+  heightImage = 0,
+  titlePart1 = '',
+  titlePart2 = '',
+  titlePart3 = '',
+  description = '',
+  image = '',
+  backgroundColor = '',
+  buttonColor = 'secondary',
+  hrefContactUs = `${contactsLinks.general}`,
 }) => {
   return (
     <Box component="section" position="relative" bgcolor={backgroundColor}>
@@ -49,7 +49,7 @@ const Banner = ({
                 quality={100}
                 priority
                 src={image}
-                layout="fill"
+                fill
                 sx={styles.mainImage}
                 alt={`${titlePart1}${titlePart2}${titlePart3}`}
               />
@@ -72,19 +72,6 @@ Banner.propTypes = {
   backgroundColor: PropTypes.string,
   buttonColor: PropTypes.string,
   hrefContactUs: PropTypes.string,
-};
-
-Banner.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
-  titlePart1: '',
-  titlePart2: '',
-  titlePart3: '',
-  description: '',
-  image: '',
-  backgroundColor: '',
-  buttonColor: 'secondary',
-  hrefContactUs: `${contactsLinks.general}`,
 };
 
 export default Banner;

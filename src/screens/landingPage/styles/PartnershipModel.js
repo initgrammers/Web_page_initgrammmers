@@ -35,7 +35,7 @@ const styles = {
   modelPartnership: {
     flex: 1,
     margin: theme.spacing(5),
-    '&:nth-child(1n)': {
+    '&:nth-of-type(1n)': {
       marginBottom: theme.spacing(4),
     },
     '&:last-child': {
@@ -74,7 +74,7 @@ const styles = {
       width: `100%`,
     },
     modelPartnership: {
-      '&:nth-child(1n)': {
+      '&:nth-of-type(1n)': {
         marginBottom: 0,
       },
     },

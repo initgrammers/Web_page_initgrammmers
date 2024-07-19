@@ -5,12 +5,12 @@ import { primary } from '#app/shared/config/theme/colors';
 import { Accordion, AccordionDetails, AccordionSummary, Box, Typography } from '@mui/material';
 
 const CustomAccordion = ({
-  title,
-  details,
-  children,
-  mt,
-  mb,
-  borderRadius,
+  title = '',
+  details = '',
+  children = null,
+  mt = 2,
+  mb = 0,
+  borderRadius = 1,
 }) => {
   return (
     <Box
@@ -44,12 +44,5 @@ CustomAccordion.propTypes = {
   mb: PropTypes.number,
   borderRadius: PropTypes.number,
 };
-CustomAccordion.defaultProps = {
-  title: '',
-  details: '',
-  children: null,
-  mt: 2,
-  mb: 0,
-  borderRadius: 1,
-};
+
 export default CustomAccordion;

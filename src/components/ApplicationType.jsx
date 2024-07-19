@@ -10,7 +10,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-function ApplicationType({ sectionTitle, typesApplication, backgroundGray }) {
+function ApplicationType({ sectionTitle, typesApplication, backgroundGray = false }) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = typesApplication.length;
@@ -118,7 +118,4 @@ ApplicationType.propTypes = {
   backgroundGray: PropTypes.bool,
 };
 
-ApplicationType.defaultProps = {
-  backgroundGray: false,
-};
 export default ApplicationType;

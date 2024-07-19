@@ -12,8 +12,8 @@ const ref = createRef();
 const ItemWithSubItemsMenu = ({
   indexMenu,
   titleMenu,
-  href,
-  subMenu,
+  subMenu = [],
+  href = '#',
   onClose,
 }) => {
   const [open, setOpen] = useState(false);
@@ -70,11 +70,6 @@ ItemWithSubItemsMenu.propTypes = {
   subMenu: PropTypes.arrayOf(PropTypes.shape()),
   indexMenu: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
-};
-
-ItemWithSubItemsMenu.defaultProps = {
-  subMenu: [],
-  href: '#',
 };
 
 export default ItemWithSubItemsMenu;

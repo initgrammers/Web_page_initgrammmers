@@ -7,7 +7,12 @@ import styles from '../styles/Services';
 import { Box, Typography } from '@mui/material';
 
 
-const Services = ({ backgroundImage, heightImage, title, services }) => {
+const Services = ({ 
+  backgroundImage = '',
+  heightImage = 0,
+  title, 
+  services 
+}) => {
   return (
     <Box component="section" position="relative">
       <BackgroundImage image={backgroundImage} height={heightImage} />
@@ -46,11 +51,6 @@ Services.propTypes = {
       service: PropTypes.string,
     })
   ).isRequired,
-};
-
-Services.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
 };
 
 export default Services;

@@ -11,9 +11,9 @@ const Service = ({
   subtitle,
   href,
   icon,
-  indexMenu,
-  id,
-  handleDrawerOpen,
+  indexMenu = '',
+  id = '',
+  handleDrawerOpen = () => {},
 }) => {
   return (
     <Link href={href} legacyBehavior>
@@ -48,11 +48,6 @@ Service.propTypes = {
   indexMenu: PropTypes.string,
   id: PropTypes.string,
   handleDrawerOpen: PropTypes.func,
-};
-Service.defaultProps = {
-  indexMenu: '',
-  id: '',
-  handleDrawerOpen: () => {},
 };
 
 const Options = ({ indexMenu, handleDrawerOpen }) => {

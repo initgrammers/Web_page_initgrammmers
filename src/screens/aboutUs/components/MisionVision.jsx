@@ -7,18 +7,18 @@ import styles from '../styles/MisionVision';
 
 
 const MisionVision = ({
-  backgroundImage,
-  heightImage,
   misionTitle,
   misiondescription,
   misionImage,
   backgroundColorMision,
-  colorTitleIsSecondaryMision,
   visionTitle,
   visiondescription,
   visionImage,
   backgroundColorVision,
-  colorTitleIsSecondaryVision,
+  colorTitleIsSecondaryMision = false,
+  colorTitleIsSecondaryVision = false,
+  backgroundImage = '',
+  heightImage = 0,
 }) => {
   return (
     <Box component="section" position="relative" sx={styles.section}>
@@ -58,13 +58,6 @@ MisionVision.propTypes = {
   visionImage: PropTypes.string.isRequired,
   backgroundColorVision: PropTypes.string.isRequired,
   colorTitleIsSecondaryVision: PropTypes.bool,
-};
-
-MisionVision.defaultProps = {
-  colorTitleIsSecondaryMision: false,
-  colorTitleIsSecondaryVision: false,
-  backgroundImage: '',
-  heightImage: 0,
 };
 
 export default MisionVision;

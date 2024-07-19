@@ -13,7 +13,7 @@ const Banner = () => {
           <Image
             quality={100}
             src={bannerMobileDevelopment.backgroundImage}
-            layout="fill"
+            fill
             alt="Initgrammer"
           />
         </Box>
@@ -44,7 +44,7 @@ const Banner = () => {
               quality={100}
               priority
               src={bannerMobileDevelopment.image}
-              layout="fill"
+              fill
               alt={`${bannerMobileDevelopment.titlePar1} ${bannerMobileDevelopment.titlePart2}${bannerMobileDevelopment.titlePart3}`}
             />
           </Box>

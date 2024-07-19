@@ -1,7 +1,10 @@
 /* eslint-disable react/no-danger */
 import PropTypes from 'prop-types';
 
-const WebSite = ({ title, url }) => (
+const WebSite = ({
+  title = 'Diseño, desarrollo de aplicaciones web y móviles - InitGrammers',
+  url = 'https://initgrammers.com/',
+}) => (
   <>
     <script
       type="application/ld+json"
@@ -27,8 +30,4 @@ WebSite.propTypes = {
   url: PropTypes.string,
 };
 
-WebSite.defaultProps = {
-  title: 'Diseño, desarrollo de aplicaciones web y móviles - InitGrammers',
-  url: 'https://initgrammers.com/',
-};
 export default WebSite;

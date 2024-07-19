@@ -6,8 +6,8 @@ import styles from '../styles/VisibilityCompany';
 import { Box, Typography } from '@mui/material';
 
 const VisibilityCompany = ({
-  backgroundImage,
-  heightImage,
+  backgroundImage = '',
+  heightImage = 0,
   title,
   description,
   image,
@@ -31,7 +31,7 @@ const VisibilityCompany = ({
                 quality={100}
                 priority
                 src={image}
-                layout="fill"
+                fill
                 alt={title}
               />
             </Box>
@@ -48,11 +48,6 @@ VisibilityCompany.propTypes = {
   image: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
-};
-
-VisibilityCompany.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
 };
 
 export default VisibilityCompany;

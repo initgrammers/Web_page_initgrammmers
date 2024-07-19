@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { forwardRef } from 'react';
 
-const CustomLink = forwardRef(({ children, href }, ref) => (
+const CustomLink = forwardRef(({ children = '', href = '#', }, ref) => (
   <Link href={href} passHref legacyBehavior>
     <a ref={ref}>{children}</a>
   </Link>
@@ -10,9 +10,5 @@ const CustomLink = forwardRef(({ children, href }, ref) => (
 CustomLink.propTypes = {
   children: PropTypes.node,
   href: PropTypes.string,
-};
-CustomLink.defaultProps = {
-  children: '',
-  href: '#',
 };
 export default CustomLink;

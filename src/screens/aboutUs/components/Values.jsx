@@ -5,7 +5,12 @@ import CardValue from '#Components/CardValue';
 import styles from '../styles/Values';
 import { Box, Typography } from '@mui/material';
 
-const Values = ({ title, values, backgroundImage, heightImage }) => {
+const Values = ({ 
+  title, 
+  values, 
+  backgroundImage = '',
+  heightImage = 0, 
+}) => {
   return (
     <Box component="section" position="relative" sx={styles.section}>
       <BackgroundImage image={backgroundImage} height={heightImage} />
@@ -42,11 +47,6 @@ Values.propTypes = {
       isBorderSecondary: PropTypes.bool,
     })
   ).isRequired,
-};
-
-Values.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
 };
 
 export default Values;

@@ -10,7 +10,7 @@ const MobileMenu = dynamic(() => import('./MenuMobile'));
 const MenuDesktop = dynamic(() => import('./MenuDesktop'));
 const CustomDrawer = dynamic(() => import('./MenuMobile/CustomDrawer'));
 
-const CustomMenu = ({ indexMenu }) => {
+const CustomMenu = ({ indexMenu = '' }) => {
 
   const [showNav, setShowNav] = useState(false);
 
@@ -62,8 +62,5 @@ const CustomMenu = ({ indexMenu }) => {
 };
 CustomMenu.propTypes = {
   indexMenu: PropTypes.string,
-};
-CustomMenu.defaultProps = {
-  indexMenu: '',
 };
 export default CustomMenu;

@@ -9,15 +9,11 @@ import {
 } from '@mui/icons-material';
 import PropTypes from 'prop-types';
 
-const IconComponent = ({ Icon, className }) => <Icon className={className} />;
+const IconComponent = ({ Icon, className = '' }) => <Icon className={className} />;
 
 IconComponent.propTypes = {
   Icon: PropTypes.elementType.isRequired,
   className: PropTypes.string,
-};
-
-IconComponent.defaultProps = {
-  className: '',
 };
 
 export const PhoneIcon = (props) => <IconComponent Icon={Phone} {...props} />;

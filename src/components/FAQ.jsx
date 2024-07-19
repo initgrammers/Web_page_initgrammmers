@@ -8,12 +8,12 @@ import { Box } from '@mui/material';
 
 const FAQ = ({
   titlePart1,
-  titlePart2,
-  titlePart3,
   questions,
-  backgroundImage,
-  heightImage,
-  black,
+  titlePart2 = '',
+  titlePart3 = '',
+  backgroundImage = '',
+  heightImage = 0,
+  black = false,
 }) => {
 
   return (
@@ -48,13 +48,5 @@ FAQ.propTypes = {
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
   black: PropTypes.bool,
-};
-
-FAQ.defaultProps = {
-  titlePart2: '',
-  titlePart3: '',
-  backgroundImage: '',
-  heightImage: 0,
-  black: false,
 };
 export default FAQ;

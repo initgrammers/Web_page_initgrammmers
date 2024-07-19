@@ -11,14 +11,14 @@ import { Box, Typography } from '@mui/material';
 
 const Strategies = ({
   titlePart1,
-  titlePart2,
-  titlePart3,
   description,
   image,
   imageSizes,
   optionsShoppingOnline,
-  backgroundImage,
-  heightImage,
+  backgroundImage = '',
+  heightImage = 0,
+  titlePart2 = '',
+  titlePart3 = '',
 }) => {
   return (
     <Box component="section" position="relative">
@@ -38,7 +38,7 @@ const Strategies = ({
             <Image
               quality={100}
               src={image}
-              layout="fill"
+              fill
               alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
             />
           </Box>
@@ -102,10 +102,4 @@ Strategies.propTypes = {
   ).isRequired,
 };
 
-Strategies.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
-  titlePart2: '',
-  titlePart3: '',
-};
 export default Strategies;

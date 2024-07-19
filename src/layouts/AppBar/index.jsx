@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Menu from '../../components/Menu/Index';
 
-const Navigation = ({ index }) => (
+const Navigation = ({ index = 'home' }) => (
   <>
     <Menu indexMenu={index} />
   </>
@@ -9,5 +9,4 @@ const Navigation = ({ index }) => (
 Navigation.propTypes = {
   index: PropTypes.string,
 };
-Navigation.defaultProps = { index: 'home' };
 export default Navigation;

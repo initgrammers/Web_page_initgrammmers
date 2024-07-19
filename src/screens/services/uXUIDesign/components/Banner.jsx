@@ -9,8 +9,8 @@ import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 import { Box, Typography } from '@mui/material';
 
 const Banner = ({
-  heightImage,
-  backgroundImage,
+  backgroundImage = '',
+  heightImage = 0,
   title,
   description,
   image,
@@ -46,7 +46,7 @@ const Banner = ({
                 quality={100}
                 priority
                 src={image}
-                layout="fill"
+                fill
                 alt={title}
               />
             </Box>
@@ -64,11 +64,6 @@ Banner.propTypes = {
   image: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
-};
-
-Banner.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
 };
 
 export default Banner;

@@ -2,11 +2,11 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 
 const SEO = ({
-  title,
-  description,
-  properties,
-  socialVerifications,
-  urlAltern,
+  title = 'InitGrammers',
+  urlAltern = '',
+  description = '',
+  properties = [],
+  socialVerifications = [],
 }) => (
   <Head>
     <meta charSet="utf-8" />
@@ -72,11 +72,4 @@ SEO.propTypes = {
   ),
 };
 
-SEO.defaultProps = {
-  title: 'InitGrammers',
-  urlAltern: '',
-  description: '',
-  properties: [],
-  socialVerifications: [],
-};
 export default SEO;

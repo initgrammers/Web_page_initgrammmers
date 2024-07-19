@@ -113,7 +113,3 @@ RootLayout.propTypes = {
   children: PropTypes.node.isRequired,
   layoutProps: PropTypes.object,
 };
-
-RootLayout.defaultProps = {
-  layoutProps: {},
-};

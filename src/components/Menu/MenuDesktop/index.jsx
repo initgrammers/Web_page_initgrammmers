@@ -14,7 +14,7 @@ import { Box, Button, Fade, Hidden, Typography } from '@mui/material';
 
 
 const MenuDesktop = ({
-  showServices,
+  showServices = false,
   handleDrawerOpen,
   indexMenu,
   handleClose,
@@ -73,8 +73,5 @@ MenuDesktop.propTypes = {
   handleDrawerOpen: PropTypes.func.isRequired,
   indexMenu: PropTypes.string.isRequired,
   handleClose: PropTypes.func.isRequired,
-};
-MenuDesktop.defaultProps = {
-  showServices: false,
 };
 export default MenuDesktop;

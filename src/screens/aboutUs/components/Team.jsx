@@ -5,7 +5,12 @@ import CardTeam from '#Components/CardTeam';
 import styles from '../styles/Team';
 import { Box, Typography } from '@mui/material';
 
-const TeamAboutUs = ({ title, teamPlayer, backgroundImage, heightImage }) => {
+const TeamAboutUs = ({ 
+  title, 
+  teamPlayer, 
+  backgroundImage = '',
+  heightImage = 0 
+}) => {
 
   return (
     <Box component="section" position="relative" sx={styles.section}>
@@ -47,8 +52,4 @@ TeamAboutUs.propTypes = {
   ).isRequired,
 };
 
-TeamAboutUs.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
-};
 export default TeamAboutUs;

@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import styles from './CardValue';
 import { Box, Typography } from '@mui/material';
 
-const CardValue = ({ description, image, isBorderSecondary }) => {
+const CardValue = ({ description, image, isBorderSecondary = false }) => {
   return (
     <Box
       component="article"
@@ -25,7 +25,4 @@ CardValue.propTypes = {
   isBorderSecondary: PropTypes.bool,
 };
 
-CardValue.defaultProps = {
-  isBorderSecondary: false,
-};
 export default CardValue;

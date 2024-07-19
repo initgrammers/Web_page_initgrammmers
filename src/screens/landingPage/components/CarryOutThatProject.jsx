@@ -10,9 +10,9 @@ import { Box, Typography } from '@mui/material';
 
 const CarryOutThatProject = ({
   titlePart1,
-  titlePart2,
+  titlePart2 = '',
   description,
-  image,
+  image = '',
 }) => {
   return (
     <Box
@@ -50,7 +50,7 @@ const CarryOutThatProject = ({
               <Image
                 quality={100}
                 src={image}
-                layout="fill"
+                fill
                 alt={`${titlePart1} ${titlePart2}`}
               />
             </Box>
@@ -66,11 +66,6 @@ CarryOutThatProject.propTypes = {
   titlePart2: PropTypes.string,
   description: PropTypes.string.isRequired,
   image: PropTypes.string,
-};
-
-CarryOutThatProject.defaultProps = {
-  titlePart2: '',
-  image: '',
 };
 
 export default CarryOutThatProject;

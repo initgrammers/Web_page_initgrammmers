@@ -4,9 +4,14 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 module.exports = withBundleAnalyzer({
   images: {
-    domains: ['res.cloudinary.com'],
-    path: '/_next/image',
-    loader: 'default',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/initgrammers/image/upload/**',
+      },
+    ],
   },
 
   async rewrites() {

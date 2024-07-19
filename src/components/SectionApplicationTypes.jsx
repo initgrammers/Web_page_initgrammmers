@@ -12,10 +12,10 @@ const SectionApplicationTypes = ({
   typesApplication,
   image,
   imageSizes,
-  backgroundPrimaryLight,
-  backgroundGray,
-  backgroundImage,
-  heightImage,
+  backgroundPrimaryLight = false,
+  backgroundGray = false,
+  backgroundImage = '',
+  heightImage = 0,
 }) => {
   return (
     <Box
@@ -42,7 +42,7 @@ const SectionApplicationTypes = ({
                 quality={100}
                 priority
                 src={image}
-                layout="fill"
+                fill
                 alt={sectionTitle}
               />
             </Box>
@@ -84,13 +84,6 @@ SectionApplicationTypes.propTypes = {
   backgroundGray: PropTypes.bool,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
-};
-
-SectionApplicationTypes.defaultProps = {
-  backgroundPrimaryLight: false,
-  backgroundGray: false,
-  backgroundImage: '',
-  heightImage: 0,
 };
 
 export default SectionApplicationTypes;

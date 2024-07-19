@@ -5,7 +5,7 @@ import LogoInitgrammers from '#svg/LogoInitgrammers';
 import styles from './styles';
 import { Box, Button, IconButton } from '@mui/material';
 
-const AppBarMobile = ({ showDrawer, handleDrawerOpen }) => {
+const AppBarMobile = ({ showDrawer = false, handleDrawerOpen }) => {
 
   return (
     <>
@@ -30,9 +30,6 @@ const AppBarMobile = ({ showDrawer, handleDrawerOpen }) => {
 AppBarMobile.propTypes = {
   showDrawer: PropTypes.bool,
   handleDrawerOpen: PropTypes.func.isRequired,
-};
-AppBarMobile.defaultProps = {
-  showDrawer: false,
 };
 
 export default AppBarMobile;

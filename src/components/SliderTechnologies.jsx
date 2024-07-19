@@ -10,14 +10,14 @@ import { Box } from '@mui/material';
 const SliderTechnologies = ({
   title,
   technologies,
-  backgroundImage,
-  heightImage,
-  variantTitle,
-  titleBlack,
-  backgroundGray,
-  barIsInvisible,
-  imageIsLarge,
-  showTitleImage,
+  backgroundImage = '',
+  heightImage = 0,
+  variantTitle = 'h2',
+  titleBlack = false,
+  backgroundGray = false,
+  barIsInvisible = false,
+  imageIsLarge = false,
+  showTitleImage = true,
 }) => {
   return (
     <Box
@@ -63,17 +63,6 @@ SliderTechnologies.propTypes = {
   barIsInvisible: PropTypes.bool,
   imageIsLarge: PropTypes.bool,
   showTitleImage: PropTypes.bool,
-};
-
-SliderTechnologies.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
-  variantTitle: 'h2',
-  titleBlack: false,
-  backgroundGray: false,
-  barIsInvisible: false,
-  imageIsLarge: false,
-  showTitleImage: true,
 };
 
 export default SliderTechnologies;

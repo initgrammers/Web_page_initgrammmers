@@ -5,16 +5,16 @@ import { Box, Typography } from '@mui/material';
 
 
 const Subtitle = ({
-  head,
-  emphasis,
-  tail,
-  variant,
-  component,
-  mb,
-  mt,
-  align,
-  black,
-  white,
+  head= '',
+  emphasis= '',
+  tail= '',
+  variant= 'h1',
+  component= 'h1',
+  mb= 4,
+  mt= 0,
+  align= 'left',
+  black= false,
+  white= false,
 }) => {
   return (
     <Box display="flex" mb={mb} mt={mt} justifyContent="center">
@@ -53,17 +53,5 @@ Subtitle.propTypes = {
   align: PropTypes.string,
   black: PropTypes.bool,
   white: PropTypes.bool,
-};
-Subtitle.defaultProps = {
-  head: '',
-  emphasis: '',
-  tail: '',
-  variant: 'h1',
-  component: 'h1',
-  mb: 4,
-  mt: 0,
-  align: 'left',
-  black: false,
-  white: false,
 };
 export default Subtitle;

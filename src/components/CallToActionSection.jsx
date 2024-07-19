@@ -10,14 +10,14 @@ import { Box, Typography } from '@mui/material';
 
 const CallToActionSection = ({
   titlePart1,
-  titlePart2,
-  titlePart3,
+  titlePart2 = '',
+  titlePart3 = '',
   description,
   image,
-  backgroundImage,
-  heightImage,
+  backgroundImage = '',
+  heightImage = 0,
+  backgroundColor = '',
   imageSizes,
-  backgroundColor,
 }) => {
 
   return (
@@ -47,7 +47,7 @@ const CallToActionSection = ({
             <Image
               quality={100}
               src={image}
-              layout="fill"
+              fill
               alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
             />
           </Box>
@@ -86,11 +86,4 @@ CallToActionSection.propTypes = {
   backgroundColor: PropTypes.string,
 };
 
-CallToActionSection.defaultProps = {
-  titlePart2: '',
-  titlePart3: '',
-  backgroundImage: '',
-  heightImage: 0,
-  backgroundColor: '',
-};
 export default CallToActionSection;

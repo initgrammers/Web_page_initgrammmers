@@ -19,7 +19,7 @@ const ImportanceAplications = () => {
               <Image
                 quality={100}
                 src={importanceApplications.mainImage}
-                layout="fill"
+                fill
                 alt={importanceApplications.title}
               />
             </Box>

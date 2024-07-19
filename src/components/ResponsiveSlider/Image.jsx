@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styles from './style';
 import { Box } from '@mui/material';
 
-const Image = ({ image, label, showTitleImage, imageIsLarge }) => {
+const Image = ({ image, label, showTitleImage = true, imageIsLarge = false }) => {
   return (
     <>
       <Box sx={styles.containerImage}>
@@ -17,11 +17,6 @@ Image.propTypes = {
   label: PropTypes.string.isRequired,
   showTitleImage: PropTypes.bool,
   imageIsLarge: PropTypes.bool,
-};
-
-Image.defaultProps = {
-  showTitleImage: true,
-  imageIsLarge: false,
 };
 
 export default Image;

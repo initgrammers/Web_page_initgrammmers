@@ -3,7 +3,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import styles from './CardTeam';
 import { Box, IconButton, Typography } from '@mui/material';
 
-const CardTeam = ({ name, title, image, href }) => {
+const CardTeam = ({ name, title, image, href = '#' }) => {
   return (
     <Box component="article" sx={styles.cardPurpose}>
       <img
@@ -32,10 +32,6 @@ CardTeam.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   href: PropTypes.string,
-};
-
-CardTeam.defaultProps = {
-  href: '#',
 };
 
 export default CardTeam;

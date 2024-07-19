@@ -22,7 +22,7 @@ const NotFountPage = () => {
               quality={100}
               src="/assets/images/404.png"
               alt="Picture of the author"
-              layout="fill"
+              fill
             />
           </Box>
           <Link href="/">

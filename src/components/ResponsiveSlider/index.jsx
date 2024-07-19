@@ -3,7 +3,11 @@ import Slide from './Slide';
 import Image from './Image';
 import { Box, useMediaQuery, useTheme } from '@mui/material';
 
-const Slider = ({ data, imageIsLarge, showTitleImage }) => {
+const Slider = ({
+  data = [],
+  imageIsLarge = false,
+  showTitleImage = true,
+}) => {
   const { breakpoints } = useTheme();
   const matchXS = useMediaQuery(breakpoints.down('xs'));
   const matchLG = useMediaQuery(breakpoints.up('lg'));
@@ -26,7 +30,7 @@ const Slider = ({ data, imageIsLarge, showTitleImage }) => {
               label={item.label}
               showTitleImage={showTitleImage}
               imageIsLarge={imageIsLarge}
-              layout="fill"
+              fill
             />
           ))}
         </Box>
@@ -51,10 +55,5 @@ Slider.propTypes = {
   showTitleImage: PropTypes.bool,
 };
 
-Slider.defaultProps = {
-  data: [],
-  imageIsLarge: false,
-  showTitleImage: true,
-};
 
 export default Slider;

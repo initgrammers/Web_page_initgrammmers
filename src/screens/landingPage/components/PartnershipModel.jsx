@@ -13,8 +13,8 @@ const PartnershipModel = ({
   title,
   description,
   image,
-  backgroundImage,
-  heightImage,
+  backgroundImage = '',
+  heightImage = 0,
   partnershipModels,
 }) => {
   return (
@@ -23,7 +23,7 @@ const PartnershipModel = ({
       <CustomContainer>
         <Box component="article" sx={styles.content}>
           <Box component="figure" sx={styles.image}>
-            <Image quality={100} src={image} layout="fill" alt={title} />
+            <Image quality={100} src={image} fill alt={title} />
           </Box>
           <Subtitle
             head={title}
@@ -74,8 +74,4 @@ PartnershipModel.propTypes = {
   ).isRequired,
 };
 
-PartnershipModel.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
-};
 export default PartnershipModel;

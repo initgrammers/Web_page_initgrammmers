@@ -10,8 +10,8 @@ import { Box, Typography } from '@mui/material';
 
 const Strategies = ({
   titlePart1,
-  titlePart2,
-  titlePart3,
+  titlePart2 = '',
+  titlePart3 = '',
   description,
   image,
   imageSizes,
@@ -34,7 +34,7 @@ const Strategies = ({
             <Image
               quality={100}
               src={image}
-              layout="fill"
+              fill
               alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
             />
           </Box>
@@ -92,8 +92,4 @@ Strategies.propTypes = {
   ).isRequired,
 };
 
-Strategies.defaultProps = {
-  titlePart2: '',
-  titlePart3: '',
-};
 export default Strategies;
