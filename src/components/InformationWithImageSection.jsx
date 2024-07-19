@@ -39,21 +39,13 @@ const InformationWithImageSection = ({
           <Box component="article" sx={componentStyles.detailsContent}>
             <Typography
               variant="h2"
-              sx={{
-                ...componentStyles.title,
-                ...(titlePrimaryMain && componentStyles.textPrimaryMain),
-                ...(titleBlack && componentStyles.textBlack),
-              }}
+              sx={componentStyles.textPrimaryMain}
             >
               {title}
             </Typography>
             <Typography
               variant="body1"
-              sx={{
-                ...componentStyles.title,
-                ...(titlePrimaryMain && componentStyles.textPrimaryMain),
-                ...(titleBlack && componentStyles.textBlack),
-              }}
+              sx={componentStyles.description}
             >
               {description}
             </Typography>

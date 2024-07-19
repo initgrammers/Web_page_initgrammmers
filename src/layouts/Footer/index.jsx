@@ -1,26 +1,20 @@
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import LinkWithIcon from './components/LinkWithIcon';
 import {
   PhoneIcon,
   MailIcon,
-  FacebookIcon,
-  LinkedInIcon,
-  InstagramIcon,
 } from '../../assets/icons';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkIcon from './components/LinkIcon';
 import CustomLink from '#Components/CustomLink';
 import styles from './styles';
 import ContactUs from './ContactUs';
 import { contactsLinks } from '#app/constants/contacts';
 import routes from '#app/routes/';
+import { Box, Container, Grid, Typography } from '@mui/material';
 
-const useStyles = makeStyles(styles);
 const CustomFooter = () => {
-  const classes = useStyles();
 
   const services = [
     {
@@ -63,16 +57,16 @@ const CustomFooter = () => {
   return (
     <>
       <ContactUs />
-      <footer className={classes.root}>
+      <footer style={styles.root}>
         <Container fixed>
-          <Box className={classes.image}>
+          <Box sx={styles.image}>
             <figure>
               <img src="/assets/svg/initgrammers.svg" alt="logo initgrammers" />
             </figure>
           </Box>
-          <Grid container spacing={3} className={classes.gridContainer}>
+          <Grid container spacing={3} sx={styles.gridContainer}>
             <Grid item md={6} sm={12}>
-              <Typography className={classes.description}>
+              <Typography sx={styles.description}>
                 InitGrammers es una empresa dedicada a crear soluciones y
                 capacitaciones tecnológicas en software, marketing y diseño
                 digital
@@ -91,31 +85,31 @@ const CustomFooter = () => {
               </Box>
               <Box display="flex" mt={2}>
                 <LinkIcon
-                  icon={<FacebookIcon className={classes.icon} />}
+                  icon={<FacebookIcon color='primary' fontSize='small' />}
                   href="https://www.facebook.com/InitGrammers/"
                 />
                 <LinkIcon
-                  icon={<LinkedInIcon className={classes.icon} />}
+                  icon={<LinkedInIcon color='primary' fontSize='small'/>}
                   href="https://www.linkedin.com/company/initgrammersec"
                 />
                 <LinkIcon
-                  icon={<InstagramIcon className={classes.icon} />}
+                  icon={<InstagramIcon color='primary' fontSize='small'/>}
                   href="https://www.instagram.com/initgrammers/"
                 />
               </Box>
             </Grid>
-            <Grid item md={3} sm={12}>
-              <Typography className={classes.section}>Servicios</Typography>
+            <Grid item md={3} sm={12} display='flex' flexDirection='column' gap={2}>
+              <Typography variant='inherit' sx={styles.section}>Servicios</Typography>
               {services.map((item, key) => (
                 <CustomLink key={key} href={item.href}>
-                  <Typography className={classes.text}>{item.label}</Typography>
+                  <Typography sx={styles.text}>{item.label}</Typography>
                 </CustomLink>
               ))}
             </Grid>
             <Grid item md={3} sm={12}>
               {portfolio.map((item, key) => (
                 <CustomLink key={key} href={item.href}>
-                  <Typography className={classes.section}>
+                  <Typography variant='inherit' sx={styles.section}>
                     {item.label}
                   </Typography>
                 </CustomLink>

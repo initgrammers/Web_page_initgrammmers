@@ -1,19 +1,13 @@
 import PropTypes from 'prop-types';
-import Link from '@material-ui/core/Link';
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import styles from '../styles';
-
-const useStyles = makeStyles(styles);
+import { Box, Link, Typography } from '@mui/material';
 
 const LinkWithIcon = ({ icon, label, href }) => {
-  const classes = useStyles();
   return (
-    <Link href={href} color="inherit">
-      <Box className={classes.linkIcon}>
+    <Link href={href} color="inherit" sx={{textDecoration: 'none'}}>
+      <Box sx={styles.linkIcon} gap={2}>
         {icon}
-        <Typography color="inherit" className={classes.iconText}>
+        <Typography color="inherit" sx={styles.iconText}>
           {label}
         </Typography>
       </Box>

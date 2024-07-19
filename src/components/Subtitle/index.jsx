@@ -1,12 +1,8 @@
 import React from 'react';
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
 import styles from './styles';
+import { Box, Typography } from '@mui/material';
 
-const useStyles = makeStyles(styles);
 
 const Subtitle = ({
   head,
@@ -20,17 +16,24 @@ const Subtitle = ({
   black,
   white,
 }) => {
-  const classes = useStyles();
   return (
     <Box display="flex" mb={mb} mt={mt} justifyContent="center">
       <Typography
         component={component}
         align={align}
         variant={variant}
-        className={clsx(classes.title, {
-          [classes.black]: black,
-          [classes.white]: white,
-        })}
+        sx={{
+          ...styles.title, 
+          ...(black && styles.black),
+          ...(white && styles.white),
+          '& span': { 
+            color: black 
+              ? styles.black['& span'].color 
+              : white 
+                ? styles.white['& span'].color
+                : styles.title['& span'].color,
+          },
+        }}
       >
         {head}
         <span>{` ${emphasis}`}</span>

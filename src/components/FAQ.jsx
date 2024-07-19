@@ -1,13 +1,10 @@
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import Box from '@material-ui/core/Box';
 import PropTypes from 'prop-types';
 import styles from '../assets/styles/FAQ';
 import Subtitle from '#Components/Subtitle';
 import Accordion from '#Components/Accordion';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
-
-const useStyles = makeStyles(styles);
+import { Box } from '@mui/material';
 
 const FAQ = ({
   titlePart1,
@@ -18,13 +15,12 @@ const FAQ = ({
   heightImage,
   black,
 }) => {
-  const classes = useStyles();
 
   return (
     <Box component="section" position="relative">
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
-        <Box component="article" className={classes.content}>
+        <Box component="article" sx={styles.content}>
           <Subtitle
             black={black}
             head={titlePart1}

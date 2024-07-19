@@ -1,26 +1,23 @@
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
+
 import PropTypes from 'prop-types';
 import styles from '../assets/styles/CardPartnership';
+import { Box, Typography } from '@mui/material';
 
-const useStyles = makeStyles(styles);
 
 const CardService = ({ image, title, description }) => {
-  const classes = useStyles();
   return (
-    <Box className={classes.card}>
+    <Box sx={styles.card} gap={1}>
       <Box component="figure">
         <img loading="lazy" width={100} height={100} src={image} alt={title} />
       </Box>
       <Typography
         variant="h4"
         component="h3"
-        className={classes.titlePartnership}
+        sx={styles.titlePartnership}
       >
         {title}
       </Typography>
-      <Typography variant="body2" className={classes.description}>
+      <Typography variant="body2" sx={styles.description}>
         {description}
       </Typography>
     </Box>

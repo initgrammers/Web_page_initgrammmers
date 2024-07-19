@@ -19,30 +19,30 @@ const styles = (props) => ({
 
   container: css`
     display: flex;
-    flex-direction: ${props.isImageRight ? 'column-reverse' : 'column'}; /* Cambia el orden si la imagen está a la derecha */
-    padding: ${theme.spacing(4, 0)}; /* Espacio vertical y horizontal */
+    flex-direction: ${props.isImageRight ? 'column-reverse' : 'column'};
+    padding: ${theme.spacing(4, 0)};
     ${theme.breakpoints.up('sm')} {
-      padding: ${theme.spacing(5, 0)}; /* Ajusta el espacio en pantallas más grandes */
+      padding: ${theme.spacing(5, 0)};
     }
     ${theme.breakpoints.up('lg')} {
-      flex-direction: ${props.isImageRight ? 'row' : 'row-reverse'}; /* Cambia a fila en pantallas grandes */
+      flex-direction: ${props.isImageRight ? 'row' : 'row-reverse'};
       padding: 0; 
     }
   `,
   title: css`
-    color: ${theme.palette.primary.contrastText}; /* Color de texto contrastante */
+    color: ${theme.palette.primary.contrastText};
     text-align: center;
   `,
   description: css`
-    padding: ${theme.spacing(4)}px 0 0 0; /* Espacio superior */
+    padding: ${theme.spacing(4)}px 0 0 0;
     text-align: justify;
-    color: ${theme.palette.primary.contrastText};
+    color: ${theme.palette.text.primary};
   `,
   textPrimaryMain: css`
-    color: ${theme.palette.primary.main}; /* Color primario principal */
+    color: ${theme.palette.primary.light};
   `,
   textBlack: css`
-    color: '${theme.palette.text.primary}'; /* Color de texto primario */
+    color: '${theme.palette.text.primary}';
   `,
 
   actionButton: {
@@ -52,14 +52,14 @@ const styles = (props) => ({
 
   containerImage: css`
     display: flex;
-    justify-content: center; /* Centra la imagen horizontalmente */
+    justify-content: center;
     padding: ${props.isImageRight ? theme.spacing(4, 0, 0, 0) : theme.spacing(0, 0, 5, 0)};
     ${theme.breakpoints.up('sm')} {
       padding: ${props.isImageRight ? theme.spacing(5, 0, 0, 0) : theme.spacing(0, 0, 5, 0)};
     }
     ${theme.breakpoints.up('lg')} {
-      flex: 5; /* Ocupa 5 partes del espacio disponible */
-      padding: ${theme.spacing(8, 0)}; /* Ajusta el espacio en pantallas grandes */
+      flex: 5;
+      padding: ${theme.spacing(8, 0)};
     }
   `,
   image: css`
@@ -82,11 +82,11 @@ const styles = (props) => ({
   `,
   detailsContent: css`
     ${theme.breakpoints.up('lg')} {
-      flex: 5; /* Ocupa 5 partes del espacio disponible */
+      flex: 5;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 0 ${theme.spacing(2)}px 0 ${props.isImageRight ? 0 : theme.spacing(2)}px; /* Ajusta el espacio a la derecha o izquierda según la posición de la imagen */
+      padding: 0 ${theme.spacing(2)}px 0 ${props.isImageRight ? 0 : theme.spacing(2)}px;
     }
   `,
 });

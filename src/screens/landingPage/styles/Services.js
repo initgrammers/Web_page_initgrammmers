@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import theme from '../../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   services: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -17,10 +18,7 @@ const styles = (theme) => ({
     textAlign: 'center',
   },
   itemService: {
-    marginBottom: theme.spacing(3),
-    '&:last-child': {
-      marginBottom: 0,
-    },
+    margin: theme.spacing(6),
   },
   [theme.breakpoints.between('sm', 'md')]: {
     content: {
@@ -85,7 +83,7 @@ const styles = (theme) => ({
       },
     },
   },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

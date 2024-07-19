@@ -1,14 +1,8 @@
 import PropTypes from 'prop-types';
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Box,
-  Typography,
-  useTheme,
-} from '@material-ui/core';
-import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import { ExpandMoreIcon } from '#app/assets/icons';
+import { primary } from '#app/shared/config/theme/colors';
+import { Accordion, AccordionDetails, AccordionSummary, Box, Typography } from '@mui/material';
 
 const CustomAccordion = ({
   title,
@@ -18,14 +12,13 @@ const CustomAccordion = ({
   mb,
   borderRadius,
 }) => {
-  const { palette } = useTheme();
   return (
     <Box
       mb={mb}
       mt={mt}
       width="100%"
       border={1}
-      borderColor={palette.primary.main}
+      borderColor={primary.main}
       borderRadius={borderRadius}
     >
       <Accordion>
@@ -57,6 +50,6 @@ CustomAccordion.defaultProps = {
   children: null,
   mt: 2,
   mb: 0,
-  borderRadius: 3,
+  borderRadius: 1,
 };
 export default CustomAccordion;
