@@ -56,9 +56,9 @@ const Options = ({ indexMenu, handleDrawerOpen }) => {
       <Typography color="primary" sx={styles.title}>
         Servicios que ofrecemos
       </Typography>
-      <Grid container spacing={4}>
+      <Grid container spacing={4} >
         {data.map((item, index) => (
-          <Grid item md={4} sm={6} xs={12} key={index}>
+          <Grid display='flex' justifyContent='flex-start' item md={4} sm={6} xs={12} key={index}>
             <Service
               {...item}
               indexMenu={indexMenu}

@@ -5,6 +5,7 @@ import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
 import CastForEducationOutlinedIcon from '@mui/icons-material/CastForEducationOutlined';
 import DeviceHubOutlinedIcon from '@mui/icons-material/DeviceHubOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import styles from '../components/Menu/styles/Options';
 import routes from '#app/routes/';
 
 const data = [
@@ -13,14 +14,14 @@ const data = [
     title: 'Desarrollo Web',
     subtitle: 'Android, iOs, híbridas',
     href: routes.services.webDevelopment,
-    icon: <DevicesIcon />,
+    icon: <DevicesIcon sx={styles.icon}/>,
   },
   {
     id: 'MobileDevelopment',
     title: 'Desarrollo de aplicaciones móviles',
     subtitle: 'Android, iOS, híbridas',
     href: routes.services.mobileDevelopment,
-    icon: <MobileFriendlyIcon />,
+    icon: <MobileFriendlyIcon sx={styles.icon}/>,
   },
 
   {
@@ -28,35 +29,35 @@ const data = [
     title: 'Diseño UX UI',
     subtitle: 'Venda a través de internet',
     href: routes.services.uxUiDesign,
-    icon: <WidgetsOutlinedIcon />,
+    icon: <WidgetsOutlinedIcon sx={styles.icon}/>,
   },
-  {
-    id: 'ShopOnline',
-    title: 'Tiendas en linea',
-    subtitle: 'Venda a través de internet',
-    href: routes.services.shopOnline,
-    icon: <ShoppingCartOutlinedIcon />,
-  },
+  // {
+  //   id: 'ShopOnline',
+  //   title: 'Tiendas en linea',
+  //   subtitle: 'Venda a través de internet',
+  //   href: routes.services.shopOnline,
+  //   icon: <ShoppingCartOutlinedIcon sx={styles.icon}/>,
+  // },
   {
     id: '5',
     title: 'Capacitaciones',
     subtitle: 'Aprende con nosotros',
     href: routes.services.trainings,
-    icon: <CastForEducationOutlinedIcon />,
+    icon: <CastForEducationOutlinedIcon sx={styles.icon}/>,
   },
-  {
-    id: 'Marketing',
-    title: 'Marketing digital',
-    subtitle: 'Posicione su marca',
-    href: routes.services.marketingDigital,
-    icon: <DeviceHubOutlinedIcon />,
-  },
+  // {
+  //   id: 'Marketing',
+  //   title: 'Marketing digital',
+  //   subtitle: 'Posicione su marca',
+  //   href: routes.services.marketingDigital,
+  //   icon: <DeviceHubOutlinedIcon sx={styles.icon}/>,
+  // },
   {
     id: 'SEO',
     title: 'SEO',
     subtitle: 'Posicionamiento en buscadores',
     href: routes.services.seo,
-    icon: <SearchOutlinedIcon />,
+    icon: <SearchOutlinedIcon sx={styles.icon}/>,
   },
 ];
 

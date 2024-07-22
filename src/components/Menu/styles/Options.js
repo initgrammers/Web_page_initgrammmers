@@ -47,6 +47,7 @@ const styles = {
     paddingLeft: theme.spacing(2),
     display: 'flex',
     flexDirection: 'column',
+    color: theme.palette.common.black
   },
   selected: {
     color: theme.palette.primary.main,
@@ -54,6 +55,9 @@ const styles = {
     background: 'rgba(0,0,0,0.1)',
     borderRadius: 5,
   },
+  icon: {
+    color: theme.palette.common.black,
+  }
 };
 
 styles.propTypes = {

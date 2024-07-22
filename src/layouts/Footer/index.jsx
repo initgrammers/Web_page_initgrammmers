@@ -29,18 +29,18 @@ const CustomFooter = () => {
       label: 'Diseño UI / UX ',
       href: routes.services.uxUiDesign,
     },
-    {
-      label: 'Comercio Electrónico',
-      href: routes.services.shopOnline,
-    },
+    // {
+    //   label: 'Comercio Electrónico',
+    //   href: routes.services.shopOnline,
+    // },
     {
       label: 'Capacitaciones',
       href: routes.services.trainings,
     },
-    {
-      label: 'Marketing Digital',
-      href: routes.services.marketingDigital,
-    },
+    // {
+    //   label: 'Marketing Digital',
+    //   href: routes.services.marketingDigital,
+    // },
     {
       label: 'SEO',
       href: routes.services.seo,
