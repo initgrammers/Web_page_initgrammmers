@@ -3,7 +3,13 @@ import theme from '../../shared/config/MuiThemeProvider/theme'
 
 const styles = {
   detailsContent: {
-    paddingTop: theme.spacing(8),
+    width: { xs: 468, lg: 520 },
+    flex: { lg: 5 },
+    display: { lg: 'flex' },
+    flexDirection: { lg: 'column' },
+    justifyContent: { lg: 'center' },
+    paddingTop: { xs: theme.spacing(8), lg: 0 },
+    paddingRight: { lg: theme.spacing(2) },
   },
   title: {
     color: theme.palette.primary.light,
@@ -12,51 +18,27 @@ const styles = {
     },
   },
   description: {
-    padding: `${theme.spacing(4)}px 0`,
+    padding: `${theme.spacing(4)} 0`,
     color: theme.palette.primary.snackBar,
+    fontSize: { xs: "1.25rem", sm: "1.4996rem" }
   },
   containerImage: {
     display: 'flex',
+    flex: { lg: 5 },
     justifyContent: 'center',
-    padding: `${theme.spacing(4)}px 0`,
+    padding: `${theme.spacing(4)} 0`,
+    margin: { xs: `${theme.spacing(5)} 0`, lg: `${theme.spacing(8)} 0` },
   },
   image: {
-    width: 288,
-    height: 288,
+    width: { xs: 288, sm: 552, lg: 504 },
+    height: { xs: 288, sm: 414, lg: 504 },
     position: 'relative',
   },
   mainImage: {
     objectFit: 'contain',
   },
-  [theme.breakpoints.up('sm')]: {
-    containerImage: {
-      margin: `${theme.spacing(5)}px 0`,
-    },
-    image: {
-      width: 552,
-      height: 414,
-    },
-  },
-  [theme.breakpoints.up('lg')]: {
-    container: {
-      display: 'flex',
-    },
-    detailsContent: {
-      flex: 5,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      paddingTop: 0,
-      paddingRight: theme.spacing(2),
-    },
-    containerImage: {
-      flex: 5,
-      margin: `${theme.spacing(8)}px 0`,
-    },
-    image: {
-      width: 504,
-      height: 504,
-    },
+  container: {
+    display: { lg: 'flex' },
   },
 };
 

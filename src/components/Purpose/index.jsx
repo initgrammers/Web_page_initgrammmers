@@ -15,9 +15,10 @@ const Purpose = ({
       <img src={image} width="100px" height="100px" alt={title} />
       <Typography
         variant="h2"
-        sx={clsx(styles.title, {
-          [styles.titleSecondary]: colorTitleIsSecondary,
-        })}
+        sx={{
+          ...styles.title,
+          ...(colorTitleIsSecondary && styles.titleSecondary),
+        }}
       >
         {title}
       </Typography>

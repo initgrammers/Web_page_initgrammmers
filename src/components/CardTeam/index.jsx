@@ -7,7 +7,7 @@ const CardTeam = ({ name, title, image, href = '#' }) => {
   return (
     <Box component="article" sx={styles.cardPurpose}>
       <img
-        sx={styles.memberTeam}
+        style={styles.memberTeam}
         src={image}
         width="100%"
         height="241px"

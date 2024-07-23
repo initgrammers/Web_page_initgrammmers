@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
 import styles from './CardValue';
 import { Box, Typography } from '@mui/material';
 
@@ -7,9 +6,11 @@ const CardValue = ({ description, image, isBorderSecondary = false }) => {
   return (
     <Box
       component="article"
-      sx={clsx(styles.cardValue, {
-        [styles.cardSecondary]: isBorderSecondary,
-      })}
+      sx={{
+        ...styles.cardValue,
+        ...(isBorderSecondary && styles.cardSecondary),
+      }}
+
     >
       <img src={image} width="100px" height="100px" alt={description} />
       <Typography sx={styles.description} variant="body2">

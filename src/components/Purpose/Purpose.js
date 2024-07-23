@@ -7,14 +7,11 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    width: 288,
+    width: { xs: 264, lg: 496},
     padding: theme.spacing(3, 2),
     marginBottom: theme.spacing(3),
     borderRadius: '20px',
     boxShadow: '4px 4px 8px rgba(133, 135, 137, 0.3)',
-    ':last-child': {
-      marginBottom: 0,
-    },
   },
 
   title: {
@@ -27,23 +24,7 @@ const styles = {
   },
   description: {
     textAlign: 'center',
-  },
-
-  [theme.breakpoints.up('sm')]: {
-    cardPurpose: {
-      width: 264,
-    },
-    description: {
-      height: theme.spacing(12),
-    },
-  },
-  [theme.breakpoints.up('lg')]: {
-    cardPurpose: {
-      width: 496,
-    },
-    description: {
-      height: 'auto',
-    },
+    height: { sm: theme.spacing(12), lg: 'auto'},
   },
 };
 

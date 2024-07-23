@@ -7,7 +7,7 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    width: 288,
+    width: {xs: 288, sm: 264, lg: 320},
     marginBottom: theme.spacing(4),
     borderRadius: '20px',
     boxShadow: '4px 4px 8px rgba(133, 135, 137, 0.3)',
@@ -33,23 +33,13 @@ const styles = {
     paddingBottom: theme.spacing(2),
   },
   linkedin: {
-    padding: `0 0 ${theme.spacing(2)}px 0`,
+    padding: `0 0 ${theme.spacing(2)} 0`,
     '>span>svg': {
       fill: 'rgba(0, 0, 0, 0.38)',
     },
   },
-  [theme.breakpoints.up('sm')]: {
-    cardPurpose: {
-      width: 264,
-    },
-    team: {
-      justifyContent: 'space-between',
-    },
-  },
-  [theme.breakpoints.up('lg')]: {
-    cardPurpose: {
-      width: 320,
-    },
+  team: {
+    justifyContent: { sm: 'space-between'},
   },
 };
 

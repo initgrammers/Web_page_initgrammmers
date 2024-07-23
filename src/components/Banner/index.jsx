@@ -50,7 +50,7 @@ const Banner = ({
                 priority
                 src={image}
                 fill
-                sx={styles.mainImage}
+                style={styles.mainImage}
                 alt={`${titlePart1}${titlePart2}${titlePart3}`}
               />
             </Box>

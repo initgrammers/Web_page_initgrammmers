@@ -8,7 +8,7 @@ const BackgroundImage = ({
   image = '',
   alt = 'Diseño y desarrollo de aplicaciones web y móviles - Initgrammers', 
 }) => {
-
+  console.log(styles(height).containerBackgroundImage)
   return (
     <>
       {height > 0 && (

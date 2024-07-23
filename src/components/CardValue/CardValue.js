@@ -7,7 +7,7 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    width: 288,
+    width: { xs: 288, sm: 264, lg: 320 },
     marginBottom: theme.spacing(4),
     borderRadius: '20px',
     background: theme.palette.primary.contrastText,
@@ -26,16 +26,6 @@ const styles = {
   description: {
     textAlign: 'center',
     paddingTop: theme.spacing(2),
-  },
-  [theme.breakpoints.up('sm')]: {
-    cardValue: {
-      width: 264,
-    },
-  },
-  [theme.breakpoints.up('lg')]: {
-    cardValue: {
-      width: 320,
-    },
   },
 };
 

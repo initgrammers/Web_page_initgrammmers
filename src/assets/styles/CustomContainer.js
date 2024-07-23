@@ -6,12 +6,7 @@ const styles ={
     display: 'flex',
     position: 'relative',
     zIndex: 1,
-    [theme.breakpoints.up('md')]: {
-      padding: `0 ${theme.spacing(26)}px`,
-    },
-    [theme.breakpoints.up('lg')]: {
-      padding: `0 ${theme.spacing(16)}px`,
-    },
+    padding: { md: `0 ${theme.spacing(21)}`, lg: `0 ${theme.spacing(10)}`},
   },
 };
 
