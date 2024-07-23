@@ -19,6 +19,7 @@
     "clsx": "1.1.1",
     "cross-env": "7.0.3",
     "next": "^14.2.5",
+    "next-nprogress": "^1.4.0",
     "nextjs-progressbar": "0.0.16",
     "prop-types": "15.7.2",
     "react": "^18.3.1",

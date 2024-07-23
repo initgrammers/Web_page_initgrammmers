@@ -7,6 +7,9 @@ const styles = {
     marginBottom: theme.spacing(8),
   },
   content: {
+    display: 'flex',
+    flexDirection: {lg:'row', xs:'column'},
+    minWidth: 568,
     paddingTop: theme.spacing(4),
   },
   description: {
@@ -15,16 +18,18 @@ const styles = {
   },
   contentInformation: {
     display: 'flex',
+    marginY: {lg:11, xs:0},
     flexDirection: 'column',
     alignItems: 'center',
+    gap: 4,
   },
   containerImage: {
     display: 'flex',
     justifyContent: 'center',
   },
   image: {
-    width: 288,
-    height: 288,
+    width: 568,
+    height: 479,
     position: 'relative',
     bottom: `-${theme.spacing(8)}px`,
     marginTop: `-${theme.spacing(4)}px`,

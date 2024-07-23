@@ -7,15 +7,6 @@ const styles = {
     alignItems: 'center',
     width: '100%',
   },
-
-  button: {
-    textTransform: 'capitalize',
-    margin: `0 ${theme.spacing(2)}px`,
-  },
-  services: {
-    textTransform: 'capitalize',
-    color: theme.palette.common.black,
-  },
   sectionMenu: {
     flex: 1,
     alignItems: 'center',
@@ -25,8 +16,13 @@ const styles = {
       justifyContent: 'start',
     },
   },
-  contactUs: {
-    marginLeft: theme.spacing(4),
+  services: {
+    textTransform: 'capitalize',
+    color: theme.palette.common.black,
+  },
+  button: {
+    textTransform: 'capitalize',
+    margin: `0 ${theme.spacing(2)}px`,
   },
   fade: {
     position: 'absolute',
@@ -36,6 +32,9 @@ const styles = {
     background: 'white',
     boxShadow:
       'rgba(0, 0, 0, 0.25) 0px 4px 4px, rgba(0, 0, 0, 0.25) 0px 4px 4px inset',
+  },
+  contactUs: {
+    marginLeft: theme.spacing(4),
   },
 };
 

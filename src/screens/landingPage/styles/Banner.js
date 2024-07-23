@@ -8,7 +8,11 @@ const styles = {
     flexDirection: 'row'
   },
   detailsContent: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 4,
     paddingTop: theme.spacing(4),
+    marginY: {lg:11, xs:0},
   },
   title: {
     color: theme.palette.primary.contrastText,
@@ -23,12 +27,9 @@ const styles = {
     padding: `${theme.spacing(4)}px 0`,
   },
   image: {
-    width: 288,
-    height: 235,
+    width: 504,
+    height: 504,
     position: 'relative',
-  },
-  mainImage: {
-    objectFit: 'contain',
   },
   [theme.breakpoints.up('sm')]: {
     containerImage: {

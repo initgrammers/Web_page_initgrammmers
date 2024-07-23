@@ -2,8 +2,9 @@ import PropTypes from 'prop-types';
 import theme from '../../shared/config/MuiThemeProvider/theme'
 
 const styles = {
+  appbar: { background: 'white', position: 'relative' },
   main: {
-    background: theme.palette.primary.contrastText,
+    background: 'theme.palette.primary.contrastText',
     filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
     [theme.breakpoints.up('lg')]: {
       filter: 'drop-shadow(9px 9px 16px rgba(0, 0, 0, 0.25)); color: black',
@@ -18,6 +19,11 @@ const styles = {
       justifyContent: 'center',
     },
   },
+  menuDesktopContainer: {
+    display: { xs: 'none', md: 'flex' },
+    width: '100%',
+    justifyContent: 'space-between', // Agrega esta línea para distribuir los elementos
+  },
 
   calculator: {
     background: theme.palette.primary.contrastText,
@@ -26,7 +32,6 @@ const styles = {
     alignItems: 'center',
     height: 56,
   },
-  appbar: { background: 'white', position: 'relative' },
 };
 
 styles.propTypes = {

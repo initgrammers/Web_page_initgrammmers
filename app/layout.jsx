@@ -1,12 +1,12 @@
 'use client';
 import { CacheProvider } from '@emotion/react';
 import { MuiThemeProvider } from '#app/shared/config/MuiThemeProvider';
-import { usePathname } from 'next/navigation';
+import NextNProgress from 'next-nprogress';
 import PropTypes from 'prop-types';
 import './globals.css';
 import { useEffect } from 'react';
-import Layout from '#Layouts/index';
 import createEmotionCache from '#app/shared/config/createEmotionCache';
+import { primary } from '#app/shared/config/theme/colors';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
           name='emotion-insertion-point'
         >
         </meta>
-
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com/"
@@ -99,6 +99,7 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
       </head>
       <body>
+        {/* <NextNProgress color={primary.main} height={6} /> */}
         <MuiThemeProvider>
           <CacheProvider value={clientSideEmotionCache}>
             {children}

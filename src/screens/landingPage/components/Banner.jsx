@@ -16,11 +16,11 @@ const Banner = ({
   image = '',
 }) => {
   return (
-    <Box component="section" position="relative" sx={{background: primary.light}}>
-      <BackgroundImage image={backgroundImage} height={heightImage} />
+    <Box component="section" position="relative" sx={{background: primary.light}} >
+      <BackgroundImage image={backgroundImage} height={heightImage}/>
       <CustomContainer>
-        <Box >
-          <Box component="artie" sx={styles.detailsContent}>
+        <Box display='flex' sx={{flexDirection: {lg:'row', xs:'column'}}} gap='16px'>
+          <Box component="article" sx={styles.detailsContent} flex={1}>
             <Typography variant="h1" sx={styles.title}>
               {title}
             </Typography>
@@ -37,14 +37,14 @@ const Banner = ({
               href={contactsLinks.landing}
             />
           </Box>
-          <Box sx={styles.containerImage}>
+          <Box sx={styles.containerImage} flex={1} my={1}>
             <Box component="figure" sx={styles.image}>
               <Image
                 quality={100}
                 priority
                 src={image}
                 fill
-                sx={styles.mainImage}
+                objectFit='contain'
                 alt={title}
               />
             </Box>

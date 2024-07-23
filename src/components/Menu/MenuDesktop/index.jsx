@@ -25,7 +25,7 @@ const MenuDesktop = ({
         <CustomLink href="/">
           <LogoInitgrammers />
         </CustomLink>
-        <Box display='flex' justifyContent='space-between'>
+        <Box display='flex' justifyContent='space-between' width='100%'>
           <Box display='flex' sx={styles.sectionMenu} gap={3}>
             {menuInitgrammers.menu.map((item, key) =>
               item?.items?.length > 0 ? (
@@ -49,7 +49,7 @@ const MenuDesktop = ({
                 </CustomLink>
               ))}
           </Box>
-          <Box sx={{ display: {xs: 'none', md: 'flex'} }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 'auto'}}>
               <ContactUsButton href={contactsLinks.general} />
           </Box>
         </Box>

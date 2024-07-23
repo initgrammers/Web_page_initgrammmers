@@ -25,11 +25,12 @@ const SliderTechnologies = ({
       sx={{
         position: 'relative',
         ...(backgroundGray && styles.backgroundGray),
-        paddingY: {md:'64px', xs: '40px'}
+        paddingY: {md:'64px', xs: '40px'},
+        
       }}
     >
       <BackgroundImage image={backgroundImage} height={heightImage} />
-      <CustomContainer>
+      <Box sx={styles.mainContent}>
         <Box sx={styles.content}>
           <Subtitle
             head={title}
@@ -47,7 +48,7 @@ const SliderTechnologies = ({
             <Box sx={styles.bar}/>
           )} 
         </Box>
-      </CustomContainer>
+      </Box>
     </Box>
   );
 };

@@ -30,7 +30,7 @@ const CustomMenu = ({ indexMenu = '' }) => {
         <Toolbar
           sx={styles.main}
         >
-          <Box sx={{display: {xs: 'block', md: 'none'}}}>
+          <Box sx={{display: {xs: 'flex', md: 'none'}, width: '100%'}}>
             <MobileMenu
               showDrawer={showNav}
               handleDrawerOpen={handleDrawerOpen}
@@ -38,7 +38,7 @@ const CustomMenu = ({ indexMenu = '' }) => {
               indexMenu={indexMenu}
             />
           </Box>
-          <Box sx={{display: {xs: 'none', md: 'block'}}}>
+          <Box sx={{display: {xs: 'none', md: 'flex'},  width: '100%'}}>
             <MenuDesktop
               showServices={showNav}
               handleDrawerOpen={handleDrawerOpen}
@@ -47,7 +47,7 @@ const CustomMenu = ({ indexMenu = '' }) => {
             />
           </Box>
         </Toolbar>
-        <Box sx={{display: {xs: 'block', md: 'none'}}}>
+        <Box sx={{display: {xs: 'flex', md: 'none'}}}>
           <OutsideAlerter callback={handleClose}>
             <CustomDrawer
               open={showNav}
