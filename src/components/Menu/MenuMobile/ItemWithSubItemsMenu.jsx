@@ -17,7 +17,6 @@ const ItemWithSubItemsMenu = ({
   onClose,
 }) => {
   const [open, setOpen] = useState(false);
-
   let hasSubmenu = null;
 
   if (subMenu.length > 0) {
@@ -30,13 +29,16 @@ const ItemWithSubItemsMenu = ({
   return (
     <>
       {subMenu.length > 0 ? (
-        <ListItem sx={clsx(styles.nested)} button onClick={handleClick}>
+        <ListItem 
+          sx={{ ...styles.nested, '&:hover': { backgroundColor: 'lightgray' } }}
+          onClick={handleClick}
+        >
           <ListItemText primary={titleMenu} />
           {hasSubmenu}
         </ListItem>
       ) : (
         <CustomLink ref={ref} href={href}>
-          <ListItem sx={clsx(styles.nested)} button onClick={onClose}>
+          <ListItem sx={styles.nested} onClick={onClose}>
             <ListItemText primary={titleMenu} />
           </ListItem>
         </CustomLink>
@@ -47,11 +49,12 @@ const ItemWithSubItemsMenu = ({
           {subMenu.map((item, key) => (
             <CustomLink ref={ref} key={key} href={item.href}>
               <ListItem
-                button
                 onClick={onClose}
-                sx={clsx(styles.nested, {
-                  [styles.selected]: indexMenu === item.id,
-                })}
+                sx={{
+                  ...styles.nested,
+                  ...(indexMenu === item.id && styles.selected), 
+                  '&:hover': { backgroundColor: 'lightgray' }
+                }}
               >
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.title} />

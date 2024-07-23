@@ -5,6 +5,7 @@ import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import styles from '../assets/styles/InformationWithImageSection';
 import { Box, Typography } from '@mui/material';
+import { primary } from '#app/shared/config/theme/colors';
 
 const InformationWithImageSection = ({
   title,
@@ -24,7 +25,7 @@ const InformationWithImageSection = ({
   descriptionBlack = false,
 }) => {
   const componentStyles = styles(
-    { imageSizes, isImageRight }, // Pass imageSizes and isImageRight
+    { imageSizes, isImageRight },
     { backgroundPrimaryLight, backgroundPrimaryFade, backgroundSecondary, backgroundSecondaryFade, titlePrimaryMain, titleBlack, descriptionPrimaryLight, descriptionBlack } // Pass other props to styles function
   );
   return (
@@ -35,11 +36,12 @@ const InformationWithImageSection = ({
     >
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
-        <Box sx={componentStyles.container}>
-          <Box component="article" sx={componentStyles.detailsContent}>
+        <Box sx={componentStyles.container} >
+          <Box component="article" sx={componentStyles.detailsContent} >
             <Typography
+              textAlign='center'
               variant="h2"
-              sx={componentStyles.textPrimaryMain}
+              sx={{marginBottom: '25px',color: primary.light}}
             >
               {title}
             </Typography>

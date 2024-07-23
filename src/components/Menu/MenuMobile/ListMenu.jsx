@@ -3,7 +3,8 @@ import { menuInitgrammers } from '#constants/Menu';
 import ItemWithSubItemsMenu from './ItemWithSubItemsMenu';
 import { List } from '@mui/material';
 
-const ListMenu = ({ indexMenu, onClose }) => (
+const ListMenu = ({ indexMenu, onClose }) => {
+  return(
   <List component="nav">
     {menuInitgrammers.menu.map((item, index) => (
       <ItemWithSubItemsMenu
@@ -17,7 +18,7 @@ const ListMenu = ({ indexMenu, onClose }) => (
       />
     ))}
   </List>
-);
+)};
 
 ListMenu.propTypes = {
   onClose: PropTypes.func.isRequired,

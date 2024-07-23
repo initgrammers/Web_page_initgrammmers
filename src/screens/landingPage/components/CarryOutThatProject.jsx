@@ -22,8 +22,8 @@ const CarryOutThatProject = ({
     >
       <BackgroundImage />
       <CustomContainer>
-        <Box sx={styles.content}>
-          <Box component="article" sx={styles.contentInformation}>
+        <Box sx={styles.content} gap='16px'>
+          <Box flex={1} component="article" sx={styles.contentInformation}>
             <Subtitle
               black
               variant="h1"
@@ -45,12 +45,13 @@ const CarryOutThatProject = ({
               href={contactsLinks.landing}
             />
           </Box>
-          <Box sx={styles.containerImage}>
+          <Box flex={1} sx={styles.containerImage} my={1}>
             <Box component="figure" sx={styles.image}>
               <Image
                 quality={100}
                 src={image}
                 fill
+                objectFit='contain'
                 alt={`${titlePart1} ${titlePart2}`}
               />
             </Box>

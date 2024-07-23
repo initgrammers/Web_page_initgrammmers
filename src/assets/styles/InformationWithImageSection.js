@@ -19,7 +19,8 @@ const styles = (props) => ({
 
   container: css`
     display: flex;
-    flex-direction: ${props.isImageRight ? 'column-reverse' : 'column'};
+    gap: 3;
+    flex-direction: column;
     padding: ${theme.spacing(4, 0)};
     ${theme.breakpoints.up('sm')} {
       padding: ${theme.spacing(5, 0)};
@@ -39,7 +40,7 @@ const styles = (props) => ({
     color: ${theme.palette.text.primary};
   `,
   textPrimaryMain: css`
-    color: ${theme.palette.primary.light};
+    color: '${theme.palette.primary.light}';
   `,
   textBlack: css`
     color: '${theme.palette.text.primary}';

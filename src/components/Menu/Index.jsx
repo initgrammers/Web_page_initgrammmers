@@ -30,7 +30,7 @@ const CustomMenu = ({ indexMenu = '' }) => {
         <Toolbar
           sx={styles.main}
         >
-          <Box sx={{display: {xs: 'flex', md: 'none'}}}>
+          <Box sx={{display: {xs: 'flex', md: 'none'}, width: '100%'}}>
             <MobileMenu
               showDrawer={showNav}
               handleDrawerOpen={handleDrawerOpen}
