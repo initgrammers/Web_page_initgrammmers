@@ -6,25 +6,20 @@ import PropTypes from 'prop-types';
 import './globals.css';
 import { useEffect } from 'react';
 import createEmotionCache from '#app/shared/config/createEmotionCache';
-import { primary } from '#app/shared/config/theme/colors';
+import { GA_TRACKING_ID } from '#app/lib/gtag';
+import { FB_PIXEL_ID } from '#app/lib/facebookPixel';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import FacebookPixel from '#Components/FacebookPixel';
 
 const clientSideEmotionCache = createEmotionCache();
 
 export default function RootLayout({ children }) {
-  // const pathname = usePathname();
   useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
   }, []);
-
-  // useEffect(() => {
-  //   const handleRouteChange = (url) => {
-  //     gtag.pageview(url);
-  //   };
-  //   handleRouteChange();
-  // }, [pathname]);
 
   return (
     <html lang="es">
@@ -97,14 +92,41 @@ export default function RootLayout({ children }) {
           crossOrigin="true"
         />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                !function(f,b,e,v,n,t,s)
+                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window, document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', ${FB_PIXEL_ID});
+              `,
+          }}
+        />
+        <noscript>
+          <img
+            height="1"
+            alt="facebook pixel"
+            width="1"
+            style={{ display: 'none' }}
+            src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
+          />
+        </noscript>
       </head>
       <body>
         {/* <NextNProgress color={primary.main} height={6} /> */}
-        <MuiThemeProvider>
-          <CacheProvider value={clientSideEmotionCache}>
-            {children}
-          </CacheProvider>
-        </MuiThemeProvider>
+        <FacebookPixel>
+          <MuiThemeProvider>
+            <CacheProvider value={clientSideEmotionCache}>
+              {children}
+            </CacheProvider>
+          </MuiThemeProvider>
+        </FacebookPixel>
+        <GoogleAnalytics gaId={GA_TRACKING_ID}/>
       </body>
     </html>
   );
