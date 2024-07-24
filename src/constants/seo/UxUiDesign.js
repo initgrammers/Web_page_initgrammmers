@@ -10,7 +10,7 @@ const url = `https://initgrammers.com${routes.services.uxUiDesign}`;
 const image =
   'https://seo-web-page.web.app/assets/images/desarrollo-aplicaciones-web-ecuador.jpg';
 
-const LandingPageSEO = {
+const UxUiDesignSeo = {
   title,
   description,
   urlAltern: url,
@@ -54,4 +54,4 @@ const LandingPageSEO = {
   ],
 };
 
-export default LandingPageSEO;
+export default UxUiDesignSeo;

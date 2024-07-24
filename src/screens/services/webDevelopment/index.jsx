@@ -2,7 +2,6 @@
 import dynamic from 'next/dynamic';
 import Banner from './sections/Banner';
 import WebDevelopment from '#constants/seo/WebDevelopment';
-import SEO from '#Components/SEO';
 import Organization from '#Components/StructuredData/Organization';
 import WebSite from '#Components/StructuredData/WebSite';
 import Article from '#Components/StructuredData/Article';
@@ -22,7 +21,6 @@ const Questions = dynamic(() => import('./sections/Questions'));
 
 const index = () => (
   <>
-    <SEO {...WebDevelopment} />
     <Banner />
     <VisibilityCompany />
     <NeedAnUpdate />
