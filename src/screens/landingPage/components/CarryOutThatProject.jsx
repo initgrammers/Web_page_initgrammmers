@@ -51,8 +51,8 @@ const CarryOutThatProject = ({
                 quality={100}
                 src={image}
                 fill
-                objectFit='contain'
                 alt={`${titlePart1} ${titlePart2}`}
+                style={{objectFit: 'contain'}}
               />
             </Box>
           </Box>

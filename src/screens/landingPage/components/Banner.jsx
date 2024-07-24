@@ -44,8 +44,8 @@ const Banner = ({
                 priority
                 src={image}
                 fill
-                objectFit='contain'
                 alt={title}
+                style={{ objectFit: 'contain'}}
               />
             </Box>
           </Box>
