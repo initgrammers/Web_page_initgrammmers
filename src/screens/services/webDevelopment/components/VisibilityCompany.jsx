@@ -1,41 +1,37 @@
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import styles from '../styles/VisibilityCompany';
+import { Box, Typography } from '@mui/material';
 
-const useStyles = makeStyles(styles);
 const VisibilityCompany = ({
-  backgroundImage,
-  heightImage,
+  backgroundImage = '',
+  heightImage = 0,
   title,
   description,
   image,
 }) => {
-  const classes = useStyles();
   return (
     <Box component="section" position="relative" bgcolor="secondary.light">
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
-        <Box className={classes.container}>
-          <Box component="article" className={classes.detailsContent}>
-            <Typography variant="h2" className={classes.title}>
+        <Box styles={styles.container}>
+          <Box component="article" styles={styles.detailsContent}>
+            <Typography variant="h2" styles={styles.title}>
               {title}
             </Typography>
-            <Typography variant="body1" className={classes.description}>
+            <Typography variant="body1" styles={styles.description}>
               {description}
             </Typography>
           </Box>
-          <Box className={classes.containerImage}>
-            <Box component="figure" className={classes.image}>
+          <Box styles={styles.containerImage}>
+            <Box component="figure" styles={styles.image}>
               <Image
                 quality={100}
                 priority
                 src={image}
-                layout="fill"
+                fill
                 alt={title}
               />
             </Box>
@@ -52,11 +48,6 @@ VisibilityCompany.propTypes = {
   image: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
-};
-
-VisibilityCompany.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
 };
 
 export default VisibilityCompany;

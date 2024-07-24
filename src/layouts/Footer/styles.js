@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import theme from '../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   root: {
     padding: theme.spacing(8, 0),
     minHeight: 473,
@@ -19,6 +20,12 @@ const styles = (theme) => ({
       padding: theme.spacing(8, 0),
     },
   },
+  gridContact: {
+    height: '150px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'column',
+  },
   gridContainer: {
     color: theme.palette.primary.contrastText,
     marginTop: theme.spacing(4),
@@ -34,9 +41,7 @@ const styles = (theme) => ({
   section: {
     marginBottom: theme.spacing(2),
     fontWeight: 'bold',
-  },
-  gridContact: {
-    maxWidth: 620,
+    fontSize: '1rem'
   },
   descriptionContact: {
     marginTop: theme.spacing(3),
@@ -47,12 +52,20 @@ const styles = (theme) => ({
     marginBottom: theme.spacing(6),
   },
   borderContactUs: {
+    height: '250px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'column',
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
     paddingLeft: theme.spacing(4),
     borderLeft: '2px solid',
     borderColor: theme.palette.primary.main,
     [theme.breakpoints.down('sm')]: {
+      paddingLeft: theme.spacing(0),
+      borderLeft: 0,
+    },
+    [theme.breakpoints.down('md')]: {
       paddingLeft: theme.spacing(0),
       borderLeft: 0,
     },
@@ -66,15 +79,18 @@ const styles = (theme) => ({
     height: 32,
     [theme.breakpoints.up('sm')]: {
       margin: 'auto',
+      marginBottom: 4,
     },
     [theme.breakpoints.up('md')]: {
       margin: 'auto',
+      marginBottom: 4,
     },
     [theme.breakpoints.down('xs')]: {
-      margin: 0,
+      margin: 'auto',
     },
     [theme.breakpoints.up('lg')]: {
-      margin: 0,
+      marginBottom: 4,
+      marginLeft: 0
     },
   },
 
@@ -101,7 +117,7 @@ const styles = (theme) => ({
       height: '32px',
     },
   },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

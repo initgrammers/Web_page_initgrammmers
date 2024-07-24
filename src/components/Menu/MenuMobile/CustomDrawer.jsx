@@ -1,14 +1,11 @@
 import PropTypes from 'prop-types';
-import Collapse from '@material-ui/core/Collapse';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import ListMenu from './ListMenu';
 import styles from './styles';
+import { Collapse } from '@mui/material';
 
-const useStyles = makeStyles(styles);
-const CustomDrawer = ({ open, onClose, indexMenu }) => {
-  const classes = useStyles();
+const CustomDrawer = ({ open = false, onClose, indexMenu }) => {
   return (
-    <Collapse in={open} className={classes.drawer} unmountOnExit>
+    <Collapse in={open} sx={styles.drawer} unmountOnExit>
       <ListMenu indexMenu={indexMenu} onClose={onClose} />
     </Collapse>
   );
@@ -18,9 +15,6 @@ CustomDrawer.propTypes = {
   open: PropTypes.bool,
   onClose: PropTypes.func.isRequired,
   indexMenu: PropTypes.string.isRequired,
-};
-CustomDrawer.defaultProps = {
-  open: false,
 };
 
 export default CustomDrawer;

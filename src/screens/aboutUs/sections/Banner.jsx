@@ -1,7 +1,7 @@
-import { useTheme } from '@material-ui/core';
 import AboutUsBanner from '#Components/Banner';
 import { bannerAboutUs } from '#constants/AboutUs';
 import { contactsLinks } from '#app/constants/contacts';
+import { useTheme } from '@mui/material';
 
 const Banner = () => {
   const { palette } = useTheme();

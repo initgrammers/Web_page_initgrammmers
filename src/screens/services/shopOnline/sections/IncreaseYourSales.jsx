@@ -1,6 +1,6 @@
-import { useTheme } from '@material-ui/core';
 import CallToActionSection from '#Components/CallToActionSection';
 import { increaseYourSalesInOneClick } from '#constants/services/ShopOnline';
+import { useTheme } from '@mui/material';
 
 const UnforgettableExperiences = () => {
   const { palette } = useTheme();

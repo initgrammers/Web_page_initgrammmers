@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import makeStyles from '@material-ui/core/styles/makeStyles';
+import theme from '../../shared/config/MuiThemeProvider/theme'
 
-const styles = makeStyles((theme) => ({
+const styles = {
   content: {
     display: 'flex',
     flexDirection: 'column',
@@ -26,15 +26,15 @@ const styles = makeStyles((theme) => ({
     background: theme.palette.secondary.main,
     color: theme.palette.primary.contrastText,
   },
-  imageStyle: ({ xs }) => ({
-    marginTop: theme.spacing(4),
-    width: xs.width,
-    height: xs.height,
-    position: 'relative',
-    '&>div>img': {
-      objectFit: 'contain',
-    },
-  }),
+  // imageStyle: ({ xs }) => ({
+  //   marginTop: theme.spacing(4),
+  //   width: xs.width,
+  //   height: xs.height,
+  //   position: 'relative',
+  //   '&>div>img': {
+  //     objectFit: 'contain',
+  //   },
+  // }),
   [theme.breakpoints.up('sm')]: {
     imageStyle: ({ sm }) => ({
       marginTop: theme.spacing(5),
@@ -66,7 +66,7 @@ const styles = makeStyles((theme) => ({
       paddingBottom: theme.spacing(8),
     },
   },
-}));
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

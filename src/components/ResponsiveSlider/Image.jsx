@@ -1,14 +1,12 @@
-import Box from '@material-ui/core/Box';
 import PropTypes from 'prop-types';
 import styles from './style';
+import { Box } from '@mui/material';
 
-const Image = ({ image, label, showTitleImage, imageIsLarge }) => {
-  const classes = styles({ imageIsLarge });
-
+const Image = ({ image, label, showTitleImage = true, imageIsLarge = false }) => {
   return (
     <>
-      <Box className={classes.containerImage}>
-        <img className={classes.image} src={image} alt={label} loading="lazy" />
+      <Box sx={styles.containerImage}>
+        <img sx={styles.image} src={image} alt={label} loading="lazy" />
         {showTitleImage && <p>{label}</p>}
       </Box>
     </>
@@ -19,11 +17,6 @@ Image.propTypes = {
   label: PropTypes.string.isRequired,
   showTitleImage: PropTypes.bool,
   imageIsLarge: PropTypes.bool,
-};
-
-Image.defaultProps = {
-  showTitleImage: true,
-  imageIsLarge: false,
 };
 
 export default Image;

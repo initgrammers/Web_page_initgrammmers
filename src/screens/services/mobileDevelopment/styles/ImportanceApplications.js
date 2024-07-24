@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import theme from '../../../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   background: {
     background: theme.palette.secondary.fade,
   },
@@ -67,7 +68,7 @@ const styles = (theme) => ({
       height: 694,
     },
   },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

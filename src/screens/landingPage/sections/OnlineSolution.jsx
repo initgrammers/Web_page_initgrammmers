@@ -1,5 +1,5 @@
+import { onlineSolution } from '#app/constants/LandingPage';
 import InformationWithImageSection from '#Components/InformationWithImageSection';
-import { onlineSolution } from '#constants/LandingPage';
 
 const OnlineSolution = () => (
   <InformationWithImageSection

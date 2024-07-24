@@ -1,6 +1,3 @@
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from '../styles/CarryOutThatProject';
@@ -9,26 +6,24 @@ import CustomContainer from '#Components/CustomContainer';
 import Subtitle from '#Components/Subtitle';
 import ContactUsButton from '#Components/ContacUsButton';
 import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
-
-const useStyles = makeStyles(styles);
+import { Box, Typography } from '@mui/material';
 
 const CarryOutThatProject = ({
   titlePart1,
-  titlePart2,
+  titlePart2 = '',
   description,
-  image,
+  image = '',
 }) => {
-  const classes = useStyles();
   return (
     <Box
       component="section"
       position="relative"
-      className={classes.backgroundSection}
+      sx={styles.backgroundSection}
     >
       <BackgroundImage />
       <CustomContainer>
-        <Box className={classes.content}>
-          <Box component="article" className={classes.contentInformation}>
+        <Box sx={styles.content} gap='16px'>
+          <Box flex={1} component="article" sx={styles.contentInformation}>
             <Subtitle
               black
               variant="h1"
@@ -41,7 +36,7 @@ const CarryOutThatProject = ({
             <Typography
               variant="body1"
               component="p"
-              className={classes.description}
+              sx={styles.description}
             >
               {description}
             </Typography>
@@ -50,13 +45,14 @@ const CarryOutThatProject = ({
               href={contactsLinks.landing}
             />
           </Box>
-          <Box className={classes.containerImage}>
-            <Box component="figure" className={classes.image}>
+          <Box flex={1} sx={styles.containerImage} my={1}>
+            <Box component="figure" sx={styles.image}>
               <Image
                 quality={100}
                 src={image}
-                layout="fill"
+                fill
                 alt={`${titlePart1} ${titlePart2}`}
+                style={{objectFit: 'contain'}}
               />
             </Box>
           </Box>
@@ -71,11 +67,6 @@ CarryOutThatProject.propTypes = {
   titlePart2: PropTypes.string,
   description: PropTypes.string.isRequired,
   image: PropTypes.string,
-};
-
-CarryOutThatProject.defaultProps = {
-  titlePart2: '',
-  image: '',
 };
 
 export default CarryOutThatProject;

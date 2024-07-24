@@ -1,31 +1,28 @@
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import styles from './Purpose';
+import { Box, Typography } from '@mui/material';
 
-const useStyles = makeStyles(styles);
 const Purpose = ({
   title,
   description,
   image,
   backgroundColor,
-  colorTitleIsSecondary,
+  colorTitleIsSecondary = false,
 }) => {
-  const classes = useStyles();
   return (
-    <Box className={classes.cardPurpose} bgcolor={backgroundColor}>
+    <Box sx={styles.cardPurpose} bgcolor={backgroundColor}>
       <img src={image} width="100px" height="100px" alt={title} />
       <Typography
         variant="h2"
-        className={clsx(classes.title, {
-          [classes.titleSecondary]: colorTitleIsSecondary,
-        })}
+        sx={{
+          ...styles.title,
+          ...(colorTitleIsSecondary && styles.titleSecondary),
+        }}
       >
         {title}
       </Typography>
-      <Typography className={classes.description} variant="body1">
+      <Typography sx={styles.description} variant="body1">
         {description}
       </Typography>
     </Box>
@@ -38,10 +35,6 @@ Purpose.propTypes = {
   image: PropTypes.string.isRequired,
   backgroundColor: PropTypes.string.isRequired,
   colorTitleIsSecondary: PropTypes.bool,
-};
-
-Purpose.defaultProps = {
-  colorTitleIsSecondary: false,
 };
 
 export default Purpose;

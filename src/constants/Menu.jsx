@@ -1,10 +1,11 @@
-import ShoppingCart from '@material-ui/icons/ShoppingCartOutlined';
-import AddToHomeScreen from '@material-ui/icons/AddToHomeScreenOutlined';
-import Devices from '@material-ui/icons/DevicesOutlined';
-import Widgets from '@material-ui/icons/WidgetsOutlined';
-import CastForEducation from '@material-ui/icons/CastForEducationOutlined';
-import DeviceHub from '@material-ui/icons/DeviceHubOutlined';
-import Search from '@material-ui/icons/SearchOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import MobileFriendlyIcon from '@mui/icons-material/MobileFriendly';
+import DevicesIcon from '@mui/icons-material/Devices';
+import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
+import CastForEducationOutlinedIcon from '@mui/icons-material/CastForEducationOutlined';
+import DeviceHubOutlinedIcon from '@mui/icons-material/DeviceHubOutlined';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import styles from '../components/Menu/styles/Options';
 import routes from '#app/routes/';
 import { useTranslation } from 'next-i18next';
 
@@ -16,14 +17,14 @@ const useMenu = () => {
       title: t('webDevelopment'),
       subtitle: 'Android, iOs, híbridas',
       href: routes.services.webDevelopment,
-      icon: <Devices />,
+      icon: <DevicesIcon sx={styles.icon}/>,
     },
     {
       id: 'MobileDevelopment',
       title: t('mobileDevelopment'),
       subtitle: 'Android, iOS, híbridas',
       href: routes.services.mobileDevelopment,
-      icon: <AddToHomeScreen />,
+      icon: <MobileFriendlyIcon sx={styles.icon}/>,
     },
   
     {
@@ -31,7 +32,7 @@ const useMenu = () => {
       title: t('ux/uiDesign'),
       subtitle: 'Venda a través de internet',
       href: routes.services.uxUiDesign,
-      icon: <Widgets />,
+      icon: <WidgetsOutlinedIcon sx={styles.icon}/>,
     },
     // {
     //   id: 'ShopOnline',
@@ -45,7 +46,7 @@ const useMenu = () => {
       title: t('training'),
       subtitle: 'Aprende con nosotros',
       href: routes.services.trainings,
-      icon: <CastForEducation />,
+      icon: <CastForEducationOutlinedIcon sx={styles.icon}/>,
     },
     // {
     //   id: 'Marketing',
@@ -54,13 +55,13 @@ const useMenu = () => {
     //   href: routes.services.marketingDigital,
     //   icon: <DeviceHub />,
     // },
-    // {
-    //   id: 'SEO',
-    //   title: 'SEO',
-    //   subtitle: 'Posicionamiento en buscadores',
-    //   href: routes.services.seo,
-    //   icon: <Search />,
-    // },
+    {
+      id: 'SEO',
+      title: 'SEO',
+      subtitle: 'Posicionamiento en buscadores',
+      href: routes.services.seo,
+      icon: <SearchOutlinedIcon sx={styles.icon}/>,
+    },
   ];
   
   const aboutUs = {

@@ -1,34 +1,25 @@
 import PropTypes from 'prop-types';
+import theme from '../../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   section: {
     background: theme.palette.primary.fade,
-    padding: theme.spacing(4, 0),
+    padding: { xs: theme.spacing(4, 0), sm: theme.spacing(5, 0), lg: theme.spacing(8, 0) },
   },
   team: {
+    width: "106%",
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'center',
-    marginBottom: `-${theme.spacing(4)}px`,
+    gap: { xs: '20px' },
+    justifyContent: { xs: 'center', sm: 'space-between' },
+    marginBottom: `-${theme.spacing(4)}`,
   },
   title: {
     color: theme.palette.primary.light,
     paddingBottom: theme.spacing(4),
+    fontSize: { xs: "1.5rem", sm: "1.6667rem", md: "1.875rem", lg: "2.0833rem" }
   },
-  [theme.breakpoints.up('sm')]: {
-    section: {
-      padding: theme.spacing(5, 0),
-    },
-    team: {
-      justifyContent: 'space-between',
-    },
-  },
-  [theme.breakpoints.up('lg')]: {
-    section: {
-      padding: theme.spacing(8, 0),
-    },
-  },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

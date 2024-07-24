@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
-import { fade } from '@material-ui/core/styles/colorManipulator';
+import theme from '../../../shared/config/MuiThemeProvider/theme'
+import { alpha } from '@mui/material/styles';
 
-const styles = (theme) => ({
+
+const styles = {
   root: {
     height: '90vh',
     overflow: 'scroll',
@@ -26,10 +28,10 @@ const styles = (theme) => ({
       duration: 1,
     }),
     '&:active': {
-      background: fade(theme.palette.primary.main, 0.1),
+      background: alpha(theme.palette.primary.main, 0.1),
       '&>div': {
         color: 'black',
-        background: fade(theme.palette.primary.main, 0),
+        background: alpha(theme.palette.primary.main, 0),
       },
     },
     '&:hover': {
@@ -45,6 +47,7 @@ const styles = (theme) => ({
     paddingLeft: theme.spacing(2),
     display: 'flex',
     flexDirection: 'column',
+    color: theme.palette.common.black
   },
   selected: {
     color: theme.palette.primary.main,
@@ -52,7 +55,10 @@ const styles = (theme) => ({
     background: 'rgba(0,0,0,0.1)',
     borderRadius: 5,
   },
-});
+  icon: {
+    color: theme.palette.common.black,
+  }
+};
 
 styles.propTypes = {
   theme: PropTypes.shape().isRequired,

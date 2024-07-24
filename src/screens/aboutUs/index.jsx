@@ -1,3 +1,4 @@
+"use client"
 import Banner from './sections/Banner';
 import MisionVision from './sections/MisionVision';
 import SEO from '#Components/SEO';
@@ -9,7 +10,7 @@ import WebSite from '#Components/StructuredData/WebSite';
 
 const Index = () => (
   <>
-    <SEO {...AboutUsSeo} />
+    {/* <SEO {...AboutUsSeo} /> */}
     <Banner />
     <MisionVision />
     <Team />

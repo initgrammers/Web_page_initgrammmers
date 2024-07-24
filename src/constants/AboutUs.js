@@ -31,7 +31,7 @@ export const misionVision = {
   vision,
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque2.png',
-  heightImage: 338,
+  heightImage: 388,
 };
 
 const teamPlayer = [
@@ -84,7 +84,7 @@ export const team = {
   title: 'Equipo fundador',
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque3.png',
-  heightImage: 994,
+  heightImage: 574,
 };
 
 const valores = [

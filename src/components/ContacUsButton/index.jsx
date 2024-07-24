@@ -1,14 +1,18 @@
 import PropTypes from 'prop-types';
-import Button from '@material-ui/core/Button';
-import Link from '@material-ui/core/Link';
 import styles from '#app/assets/styles/ContacUsButton';
-import { useTranslation } from 'next-i18next';
+import { Button, Link } from '@mui/material';
 
-const ContactUsButton = ({ variant, color, href, label, children, mr }) => {
-  const classes = styles({ mr });
+const ContactUsButton = ({
+  color = 'primary',
+  label = 'Contáctanos',
+  href = '',
+  variant = 'contained',
+  children = undefined,
+  mr = 0,
+}) => {
   const {t} = useTranslation();
   return (
-    <Link target="_blank" rel="noopener" href={href} className={classes.link}>
+    <Link target="_blank" rel="noopener" href={href} sx={styles.link(mr)}>
       <Button variant={variant} color={color}>
         {t('contactUs') || children || label}
       </Button>
@@ -22,13 +26,5 @@ ContactUsButton.propTypes = {
   label: PropTypes.string,
   children: PropTypes.element,
   mr: PropTypes.number,
-};
-ContactUsButton.defaultProps = {
-  color: 'primary',
-  label: 'Contáctanos',
-  href: '',
-  variant: 'contained',
-  children: undefined,
-  mr: 0,
 };
 export default ContactUsButton;

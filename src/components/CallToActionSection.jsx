@@ -1,5 +1,3 @@
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from '../assets/styles/CallToActionType';
@@ -8,25 +6,25 @@ import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import ContactUsButton from './ContacUsButton';
 import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
+import { Box, Typography } from '@mui/material';
 
 const CallToActionSection = ({
   titlePart1,
-  titlePart2,
-  titlePart3,
+  titlePart2 = '',
+  titlePart3 = '',
   description,
   image,
-  backgroundImage,
-  heightImage,
+  backgroundImage = '',
+  heightImage = 0,
+  backgroundColor = '',
   imageSizes,
-  backgroundColor,
 }) => {
-  const classes = styles({ ...imageSizes });
 
   return (
     <Box component="section" position="relative" bgcolor={backgroundColor}>
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
-        <Box component="article" className={classes.content}>
+        <Box component="article" sx={styles.content}>
           <Subtitle
             black
             head={titlePart1}
@@ -37,7 +35,7 @@ const CallToActionSection = ({
             component="h2"
             mb={0}
           />
-          <Typography variant="body1" className={classes.description}>
+          <Typography variant="body1" sx={styles.description}>
             {description}
           </Typography>
           <ContactUsButton
@@ -45,11 +43,11 @@ const CallToActionSection = ({
             href={contactsLinks.general}
           />
 
-          <Box className={classes.imageStyle}>
+          <Box sx={styles.imageStyle}>
             <Image
               quality={100}
               src={image}
-              layout="fill"
+              fill
               alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
             />
           </Box>
@@ -88,11 +86,4 @@ CallToActionSection.propTypes = {
   backgroundColor: PropTypes.string,
 };
 
-CallToActionSection.defaultProps = {
-  titlePart2: '',
-  titlePart3: '',
-  backgroundImage: '',
-  heightImage: 0,
-  backgroundColor: '',
-};
 export default CallToActionSection;

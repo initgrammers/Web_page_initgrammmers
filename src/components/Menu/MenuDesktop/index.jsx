@@ -1,12 +1,6 @@
 /* eslint-disable no-confusing-arrow */
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import Hidden from '@material-ui/core/Hidden';
-import Fade from '@material-ui/core/Fade';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import PropTypes from 'prop-types';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
 import CustomLink from '#Components/CustomLink';
@@ -18,55 +12,54 @@ import OutsideAlerter from './Outsider';
 import useMenu from '#constants/Menu';
 import LanguageSelector from '#Components/LanguageSelector';
 import { useTranslation } from 'next-i18next';
+import { Box, Button, Fade, Typography } from '@mui/material';
 
-const useStyles = makeStyles(styles);
 
 const MenuDesktop = ({
-  showServices,
+  showServices = false,
   handleDrawerOpen,
   indexMenu,
   handleClose,
 }) => {
-  const classes = useStyles();
   const {menuInitgrammers} = useMenu();
   const { t } = useTranslation();
   return (
     <>
-      <Box className={classes.menuApp}>
+      <Box sx={styles.menuApp}>
         <CustomLink href="/">
           <LogoInitgrammers />
         </CustomLink>
-        <Box className={classes.sectionMenu}>
-          {menuInitgrammers.menu.map((item, key) =>
-            item?.items?.length > 0 ? (
-              <Button
-                key={key}
-                onClick={handleDrawerOpen}
-                color="inherit"
-                endIcon={showServices ? <ExpandLess /> : <ExpandMore />}
-              >
-                <Typography className={classes.services} variant="body2">
-                  {t('services')}
-                </Typography>
-              </Button>
-            ) : (
-              <CustomLink key={key} href={item.href}>
-                <Button onClick={handleClose} className={classes.button}>
-                  <Typography variant="body2" align="center">
-                    {item.title}
+        <Box display='flex' justifyContent='space-between' width='100%'>
+          <Box display='flex' sx={styles.sectionMenu} gap={3}>
+            {menuInitgrammers.menu.map((item, key) =>
+              item?.items?.length > 0 ? (
+                <Button
+                  key={key}
+                  onClick={handleDrawerOpen}
+                  color="inherit"
+                  endIcon={showServices ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                >
+                  <Typography sx={styles.services} variant="body2">
+                    Servicios
                   </Typography>
                 </Button>
-              </CustomLink>
-            ))}
-        </Box>
-        <LanguageSelector />
-        <Box marginLeft={3}>
-          <Hidden mdDown>
+              ) : (
+                <CustomLink key={key} href={item.href}>
+                  <Button onClick={handleClose} sx={styles.button}>
+                    <Typography variant="body2" align="center" sx={styles.services}>
+                      {item.title}
+                    </Typography>
+                  </Button>
+                </CustomLink>
+              ))}
+          </Box>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 'auto'}}>
+            <LanguageSelector />
             <ContactUsButton href={contactsLinks.general} />
-          </Hidden>
+          </Box>
         </Box>
       </Box>
-      <Fade timeout={800} in={showServices} className={classes.fade}>
+      <Fade timeout={800} in={showServices} sx={styles.fade}>
         <Box bgcolor="white">
           <OutsideAlerter callback={handleClose}>
             <Options
@@ -85,8 +78,5 @@ MenuDesktop.propTypes = {
   handleDrawerOpen: PropTypes.func.isRequired,
   indexMenu: PropTypes.string.isRequired,
   handleClose: PropTypes.func.isRequired,
-};
-MenuDesktop.defaultProps = {
-  showServices: false,
 };
 export default MenuDesktop;

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import theme from '../../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   services: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -17,10 +18,7 @@ const styles = (theme) => ({
     textAlign: 'center',
   },
   itemService: {
-    marginBottom: theme.spacing(3),
-    '&:last-child': {
-      marginBottom: 0,
-    },
+    margin: theme.spacing(6),
   },
   [theme.breakpoints.between('sm', 'md')]: {
     content: {
@@ -32,10 +30,10 @@ const styles = (theme) => ({
       alignItems: 'center',
     },
     itemService: {
-      '&:nth-child(odd)': {
+      '&:nth-of-type(odd)': {
         marginRight: theme.spacing(9),
       },
-      '&:nth-child(even)': {
+      '&:nth-of-type(even)': {
         marginLeft: theme.spacing(9),
       },
       '&:last-child': {
@@ -52,40 +50,40 @@ const styles = (theme) => ({
       flexDirection: 'row',
     },
     itemService: {
-      '&:nth-child(1n)': {
+      '&:nth-of-type(1n)': {
         marginBottom: theme.spacing(8),
       },
-      '&:nth-child(1)': {
+      '&:nth-of-type(1)': {
         marginLeft: 0,
         marginRight: 0,
       },
-      '&:nth-child(2)': {
+      '&:nth-of-type(2)': {
         marginLeft: `${theme.spacing(9)}px`,
         marginRight: `${theme.spacing(9)}px`,
       },
-      '&:nth-child(3)': {
+      '&:nth-of-type(3)': {
         marginLeft: 0,
         marginRight: `${theme.spacing(9)}px`,
       },
 
-      '&:nth-child(4)': {
+      '&:nth-of-type(4)': {
         marginRight: 0,
         marginLeft: `${theme.spacing(4.5)}px`,
       },
-      '&:nth-child(5)': {
+      '&:nth-of-type(5)': {
         marginRight: 0,
         marginLeft: 0,
       },
-      '&:nth-child(6)': {
+      '&:nth-of-type(6)': {
         margin: `0 ${theme.spacing(13)}px`,
       },
-      '&:nth-child(7)': {
+      '&:nth-of-type(7)': {
         marginRight: 0,
         marginLeft: 0,
       },
     },
   },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

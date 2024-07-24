@@ -1,11 +1,7 @@
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import CustomContainer from '#Components/CustomContainer';
 import styles from '../styles/NeedAnUpdate';
-
-const useStyles = makeStyles(styles);
+import { Box, Typography } from '@mui/material';
 
 const NeedAnUpdate = ({
   title,
@@ -14,32 +10,30 @@ const NeedAnUpdate = ({
   backgroundImage,
   ornamentImage,
 }) => {
-  const classes = useStyles();
-
   return (
     <Box component="section" position="relative">
       <img
         loading="lazy"
-        className={classes.background}
+        sx={styles.background}
         src={backgroundImage}
         alt="Diseño y desarrollo de aplicaciones web y móviles - Initgrammers"
       />
-      <Box className={classes.dino}>
+      <Box sx={styles.dino}>
         <img loading="lazy" src={ornamentImage} alt="background-dino" />
       </Box>
 
       <img
         loading="lazy"
-        className={classes.computer}
+        sx={styles.computer}
         src={image}
         alt={title}
       />
       <CustomContainer>
-        <Box className={classes.container}>
-          <Typography variant="h2" className={classes.title}>
+        <Box sx={styles.container}>
+          <Typography variant="h2" sx={styles.title}>
             {title}
           </Typography>
-          <Typography variant="body1" className={classes.description}>
+          <Typography variant="body1" sx={styles.description}>
             {description}
           </Typography>
         </Box>

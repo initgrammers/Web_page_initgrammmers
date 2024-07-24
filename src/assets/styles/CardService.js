@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import theme from '../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   card: {
     display: 'flex',
     flexDirection: 'column',
@@ -16,7 +17,7 @@ const styles = (theme) => ({
     textAlign: 'center',
     paddingTop: theme.spacing(1),
   },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

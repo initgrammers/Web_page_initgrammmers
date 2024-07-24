@@ -1,39 +1,32 @@
 /* eslint-disable no-confusing-arrow */
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import clsx from 'clsx';
 import styles from '../styles/Options';
 import useMenu from '#constants/Menu';
-
-const useStyles = makeStyles(styles);
+import { Box, Button, Grid, Typography } from '@mui/material';
 
 const Service = ({
   title,
   subtitle,
   href,
   icon,
-  indexMenu,
-  id,
-  handleDrawerOpen,
+  indexMenu = '',
+  id = '',
+  handleDrawerOpen = () => {},
 }) => {
-  const classes = useStyles();
   return (
-    <Link href={href}>
-      <a className={classes.service}>
+    <Link href={href} legacyBehavior>
+      <a style={styles.service}>
         <Button
           fullWidth
           onClick={handleDrawerOpen}
-          className={clsx(classes.button, {
-            [classes.selected]: indexMenu === id,
+          sx={clsx(styles.button, {
+            [styles.selected]: indexMenu === id,
           })}
         >
           {icon}
-          <Box className={classes.descriptionService}>
+          <Box sx={styles.descriptionService}>
             <Typography variant="subtitle1" color="inherit">
               {title}
             </Typography>
@@ -56,23 +49,17 @@ Service.propTypes = {
   id: PropTypes.string,
   handleDrawerOpen: PropTypes.func,
 };
-Service.defaultProps = {
-  indexMenu: '',
-  id: '',
-  handleDrawerOpen: () => {},
-};
 
 const Options = ({ indexMenu, handleDrawerOpen }) => {
-  const classes = useStyles();
   const {data} = useMenu();
   return (
-    <Box className={classes.root}>
-      <Typography color="primary" className={classes.title}>
+    <Box sx={styles.root}>
+      <Typography color="primary" sx={styles.title}>
         Servicios que ofrecemos
       </Typography>
-      <Grid container spacing={4}>
+      <Grid container spacing={4} >
         {data.map((item, index) => (
-          <Grid item md={4} sm={6} xs={12} key={index}>
+          <Grid display='flex' justifyContent='flex-start' item md={4} sm={6} xs={12} key={index}>
             <Service
               {...item}
               indexMenu={indexMenu}

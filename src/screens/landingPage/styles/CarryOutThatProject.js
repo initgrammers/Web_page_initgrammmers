@@ -1,11 +1,15 @@
 import PropTypes from 'prop-types';
+import theme from '../../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   backgroundSection: {
     background: theme.palette.secondary.light,
     marginBottom: theme.spacing(8),
   },
   content: {
+    display: 'flex',
+    flexDirection: {lg:'row', xs:'column'},
+    minWidth: 568,
     paddingTop: theme.spacing(4),
   },
   description: {
@@ -14,16 +18,18 @@ const styles = (theme) => ({
   },
   contentInformation: {
     display: 'flex',
+    marginY: {lg:11, xs:0},
     flexDirection: 'column',
     alignItems: 'center',
+    gap: 4,
   },
   containerImage: {
     display: 'flex',
     justifyContent: 'center',
   },
   image: {
-    width: 288,
-    height: 288,
+    width: 568,
+    height: 479,
     position: 'relative',
     bottom: `-${theme.spacing(8)}px`,
     marginTop: `-${theme.spacing(4)}px`,
@@ -58,7 +64,7 @@ const styles = (theme) => ({
       height: 504,
     },
   },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

@@ -1,4 +1,3 @@
-import { Box, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from '../styles/Strategies';
@@ -8,25 +7,24 @@ import ContactUsButton from '#Components/ContacUsButton';
 import BackgroundImage from '#Components/BackgroundImage';
 import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 import CardPartnership from '#Components/CardPartnership';
+import { Box, Typography } from '@mui/material';
 
 const Strategies = ({
   titlePart1,
-  titlePart2,
-  titlePart3,
   description,
   image,
   imageSizes,
   optionsShoppingOnline,
-  backgroundImage,
-  heightImage,
+  backgroundImage = '',
+  heightImage = 0,
+  titlePart2 = '',
+  titlePart3 = '',
 }) => {
-  const classes = styles({ ...imageSizes });
-
   return (
     <Box component="section" position="relative">
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
-        <Box component="article" className={classes.content}>
+        <Box component="article" sx={styles.content}>
           <Subtitle
             head={titlePart1}
             emphasis={titlePart2}
@@ -36,15 +34,15 @@ const Strategies = ({
             component="h2"
             variant="h2"
           />
-          <Box className={classes.imageStyle}>
+          <Box sx={styles.imageStyle}>
             <Image
               quality={100}
               src={image}
-              layout="fill"
+              fill
               alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
             />
           </Box>
-          <Typography variant="body1" className={classes.description}>
+          <Typography variant="body1" sx={styles.description}>
             {description}
           </Typography>
           <ContactUsButton
@@ -52,9 +50,9 @@ const Strategies = ({
             label={textContactUsButton.whatsapp}
             href={contactsLinks.marketingDigitalPage}
           />
-          <Box className={classes.shop}>
+          <Box sx={styles.shop}>
             {optionsShoppingOnline.map((service) => (
-              <Box key={service.title} className={classes.optionsShop}>
+              <Box key={service.title} sx={styles.optionsShop}>
                 <CardPartnership
                   image={service.path}
                   title={service.title}
@@ -104,10 +102,4 @@ Strategies.propTypes = {
   ).isRequired,
 };
 
-Strategies.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
-  titlePart2: '',
-  titlePart3: '',
-};
 export default Strategies;

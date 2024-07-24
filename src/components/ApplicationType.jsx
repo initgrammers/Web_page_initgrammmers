@@ -1,23 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import useTheme from '@material-ui/core/styles/useTheme';
-import MobileStepper from '@material-ui/core/MobileStepper';
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import clsx from 'clsx';
 import styles from '../assets/styles/ApplicationType';
+import { Box, IconButton, MobileStepper, Typography, useTheme } from '@mui/material';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const useStyles = makeStyles(styles);
-function ApplicationType({ sectionTitle, typesApplication, backgroundGray }) {
-  const classes = useStyles();
+function ApplicationType({ sectionTitle, typesApplication, backgroundGray = false }) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = typesApplication.length;
@@ -35,12 +28,12 @@ function ApplicationType({ sectionTitle, typesApplication, backgroundGray }) {
   };
 
   return (
-    <Box className={classes.root}>
+    <Box sx={styles.root}>
       <>
         <Typography
           variant="h2"
-          className={clsx(classes.title, {
-            [classes.titleGray]: backgroundGray,
+          sx={clsx(styles.title, {
+            [styles.titleGray]: backgroundGray,
           })}
         >
           {sectionTitle}
@@ -51,22 +44,22 @@ function ApplicationType({ sectionTitle, typesApplication, backgroundGray }) {
           onChangeIndex={handleStepChange}
           enableMouseEvents
           interval={20000}
-          className={classes.swipeable}
+          sx={styles.swipeable}
         >
           {typesApplication.map((app, index) => (
             <Box key={index} component="article">
               <Typography
                 variant="h3"
-                className={clsx(classes.applicationType, {
-                  [classes.backgroundGray]: backgroundGray,
+                sx={clsx(styles.applicationType, {
+                  [styles.backgroundGray]: backgroundGray,
                 })}
               >
                 {app.title}
               </Typography>
               <Typography
                 variant="body1"
-                className={clsx({
-                  [classes.bodyGray]: backgroundGray,
+                sx={clsx({
+                  [styles.bodyGray]: backgroundGray,
                 })}
               >
                 {app.description}
@@ -76,7 +69,7 @@ function ApplicationType({ sectionTitle, typesApplication, backgroundGray }) {
         </AutoPlaySwipeableViews>
       </>
       <MobileStepper
-        className={classes.stepper}
+        sx={styles.stepper}
         steps={maxSteps}
         position="static"
         variant="dots"
@@ -91,9 +84,9 @@ function ApplicationType({ sectionTitle, typesApplication, backgroundGray }) {
             disabled={activeStep === maxSteps - 1}
           >
             {theme.direction === 'rtl' ? (
-              <KeyboardArrowLeft className={classes.button} />
+              <KeyboardArrowLeftIcon sx={styles.button} />
             ) : (
-              <KeyboardArrowRight className={classes.button} />
+              <KeyboardArrowRightIcon sx={styles.button} />
             )}
           </IconButton>
         }
@@ -107,9 +100,9 @@ function ApplicationType({ sectionTitle, typesApplication, backgroundGray }) {
             disabled={activeStep === 0}
           >
             {theme.direction === 'rtl' ? (
-              <KeyboardArrowRight className={classes.button} />
+              <KeyboardArrowRightIcon sx={styles.button} />
             ) : (
-              <KeyboardArrowLeft className={classes.button} />
+              <KeyboardArrowLeftIcon sx={styles.button} />
             )}
           </IconButton>
         }
@@ -125,7 +118,4 @@ ApplicationType.propTypes = {
   backgroundGray: PropTypes.bool,
 };
 
-ApplicationType.defaultProps = {
-  backgroundGray: false,
-};
 export default ApplicationType;

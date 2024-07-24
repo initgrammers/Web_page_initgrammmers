@@ -1,5 +1,3 @@
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from '../styles/OptionsShopping';
@@ -9,30 +7,29 @@ import CustomContainer from '#Components/CustomContainer';
 import ContactUsButton from '#Components/ContacUsButton';
 import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 import CardPartnership from '#Components/CardPartnership';
+import { Box, Typography } from '@mui/material';
 
 const OptionsShopping = ({
   titlePart1,
-  titlePart2,
-  titlePart3,
   description,
   image,
-  backgroundImage,
-  heightImage,
+  titlePart2 = '',
+  titlePart3 = '',
+  backgroundImage = '',
+  heightImage = 0,
   imageSizes,
   optionsShoppingOnline,
 }) => {
-  const classes = styles({ ...imageSizes });
-
   return (
     <Box component="section" position="relative">
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
-        <Box component="article" className={classes.content}>
-          <Box className={classes.imageStyle}>
+        <Box component="article" sx={styles.content}>
+          <Box sx={styles.imageStyle}>
             <Image
               quality={100}
               src={image}
-              layout="fill"
+              fill
               alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
             />
           </Box>
@@ -45,7 +42,7 @@ const OptionsShopping = ({
             component="h2"
             variant="h2"
           />
-          <Typography variant="body1" className={classes.description}>
+          <Typography variant="body1" sx={styles.description}>
             {description}
           </Typography>
           <ContactUsButton
@@ -53,9 +50,9 @@ const OptionsShopping = ({
             href={contactsLinks.shopEcommercePage}
           />
 
-          <Box className={classes.shop}>
+          <Box sx={styles.shop}>
             {optionsShoppingOnline.map((service) => (
-              <Box key={service.title} className={classes.optionsShop}>
+              <Box key={service.title} sx={styles.optionsShop}>
                 <CardPartnership
                   image={service.path}
                   title={service.title}
@@ -105,10 +102,4 @@ OptionsShopping.propTypes = {
   ).isRequired,
 };
 
-OptionsShopping.defaultProps = {
-  titlePart2: '',
-  titlePart3: '',
-  backgroundImage: '',
-  heightImage: 0,
-};
 export default OptionsShopping;

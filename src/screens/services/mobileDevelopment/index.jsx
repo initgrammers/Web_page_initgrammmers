@@ -1,6 +1,6 @@
+"use client"
 import dynamic from 'next/dynamic';
 import Banner from './components/Banner';
-import SEO from '#Components/SEO';
 import MobileDevelopment from '#constants/seo/MobileDevelopment';
 import Organization from '#Components/StructuredData/Organization';
 import WebSite from '#Components/StructuredData/WebSite';
@@ -21,7 +21,6 @@ const Questions = dynamic(() => import('./sections/Questions'));
 
 const Index = () => (
   <>
-    <SEO {...MobileDevelopment} />
     <Banner />
     <ImportanceApplications />
     <SliderTech />

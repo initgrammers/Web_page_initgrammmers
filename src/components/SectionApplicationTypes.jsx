@@ -1,4 +1,3 @@
-import Box from '@material-ui/core/Box';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -6,44 +5,44 @@ import ApplicationType from './ApplicationType';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import styles from '../assets/styles/SectionApplicationTypes';
+import { Box } from '@mui/material';
 
 const SectionApplicationTypes = ({
   sectionTitle,
   typesApplication,
   image,
   imageSizes,
-  backgroundPrimaryLight,
-  backgroundGray,
-  backgroundImage,
-  heightImage,
+  backgroundPrimaryLight = false,
+  backgroundGray = false,
+  backgroundImage = '',
+  heightImage = 0,
 }) => {
-  const classes = styles({ ...imageSizes });
   return (
     <Box
       component="section"
       position="relative"
-      className={clsx(classes.mainSection, {
-        [classes.backgroundPrimaryLight]: backgroundPrimaryLight,
-        [classes.backgroundGray]: backgroundGray,
+      sx={clsx(styles.mainSection, {
+        [styles.backgroundPrimaryLight]: backgroundPrimaryLight,
+        [styles.backgroundGray]: backgroundGray,
       })}
     >
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
-        <Box className={classes.container}>
-          <Box className={classes.detailsContent}>
+        <Box sx={styles.container}>
+          <Box sx={styles.detailsContent}>
             <ApplicationType
               sectionTitle={sectionTitle}
               typesApplication={typesApplication}
               backgroundGray={backgroundGray}
             />
           </Box>
-          <Box className={classes.containerImage}>
-            <Box component="figure" className={classes.image}>
+          <Box sx={styles.containerImage}>
+            <Box component="figure" sx={styles.image}>
               <Image
                 quality={100}
                 priority
                 src={image}
-                layout="fill"
+                fill
                 alt={sectionTitle}
               />
             </Box>
@@ -85,13 +84,6 @@ SectionApplicationTypes.propTypes = {
   backgroundGray: PropTypes.bool,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
-};
-
-SectionApplicationTypes.defaultProps = {
-  backgroundPrimaryLight: false,
-  backgroundGray: false,
-  backgroundImage: '',
-  heightImage: 0,
 };
 
 export default SectionApplicationTypes;

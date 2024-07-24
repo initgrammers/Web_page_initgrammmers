@@ -1,6 +1,3 @@
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from '../styles/PartnershipModel';
@@ -10,26 +7,23 @@ import CustomContainer from '#Components/CustomContainer';
 import CardPartnership from '#Components/CardPartnership';
 import ContactUsButton from '#Components/ContacUsButton';
 import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
-
-const useStyles = makeStyles(styles);
+import { Box, Typography } from '@mui/material';
 
 const PartnershipModel = ({
   title,
   description,
   image,
-  backgroundImage,
-  heightImage,
+  backgroundImage = '',
+  heightImage = 0,
   partnershipModels,
 }) => {
-  const classes = useStyles();
-
   return (
-    <Box component="section" position="relative" className={classes.section}>
+    <Box component="section" position="relative" sx={styles.section}>
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
-        <Box component="article" className={classes.content}>
-          <Box component="figure" className={classes.image}>
-            <Image quality={100} src={image} layout="fill" alt={title} />
+        <Box component="article" sx={styles.content}>
+          <Box component="figure" sx={styles.image}>
+            <Image quality={100} src={image} fill alt={title} />
           </Box>
           <Subtitle
             head={title}
@@ -38,7 +32,7 @@ const PartnershipModel = ({
             mb={0}
             align="center"
           />
-          <Typography variant="body1" className={classes.description}>
+          <Typography variant="body1" sx={styles.description}>
             {description}
           </Typography>
           <ContactUsButton
@@ -46,9 +40,11 @@ const PartnershipModel = ({
             href={contactsLinks.writeUs}
           />
 
-          <Box className={classes.services}>
+          <Box
+            sx={{ ...styles.services, display: 'flex', flexDirection: {md:'row', xs:'column'} }}
+          >
             {partnershipModels.map((service) => (
-              <Box key={service.title} className={classes.modelPartnership}>
+              <Box key={service.title} sx={styles.modelPartnership}>
                 <CardPartnership
                   image={service.path}
                   title={service.title}
@@ -78,8 +74,4 @@ PartnershipModel.propTypes = {
   ).isRequired,
 };
 
-PartnershipModel.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
-};
 export default PartnershipModel;

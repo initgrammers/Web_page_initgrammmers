@@ -1,31 +1,25 @@
 import PropTypes from 'prop-types';
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
 import styles from './styles';
+import { Box, Button, IconButton } from '@mui/material';
 
-const useStyles = makeStyles(styles);
-
-const AppBarMobile = ({ showDrawer, handleDrawerOpen }) => {
-  const classes = useStyles();
+const AppBarMobile = ({ showDrawer = false, handleDrawerOpen }) => {
 
   return (
     <>
-      <Box className={classes.sectionLogo}>
+      <Box sx={styles.sectionLogo}>
         <IconButton
-          className={classes.button}
+          sx={styles.button}
           edge="start"
-          color="inherit"
+          color="primary"
           aria-label="menu"
           onClick={handleDrawerOpen}
         >
           {showDrawer ? <CloseIcon /> : <MenuIcon />}
         </IconButton>
-        <Button size="small" className={classes.button} href="/">
+        <Button size="small" sx={styles.button} href="/">
           <LogoInitgrammers />
         </Button>
       </Box>
@@ -36,9 +30,6 @@ const AppBarMobile = ({ showDrawer, handleDrawerOpen }) => {
 AppBarMobile.propTypes = {
   showDrawer: PropTypes.bool,
   handleDrawerOpen: PropTypes.func.isRequired,
-};
-AppBarMobile.defaultProps = {
-  showDrawer: false,
 };
 
 export default AppBarMobile;

@@ -1,17 +1,13 @@
-import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import PropTypes from 'prop-types';
 
 const Navigation = dynamic(() => import('./AppBar'));
 const CustomFooter = dynamic(() => import('./Footer'));
 
-const Layout = ({ children, navigation }) => (
+const Layout = ({ children, navigation = {} }) => (
   <>
-    <Head>
-      <title>InitGrammers</title>
-    </Head>
     <Navigation index={navigation?.index} />
-    <main>{children}</main>
+      <main>{children}</main>
     <CustomFooter />
   </>
 );
@@ -21,5 +17,4 @@ Layout.propTypes = {
   navigation: PropTypes.shape(),
 };
 
-Layout.defaultProps = { navigation: {} };
 export default Layout;

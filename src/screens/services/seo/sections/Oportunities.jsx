@@ -1,7 +1,7 @@
 import React from 'react';
-import { useTheme } from '@material-ui/core';
 import CallToActionSection from '#Components/CallToActionSection';
 import { oportunitieSEO } from '#constants/services/seo';
+import { useTheme } from '@mui/material';
 
 const IncreaseClics = () => {
   const { palette } = useTheme();

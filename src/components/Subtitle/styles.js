@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import theme from '../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   title: {
     color: theme.palette.primary.light,
     '& span': {
@@ -19,7 +20,7 @@ const styles = (theme) => ({
       color: theme.palette.primary.contrastText,
     },
   },
-});
+};
 
 styles.propTypes = {
   theme: PropTypes.shape().isRequired,

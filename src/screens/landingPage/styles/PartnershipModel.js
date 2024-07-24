@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import theme from '../../../shared/config/MuiThemeProvider/theme'
 
-const styles = (theme) => ({
+const styles = {
   section: {
     background: `rgba(163, 18, 91, 0.04)`,
   },
@@ -29,10 +30,12 @@ const styles = (theme) => ({
     color: theme.palette.primary.contrastText,
   },
   services: {
-    marginTop: theme.spacing(5),
+    marginTop: theme.spacing(4),
   },
   modelPartnership: {
-    '&:nth-child(1n)': {
+    flex: 1,
+    margin: theme.spacing(5),
+    '&:nth-of-type(1n)': {
       marginBottom: theme.spacing(4),
     },
     '&:last-child': {
@@ -71,12 +74,12 @@ const styles = (theme) => ({
       width: `100%`,
     },
     modelPartnership: {
-      '&:nth-child(1n)': {
+      '&:nth-of-type(1n)': {
         marginBottom: 0,
       },
     },
   },
-});
+};
 styles.propTypes = {
   theme: PropTypes.shape(),
 };

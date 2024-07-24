@@ -1,15 +1,10 @@
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import styles from '../assets/styles/CardService';
-
-const useStyles = makeStyles(styles);
+import { Box, Typography } from '@mui/material';
 
 const CardService = ({ image, service }) => {
-  const classes = useStyles();
   return (
-    <Box className={classes.card}>
+    <Box sx={styles.card}>
       <Box component="figure">
         <img
           loading="lazy"
@@ -19,7 +14,7 @@ const CardService = ({ image, service }) => {
           alt={service}
         />
       </Box>
-      <Typography variant="h4" component="p" className={classes.titleService}>
+      <Typography variant="h4" component="p" sx={styles.titleService}>
         {service}
       </Typography>
     </Box>

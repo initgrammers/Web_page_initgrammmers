@@ -1,33 +1,26 @@
-import Container from '@material-ui/core/Container';
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import Hidden from '@material-ui/core/Hidden';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import Image from 'next/image';
 import ContactUsButton from '#Components/ContacUsButton';
 import styles from '../styles/Banner';
 import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 import { bannerMobileDevelopment } from '#constants/services/MobileDevelopment';
-
-const useStyles = makeStyles(styles);
+import { Box, Container, Hidden, Typography } from '@mui/material';
 
 const Banner = () => {
-  const classes = useStyles();
   return (
-    <Box component="section" className={classes.mainSection}>
+    <Box component="section" sx={styles.mainSection}>
       <Hidden mdDown>
-        <Box className={classes.containerBackgroundImage}>
+        <Box sx={styles.containerBackgroundImage}>
           <Image
             quality={100}
             src={bannerMobileDevelopment.backgroundImage}
-            layout="fill"
+            fill
             alt="Initgrammer"
           />
         </Box>
       </Hidden>
-      <Container fixed className={classes.container}>
-        <Box component="article" className={classes.detailsContent}>
-          <Typography variant="h1" className={classes.title}>
+      <Container fixed sx={styles.container}>
+        <Box component="article" sx={styles.detailsContent}>
+          <Typography variant="h1" sx={styles.title}>
             {bannerMobileDevelopment.titlePar1}
             {bannerMobileDevelopment.titlePart2}
             {bannerMobileDevelopment.titlePart3}
@@ -35,7 +28,7 @@ const Banner = () => {
           <Typography
             variant="h3"
             component="p"
-            className={classes.description}
+            sx={styles.description}
           >
             {bannerMobileDevelopment.description}
           </Typography>
@@ -45,13 +38,13 @@ const Banner = () => {
             href={contactsLinks.mobileApps}
           />
         </Box>
-        <Box className={classes.containerImage}>
-          <Box component="figure" className={classes.image}>
+        <Box sx={styles.containerImage}>
+          <Box component="figure" sx={styles.image}>
             <Image
               quality={100}
               priority
               src={bannerMobileDevelopment.image}
-              layout="fill"
+              fill
               alt={`${bannerMobileDevelopment.titlePar1} ${bannerMobileDevelopment.titlePart2}${bannerMobileDevelopment.titlePart3}`}
             />
           </Box>

@@ -1,34 +1,26 @@
 import { createRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import Collapse from '@material-ui/core/Collapse';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
 import clsx from 'clsx';
 import CustomLink from '#Components/CustomLink';
 import styles from './styles';
+import { Collapse, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 const ref = createRef();
-const useStyles = makeStyles(styles);
 
 const ItemWithSubItemsMenu = ({
   indexMenu,
   titleMenu,
-  href,
-  subMenu,
+  subMenu = [],
+  href = '#',
   onClose,
 }) => {
-  const classes = useStyles();
   const [open, setOpen] = useState(false);
-
   let hasSubmenu = null;
 
   if (subMenu.length > 0) {
-    hasSubmenu = open ? <ExpandLess /> : <ExpandMore />;
+    hasSubmenu = open ? <ExpandLessIcon /> : <ExpandMoreIcon />;
   }
 
   const handleClick = () => {
@@ -37,13 +29,16 @@ const ItemWithSubItemsMenu = ({
   return (
     <>
       {subMenu.length > 0 ? (
-        <ListItem className={clsx(classes.nested)} button onClick={handleClick}>
+        <ListItem 
+          sx={{ ...styles.nested, '&:hover': { backgroundColor: 'lightgray' } }}
+          onClick={handleClick}
+        >
           <ListItemText primary={titleMenu} />
           {hasSubmenu}
         </ListItem>
       ) : (
         <CustomLink ref={ref} href={href}>
-          <ListItem className={clsx(classes.nested)} button onClick={onClose}>
+          <ListItem sx={styles.nested} onClick={onClose}>
             <ListItemText primary={titleMenu} />
           </ListItem>
         </CustomLink>
@@ -54,11 +49,12 @@ const ItemWithSubItemsMenu = ({
           {subMenu.map((item, key) => (
             <CustomLink ref={ref} key={key} href={item.href}>
               <ListItem
-                button
                 onClick={onClose}
-                className={clsx(classes.nested, {
-                  [classes.selected]: indexMenu === item.id,
-                })}
+                sx={{
+                  ...styles.nested,
+                  ...(indexMenu === item.id && styles.selected), 
+                  '&:hover': { backgroundColor: 'lightgray' }
+                }}
               >
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.title} />
@@ -77,11 +73,6 @@ ItemWithSubItemsMenu.propTypes = {
   subMenu: PropTypes.arrayOf(PropTypes.shape()),
   indexMenu: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
-};
-
-ItemWithSubItemsMenu.defaultProps = {
-  subMenu: [],
-  href: '#',
 };
 
 export default ItemWithSubItemsMenu;

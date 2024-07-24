@@ -1,30 +1,31 @@
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
 import CardService from '#Components/CardService';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import CustomLink from '#Components/CustomLink';
 import styles from '../styles/Services';
+import { Box, Typography } from '@mui/material';
 
-const useStyles = makeStyles(styles);
 
-const Services = ({ backgroundImage, heightImage, title, services }) => {
-  const classes = useStyles();
+const Services = ({ 
+  backgroundImage = '',
+  heightImage = 0,
+  title, 
+  services 
+}) => {
   return (
     <Box component="section" position="relative">
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
-        <Box className={classes.content}>
-          <Typography variant="h2" className={classes.title}>
+        <Box sx={styles.content}>
+          <Typography variant="h2" sx={styles.title}>
             {title}
           </Typography>
-          <Box className={classes.services}>
+          <Box sx={{...styles.services, flexDirection: 'row'}}>
             {services.map((service) => (
               <Box
                 component="article"
-                className={classes.itemService}
+                sx={styles.itemService}
                 key={service.service}
               >
                 <CustomLink href={service.href}>
@@ -50,11 +51,6 @@ Services.propTypes = {
       service: PropTypes.string,
     })
   ).isRequired,
-};
-
-Services.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
 };
 
 export default Services;

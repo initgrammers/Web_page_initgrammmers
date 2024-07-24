@@ -1,9 +1,15 @@
+"use client"
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Container from './Container';
 import Image from './Image';
 
-const Slide = ({ data, step, showTitleImage, imageIsLarge }) => {
+const Slide = ({
+  data = [],
+  step = 2,
+  showTitleImage = true,
+  imageIsLarge = false,
+}) => {
   const lengthData = data.length;
   const [index, setIndex] = useState({
     from: 0,
@@ -83,13 +89,6 @@ Slide.propTypes = {
   step: PropTypes.number,
   showTitleImage: PropTypes.bool,
   imageIsLarge: PropTypes.bool,
-};
-
-Slide.defaultProps = {
-  data: [],
-  step: 2,
-  showTitleImage: true,
-  imageIsLarge: false,
 };
 
 export default Slide;

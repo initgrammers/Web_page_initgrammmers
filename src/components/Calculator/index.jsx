@@ -1,12 +1,9 @@
-import Button from '@material-ui/core/Button';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import styles from './styles';
+import { Button } from '@mui/material';
 
-const useStyles = makeStyles(styles);
-
-const Calculator = ({ typeButton }) => {
+const Calculator = ({ typeButton = 'text' }) => {
   (() => {
     if (process.browser) {
       let j;
@@ -31,8 +28,6 @@ const Calculator = ({ typeButton }) => {
     }
   })();
 
-  const classes = useStyles();
-
   return (
     <a
       href="#/calculator/5fcfedf80ff8010029aa2d8d"
@@ -40,8 +35,8 @@ const Calculator = ({ typeButton }) => {
     >
       <Button
         variant={typeButton}
-        className={clsx(classes.calculator, {
-          [classes.whiteText]: typeButton === 'contained',
+        sx={clsx(styles.calculator, {
+          [styles.whiteText]: typeButton === 'contained',
         })}
         color="primary"
       >
@@ -53,10 +48,6 @@ const Calculator = ({ typeButton }) => {
 
 Calculator.propTypes = {
   typeButton: PropTypes.string,
-};
-
-Calculator.defaultProps = {
-  typeButton: 'text',
 };
 
 export default Calculator;

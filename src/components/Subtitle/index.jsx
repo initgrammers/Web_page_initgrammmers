@@ -1,36 +1,39 @@
 import React from 'react';
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
 import styles from './styles';
+import { Box, Typography } from '@mui/material';
 
-const useStyles = makeStyles(styles);
 
 const Subtitle = ({
-  head,
-  emphasis,
-  tail,
-  variant,
-  component,
-  mb,
-  mt,
-  align,
-  black,
-  white,
+  head= '',
+  emphasis= '',
+  tail= '',
+  variant= 'h1',
+  component= 'h1',
+  mb= 0,
+  mt= 0,
+  align= 'left',
+  black= false,
+  white= false,
 }) => {
-  const classes = useStyles();
   return (
     <Box display="flex" mb={mb} mt={mt} justifyContent="center">
       <Typography
         component={component}
         align={align}
         variant={variant}
-        className={clsx(classes.title, {
-          [classes.black]: black,
-          [classes.white]: white,
-        })}
+        sx={{
+          ...styles.title, 
+          ...(black && styles.black),
+          ...(white && styles.white),
+          '& span': { 
+            color: black 
+              ? styles.black['& span'].color 
+              : white 
+                ? styles.white['& span'].color
+                : styles.title['& span'].color,
+          },
+        }}
       >
         {head}
         <span>{` ${emphasis}`}</span>
@@ -50,17 +53,5 @@ Subtitle.propTypes = {
   align: PropTypes.string,
   black: PropTypes.bool,
   white: PropTypes.bool,
-};
-Subtitle.defaultProps = {
-  head: '',
-  emphasis: '',
-  tail: '',
-  variant: 'h1',
-  component: 'h1',
-  mb: 4,
-  mt: 0,
-  align: 'left',
-  black: false,
-  white: false,
 };
 export default Subtitle;

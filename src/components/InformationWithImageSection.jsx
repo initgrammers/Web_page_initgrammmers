@@ -1,71 +1,64 @@
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import clsx from 'clsx';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import styles from '../assets/styles/InformationWithImageSection';
+import { Box, Typography } from '@mui/material';
+import { primary } from '#app/shared/config/theme/colors';
 
 const InformationWithImageSection = ({
   title,
   description,
-  backgroundImage,
-  heightImage,
+  backgroundImage = '',
+  heightImage = 0,
   image,
   imageSizes,
-  backgroundPrimaryLight,
-  backgroundPrimaryFade,
-  backgroundSecondary,
-  backgroundSecondaryFade,
-  isImageRight,
-  titlePrimaryMain,
-  titleBlack,
-  descriptionPrimaryLight,
-  descriptionBlack,
+  backgroundPrimaryLight = false,
+  backgroundPrimaryFade = false,
+  backgroundSecondary = false,
+  backgroundSecondaryFade = false,
+  isImageRight = false,
+  titlePrimaryMain = false,
+  titleBlack = false,
+  descriptionPrimaryLight = false,
+  descriptionBlack = false,
 }) => {
-  const classes = styles({ ...imageSizes, isImageRight });
+  const componentStyles = styles(
+    { imageSizes, isImageRight },
+    { backgroundPrimaryLight, backgroundPrimaryFade, backgroundSecondary, backgroundSecondaryFade, titlePrimaryMain, titleBlack, descriptionPrimaryLight, descriptionBlack } // Pass other props to styles function
+  );
   return (
     <Box
       component="section"
       position="relative"
-      className={clsx({
-        [classes.backgroundPrimaryLight]: backgroundPrimaryLight,
-        [classes.backgroundPrimaryFade]: backgroundPrimaryFade,
-        [classes.backgroundSecondaryMain]: backgroundSecondary,
-        [classes.backgroundSecondaryFade]: backgroundSecondaryFade,
-      })}
+      sx={componentStyles.container}
     >
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
-        <Box className={classes.container}>
-          <Box component="article" className={classes.detailsContent}>
+        <Box sx={componentStyles.container} >
+          <Box component="article" sx={componentStyles.detailsContent} >
             <Typography
+              textAlign='center'
               variant="h2"
-              className={clsx(classes.title, {
-                [classes.textPrimaryMain]: titlePrimaryMain,
-                [classes.textBlack]: titleBlack,
-              })}
+              sx={{marginBottom: '25px',color: primary.light}}
             >
               {title}
             </Typography>
             <Typography
               variant="body1"
-              className={clsx(classes.description, {
-                [classes.textPrimaryMain]: descriptionPrimaryLight,
-                [classes.textBlack]: descriptionBlack,
-              })}
+              sx={componentStyles.description}
             >
               {description}
             </Typography>
           </Box>
-          <Box className={classes.containerImage}>
-            <Box component="figure" className={classes.image}>
+          <Box sx={componentStyles.containerImage}>
+            <Box component="figure" sx={componentStyles.image}>
               <Image
                 quality={100}
                 priority
                 src={image}
-                layout="fill"
+                fill
                 alt={title}
               />
             </Box>
@@ -109,20 +102,6 @@ InformationWithImageSection.propTypes = {
   titleBlack: PropTypes.bool,
   descriptionPrimaryLight: PropTypes.bool,
   descriptionBlack: PropTypes.bool,
-};
-
-InformationWithImageSection.defaultProps = {
-  backgroundImage: '',
-  heightImage: 0,
-  backgroundPrimaryLight: false,
-  backgroundPrimaryFade: false,
-  backgroundSecondary: false,
-  backgroundSecondaryFade: false,
-  isImageRight: false,
-  titlePrimaryMain: false,
-  titleBlack: false,
-  descriptionPrimaryLight: false,
-  descriptionBlack: false,
 };
 
 export default InformationWithImageSection;
