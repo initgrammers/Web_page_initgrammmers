@@ -10,12 +10,10 @@ export const MuiThemeProvider = ({ children }) => {
   // const Layout = Component.layout || NoLayout;
   return (
     <ThemeProvider theme={theme}>
-      <FacebookPixel>
       <Layout>
         <CssBaseline />
         {children}
       </Layout>
-      </FacebookPixel>
     </ThemeProvider>
   );
 };

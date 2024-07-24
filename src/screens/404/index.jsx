@@ -3,7 +3,6 @@ import Image from 'next/image';
 import styles from './style';
 import Subtitle from '#Components/Subtitle';
 import Link from '#Components/CustomLink';
-import SEO from '#Components/SEO';
 import Building from '#app/constants/seo/Building';
 import Organization from '#Components/StructuredData/Organization';
 import WebSite from '#Components/StructuredData/WebSite';
@@ -12,8 +11,6 @@ import { Box, Button } from '@mui/material';
 const NotFountPage = () => {
   return (
     <>
-      <SEO {...Building} />
-
       <Box component="section" bgcolor="primary.light">
         <Box sx={styles.root}>
           <Subtitle head="Estamos en construcción" white />

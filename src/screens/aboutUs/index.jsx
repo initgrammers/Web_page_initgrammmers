@@ -10,7 +10,7 @@ import WebSite from '#Components/StructuredData/WebSite';
 
 const Index = () => (
   <>
-    <SEO {...AboutUsSeo} />
+    {/* <SEO {...AboutUsSeo} /> */}
     <Banner />
     <MisionVision />
     <Team />

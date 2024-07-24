@@ -1,10 +1,10 @@
 // app/components/FacebookPixel.js
 'use client';
-import { useLayoutEffect } from 'react';
+import { useEffect } from 'react';
 import * as fbq from '#app/lib/facebookPixel';
 
 const FacebookPixel = ({ children }) => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     fbq.initialize(fbq.FB_PIXEL_ID);
     fbq.pageview();
   }, []);

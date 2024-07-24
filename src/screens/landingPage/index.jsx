@@ -1,7 +1,6 @@
 "use client"
 import dynamic from 'next/dynamic';
 import Banner from './sections/Banner';
-import SEO from '#Components/SEO';
 import LandingPage from '#constants/seo/LandingPage';
 import Organization from '#Components/StructuredData/Organization';
 import WebSite from '#Components/StructuredData/WebSite';
@@ -20,7 +19,6 @@ const Questions = dynamic(() => import('./sections/Questions'));
 
 const index = () => (
   <>
-    <SEO {...LandingPage} />
     <Banner />
     <OnlineSolution />
     <Services />
