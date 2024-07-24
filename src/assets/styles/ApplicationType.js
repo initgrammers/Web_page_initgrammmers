@@ -4,10 +4,8 @@ import theme from '../../shared/config/MuiThemeProvider/theme'
 const styles = {
   root: {
     color: theme.palette.primary.contrastText,
-    [theme.breakpoints.up('lg')]: {
-      width: 504,
-      padding: theme.spacing(12, 0),
-    },
+    width: { xs: 468, sm: 552, md: 512 },
+    padding: { lg: theme.spacing(12, 0) },
   },
   backgroundGray: {
     color: theme.palette.primary.light,
@@ -22,6 +20,7 @@ const styles = {
     textAlign: 'center',
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(2),
+    fontSize: { xs: "1.5rem", sm: "1.6667rem", md: "1.875rem", lg: "2.0833rem" }
   },
   button: {
     color: 'white',

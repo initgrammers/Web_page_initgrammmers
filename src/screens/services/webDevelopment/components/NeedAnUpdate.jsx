@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import CustomContainer from '#Components/CustomContainer';
 import styles from '../styles/NeedAnUpdate';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 
 const NeedAnUpdate = ({
   title,
@@ -10,11 +10,19 @@ const NeedAnUpdate = ({
   backgroundImage,
   ornamentImage,
 }) => {
+  const { breakpoints } = useTheme();
+
+  const xs = useMediaQuery(breakpoints.down('sm'));
+  const lg = useMediaQuery(breakpoints.up('lg'));
+
   return (
     <Box component="section" position="relative">
       <img
         loading="lazy"
-        sx={styles.background}
+        style={{
+          ...styles.background,
+          display: `${ lg ? "" : "none"}`
+        }}
         src={backgroundImage}
         alt="Diseño y desarrollo de aplicaciones web y móviles - Initgrammers"
       />
@@ -24,7 +32,10 @@ const NeedAnUpdate = ({
 
       <img
         loading="lazy"
-        sx={styles.computer}
+        style={{
+          ...styles.computer,
+          objectFit: `${ xs ? "cover" : "fill"}`
+        }}
         src={image}
         alt={title}
       />

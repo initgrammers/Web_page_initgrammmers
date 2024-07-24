@@ -3,62 +3,36 @@ import theme from '../../../../shared/config/MuiThemeProvider/theme'
 
 const styles = {
   detailsContent: {
-    paddingTop: theme.spacing(8),
+    paddingTop: { xs: theme.spacing(8), sm: theme.spacing(12), lg: 0 },
+    flex: { lg: 5 },
+    display: { lg: 'flex' },
+    flexDirection: { lg: 'column' },
+    justifyContent: { lg: 'center' },
+    paddingRight: { lg: theme.spacing(2) },
   },
   title: {
     color: theme.palette.primary.contrastText,
-    textAlign: 'center',
-    [theme.breakpoints.up('lg')]: {
-      textAlign: 'left',
-    },
+    textAlign: {xs: 'center', lg: 'left'},
+    fontSize: { xs: "1.5rem", sm: "1.6667rem", md: "1.875rem", lg: "2.0833rem" }
   },
   description: {
-    padding: `${theme.spacing(4)}px 0`,
+    padding: `${theme.spacing(4)} 0`,
     color: theme.palette.common.black,
     textAlign: 'justify',
   },
   containerImage: {
     display: 'flex',
+    flex: { lg: 5 },
     justifyContent: 'center',
-    padding: `${theme.spacing(4)}px 0`,
+    padding: { xs: `${theme.spacing(4)} 0`, sm: `${theme.spacing(5)} 0` , lg: `${theme.spacing(8)} 0` },
   },
   image: {
-    width: 288,
-    height: 235,
+    width: { xs: 288, sm: 544, lg: 504 },
+    height: { xs: 235, sm: 449, lg: 382 },
     position: 'relative',
   },
-  [theme.breakpoints.up('sm')]: {
-    detailsContent: {
-      paddingTop: theme.spacing(12),
-    },
-    containerImage: {
-      padding: `${theme.spacing(5)}px 0`,
-    },
-    image: {
-      width: 544,
-      height: 449,
-    },
-  },
-  [theme.breakpoints.up('lg')]: {
-    container: {
-      display: 'flex',
-    },
-    detailsContent: {
-      flex: 5,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      paddingTop: 0,
-      paddingRight: theme.spacing(2),
-    },
-    containerImage: {
-      flex: 5,
-      padding: `${theme.spacing(8)}px 0`,
-    },
-    image: {
-      width: 504,
-      height: 382,
-    },
+  container: {
+    display: { lg: 'flex' },
   },
 };
 

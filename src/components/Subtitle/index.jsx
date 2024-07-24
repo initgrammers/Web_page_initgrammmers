@@ -15,6 +15,7 @@ const Subtitle = ({
   align= 'left',
   black= false,
   white= false,
+  fontSize = ''
 }) => {
   return (
     <Box display="flex" mb={mb} mt={mt} justifyContent="center">
@@ -23,6 +24,7 @@ const Subtitle = ({
         align={align}
         variant={variant}
         sx={{
+          fontSize: fontSize,
           ...styles.title, 
           ...(black && styles.black),
           ...(white && styles.white),
@@ -53,5 +55,6 @@ Subtitle.propTypes = {
   align: PropTypes.string,
   black: PropTypes.bool,
   white: PropTypes.bool,
+  fontSize: PropTypes.string
 };
 export default Subtitle;

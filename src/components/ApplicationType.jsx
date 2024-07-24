@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import clsx from 'clsx';
 import styles from '../assets/styles/ApplicationType';
 import { Box, IconButton, MobileStepper, Typography, useTheme } from '@mui/material';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
@@ -32,9 +31,11 @@ function ApplicationType({ sectionTitle, typesApplication, backgroundGray = fals
       <>
         <Typography
           variant="h2"
-          sx={clsx(styles.title, {
-            [styles.titleGray]: backgroundGray,
-          })}
+          sx={{
+            ...styles.title,
+            ...(backgroundGray && styles.titleGray),
+          }}
+          
         >
           {sectionTitle}
         </Typography>
@@ -44,23 +45,23 @@ function ApplicationType({ sectionTitle, typesApplication, backgroundGray = fals
           onChangeIndex={handleStepChange}
           enableMouseEvents
           interval={20000}
-          sx={styles.swipeable}
         >
           {typesApplication.map((app, index) => (
             <Box key={index} component="article">
               <Typography
                 variant="h3"
-                sx={clsx(styles.applicationType, {
-                  [styles.backgroundGray]: backgroundGray,
-                })}
+                sx={{
+                  ...styles.applicationType,
+                  ...(backgroundGray && styles.backgroundGray),
+                }}                
               >
                 {app.title}
               </Typography>
               <Typography
                 variant="body1"
-                sx={clsx({
-                  [styles.bodyGray]: backgroundGray,
-                })}
+                sx={{
+                  ...(backgroundGray && styles.bodyGray),
+                }}                
               >
                 {app.description}
               </Typography>

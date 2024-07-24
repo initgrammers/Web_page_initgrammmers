@@ -6,20 +6,8 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
-  },
-  [theme.breakpoints.up('sm')]: {
-    content: {
-      paddingTop: theme.spacing(8),
-      paddingBottom: theme.spacing(8),
-    },
-  },
-  [theme.breakpoints.up('lg')]: {
-    content: {
-      paddingTop: theme.spacing(8),
-      paddingBottom: theme.spacing(8),
-    },
+    paddingTop: { xs: theme.spacing(4), sm: theme.spacing(8) },
+    paddingBottom: { xs: theme.spacing(4), sm: theme.spacing(8) },
   },
 };
 

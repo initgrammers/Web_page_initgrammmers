@@ -9,7 +9,7 @@ const Slider = ({
   showTitleImage = true,
 }) => {
   const { breakpoints } = useTheme();
-  const matchXS = useMediaQuery(breakpoints.down('xs'));
+  const matchXS = useMediaQuery(breakpoints.down('sm'));
   const matchLG = useMediaQuery(breakpoints.up('lg'));
 
   let steps;

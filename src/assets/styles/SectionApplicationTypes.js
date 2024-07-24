@@ -13,7 +13,11 @@ const styles = {
     background: theme.palette.secondary.gray,
   },
   detailsContent: {
-    paddingTop: theme.spacing(6),
+    display: { lg: 'flex' },
+    flex: { lg: 5 },
+    flexDirection: { lg: 'column' },
+    justifyContent: { lg: 'center' },
+    paddingTop: { xs: theme.spacing(6), lg: 0 },
   },
   title: {
     textAlign: 'center',
@@ -25,54 +29,23 @@ const styles = {
   },
   containerImage: {
     position: 'relative',
-    overflow: 'hidden',
-    bottom: `-${theme.spacing(8)}px`,
+    display: { xs: 'flex' },
+    justifyContent: { xs: 'center' },
+    overflow: 'hidden !important',
+    bottom: `-${theme.spacing(8)}`,
     left: theme.spacing(2),
-    marginTop: `-${theme.spacing(4)}px`,
+    marginTop: `-${theme.spacing(4)}`,
+    flex: { lg: 5 },
+    alignItems: { lg: 'flex-end' },
   },
-
-  // image: ({ xs }) => ({
-  //   width: xs.width,
-  //   height: xs.height,
-  //   position: 'relative',
-  // }),
-
-  [theme.breakpoints.up('sm')]: {
-    containerImage: {
-      position: 'relative',
-      display: 'flex',
-      justifyContent: 'center',
-    },
-    image: ({ sm }) => ({
-      width: sm.width,
-      height: sm.height,
-    }),
-  },
-  [theme.breakpoints.up('md')]: {
-    image: ({ md }) => ({
-      width: md.width,
-      height: md.height,
-    }),
-  },
-  [theme.breakpoints.up('lg')]: {
-    container: {
-      display: 'flex',
-    },
-    detailsContent: {
-      flex: 5,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      paddingTop: 0,
-    },
-    containerImage: {
-      flex: 5,
-      alignItems: 'flex-end',
-    },
-    image: ({ lg }) => ({
-      width: lg.width,
-      height: lg.height,
-    }),
+  image: ({ xs, sm, md, lg }) => ({
+    width:  { xs: xs.width, sm: sm.width, md: md.width, lg: lg.width},
+    height:  { xs: xs.height, sm: sm.height, md: md.height, lg: lg.height},
+    position: 'relative',
+  }),
+  container: {
+    display: { lg: 'flex'},
+    width: { xs: 566, sm: 552, md: 544, lg: 1024 }
   },
 };
 

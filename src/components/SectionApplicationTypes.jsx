@@ -21,10 +21,11 @@ const SectionApplicationTypes = ({
     <Box
       component="section"
       position="relative"
-      sx={clsx(styles.mainSection, {
-        [styles.backgroundPrimaryLight]: backgroundPrimaryLight,
-        [styles.backgroundGray]: backgroundGray,
-      })}
+      sx={{
+        ...styles.mainSection,
+        ...(backgroundPrimaryLight && styles.backgroundPrimaryLight),
+        ...(backgroundGray && styles.backgroundGray),
+      }}      
     >
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
@@ -37,7 +38,7 @@ const SectionApplicationTypes = ({
             />
           </Box>
           <Box sx={styles.containerImage}>
-            <Box component="figure" sx={styles.image}>
+            <Box component="figure" sx={styles.image(imageSizes)}>
               <Image
                 quality={100}
                 priority

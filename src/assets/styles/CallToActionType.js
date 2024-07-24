@@ -6,8 +6,8 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
+    paddingTop: { xs: theme.spacing(4), sm: theme.spacing(5), lg: theme.spacing(8)},
+    paddingBottom: { xs: theme.spacing(4), sm: theme.spacing(5), lg: theme.spacing(8)},
   },
 
   title: {
@@ -26,46 +26,15 @@ const styles = {
     background: theme.palette.secondary.main,
     color: theme.palette.primary.contrastText,
   },
-  // imageStyle: ({ xs }) => ({
-  //   marginTop: theme.spacing(4),
-  //   width: xs.width,
-  //   height: xs.height,
-  //   position: 'relative',
-  //   '&>div>img': {
-  //     objectFit: 'contain',
-  //   },
-  // }),
-  [theme.breakpoints.up('sm')]: {
-    imageStyle: ({ sm }) => ({
-      marginTop: theme.spacing(5),
-      width: sm.width,
-      height: sm.height,
-      position: 'relative',
-    }),
-    content: {
-      paddingTop: theme.spacing(5),
-      paddingBottom: theme.spacing(5),
+  imageStyle: ({ xs, sm, md, lg }) => ({
+    marginTop: { xs: theme.spacing(4), sm: theme.spacing(5), lg: theme.spacing(8) },
+    width:  { xs: xs.width, sm: sm.width, md: md.width, lg: lg.width},
+    height:  { xs: xs.height, sm: sm.height, md: md.height, lg: lg.height},
+    position: 'relative',
+    '&>div>img': {
+      objectFit: 'contain',
     },
-  },
-  [theme.breakpoints.up('md')]: {
-    imageStyle: ({ md }) => ({
-      width: md.width,
-      height: md.height,
-      position: 'relative',
-    }),
-  },
-  [theme.breakpoints.up('lg')]: {
-    imageStyle: ({ lg }) => ({
-      marginTop: theme.spacing(8),
-      width: lg.width,
-      height: lg.height,
-      position: 'relative',
-    }),
-    content: {
-      paddingTop: theme.spacing(8),
-      paddingBottom: theme.spacing(8),
-    },
-  },
+  }),
 };
 
 styles.propTypes = {

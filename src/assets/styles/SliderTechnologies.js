@@ -7,31 +7,20 @@ const styles ={
     justifyContent: 'center',
     position: 'relative',
     zIndex: 1,
-    [theme.breakpoints.up('md')]: {
-      padding: `0 ${theme.spacing(26)}px`,
-    },
-    [theme.breakpoints.up('lg')]: {
-      padding: `0 ${theme.spacing(16)}px`,
-    },
+    padding: { xs: `0 ${theme.spacing(2)}`, sm: `0 ${theme.spacing(3)}`, md: `0 ${theme.spacing(26)}`, lg: `0 ${theme.spacing(16)}`},
   },
   backgroundGray: {
     background: '#EBEBEB',
   },
   content: {
-    padding: `${theme.spacing(4)}px 0`,
-    [theme.breakpoints.up('sm')]: {
-      padding: `${theme.spacing(5)}px 0`,
-    },
-    [theme.breakpoints.up('lg')]: {
-      padding: `${theme.spacing(8)}px 0`,
-    },
+    padding: { xs: `${theme.spacing(4)} 0`, sm: `${theme.spacing(5)} 0`, lg: `${theme.spacing(8)} 0` },
   },
   bar: {
     marginTop: theme.spacing(4),
     width: '100%',
     height: 10,
     background: `linear-gradient(176.58deg, ${theme.palette.primary.light} 0%,
-       ${theme.palette.primary.light} 23.77%, ${theme.palette.secondary.main} 62.24%, ${theme.palette.secondary.light} 87.17%)`,
+      ${theme.palette.primary.light} 23.77%, ${theme.palette.secondary.main} 62.24%, ${theme.palette.secondary.light} 87.17%)`,
   },
 };
 
