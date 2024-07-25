@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import clsx from 'clsx';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
-import styles from '../assets/styles/InformationWithImageSection';
+import  styles  from '../assets/styles/InformationWithImageSection';
 import { Box, Typography } from '@mui/material';
-import { primary } from '#app/shared/config/theme/colors';
 
 const InformationWithImageSection = ({
   title,
@@ -24,36 +22,45 @@ const InformationWithImageSection = ({
   descriptionPrimaryLight = false,
   descriptionBlack = false,
 }) => {
-  const componentStyles = styles(
-    { imageSizes, isImageRight },
-    { backgroundPrimaryLight, backgroundPrimaryFade, backgroundSecondary, backgroundSecondaryFade, titlePrimaryMain, titleBlack, descriptionPrimaryLight, descriptionBlack } // Pass other props to styles function
-  );
   return (
     <Box
       component="section"
       position="relative"
-      sx={componentStyles.container}
+      sx={{
+        ...(backgroundPrimaryLight && styles.backgroundPrimaryLight),
+        ...(backgroundPrimaryFade && styles.backgroundPrimaryFade),
+        ...(backgroundSecondary && styles.backgroundSecondaryMain),
+        ...(backgroundSecondaryFade && styles.backgroundSecondaryFade),
+      }}      
     >
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
-        <Box sx={componentStyles.container} >
-          <Box component="article" sx={componentStyles.detailsContent} >
+        <Box sx={styles.container(isImageRight)} >
+          <Box component="article" sx={styles.detailsContent(isImageRight)} >
             <Typography
               textAlign='center'
               variant="h2"
-              sx={{marginBottom: '25px',color: primary.light}}
+              sx={{
+                ...styles.title,
+                ...(titlePrimaryMain && styles.textPrimaryMain),
+                ...(titleBlack && styles.textBlack),
+              }}              
             >
               {title}
             </Typography>
             <Typography
               variant="body1"
-              sx={componentStyles.description}
+              sx={{
+                ...styles.description,
+                ...(descriptionPrimaryLight && styles.textPrimaryMain),
+                ...(descriptionBlack && styles.textBlack),
+              }}              
             >
               {description}
             </Typography>
           </Box>
-          <Box sx={componentStyles.containerImage}>
-            <Box component="figure" sx={componentStyles.image}>
+          <Box sx={styles.containerImage(isImageRight)}>
+            <Box component="figure" sx={styles.image(imageSizes)}>
               <Image
                 quality={100}
                 priority

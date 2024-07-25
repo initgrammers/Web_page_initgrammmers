@@ -21,9 +21,10 @@ const Service = ({
         <Button
           fullWidth
           onClick={handleDrawerOpen}
-          sx={clsx(styles.button, {
-            [styles.selected]: indexMenu === id,
-          })}
+          sx={{
+            ...styles.button,
+            ...(indexMenu === id && styles.selected),
+          }}          
         >
           {icon}
           <Box sx={styles.descriptionService}>

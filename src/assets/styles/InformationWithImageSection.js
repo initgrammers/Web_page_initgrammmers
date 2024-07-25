@@ -1,95 +1,81 @@
-// styles.js
-import { css } from '@mui/material/styles';
+import PropTypes from 'prop-types';
 import theme from '../../shared/config/MuiThemeProvider/theme';
-import { primary, secondary } from '#app/shared/config/theme/colors';
 
-const styles = (props) => ({
-  backgroundPrimaryLight: css`
-    background-color: ${theme.palette.primary.light};
-  `,
-  backgroundSecondaryMain: css`
-    background-color: ${theme.palette.secondary.main};
-  `,
-  backgroundSecondaryFade: css`
-    background-color: ${theme.palette.secondary.fade};
-  `,
-  backgroundPrimaryFade: css`
-    background-color: ${theme.palette.primary.fade};
-  `,
-
-  container: css`
-    display: flex;
-    gap: 3;
-    flex-direction: column;
-    padding: ${theme.spacing(4, 0)};
-    ${theme.breakpoints.up('sm')} {
-      padding: ${theme.spacing(5, 0)};
-    }
-    ${theme.breakpoints.up('lg')} {
-      flex-direction: ${props.isImageRight ? 'row' : 'row-reverse'};
-      padding: 0; 
-    }
-  `,
-  title: css`
-    color: ${theme.palette.primary.contrastText};
-    text-align: center;
-  `,
-  description: css`
-    padding: ${theme.spacing(4)}px 0 0 0;
-    text-align: justify;
-    color: ${theme.palette.text.primary};
-  `,
-  textPrimaryMain: css`
-    color: '${theme.palette.primary.light}';
-  `,
-  textBlack: css`
-    color: '${theme.palette.text.primary}';
-  `,
-
-  actionButton: {
-    color: theme.palette.primary.contrastText,
+const styles = {
+  backgroundPrimaryLight: {
+    background: theme.palette.primary.light,
+  },
+  backgroundSecondaryMain: {
     background: theme.palette.secondary.main,
   },
+  backgroundSecondaryFade: {
+    background: theme.palette.secondary.fade,
+  },
+  backgroundPrimaryFade: {
+    background: theme.palette.primary.fade,
+  },
 
-  containerImage: css`
-    display: flex;
-    justify-content: center;
-    padding: ${props.isImageRight ? theme.spacing(4, 0, 0, 0) : theme.spacing(0, 0, 5, 0)};
-    ${theme.breakpoints.up('sm')} {
-      padding: ${props.isImageRight ? theme.spacing(5, 0, 0, 0) : theme.spacing(0, 0, 5, 0)};
-    }
-    ${theme.breakpoints.up('lg')} {
-      flex: 5;
-      padding: ${theme.spacing(8, 0)};
-    }
-  `,
-  image: css`
-    width: ${props.imageSizes.xs.width}px;
-    height: ${props.imageSizes.xs.height}px;
-    position: relative;
+  container: ( isImageRight ) => ({
+    display: 'flex',
+    padding: { xs: `${theme.spacing(4, 0)}`, sm: `${theme.spacing(5)} 0`, lg: 0},
+    flexDirection: { xs: `${isImageRight ? 'column' : 'column-reverse'}`, lg: `${isImageRight ? 'row' : 'row-reverse'}` },
+  }),
+  image: ({ xs, sm, md, lg }) => ({
+    width:  { xs: xs.width, sm: sm.width, md: md.width, lg: lg.width},
+    height:  { xs: xs.height, sm: sm.height, md: md.height, lg: lg.height},
+    position: 'relative'
+  }),
+  title: {
+    color: theme.palette.primary.contrastText,
+    textAlign: 'center',
+  },
+  textPrimaryMain: {
+    color: theme.palette.primary.light,
+  },
+  textBlack: {
+    color: theme.palette.text.primary,
+  },
+  description: {
+    padding: `${theme.spacing(4)} 0 0 0`,
+    textAlign: 'justify',
+    color: theme.palette.primary.contrastText,
+  },
 
-    ${theme.breakpoints.up('sm')} {
-      width: ${props.imageSizes.sm.width}px;
-      height: ${props.imageSizes.sm.height}px;
-    }
-    ${theme.breakpoints.up('md')} {
-      width: ${props.imageSizes.md.width}px;
-      height: ${props.imageSizes.md.height}px;
-    }
-    ${theme.breakpoints.up('lg')} {
-      width: ${props.imageSizes.lg.width}px;
-      height: ${props.imageSizes.lg.height}px;
-    }
-  `,
-  detailsContent: css`
-    ${theme.breakpoints.up('lg')} {
-      flex: 5;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 ${theme.spacing(2)}px 0 ${props.isImageRight ? 0 : theme.spacing(2)}px;
-    }
-  `,
-});
+  containerImage: ( isImageRight ) => ({
+    display: 'flex',
+    justifyContent: 'center',
+    flex: { lg: 5 },
+    padding: {
+      xs: `${
+        isImageRight
+          ? `${theme.spacing(4)} 0 0 0`
+          : `0 0 ${theme.spacing(5)} 0`
+        }`,
+      sm: `${
+        isImageRight
+          ? `${theme.spacing(5)} 0 0 0`
+          : `0 0 ${theme.spacing(5)} 0`
+        }`,
+      lg: `${theme.spacing(8)} 0 !important`,
+    },
+  }),
+  detailsContent: ( isImageRight ) => ({
+    flex: { lg: 5 },
+    display: { lg: 'flex' },
+    flexDirection: { lg: 'column' },
+    justifyContent: { lg: 'center' },
+    paddingTop: { lg: 0 },
+    padding: { lg: `${
+      !isImageRight
+        ? `0 0 0 ${theme.spacing(2)}`
+        : `0 ${theme.spacing(2)} 0 0`
+    }`},
+    paddingRight: { lg: theme.spacing(2) },
+  }),
+}
+
+styles.propTypes = {
+  theme: PropTypes.shape(),
+};
 
 export default styles;
