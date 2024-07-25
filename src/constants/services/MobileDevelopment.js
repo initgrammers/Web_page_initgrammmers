@@ -23,7 +23,7 @@ export const importanceApplications = {
     'https://res.cloudinary.com/initgrammers/image/upload/v1606840714/servicios/desarrollo-movil/apple-store.png',
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1606842502/servicios/desarrollo-movil/figures/bloque2.png',
-  heightImage: 822,
+  heightImage: 870,
 };
 
 const MobileTechnologies = [

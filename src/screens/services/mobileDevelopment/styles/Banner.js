@@ -5,9 +5,14 @@ const styles = {
   mainSection: {
     background: theme.palette.primary.contrastText,
     marginBottom: theme.spacing(8),
+    position: { lg: 'relative' },
   },
   detailsContent: {
-    paddingTop: theme.spacing(8),
+    flex: { lg: 5 },
+    display: { lg: 'flex' },
+    flexDirection: { lg: 'column' },
+    justifyContent: { lg: 'center' },
+    paddingTop: { xs: theme.spacing(8), sm: theme.spacing(12), lg: 0 },
   },
   title: {
     color: theme.palette.primary.light,
@@ -16,64 +21,32 @@ const styles = {
     },
   },
   description: {
-    padding: `${theme.spacing(4)}px 0`,
+    padding: `${theme.spacing(4)} 0`,
   },
   containerImage: {
     display: 'flex',
     justifyContent: 'center',
+    flex: { lg: 5 },
   },
   image: {
-    width: 288,
-    height: 381,
+    width:  { xs: 288, sm: 414, lg: 504},
+    height:  { xs: 381, sm: 557, lg: 679},
     position: 'relative',
-    bottom: `-${theme.spacing(8)}px`,
+    bottom: `-${theme.spacing(8)}`,
+    marginTop: { lg: `-${theme.spacing(2)}` },
   },
-
-  [theme.breakpoints.up('sm')]: {
-    detailsContent: {
-      paddingTop: theme.spacing(12),
-    },
-    image: {
-      width: 414,
-      height: 557,
-    },
-  },
-  [theme.breakpoints.up('md')]: {
-    container: {
-      padding: `0 ${theme.spacing(23)}px`,
-    },
-  },
-  [theme.breakpoints.up('lg')]: {
-    mainSection: {
-      position: 'relative',
-    },
-    container: {
-      display: 'flex',
-      padding: `0 ${theme.spacing(13)}px`,
-      position: 'relative',
-      zIndex: 1,
-    },
-    detailsContent: {
-      flex: 5,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      paddingTop: 0,
-    },
-    containerImage: {
-      flex: 5,
-    },
-    image: {
-      width: 504,
-      height: 679,
-      marginTop: `-${theme.spacing(2)}px`,
-    },
+  container: {
+    display: { lg: 'flex' },
+    position: { lg: 'relative' },
+    zIndex: { lg: 1 },
+    padding: { md: `0 ${theme.spacing(23)}`, lg: `0 ${theme.spacing(13)}`},
   },
   containerBackgroundImage: {
     width: '100%',
     height: 791,
     position: 'absolute',
-    bottom: `-${theme.spacing(8)}px`,
+    bottom: `-${theme.spacing(8)}`,
+    display: { xs: 'none', lg: 'block' },
   },
 };
 

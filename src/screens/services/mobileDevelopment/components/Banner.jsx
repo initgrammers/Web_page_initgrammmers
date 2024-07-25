@@ -3,21 +3,19 @@ import ContactUsButton from '#Components/ContacUsButton';
 import styles from '../styles/Banner';
 import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 import { bannerMobileDevelopment } from '#constants/services/MobileDevelopment';
-import { Box, Container, Hidden, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 
 const Banner = () => {
   return (
     <Box component="section" sx={styles.mainSection}>
-      <Hidden mdDown>
-        <Box sx={styles.containerBackgroundImage}>
-          <Image
-            quality={100}
-            src={bannerMobileDevelopment.backgroundImage}
-            fill
-            alt="Initgrammer"
-          />
-        </Box>
-      </Hidden>
+      <Box sx={styles.containerBackgroundImage}>
+        <Image
+          quality={100}
+          src={bannerMobileDevelopment.backgroundImage}
+          fill
+          alt="Initgrammer"
+        />
+      </Box>
       <Container fixed sx={styles.container}>
         <Box component="article" sx={styles.detailsContent}>
           <Typography variant="h1" sx={styles.title}>
