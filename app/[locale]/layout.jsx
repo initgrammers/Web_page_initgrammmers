@@ -1,29 +1,30 @@
-'use client';
+"use client"
 import { CacheProvider } from '@emotion/react';
 import { MuiThemeProvider } from '#app/shared/config/MuiThemeProvider';
-import NextNProgress from 'next-nprogress';
 import PropTypes from 'prop-types';
 import './globals.css';
-import { useEffect } from 'react';
-import { appWithTranslation } from 'next-i18next'
 import createEmotionCache from '#app/shared/config/createEmotionCache';
 import { GA_TRACKING_ID } from '#app/lib/gtag';
 import { FB_PIXEL_ID } from '#app/lib/facebookPixel';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import FacebookPixel from '#Components/FacebookPixel';
+import i18nConfig from 'i18nConfig';
+import { dir } from 'i18next';
+import initTranslations from 'app/i18n';
+import TranslationsProvider from '#Components/TranslationsProvider';
 
 const clientSideEmotionCache = createEmotionCache();
+const i18nNamespaces = ['common', 'common'];
 
-export default function RootLayout({ children }) {
-  useEffect(() => {
-    const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles) {
-      jssStyles.parentElement.removeChild(jssStyles);
-    }
-  }, []);
+
+export default function RootLayout({ children, params:{locale} }) {
+ 
+  // const messages = await getMessages();
+  const { t, resources } = initTranslations(locale, i18nNamespaces);
+
 
   return (
-    <html lang="es">
+    <html lang={locale} dir={dir(locale)}>
       <head>
         <meta
           name="viewport"
@@ -119,13 +120,18 @@ export default function RootLayout({ children }) {
         </noscript>
       </head>
       <body>
-        {/* <NextNProgress color={primary.main} height={6} /> */}
         <FacebookPixel>
+        <TranslationsProvider
+          resources={resources}
+          locale={locale}
+          namespaces={i18nNamespaces}
+        >
           <MuiThemeProvider>
             <CacheProvider value={clientSideEmotionCache}>
               {children}
             </CacheProvider>
           </MuiThemeProvider>
+        </TranslationsProvider>
         </FacebookPixel>
         <GoogleAnalytics gaId={GA_TRACKING_ID}/>
       </body>

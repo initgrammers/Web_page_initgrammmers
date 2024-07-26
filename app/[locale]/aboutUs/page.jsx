@@ -1,10 +1,12 @@
-import Index from '#screens/aboutUs/index'
-import React from 'react'
-import AboutUsSeo from '#app/constants/seo/AboutUs'
+import Index from '#screens/aboutUs/index';
+import React from 'react';
+import AboutUsSeo from '#app/constants/seo/AboutUs';
+import TranslationsProvider from '#Components/TranslationsProvider';
+import initTranslations from 'app/i18n';
 
 export function generateViewport() {
   return {
-    viewport: 'width=device-width, initial-scale=1, viewport-fit=cover'
+    viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
   };
 }
 export function metadata() {
@@ -29,7 +31,7 @@ export function metadata() {
     },
 
     twitter: {
-      card: 'summary_large_image', 
+      card: 'summary_large_image',
       title: AboutUsSeo.title,
       description: AboutUsSeo.description,
       images: [AboutUsSeo.image],
@@ -37,7 +39,7 @@ export function metadata() {
 
     'google-site-verification': 'y1PcP4kGPOQqbyawDjt73ede4lda4WJP35jRYcnbbcE',
     'facebook-domain-verification': 'f6e1m61awoty4uqq75apqhiupih6vb',
-    
+
     alternates: {
       canonical: AboutUsSeo.urlAltern,
       languages: {
@@ -52,7 +54,20 @@ export function metadata() {
   };
 }
 
-export default function Page() {
-  return <Index />
-}
+// const i18nNamespaces = [ 'common'];
 
+export default async function Page({ params: locale }) {
+  // const { t, resources } = await initTranslations(locale, i18nNamespaces);
+
+  return (
+    <>
+      {/* <TranslationsProvider
+        resources={resources}
+        locale={locale}
+        namespaces={i18nNamespaces}
+      > */}
+        <Index />
+      {/* </TranslationsProvider> */}
+    </>
+  );
+}

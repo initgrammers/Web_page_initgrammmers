@@ -1,20 +1,20 @@
 // components/LanguageSelector.js
-import { useRouter } from 'next/router';
-import { Button, makeStyles, Popover, Typography } from '@material-ui/core';
 import styles from './Menu/styles/MenuDesktop';
-import { ExpandLess, ExpandMore } from '@material-ui/icons';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-
-const useStyles = makeStyles(styles);
+import { Box, Button, Popover, Typography } from '@mui/material';
+import { usePathname, useRouter } from 'next/navigation';
+import i18nConfig from 'i18nConfig';
 
 const LanguageSelector = () => {
   const router = useRouter();
-  const classes = useStyles();
   const [showLanguages, setShowLanguages] = useState(null);
-  const [currentLanguage, setCurrentLanguage] = useState('es');
   const { i18n } = useTranslation();
   const open = Boolean(showLanguages);
+  const currentLocale = i18n.language;
+  const currentPathname = usePathname();
 
   const handleClick = (event) => {
     setShowLanguages(event.currentTarget);
@@ -24,23 +24,36 @@ const LanguageSelector = () => {
     setShowLanguages(null);
   };
 
-  const changeLanguage = (lang) => {
-    router.push(router.pathname, router.asPath, { locale: lang });
+  const changeLanguage = (newLocale) => {
+    const days = 30;
+    const date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    const expires = '; expires=' + date.toUTCString();
+    document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires}:path/`;
+
+    if(
+      currentLocale === i18nConfig.defaultLocale && !i18nConfig.prefixDefault
+    ) {
+      router.push('/'+newLocale + currentPathname);
+    }else {
+      router.push(
+        currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
+      );
+    }
+
+    router.refresh();
   };
 
-  useEffect(() => {
-    setCurrentLanguage(i18n.language);
-  }, []);
 
   return (
-    <div>
+    <Box display='flex'>
       <Button
         onClick={handleClick}
         color="inherit"
-        endIcon={showLanguages ? <ExpandLess /> : <ExpandMore />}
+        endIcon={showLanguages ? <ExpandLessIcon /> : <ExpandMoreIcon />}
       >
-        <Typography className={classes.services} variant="body2">
-          {currentLanguage === 'es' ? 'Español' : 'English'}
+        <Typography sx={styles.services} variant="body2">
+          {currentLocale === 'es' ? 'Español' : 'English'}
         </Typography>
       </Button>
       <Popover
@@ -57,23 +70,23 @@ const LanguageSelector = () => {
           horizontal: 'center',
         }}
       >
-        {currentLanguage === 'es' ? (
+        {currentLocale === 'es' ? (
           <Button
             onClick={() => changeLanguage('en')}
-            className={classes.services}
+            sx={styles.services}
           >
             English
           </Button>
         ) : (
           <Button
             onClick={() => changeLanguage('es')}
-            className={classes.services}
+            sx={styles.services}
           >
             Español
           </Button>
         )}
       </Popover>
-    </div>
+    </Box>
   );
 };
 

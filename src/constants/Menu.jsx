@@ -7,7 +7,7 @@ import DeviceHubOutlinedIcon from '@mui/icons-material/DeviceHubOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import styles from '../components/Menu/styles/Options';
 import routes from '#app/routes/';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
 
 const useMenu = () => {
   const { t } = useTranslation();
@@ -15,14 +15,14 @@ const useMenu = () => {
     {
       id: 'WebDevelop',
       title: t('webDevelopment'),
-      subtitle: 'Android, iOs, híbridas',
+      subtitle: t('subWebDevelopment'),
       href: routes.services.webDevelopment,
       icon: <DevicesIcon sx={styles.icon}/>,
     },
     {
       id: 'MobileDevelopment',
       title: t('mobileDevelopment'),
-      subtitle: 'Android, iOS, híbridas',
+      subtitle:  t('subMobileDevelopment'),
       href: routes.services.mobileDevelopment,
       icon: <MobileFriendlyIcon sx={styles.icon}/>,
     },
@@ -30,7 +30,7 @@ const useMenu = () => {
     {
       id: 'UXUIDesign',
       title: t('ux/uiDesign'),
-      subtitle: 'Venda a través de internet',
+      subtitle: t('subUx/uiDesign'),
       href: routes.services.uxUiDesign,
       icon: <WidgetsOutlinedIcon sx={styles.icon}/>,
     },
@@ -44,7 +44,7 @@ const useMenu = () => {
     {
       id: '5',
       title: t('training'),
-      subtitle: 'Aprende con nosotros',
+      subtitle: t('subTraining'),
       href: routes.services.trainings,
       icon: <CastForEducationOutlinedIcon sx={styles.icon}/>,
     },
@@ -55,13 +55,13 @@ const useMenu = () => {
     //   href: routes.services.marketingDigital,
     //   icon: <DeviceHub />,
     // },
-    {
-      id: 'SEO',
-      title: 'SEO',
-      subtitle: 'Posicionamiento en buscadores',
-      href: routes.services.seo,
-      icon: <SearchOutlinedIcon sx={styles.icon}/>,
-    },
+    // {
+    //   id: 'SEO',
+    //   title: 'SEO',
+    //   subtitle: 'Posicionamiento en buscadores',
+    //   href: routes.services.seo,
+    //   icon: <SearchOutlinedIcon sx={styles.icon}/>,
+    // },
   ];
   
   const aboutUs = {

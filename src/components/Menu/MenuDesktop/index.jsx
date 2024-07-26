@@ -11,9 +11,8 @@ import Options from './Options';
 import OutsideAlerter from './Outsider';
 import useMenu from '#constants/Menu';
 import LanguageSelector from '#Components/LanguageSelector';
-import { useTranslation } from 'next-i18next';
 import { Box, Button, Fade, Typography } from '@mui/material';
-
+import { useTranslation } from 'react-i18next';
 
 const MenuDesktop = ({
   showServices = false,
@@ -22,7 +21,7 @@ const MenuDesktop = ({
   handleClose,
 }) => {
   const {menuInitgrammers} = useMenu();
-  const { t } = useTranslation();
+  const {t} = useTranslation();  
   return (
     <>
       <Box sx={styles.menuApp}>
@@ -40,7 +39,7 @@ const MenuDesktop = ({
                   endIcon={showServices ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                 >
                   <Typography sx={styles.services} variant="body2">
-                    Servicios
+                    {t('services')}
                   </Typography>
                 </Button>
               ) : (
@@ -53,7 +52,7 @@ const MenuDesktop = ({
                 </CustomLink>
               ))}
           </Box>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 'auto'}}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 'auto', gap: 2}}>
             <LanguageSelector />
             <ContactUsButton href={contactsLinks.general} />
           </Box>

@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import styles from '../styles/Options';
 import useMenu from '#constants/Menu';
 import { Box, Button, Grid, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const Service = ({
   title,
@@ -51,11 +52,12 @@ Service.propTypes = {
 };
 
 const Options = ({ indexMenu, handleDrawerOpen }) => {
+  const {t} = useTranslation(); 
   const {data} = useMenu();
   return (
     <Box sx={styles.root}>
       <Typography color="primary" sx={styles.title}>
-        Servicios que ofrecemos
+        {t('servicesOffer')}
       </Typography>
       <Grid container spacing={4} >
         {data.map((item, index) => (
