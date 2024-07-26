@@ -5,8 +5,10 @@ import { contactsLinks } from '#app/constants/contacts';
 import CustomContainer from '#Components/CustomContainer';
 import Calculator from '#Components/Calculator';
 import { Box, Grid, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const ContactUs = () => {
+  const {t} = useTranslation();
   return (
     <Box component="section" position="relative">
       <CustomContainer>
@@ -16,18 +18,17 @@ const ContactUs = () => {
               sx={styles.gridContact}
             >
               <Typography variant="h3" component="h2">
-                Sé parte de la revolución digital
+                {t('digitalRevolutionTitle')}
               </Typography>
               <Typography
                 variant="h6"
                 component="p"
                 sx={styles.descriptionContact}
               >
-                Que tu empresa alcance la transformación digital que necesita,
-                Contáctanos, estamos para ayudarte
+                {t('digitalRevolutionDescription')}
               </Typography>
               <ContactUsButton
-                label="Escríbenos"
+                label={t('digitalRevolutionButton')}
                 href={contactsLinks.writeUs}
               />
               {/* <Typography
@@ -45,22 +46,22 @@ const ContactUs = () => {
             <Box sx={styles.borderContactUs}>
               <div sx={styles.contact}>
                 <LinkContactUs
-                  question="¿Necesitas ayuda para arrancar un proyecto?"
-                  callToAction="Agendar una asesoría"
+                  question={t('contactUsQuestion1')}
+                  callToAction={t('contactUsAction1')}
                   href={contactsLinks.startProject}
                 />
               </div>
               <div sx={styles.contact}>
                 <LinkContactUs
-                  question="¿Quieres abrir una tienda virtual?"
-                  callToAction="Contactar con nuestro equipo"
+                  question={t('contactUsQuestion2')}
+                  callToAction={t('contactUsAction2')}
                   href={contactsLinks.teamMessage}
                 />
               </div>
               <div sx={styles.contact}>
                 <LinkContactUs
-                  question="Interesado en contratar bajo partnership?"
-                  callToAction="Escríbenos"
+                  question={t('contactUsQuestion3')}
+                  callToAction={t('contactUsAction3')}
                   href={contactsLinks.writeUs}
                 />
               </div>

@@ -13,20 +13,23 @@ import ContactUs from './ContactUs';
 import { contactsLinks } from '#app/constants/contacts';
 import routes from '#app/routes/';
 import { Box, Container, Grid, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const CustomFooter = () => {
 
+  const {t} = useTranslation();
+
   const services = [
     {
-      label: 'Desarrollo de aplicaciones web',
+      label: t('webDevelopment'),
       href: routes.services.webDevelopment,
     },
     {
-      label: 'Desarrollo de aplicaciones móviles',
+      label: t('mobileDevelopment'),
       href: routes.services.mobileDevelopment,
     },
     {
-      label: 'Diseño UI / UX ',
+      label: t('ux/uiDesign'),
       href: routes.services.uxUiDesign,
     },
     // {
@@ -34,21 +37,21 @@ const CustomFooter = () => {
     //   href: routes.services.shopOnline,
     // },
     {
-      label: 'Capacitaciones',
+      label: t('training'),
       href: routes.services.trainings,
     },
     // {
     //   label: 'Marketing Digital',
     //   href: routes.services.marketingDigital,
     // },
-    {
-      label: 'SEO',
-      href: routes.services.seo,
-    },
+    // {
+    //   label: 'SEO',
+    //   href: routes.services.seo,
+    // },
   ];
 
   const portfolio = [
-    { label: 'Portafolio', href: routes.portfolio },
+    { label: t('portfolio'), href: routes.portfolio },
     // { label: '¿Quiénes somos?', href: routes.aboutUs },
     // { label: 'Blog', href: routes.blog },
     // { label: 'Contacto', href: routes.contact },
@@ -67,9 +70,7 @@ const CustomFooter = () => {
           <Grid container spacing={3} sx={styles.gridContainer}>
             <Grid item md={6} sm={12}>
               <Typography sx={styles.description}>
-                InitGrammers es una empresa dedicada a crear soluciones y
-                capacitaciones tecnológicas en software, marketing y diseño
-                digital
+                {t('footerDetails')}
               </Typography>
               <Box my={4}>
                 <LinkWithIcon
@@ -99,7 +100,7 @@ const CustomFooter = () => {
               </Box>
             </Grid>
             <Grid item md={3} sm={12} display='flex' flexDirection='column' gap={2}>
-              <Typography variant='inherit' sx={styles.section}>Servicios</Typography>
+              <Typography variant='inherit' sx={styles.section}>{t('services')}</Typography>
               {services.map((item, key) => (
                 <CustomLink key={key} href={item.href}>
                   <Typography sx={styles.text}>{item.label}</Typography>

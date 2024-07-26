@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 const ContactUsButton = ({
   color = 'primary',
-  label = 'Contáctanos',
+  label = '',
   href = '',
   variant = 'contained',
   children = undefined,
@@ -15,7 +15,7 @@ const ContactUsButton = ({
   return (
     <Link target="_blank" rel="noopener" href={href} sx={styles.link(mr)}>
       <Button variant={variant} color={color}>
-        {t('contactUs') || children || label}
+        {label || t('contactUs') || children}
       </Button>
     </Link>
   );

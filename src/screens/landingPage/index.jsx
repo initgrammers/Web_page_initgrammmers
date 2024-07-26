@@ -5,7 +5,7 @@ import LandingPage from '#constants/seo/LandingPage';
 import Organization from '#Components/StructuredData/Organization';
 import WebSite from '#Components/StructuredData/WebSite';
 import Article from '#Components/StructuredData/Article';
-import { onlineSolution } from '#constants/LandingPage';
+import useLandingPage from '#constants/LandingPage';
 
 const OnlineSolution = dynamic(() => import('./sections/OnlineSolution'));
 const Services = dynamic(() => import('./sections/Services'));
@@ -17,7 +17,9 @@ const CarryOutThatProject = dynamic(() =>
 
 const Questions = dynamic(() => import('./sections/Questions'));
 
-const index = () => (
+const index = () => {
+  const {onlineSolution} = useLandingPage();
+  return(
   <>
     <Banner />
     <OnlineSolution />
@@ -36,6 +38,6 @@ const index = () => (
       mainArticle={onlineSolution.description}
     />
   </>
-);
+)};
 
 export default index;
