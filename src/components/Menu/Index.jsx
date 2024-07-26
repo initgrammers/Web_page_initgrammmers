@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import dynamic from 'next/dynamic';
 import styles from '../../assets/styles/Menu';
@@ -10,9 +10,15 @@ const MobileMenu = dynamic(() => import('./MenuMobile'));
 const MenuDesktop = dynamic(() => import('./MenuDesktop'));
 const CustomDrawer = dynamic(() => import('./MenuMobile/CustomDrawer'));
 
-const CustomMenu = ({ indexMenu = '' }) => {
-
+const CustomMenu = () => {
   const [showNav, setShowNav] = useState(false);
+  const [currentPath, setCurrentPath] = useState('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setCurrentPath(window.location.pathname.replace(/^\/services\//, ''));
+    }
+  }, [showNav]);
 
   const handleDrawerOpen = () => {
     setShowNav(!showNav);
@@ -35,7 +41,7 @@ const CustomMenu = ({ indexMenu = '' }) => {
               showDrawer={showNav}
               handleDrawerOpen={handleDrawerOpen}
               handleClose={handleClose}
-              indexMenu={indexMenu}
+              indexMenu={currentPath}
             />
           </Box>
           <Box sx={{display: {xs: 'none', md: 'flex'},  width: '100%'}}>
@@ -43,7 +49,7 @@ const CustomMenu = ({ indexMenu = '' }) => {
               showServices={showNav}
               handleDrawerOpen={handleDrawerOpen}
               handleClose={handleClose}
-              indexMenu={indexMenu}
+              indexMenu={currentPath}
             />
           </Box>
         </Toolbar>
@@ -52,7 +58,7 @@ const CustomMenu = ({ indexMenu = '' }) => {
             <CustomDrawer
               open={showNav}
               onClose={handleClose}
-              indexMenu={indexMenu}
+              indexMenu={currentPath}
             />
           </OutsideAlerter>
         </Box>

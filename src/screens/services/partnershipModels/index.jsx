@@ -5,7 +5,7 @@ import SEOsearch from '#constants/seo/SEO';
 import Organization from '#Components/StructuredData/Organization';
 import WebSite from '#Components/StructuredData/WebSite';
 import Article from '#Components/StructuredData/Article';
-import { importanceSEO } from '#constants/services/seo';
+import { importanceSEO } from '#constants/services/partnershipModels';
 
 const ImportanceSEO = dynamic(() => import('./sections/ImportanceSEO'));
 const BenefitsTypes = dynamic(() => import('./sections/BenefitsTypes'));

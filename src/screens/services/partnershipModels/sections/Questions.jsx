@@ -1,5 +1,5 @@
 import FAQ from '#Components/FAQ';
-import { FAQSEO } from '#constants/services/seo';
+import { FAQSEO } from '#constants/services/partnershipModels';
 
 const Questions = () => (
   <FAQ

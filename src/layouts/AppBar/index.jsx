@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import Menu from '../../components/Menu/Index';
 
-const Navigation = ({ index = 'home' }) => (
+const Navigation = () => (
   <>
-    <Menu indexMenu={index} />
+    <Menu />
   </>
 );
 Navigation.propTypes = {

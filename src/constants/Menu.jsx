@@ -10,14 +10,14 @@ import routes from '#app/routes/';
 
 const data = [
   {
-    id: 'WebDevelop',
+    id: 'webDevelopment',
     title: 'Desarrollo Web',
     subtitle: 'Android, iOs, híbridas',
     href: routes.services.webDevelopment,
     icon: <DevicesIcon sx={styles.icon}/>,
   },
   {
-    id: 'MobileDevelopment',
+    id: 'mobileDevelopment',
     title: 'Desarrollo de aplicaciones móviles',
     subtitle: 'Android, iOS, híbridas',
     href: routes.services.mobileDevelopment,
@@ -25,7 +25,7 @@ const data = [
   },
 
   {
-    id: 'UXUIDesign',
+    id: 'uxuiDesign',
     title: 'Diseño UX UI',
     subtitle: 'Venda a través de internet',
     href: routes.services.uxUiDesign,
@@ -39,7 +39,7 @@ const data = [
   //   icon: <ShoppingCartOutlinedIcon sx={styles.icon}/>,
   // },
   {
-    id: '5',
+    id: 'trainings',
     title: 'Capacitaciones',
     subtitle: 'Aprende con nosotros',
     href: routes.services.trainings,
@@ -53,10 +53,10 @@ const data = [
   //   icon: <DeviceHubOutlinedIcon sx={styles.icon}/>,
   // },
   {
-    id: 'SEO',
-    title: 'SEO',
-    subtitle: 'Posicionamiento en buscadores',
-    href: routes.services.seo,
+    id: 'partnershipModels',
+    title: 'Modelos de Partnership',
+    subtitle: 'Soluciones Personalizadas para tu Éxito',
+    href: routes.services.partnershipModels,
     icon: <SearchOutlinedIcon sx={styles.icon}/>,
   },
 ];

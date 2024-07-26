@@ -1,5 +1,5 @@
 import SEOBanner from '#Components/Banner';
-import { bannerSEO } from '#constants/services/seo';
+import { bannerSEO } from '#constants/services/partnershipModels';
 import { contactsLinks } from '#app/constants/contacts';
 import { useTheme } from '@mui/material';
 

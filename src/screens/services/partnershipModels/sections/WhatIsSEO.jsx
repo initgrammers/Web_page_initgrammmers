@@ -1,5 +1,5 @@
 import InformationWithImageSection from '#Components/InformationWithImageSection';
-import { whatIsSEO } from '#constants/services/seo';
+import { whatIsSEO } from '#constants/services/partnershipModels';
 
 const InnovativeDesign = () => (
   <InformationWithImageSection

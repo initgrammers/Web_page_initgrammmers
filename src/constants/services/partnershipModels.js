@@ -1,9 +1,9 @@
 export const bannerSEO = {
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque1.png',
-  heightImage: 664,
-  title: 'SEO / Posicionamiento en motores de búsqueda',
-  description: 'Posiciona tu página web en los primeros resultados de Google',
+  heightImage: 696,
+  title: 'Modelos de Partnership',
+  description: 'Servicios de Desarrollo de Software: Tecnología que Impulsa tu Crecimiento',
   image:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/posicionamiento-motores-busqueda.png',
   buttonColor: 'primary',
@@ -11,9 +11,9 @@ export const bannerSEO = {
 
 const typesApplication = [
   {
-    title: 'Aumenta la visibilidad de una marca',
+    title: 'Proyecto a Precio Fijo: Transparencia y Control',
     description:
-      'Un buen posicionamiento de tu sitio web en los motores de búsqueda, como Google, Yahoo, Bing, entre otros, genera confianza ante los usuarios, ya que los primeros resultados de las búsquedas contienen la información esperada, ayudando a que tu marca se posicione en el mercado.',
+      'Sin cargos ocultos ni sorpresas. Con nuestro modelo de proyecto a precio fijo, obtendrás claridad y seguridad desde el primer momento. Una vez que se ha firmado un contrato con un precio definido, puedes estar seguro de que los costos no cambiarán. Este modelo es ideal para proyectos con un alcance y requisitos claramente definidos, asegurando que obtengas exactamente lo que necesitas sin desviaciones presupuestarias.',
   },
   {
     title: ' Aplicación web dinámica',
@@ -42,7 +42,7 @@ export const seoBenefitsTypes = {
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque3.png',
   heightImage: 598,
   backgroundGray: true,
-  title: 'Beneficios de implementar SEO',
+  title: 'Conoce nuestros modelos de partnership',
   typesApplication,
   image:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/beneficios-seo.png',
@@ -118,9 +118,9 @@ export const importanceSEO = {
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque2.png',
   heightImage: 516,
-  title: '¿Importancia del SEO para el crecimiento de mi empresa / negocio?',
+  title: 'Modelos de Partnership: Soluciones Personalizadas para tu Éxito',
   description:
-    'El SEO o también conocido como posicionamiento en motores de búsqueda ayuda a que un sitio o página web se encuentre en los primeros resultados de Google, por ende hay gran probabilidad de que los usuarios den click en el enlace de tu página web, lo que implica que el tráfico a tu página web va a incrementar, y tengas más oportunidades de negocio.',
+    'Una asociación perfecta que entrega los resultados esperados de acuerdo a tus necesidades. Tenemos todo lo que necesitas para impulsar tu negocio al siguiente nivel. Nuestro compromiso es brindarte soluciones tecnológicas innovadoras y eficientes, adaptadas a las exigencias del mercado actual.',
   titlePrimaryMain: true,
   descriptionBlack: true,
   image:
@@ -150,9 +150,9 @@ export const whatIsSEO = {
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque4.png',
   heightImage: 632,
-  title: '¿Qué es SEO (Search Engine Optimization)?',
+  title: 'Extensión de tu Equipo: Potencia tu Desarrollo',
   description:
-    'SEO (Search Engine Optimization)  que significa “optimización para motores de búsqueda” son las técnicas, estrategias y acciones destinadas a mejorar el posicionamiento, visibilidad de un sitio web en los resultados de los buscadores de Google, Bing, Yahoo, etc. Lo que permite que el sitio web se encuentre entre las primeras posiciones de los resultados de los buscadores de acuerdo a una consulta específica.',
+    'No pierdas oportunidades en un mercado competitivo. Con nuestro modelo de extensión de equipo, nos unimos a tu equipo de desarrollo para ayudarte a completar tareas y alcanzar tus objetivos más rápidamente. Este enfoque flexible permite escalar tus capacidades de desarrollo sin los costos y complicaciones de contratar personal adicional. Nos adaptamos a tu cultura de trabajo y a tus procesos, asegurando una integración fluida y productiva.',
   titlePrimaryMain: true,
   descriptionBlack: true,
   image:
@@ -197,10 +197,10 @@ const imageSizesOportunitiesSEO = {
   },
 };
 export const oportunitieSEO = {
-  titlePart1: 'Posiciona tu página web, ',
-  titlePart2: 'y genera más oportunidades de negocio',
+  titlePart1: 'Alcanza tus objetivos, ',
+  titlePart2: 'y déjanos ser tu equipo de programación',
   description:
-    'Genera más tráfico a tu web, impulsa tu marca y conviertete en un referente del mercado.',
+    'Ponte en contacto con nosotros',
   image:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/oportunidades-para-negocio.png',
   backgroundImage:

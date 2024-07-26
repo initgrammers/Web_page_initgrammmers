@@ -60,7 +60,7 @@ const MenuDesktop = ({
             <Options
               visible={showServices}
               indexMenu={indexMenu}
-              handleDrawerOpen={handleDrawerOpen}
+              handleDrawerOpen={handleClose}
             />
           </OutsideAlerter>
         </Box>

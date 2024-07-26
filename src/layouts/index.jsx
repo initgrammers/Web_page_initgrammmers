@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 const Navigation = dynamic(() => import('./AppBar'));
 const CustomFooter = dynamic(() => import('./Footer'));
 
-const Layout = ({ children, navigation = {} }) => (
+const Layout = ({ children }) => (
   <>
-    <Navigation index={navigation?.index} />
+    <Navigation />
       <main>{children}</main>
     <CustomFooter />
   </>
@@ -14,7 +14,6 @@ const Layout = ({ children, navigation = {} }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  navigation: PropTypes.shape(),
 };
 
 export default Layout;

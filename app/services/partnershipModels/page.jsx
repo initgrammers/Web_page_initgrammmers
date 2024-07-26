@@ -1,5 +1,5 @@
 import React from 'react';
-import Index from '#screens/services/seo/index';
+import Index from '#screens/services/partnershipModels/index';
 import SEOsearch from '#app/constants/seo/SEO';
 
 export function generateViewport() {

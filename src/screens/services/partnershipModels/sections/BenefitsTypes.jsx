@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionApplicationTypes from '#Components/SectionApplicationTypes';
-import { seoBenefitsTypes } from '#app/constants/services/seo';
+import { seoBenefitsTypes } from '#app/constants/services/partnershipModels';
 
 const SEOBenefitsTypes = () => (
   <SectionApplicationTypes

@@ -1,6 +1,6 @@
 import React from 'react';
 import CallToActionSection from '#Components/CallToActionSection';
-import { oportunitieSEO } from '#constants/services/seo';
+import { oportunitieSEO } from '#constants/services/partnershipModels';
 import { useTheme } from '@mui/material';
 
 const IncreaseClics = () => {

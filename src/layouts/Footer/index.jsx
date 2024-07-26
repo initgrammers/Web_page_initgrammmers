@@ -42,8 +42,8 @@ const CustomFooter = () => {
     //   href: routes.services.marketingDigital,
     // },
     {
-      label: 'SEO',
-      href: routes.services.seo,
+      label: 'Modelos de Partnership',
+      href: routes.services.partnershipModels,
     },
   ];
 
