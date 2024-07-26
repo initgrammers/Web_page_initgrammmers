@@ -1,8 +1,6 @@
 import Index from '#screens/aboutUs/index';
 import React from 'react';
 import AboutUsSeo from '#app/constants/seo/AboutUs';
-import TranslationsProvider from '#Components/TranslationsProvider';
-import initTranslations from 'app/i18n';
 
 export function generateViewport() {
   return {
@@ -54,20 +52,12 @@ export function metadata() {
   };
 }
 
-// const i18nNamespaces = [ 'common'];
 
 export default async function Page({ params: locale }) {
-  // const { t, resources } = await initTranslations(locale, i18nNamespaces);
 
   return (
     <>
-      {/* <TranslationsProvider
-        resources={resources}
-        locale={locale}
-        namespaces={i18nNamespaces}
-      > */}
-        <Index />
-      {/* </TranslationsProvider> */}
+      <Index />
     </>
   );
 }
