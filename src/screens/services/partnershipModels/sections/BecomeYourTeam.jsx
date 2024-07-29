@@ -12,6 +12,7 @@ const BecomeYourTeam = () => (
     descriptionBlack={becomeYourTeam.descriptionBlack}
     imageSizes={becomeYourTeam.imageSizes}
     isImageRight={becomeYourTeam.isImageRight}
+    backgroundPrimaryFade={becomeYourTeam.backgroundPrimaryFade}
   />
 );
 

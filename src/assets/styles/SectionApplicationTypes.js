@@ -11,6 +11,7 @@ const styles = {
   },
   backgroundGray: {
     background: theme.palette.secondary.gray,
+    color: theme.palette.primary.light,
   },
   detailsContent: {
     display: { lg: 'flex' },
@@ -22,10 +23,14 @@ const styles = {
   title: {
     textAlign: 'center',
   },
+  titleGray: {
+    color: theme.palette.primary.snackBar,
+  },
   applicationType: {
     textAlign: 'center',
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(2),
+    fontSize: { xs: "1.5rem", sm: "1.6667rem", md: "1.875rem", lg: "2.0833rem" }
   },
   containerImage: {
     position: 'relative',
@@ -46,6 +51,21 @@ const styles = {
   container: {
     display: { lg: 'flex'},
     width: { xs: 566, sm: 552, md: 544, lg: 1024 }
+  },
+  detailsSingleContent: {
+    color: theme.palette.primary.contrastText,
+    width: { xs: 468, sm: 552, md: 512 },
+    padding: { lg: theme.spacing(12, 0) },
+    paddingTop: { xs: theme.spacing(6) },
+  },
+  subTitle: {
+    textAlign: 'center',
+  },
+  subTitleGray: {
+    color: theme.palette.primary.snackBar,
+  },
+  bodyGray: {
+    color: theme.palette.primary.snackBar,
   },
 };
 

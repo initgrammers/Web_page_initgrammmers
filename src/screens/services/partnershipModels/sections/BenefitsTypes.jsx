@@ -7,7 +7,8 @@ const PartnershipModelsBenefitsTypes = () => (
     backgroundImage={partnershipModelsBenefitsTypes.backgroundImage}
     heightImage={partnershipModelsBenefitsTypes.heightImage}
     sectionTitle={partnershipModelsBenefitsTypes.title}
-    typesApplication={partnershipModelsBenefitsTypes.typesApplication}
+    sectionSubTitle={partnershipModelsBenefitsTypes.subTitle}
+    sectionDescription={partnershipModelsBenefitsTypes.description}
     image={partnershipModelsBenefitsTypes.image}
     imageSizes={partnershipModelsBenefitsTypes.imageSizes}
     backgroundGray={partnershipModelsBenefitsTypes.backgroundGray}
