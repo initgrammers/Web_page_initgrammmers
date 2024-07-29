@@ -1,7 +1,7 @@
 export const bannerWebDevelopment = {
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609857474/servicios/desarrollo-web/figures/bloque1.png',
-  heightImage: 670,
+  heightImage: 696,
   titlePart1: 'Páginas Web,',
   titlePart2: ' diseño y desarrollo de aplicaciones web ',
   titlePart3: 'en Ecuador',

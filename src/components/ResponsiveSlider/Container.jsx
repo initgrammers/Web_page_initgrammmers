@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import styles from './style';
 import { Box } from '@mui/material';
@@ -16,17 +15,19 @@ const Container = ({
     <Box display="flex" justifyContent="space-between" alignItems="center">
       <Box onClick={onPrevStep}>
         <ArrowBackIosIcon
-          sx={clsx(styles.arrow, {
-            [styles.disableArrow]: disableLeft,
-          })}
+          sx={{
+            ...styles.arrow,
+            ...(disableLeft && styles.disableArrow),
+          }}          
         />
       </Box>
       <Box sx={styles.imagesContent}>{children}</Box>
       <Box onClick={onNextStep}>
         <ArrowForwardIosIcon
-          sx={clsx(styles.arrow, {
-            [styles.disableArrow]: disableRight,
-          })}
+          sx={{
+            ...styles.arrow,
+            ...(disableRight && styles.disableArrow),
+          }}          
         />
       </Box>
     </Box>

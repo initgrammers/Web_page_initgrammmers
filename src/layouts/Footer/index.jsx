@@ -44,10 +44,10 @@ const CustomFooter = () => {
     //   label: 'Marketing Digital',
     //   href: routes.services.marketingDigital,
     // },
-    // {
-    //   label: 'SEO',
-    //   href: routes.services.seo,
-    // },
+    {
+      label: 'Modelos de Partnership',
+      href: routes.services.partnershipModels,
+    },
   ];
 
   const portfolio = [

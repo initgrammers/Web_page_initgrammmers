@@ -7,7 +7,7 @@ const routes = {
     mobileDevelopment: `${servicesBaseURL}mobileDevelopment`,
     uxUiDesign: `${servicesBaseURL}uxuiDesign`,
     trainings: `${servicesBaseURL}trainings`,
-    seo: `${servicesBaseURL}seo`,
+    partnershipModels: `${servicesBaseURL}partnershipModels`,
     shopOnline: `${servicesBaseURL}tiendas-en-linea-ecuador`,
     marketingDigital: `${servicesBaseURL}marketing-diseno-digital-ecuador`,
   },

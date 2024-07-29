@@ -5,8 +5,8 @@ import { Box } from '@mui/material';
 const Image = ({ image, label, showTitleImage = true, imageIsLarge = false }) => {
   return (
     <>
-      <Box sx={styles.containerImage}>
-        <img sx={styles.image} src={image} alt={label} loading="lazy" />
+      <Box sx={styles.containerImage(imageIsLarge)}>
+        <img style={styles.image} src={image} alt={label} loading="lazy" />
         {showTitleImage && <p>{label}</p>}
       </Box>
     </>

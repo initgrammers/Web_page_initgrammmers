@@ -25,8 +25,6 @@ const SliderTechnologies = ({
       sx={{
         position: 'relative',
         ...(backgroundGray && styles.backgroundGray),
-        paddingY: {md:'64px', xs: '40px'},
-        
       }}
     >
       <BackgroundImage image={backgroundImage} height={heightImage} />
@@ -38,6 +36,8 @@ const SliderTechnologies = ({
             variant={variantTitle}
             align="center"
             black={titleBlack}
+            mb={4}
+            fontSize={{ xs: "1.5rem", sm: "1.6667rem", md: "1.875rem", lg: "2.0833rem" }}
           />
           <Slider
             showTitleImage={showTitleImage}

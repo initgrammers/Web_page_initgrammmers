@@ -5,11 +5,8 @@ const styles ={
   imagesContent: {
     display: 'flex',
     flex: 1,
-    justifyContent: 'space-evenly',
+    justifyContent: { xs: 'space-evenly', sm: 'space-between' },
     alignItems: 'center',
-    [theme.breakpoints.up('sm')]: {
-      justifyContent: 'space-between',
-    },
   },
 
   containerImage: ({ imageIsLarge }) => ({

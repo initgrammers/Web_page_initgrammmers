@@ -6,16 +6,8 @@ const styles = {
     background: theme.palette.secondary.fade,
   },
   root: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-    [theme.breakpoints.down('md')]: {
-      paddingTop: theme.spacing(5),
-      paddingBottom: theme.spacing(5),
-    },
-    [theme.breakpoints.down('xs')]: {
-      paddingTop: theme.spacing(4),
-      paddingBottom: theme.spacing(4),
-    },
+    paddingTop: { xs: theme.spacing(4), sm: theme.spacing(5), lg: theme.spacing(8) },
+    paddingBottom: { xs: theme.spacing(4), sm: theme.spacing(5), lg: theme.spacing(8) },
   },
   mainContent: {
     zIndex: 1,
@@ -24,26 +16,17 @@ const styles = {
   gridContent: {
     display: 'flex',
     alignItems: 'center',
-    [theme.breakpoints.down('md')]: {
-      order: '-1',
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingLeft: theme.spacing(15),
-    },
+    order: { xs: '-1', lg: '1' },
+    paddingLeft: { lg: theme.spacing(15) },
   },
   gridImage: {
     display: 'flex',
     justifyContent: 'center',
-    [theme.breakpoints.down('md')]: {
-      paddingTop: theme.spacing(6),
-    },
-    [theme.breakpoints.down('xs')]: {
-      paddingTop: theme.spacing(4),
-    },
+    paddingTop: { xs: theme.spacing(4), md: theme.spacing(6)},
   },
   image: {
-    width: 288,
-    height: 392,
+    width: { xs: 288, lg: 504 },
+    height: { xs: 392, lg: 694 },
     position: 'relative',
   },
   title: {
@@ -61,12 +44,6 @@ const styles = {
   },
   figureRight: {
     margin: '0 0 0 15px',
-  },
-  [theme.breakpoints.up('lg')]: {
-    image: {
-      width: 504,
-      height: 694,
-    },
   },
 };
 

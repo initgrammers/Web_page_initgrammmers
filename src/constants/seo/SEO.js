@@ -1,10 +1,10 @@
 import routes from '#app/routes';
 
-const title = 'SEO / Posicionamiento en motores de búsqueda | Initgrammers';
+const title = 'Modelos de Partnership | Initgrammers';
 
 const description =
-  'Posiciona tu página web en los primeros resultados de Google';
-const url = `https://initgrammers.com${routes.services.seo}`;
+  'Servicios de Desarrollo de Software: Tecnología que Impulsa tu Crecimiento';
+const url = `https://initgrammers.com${routes.services.partnershipModels}`;
 
 const image =
   'https://seo-web-page.web.app/assets/images/posicionamiento-motores-busqueda.jpg';

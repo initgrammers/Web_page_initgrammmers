@@ -11,7 +11,7 @@ const BackgroundImage = ({
   return (
     <>
       {height > 0 && (
-        <Box sx={{display:{xs: 'none', md: 'flex'}}}>
+        <Box sx={{ display:{xs: 'none', lg: 'flex' }}}>
           <Box sx={styles(height).containerBackgroundImage}>
             <Image quality={100} src={image} fill alt={alt} />
           </Box>

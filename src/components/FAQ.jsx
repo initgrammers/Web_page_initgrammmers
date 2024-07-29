@@ -30,6 +30,7 @@ const FAQ = ({
             mb={2}
             component="h2"
             variant="h3"
+            fontSize={{ xs: "1.25rem", sm: "1.2853rem", lg: "1.4996rem" }}
           />
           {questions.map(({ id, title, details }) => (
             <Accordion key={id} title={title} details={details} />

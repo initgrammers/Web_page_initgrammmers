@@ -6,7 +6,7 @@ export const contactsLinks = {
   uiuxPages: 'https://wa.link/3l5he6',
   shopEcommercePage: 'https://wa.link/vqos7m',
   marketingDigitalPage: 'https://wa.link/1fn4d2',
-  seoPage: 'https://wa.link/yfa9q0',
+  partnershipModelsPage: 'https://wa.link/yfa9q0',
   aboutUsPage: 'https://wa.link/yfa9q0',
   consulting: 'https://wa.link/epqpye',
   teamMessage: 'https://wa.link/uc2mmv',

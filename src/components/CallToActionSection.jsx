@@ -34,6 +34,7 @@ const CallToActionSection = ({
             variant="h1"
             component="h2"
             mb={0}
+            fontSize={{ xs: "2rem", sm: "2.5707rem", md: "2.7849rem", lg: "2.9991rem" }}
           />
           <Typography variant="body1" sx={styles.description}>
             {description}
@@ -43,12 +44,15 @@ const CallToActionSection = ({
             href={contactsLinks.general}
           />
 
-          <Box sx={styles.imageStyle}>
+          <Box sx={styles.imageStyle(imageSizes)}>
             <Image
               quality={100}
               src={image}
               fill
               alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
+              style={{
+                objectFit: 'contain',
+              }}
             />
           </Box>
         </Box>

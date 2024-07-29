@@ -16,17 +16,17 @@ const VisibilityCompany = ({
     <Box component="section" position="relative" bgcolor="secondary.light">
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
-        <Box styles={styles.container}>
-          <Box component="article" styles={styles.detailsContent}>
-            <Typography variant="h2" styles={styles.title}>
+        <Box sx={styles.container}>
+          <Box component="article" sx={styles.detailsContent}>
+            <Typography variant="h2" sx={styles.title}>
               {title}
             </Typography>
-            <Typography variant="body1" styles={styles.description}>
+            <Typography variant="body1" sx={styles.description}>
               {description}
             </Typography>
           </Box>
-          <Box styles={styles.containerImage}>
-            <Box component="figure" styles={styles.image}>
+          <Box sx={styles.containerImage}>
+            <Box component="figure" sx={styles.image}>
               <Image
                 quality={100}
                 priority

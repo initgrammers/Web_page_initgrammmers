@@ -1,5 +1,5 @@
 import Layout from '../../src/layouts';
-import SEOPage from '#screens/services/seo';
+import SEOPage from '#screens/services/partnershipModels';
 
 const Page = () => <SEOPage />;
 

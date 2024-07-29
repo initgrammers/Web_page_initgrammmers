@@ -18,6 +18,7 @@ const styles = {
     background: 'transparent',
     justifyContent: 'flex-start',
     border: 'none',
+    color: theme.palette.common.black
   },
   title: {
     marginBottom: theme.spacing(5),
@@ -53,11 +54,8 @@ const styles = {
     color: theme.palette.primary.main,
     border: 0,
     background: 'rgba(0,0,0,0.1)',
-    borderRadius: 5,
+    borderRadius: "5px",
   },
-  icon: {
-    color: theme.palette.common.black,
-  }
 };
 
 styles.propTypes = {

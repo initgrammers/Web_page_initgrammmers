@@ -1,7 +1,7 @@
 /* eslint-disable no-confusing-arrow */
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import clsx from 'clsx';
+import data from '#constants/Menu';
 import styles from '../styles/Options';
 import useMenu from '#constants/Menu';
 import { Box, Button, Grid, Typography } from '@mui/material';
@@ -22,16 +22,17 @@ const Service = ({
         <Button
           fullWidth
           onClick={handleDrawerOpen}
-          sx={clsx(styles.button, {
-            [styles.selected]: indexMenu === id,
-          })}
+          sx={{
+            ...styles.button,
+            ...(indexMenu === id && styles.selected),
+          }}          
         >
           {icon}
           <Box sx={styles.descriptionService}>
-            <Typography variant="subtitle1" color="inherit">
+            <Typography variant="subtitle1" color={(indexMenu === id ? styles.selected.color : "inherit")}>
               {title}
             </Typography>
-            <Typography variant="caption" color="inherit">
+            <Typography variant="caption" color={(indexMenu === id ? styles.selected.color : "inherit")}>
               {subtitle}
             </Typography>
           </Box>
