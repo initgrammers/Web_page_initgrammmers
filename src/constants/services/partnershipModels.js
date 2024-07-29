@@ -8,34 +8,6 @@ export const bannerPartnershipModels = {
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/posicionamiento-motores-busqueda.png',
   buttonColor: 'primary',
 };
-// inicio carrucel
-const typesApplication = [
-  {
-    title: 'Proyecto a Precio Fijo: Transparencia y Control',
-    description:
-      'Sin cargos ocultos ni sorpresas. Con nuestro modelo de proyecto a precio fijo, obtendrás claridad y seguridad desde el primer momento. Una vez que se ha firmado un contrato con un precio definido, puedes estar seguro de que los costos no cambiarán. Este modelo es ideal para proyectos con un alcance y requisitos claramente definidos, asegurando que obtengas exactamente lo que necesitas sin desviaciones presupuestarias.',
-  },
-  {
-    title: ' Aplicación web dinámica',
-    description:
-      'Esta página web se puede conectar a una base de datos para almacenar la información para ser consultada en cualquier momento. Tiene un panel de administración CMS (sistema de gestión de contenidos) para agregar o modificar contenido, así como entradas de blog, noticias, imágenes, etc.',
-  },
-  {
-    title: 'E-commerce',
-    description:
-      'Página web para tiendas online. Permite recibir pagos desde tarjetas de crédito, PayPal, efectivo, etc. Sincronizado con la gestión de inventario y logística de envíos podrás controlar desde cualquier parte del mundo la información de los productos o servicios que tu empresa ofrece.',
-  },
-  {
-    title: 'Portal web app',
-    description:
-      'También conocido como Landing Page, consta de una página web principal con varias secciones o apartados, en donde se muestra contenido como videos, formularios, textos, información de redes sociales, imágenes, etc.',
-  },
-  {
-    title: 'Gestor de Contenidos',
-    description:
-      'Es el tipo de aplicación web pensado para tiendas online. Ofrece mayores funcionalidades, porque permite utilizar sistemas para recibir pagos desde tarjetas de crédito, PayPal, efectivo, etc. Además de sincronizarse con la gestión de inventario y logística de envíos podrás controlar desde cualquier parte del mundo la  información de los productos o servicios que tu empresa ofrece.',
-  },
-];
 
 export const partnershipModelsBenefitsTypes = {
   backgroundImage:
@@ -43,7 +15,8 @@ export const partnershipModelsBenefitsTypes = {
   heightImage: 598,
   backgroundGray: true,
   title: 'Conoce nuestros modelos de partnership',
-  typesApplication,
+  subTitle: 'Proyecto a Precio Fijo: Transparencia y Control',
+  description: 'Sin cargos ocultos ni sorpresas. Con nuestro modelo de proyecto a precio fijo, obtendrás claridad y seguridad desde el primer momento. Una vez que se ha firmado un contrato con un precio definido, puedes estar seguro de que los costos no cambiarán. Este modelo es ideal para proyectos con un alcance y requisitos claramente definidos, asegurando que obtengas exactamente lo que necesitas sin desviaciones presupuestarias.',
   image:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/beneficios-seo.png',
   imageSizes: {
@@ -65,7 +38,7 @@ export const partnershipModelsBenefitsTypes = {
     },
   },
 };
-// fin carrucel
+
 export const importancePartnershipModels = {
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque2.png',
@@ -133,7 +106,7 @@ export const whatIsPartnershipModels = {
 export const becomeYourTeam = {
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque5.png',
-  heightImage: 632,
+  heightImage: 732,
   title: 'Nos Convertimos en tu Equipo: Compromiso Total',
   description:
     'Más que un simple proveedor, nos convertimos en tu equipo de tecnología, desarrollo y programación. Estamos comprometidos con ayudarte a alcanzar el éxito, trabajando codo a codo contigo para desarrollar soluciones innovadoras y efectivas. Este modelo es perfecto para empresas que buscan un socio tecnológico estratégico a largo plazo, ofreciendo un soporte completo y dedicado para todas tus necesidades de software y desarrollo de aplicaciones móviles.',
@@ -160,6 +133,7 @@ export const becomeYourTeam = {
     },
   },
   isImageRight: true,
+  backgroundPrimaryFade: true
 }
 
 const imageSizesOportunitiesPartnershipModels = {
@@ -188,7 +162,7 @@ export const oportunitiePartnershipModels = {
   image:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/oportunidades-para-negocio.png',
   backgroundImage:
-    '',
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609856760/servicios/marketing-digital/figures/bloque4.png',
   heightImage: 895,
   imageSizes: imageSizesOportunitiesPartnershipModels,
 };

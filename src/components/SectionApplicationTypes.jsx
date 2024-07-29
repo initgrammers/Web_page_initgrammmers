@@ -5,11 +5,13 @@ import ApplicationType from './ApplicationType';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import styles from '../assets/styles/SectionApplicationTypes';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const SectionApplicationTypes = ({
   sectionTitle,
   typesApplication,
+  sectionSubTitle,
+  sectionDescription,
   image,
   imageSizes,
   backgroundPrimaryLight = false,
@@ -30,13 +32,47 @@ const SectionApplicationTypes = ({
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
         <Box sx={styles.container}>
-          <Box sx={styles.detailsContent}>
-            <ApplicationType
-              sectionTitle={sectionTitle}
-              typesApplication={typesApplication}
-              backgroundGray={backgroundGray}
-            />
-          </Box>
+          { typesApplication ?
+            <Box sx={styles.detailsContent}>
+              <ApplicationType
+                sectionTitle={sectionTitle}
+                typesApplication={typesApplication}
+                backgroundGray={backgroundGray}
+              />
+            </Box>
+            :
+            <Box sx={styles.detailsSingleContent}>
+              <Typography
+                variant="h2"
+                sx={{
+                  ...styles.title,
+                  ...(backgroundGray && styles.titleGray),
+                }}
+              >
+                {sectionTitle}
+              </Typography>
+                <Box component="article">
+                  <Typography
+                    variant="h3"
+                    sx={{
+                      ...styles.applicationType,
+                      ...(backgroundGray && styles.backgroundGray),
+                    }}                
+                  >
+                    {sectionSubTitle}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      ...(backgroundGray && styles.bodyGray),
+                    }}                
+                  >
+                    {sectionDescription}
+                  </Typography>
+                </Box>
+            </Box>
+          }
+
           <Box sx={styles.containerImage}>
             <Box component="figure" sx={styles.image(imageSizes)}>
               <Image
@@ -61,7 +97,9 @@ SectionApplicationTypes.propTypes = {
       title: PropTypes.string,
       description: PropTypes.string,
     })
-  ).isRequired,
+  ),
+  sectionSubTitle: PropTypes.string,
+  sectionDescription: PropTypes.string,
   image: PropTypes.string.isRequired,
   imageSizes: PropTypes.shape({
     xs: PropTypes.shape({
