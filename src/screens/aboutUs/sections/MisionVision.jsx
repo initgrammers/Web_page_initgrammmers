@@ -1,9 +1,10 @@
 import MisionVision from '../components/MisionVision';
-import { misionVision } from '#constants/AboutUs';
+import useAboutUs from '#constants/AboutUs';
 import { useTheme } from '@mui/material';
 
 const MisionVisionSection = () => {
   const { palette } = useTheme();
+  const {misionVision} = useAboutUs();
   return (
     <MisionVision
       backgroundImage={misionVision.backgroundImage}

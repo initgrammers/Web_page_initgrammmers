@@ -1,38 +1,4 @@
-export const bannerAboutUs = {
-  backgroundImage:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque1.png',
-  heightImage: 664,
-  title: '¿Quiénes somos?',
-  description: 'Conoce un poco sobre InitGrammers',
-  image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1611682178/quienes-somos/quienes-somos.png',
-};
-
-const mision = {
-  title: 'Misión',
-  description:
-    'Brindar soluciones de alto impacto mediante el uso de la tecnología',
-  image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1611680188/quienes-somos/mision.png',
-  colorTitleIsSecondary: false,
-};
-
-const vision = {
-  title: 'Visión',
-  description:
-    'Ser un referente de innovación de Latinoamérica que impulse el desarrollo tecnológico del mundo',
-  image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1611680177/quienes-somos/vision.png',
-  colorTitleIsSecondary: true,
-};
-
-export const misionVision = {
-  mision,
-  vision,
-  backgroundImage:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque2.png',
-  heightImage: 388,
-};
+import { useTranslation } from 'react-i18next';
 
 const teamPlayer = [
   {
@@ -79,58 +45,106 @@ const teamPlayer = [
   },
 ];
 
-export const team = {
-  teamPlayer,
-  title: 'Equipo fundador',
-  backgroundImage:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque3.png',
-  heightImage: 574,
+
+const useAboutUs = () => {
+  const { t } = useTranslation();
+
+  const mision = {
+    title: t('misionTitle'),
+    description: t('misionDescription'),
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611680188/quienes-somos/mision.png',
+    colorTitleIsSecondary: false,
+  };
+
+  const vision = {
+    title: t('visionTitle'),
+    description: t('visionDescription'),
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611680177/quienes-somos/vision.png',
+    colorTitleIsSecondary: true,
+  };
+
+  const valores = [
+    {
+      description: t('ourValues1'),
+      image:
+        'https://res.cloudinary.com/initgrammers/image/upload/v1611680184/quienes-somos/difundir-conocimiento.png',
+      isBorderSecondary: true,
+    },
+    {
+      description: t('ourValues2'),
+      image:
+        'https://res.cloudinary.com/initgrammers/image/upload/v1611680178/quienes-somos/ambiente-laboral-de-calidad.png',
+      isBorderSecondary: false,
+    },
+    {
+      description: t('ourValues3'),
+      image:
+        'https://res.cloudinary.com/initgrammers/image/upload/v1611680176/quienes-somos/soluciones-responsables.png',
+      isBorderSecondary: true,
+    },
+    {
+      description: t('ourValues4'),
+      image:
+        'https://res.cloudinary.com/initgrammers/image/upload/v1611680186/quienes-somos/integridad.png',
+      isBorderSecondary: false,
+    },
+    {
+      description: t('ourValues5'),
+      image:
+        'https://res.cloudinary.com/initgrammers/image/upload/v1611680177/quienes-somos/trabajar-con-pasion.png',
+      isBorderSecondary: true,
+    },
+    {
+      description: t('ourValues6'),
+      image:
+        'https://res.cloudinary.com/initgrammers/image/upload/v1611680182/quienes-somos/aprender-y-perseverar.png',
+      isBorderSecondary: false,
+    },
+  ];
+  
+
+  const bannerAboutUs = {
+    backgroundImage:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque1.png',
+    heightImage: 664,
+    title: t('aboutUsBannerTitle'),
+    description: t('aboutUsBannerSubtitle'),
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611682178/quienes-somos/quienes-somos.png',
+  };
+
+  const misionVision = {
+    mision,
+    vision,
+    backgroundImage:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque2.png',
+    heightImage: 388,
+  };
+
+  const team = {
+    teamPlayer,
+    title: 'Equipo fundador',
+    backgroundImage:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque3.png',
+    heightImage: 574,
+  };
+
+  const valoresInitgrammers = {
+    valores,
+    title: t('ourValuesTitle'),
+    backgroundImage:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque4.png',
+    heightImage: 648,
+  };
+
+  return {
+    bannerAboutUs,
+    misionVision,
+    valoresInitgrammers,
+    team,
+  };
 };
 
-const valores = [
-  {
-    description: 'Difundir el conocimiento tecnológico',
-    image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1611680184/quienes-somos/difundir-conocimiento.png',
-    isBorderSecondary: true,
-  },
-  {
-    description:
-      'Generar un ambiente laboral de calidad, diverso y respetuoso ',
-    image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1611680178/quienes-somos/ambiente-laboral-de-calidad.png',
-    isBorderSecondary: false,
-  },
-  {
-    description: 'Entregar nuestras soluciones responsablemente y a tiempo',
-    image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1611680176/quienes-somos/soluciones-responsables.png',
-    isBorderSecondary: true,
-  },
-  {
-    description: 'Ofrecer soluciones con integridad y ética ',
-    image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1611680186/quienes-somos/integridad.png',
-    isBorderSecondary: false,
-  },
-  {
-    description: 'Trabajar con pasión por lo que hacemos ',
-    image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1611680177/quienes-somos/trabajar-con-pasion.png',
-    isBorderSecondary: true,
-  },
-  {
-    description: 'Nunca parar de aprender y perseverar en nuestro trabajo ',
-    image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1611680182/quienes-somos/aprender-y-perseverar.png',
-    isBorderSecondary: false,
-  },
-];
-
-export const valoresInitgrammers = {
-  valores,
-  title: 'Nuestro valores',
-  backgroundImage:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque4.png',
-  heightImage: 648,
-};
+export default useAboutUs;
