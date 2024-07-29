@@ -1,13 +1,15 @@
 import TeamComponent from '../components/Team';
-import { team } from '#constants/AboutUs';
+import useAboutUs from '#constants/AboutUs';
 
-const TeamSection = () => (
-  <TeamComponent
-    backgroundImage={team.backgroundImage}
-    heightImage={team.heightImage}
-    title={team.title}
-    teamPlayer={team.teamPlayer}
-  />
-);
-
+const TeamSection = () => {
+  const {team} = useAboutUs();
+  return(
+    <TeamComponent
+      backgroundImage={team.backgroundImage}
+      heightImage={team.heightImage}
+      title={team.title}
+      teamPlayer={team.teamPlayer}
+    />
+  );
+}
 export default TeamSection;

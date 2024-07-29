@@ -6,6 +6,7 @@ import styles from './styles';
 import ContactUsButton from '#Components/ContacUsButton';
 import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 import { Box, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const Banner = ({
   backgroundImage = '',
@@ -19,6 +20,7 @@ const Banner = ({
   buttonColor = 'secondary',
   hrefContactUs = `${contactsLinks.general}`,
 }) => {
+  const {t} = useTranslation();
   return (
     <Box component="section" position="relative" bgcolor={backgroundColor}>
       <BackgroundImage image={backgroundImage} height={heightImage} />
@@ -39,7 +41,7 @@ const Banner = ({
             </Typography>
             <ContactUsButton
               color={buttonColor}
-              label={textContactUsButton.whatsapp}
+              label={t('homeLearnButton')}
               href={hrefContactUs}
             />
           </Box>

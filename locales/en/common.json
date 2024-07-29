@@ -57,5 +57,18 @@
   "question7": "What types of mobile applications can we develop?",
   "detailsQuestion7": "We take pride in our ability to handle a wide range of technologies and services, including mobile applications for Android, iOS, and cross-platform solutions.",
   "question8": "What Programming Services Do You Offer?",
-  "detailsQuestion8": "We have a multidisciplinary team of Backend, Frontend, and Full Stack developers, ensuring the success of your project or software development."
+  "detailsQuestion8": "We have a multidisciplinary team of Backend, Frontend, and Full Stack developers, ensuring the success of your project or software development.",
+  "aboutUsBannerTitle": "About us",
+  "aboutUsBannerSubtitle": "Learn a Little About InitGrammers",
+  "misionTitle": "Mission",
+  "misionDescription": "To provide high-impact solutions through the use of technology",
+  "visionTitle": "Vision",
+  "visionDescription": "To be a benchmark of innovation in Latin America, driving technological development worldwide",
+  "ourValuesTitle": "Our Values",
+  "ourValues1": "Disseminate technological knowledge",
+  "ourValues2": "Foster a High-Quality, Diverse, and Respectful Work Environment",
+  "ourValues3": "Deliver Solutions Responsibly and Punctually",
+  "ourValues4": "Offer solutions with integrity and ethics",
+  "ourValues5": "Work with Passion and Commitment",
+  "ourValues6": "Pursue Continuous Learning and Perseverance"
 }
