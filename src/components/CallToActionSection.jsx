@@ -7,6 +7,7 @@ import CustomContainer from '#Components/CustomContainer';
 import ContactUsButton from './ContacUsButton';
 import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 import { Box, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const CallToActionSection = ({
   titlePart1,
@@ -19,6 +20,8 @@ const CallToActionSection = ({
   backgroundColor = '',
   imageSizes,
 }) => {
+
+  const {t} = useTranslation();
 
   return (
     <Box component="section" position="relative" bgcolor={backgroundColor}>
@@ -40,7 +43,7 @@ const CallToActionSection = ({
             {description}
           </Typography>
           <ContactUsButton
-            label={textContactUsButton.whatsapp}
+            label={t('homeLearnButton')}
             href={contactsLinks.general}
           />
 

@@ -24,7 +24,7 @@ const index = () => {
     <Banner />
     <OnlineSolution />
     <Services />
-    <PartnershipModel />
+    {/* <PartnershipModel /> */}
     <SliderClients />
     <CarryOutThatProject />
     <Questions />
