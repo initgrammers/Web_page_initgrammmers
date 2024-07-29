@@ -1,4 +1,4 @@
-export const bannerSEO = {
+export const bannerPartnershipModels = {
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque1.png',
   heightImage: 696,
@@ -8,7 +8,7 @@ export const bannerSEO = {
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/posicionamiento-motores-busqueda.png',
   buttonColor: 'primary',
 };
-
+// inicio carrucel
 const typesApplication = [
   {
     title: 'Proyecto a Precio Fijo: Transparencia y Control',
@@ -37,7 +37,7 @@ const typesApplication = [
   },
 ];
 
-export const seoBenefitsTypes = {
+export const partnershipModelsBenefitsTypes = {
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque3.png',
   heightImage: 598,
@@ -65,56 +65,8 @@ export const seoBenefitsTypes = {
     },
   },
 };
-
-const strategies = [
-  {
-    path: '/assets/images/redes-sociales.svg',
-    title: 'Redes sociales',
-    description:
-      'Genere una comunidad online , establezca un canal de comunicación con sus potenciales clientes en redes sociales como Facebook, Linkedin, Twitter e Instagram. Converse sobre sus productos y realice ventas online.',
-  },
-  {
-    path: '/assets/images/medios-digitales.svg',
-    title: 'Plan de medios digitales',
-    description:
-      'Te ayudamos a que tu marca sea reconocida por más personas y obtener más clientes potenciales, a través de estrategias proveemos las herramientas para generar contactos y convertirlos en tus clientes.',
-  },
-  {
-    path: '/assets/images/posicionamiento-seo.svg',
-    title: 'Posicionamiento en buscadores SEO',
-    description:
-      'El primer lugar al que van los clientes cuando necesitan algo es Google, Realizamos un análisis de las palabras clave y te ayudamos a mejorar tu posición en los resultados de la búsqueda.',
-  },
-];
-
-export const optionStrategies = {
-  titlePart1: 'Qué estrategias ofrecemos para ti',
-  description: 'Impulsa tu marca, no te quiedes fuera del mundo del internet',
-  image: '/assets/images/estrategias-marketing.png',
-  backgroundImage: '/assets/images/figures/shopOnline/bloque3.png',
-  heightImage: 1304,
-  imageSizes: {
-    xs: {
-      width: 288,
-      height: 283,
-    },
-    sm: {
-      width: 414,
-      height: 386,
-    },
-    md: {
-      width: 414,
-      height: 386,
-    },
-    lg: {
-      width: 582,
-      height: 542,
-    },
-  },
-  strategies,
-};
-
-export const importanceSEO = {
+// fin carrucel
+export const importancePartnershipModels = {
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque2.png',
   heightImage: 516,
@@ -146,7 +98,7 @@ export const importanceSEO = {
   isImageRight: false,
 };
 
-export const whatIsSEO = {
+export const whatIsPartnershipModels = {
   backgroundImage:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque4.png',
   heightImage: 632,
@@ -178,7 +130,39 @@ export const whatIsSEO = {
   isImageRight: false,
 };
 
-const imageSizesOportunitiesSEO = {
+export const becomeYourTeam = {
+  backgroundImage:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque5.png',
+  heightImage: 632,
+  title: 'Nos Convertimos en tu Equipo: Compromiso Total',
+  description:
+    'Más que un simple proveedor, nos convertimos en tu equipo de tecnología, desarrollo y programación. Estamos comprometidos con ayudarte a alcanzar el éxito, trabajando codo a codo contigo para desarrollar soluciones innovadoras y efectivas. Este modelo es perfecto para empresas que buscan un socio tecnológico estratégico a largo plazo, ofreciendo un soporte completo y dedicado para todas tus necesidades de software y desarrollo de aplicaciones móviles.',
+  titlePrimaryMain: true,
+  descriptionBlack: true,
+  image:
+    'https://res.cloudinary.com/initgrammers/image/upload/v1609854276/servicios/seo/que-es-seo.png',
+  imageSizes: {
+    xs: {
+      width: 288,
+      height: 288,
+    },
+    sm: {
+      width: 414,
+      height: 414,
+    },
+    md: {
+      width: 414,
+      height: 414,
+    },
+    lg: {
+      width: 504,
+      height: 504,
+    },
+  },
+  isImageRight: true,
+}
+
+const imageSizesOportunitiesPartnershipModels = {
   xs: {
     width: 288,
     height: 235,
@@ -196,7 +180,7 @@ const imageSizesOportunitiesSEO = {
     height: 496,
   },
 };
-export const oportunitieSEO = {
+export const oportunitiePartnershipModels = {
   titlePart1: 'Alcanza tus objetivos, ',
   titlePart2: 'y déjanos ser tu equipo de programación',
   description:
@@ -204,21 +188,27 @@ export const oportunitieSEO = {
   image:
     'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/oportunidades-para-negocio.png',
   backgroundImage:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque5.png',
+    '',
   heightImage: 895,
-  imageSizes: imageSizesOportunitiesSEO,
+  imageSizes: imageSizesOportunitiesPartnershipModels,
 };
 
 export const questions = [
   {
     id: 0,
-    title: '¿Si contrato el servicio de SEO, mi página se encontrará en la primera posición de las búsquedas en Google?',
+    title: '¿En qué consisten los modelos de partnership?',
     details:
-      'No te podemos asegurar que se encuentre en la primera posición de un día para el otro, ya que el SEO es un proceso a mediano a largo plazo, sin embargo, te ayudaremos a que tu página web se encuentre entre las primeras posiciones de los resultados de las búsquedas.',
+      'Un modelo de partnership nos permite adaptarnos a tus necesidades para ofrecerte el mejor servicio, esta asociación puede ser un proyecto a precio fijo con contratos establecidos, o podemos unirnos a tu equipo de desarrollo para brindar una mano. ¿No tienes equipo de IT? No hay problema, podemos convertirnos en tu equipo de tecnología para ayudarte a completar los proyectos.',
+  },
+  {
+    id: 1,
+    title: '¿Cuánto tiempo se tardan en desarrollar un proyecto?',
+    details:
+      'Dependiendo de los requerimientos del proyecto y los servicios que requieran, sea programación, diseño, guías de marca, etc. Un proyecto puede variar su duración, contáctanos para recibir una estimación de costos y tiempo de tu proyecto. ',
   },
 ];
 
-export const FAQSEO = {
+export const FAQPartnershipModels = {
   titlePart1: 'Preguntas',
   titlePart2: 'frecuentes',
   questions,

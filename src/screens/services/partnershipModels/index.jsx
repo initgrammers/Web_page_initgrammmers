@@ -5,20 +5,22 @@ import SEOsearch from '#constants/seo/SEO';
 import Organization from '#Components/StructuredData/Organization';
 import WebSite from '#Components/StructuredData/WebSite';
 import Article from '#Components/StructuredData/Article';
-import { importanceSEO } from '#constants/services/partnershipModels';
+import { importancePartnershipModels } from '#constants/services/partnershipModels';
 
-const ImportanceSEO = dynamic(() => import('./sections/ImportanceSEO'));
+const ImportancePartnershipModels = dynamic(() => import('./sections/ImportancePartnershipModels'));
 const BenefitsTypes = dynamic(() => import('./sections/BenefitsTypes'));
-const WhatIsSEO = dynamic(() => import('./sections/WhatIsSEO'));
+const WhatIsPartnershipModels = dynamic(() => import('./sections/WhatIsPartnershipModels'));
+const BecomeYourTeam = dynamic(() => import('./sections/BecomeYourTeam'));
 const Oportunities = dynamic(() => import('./sections/Oportunities'));
 const Questions = dynamic(() => import('./sections/Questions'));
 
 const index = () => (
   <>
     <Banner />
-    <ImportanceSEO />
+    <ImportancePartnershipModels />
     <BenefitsTypes />
-    <WhatIsSEO />
+    <WhatIsPartnershipModels />
+    <BecomeYourTeam />
     <Oportunities />
     <Questions />
 
@@ -28,7 +30,7 @@ const index = () => (
       title={SEOsearch.title}
       description={SEOsearch.description}
       url={SEOsearch.urlAltern}
-      mainArticle={importanceSEO.description}
+      mainArticle={importancePartnershipModels.description}
     />
   </>
 );

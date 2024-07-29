@@ -1,17 +1,17 @@
 import React from 'react';
 import SectionApplicationTypes from '#Components/SectionApplicationTypes';
-import { seoBenefitsTypes } from '#app/constants/services/partnershipModels';
+import { partnershipModelsBenefitsTypes } from '#app/constants/services/partnershipModels';
 
-const SEOBenefitsTypes = () => (
+const PartnershipModelsBenefitsTypes = () => (
   <SectionApplicationTypes
-    backgroundImage={seoBenefitsTypes.backgroundImage}
-    heightImage={seoBenefitsTypes.heightImage}
-    sectionTitle={seoBenefitsTypes.title}
-    typesApplication={seoBenefitsTypes.typesApplication}
-    image={seoBenefitsTypes.image}
-    imageSizes={seoBenefitsTypes.imageSizes}
-    backgroundGray={seoBenefitsTypes.backgroundGray}
+    backgroundImage={partnershipModelsBenefitsTypes.backgroundImage}
+    heightImage={partnershipModelsBenefitsTypes.heightImage}
+    sectionTitle={partnershipModelsBenefitsTypes.title}
+    typesApplication={partnershipModelsBenefitsTypes.typesApplication}
+    image={partnershipModelsBenefitsTypes.image}
+    imageSizes={partnershipModelsBenefitsTypes.imageSizes}
+    backgroundGray={partnershipModelsBenefitsTypes.backgroundGray}
   />
 );
 
-export default SEOBenefitsTypes;
+export default PartnershipModelsBenefitsTypes;

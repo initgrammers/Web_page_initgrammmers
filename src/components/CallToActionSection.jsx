@@ -50,6 +50,9 @@ const CallToActionSection = ({
               src={image}
               fill
               alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
+              style={{
+                objectFit: 'contain',
+              }}
             />
           </Box>
         </Box>

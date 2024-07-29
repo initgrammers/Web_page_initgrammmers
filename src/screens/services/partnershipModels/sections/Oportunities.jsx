@@ -1,19 +1,19 @@
 import React from 'react';
 import CallToActionSection from '#Components/CallToActionSection';
-import { oportunitieSEO } from '#constants/services/partnershipModels';
+import { oportunitiePartnershipModels } from '#constants/services/partnershipModels';
 import { useTheme } from '@mui/material';
 
 const IncreaseClics = () => {
   const { palette } = useTheme();
   return (
     <CallToActionSection
-      titlePart1={oportunitieSEO.titlePart1}
-      titlePart2={oportunitieSEO.titlePart2}
-      description={oportunitieSEO.description}
-      image={oportunitieSEO.image}
-      backgroundImage={oportunitieSEO.backgroundImage}
-      heightImage={oportunitieSEO.heightImage}
-      imageSizes={oportunitieSEO.imageSizes}
+      titlePart1={oportunitiePartnershipModels.titlePart1}
+      titlePart2={oportunitiePartnershipModels.titlePart2}
+      description={oportunitiePartnershipModels.description}
+      image={oportunitiePartnershipModels.image}
+      backgroundImage={oportunitiePartnershipModels.backgroundImage}
+      heightImage={oportunitiePartnershipModels.heightImage}
+      imageSizes={oportunitiePartnershipModels.imageSizes}
       backgroundColor={palette.secondary.fade}
     />
   );

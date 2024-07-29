@@ -1,5 +1,5 @@
-import SEOBanner from '#Components/Banner';
-import { bannerSEO } from '#constants/services/partnershipModels';
+import PartnershipModelsBanner from '#Components/Banner';
+import { bannerPartnershipModels } from '#constants/services/partnershipModels';
 import { contactsLinks } from '#app/constants/contacts';
 import { useTheme } from '@mui/material';
 
@@ -7,15 +7,15 @@ const Banner = () => {
   const { palette } = useTheme();
 
   return (
-    <SEOBanner
-      backgroundImage={bannerSEO.backgroundImage}
-      heightImage={bannerSEO.heightImage}
-      titlePart2={bannerSEO.title}
-      description={bannerSEO.description}
-      image={bannerSEO.image}
+    <PartnershipModelsBanner
+      backgroundImage={bannerPartnershipModels.backgroundImage}
+      heightImage={bannerPartnershipModels.heightImage}
+      titlePart2={bannerPartnershipModels.title}
+      description={bannerPartnershipModels.description}
+      image={bannerPartnershipModels.image}
       backgroundColor={palette.primary.fade}
-      hrefContactUs={contactsLinks.seoPage}
-      buttonColor={bannerSEO.buttonColor}
+      hrefContactUs={contactsLinks.partnershipModelsPage}
+      buttonColor={bannerPartnershipModels.buttonColor}
     />
   );
 };

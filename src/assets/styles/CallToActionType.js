@@ -31,9 +31,6 @@ const styles = {
     width:  { xs: xs.width, sm: sm.width, md: md.width, lg: lg.width},
     height:  { xs: xs.height, sm: sm.height, md: md.height, lg: lg.height},
     position: 'relative',
-    '&>div>img': {
-      objectFit: 'contain',
-    },
   }),
 };
 
