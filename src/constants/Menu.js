@@ -13,14 +13,14 @@ const useMenu = () => {
   const { t } = useTranslation();
   const data = [
     {
-      id: 'WebDevelop',
+      id: 'webDevelopment',
       title: t('webDevelopment'),
       subtitle: t('subWebDevelopment'),
       href: routes.services.webDevelopment,
       icon: <DevicesIcon sx={styles.icon}/>,
     },
     {
-      id: 'MobileDevelopment',
+      id: 'mobileDevelopment',
       title: t('mobileDevelopment'),
       subtitle:  t('subMobileDevelopment'),
       href: routes.services.mobileDevelopment,
@@ -28,7 +28,7 @@ const useMenu = () => {
     },
   
     {
-      id: 'UXUIDesign',
+      id: 'uxuiDesign',
       title: t('ux/uiDesign'),
       subtitle: t('subUx/uiDesign'),
       href: routes.services.uxUiDesign,
@@ -42,7 +42,7 @@ const useMenu = () => {
     //   icon: <ShoppingCart />,
     // },
     {
-      id: '5',
+      id: 'trainings',
       title: t('training'),
       subtitle: t('subTraining'),
       href: routes.services.trainings,
@@ -55,13 +55,13 @@ const useMenu = () => {
     //   href: routes.services.marketingDigital,
     //   icon: <DeviceHub />,
     // },
-    // {
-    //   id: 'SEO',
-    //   title: 'SEO',
-    //   subtitle: 'Posicionamiento en buscadores',
-    //   href: routes.services.seo,
-    //   icon: <SearchOutlinedIcon sx={styles.icon}/>,
-    // },
+    {
+      id: 'partnershipModels',
+      title: 'Modelos de Partnership',
+      subtitle: 'Soluciones Personalizadas para tu Éxito',
+      href: routes.services.partnershipModels,
+      icon: <SearchOutlinedIcon sx={styles.icon} />
+    },
   ];
   
   const aboutUs = {
