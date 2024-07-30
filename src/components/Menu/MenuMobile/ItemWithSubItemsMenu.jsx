@@ -30,7 +30,7 @@ const ItemWithSubItemsMenu = ({
     <>
       {subMenu.length > 0 ? (
         <ListItem 
-          sx={{ ...styles.nested, '&:hover': { backgroundColor: 'lightgray' } }}
+          sx={{ ...styles.nested, '&:hover': { backgroundColor: 'lightgray' }, cursor: "pointer", }}
           onClick={handleClick}
         >
           <ListItemText primary={titleMenu} />

@@ -60,13 +60,11 @@ const MenuDesktop = ({
       </Box>
       <Fade timeout={800} in={showServices} sx={styles.fade}>
         <Box bgcolor="white">
-          <OutsideAlerter callback={handleClose}>
-            <Options
-              visible={showServices}
-              indexMenu={indexMenu}
-              handleDrawerOpen={handleClose}
-            />
-          </OutsideAlerter>
+          <Options
+            visible={showServices}
+            indexMenu={indexMenu}
+            handleDrawerOpen={handleClose}
+          />
         </Box>
       </Fade>
     </>
