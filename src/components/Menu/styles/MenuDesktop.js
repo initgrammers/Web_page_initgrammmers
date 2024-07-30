@@ -14,7 +14,7 @@ const styles = {
   },
   button: {
     textTransform: 'capitalize',
-    margin: `0 ${theme.spacing(2)}px`,
+    margin: `0 ${theme.spacing(2)}`,
   },
   services: {
     textTransform: 'capitalize',
@@ -28,14 +28,6 @@ const styles = {
     [theme.breakpoints.up('lg')]: {
       justifyContent: 'start',
     },
-  },
-  services: {
-    textTransform: 'capitalize',
-    color: theme.palette.common.black,
-  },
-  button: {
-    textTransform: 'capitalize',
-    margin: `0 ${theme.spacing(2)}px`,
   },
   fade: {
     position: 'absolute',

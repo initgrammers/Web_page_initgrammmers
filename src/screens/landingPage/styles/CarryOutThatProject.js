@@ -7,62 +7,31 @@ const styles = {
     marginBottom: theme.spacing(8),
   },
   content: {
-    display: 'flex',
-    flexDirection: {lg:'row', xs:'column'},
-    minWidth: 568,
-    paddingTop: theme.spacing(4),
+    display: { lg: 'flex' },
+    paddingTop: { xs: theme.spacing(4), lg: theme.spacing(8) },
   },
   description: {
-    padding: `${theme.spacing(4)}px 0`,
+    padding: `${theme.spacing(4)} 0`,
     textAlign: 'center',
   },
   contentInformation: {
     display: 'flex',
-    marginY: {lg:11, xs:0},
     flexDirection: 'column',
     alignItems: 'center',
-    gap: 4,
+    paddingRight: { lg: theme.spacing(2) },
   },
   containerImage: {
     display: 'flex',
     justifyContent: 'center',
+    marginTop: { lg: `-${theme.spacing(8)}` },
   },
   image: {
-    width: 568,
-    height: 479,
+    width: { xs: 288, sm: 414, lg: 504},
+    height: { xs: 288, sm: 414, lg: 504},
     position: 'relative',
-    bottom: `-${theme.spacing(8)}px`,
-    marginTop: `-${theme.spacing(4)}px`,
-  },
-
-  [theme.breakpoints.up('sm')]: {
-    image: {
-      width: 414,
-      height: 414,
-    },
-  },
-  [theme.breakpoints.up('md')]: {
-    image: {
-      margin: 0,
-      width: 414,
-      height: 414,
-    },
-  },
-  [theme.breakpoints.up('lg')]: {
-    content: {
-      paddingTop: theme.spacing(8),
-      display: 'flex',
-    },
-    contentInformation: {
-      paddingRight: theme.spacing(2),
-    },
-    containerImage: {
-      marginTop: `-${theme.spacing(8)}px`,
-    },
-    image: {
-      width: 504,
-      height: 504,
-    },
+    bottom: `-${theme.spacing(8)}`,
+    marginTop: `-${theme.spacing(4)}`,
+    margin: { md: 0 }
   },
 };
 

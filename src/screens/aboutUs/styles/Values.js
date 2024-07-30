@@ -6,6 +6,7 @@ const styles = {
     padding: { xs: theme.spacing(4, 0), sm: theme.spacing(5, 0), lg: theme.spacing(8, 0)},
   },
   values: {
+    width: {xs: "100%", sm: 552, md: 544, lg: 1024},
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: { xs:'center', sm: 'space-between' },

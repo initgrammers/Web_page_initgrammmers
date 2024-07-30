@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import styles from '../assets/styles/CustomContainer';
 import { Container } from '@mui/material';
 
-const CustomContainer = ({ children }) => {
+const CustomContainer = ({ children, sx }) => {
   return (
-    <Container fixed sx={styles.mainContent}>
+    <Container fixed sx={{...sx, ...styles.mainContent}}>
       {children}
     </Container>
   );
@@ -12,6 +12,7 @@ const CustomContainer = ({ children }) => {
 
 CustomContainer.propTypes = {
   children: PropTypes.element.isRequired,
+  children: PropTypes.string,
 };
 
 export default CustomContainer;

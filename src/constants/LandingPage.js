@@ -125,7 +125,7 @@ const useLandingPage = () => {
   const servicesInitgrammers = {
     backgroundImage:
       'https://res.cloudinary.com/initgrammers/image/upload/v1606839723/LandingPage/figures/bloque3.png',
-    heightImage: 665,
+    heightImage: 720,
     title: t('servicesTitle'),
     services,
   };

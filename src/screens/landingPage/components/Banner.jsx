@@ -6,7 +6,6 @@ import styles from '../styles/Banner';
 import ContactUsButton from '#Components/ContacUsButton';
 import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 import { Box, Typography } from '@mui/material';
-import { primary } from '#app/shared/config/theme/colors';
 import { useTranslation } from 'react-i18next';
 
 const Banner = ({
@@ -18,11 +17,11 @@ const Banner = ({
 }) => {
   const {t} = useTranslation();
   return (
-    <Box component="section" position="relative" sx={{background: primary.light}} >
+    <Box component="section" position="relative" bgcolor="primary.light">
       <BackgroundImage image={backgroundImage} height={heightImage}/>
-      <CustomContainer>
-        <Box display='flex' sx={{flexDirection: {lg:'row', xs:'column'}}} gap='16px'>
-          <Box component="article" sx={styles.detailsContent} flex={1}>
+      <CustomContainer sx={{ margin: { lg: 0 } }}>
+        <Box sx={styles.container}>
+          <Box component="article" sx={styles.detailsContent}>
             <Typography variant="h1" sx={styles.title}>
               {title}
             </Typography>
@@ -39,15 +38,15 @@ const Banner = ({
               href={contactsLinks.landing}
             />
           </Box>
-          <Box sx={styles.containerImage} flex={1} my={1}>
+          <Box sx={styles.containerImage}>
             <Box component="figure" sx={styles.image}>
               <Image
                 quality={100}
                 priority
                 src={image}
                 fill
+                style={styles.mainImage}
                 alt={title}
-                style={{ objectFit: 'contain'}}
               />
             </Box>
           </Box>

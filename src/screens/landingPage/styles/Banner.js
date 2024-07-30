@@ -3,67 +3,41 @@ import theme from '../../../shared/config/MuiThemeProvider/theme'
 import { primary } from '#app/shared/config/theme/colors';
 
 const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'row'
-  },
   detailsContent: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: 4,
-    paddingTop: theme.spacing(4),
-    marginY: {lg:11, xs:0},
+    flex: { lg: 5 },
+    display: { lg: 'flex' },
+    flexDirection: { lg: 'column' },
+    justifyContent: { lg: 'center' },
+    paddingRight: { lg: theme.spacing(2) },
+    paddingTop: { xs: theme.spacing(4), sm: theme.spacing(12), lg: 0 },
   },
   title: {
     color: theme.palette.primary.contrastText,
   },
   description: {
-    padding: `${theme.spacing(4)}px 0`,
+    padding: `${theme.spacing(4)} 0`,
     color: theme.palette.primary.contrastText,
+    fontSize: { xs: "1.25rem", sm: "1.2853rem", md: "1.2853rem", lg: "1.4996rem" }
   },
   containerImage: {
     display: 'flex',
+    flex: { lg: 5 },
     justifyContent: 'center',
-    padding: `${theme.spacing(4)}px 0`,
+    padding: {xs: `${theme.spacing(4)} 0`, sm: `${theme.spacing(5)} 0`, lg: `${theme.spacing(8)} 0 ${theme.spacing(13)} 0`},
+    margin: { lg: 0 },
   },
   image: {
-    width: 504,
-    height: 504,
+    width: 288,
+    height: 235,
+    width:  { xs: 288, sm: 544, lg: 504 },
+    height:  { xs: 235, sm: 449, lg: 504 },
     position: 'relative',
   },
-  [theme.breakpoints.up('sm')]: {
-    containerImage: {
-      padding: `${theme.spacing(5)}px 0`,
-    },
-    image: {
-      width: 544,
-      height: 449,
-    },
-    detailsContent: {
-      paddingTop: theme.spacing(12),
-    },
+  mainImage: {
+    objectFit: 'contain',
   },
-  [theme.breakpoints.up('lg')]: {
-    container: {
-      display: 'flex',
-    },
-    detailsContent: {
-      flex: 5,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      paddingTop: 0,
-      paddingRight: theme.spacing(2),
-    },
-    containerImage: {
-      flex: 5,
-      padding: `${theme.spacing(8)}px 0 ${theme.spacing(13)}px 0`,
-      margin: 0,
-    },
-    image: {
-      width: 504,
-      height: 504,
-    },
+  container: {
+    display: { lg: 'flex'},
   },
 };
 

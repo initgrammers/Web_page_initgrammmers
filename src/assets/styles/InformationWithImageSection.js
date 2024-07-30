@@ -60,6 +60,7 @@ const styles = {
     },
   }),
   detailsContent: ( isImageRight ) => ({
+    width:  { xs: 552, sm: 544, lg: 504},
     flex: { lg: 5 },
     display: { lg: 'flex' },
     flexDirection: { lg: 'column' },

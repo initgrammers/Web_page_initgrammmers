@@ -22,8 +22,8 @@ const CarryOutThatProject = ({
     >
       <BackgroundImage />
       <CustomContainer>
-        <Box sx={styles.content} gap='16px'>
-          <Box flex={1} component="article" sx={styles.contentInformation}>
+        <Box sx={styles.content}>
+          <Box component="article" sx={styles.contentInformation}>
             <Subtitle
               black
               variant="h1"
@@ -32,6 +32,7 @@ const CarryOutThatProject = ({
               emphasis={titlePart2}
               mb={0}
               align="center"
+              fontSize={{ xs: "2rem", sm: "2.5707rem", md: "2.7849rem", lg: "2.9991rem" }}
             />
             <Typography
               variant="body1"
@@ -45,7 +46,7 @@ const CarryOutThatProject = ({
               href={contactsLinks.landing}
             />
           </Box>
-          <Box flex={1} sx={styles.containerImage} my={1}>
+          <Box sx={styles.containerImage}>
             <Box component="figure" sx={styles.image}>
               <Image
                 quality={100}
