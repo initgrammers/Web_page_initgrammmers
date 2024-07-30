@@ -13,6 +13,7 @@ const routes = {
   },
   portfolio: 'https://issuu.com/initgrammers/docs/initgrammers_9e0652a0bcb56e',
   aboutUs: '/aboutUs',
+  contactUs: '/contact-us',
   blog: '/blog',
   contact: '/contacto',
 };
