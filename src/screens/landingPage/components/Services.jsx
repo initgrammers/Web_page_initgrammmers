@@ -21,7 +21,7 @@ const Services = ({
           <Typography variant="h2" sx={styles.title}>
             {title}
           </Typography>
-          <Box sx={{...styles.services, flexDirection: 'row'}}>
+          <Box sx={styles.services}>
             {services.map((service) => (
               <Box
                 component="article"

@@ -5,7 +5,7 @@ export const bannerPartnershipModels = {
   title: 'Modelos de Partnership',
   description: 'Servicios de Desarrollo de Software: Tecnología que Impulsa tu Crecimiento',
   image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/posicionamiento-motores-busqueda.png',
+    'https://res.cloudinary.com/initgrammers/image/upload/v1722371643/imagen_dev40u.png',
   buttonColor: 'primary',
 };
 
@@ -81,7 +81,7 @@ export const whatIsPartnershipModels = {
   titlePrimaryMain: true,
   descriptionBlack: true,
   image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1609854276/servicios/seo/que-es-seo.png',
+    'https://res.cloudinary.com/initgrammers/image/upload/v1722371642/Collab-rafiki_1_p5aoz5.png',
   imageSizes: {
     xs: {
       width: 288,
@@ -113,7 +113,7 @@ export const becomeYourTeam = {
   titlePrimaryMain: true,
   descriptionBlack: true,
   image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1609854276/servicios/seo/que-es-seo.png',
+    'https://res.cloudinary.com/initgrammers/image/upload/v1722371642/Company-amico_1_qm737a.png',
   imageSizes: {
     xs: {
       width: 288,
