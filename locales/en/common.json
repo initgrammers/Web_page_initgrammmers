@@ -192,11 +192,6 @@
   "partnershipModelsOportunitieDescription": "Contact Us",
   "partnershipModelsFAQTitlePart1": "Frequent  ",
   "partnershipModelsFAQTitlePart2": "asked questions",
-  "partnershipModelsQuestion0": "",
-  "partnershipModelsDetailsQuestion0": "",
-  "partnershipModelsQuestion1": "",
-  "partnershipModelsDetailsQuestion1": "."
-  "mobileDevelopmentImportanceApplicationsMainImage": "https://res.cloudinary.com/initgrammers/image/upload/v1618501401/servicios/desarrollo-movil/importancia-aplicaciones-moviles.png",
   "contactUsFormNameError": "Name is required",
   "contactUsFormPhoneError": "Phone is required",
   "contactUsFormInvalidEmailError": "Invalid Email",
