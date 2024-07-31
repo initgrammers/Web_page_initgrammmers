@@ -175,5 +175,21 @@
   "mobileDevelopmentDetailsQuestion8": "Muchos de nuestros clientes son startups o empresas que están comenzando, es por ello que ofrecemos  distintos planes de pago para adaptarnos a nuestros clientes, contáctanos para ofrecerte un mejor servicio. Consulta además por nuestros modelos de partnertship, podemos ser parte de tus equipo dentro de tu empresa.",
   "mobileDevelopmentQuestion9": "¿Ofrecen servicio de mantenimiento?",
   "mobileDevelopmentDetailsQuestion9": "Una vez terminado el desarrollo de la aplicación móvil,  incluimos un servicio de mantenimiento por el período de un año. ¿Ya tienes una aplicación móvil? Ofrecemos también servicio de mantenimiento y solución de errores para aplicaciones existentes.",
-  "mobileDevelopmentImportanceApplicationsMainImage": "https://res.cloudinary.com/initgrammers/image/upload/v1618501401/servicios/desarrollo-movil/importancia-aplicaciones-moviles.png"
+  "mobileDevelopmentImportanceApplicationsMainImage": "https://res.cloudinary.com/initgrammers/image/upload/v1618501401/servicios/desarrollo-movil/importancia-aplicaciones-moviles.png",
+  "partnershipModelsBannerTitle": "Modelos de Partnership",
+  "partnershipModelsBannerDescription": "Servicios de Desarrollo de Software: Tecnología que Impulsa tu Crecimiento",
+  "partnershipModelsBenefitsTypesTitle": "Conoce nuestros modelos de partnership",
+  "partnershipModelsBenefitsTypesSubTitle": "Proyecto a Precio Fijo: Transparencia y Control",
+  "partnershipModelsBenefitsTypesDescription": "Sin cargos ocultos ni sorpresas. Con nuestro modelo de proyecto a precio fijo, obtendrás claridad y seguridad desde el primer momento. Una vez que se ha firmado un contrato con un precio definido, puedes estar seguro de que los costos no cambiarán. Este modelo es ideal para proyectos con un alcance y requisitos claramente definidos, asegurando que obtengas exactamente lo que necesitas sin desviaciones presupuestarias.",
+  "partnershipModelsImportanceTitle": "Modelos de Partnership: Soluciones Personalizadas para tu Éxito",
+  "partnershipModelsImportanceDescription": "Una asociación perfecta que entrega los resultados esperados de acuerdo a tus necesidades. Tenemos todo lo que necesitas para impulsar tu negocio al siguiente nivel. Nuestro compromiso es brindarte soluciones tecnológicas innovadoras y eficientes, adaptadas a las exigencias del mercado actual.",
+  "partnershipModelsWhatIsPartnershipModelsTitle": "Extensión de tu Equipo: Potencia tu Desarrollo",
+  "partnershipModelsWhatIsPartnershipModelsDescription": "No pierdas oportunidades en un mercado competitivo. Con nuestro modelo de extensión de equipo, nos unimos a tu equipo de desarrollo para ayudarte a completar tareas y alcanzar tus objetivos más rápidamente. Este enfoque flexible permite escalar tus capacidades de desarrollo sin los costos y complicaciones de contratar personal adicional. Nos adaptamos a tu cultura de trabajo y a tus procesos, asegurando una integración fluida y productiva.",
+  "partnershipModelsBecomeYourTeamTitle": "Nos Convertimos en tu Equipo: Compromiso Total",
+  "partnershipModelsBecomeYourTeamDescription": "Más que un simple proveedor, nos convertimos en tu equipo de tecnología, desarrollo y programación. Estamos comprometidos con ayudarte a alcanzar el éxito, trabajando codo a codo contigo para desarrollar soluciones innovadoras y efectivas. Este modelo es perfecto para empresas que buscan un socio tecnológico estratégico a largo plazo, ofreciendo un soporte completo y dedicado para todas tus necesidades de software y desarrollo de aplicaciones móviles.",
+  "partnershipModelsOportunitieTitlePart1": "Alcanza tus objetivos, ",
+  "partnershipModelsOportunitieTitlePart2": "y déjanos ser tu equipo de programación",
+  "partnershipModelsOportunitieDescription": "Ponte en contacto con nosotros",
+  "partnershipModelsFAQTitlePart1": "Preguntas ",
+  "partnershipModelsFAQTitlePart2": "frecuentes"
 }

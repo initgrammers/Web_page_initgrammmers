@@ -1,10 +1,11 @@
 import React from 'react';
 import CallToActionSection from '#Components/CallToActionSection';
-import { oportunitiePartnershipModels } from '#constants/services/partnershipModels';
+import usePartnershipModels from '#constants/services/partnershipModels';
 import { useTheme } from '@mui/material';
 
 const IncreaseClics = () => {
   const { palette } = useTheme();
+  const { oportunitiePartnershipModels } = usePartnershipModels();
   return (
     <CallToActionSection
       titlePart1={oportunitiePartnershipModels.titlePart1}
