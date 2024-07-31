@@ -1,11 +1,8 @@
 import { Box, Button, styled, TextField, Typography } from '@mui/material';
 import Image from 'next/image';
-import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
-import ContactUsButton from '#Components/ContacUsButton';
 import { primary } from '#app/shared/config/theme/colors';
 import styles from '../styles/ContactForm.js';
-import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Field, Form, Formik } from 'formik';
@@ -18,12 +15,12 @@ const ContactForm = ({
   const { t } = useTranslation();
 
   const validationSchema = Yup.object({
-    name: Yup.string().required('El nombre es requerido'),
-    lastname: Yup.string().required('El apellido es requerido'),
+    name: Yup.string().required(t('contactUsFormNameError')),
     email: Yup.string()
-      .email('Email inválido')
-      .required('El email es requerido'),
-    message: Yup.string().required('El mensaje es requerido'),
+      .email(t('contactUsFormInvalidEmailError'))
+      .required(t('contactUsFormEmailError')),
+    // phone: Yup.string().required(t('contactUsFormPhoneError')),
+    message: Yup.string().required(t('contactUsFormMessageError')),
   });
 
   const StyledTextField = styled(TextField)({
@@ -59,9 +56,9 @@ const ContactForm = ({
   });
 
   const handleSubmit = async (values, { resetForm }) => {
-    const serviceId = 'service_l4swl99';
-    const templateId = 'template_wiee0tc';
-    const publicKey = 'g-ojnw_r-R4fterOM';
+    const serviceId = 'service_b94r2og';
+    const templateId = 'template_zk2w0sn';
+    const publicKey = '4cRPDSCYZBosbpavf';
 
     const templateParams = {
       name: values.name,
@@ -106,7 +103,7 @@ const ContactForm = ({
           >
             <Box display="flex" justifyContent="center">
               <Typography variant="h3" sx={styles.title}>
-                Déjanos tu contacto
+                {t('contactUsTitle')}
               </Typography>
             </Box>
             <Box>
@@ -129,7 +126,7 @@ const ContactForm = ({
                       <Field
                         name="name"
                         as={StyledTextField}
-                        label="Nombre"
+                        label={t('contactUsNameField')}
                         variant="outlined"
                         fullWidth
                         error={touched.name && Boolean(errors.name)}
@@ -138,7 +135,7 @@ const ContactForm = ({
                       <Field
                         name="lastname"
                         as={StyledTextField}
-                        label="Apellido"
+                        label={t('contactUsLastnameField')}
                         variant="outlined"
                         fullWidth
                         error={touched.lastname && Boolean(errors.lastname)}
@@ -147,7 +144,7 @@ const ContactForm = ({
                       <Field
                         name="email"
                         as={StyledTextField}
-                        label="Email"
+                        label={t('contactUsEmailField')}
                         variant="outlined"
                         fullWidth
                         error={touched.email && Boolean(errors.email)}
@@ -156,7 +153,7 @@ const ContactForm = ({
                       <Field
                         name="phone"
                         as={StyledTextField}
-                        label="Teléfono"
+                        label={t('contactUsPhoneField')}
                         variant="outlined"
                         fullWidth
                         error={touched.phone && Boolean(errors.phone)}
@@ -165,7 +162,7 @@ const ContactForm = ({
                       <Field
                         name="message"
                         as={StyledTextField}
-                        label="Mensaje"
+                        label={t('contactUsMessageField')}
                         variant="outlined"
                         multiline
                         rows={4}
@@ -179,7 +176,7 @@ const ContactForm = ({
                         color="secondary"
                         sx={{ alignSelf: 'center', width: '200px' }}
                       >
-                        Enviar
+                        {t('contactUsSendButton')}
                       </Button>
                     </Box>
                   </Form>

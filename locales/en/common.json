@@ -104,5 +104,19 @@
   "webDevelopmentQuestion6": "Why is a website a good option for your business?",
   "webDevelopmentDetailQuestion6": "A website is an essential asset for any business. It not only serves as the first impression but also showcases the quality of your work. By establishing credibility, it helps to build trust with potential customers and enhances your visibility on search engines. A well-crafted website is crucial for creating a strong online presence, attracting more visitors, and gaining new clients. Therefore, investing in a high-quality website is critical for gaining a competitive edge in today's market.",
   "webDevelopmentQuestion7": "How can I get a domain with my business name?",
-  "webDevelopmentDetailQuestion7": "If you don’t have a domain for your business yet, we can help you get one so your customers can find you easily."
+  "webDevelopmentDetailQuestion7": "If you don’t have a domain for your business yet, we can help you get one so your customers can find you easily.",
+  "contactUsFormNameError": "Name is required",
+  "contactUsFormPhoneError": "Phone is required",
+  "contactUsFormInvalidEmailError": "Invalid Email",
+  "contactUsFormEmailError": "Email is required",
+  "contactUsFormMessageError": "Message is required",
+  "contactUsBannerTitle": "Contact Us",
+  "contactUsTitle": "Contact us!",
+  "contactUsNameField": "Name",
+  "contactUsLastnameField": "Lastname",
+  "contactUsEmailField": "Email",
+  "contactUsPhoneField": "Phone",
+  "contactUsMessageField": "Message",
+  "contactUsSendButton": "Send",
+  "contactUsDescription": "At InitGrammers, we are committed to providing you with the best possible service. If you have any questions, need more information, or wish to start a project with us, please don't hesitate to reach out. We're here to help you achieve your goals!"
 }
