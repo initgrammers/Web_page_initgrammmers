@@ -2,10 +2,11 @@ import Image from 'next/image';
 import ContactUsButton from '#Components/ContacUsButton';
 import styles from '../styles/Banner';
 import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
-import { bannerMobileDevelopment } from '#constants/services/MobileDevelopment';
+import useMobileDevelopment from '#constants/services/MobileDevelopment';
 import { Box, Container, Typography } from '@mui/material';
 
 const Banner = () => {
+  const { bannerMobileDevelopment } = useMobileDevelopment();
   return (
     <Box component="section" sx={styles.mainSection}>
       <Box sx={styles.containerBackgroundImage}>

@@ -5,7 +5,8 @@ import MobileDevelopment from '#constants/seo/MobileDevelopment';
 import Organization from '#Components/StructuredData/Organization';
 import WebSite from '#Components/StructuredData/WebSite';
 import Article from '#Components/StructuredData/Article';
-import { importanceApplications } from '#constants/services/MobileDevelopment';
+import useMobileDevelopment from '#constants/services/MobileDevelopment';
+
 
 const ImportanceApplications = dynamic(() =>
   import('./components/ImportanceApplications')
@@ -19,27 +20,30 @@ const ApplicationsAtYourFingertips = dynamic(() =>
 );
 const Questions = dynamic(() => import('./sections/Questions'));
 
-const Index = () => (
-  <>
-    <Banner />
-    <ImportanceApplications />
-    <SliderTech />
-    <MobileApplicationTypes />
-    <ApplicationsAtYourFingertips />
-    <Questions />
+const Index = () => { 
+  const { importanceApplications } = useMobileDevelopment();
+  return (
+    <>
+      <Banner />
+      <ImportanceApplications />
+      <SliderTech />
+      <MobileApplicationTypes />
+      <ApplicationsAtYourFingertips />
+      <Questions />
 
-    <Organization />
-    <WebSite
-      title={MobileDevelopment.title}
-      url={MobileDevelopment.urlAltern}
-    />
-    <Article
-      title={MobileDevelopment.title}
-      description={MobileDevelopment.description}
-      url={MobileDevelopment.urlAltern}
-      mainArticle={importanceApplications.description1}
-    />
-  </>
-);
+      <Organization />
+      <WebSite
+        title={MobileDevelopment.title}
+        url={MobileDevelopment.urlAltern}
+      />
+      <Article
+        title={MobileDevelopment.title}
+        description={MobileDevelopment.description}
+        url={MobileDevelopment.urlAltern}
+        mainArticle={importanceApplications.description1}
+      />
+    </>
+  );
+}
 
 export default Index;

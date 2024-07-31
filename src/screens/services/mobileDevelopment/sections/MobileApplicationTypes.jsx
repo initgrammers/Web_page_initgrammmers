@@ -1,14 +1,17 @@
 import React from 'react';
 import SectionApplicationTypes from '#Components/SectionApplicationTypes';
-import { mobileApplicationTypes } from '#constants/services/MobileDevelopment';
+import useMobileDevelopment from '#constants/services/MobileDevelopment';
 
-const MobileApplicationTypes = () => (
-  <SectionApplicationTypes
-    sectionTitle={mobileApplicationTypes.title}
-    typesApplication={mobileApplicationTypes.typesApplication}
-    image={mobileApplicationTypes.image}
-    imageSizes={mobileApplicationTypes.imageSizes}
-  />
-);
+const MobileApplicationTypes = () => { 
+  const { mobileApplicationTypes } = useMobileDevelopment();
+  return (
+    <SectionApplicationTypes
+      sectionTitle={mobileApplicationTypes.title}
+      typesApplication={mobileApplicationTypes.typesApplication}
+      image={mobileApplicationTypes.image}
+      imageSizes={mobileApplicationTypes.imageSizes}
+    />
+  );
+};
 
 export default MobileApplicationTypes;

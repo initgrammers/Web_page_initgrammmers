@@ -2,10 +2,11 @@ import Image from 'next/image';
 import styles from '../styles/ImportanceApplications';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
-import { importanceApplications } from '#constants/services/MobileDevelopment';
+import useMobileDevelopment from '#constants/services/MobileDevelopment';
 import { Box, Grid, Typography } from '@mui/material';
 
 const ImportanceAplications = () => {
+  const { importanceApplications } = useMobileDevelopment();
   return (
     <Box component="section" position="relative" sx={styles.background}>
       <BackgroundImage
