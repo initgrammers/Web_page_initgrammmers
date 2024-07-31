@@ -1,189 +1,208 @@
-export const bannerPartnershipModels = {
-  backgroundImage:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque1.png',
-  heightImage: 696,
-  title: 'Modelos de Partnership',
-  description: 'Servicios de Desarrollo de Software: Tecnología que Impulsa tu Crecimiento',
-  image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1722371643/imagen_dev40u.png',
-  buttonColor: 'primary',
-};
+import { useTranslation } from "react-i18next";
 
-export const partnershipModelsBenefitsTypes = {
-  backgroundImage:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque3.png',
-  heightImage: 598,
-  backgroundGray: true,
-  title: 'Conoce nuestros modelos de partnership',
-  subTitle: 'Proyecto a Precio Fijo: Transparencia y Control',
-  description: 'Sin cargos ocultos ni sorpresas. Con nuestro modelo de proyecto a precio fijo, obtendrás claridad y seguridad desde el primer momento. Una vez que se ha firmado un contrato con un precio definido, puedes estar seguro de que los costos no cambiarán. Este modelo es ideal para proyectos con un alcance y requisitos claramente definidos, asegurando que obtengas exactamente lo que necesitas sin desviaciones presupuestarias.',
-  image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/beneficios-seo.png',
-  imageSizes: {
-    xs: {
-      width: 414,
-      height: 414,
-    },
-    sm: {
-      width: 414,
-      height: 414,
-    },
-    md: {
-      width: 414,
-      height: 414,
-    },
-    lg: {
-      width: 504,
-      height: 504,
-    },
-  },
-};
+const usePartnershipModels = () => {
+  const {t} = useTranslation();
 
-export const importancePartnershipModels = {
-  backgroundImage:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque2.png',
-  heightImage: 516,
-  title: 'Modelos de Partnership: Soluciones Personalizadas para tu Éxito',
-  description:
-    'Una asociación perfecta que entrega los resultados esperados de acuerdo a tus necesidades. Tenemos todo lo que necesitas para impulsar tu negocio al siguiente nivel. Nuestro compromiso es brindarte soluciones tecnológicas innovadoras y eficientes, adaptadas a las exigencias del mercado actual.',
-  titlePrimaryMain: true,
-  descriptionBlack: true,
-  image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1609854276/servicios/seo/importancia-seo.png',
-  imageSizes: {
+  const bannerPartnershipModels = {
+    backgroundImage:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque1.png',
+    heightImage: 696,
+    title: t('partnershipModelsBannerTitle'),
+    description: t('partnershipModelsBannerDescription'),
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1722371643/imagen_dev40u.png',
+    buttonColor: 'primary',
+  };
+  
+  const partnershipModelsBenefitsTypes = {
+    backgroundImage:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque3.png',
+    heightImage: 598,
+    backgroundGray: true,
+    title: t('partnershipModelsBenefitsTypesTitle'),
+    subTitle: t('partnershipModelsBenefitsTypesSubTitle'),
+    description: t('partnershipModelsBenefitsTypesDescription'),
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/beneficios-seo.png',
+    imageSizes: {
+      xs: {
+        width: 414,
+        height: 414,
+      },
+      sm: {
+        width: 414,
+        height: 414,
+      },
+      md: {
+        width: 414,
+        height: 414,
+      },
+      lg: {
+        width: 504,
+        height: 504,
+      },
+    },
+  };
+  
+  const importancePartnershipModels = {
+    backgroundImage:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque2.png',
+    heightImage: 516,
+    title: t('partnershipModelsImportanceTitle'),
+    description:
+      t('partnershipModelsImportanceDescription'),
+    titlePrimaryMain: true,
+    descriptionBlack: true,
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609854276/servicios/seo/importancia-seo.png',
+    imageSizes: {
+      xs: {
+        width: 288,
+        height: 222,
+      },
+      sm: {
+        width: 552,
+        height: 319,
+      },
+      md: {
+        width: 552,
+        height: 319,
+      },
+      lg: {
+        width: 504,
+        height: 388,
+      },
+    },
+    isImageRight: false,
+  };
+  
+  const whatIsPartnershipModels = {
+    backgroundImage:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque4.png',
+    heightImage: 632,
+    title: t('partnershipModelsWhatIsPartnershipModelsTitle'),
+    description:
+      t('partnershipModelsWhatIsPartnershipModelsDescription'),
+    titlePrimaryMain: true,
+    descriptionBlack: true,
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1722371642/Collab-rafiki_1_p5aoz5.png',
+    imageSizes: {
+      xs: {
+        width: 288,
+        height: 288,
+      },
+      sm: {
+        width: 414,
+        height: 414,
+      },
+      md: {
+        width: 414,
+        height: 414,
+      },
+      lg: {
+        width: 504,
+        height: 504,
+      },
+    },
+    isImageRight: false,
+  };
+  
+  const becomeYourTeam = {
+    backgroundImage:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque5.png',
+    heightImage: 732,
+    title: t('partnershipModelsBecomeYourTeamTitle'),
+    description:
+      t('partnershipModelsBecomeYourTeamDescription'),
+    titlePrimaryMain: true,
+    descriptionBlack: true,
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1722371642/Company-amico_1_qm737a.png',
+    imageSizes: {
+      xs: {
+        width: 288,
+        height: 288,
+      },
+      sm: {
+        width: 414,
+        height: 414,
+      },
+      md: {
+        width: 414,
+        height: 414,
+      },
+      lg: {
+        width: 504,
+        height: 504,
+      },
+    },
+    isImageRight: true,
+    backgroundPrimaryFade: true
+  }
+  
+  const imageSizesOportunitiesPartnershipModels = {
     xs: {
       width: 288,
-      height: 222,
+      height: 235,
     },
     sm: {
       width: 552,
-      height: 319,
+      height: 449,
     },
     md: {
-      width: 552,
-      height: 319,
+      width: 544,
+      height: 443,
     },
     lg: {
-      width: 504,
-      height: 388,
+      width: 608,
+      height: 496,
     },
-  },
-  isImageRight: false,
-};
+  };
+  const oportunitiePartnershipModels = {
+    titlePart1: t('partnershipModelsOportunitieTitlePart1'),
+    titlePart2: t('partnershipModelsOportunitieTitlePart2'),
+    description:
+      t('partnershipModelsOportunitieDescription'),
+    image:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/oportunidades-para-negocio.png',
+    backgroundImage:
+      'https://res.cloudinary.com/initgrammers/image/upload/v1609856760/servicios/marketing-digital/figures/bloque4.png',
+    heightImage: 895,
+    imageSizes: imageSizesOportunitiesPartnershipModels,
+  };
+  
+  const questions = [
+    {
+      id: 0,
+      title: t('question2'),
+      details:
+        t('detailsQuestion2'),
+    },
+    {
+      id: 1,
+      title: t('question6'),
+      details:
+        t('detailsQuestion6'),
+    },
+  ];
+  
+  const FAQPartnershipModels = {
+    titlePart1: t('partnershipModelsFAQTitlePart1'),
+    titlePart2: t('partnershipModelsFAQTitlePart2'),
+    questions,
+  };
 
-export const whatIsPartnershipModels = {
-  backgroundImage:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque4.png',
-  heightImage: 632,
-  title: 'Extensión de tu Equipo: Potencia tu Desarrollo',
-  description:
-    'No pierdas oportunidades en un mercado competitivo. Con nuestro modelo de extensión de equipo, nos unimos a tu equipo de desarrollo para ayudarte a completar tareas y alcanzar tus objetivos más rápidamente. Este enfoque flexible permite escalar tus capacidades de desarrollo sin los costos y complicaciones de contratar personal adicional. Nos adaptamos a tu cultura de trabajo y a tus procesos, asegurando una integración fluida y productiva.',
-  titlePrimaryMain: true,
-  descriptionBlack: true,
-  image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1722371642/Collab-rafiki_1_p5aoz5.png',
-  imageSizes: {
-    xs: {
-      width: 288,
-      height: 288,
-    },
-    sm: {
-      width: 414,
-      height: 414,
-    },
-    md: {
-      width: 414,
-      height: 414,
-    },
-    lg: {
-      width: 504,
-      height: 504,
-    },
-  },
-  isImageRight: false,
-};
+  return {
+    bannerPartnershipModels,
+    partnershipModelsBenefitsTypes,
+    importancePartnershipModels,
+    whatIsPartnershipModels,
+    becomeYourTeam,
+    oportunitiePartnershipModels,
+    questions,
+    FAQPartnershipModels,
+  }
+}
 
-export const becomeYourTeam = {
-  backgroundImage:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque5.png',
-  heightImage: 732,
-  title: 'Nos Convertimos en tu Equipo: Compromiso Total',
-  description:
-    'Más que un simple proveedor, nos convertimos en tu equipo de tecnología, desarrollo y programación. Estamos comprometidos con ayudarte a alcanzar el éxito, trabajando codo a codo contigo para desarrollar soluciones innovadoras y efectivas. Este modelo es perfecto para empresas que buscan un socio tecnológico estratégico a largo plazo, ofreciendo un soporte completo y dedicado para todas tus necesidades de software y desarrollo de aplicaciones móviles.',
-  titlePrimaryMain: true,
-  descriptionBlack: true,
-  image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1722371642/Company-amico_1_qm737a.png',
-  imageSizes: {
-    xs: {
-      width: 288,
-      height: 288,
-    },
-    sm: {
-      width: 414,
-      height: 414,
-    },
-    md: {
-      width: 414,
-      height: 414,
-    },
-    lg: {
-      width: 504,
-      height: 504,
-    },
-  },
-  isImageRight: true,
-  backgroundPrimaryFade: true,
-};
-
-const imageSizesOportunitiesPartnershipModels = {
-  xs: {
-    width: 288,
-    height: 235,
-  },
-  sm: {
-    width: 552,
-    height: 449,
-  },
-  md: {
-    width: 544,
-    height: 443,
-  },
-  lg: {
-    width: 608,
-    height: 496,
-  },
-};
-export const oportunitiePartnershipModels = {
-  titlePart1: 'Alcanza tus objetivos, ',
-  titlePart2: 'y déjanos ser tu equipo de programación',
-  description:
-    'Ponte en contacto con nosotros',
-  image:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/oportunidades-para-negocio.png',
-  backgroundImage:
-    'https://res.cloudinary.com/initgrammers/image/upload/v1609856760/servicios/marketing-digital/figures/bloque4.png',
-  heightImage: 895,
-  imageSizes: imageSizesOportunitiesPartnershipModels,
-};
-
-export const questions = [
-  {
-    id: 0,
-    title: '¿En qué consisten los modelos de partnership?',
-    details:
-      'Un modelo de partnership nos permite adaptarnos a tus necesidades para ofrecerte el mejor servicio, esta asociación puede ser un proyecto a precio fijo con contratos establecidos, o podemos unirnos a tu equipo de desarrollo para brindar una mano. ¿No tienes equipo de IT? No hay problema, podemos convertirnos en tu equipo de tecnología para ayudarte a completar los proyectos.',
-  },
-  {
-    id: 1,
-    title: '¿Cuánto tiempo se tardan en desarrollar un proyecto?',
-    details:
-      'Dependiendo de los requerimientos del proyecto y los servicios que requieran, sea programación, diseño, guías de marca, etc. Un proyecto puede variar su duración, contáctanos para recibir una estimación de costos y tiempo de tu proyecto. ',
-  },
-];
-
-export const FAQPartnershipModels = {
-  titlePart1: 'Preguntas',
-  titlePart2: 'frecuentes',
-  questions,
-};
+export default usePartnershipModels;
