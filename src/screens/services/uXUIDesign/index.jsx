@@ -5,7 +5,7 @@ import UxUiDesignSeo from '#constants/seo/UxUiDesign';
 import Organization from '#Components/StructuredData/Organization';
 import WebSite from '#Components/StructuredData/WebSite';
 import Article from '#Components/StructuredData/Article';
-import { innovateDesign } from '#constants/services/UxUiDesign';
+import useUxUiDesign from '#constants/services/UxUiDesign';
 
 const InnovativeDesign = dynamic(() => import('./sections/InnovativeDesign'));
 const UxUiDesign = dynamic(() => import('./sections/UxUiDesign'));
@@ -18,25 +18,27 @@ const UnforgettableExperiences = dynamic(() =>
 );
 const Questions = dynamic(() => import('./sections/Questions'));
 
-const index = () => (
-  <>
-    <Banner />
-    <InnovativeDesign />
-    <UxUiDesign />
-    <SliderTech />
-    <DesignAdaptedToYourBrand />
-    <UnforgettableExperiences />
-    <Questions />
+const index = () => { 
+  const { innovateDesign } = useUxUiDesign();
+  return (
+    <>
+      <Banner />
+      <InnovativeDesign />
+      <UxUiDesign />
+      <SliderTech />
+      <DesignAdaptedToYourBrand />
+      <UnforgettableExperiences />
+      <Questions />
 
-    <Organization />
-    <WebSite title={UxUiDesignSeo.title} url={UxUiDesignSeo.urlAltern} />
-    <Article
-      title={UxUiDesignSeo.title}
-      description={UxUiDesignSeo.description}
-      url={UxUiDesignSeo.urlAltern}
-      mainArticle={innovateDesign.description}
-    />
-  </>
-);
-
+      <Organization />
+      <WebSite title={UxUiDesignSeo.title} url={UxUiDesignSeo.urlAltern} />
+      <Article
+        title={UxUiDesignSeo.title}
+        description={UxUiDesignSeo.description}
+        url={UxUiDesignSeo.urlAltern}
+        mainArticle={innovateDesign.description}
+      />
+    </>
+  );
+};
 export default index;
