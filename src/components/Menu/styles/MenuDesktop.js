@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import theme from '../../../shared/config/MuiThemeProvider/theme'
+import theme from '../../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   menuApp: {
@@ -10,7 +10,7 @@ const styles = {
   languageMenu: {
     display: 'flex',
     flexDirection: 'column',
-    width: 'fit-content'
+    width: 'fit-content',
   },
   button: {
     textTransform: 'capitalize',

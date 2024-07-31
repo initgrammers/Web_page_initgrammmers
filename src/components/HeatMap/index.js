@@ -1,41 +1,25 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-const handleRouteChange = () => {
-  (function (c, l, a, r, i, t, y) {
-    c[a] =
-      c[a] ||
-      function () {
-        (c[a].q = c[a].q || []).push(arguments);
-      };
-    t = l.createElement(r);
-    t.async = 1;
-    t.src = `https://www.clarity.ms/tag/${i}`;
-    y = l.getElementsByTagName(r)[0];
-    y.parentNode.insertBefore(t, y);
-  })(window, document, 'clarity', 'script', '5j6xtz09j7');
-};
+function loadClarityScript(id) { // Función con nombre
+  // const clarity = window.clarity || (window.clarity = { q: [] });
+  const script = document.createElement('script');
+  script.async = 1;
+  script.src = `https://www.clarity.ms/tag/${id}`;
+  const [firstScript] = document.getElementsByTagName('script'); // Destructuring
+  firstScript.parentNode.insertBefore(script, firstScript);
+}
 
 const HeatMap = ({ children }) => {
   const router = useRouter();
 
   useEffect(() => {
-    (function (c, l, a, r, i, t, y) {
-      c[a] =
-        c[a] ||
-        function () {
-          (c[a].q = c[a].q || []).push(arguments);
-        };
-      t = l.createElement(r);
-      t.async = 1;
-      t.src = `https://www.clarity.ms/tag/${i}`;
-      y = l.getElementsByTagName(r)[0];
-      y.parentNode.insertBefore(t, y);
-    })(window, document, 'clarity', 'script', '5j6xtz09j7');
+    loadClarityScript('5j6xtz09j7'); // Llamando a la función
 
-    router.events.on('routeChangeComplete', handleRouteChange);
+    router.events.on('routeChangeComplete', () => loadClarityScript('5j6xtz09j7')); // Lambda para consistencia
+
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
+      router.events.off('routeChangeComplete', () => loadClarityScript('5j6xtz09j7'));
     };
   }, [router.events]);
 

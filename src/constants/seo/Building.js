@@ -2,13 +2,11 @@ import routes from '#app/routes';
 
 const title = 'En Construcción | InitGrammers';
 
-const description =
-  'Estamos en construcción, navega y conoce más sobre nuestros servicios | Initgrammers';
+const description = 'Estamos en construcción, navega y conoce más sobre nuestros servicios | Initgrammers';
 
 const url = `https://initgrammers.com${routes.services.trainings}`;
 
-const image =
-  'https://seo-web-page.web.app/assets/images/desarrollo-aplicaciones-web-ecuador.jpg';
+const image = 'https://seo-web-page.web.app/assets/images/desarrollo-aplicaciones-web-ecuador.jpg';
 
 const BuildingSEO = {
   title,

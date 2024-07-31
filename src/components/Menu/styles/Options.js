@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
-import theme from '../../../shared/config/MuiThemeProvider/theme'
 import { alpha } from '@mui/material/styles';
-
+import theme from '../../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   root: {
@@ -18,7 +17,7 @@ const styles = {
     background: 'transparent',
     justifyContent: 'flex-start',
     border: 'none',
-    color: theme.palette.common.black
+    color: theme.palette.common.black,
   },
   title: {
     marginBottom: theme.spacing(5),
@@ -48,13 +47,13 @@ const styles = {
     paddingLeft: theme.spacing(2),
     display: 'flex',
     flexDirection: 'column',
-    color: theme.palette.common.black
+    color: theme.palette.common.black,
   },
   selected: {
     color: theme.palette.primary.main,
     border: 0,
     background: 'rgba(0,0,0,0.1)',
-    borderRadius: "5px",
+    borderRadius: '5px',
   },
 };
 

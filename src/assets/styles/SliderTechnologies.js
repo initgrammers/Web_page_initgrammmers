@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-import theme from '../../shared/config/MuiThemeProvider/theme'
+import theme from '../../shared/config/MuiThemeProvider/theme';
 
-const styles ={
+const styles = {
   mainContent: {
     display: 'flex',
     justifyContent: 'center',
     position: 'relative',
     zIndex: 1,
-    padding: { xs: `0 ${theme.spacing(2)}`, sm: `0 ${theme.spacing(3)}`, md: `0 ${theme.spacing(26)}`, lg: `0 ${theme.spacing(16)}`},
+    padding: { xs: `0 ${theme.spacing(2)}`, sm: `0 ${theme.spacing(3)}`, md: `0 ${theme.spacing(26)}`, lg: `0 ${theme.spacing(16)}` },
   },
   backgroundGray: {
     background: '#EBEBEB',

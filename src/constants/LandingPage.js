@@ -1,5 +1,5 @@
-import routes from '#app/routes/';
 import { useTranslation } from 'react-i18next';
+import routes from '#app/routes/';
 
 const useLandingPage = () => {
   const { t } = useTranslation();
@@ -19,7 +19,7 @@ const useLandingPage = () => {
       'https://res.cloudinary.com/initgrammers/image/upload/v1606839723/LandingPage/figures/bloque2.png',
     heightImage: 628,
     title: t('onlineSolutionTitle'),
-    description:t('onlineSolutionDescription'),
+    description: t('onlineSolutionDescription'),
     image:
       'https://res.cloudinary.com/initgrammers/image/upload/v1609863472/LandingPage/solucion-en-linea.png',
     titlePrimaryMain: true,
@@ -50,25 +50,25 @@ const useLandingPage = () => {
       path:
         'https://res.cloudinary.com/initgrammers/image/upload/v1606839967/LandingPage/proyecto-precio-fijo.png',
       title: t('partnershipModelsTitle1'),
-      description: t('partnershipModelsDescription1')
+      description: t('partnershipModelsDescription1'),
     },
     {
       path:
         'https://res.cloudinary.com/initgrammers/image/upload/v1606839967/LandingPage/extension-de-tu-equipo.png',
       title: t('partnershipModelsTitle2'),
-      description: t('partnershipModelsDescription2')
+      description: t('partnershipModelsDescription2'),
     },
     {
       path:
         'https://res.cloudinary.com/initgrammers/image/upload/v1606839967/LandingPage/nos-convertimos-en-tu-equipo.png',
       title: t('partnershipModelsTitle3'),
-      description: t('partnershipModelsDescription3')
+      description: t('partnershipModelsDescription3'),
     },
   ];
 
   const partnershipModel = {
     title: t('partnershipModelTitle'),
-    description:t('partnershipModelDescription'),
+    description: t('partnershipModelDescription'),
     image:
       'https://res.cloudinary.com/initgrammers/image/upload/v1609863472/LandingPage/modelo-partnership.png',
     backgroundImage:
@@ -177,42 +177,42 @@ const useLandingPage = () => {
     {
       id: 0,
       title: t('question1'),
-      details:t('detailsQuestion1')
+      details: t('detailsQuestion1'),
     },
     {
       id: 1,
       title: t('question2'),
-      details:t('detailsQuestion2')
+      details: t('detailsQuestion2'),
     },
     {
       id: 2,
       title: t('question3'),
-      details:t('detailsQuestion3')
+      details: t('detailsQuestion3'),
     },
     {
       id: 3,
       title: t('question4'),
-      details:t('detailsQuestion4')
+      details: t('detailsQuestion4'),
     },
     {
       id: 4,
       title: t('question5'),
-      details:t('detailsQuestion5')
+      details: t('detailsQuestion5'),
     },
     {
       id: 5,
       title: t('question6'),
-      details:t('detailsQuestion6')
+      details: t('detailsQuestion6'),
     },
     {
       id: 6,
       title: t('question7'),
-      details:t('detailsQuestion7')
+      details: t('detailsQuestion7'),
     },
     {
       id: 7,
       title: t('question8'),
-      details:t('detailsQuestion8')
+      details: t('detailsQuestion8'),
     },
   ];
 

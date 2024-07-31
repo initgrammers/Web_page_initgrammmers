@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import theme from '../../../shared/config/MuiThemeProvider/theme'
+import theme from '../../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   section: {
@@ -7,7 +7,7 @@ const styles = {
     padding: { xs: theme.spacing(4, 0), sm: theme.spacing(5, 0), lg: theme.spacing(8, 0) },
   },
   team: {
-    width: "106%",
+    width: '106%',
     display: 'flex',
     flexWrap: 'wrap',
     gap: { xs: '20px' },
@@ -17,7 +17,7 @@ const styles = {
   title: {
     color: theme.palette.primary.light,
     paddingBottom: theme.spacing(4),
-    fontSize: { xs: "1.5rem", sm: "1.6667rem", md: "1.875rem", lg: "2.0833rem" }
+    fontSize: { xs: '1.5rem', sm: '1.6667rem', md: '1.875rem', lg: '2.0833rem' },
   },
 };
 

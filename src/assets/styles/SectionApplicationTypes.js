@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import theme from '../../shared/config/MuiThemeProvider/theme'
+import theme from '../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   mainSection: {
@@ -30,7 +30,7 @@ const styles = {
     textAlign: 'center',
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(2),
-    fontSize: { xs: "1.5rem", sm: "1.6667rem", md: "1.875rem", lg: "2.0833rem" }
+    fontSize: { xs: '1.5rem', sm: '1.6667rem', md: '1.875rem', lg: '2.0833rem' },
   },
   containerImage: {
     position: 'relative',
@@ -44,13 +44,13 @@ const styles = {
     alignItems: { lg: 'flex-end' },
   },
   image: ({ xs, sm, md, lg }) => ({
-    width:  { xs: xs.width, sm: sm.width, md: md.width, lg: lg.width},
-    height:  { xs: xs.height, sm: sm.height, md: md.height, lg: lg.height},
+    width: { xs: xs.width, sm: sm.width, md: md.width, lg: lg.width },
+    height: { xs: xs.height, sm: sm.height, md: md.height, lg: lg.height },
     position: 'relative',
   }),
   container: {
-    display: { lg: 'flex'},
-    width: { xs: 566, sm: 552, md: 544, lg: 1024 }
+    display: { lg: 'flex' },
+    width: { xs: 566, sm: 552, md: 544, lg: 1024 },
   },
   detailsSingleContent: {
     color: theme.palette.primary.contrastText,

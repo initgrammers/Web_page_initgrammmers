@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import theme from '../../shared/config/MuiThemeProvider/theme'
+import theme from '../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   root: {
@@ -20,7 +20,7 @@ const styles = {
     textAlign: 'center',
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(2),
-    fontSize: { xs: "1.5rem", sm: "1.6667rem", md: "1.875rem", lg: "2.0833rem" }
+    fontSize: { xs: '1.5rem', sm: '1.6667rem', md: '1.875rem', lg: '2.0833rem' },
   },
   button: {
     color: 'white',

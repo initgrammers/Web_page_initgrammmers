@@ -2,12 +2,10 @@ import routes from '#app/routes';
 
 const title = 'Modelos de Partnership | Initgrammers';
 
-const description =
-  'Servicios de Desarrollo de Software: Tecnología que Impulsa tu Crecimiento';
+const description = 'Servicios de Desarrollo de Software: Tecnología que Impulsa tu Crecimiento';
 const url = `https://initgrammers.com${routes.services.partnershipModels}`;
 
-const image =
-  'https://seo-web-page.web.app/assets/images/posicionamiento-motores-busqueda.jpg';
+const image = 'https://seo-web-page.web.app/assets/images/posicionamiento-motores-busqueda.jpg';
 
 const SEOsearch = {
   title,

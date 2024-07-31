@@ -10,7 +10,7 @@ export const contactsLinks = {
   aboutUsPage: '/contact-us',
   consulting: '/contact-us',
   teamMessage: '/contact-us',
-  writeUs:'/contact-us',
+  writeUs: '/contact-us',
   startProject: '/contact-us',
   callUs: '/contact-us',
 };

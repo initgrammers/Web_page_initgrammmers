@@ -1,7 +1,7 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 const useWebDevelopment = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   const bannerWebDevelopment = {
     backgroundImage:
@@ -14,7 +14,7 @@ const useWebDevelopment = () => {
     image:
       'https://res.cloudinary.com/initgrammers/image/upload/v1609857584/servicios/desarrollo-web/paginas-web-desarrollo-diseno-aplicaciones-web-ecuador.png',
   };
-  
+
   const visibilityCompany = {
     title: t('webDevelopmentVisibilityTitle'),
     description: t('webDevelopmentVisibilityDescription'),
@@ -24,10 +24,10 @@ const useWebDevelopment = () => {
       'https://res.cloudinary.com/initgrammers/image/upload/v1609857474/servicios/desarrollo-web/figures/bloque2.png',
     heightImage: 511,
   };
-  
+
   const needAnUpdateWebDevelopment = {
     title: t('webDevelopmentNeedUpdateTitle'),
-    description:t('webDevelopmentNeedUpdateDescription'),
+    description: t('webDevelopmentNeedUpdateDescription'),
     image:
       'https://res.cloudinary.com/initgrammers/image/upload/v1618505016/servicios/desarrollo-web/necesitas-una-actualizacion-web.png',
     backgroundImage:
@@ -35,7 +35,7 @@ const useWebDevelopment = () => {
     ornamentImage:
       'https://res.cloudinary.com/initgrammers/image/upload/v1609857474/servicios/desarrollo-web/figures/dino.png',
   };
-  
+
   const webTechnologies = [
     {
       label: 'HTML 5',
@@ -68,12 +68,12 @@ const useWebDevelopment = () => {
         'https://res.cloudinary.com/initgrammers/image/upload/v1606844120/servicios/desarrollo-web/next-js.svg',
     },
   ];
-  
+
   const sliderWebTechnologies = {
     title: t('webDevelopmentSliderWebTechnologiesTitle'),
     technologies: webTechnologies,
   };
-  
+
   const typesApplication = [
     {
       title: t('webDevelopmentTypesApplicationTitle1'),
@@ -96,7 +96,7 @@ const useWebDevelopment = () => {
     //   description: t('webDevelopmentTypesApplicationDescription5'),
     // },
   ];
-  
+
   const webApplicationTypes = {
     backgroundPrimaryLight: true,
     title: t('webDevelopmentWebApplicationTypeTitle'),
@@ -122,7 +122,7 @@ const useWebDevelopment = () => {
       },
     },
   };
-  
+
   const imageSizesPartOfInternet = {
     xs: {
       width: 288,
@@ -141,7 +141,7 @@ const useWebDevelopment = () => {
       height: 496,
     },
   };
-  
+
   const partOfInternet = {
     titlePart1: t('webDevelopmentPOITitle1'),
     titlePart2: t('webDevelopmentPOITitle2'),
@@ -154,7 +154,7 @@ const useWebDevelopment = () => {
     heightImage: 944,
     imageSizes: imageSizesPartOfInternet,
   };
-  
+
   const questions = [
     {
       id: 0,
@@ -192,7 +192,7 @@ const useWebDevelopment = () => {
       details: t('webDevelopmentDetailQuestion7'),
     },
   ];
-  
+
   const FAQWeb = {
     titlePart1: t('FAQTitle1'),
     titlePart2: t('FAQTitle2'),
@@ -207,8 +207,8 @@ const useWebDevelopment = () => {
     webApplicationTypes,
     partOfInternet,
     questions,
-    FAQWeb
-  }
-}
+    FAQWeb,
+  };
+};
 
 export default useWebDevelopment;

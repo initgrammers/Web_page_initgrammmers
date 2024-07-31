@@ -45,7 +45,6 @@ const teamPlayer = [
   },
 ];
 
-
 const useAboutUs = () => {
   const { t } = useTranslation();
 
@@ -103,7 +102,6 @@ const useAboutUs = () => {
       isBorderSecondary: false,
     },
   ];
-  
 
   const bannerAboutUs = {
     backgroundImage:

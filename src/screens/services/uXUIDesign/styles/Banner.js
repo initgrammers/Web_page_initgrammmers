@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import theme from '../../../../shared/config/MuiThemeProvider/theme'
+import theme from '../../../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   content: {
     display: { lg: 'flex' },
-    paddingTop: { xs: theme.spacing(4), sm: theme.spacing(8), lg: theme.spacing(0)},
+    paddingTop: { xs: theme.spacing(4), sm: theme.spacing(8), lg: theme.spacing(0) },
   },
   description: {
     padding: `${theme.spacing(4)} 0`,
@@ -20,8 +20,8 @@ const styles = {
     justifyContent: 'center',
   },
   image: {
-    width:  { xs: 288, sm: 412, lg: 504},
-    height:  { xs: 343, sm: 490, lg: 600},
+    width: { xs: 288, sm: 412, lg: 504 },
+    height: { xs: 343, sm: 490, lg: 600 },
     position: 'relative',
     bottom: `-${theme.spacing(8)}`,
   },

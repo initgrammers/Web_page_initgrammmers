@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 const useUxUiDesign = () => {
   const { t } = useTranslation();
@@ -73,7 +73,7 @@ const useUxUiDesign = () => {
     titlePrimaryMain: true,
     descriptionBlack: true,
   };
-  
+
   const uxUiTechnologies = [
     {
       label: 'Figma',
@@ -96,7 +96,7 @@ const useUxUiDesign = () => {
         'https://res.cloudinary.com/initgrammers/image/upload/v1607085341/servicios/diseno-ux-ui/adobe-illustrator.svg',
     },
   ];
-  
+
   const sliderUxUiTechnologies = {
     backgroundImage:
       'https://res.cloudinary.com/initgrammers/image/upload/v1606844370/servicios/diseno-ux-ui/figures/bloque4.png',
@@ -104,7 +104,7 @@ const useUxUiDesign = () => {
     title: t('uxuiDesignSliderUxUiTechnologiesTitle'),
     technologies: uxUiTechnologies,
   };
-  
+
   const uniqueDesignAdaptedToYourBrand = {
     title: t('uxuiDesignUniqueDesignAdaptedToYourBrandTitle'),
     description:
@@ -134,7 +134,7 @@ const useUxUiDesign = () => {
     titlePrimaryMain: true,
     descriptionBlack: true,
   };
-  
+
   const unforgetableExperiences = {
     titlePart1: t('uxuiDesignUnforgetableExperiencesTitlePart1'),
     titlePart2: t('uxuiDesignUnforgetableExperiencesTitlePart2'),
@@ -164,7 +164,7 @@ const useUxUiDesign = () => {
       },
     },
   };
-  
+
   const questions = [
     {
       id: 0,
@@ -197,7 +197,7 @@ const useUxUiDesign = () => {
         t('uxuiDesignDetailsQuestion4'),
     },
   ];
-  
+
   const FAQUxUiDesign = {
     titlePart1: t('uxuiDesignFAQUxUiDesignTitlePart1'),
     titlePart2: t('uxuiDesignFAQUxUiDesignTitlePart2'),
@@ -211,8 +211,8 @@ const useUxUiDesign = () => {
     sliderUxUiTechnologies,
     uniqueDesignAdaptedToYourBrand,
     unforgetableExperiences,
-    FAQUxUiDesign
-  }
-}
+    FAQUxUiDesign,
+  };
+};
 
 export default useUxUiDesign;

@@ -8,14 +8,14 @@ export function initialize(pixelId) {
   // Verificamos si fbq ya está definido para evitar múltiples inicializaciones
   if (typeof window !== 'undefined' && !window.fbq) {
     // Creamos un array temporal para almacenar eventos antes de que fbq esté listo
-    window.fbq = function() {
+    window.fbq = function () {
       (window.fbq.queue = window.fbq.queue || []).push(arguments);
     };
 
     // Cargamos el script de Facebook Pixel de forma asíncrona
     const script = document.createElement('script');
     script.async = true;
-    script.src = `https://connect.facebook.net/en_US/fbevents.js`;
+    script.src = 'https://connect.facebook.net/en_US/fbevents.js';
     document.head.appendChild(script);
 
     // Inicializamos fbq y procesamos los eventos en cola
@@ -27,7 +27,7 @@ export function initialize(pixelId) {
       window.fbq.queue.forEach((args) => fbq.apply(null, args));
 
       // Reasignamos fbq para su comportamiento normal
-      window.fbq = function() {
+      window.fbq = function () {
         window.fbq.callMethod
           ? window.fbq.callMethod.apply(window.fbq, arguments)
           : window.fbq.queue.push(arguments);
@@ -41,7 +41,7 @@ export function pageview() {
     if (window.fbq) {
       window.fbq('track', 'PageView');
     } else {
-      window.fbq = function() {
+      window.fbq = function () {
         (window.fbq.queue = window.fbq.queue || []).push(arguments);
       };
       window.fbq('track', 'PageView');
@@ -54,7 +54,7 @@ export function event(name, options = {}) {
     if (window.fbq) {
       window.fbq('track', name, options);
     } else {
-      window.fbq = function() {
+      window.fbq = function () {
         (window.fbq.queue = window.fbq.queue || []).push(arguments);
       };
       window.fbq('track', name, options);

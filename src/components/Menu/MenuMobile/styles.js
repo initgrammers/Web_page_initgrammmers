@@ -1,4 +1,4 @@
-import theme from '../../../shared/config/MuiThemeProvider/theme'
+import theme from '../../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   sectionLogo: {

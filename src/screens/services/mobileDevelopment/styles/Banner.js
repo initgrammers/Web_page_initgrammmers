@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import theme from '../../../../shared/config/MuiThemeProvider/theme'
+import theme from '../../../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   mainSection: {
@@ -29,8 +29,8 @@ const styles = {
     flex: { lg: 5 },
   },
   image: {
-    width:  { xs: 288, sm: 414, lg: 504},
-    height:  { xs: 381, sm: 557, lg: 679},
+    width: { xs: 288, sm: 414, lg: 504 },
+    height: { xs: 381, sm: 557, lg: 679 },
     position: 'relative',
     bottom: `-${theme.spacing(8)}`,
     marginTop: { lg: `-${theme.spacing(2)}` },
@@ -39,7 +39,7 @@ const styles = {
     display: { lg: 'flex' },
     position: { lg: 'relative' },
     zIndex: { lg: 1 },
-    padding: { md: `0 ${theme.spacing(23)}`, lg: `0 ${theme.spacing(13)}`},
+    padding: { md: `0 ${theme.spacing(23)}`, lg: `0 ${theme.spacing(13)}` },
   },
   containerBackgroundImage: {
     width: '100%',

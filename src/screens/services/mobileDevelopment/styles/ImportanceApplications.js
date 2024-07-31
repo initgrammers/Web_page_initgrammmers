@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import theme from '../../../../shared/config/MuiThemeProvider/theme'
+import theme from '../../../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   background: {
@@ -22,7 +22,7 @@ const styles = {
   gridImage: {
     display: 'flex',
     justifyContent: 'center',
-    paddingTop: { xs: theme.spacing(4), md: theme.spacing(6)},
+    paddingTop: { xs: theme.spacing(4), md: theme.spacing(6) },
   },
   image: {
     width: { xs: 288, lg: 504 },

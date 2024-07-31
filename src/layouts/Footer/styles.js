@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import theme from '../../shared/config/MuiThemeProvider/theme'
+import theme from '../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   root: {
@@ -41,7 +41,7 @@ const styles = {
   section: {
     marginBottom: theme.spacing(2),
     fontWeight: 'bold',
-    fontSize: '1rem'
+    fontSize: '1rem',
   },
   descriptionContact: {
     marginTop: theme.spacing(3),
@@ -90,7 +90,7 @@ const styles = {
     },
     [theme.breakpoints.up('lg')]: {
       marginBottom: 4,
-      marginLeft: 0
+      marginLeft: 0,
     },
   },
 

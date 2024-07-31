@@ -1,12 +1,10 @@
 import routes from '#app/routes';
 
 const title = 'Desarrollo de aplicaciones móviles en Ecuador | Initgrammers';
-const description =
-  'Diseño y desarrollo de aplicaciones móviles nativas, web (PWA), híbridas, para dispositivos Android y iOS en Ecuador, usamos tecnologías actuales';
+const description = 'Diseño y desarrollo de aplicaciones móviles nativas, web (PWA), híbridas, para dispositivos Android y iOS en Ecuador, usamos tecnologías actuales';
 const url = `https://initgrammers.com${routes.services.mobileDevelopment}`;
 
-const image =
-  'https://seo-web-page.web.app/assets/images/desarrollo-aplicaciones-web-ecuador.jpg';
+const image = 'https://seo-web-page.web.app/assets/images/desarrollo-aplicaciones-web-ecuador.jpg';
 
 const MobileDevelopmentSEO = {
   title,

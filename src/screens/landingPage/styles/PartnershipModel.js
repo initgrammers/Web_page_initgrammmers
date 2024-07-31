@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import theme from '../../../shared/config/MuiThemeProvider/theme'
+import theme from '../../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   section: {
-    background: `rgba(163, 18, 91, 0.04)`,
+    background: 'rgba(163, 18, 91, 0.04)',
   },
   content: {
     display: 'flex',
@@ -71,7 +71,7 @@ const styles = {
     services: {
       display: 'flex',
       justifyContent: 'space-between',
-      width: `100%`,
+      width: '100%',
     },
     modelPartnership: {
       '&:nth-of-type(1n)': {

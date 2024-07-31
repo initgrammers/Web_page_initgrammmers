@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import theme from '../../shared/config/MuiThemeProvider/theme'
+import theme from '../../shared/config/MuiThemeProvider/theme';
 
-const styles ={
+const styles = {
   imagesContent: {
     display: 'flex',
     flex: 1,

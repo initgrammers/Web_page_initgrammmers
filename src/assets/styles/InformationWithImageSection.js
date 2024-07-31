@@ -15,15 +15,15 @@ const styles = {
     background: theme.palette.primary.fade,
   },
 
-  container: ( isImageRight ) => ({
+  container: (isImageRight) => ({
     display: 'flex',
-    padding: { xs: `${theme.spacing(4, 0)}`, sm: `${theme.spacing(5)} 0`, lg: 0},
+    padding: { xs: `${theme.spacing(4, 0)}`, sm: `${theme.spacing(5)} 0`, lg: 0 },
     flexDirection: { xs: `${isImageRight ? 'column' : 'column-reverse'}`, lg: `${isImageRight ? 'row' : 'row-reverse'}` },
   }),
   image: ({ xs, sm, md, lg }) => ({
-    width:  { xs: xs.width, sm: sm.width, md: md.width, lg: lg.width},
-    height:  { xs: xs.height, sm: sm.height, md: md.height, lg: lg.height},
-    position: 'relative'
+    width: { xs: xs.width, sm: sm.width, md: md.width, lg: lg.width },
+    height: { xs: xs.height, sm: sm.height, md: md.height, lg: lg.height },
+    position: 'relative',
   }),
   title: {
     color: theme.palette.primary.contrastText,
@@ -41,7 +41,7 @@ const styles = {
     color: theme.palette.primary.contrastText,
   },
 
-  containerImage: ( isImageRight ) => ({
+  containerImage: (isImageRight) => ({
     display: 'flex',
     justifyContent: 'center',
     flex: { lg: 5 },
@@ -50,17 +50,17 @@ const styles = {
         isImageRight
           ? `${theme.spacing(4)} 0 0 0`
           : `0 0 ${theme.spacing(5)} 0`
-        }`,
+      }`,
       sm: `${
         isImageRight
           ? `${theme.spacing(5)} 0 0 0`
           : `0 0 ${theme.spacing(5)} 0`
-        }`,
+      }`,
       lg: `${theme.spacing(8)} 0 !important`,
     },
   }),
-  detailsContent: ( isImageRight ) => ({
-    width:  { xs: 552, sm: 544, lg: 504},
+  detailsContent: (isImageRight) => ({
+    width: { xs: 552, sm: 544, lg: 504 },
     flex: { lg: 5 },
     display: { lg: 'flex' },
     flexDirection: { lg: 'column' },
@@ -70,10 +70,10 @@ const styles = {
       !isImageRight
         ? `0 0 0 ${theme.spacing(2)}`
         : `0 ${theme.spacing(2)} 0 0`
-    }`},
+    }` },
     paddingRight: { lg: theme.spacing(2) },
   }),
-}
+};
 
 styles.propTypes = {
   theme: PropTypes.shape(),

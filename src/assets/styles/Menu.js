@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
-import theme from '../../shared/config/MuiThemeProvider/theme'
+import theme from '../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   appbar: { background: 'red', position: 'relative' },
   main: {
     background: theme.palette.primary.contrastText,
-    filter: { xs: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))', lg: 'drop-shadow(9px 9px 16px rgba(0, 0, 0, 0.25))'},
+    filter: { xs: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))', lg: 'drop-shadow(9px 9px 16px rgba(0, 0, 0, 0.25))' },
     color: theme.palette.common.black,
   },
   sectionLogo: {
     display: 'flex',
     flex: 1,
-    justifyContent: { xs: 'start', sm: 'center'},
+    justifyContent: { xs: 'start', sm: 'center' },
   },
   menuDesktopContainer: {
     display: { xs: 'none', md: 'flex' },

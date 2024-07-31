@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import theme from '../../shared/config/MuiThemeProvider/theme'
+import theme from '../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   cardPurpose: {
@@ -7,7 +7,7 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    width: { xs: 264, lg: 496},
+    width: { xs: 264, lg: 496 },
     padding: theme.spacing(3, 2),
     marginBottom: theme.spacing(3),
     borderRadius: '20px',
@@ -24,7 +24,7 @@ const styles = {
   },
   description: {
     textAlign: 'center',
-    height: { sm: theme.spacing(12), lg: 'auto'},
+    height: { sm: theme.spacing(12), lg: 'auto' },
   },
 };
 

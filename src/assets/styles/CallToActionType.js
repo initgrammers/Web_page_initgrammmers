@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-import theme from '../../shared/config/MuiThemeProvider/theme'
+import theme from '../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   content: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    paddingTop: { xs: theme.spacing(4), sm: theme.spacing(5), lg: theme.spacing(8)},
-    paddingBottom: { xs: theme.spacing(4), sm: theme.spacing(5), lg: theme.spacing(8)},
+    paddingTop: { xs: theme.spacing(4), sm: theme.spacing(5), lg: theme.spacing(8) },
+    paddingBottom: { xs: theme.spacing(4), sm: theme.spacing(5), lg: theme.spacing(8) },
   },
 
   title: {
@@ -28,8 +28,8 @@ const styles = {
   },
   imageStyle: ({ xs, sm, md, lg }) => ({
     marginTop: { xs: theme.spacing(4), sm: theme.spacing(5), lg: theme.spacing(8) },
-    width:  { xs: xs.width, sm: sm.width, md: md.width, lg: lg.width},
-    height:  { xs: xs.height, sm: sm.height, md: md.height, lg: lg.height},
+    width: { xs: xs.width, sm: sm.width, md: md.width, lg: lg.width },
+    height: { xs: xs.height, sm: sm.height, md: md.height, lg: lg.height },
     position: 'relative',
   }),
 };

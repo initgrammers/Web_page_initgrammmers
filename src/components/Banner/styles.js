@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import theme from '../../shared/config/MuiThemeProvider/theme'
+import theme from '../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   detailsContent: {
@@ -20,7 +20,7 @@ const styles = {
   description: {
     padding: `${theme.spacing(4)} 0`,
     color: theme.palette.primary.snackBar,
-    fontSize: { xs: "1.25rem", sm: "1.4996rem" }
+    fontSize: { xs: '1.25rem', sm: '1.4996rem' },
   },
   containerImage: {
     display: 'flex',

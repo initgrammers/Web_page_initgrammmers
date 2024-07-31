@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import theme from '../../../../shared/config/MuiThemeProvider/theme'
+import theme from '../../../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   container: {
-    width: "100%",
+    width: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -40,7 +40,7 @@ const styles = {
   title: {
     color: theme.palette.primary.light,
     textAlign: 'center',
-    fontSize: { xs: "1.5rem", sm: "1.6667rem", md: "1.875rem", lg: "2.0833rem" }
+    fontSize: { xs: '1.5rem', sm: '1.6667rem', md: '1.875rem', lg: '2.0833rem' },
   },
   description: {
     width: { lg: 400 },

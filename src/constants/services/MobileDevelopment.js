@@ -1,7 +1,7 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 const useMobileDevelopment = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   const bannerMobileDevelopment = {
     titlePar1: t('mobileDevelopmentBannerTitlePart1'),
@@ -13,7 +13,7 @@ const useMobileDevelopment = () => {
     backgroundImage:
       'https://res.cloudinary.com/initgrammers/image/upload/v1606842502/servicios/desarrollo-movil/figures/bloque1.png',
   };
-  
+
   const importanceApplications = {
     title: t('mobileDevelopmentImportanceApplicationsTitle'),
     mainImage:
@@ -30,7 +30,7 @@ const useMobileDevelopment = () => {
       'https://res.cloudinary.com/initgrammers/image/upload/v1606842502/servicios/desarrollo-movil/figures/bloque2.png',
     heightImage: 870,
   };
-  
+
   const MobileTechnologies = [
     {
       label: 'Flutter',
@@ -58,7 +58,7 @@ const useMobileDevelopment = () => {
         'https://res.cloudinary.com/initgrammers/image/upload/v1606842969/servicios/desarrollo-movil/apple.svg',
     },
   ];
-  
+
   const technologiesMobileApplication = {
     title: t('mobileDevelopmentTechnologiesMobileApplicationTitle'),
     technologies: MobileTechnologies,
@@ -66,7 +66,7 @@ const useMobileDevelopment = () => {
       'https://res.cloudinary.com/initgrammers/image/upload/v1606842502/servicios/desarrollo-movil/figures/bloque3.png',
     heightImage: 364,
   };
-  
+
   const typesApplication = [
     {
       title: t('mobileDevelopmentMobileApplicationTypesApplicationTitle1'),
@@ -89,7 +89,7 @@ const useMobileDevelopment = () => {
         t('mobileDevelopmentMobileApplicationTypesApplicationDescription4'),
     },
   ];
-  
+
   const mobileApplicationTypes = {
     title: t('mobileDevelopmentMobileApplicationTypesTitle'),
     typesApplication,
@@ -114,7 +114,7 @@ const useMobileDevelopment = () => {
       },
     },
   };
-  
+
   const applicationsInYourFingertips = {
     titlePart1: t('mobileDevelopmentApplicationsInYourFingertipsTitlePart1'),
     titlePart2: t('mobileDevelopmentApplicationsInYourFingertipsTitlePart2'),
@@ -145,7 +145,7 @@ const useMobileDevelopment = () => {
       },
     },
   };
-  
+
   const questions = [
     {
       id: 0,
@@ -183,14 +183,14 @@ const useMobileDevelopment = () => {
       details:
         t('mobileDevelopmentDetailsQuestion5'),
     },
-  
+
     {
       id: 6,
       title: t('mobileDevelopmentQuestion6'),
       details:
         t('mobileDevelopmentDetailsQuestion6'),
     },
-  
+
     {
       id: 7,
       title: t('mobileDevelopmentQuestion7'),
@@ -210,7 +210,7 @@ const useMobileDevelopment = () => {
         t('mobileDevelopmentDetailsQuestion9'),
     },
   ];
-  
+
   const FAQMobileDevelopment = {
     titlePart1: t('mobileDevelopmentFAQTitlePart1'),
     titlePart2: t('mobileDevelopmentFAQTitlePart2'),
@@ -223,8 +223,8 @@ const useMobileDevelopment = () => {
     technologiesMobileApplication,
     mobileApplicationTypes,
     applicationsInYourFingertips,
-    FAQMobileDevelopment
-  }
-}
+    FAQMobileDevelopment,
+  };
+};
 
 export default useMobileDevelopment;

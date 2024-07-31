@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import theme from '../../../shared/config/MuiThemeProvider/theme'
+import theme from '../../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   services: {
-    width: "100%",
+    width: '100%',
     display: 'flex',
     flexWrap: 'wrap',
     paddingTop: theme.spacing(4),

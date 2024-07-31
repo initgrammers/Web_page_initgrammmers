@@ -1,5 +1,7 @@
 // app/components/FacebookPixel.js
+
 'use client';
+
 import { useEffect } from 'react';
 import * as fbq from '#app/lib/facebookPixel';
 

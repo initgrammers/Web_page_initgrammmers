@@ -133,8 +133,8 @@ export const becomeYourTeam = {
     },
   },
   isImageRight: true,
-  backgroundPrimaryFade: true
-}
+  backgroundPrimaryFade: true,
+};
 
 const imageSizesOportunitiesPartnershipModels = {
   xs: {
