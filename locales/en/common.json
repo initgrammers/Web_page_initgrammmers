@@ -196,4 +196,19 @@
   "partnershipModelsDetailsQuestion0": "",
   "partnershipModelsQuestion1": "",
   "partnershipModelsDetailsQuestion1": "."
+  "mobileDevelopmentImportanceApplicationsMainImage": "https://res.cloudinary.com/initgrammers/image/upload/v1618501401/servicios/desarrollo-movil/importancia-aplicaciones-moviles.png",
+  "contactUsFormNameError": "Name is required",
+  "contactUsFormPhoneError": "Phone is required",
+  "contactUsFormInvalidEmailError": "Invalid Email",
+  "contactUsFormEmailError": "Email is required",
+  "contactUsFormMessageError": "Message is required",
+  "contactUsBannerTitle": "Contact Us",
+  "contactUsTitle": "Contact us!",
+  "contactUsNameField": "Name",
+  "contactUsLastnameField": "Lastname",
+  "contactUsEmailField": "Email",
+  "contactUsPhoneField": "Phone",
+  "contactUsMessageField": "Message",
+  "contactUsSendButton": "Send",
+  "contactUsDescription": "At InitGrammers, we are committed to providing you with the best possible service. If you have any questions, need more information, or wish to start a project with us, please don't hesitate to reach out. We're here to help you achieve your goals!"
 }
