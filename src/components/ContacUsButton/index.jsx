@@ -13,7 +13,7 @@ const ContactUsButton = ({
 }) => {
   const {t} = useTranslation();
   return (
-    <Link target="_blank" rel="noopener" href={href} sx={styles.link(mr)}>
+    <Link target="_parent" rel="noopener" href={href} sx={styles.link(mr)}>
       <Button variant={variant} color={color}>
         {label || t('contactUs') || children}
       </Button>
