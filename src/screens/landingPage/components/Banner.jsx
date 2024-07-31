@@ -19,7 +19,7 @@ const Banner = ({
   return (
     <Box component="section" position="relative" bgcolor="primary.light">
       <BackgroundImage image={backgroundImage} height={heightImage}/>
-      <CustomContainer sx={{ margin: { lg: 0 } }}>
+      <CustomContainer>
         <Box sx={styles.container}>
           <Box component="article" sx={styles.detailsContent}>
             <Typography variant="h1" sx={styles.title}>
