@@ -34,7 +34,7 @@ const InformationWithImageSection = ({
       }}      
     >
       <BackgroundImage image={backgroundImage} height={heightImage} />
-      <CustomContainer sx={{ margin: { lg: 0 } }}>
+      <CustomContainer >
         <Box sx={styles.container(isImageRight)} >
           <Box component="article" sx={styles.detailsContent(isImageRight)} >
             <Typography

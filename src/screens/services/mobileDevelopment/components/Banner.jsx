@@ -4,9 +4,11 @@ import styles from '../styles/Banner';
 import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
 import useMobileDevelopment from '#constants/services/MobileDevelopment';
 import { Box, Container, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const Banner = () => {
   const { bannerMobileDevelopment } = useMobileDevelopment();
+  const {t} = useTranslation();
   return (
     <Box component="section" sx={styles.mainSection}>
       <Box sx={styles.containerBackgroundImage}>
@@ -33,7 +35,7 @@ const Banner = () => {
           </Typography>
           <ContactUsButton
             color="secondary"
-            label={textContactUsButton.whatsapp}
+            label={t('homeLearnButton')}
             href={contactsLinks.mobileApps}
           />
         </Box>
