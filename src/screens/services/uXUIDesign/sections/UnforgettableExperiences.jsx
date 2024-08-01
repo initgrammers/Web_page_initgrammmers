@@ -1,7 +1,7 @@
 import CallToActionSection from '#Components/CallToActionSection';
 import useUxUiDesign from '#constants/services/UxUiDesign';
 
-const UnforgettableExperiences = () => { 
+const UnforgettableExperiences = () => {
   const { unforgetableExperiences } = useUxUiDesign();
   return (
     <CallToActionSection
@@ -14,5 +14,6 @@ const UnforgettableExperiences = () => {
       imageSizes={unforgetableExperiences.imageSizes}
     />
   );
-}
+};
+
 export default UnforgettableExperiences;

@@ -3,8 +3,8 @@ import useWebDevelopment from '#constants/services/webDevelopment';
 import { contactsLinks } from '#app/constants/contacts';
 
 const Banner = () => {
-  const {bannerWebDevelopment} = useWebDevelopment();
-  return(
+  const { bannerWebDevelopment } = useWebDevelopment();
+  return (
     <WebDevelopmentBanner
       backgroundImage={bannerWebDevelopment.backgroundImage}
       heightImage={bannerWebDevelopment.heightImage}
@@ -15,6 +15,6 @@ const Banner = () => {
       image={bannerWebDevelopment.image}
       hrefContactUs={contactsLinks.webPages}
     />
-);
-}
+  );
+};
 export default Banner;

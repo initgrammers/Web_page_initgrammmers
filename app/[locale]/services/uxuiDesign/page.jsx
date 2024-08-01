@@ -4,7 +4,7 @@ import UxUiDesignSeo from '#app/constants/seo/UxUiDesign';
 
 export function generateViewport() {
   return {
-    viewport: 'width=device-width, initial-scale=1, viewport-fit=cover'
+    viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
   };
 }
 export function metadata() {
@@ -29,7 +29,7 @@ export function metadata() {
     },
 
     twitter: {
-      card: 'summary_large_image', 
+      card: 'summary_large_image',
       title: UxUiDesignSeo.title,
       description: UxUiDesignSeo.description,
       images: [UxUiDesignSeo.image],
@@ -37,7 +37,7 @@ export function metadata() {
 
     'google-site-verification': 'y1PcP4kGPOQqbyawDjt73ede4lda4WJP35jRYcnbbcE',
     'facebook-domain-verification': 'f6e1m61awoty4uqq75apqhiupih6vb',
-    
+
     alternates: {
       canonical: UxUiDesignSeo.urlAltern,
       languages: {
@@ -52,9 +52,6 @@ export function metadata() {
   };
 }
 
-
-const page = () => {
-  return <Index />
-};
+const page = () => <Index />;
 
 export default page;

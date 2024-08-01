@@ -1,7 +1,7 @@
 import FAQ from '#Components/FAQ';
 import useMobileDevelopment from '#constants/services/MobileDevelopment';
 
-const Questions = () => { 
+const Questions = () => {
   const { FAQMobileDevelopment } = useMobileDevelopment();
   return (
     <FAQ

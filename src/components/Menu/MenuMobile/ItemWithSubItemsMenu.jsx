@@ -1,11 +1,10 @@
 import { createRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import CustomLink from '#Components/CustomLink';
-import styles from './styles';
 import { Collapse, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import CustomLink from '#Components/CustomLink';
+import styles from './styles';
 
 const ref = createRef();
 
@@ -29,8 +28,8 @@ const ItemWithSubItemsMenu = ({
   return (
     <>
       {subMenu.length > 0 ? (
-        <ListItem 
-          sx={{ ...styles.nested, '&:hover': { backgroundColor: 'lightgray' }, cursor: "pointer", }}
+        <ListItem
+          sx={{ ...styles.nested, '&:hover': { backgroundColor: 'lightgray' }, cursor: 'pointer' }}
           onClick={handleClick}
         >
           <ListItemText primary={titleMenu} />
@@ -52,8 +51,8 @@ const ItemWithSubItemsMenu = ({
                 onClick={onClose}
                 sx={{
                   ...styles.nested,
-                  ...(indexMenu === item.id && styles.selected), 
-                  '&:hover': { backgroundColor: 'lightgray' }
+                  ...(indexMenu === item.id && styles.selected),
+                  '&:hover': { backgroundColor: 'lightgray' },
                 }}
               >
                 <ListItemIcon>{item.icon}</ListItemIcon>

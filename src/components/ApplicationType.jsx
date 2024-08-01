@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import styles from '../assets/styles/ApplicationType';
 import { Box, IconButton, MobileStepper, Typography, useTheme } from '@mui/material';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import styles from '../assets/styles/ApplicationType';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -35,7 +35,6 @@ function ApplicationType({ sectionTitle, typesApplication, backgroundGray = fals
             ...styles.title,
             ...(backgroundGray && styles.titleGray),
           }}
-          
         >
           {sectionTitle}
         </Typography>
@@ -53,7 +52,7 @@ function ApplicationType({ sectionTitle, typesApplication, backgroundGray = fals
                 sx={{
                   ...styles.applicationType,
                   ...(backgroundGray && styles.backgroundGray),
-                }}                
+                }}
               >
                 {app.title}
               </Typography>
@@ -61,7 +60,7 @@ function ApplicationType({ sectionTitle, typesApplication, backgroundGray = fals
                 variant="body1"
                 sx={{
                   ...(backgroundGray && styles.bodyGray),
-                }}                
+                }}
               >
                 {app.description}
               </Typography>

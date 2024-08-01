@@ -7,7 +7,7 @@ const CustomFooter = dynamic(() => import('./Footer'));
 const Layout = ({ children }) => (
   <>
     <Navigation />
-      <main>{children}</main>
+    <main>{children}</main>
     <CustomFooter />
   </>
 );

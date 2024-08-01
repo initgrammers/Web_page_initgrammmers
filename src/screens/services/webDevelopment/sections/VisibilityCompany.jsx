@@ -2,8 +2,9 @@ import VisibilityCompany from '../components/VisibilityCompany';
 import useWebDevelopment from '#constants/services/webDevelopment';
 
 const VisibilityCompanySection = () => {
-  const {visibilityCompany} = useWebDevelopment();
-  return(
+  const { visibilityCompany } = useWebDevelopment();
+
+  return (
     <VisibilityCompany
       title={visibilityCompany.title}
       description={visibilityCompany.description}
@@ -12,5 +13,6 @@ const VisibilityCompanySection = () => {
       heightImage={visibilityCompany.heightImage}
     />
   );
-}
+};
+
 export default VisibilityCompanySection;

@@ -3,8 +3,9 @@ import SectionApplicationTypes from '#Components/SectionApplicationTypes';
 import useWebDevelopment from '#constants/services/webDevelopment';
 
 const MobileApplicationTypes = () => {
-  const {webApplicationTypes} = useWebDevelopment();
-  return(
+  const { webApplicationTypes } = useWebDevelopment();
+
+  return (
     <SectionApplicationTypes
       sectionTitle={webApplicationTypes.title}
       typesApplication={webApplicationTypes.typesApplication}
@@ -13,5 +14,5 @@ const MobileApplicationTypes = () => {
       backgroundPrimaryLight={webApplicationTypes.backgroundPrimaryLight}
     />
   );
-}
+};
 export default MobileApplicationTypes;

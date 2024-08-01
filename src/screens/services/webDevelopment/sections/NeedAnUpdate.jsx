@@ -2,8 +2,9 @@ import NeedAnUpdate from '../components/NeedAnUpdate';
 import useWebDevelopment from '#constants/services/webDevelopment';
 
 const NeedAnUpdateSection = () => {
-  const {needAnUpdateWebDevelopment} = useWebDevelopment();
-  return(
+  const { needAnUpdateWebDevelopment } = useWebDevelopment();
+
+  return (
     <NeedAnUpdate
       title={needAnUpdateWebDevelopment.title}
       description={needAnUpdateWebDevelopment.description}
@@ -12,5 +13,5 @@ const NeedAnUpdateSection = () => {
       ornamentImage={needAnUpdateWebDevelopment.ornamentImage}
     />
   );
-}
+};
 export default NeedAnUpdateSection;

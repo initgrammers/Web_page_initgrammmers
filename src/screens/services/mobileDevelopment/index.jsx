@@ -1,4 +1,5 @@
-"use client"
+'use client';
+
 import dynamic from 'next/dynamic';
 import Banner from './components/Banner';
 import MobileDevelopment from '#constants/seo/MobileDevelopment';
@@ -7,20 +8,13 @@ import WebSite from '#Components/StructuredData/WebSite';
 import Article from '#Components/StructuredData/Article';
 import useMobileDevelopment from '#constants/services/MobileDevelopment';
 
-
-const ImportanceApplications = dynamic(() =>
-  import('./components/ImportanceApplications')
-);
+const ImportanceApplications = dynamic(() => import('./components/ImportanceApplications'));
 const SliderTech = dynamic(() => import('./sections/SliderTech'));
-const MobileApplicationTypes = dynamic(() =>
-  import('./sections/MobileApplicationTypes')
-);
-const ApplicationsAtYourFingertips = dynamic(() =>
-  import('./sections/ApplicationsAtYourFingertips')
-);
+const MobileApplicationTypes = dynamic(() => import('./sections/MobileApplicationTypes'));
+const ApplicationsAtYourFingertips = dynamic(() => import('./sections/ApplicationsAtYourFingertips'));
 const Questions = dynamic(() => import('./sections/Questions'));
 
-const Index = () => { 
+const Index = () => {
   const { importanceApplications } = useMobileDevelopment();
   return (
     <>
@@ -30,7 +24,6 @@ const Index = () => {
       <MobileApplicationTypes />
       <ApplicationsAtYourFingertips />
       <Questions />
-
       <Organization />
       <WebSite
         title={MobileDevelopment.title}
@@ -44,6 +37,6 @@ const Index = () => {
       />
     </>
   );
-}
+};
 
 export default Index;

@@ -1,8 +1,6 @@
 import React from 'react';
 import LandingPage from '#screens/landingPage';
 import LandingPageSEO from '#app/constants/seo/LandingPage';
-import initTranslations from 'app/i18n';
-import TranslationsProvider from '#Components/TranslationsProvider';
 
 export function generateViewport() {
   return {
@@ -53,7 +51,6 @@ export function metadata() {
     },
   };
 }
-
 
 export default async function Home() {
   return (

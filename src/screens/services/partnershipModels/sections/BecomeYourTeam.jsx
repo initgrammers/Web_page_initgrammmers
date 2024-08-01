@@ -1,7 +1,7 @@
 import InformationWithImageSection from '#Components/InformationWithImageSection';
 import usePartnershipModels from '#constants/services/partnershipModels';
 
-const BecomeYourTeam = () => { 
+const BecomeYourTeam = () => {
   const { becomeYourTeam } = usePartnershipModels();
   return (
     <InformationWithImageSection

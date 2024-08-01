@@ -1,11 +1,11 @@
 /* eslint-disable react/no-danger */
 import PropTypes from 'prop-types';
 
-const Article = ({ 
+const Article = ({
   title = 'Diseño, desarrollo de aplicaciones web y móviles - InitGrammers',
-  description, 
-  url, 
-  mainArticle 
+  description,
+  url,
+  mainArticle,
 }) => (
   <>
     <script

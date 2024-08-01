@@ -1,6 +1,6 @@
+import React from 'react';
 import ContactUsSEO from '#app/constants/seo/ContactUs';
 import Index from '#screens/contactUs/index';
-import React from 'react';
 
 export function generateViewport() {
   return {
@@ -52,9 +52,7 @@ export function metadata() {
   };
 }
 
-
-export default async function Page({ params: locale }) {
-
+export default async function Page() {
   return (
     <>
       <Index />

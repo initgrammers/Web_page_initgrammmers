@@ -2,7 +2,7 @@ import React from 'react';
 import SectionApplicationTypes from '#Components/SectionApplicationTypes';
 import useMobileDevelopment from '#constants/services/MobileDevelopment';
 
-const MobileApplicationTypes = () => { 
+const MobileApplicationTypes = () => {
   const { mobileApplicationTypes } = useMobileDevelopment();
   return (
     <SectionApplicationTypes

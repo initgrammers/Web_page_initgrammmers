@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 import CustomContainer from '#Components/CustomContainer';
 import styles from '../styles/NeedAnUpdate';
-import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 
 const NeedAnUpdate = ({
   title,
@@ -21,7 +21,7 @@ const NeedAnUpdate = ({
         loading="lazy"
         style={{
           ...styles.background,
-          display: `${ lg ? "" : "none"}`
+          display: `${lg ? '' : 'none'}`,
         }}
         src={backgroundImage}
         alt="Diseño y desarrollo de aplicaciones web y móviles - Initgrammers"
@@ -34,7 +34,7 @@ const NeedAnUpdate = ({
         loading="lazy"
         style={{
           ...styles.computer,
-          objectFit: `${ xs ? "cover" : "fill"}`
+          objectFit: `${xs ? 'cover' : 'fill'}`,
         }}
         src={image}
         alt={title}

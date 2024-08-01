@@ -1,8 +1,8 @@
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './theme';
 import Layout from '#Layouts/index';
-import { CssBaseline, ThemeProvider } from '@mui/material';
 
-export const MuiThemeProvider = ({ children }) => {
+export default function MuiThemeProvider({ children }) {
   return (
     <ThemeProvider theme={theme}>
       <Layout>
@@ -11,4 +11,4 @@ export const MuiThemeProvider = ({ children }) => {
       </Layout>
     </ThemeProvider>
   );
-};
+}

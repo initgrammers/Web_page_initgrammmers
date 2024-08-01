@@ -1,12 +1,12 @@
 // components/LanguageSelector.js
-import styles from './Menu/styles/MenuDesktop';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Box, Button, Popover, Typography } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
-import i18nConfig from 'i18nConfig';
+import i18nConfig from '../../i18nConfig';
+import styles from './Menu/styles/MenuDesktop';
 
 const LanguageSelector = () => {
   const router = useRouter();
@@ -28,14 +28,14 @@ const LanguageSelector = () => {
     const days = 30;
     const date = new Date();
     date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-    const expires = '; expires=' + date.toUTCString();
+    const expires = `; expires= ${date.toUTCString()}`;
     document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires}:path/`;
 
-    if(
+    if (
       currentLocale === i18nConfig.defaultLocale && !i18nConfig.prefixDefault
     ) {
-      router.push('/'+newLocale + currentPathname);
-    }else {
+      router.push(`/${newLocale}${currentPathname}`);
+    } else {
       router.push(
         currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
       );
@@ -44,9 +44,8 @@ const LanguageSelector = () => {
     router.refresh();
   };
 
-
   return (
-    <Box display='flex'>
+    <Box display="flex">
       <Button
         onClick={handleClick}
         color="inherit"
@@ -57,7 +56,7 @@ const LanguageSelector = () => {
         </Typography>
       </Button>
       <Popover
-        id={'language-popover'}
+        id="language-popover"
         open={open}
         anchorEl={showLanguages}
         onClose={handleClose}

@@ -4,7 +4,7 @@ import MobileDevelopmentSEO from '#app/constants/seo/MobileDevelopment';
 
 export function generateViewport() {
   return {
-    viewport: 'width=device-width, initial-scale=1, viewport-fit=cover'
+    viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
   };
 }
 
@@ -30,7 +30,7 @@ export function metadata() {
     },
 
     twitter: {
-      card: 'summary_large_image', 
+      card: 'summary_large_image',
       title: MobileDevelopmentSEO.title,
       description: MobileDevelopmentSEO.description,
       images: [MobileDevelopmentSEO.image],
@@ -38,7 +38,7 @@ export function metadata() {
 
     'google-site-verification': 'y1PcP4kGPOQqbyawDjt73ede4lda4WJP35jRYcnbbcE',
     'facebook-domain-verification': 'f6e1m61awoty4uqq75apqhiupih6vb',
-    
+
     alternates: {
       canonical: MobileDevelopmentSEO.urlAltern,
       languages: {
@@ -53,8 +53,6 @@ export function metadata() {
   };
 }
 
-const page = () => {
-  return <Index />
-};
+const page = () => <Index />;
 
 export default page;

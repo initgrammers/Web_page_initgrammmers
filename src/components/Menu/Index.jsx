@@ -1,10 +1,10 @@
-"use client"
+'use client';
+
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import dynamic from 'next/dynamic';
-import styles from '../../assets/styles/Menu';
-import OutsideAlerter from './MenuDesktop/Outsider';
 import { AppBar, Box, Toolbar } from '@mui/material';
+import dynamic from 'next/dynamic';
+import OutsideAlerter from './MenuDesktop/Outsider';
+import styles from '../../assets/styles/Menu';
 
 const MobileMenu = dynamic(() => import('./MenuMobile'));
 const MenuDesktop = dynamic(() => import('./MenuDesktop'));
@@ -36,7 +36,7 @@ const CustomMenu = () => {
         <Toolbar
           sx={styles.main}
         >
-          <Box sx={{display: {xs: 'flex', md: 'none'}, width: '100%'}}>
+          <Box sx={{ display: { xs: 'flex', md: 'none' }, width: '100%' }}>
             <MobileMenu
               showDrawer={showNav}
               handleDrawerOpen={handleDrawerOpen}
@@ -44,7 +44,7 @@ const CustomMenu = () => {
               indexMenu={currentPath}
             />
           </Box>
-          <Box sx={{display: {xs: 'none', md: 'flex'},  width: '100%'}}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, width: '100%' }}>
             <MenuDesktop
               showServices={showNav}
               handleDrawerOpen={handleDrawerOpen}
@@ -53,7 +53,7 @@ const CustomMenu = () => {
             />
           </Box>
         </Toolbar>
-        <Box sx={{display: {xs: 'flex', md: 'none'}}}>
+        <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
           <OutsideAlerter callback={handleClose}>
             <CustomDrawer
               open={showNav}
@@ -66,7 +66,5 @@ const CustomMenu = () => {
     </>
   );
 };
-CustomMenu.propTypes = {
-  indexMenu: PropTypes.string,
-};
+
 export default CustomMenu;

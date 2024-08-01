@@ -1,40 +1,32 @@
 import PropTypes from 'prop-types';
+import { Box, Typography } from '@mui/material';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import CardValue from '#Components/CardValue';
 import styles from '../styles/Values';
-import { Box, Typography } from '@mui/material';
 
-const Values = ({ 
-  title, 
-  values, 
-  backgroundImage = '',
-  heightImage = 0, 
-}) => {
-  return (
-    <Box component="section" position="relative" sx={styles.section}>
-      <BackgroundImage image={backgroundImage} height={heightImage} />
-      <CustomContainer>
-        <Box>
-          <Typography variant="h2" align="center" sx={styles.title}>
-            {title}
-          </Typography>
-
-          <Box sx={styles.values}>
-            {values.map((valueInitgrammers, key) => (
-              <CardValue
-                key={key}
-                image={valueInitgrammers.image}
-                description={valueInitgrammers.description}
-                isBorderSecondary={valueInitgrammers.isBorderSecondary}
-              />
-            ))}
-          </Box>
+const Values = ({ title, values, backgroundImage = '', heightImage = 0 }) => (
+  <Box component="section" position="relative" sx={styles.section}>
+    <BackgroundImage image={backgroundImage} height={heightImage} />
+    <CustomContainer>
+      <Box>
+        <Typography variant="h2" align="center" sx={styles.title}>
+          {title}
+        </Typography>
+        <Box sx={styles.values}>
+          {values.map((valueInitgrammers, key) => (
+            <CardValue
+              key={key}
+              image={valueInitgrammers.image}
+              description={valueInitgrammers.description}
+              isBorderSecondary={valueInitgrammers.isBorderSecondary}
+            />
+          ))}
         </Box>
-      </CustomContainer>
-    </Box>
-  );
-};
+      </Box>
+    </CustomContainer>
+  </Box>
+);
 
 Values.propTypes = {
   backgroundImage: PropTypes.string,

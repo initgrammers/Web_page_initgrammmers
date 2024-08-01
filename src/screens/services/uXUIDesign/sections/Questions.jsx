@@ -10,6 +10,6 @@ const Questions = () => {
       questions={FAQUxUiDesign.questions}
     />
   );
-}
+};
 
 export default Questions;

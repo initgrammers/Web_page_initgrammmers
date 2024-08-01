@@ -1,4 +1,7 @@
-"use client"
+/* eslint-disable react-hooks/rules-of-hooks */
+
+'use client';
+
 import dynamic from 'next/dynamic';
 import Banner from './sections/Banner';
 import UxUiDesignSeo from '#constants/seo/UxUiDesign';
@@ -10,15 +13,11 @@ import useUxUiDesign from '#constants/services/UxUiDesign';
 const InnovativeDesign = dynamic(() => import('./sections/InnovativeDesign'));
 const UxUiDesign = dynamic(() => import('./sections/UxUiDesign'));
 const SliderTech = dynamic(() => import('./sections/SliderTech'));
-const DesignAdaptedToYourBrand = dynamic(() =>
-  import('./sections/DesignAdaptedToYourBrand')
-);
-const UnforgettableExperiences = dynamic(() =>
-  import('./sections/UnforgettableExperiences')
-);
+const DesignAdaptedToYourBrand = dynamic(() => import('./sections/DesignAdaptedToYourBrand'));
+const UnforgettableExperiences = dynamic(() => import('./sections/UnforgettableExperiences'));
 const Questions = dynamic(() => import('./sections/Questions'));
 
-const index = () => { 
+const index = () => {
   const { innovateDesign } = useUxUiDesign();
   return (
     <>
@@ -29,7 +28,6 @@ const index = () => {
       <DesignAdaptedToYourBrand />
       <UnforgettableExperiences />
       <Questions />
-
       <Organization />
       <WebSite title={UxUiDesignSeo.title} url={UxUiDesignSeo.urlAltern} />
       <Article

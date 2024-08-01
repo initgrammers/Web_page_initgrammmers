@@ -1,7 +1,7 @@
+import { useTheme } from '@mui/material';
 import ShopOnlineBanner from '#Components/Banner';
 import { bannerShopOnline } from '#constants/services/ShopOnline';
 import { contactsLinks } from '#app/constants/contacts';
-import { useTheme } from '@mui/material';
 
 const Banner = () => {
   const { palette } = useTheme();

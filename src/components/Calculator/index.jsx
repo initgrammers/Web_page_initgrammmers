@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import styles from './styles';
 import { Button } from '@mui/material';
+import styles from './styles';
 
 const Calculator = ({ typeButton = 'text' }) => {
   (() => {
@@ -22,7 +22,7 @@ const Calculator = ({ typeButton = 'text' }) => {
         j.async = true;
         j.dataset.calconic = true;
         j.src = `${b}calconic.min.js`;
-        q = gt.call(d, 'script')[0];
+        [q] = gt.call(d, 'script');
         q.parentNode.insertBefore(j, q);
       }
     }

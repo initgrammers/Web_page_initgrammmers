@@ -2,8 +2,8 @@ import SliderTechnologies from '#Components/SliderTechnologies';
 import useLandingPage from '#constants/LandingPage';
 
 const SliderTech = () => {
-  const {clientsInitgrammers} = useLandingPage();
-  return(
+  const { clientsInitgrammers } = useLandingPage();
+  return (
     <SliderTechnologies
       title={clientsInitgrammers.title}
       technologies={clientsInitgrammers.clients}
@@ -15,5 +15,6 @@ const SliderTech = () => {
       showTitleImage={false}
     />
   );
-}
+};
+
 export default SliderTech;

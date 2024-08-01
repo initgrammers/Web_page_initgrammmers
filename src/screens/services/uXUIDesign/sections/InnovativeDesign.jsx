@@ -1,7 +1,7 @@
 import InformationWithImageSection from '#Components/InformationWithImageSection';
 import useUxUiDesign from '#constants/services/UxUiDesign';
 
-const InnovativeDesign = () => { 
+const InnovativeDesign = () => {
   const { innovateDesign } = useUxUiDesign();
   return (
     <InformationWithImageSection

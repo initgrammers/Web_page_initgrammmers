@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import styles from '../assets/styles/CallToActionType';
+import { Box, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import Subtitle from '#Components/Subtitle';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import ContactUsButton from './ContacUsButton';
-import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
-import { Box, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { contactsLinks } from '#app/constants/contacts';
+import styles from '../assets/styles/CallToActionType';
 
 const CallToActionSection = ({
   titlePart1,
@@ -20,8 +20,7 @@ const CallToActionSection = ({
   backgroundColor = '',
   imageSizes,
 }) => {
-
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <Box component="section" position="relative" bgcolor={backgroundColor}>
@@ -37,7 +36,12 @@ const CallToActionSection = ({
             variant="h1"
             component="h2"
             mb={0}
-            fontSize={{ xs: "2rem", sm: "2.5707rem", md: "2.7849rem", lg: "2.9991rem" }}
+            fontSize={{
+              xs: '2rem',
+              sm: '2.5707rem',
+              md: '2.7849rem',
+              lg: '2.9991rem',
+            }}
           />
           <Typography variant="body1" sx={styles.description}>
             {description}

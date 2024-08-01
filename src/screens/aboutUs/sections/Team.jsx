@@ -2,8 +2,8 @@ import TeamComponent from '../components/Team';
 import useAboutUs from '#constants/AboutUs';
 
 const TeamSection = () => {
-  const {team} = useAboutUs();
-  return(
+  const { team } = useAboutUs();
+  return (
     <TeamComponent
       backgroundImage={team.backgroundImage}
       heightImage={team.heightImage}
@@ -11,5 +11,6 @@ const TeamSection = () => {
       teamPlayer={team.teamPlayer}
     />
   );
-}
+};
+
 export default TeamSection;

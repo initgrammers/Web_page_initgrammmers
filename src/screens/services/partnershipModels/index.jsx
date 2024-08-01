@@ -1,4 +1,7 @@
-"use client"
+/* eslint-disable react-hooks/rules-of-hooks */
+
+'use client';
+
 import dynamic from 'next/dynamic';
 import Banner from './sections/Banner';
 import SEOsearch from '#constants/seo/SEO';
@@ -14,7 +17,7 @@ const BecomeYourTeam = dynamic(() => import('./sections/BecomeYourTeam'));
 const Oportunities = dynamic(() => import('./sections/Oportunities'));
 const Questions = dynamic(() => import('./sections/Questions'));
 
-const index = () => { 
+const index = () => {
   const { importancePartnershipModels } = usePartnershipModels();
   return (
     <>

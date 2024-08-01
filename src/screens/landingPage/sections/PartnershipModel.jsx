@@ -2,8 +2,8 @@ import PartnershipModel from '../components/PartnershipModel';
 import useLandingPage from '#constants/LandingPage';
 
 const PartnershipModelSection = () => {
-  const {partnershipModel} = useLandingPage()
-  return(
+  const { partnershipModel } = useLandingPage();
+  return (
     <PartnershipModel
       title={partnershipModel.title}
       description={partnershipModel.description}
@@ -13,5 +13,6 @@ const PartnershipModelSection = () => {
       partnershipModels={partnershipModel.partnershipModels}
     />
   );
-}
+};
+
 export default PartnershipModelSection;

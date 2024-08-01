@@ -11,6 +11,6 @@ const SliderTech = () => {
       technologies={sliderUxUiTechnologies.technologies}
     />
   );
-}
+};
 
 export default SliderTech;

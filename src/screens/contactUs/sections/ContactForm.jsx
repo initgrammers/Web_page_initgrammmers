@@ -1,13 +1,13 @@
-import { Box, Button, styled, TextField, Typography } from '@mui/material';
-import Image from 'next/image';
-import CustomContainer from '#Components/CustomContainer';
-import { primary } from '#app/shared/config/theme/colors';
-import styles from '../styles/ContactForm.js';
 import React from 'react';
+import { Box, Button, styled, TextField, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
+import Image from 'next/image';
+import CustomContainer from '#Components/CustomContainer';
+import { primary } from '#app/shared/config/theme/colors';
+import styles from '../styles/ContactForm';
 
 const ContactForm = ({
   image = 'https://res.cloudinary.com/initgrammers/image/upload/v1609863472/LandingPage/soporte-adicional-sin-costo.png',
@@ -70,11 +70,10 @@ const ContactForm = ({
 
     emailjs
       .send(serviceId, templateId, templateParams, publicKey)
-      .then((response) => {
+      .then(() => {
         resetForm();
       })
-      .catch((error) => {
-        console.error('Error al enviar el correo', error);
+      .catch(() => {
       });
   };
 
@@ -82,7 +81,7 @@ const ContactForm = ({
     <Box
       component="section"
       position="relative"
-      sx={{ background: primary.light, paddingY: {lg: 0, xs: 3, md:3} }}
+      sx={{ background: primary.light, paddingY: { lg: 0, xs: 3, md: 3 } }}
     >
       <CustomContainer>
         <Box
@@ -192,7 +191,7 @@ const ContactForm = ({
                 src={image}
                 fill
                 style={styles.mainImage}
-                alt={'Contáctanos'}
+                alt="Contáctanos"
               />
             </Box>
           </Box>

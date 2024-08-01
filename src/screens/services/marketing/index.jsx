@@ -7,9 +7,7 @@ import WebSite from '#Components/StructuredData/WebSite';
 import Article from '#Components/StructuredData/Article';
 import { importanceMarketing } from '#constants/services/marketing';
 
-const ImportanceMarketing = dynamic(() =>
-  import('./sections/ImportanceMarketing')
-);
+const ImportanceMarketing = dynamic(() => import('./sections/ImportanceMarketing'));
 const Strategies = dynamic(() => import('./sections/Strategies'));
 const MarketingTypes = dynamic(() => import('./sections/MarketingTypes'));
 const IncreaseClics = dynamic(() => import('./sections/IncreaseClics'));

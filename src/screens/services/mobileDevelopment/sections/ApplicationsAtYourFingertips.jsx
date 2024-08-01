@@ -2,7 +2,7 @@ import React from 'react';
 import CallToActionSection from '#Components/CallToActionSection';
 import useMobileDevelopment from '#constants/services/MobileDevelopment';
 
-const ApplicationAtYourFingertips = () => { 
+const ApplicationAtYourFingertips = () => {
   const { applicationsInYourFingertips } = useMobileDevelopment();
   return (
     <CallToActionSection
@@ -16,6 +16,6 @@ const ApplicationAtYourFingertips = () => {
       imageSizes={applicationsInYourFingertips.imageSizes}
     />
   );
-}
+};
 
 export default ApplicationAtYourFingertips;

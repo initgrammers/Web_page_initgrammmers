@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
+import { Box } from '@mui/material';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import Purpose from '#Components/Purpose';
-import { Box } from '@mui/material';
 import styles from '../styles/MisionVision';
-
 
 const MisionVision = ({
   misionTitle,
@@ -19,31 +18,29 @@ const MisionVision = ({
   colorTitleIsSecondaryVision = false,
   backgroundImage = '',
   heightImage = 0,
-}) => {
-  return (
-    <Box component="section" position="relative" sx={styles.section}>
-      <BackgroundImage image={backgroundImage} height={heightImage} />
-      <CustomContainer>
-        <Box sx={styles.containerMisionVision}>
-          <Purpose
-            backgroundColor={backgroundColorMision}
-            title={misionTitle}
-            description={misiondescription}
-            image={misionImage}
-            colorTitleIsSecondary={colorTitleIsSecondaryMision}
-          />
-          <Purpose
-            backgroundColor={backgroundColorVision}
-            title={visionTitle}
-            description={visiondescription}
-            image={visionImage}
-            colorTitleIsSecondary={colorTitleIsSecondaryVision}
-          />
-        </Box>
-      </CustomContainer>
-    </Box>
-  );
-};
+}) => (
+  <Box component="section" position="relative" sx={styles.section}>
+    <BackgroundImage image={backgroundImage} height={heightImage} />
+    <CustomContainer>
+      <Box sx={styles.containerMisionVision}>
+        <Purpose
+          backgroundColor={backgroundColorMision}
+          title={misionTitle}
+          description={misiondescription}
+          image={misionImage}
+          colorTitleIsSecondary={colorTitleIsSecondaryMision}
+        />
+        <Purpose
+          backgroundColor={backgroundColorVision}
+          title={visionTitle}
+          description={visiondescription}
+          image={visionImage}
+          colorTitleIsSecondary={colorTitleIsSecondaryVision}
+        />
+      </Box>
+    </CustomContainer>
+  </Box>
+);
 
 MisionVision.propTypes = {
   backgroundImage: PropTypes.string,

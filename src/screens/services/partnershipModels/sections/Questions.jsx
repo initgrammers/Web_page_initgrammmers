@@ -1,7 +1,7 @@
 import FAQ from '#Components/FAQ';
 import usePartnershipModels from '#constants/services/partnershipModels';
 
-const Questions = () => { 
+const Questions = () => {
   const { FAQPartnershipModels } = usePartnershipModels();
   return (
     <FAQ

@@ -1,7 +1,7 @@
 import React from 'react';
+import { useTheme } from '@mui/material';
 import CallToActionSection from '#Components/CallToActionSection';
 import usePartnershipModels from '#constants/services/partnershipModels';
-import { useTheme } from '@mui/material';
 
 const IncreaseClics = () => {
   const { palette } = useTheme();

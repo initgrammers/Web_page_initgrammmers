@@ -2,8 +2,8 @@ import useLandingPage from '#app/constants/LandingPage';
 import InformationWithImageSection from '#Components/InformationWithImageSection';
 
 const OnlineSolution = () => {
-  const {onlineSolution} = useLandingPage();
-  return(
+  const { onlineSolution } = useLandingPage();
+  return (
     <InformationWithImageSection
       backgroundImage={onlineSolution.backgroundImage}
       heightImage={onlineSolution.heightImage}
@@ -16,5 +16,6 @@ const OnlineSolution = () => {
       isImageRight={onlineSolution.isImageRight}
     />
   );
-}
+};
+
 export default OnlineSolution;

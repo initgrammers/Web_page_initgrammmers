@@ -1,11 +1,11 @@
+import { useTheme } from '@mui/material';
 import AboutUsBanner from '#Components/Banner';
 import useAboutUs from '#constants/AboutUs';
 import { contactsLinks } from '#app/constants/contacts';
-import { useTheme } from '@mui/material';
 
 const Banner = () => {
   const { palette } = useTheme();
-  const {bannerAboutUs} = useAboutUs();
+  const { bannerAboutUs } = useAboutUs();
   return (
     <AboutUsBanner
       backgroundImage={bannerAboutUs.backgroundImage}

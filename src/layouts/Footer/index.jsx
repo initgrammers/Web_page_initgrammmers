@@ -1,23 +1,22 @@
-import LinkWithIcon from './components/LinkWithIcon';
+import { Box, Container, Grid, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import {
   PhoneIcon,
   MailIcon,
 } from '../../assets/icons';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkWithIcon from './components/LinkWithIcon';
 import LinkIcon from './components/LinkIcon';
 import CustomLink from '#Components/CustomLink';
-import styles from './styles';
 import ContactUs from './ContactUs';
 import { contactsLinks } from '#app/constants/contacts';
 import routes from '#app/routes/';
-import { Box, Container, Grid, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import styles from './styles';
 
 const CustomFooter = () => {
-
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   const services = [
     {
@@ -86,21 +85,21 @@ const CustomFooter = () => {
               </Box>
               <Box display="flex" mt={2}>
                 <LinkIcon
-                  icon={<FacebookIcon color='primary' fontSize='small' />}
+                  icon={<FacebookIcon color="primary" fontSize="small" />}
                   href="https://www.facebook.com/InitGrammers/"
                 />
                 <LinkIcon
-                  icon={<LinkedInIcon color='primary' fontSize='small'/>}
+                  icon={<LinkedInIcon color="primary" fontSize="small" />}
                   href="https://www.linkedin.com/company/initgrammersec"
                 />
                 <LinkIcon
-                  icon={<InstagramIcon color='primary' fontSize='small'/>}
+                  icon={<InstagramIcon color="primary" fontSize="small" />}
                   href="https://www.instagram.com/initgrammers/"
                 />
               </Box>
             </Grid>
-            <Grid item md={3} sm={12} display='flex' flexDirection='column' gap={2}>
-              <Typography variant='inherit' sx={styles.section}>{t('services')}</Typography>
+            <Grid item md={3} sm={12} display="flex" flexDirection="column" gap={2}>
+              <Typography variant="inherit" sx={styles.section}>{t('services')}</Typography>
               {services.map((item, key) => (
                 <CustomLink key={key} href={item.href}>
                   <Typography sx={styles.text}>{item.label}</Typography>
@@ -110,7 +109,7 @@ const CustomFooter = () => {
             <Grid item md={3} sm={12}>
               {portfolio.map((item, key) => (
                 <CustomLink key={key} href={item.href}>
-                  <Typography variant='inherit' sx={styles.section}>
+                  <Typography variant="inherit" sx={styles.section}>
                     {item.label}
                   </Typography>
                 </CustomLink>

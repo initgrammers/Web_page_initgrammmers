@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 import Slide from './Slide';
 import Image from './Image';
-import { Box, useMediaQuery, useTheme } from '@mui/material';
 
 const Slider = ({
   data = [],
@@ -22,7 +22,7 @@ const Slider = ({
   if (matchLG) {
     return (
       <>
-        <Box display="flex" justifyContent="space-between"gap={3}>
+        <Box display="flex" justifyContent="space-between" gap={3}>
           {data.map((item) => (
             <Image
               key={item.label}
@@ -54,6 +54,5 @@ Slider.propTypes = {
   imageIsLarge: PropTypes.bool,
   showTitleImage: PropTypes.bool,
 };
-
 
 export default Slider;

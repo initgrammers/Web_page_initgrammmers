@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import styles from '../styles/ImportanceApplications';
+import { Box, Grid, Typography } from '@mui/material';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import useMobileDevelopment from '#constants/services/MobileDevelopment';
-import { Box, Grid, Typography } from '@mui/material';
+import styles from '../styles/ImportanceApplications';
 
 const ImportanceAplications = () => {
   const { importanceApplications } = useMobileDevelopment();

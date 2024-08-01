@@ -3,8 +3,9 @@ import CallToActionSection from '#Components/CallToActionSection';
 import useWebDevelopment from '#constants/services/webDevelopment';
 
 const PartOfInternetWorld = () => {
-  const {partOfInternet} = useWebDevelopment();
-  return(
+  const { partOfInternet } = useWebDevelopment();
+
+  return (
     <CallToActionSection
       titlePart1={partOfInternet.titlePart1}
       titlePart2={partOfInternet.titlePart2}
@@ -16,5 +17,6 @@ const PartOfInternetWorld = () => {
       imageSizes={partOfInternet.imageSizes}
     />
   );
-}
+};
+
 export default PartOfInternetWorld;

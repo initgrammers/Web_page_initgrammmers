@@ -1,7 +1,7 @@
 import BannerSection from '../components/Banner';
 import useUxUiDesign from '#constants/services/UxUiDesign';
 
-const Banner = () => { 
+const Banner = () => {
   const { bannerUxUiDesign } = useUxUiDesign();
   return (
     <BannerSection

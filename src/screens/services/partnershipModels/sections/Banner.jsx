@@ -1,7 +1,7 @@
+import { useTheme } from '@mui/material';
 import PartnershipModelsBanner from '#Components/Banner';
 import usePartnershipModels from '#constants/services/partnershipModels';
 import { contactsLinks } from '#app/constants/contacts';
-import { useTheme } from '@mui/material';
 
 const Banner = () => {
   const { palette } = useTheme();

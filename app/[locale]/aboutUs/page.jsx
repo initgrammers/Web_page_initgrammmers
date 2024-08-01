@@ -1,5 +1,5 @@
-import Index from '#screens/aboutUs/index';
 import React from 'react';
+import Index from '#screens/aboutUs/index';
 import AboutUsSeo from '#app/constants/seo/AboutUs';
 
 export function generateViewport() {
@@ -52,9 +52,7 @@ export function metadata() {
   };
 }
 
-
-export default async function Page({ params: locale }) {
-
+export default async function Page() {
   return (
     <>
       <Index />

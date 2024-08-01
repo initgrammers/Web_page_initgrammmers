@@ -3,7 +3,7 @@ import useAboutUs from '#constants/AboutUs';
 
 const ValuesSection = () => {
   const { valoresInitgrammers } = useAboutUs();
-  return(
+  return (
     <Values
       backgroundImage={valoresInitgrammers.backgroundImage}
       heightImage={valoresInitgrammers.heightImage}
@@ -11,5 +11,6 @@ const ValuesSection = () => {
       values={valoresInitgrammers.valores}
     />
   );
-}
+};
+
 export default ValuesSection;

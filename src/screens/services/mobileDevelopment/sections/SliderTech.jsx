@@ -1,7 +1,7 @@
 import SliderTechnologies from '#Components/SliderTechnologies';
 import useMobileDevelopment from '#app/constants/services/MobileDevelopment';
 
-const SliderTech = () => { 
+const SliderTech = () => {
   const { technologiesMobileApplication } = useMobileDevelopment();
   return (
     <SliderTechnologies

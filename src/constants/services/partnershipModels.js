@@ -1,7 +1,7 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 const usePartnershipModels = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   const bannerPartnershipModels = {
     backgroundImage:
@@ -13,7 +13,7 @@ const usePartnershipModels = () => {
       'https://res.cloudinary.com/initgrammers/image/upload/v1722371643/imagen_dev40u.png',
     buttonColor: 'primary',
   };
-  
+
   const partnershipModelsBenefitsTypes = {
     backgroundImage:
       'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque3.png',
@@ -43,7 +43,7 @@ const usePartnershipModels = () => {
       },
     },
   };
-  
+
   const importancePartnershipModels = {
     backgroundImage:
       'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque2.png',
@@ -75,7 +75,7 @@ const usePartnershipModels = () => {
     },
     isImageRight: false,
   };
-  
+
   const whatIsPartnershipModels = {
     backgroundImage:
       'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque4.png',
@@ -107,7 +107,7 @@ const usePartnershipModels = () => {
     },
     isImageRight: false,
   };
-  
+
   const becomeYourTeam = {
     backgroundImage:
       'https://res.cloudinary.com/initgrammers/image/upload/v1609854733/servicios/seo/figures/bloque5.png',
@@ -138,9 +138,9 @@ const usePartnershipModels = () => {
       },
     },
     isImageRight: true,
-    backgroundPrimaryFade: true
-  }
-  
+    backgroundPrimaryFade: true,
+  };
+
   const imageSizesOportunitiesPartnershipModels = {
     xs: {
       width: 288,
@@ -171,7 +171,7 @@ const usePartnershipModels = () => {
     heightImage: 895,
     imageSizes: imageSizesOportunitiesPartnershipModels,
   };
-  
+
   const questions = [
     {
       id: 0,
@@ -186,7 +186,7 @@ const usePartnershipModels = () => {
         t('detailsQuestion6'),
     },
   ];
-  
+
   const FAQPartnershipModels = {
     titlePart1: t('partnershipModelsFAQTitlePart1'),
     titlePart2: t('partnershipModelsFAQTitlePart2'),
@@ -202,7 +202,7 @@ const usePartnershipModels = () => {
     oportunitiePartnershipModels,
     questions,
     FAQPartnershipModels,
-  }
-}
+  };
+};
 
 export default usePartnershipModels;

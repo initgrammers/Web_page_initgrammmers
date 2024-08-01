@@ -1,18 +1,17 @@
 /* eslint-disable no-confusing-arrow */
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Box, Button, Fade, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
 import CustomLink from '#Components/CustomLink';
-import styles from '../styles/MenuDesktop';
 import ContactUsButton from '#Components/ContacUsButton';
 import { contactsLinks } from '#app/constants/contacts';
 import Options from './Options';
-import OutsideAlerter from './Outsider';
 import useMenu from '#constants/Menu';
 import LanguageSelector from '#Components/LanguageSelector';
-import { Box, Button, Fade, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import styles from '../styles/MenuDesktop';
 
 const MenuDesktop = ({
   showServices = false,
@@ -20,16 +19,16 @@ const MenuDesktop = ({
   indexMenu,
   handleClose,
 }) => {
-  const {menuInitgrammers} = useMenu();
-  const {t} = useTranslation();  
+  const { menuInitgrammers } = useMenu();
+  const { t } = useTranslation();
   return (
     <>
       <Box sx={styles.menuApp}>
         <CustomLink href="/">
           <LogoInitgrammers />
         </CustomLink>
-        <Box display='flex' justifyContent='space-between' width='100%'>
-          <Box display='flex' sx={styles.sectionMenu} gap={3}>
+        <Box display="flex" justifyContent="space-between" width="100%">
+          <Box display="flex" sx={styles.sectionMenu} gap={3}>
             {menuInitgrammers.menu.map((item, key) =>
               item?.items?.length > 0 ? (
                 <Button
@@ -52,7 +51,7 @@ const MenuDesktop = ({
                 </CustomLink>
               ))}
           </Box>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 'auto', gap: 2}}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 'auto', gap: 2 }}>
             <LanguageSelector />
             <ContactUsButton href={contactsLinks.general} />
           </Box>

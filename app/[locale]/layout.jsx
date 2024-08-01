@@ -1,27 +1,24 @@
-"use client"
-import { CacheProvider } from '@emotion/react';
-import { MuiThemeProvider } from '#app/shared/config/MuiThemeProvider';
+'use client';
+
 import PropTypes from 'prop-types';
+import { dir } from 'i18next';
 import './globals.css';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import Script from 'next/script';
+import { CacheProvider } from '@emotion/react';
 import createEmotionCache from '#app/shared/config/createEmotionCache';
 import { GA_TRACKING_ID } from '#app/lib/gtag';
-import { FB_PIXEL_ID } from '#app/lib/facebookPixel';
-import { GoogleAnalytics } from '@next/third-parties/google';
-import FacebookPixel from '#Components/FacebookPixel';
-import i18nConfig from 'i18nConfig';
-import { dir } from 'i18next';
-import initTranslations from 'app/i18n';
+import initTranslations from '../i18n';
 import TranslationsProvider from '#Components/TranslationsProvider';
+import FB_PIXEL_ID from '#app/lib/facebookPixel';
+import MuiThemeProvider from '#app/shared/config/MuiThemeProvider';
 
 const clientSideEmotionCache = createEmotionCache();
 const i18nNamespaces = ['common', 'common'];
 
-
-export default function RootLayout({ children, params:{locale} }) {
- 
+export default function RootLayout({ children, params: { locale = 'es' } }) {
   // const messages = await getMessages();
-  const { t, resources } = initTranslations(locale, i18nNamespaces);
-
+  const { resources } = initTranslations(locale, i18nNamespaces);
 
   return (
     <html lang={locale} dir={dir(locale)}>
@@ -30,10 +27,7 @@ export default function RootLayout({ children, params:{locale} }) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, viewport-fit=cover, shrink-to-fit=no"
         />
-        <meta
-          name='emotion-insertion-point'
-        >
-        </meta>
+        <meta name="emotion-insertion-point" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
           rel="preconnect"
@@ -94,33 +88,8 @@ export default function RootLayout({ children, params:{locale} }) {
           crossOrigin="true"
         />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-                !function(f,b,e,v,n,t,s)
-                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                n.queue=[];t=b.createElement(e);t.async=!0;
-                t.src=v;s=b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t,s)}(window, document,'script',
-                'https://connect.facebook.net/en_US/fbevents.js');
-                fbq('init', ${FB_PIXEL_ID});
-              `,
-          }}
-        />
-        <noscript>
-          <img
-            height="1"
-            alt="facebook pixel"
-            width="1"
-            style={{ display: 'none' }}
-            src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
-          />
-        </noscript>
       </head>
       <body>
-        <FacebookPixel>
         <TranslationsProvider
           resources={resources}
           locale={locale}
@@ -132,8 +101,30 @@ export default function RootLayout({ children, params:{locale} }) {
             </CacheProvider>
           </MuiThemeProvider>
         </TranslationsProvider>
-        </FacebookPixel>
-        <GoogleAnalytics gaId={GA_TRACKING_ID}/>
+        <GoogleAnalytics gaId={GA_TRACKING_ID} />
+        <Script id="facebook-pixel" strategy="afterInteractive">
+          {`
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', ${FB_PIXEL_ID});
+          fbq('track', 'PageView');
+        `}
+        </Script>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
+            alt="facebookPixel"
+          />
+        </noscript>
       </body>
     </html>
   );
@@ -141,5 +132,5 @@ export default function RootLayout({ children, params:{locale} }) {
 
 RootLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  layoutProps: PropTypes.object,
+  params: PropTypes.shape({ locale: PropTypes.string.isRequired }),
 };

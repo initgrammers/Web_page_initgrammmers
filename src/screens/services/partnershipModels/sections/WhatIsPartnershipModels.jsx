@@ -1,7 +1,7 @@
 import InformationWithImageSection from '#Components/InformationWithImageSection';
 import usePartnershipModels from '#constants/services/partnershipModels';
 
-const InnovativeDesign = () => { 
+const InnovativeDesign = () => {
   const { whatIsPartnershipModels } = usePartnershipModels();
   return (
     <InformationWithImageSection

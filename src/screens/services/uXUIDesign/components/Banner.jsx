@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
+import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
-import styles from '../styles/Banner';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import Subtitle from '#Components/Subtitle';
 import ContactUsButton from '#Components/ContacUsButton';
-import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
-import { Box, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { contactsLinks } from '#app/constants/contacts';
+import styles from '../styles/Banner';
 
 const Banner = ({
   backgroundImage = '',
@@ -16,7 +16,7 @@ const Banner = ({
   description,
   image,
 }) => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   return (
     <Box component="section" position="relative">
       <BackgroundImage height={heightImage} image={backgroundImage} />
