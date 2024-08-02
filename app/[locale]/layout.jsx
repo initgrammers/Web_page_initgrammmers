@@ -1,25 +1,19 @@
-'use client';
-
 import PropTypes from 'prop-types';
 import { dir } from 'i18next';
 import './globals.css';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import Script from 'next/script';
-import { CacheProvider } from '@emotion/react';
-import createEmotionCache from '#app/shared/config/createEmotionCache';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { GA_TRACKING_ID } from '#app/lib/gtag';
 import initTranslations from '../i18n';
 import TranslationsProvider from '#Components/TranslationsProvider';
 import FB_PIXEL_ID from '#app/lib/facebookPixel';
 import MuiThemeProvider from '#app/shared/config/MuiThemeProvider';
 
-const clientSideEmotionCache = createEmotionCache();
 const i18nNamespaces = ['common', 'common'];
 
 export default function RootLayout({ children, params: { locale = 'es' } }) {
-  // const messages = await getMessages();
   const { resources } = initTranslations(locale, i18nNamespaces);
-
   return (
     <html lang={locale} dir={dir(locale)}>
       <head>
@@ -95,11 +89,11 @@ export default function RootLayout({ children, params: { locale = 'es' } }) {
           locale={locale}
           namespaces={i18nNamespaces}
         >
-          <MuiThemeProvider>
-            <CacheProvider value={clientSideEmotionCache}>
+          <AppRouterCacheProvider>
+            <MuiThemeProvider>
               {children}
-            </CacheProvider>
-          </MuiThemeProvider>
+            </MuiThemeProvider>
+          </AppRouterCacheProvider>
         </TranslationsProvider>
         <GoogleAnalytics gaId={GA_TRACKING_ID} />
         <Script id="facebook-pixel" strategy="afterInteractive">

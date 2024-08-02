@@ -1,4 +1,7 @@
 /* eslint-disable no-confusing-arrow */
+
+'use client';
+
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { Box, Button, Grid, Typography } from '@mui/material';
@@ -58,6 +61,7 @@ Service.propTypes = {
 const Options = ({ indexMenu, handleDrawerOpen }) => {
   const { t } = useTranslation();
   const { data } = useMenu();
+  console.log('Options')
   return (
     <Box sx={styles.root}>
       <Typography color="primary" sx={styles.title}>

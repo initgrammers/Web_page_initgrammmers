@@ -1,3 +1,4 @@
+'use client';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import { primary, secondary } from '../theme/colors';
 import { typography } from '../theme/typography';

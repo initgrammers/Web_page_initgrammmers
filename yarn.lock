@@ -357,6 +357,13 @@
   dependencies:
     "@babel/runtime" "^7.23.9"
 
+"@mui/material-nextjs@^5.16.6":
+  version "5.16.6"
+  resolved "https://registry.yarnpkg.com/@mui/material-nextjs/-/material-nextjs-5.16.6.tgz#dfd8c83c58ddc70b80b1dda1a074bb8f2c3cbd5c"
+  integrity sha512-Y64ybP5Pmy+GCUcu3SuMnc25CqFwBQkRn6XNXyhvc1mhR48Iq0oFKjoO5ncqfhm58OwPClIRW2tecP/PTdGNJw==
+  dependencies:
+    "@babel/runtime" "^7.23.9"
+
 "@mui/material@^5.16.4":
   version "5.16.6"
   resolved "https://registry.yarnpkg.com/@mui/material/-/material-5.16.6.tgz#c7d695f4a9a473052dc086e64471d0435b7e4a52"
@@ -2956,7 +2963,12 @@ next-nprogress@^1.4.0:
   dependencies:
     nprogress "^0.2.0"
 
-next@^14.2.5:
+next-seo@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-6.5.0.tgz#5ccfbcfaced9d296499aa88f074b9e82e252a9c8"
+  integrity sha512-MfzUeWTN/x/rsKp/1n0213eojO97lIl0unxqbeCY+6pAucViHDA8GSLRRcXpgjsSmBxfCFdfpu7LXbt4ANQoNQ==
+
+next@^14.2.3:
   version "14.2.5"
   resolved "https://registry.yarnpkg.com/next/-/next-14.2.5.tgz#afe4022bb0b752962e2205836587a289270efbea"
   integrity sha512-0f8aRfBVL+mpzfBjYfQuLWh2WyAwtJXCRfkPF4UJ5qd2YwrHczsrSzXU4tRMV0OAxR8ZJZWPFn6uhSC56UTsLA==

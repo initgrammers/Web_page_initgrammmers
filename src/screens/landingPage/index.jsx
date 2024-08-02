@@ -16,7 +16,7 @@ const SliderClients = dynamic(() => import('./sections/SliderClients'));
 const CarryOutThatProject = dynamic(() => import('./sections/CarryOutThatProject'));
 const Questions = dynamic(() => import('./sections/Questions'));
 
-const index = () => {
+const Index = () => {
   const { onlineSolution } = useLandingPage();
 
   return (
@@ -39,4 +39,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
