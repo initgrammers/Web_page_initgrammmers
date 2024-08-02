@@ -3,7 +3,7 @@ import { dir } from 'i18next';
 import './globals.css';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import Script from 'next/script';
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { GA_TRACKING_ID } from '#app/lib/gtag';
 import initTranslations from '../i18n';
 import TranslationsProvider from '#Components/TranslationsProvider';
@@ -89,10 +89,8 @@ export default function RootLayout({ children, params: { locale = 'es' } }) {
           locale={locale}
           namespaces={i18nNamespaces}
         >
-          <AppRouterCacheProvider>
-            <MuiThemeProvider>
-              {children}
-            </MuiThemeProvider>
+          <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+            <MuiThemeProvider>{children}</MuiThemeProvider>
           </AppRouterCacheProvider>
         </TranslationsProvider>
         <GoogleAnalytics gaId={GA_TRACKING_ID} />
