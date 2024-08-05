@@ -5,7 +5,7 @@
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Box, Button, Fade, Typography } from '@mui/material';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import PropTypes from 'prop-types';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
 import CustomLink from '#Components/CustomLink';
@@ -23,7 +23,6 @@ const MenuDesktop = ({
   handleClose,
 }) => {
   const { contactsLinks } = useContacts();
-  const locale = useLocale();
   const { menuInitgrammers } = useMenu();
   const t = useTranslations('Index');
   return (
@@ -47,7 +46,7 @@ const MenuDesktop = ({
                   </Typography>
                 </Button>
               ) : (
-                <CustomLink key={key} href={`/${locale}/${item.href}`}>
+                <CustomLink key={key} href={`${item.href}`}>
                   <Button onClick={handleClose} sx={styles.button}>
                     <Typography variant="body2" align="center" sx={styles.services}>
                       {item.title}
