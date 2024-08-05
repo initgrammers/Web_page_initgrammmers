@@ -30,12 +30,6 @@ const Banner = ({
               component="h1"
               emphasis={title}
               mb={0}
-              fontSize={{
-                xs: '2rem',
-                sm: '2.5707rem',
-                md: '2.7849rem',
-                lg: '2.9991rem',
-              }}
             />
             <Typography
               variant="h3"

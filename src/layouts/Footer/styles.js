@@ -21,7 +21,7 @@ const styles = {
     },
   },
   gridContact: {
-    height: { xs:'250px', sm: '150px' },
+    height: '150px',
     display: 'flex',
     justifyContent: 'space-between',
     flexDirection: 'column',

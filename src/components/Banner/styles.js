@@ -3,7 +3,7 @@ import theme from '../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
   detailsContent: {
-    width: { xs: "100%", sm: 468, lg: 520 },
+    width: { xs: 468, lg: 520 },
     flex: { lg: 5 },
     display: { lg: 'flex' },
     flexDirection: { lg: 'column' },
