@@ -18,10 +18,10 @@ module.exports = withBundleAnalyzer(withNextIntl({
     ],
   },
   logging: {
-		fetches: {
-			fullUrl: true,
-		},
-	},
+    fetches: {
+      fullUrl: true,
+    },
+  },
 
   // async rewrites() {
   //   return [
