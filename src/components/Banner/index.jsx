@@ -18,7 +18,6 @@ const Banner = ({
   image = '',
   backgroundColor = '',
   buttonColor = 'secondary',
-  hrefContactUs = ``,
 }) => {
   const { contactsLinks } = useContacts();
   const t = useTranslations('Index');
@@ -74,7 +73,6 @@ Banner.propTypes = {
   image: PropTypes.string,
   backgroundColor: PropTypes.string,
   buttonColor: PropTypes.string,
-  hrefContactUs: PropTypes.string,
 };
 
 export default Banner;

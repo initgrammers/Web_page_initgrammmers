@@ -16,7 +16,6 @@ import routes from '#app/routes/';
 import styles from './styles';
 
 const CustomFooter = () => {
-
   const { contactsLinks } = useContacts();
   const t = useTranslations('Index');
 

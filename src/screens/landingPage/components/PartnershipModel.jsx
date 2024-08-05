@@ -62,7 +62,7 @@ const PartnershipModel = ({
       </CustomContainer>
     </Box>
   );
-}
+};
 PartnershipModel.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,

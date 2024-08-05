@@ -65,7 +65,7 @@ const OptionsShopping = ({
       </CustomContainer>
     </Box>
   );
-}
+};
 OptionsShopping.propTypes = {
   titlePart1: PropTypes.string.isRequired,
   titlePart2: PropTypes.string,

@@ -1,26 +1,26 @@
+/* eslint-disable camelcase */
 import PropTypes from 'prop-types';
 import './globals.css';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import Script from 'next/script';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
-import { getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
-import {unstable_setRequestLocale} from 'next-intl/server';
+import { unstable_setRequestLocale, getMessages } from 'next-intl/server';
 import { GA_TRACKING_ID } from '#app/lib/gtag';
 import FB_PIXEL_ID from '#app/lib/facebookPixel';
 import MuiThemeProvider from '#app/shared/config/MuiThemeProvider';
 
 const locales = ['es', 'en'];
- 
+
 export function generateStaticParams() {
-  return locales.map((locale) => ({locale}));
+  return locales.map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({ children, params: { locale = 'es' } }) {
   unstable_setRequestLocale(locale);
   const messages = await getMessages();
   return (
-    <html lang={locale} >
+    <html lang={locale}>
       <head>
         <meta
           name="viewport"

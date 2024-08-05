@@ -2,7 +2,7 @@
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useState } from 'react';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { Box, Button, Popover, Typography } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
 import styles from './Menu/styles/MenuDesktop';
@@ -31,7 +31,7 @@ const LanguageSelector = () => {
       return segment;
     });
     const newPathname = newSegments.join('/');
-    router.replace(newPathname); 
+    router.replace(newPathname);
   };
 
   return (

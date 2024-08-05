@@ -1,4 +1,5 @@
 'use client';
+
 import PropTypes from 'prop-types';
 import { Box, Button, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';

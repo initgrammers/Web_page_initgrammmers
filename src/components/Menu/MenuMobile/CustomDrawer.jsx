@@ -1,4 +1,5 @@
 'use client';
+
 import PropTypes from 'prop-types';
 import { Collapse } from '@mui/material';
 import ListMenu from './ListMenu';

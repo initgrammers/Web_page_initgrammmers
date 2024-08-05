@@ -7,9 +7,8 @@ import CustomContainer from '#Components/CustomContainer';
 import styles from './styles';
 
 const ContactUs = () => {
-
   const { contactsLinks } = useContacts();
-  
+
   const t = useTranslations('Index');
   return (
     <Box component="section" position="relative">

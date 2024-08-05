@@ -15,7 +15,7 @@ const CarryOutThatProject = ({
   image = '',
 }) => {
   const { contactsLinks, textContactUsButton } = useContacts();
-  return(
+  return (
     <Box component="section" position="relative" sx={styles.backgroundSection}>
       <BackgroundImage />
       <CustomContainer>
@@ -59,7 +59,7 @@ const CarryOutThatProject = ({
       </CustomContainer>
     </Box>
   );
-}
+};
 CarryOutThatProject.propTypes = {
   titlePart1: PropTypes.string.isRequired,
   titlePart2: PropTypes.string,

@@ -20,7 +20,7 @@ const Service = ({
 }) => {
   const locale = useLocale();
   const localizedHref = `/${locale}/${href}`;
-  return(
+  return (
     <Link href={localizedHref} legacyBehavior>
       <a style={styles.service}>
         <Button
@@ -50,7 +50,7 @@ const Service = ({
       </a>
     </Link>
   );
-}
+};
 Service.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,

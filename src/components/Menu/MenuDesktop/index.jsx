@@ -1,5 +1,7 @@
 /* eslint-disable no-confusing-arrow */
+
 'use client';
+
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Box, Button, Fade, Typography } from '@mui/material';
@@ -61,7 +63,7 @@ const MenuDesktop = ({
         </Box>
       </Box>
       <Fade timeout={800} in={showServices} sx={styles.fade}>
-        <Box bgcolor="white" >
+        <Box bgcolor="white">
           <Options
             visible={showServices}
             indexMenu={indexMenu}

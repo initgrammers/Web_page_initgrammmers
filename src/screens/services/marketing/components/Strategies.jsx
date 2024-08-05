@@ -65,7 +65,7 @@ const Strategies = ({
       </CustomContainer>
     </Box>
   );
-}
+};
 Strategies.propTypes = {
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,

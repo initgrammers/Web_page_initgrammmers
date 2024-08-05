@@ -16,5 +16,5 @@ const Banner = () => {
       hrefContactUs={contactsLinks.marketingDigitalPage}
     />
   );
-}
+};
 export default Banner;
