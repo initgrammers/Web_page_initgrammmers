@@ -26,8 +26,8 @@ const usePartnershipModels = () => {
       'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/beneficios-seo.png',
     imageSizes: {
       xs: {
-        width: 414,
-        height: 414,
+        width: 500,
+        height: 500,
       },
       sm: {
         width: 414,
