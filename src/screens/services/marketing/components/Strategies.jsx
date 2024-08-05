@@ -5,7 +5,7 @@ import Subtitle from '#Components/Subtitle';
 import CustomContainer from '#Components/CustomContainer';
 import ContactUsButton from '#Components/ContacUsButton';
 import BackgroundImage from '#Components/BackgroundImage';
-import { contactsLinks, textContactUsButton } from '#app/constants/contacts';
+import useContacts from '#app/constants/contacts';
 import CardPartnership from '#Components/CardPartnership';
 import styles from '../styles/Strategies';
 
@@ -18,52 +18,54 @@ const Strategies = ({
   heightImage = 0,
   titlePart2 = '',
   titlePart3 = '',
-}) => (
-  <Box component="section" position="relative">
-    <BackgroundImage image={backgroundImage} height={heightImage} />
-    <CustomContainer>
-      <Box component="article" sx={styles.content}>
-        <Subtitle
-          head={titlePart1}
-          emphasis={titlePart2}
-          tail={titlePart3}
-          align="center"
-          mb={4}
-          component="h2"
-          variant="h2"
-        />
-        <Box sx={styles.imageStyle}>
-          <Image
-            quality={100}
-            src={image}
-            fill
-            alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
+}) => {
+  const { contactsLinks, textContactUsButton } = useContacts();
+  return (
+    <Box component="section" position="relative">
+      <BackgroundImage image={backgroundImage} height={heightImage} />
+      <CustomContainer>
+        <Box component="article" sx={styles.content}>
+          <Subtitle
+            head={titlePart1}
+            emphasis={titlePart2}
+            tail={titlePart3}
+            align="center"
+            mb={4}
+            component="h2"
+            variant="h2"
           />
+          <Box sx={styles.imageStyle}>
+            <Image
+              quality={100}
+              src={image}
+              fill
+              alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
+            />
+          </Box>
+          <Typography variant="body1" sx={styles.description}>
+            {description}
+          </Typography>
+          <ContactUsButton
+            color="secondary"
+            label={textContactUsButton.whatsapp}
+            href={contactsLinks.marketingDigitalPage}
+          />
+          <Box sx={styles.shop}>
+            {optionsShoppingOnline.map((service) => (
+              <Box key={service.title} sx={styles.optionsShop}>
+                <CardPartnership
+                  image={service.path}
+                  title={service.title}
+                  description={service.description}
+                />
+              </Box>
+            ))}
+          </Box>
         </Box>
-        <Typography variant="body1" sx={styles.description}>
-          {description}
-        </Typography>
-        <ContactUsButton
-          color="secondary"
-          label={textContactUsButton.whatsapp}
-          href={contactsLinks.marketingDigitalPage}
-        />
-        <Box sx={styles.shop}>
-          {optionsShoppingOnline.map((service) => (
-            <Box key={service.title} sx={styles.optionsShop}>
-              <CardPartnership
-                image={service.path}
-                title={service.title}
-                description={service.description}
-              />
-            </Box>
-          ))}
-        </Box>
-      </Box>
-    </CustomContainer>
-  </Box>
-);
-
+      </CustomContainer>
+    </Box>
+  );
+}
 Strategies.propTypes = {
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,

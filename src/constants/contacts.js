@@ -1,21 +1,36 @@
-export const contactsLinks = {
-  landing: '/contact-us',
-  general: '/contact-us',
-  webPages: '/contact-us',
-  mobileApps: '/contact-us',
-  uiuxPages: '/contact-us',
-  shopEcommercePage: '/contact-us',
-  marketingDigitalPage: '/contact-us',
-  partnershipModelsPage: '/contact-us',
-  aboutUsPage: '/contact-us',
-  consulting: '/contact-us',
-  teamMessage: '/contact-us',
-  writeUs: '/contact-us',
-  startProject: '/contact-us',
-  callUs: '/contact-us',
-};
+const { useLocale } = require("next-intl");
 
-export const textContactUsButton = {
-  whatsapp: 'Contáctanos',
-  email: 'Contáctanos por correo',
-};
+const useContacts = () => {
+
+  const locale = useLocale();
+  const localizedHref = `/${locale}/contact-us`; 
+
+  const contactsLinks = {
+    landing: localizedHref,
+    general: localizedHref,
+    webPages: localizedHref,
+    mobileApps: localizedHref,
+    uiuxPages: localizedHref,
+    shopEcommercePage: localizedHref,
+    marketingDigitalPage: localizedHref,
+    partnershipModelsPage: localizedHref,
+    aboutUsPage: localizedHref,
+    consulting: localizedHref,
+    teamMessage: localizedHref,
+    writeUs: localizedHref,
+    startProject: localizedHref,
+    callUs: localizedHref,
+  };
+
+  const textContactUsButton = {
+    whatsapp: 'Contáctanos',
+    email: 'Contáctanos por correo',
+  };
+
+  return {
+    contactsLinks,
+    textContactUsButton,
+  }
+}
+
+export default useContacts;

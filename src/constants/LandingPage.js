@@ -1,8 +1,8 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import routes from '#app/routes/';
 
 const useLandingPage = () => {
-  const { t } = useTranslation();
+  const t = useTranslations('Index');
 
   const bannerLandingPage = {
     backgroundImage:

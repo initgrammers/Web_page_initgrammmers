@@ -3,12 +3,12 @@ import DevicesIcon from '@mui/icons-material/Devices';
 import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
 import CastForEducationOutlinedIcon from '@mui/icons-material/CastForEducationOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import styles from '../components/Menu/styles/Options';
 import routes from '#app/routes/';
 
 const useMenu = () => {
-  const { t } = useTranslation();
+  const t = useTranslations('Index');
   const data = [
     {
       id: 'webDevelopment',

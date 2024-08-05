@@ -3,12 +3,12 @@
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Box, Button, Fade, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { useLocale, useTranslations } from 'next-intl';
 import PropTypes from 'prop-types';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
 import CustomLink from '#Components/CustomLink';
 import ContactUsButton from '#Components/ContacUsButton';
-import { contactsLinks } from '#app/constants/contacts';
+import useContacts from '#app/constants/contacts';
 import Options from './Options';
 import useMenu from '#constants/Menu';
 import LanguageSelector from '#Components/LanguageSelector';
@@ -20,9 +20,10 @@ const MenuDesktop = ({
   indexMenu,
   handleClose,
 }) => {
+  const { contactsLinks } = useContacts();
+  const locale = useLocale();
   const { menuInitgrammers } = useMenu();
-  const { t } = useTranslation();
-  console.log("MENU")
+  const t = useTranslations('Index');
   return (
     <>
       <Box sx={styles.menuApp}>
@@ -44,7 +45,7 @@ const MenuDesktop = ({
                   </Typography>
                 </Button>
               ) : (
-                <CustomLink key={key} href={item.href}>
+                <CustomLink key={key} href={`/${locale}/${item.href}`}>
                   <Button onClick={handleClose} sx={styles.button}>
                     <Typography variant="body2" align="center" sx={styles.services}>
                       {item.title}
@@ -55,7 +56,7 @@ const MenuDesktop = ({
           </Box>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 'auto', gap: 2 }}>
             <LanguageSelector />
-            <ContactUsButton href={contactsLinks.general} />
+            <ContactUsButton href={`${contactsLinks.general}`} />
           </Box>
         </Box>
       </Box>

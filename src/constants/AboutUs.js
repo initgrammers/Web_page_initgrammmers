@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 const teamPlayer = [
   {
@@ -46,7 +46,7 @@ const teamPlayer = [
 ];
 
 const useAboutUs = () => {
-  const { t } = useTranslation();
+  const t = useTranslations('Index');
 
   const mision = {
     title: t('misionTitle'),

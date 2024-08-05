@@ -1,13 +1,16 @@
 import { Box, Grid, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import ContactUsButton from '#Components/ContacUsButton';
 import LinkContactUs from './components/LinkContactUs';
-import { contactsLinks } from '#app/constants/contacts';
+import useContacts from '#app/constants/contacts';
 import CustomContainer from '#Components/CustomContainer';
 import styles from './styles';
 
 const ContactUs = () => {
-  const { t } = useTranslation();
+
+  const { contactsLinks } = useContacts();
+  
+  const t = useTranslations('Index');
   return (
     <Box component="section" position="relative">
       <CustomContainer>

@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 const usePartnershipModels = () => {
-  const { t } = useTranslation();
+  const t = useTranslations('Index');
 
   const bannerPartnershipModels = {
     backgroundImage:

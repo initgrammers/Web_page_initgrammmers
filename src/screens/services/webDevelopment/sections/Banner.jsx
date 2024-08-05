@@ -1,9 +1,10 @@
 import WebDevelopmentBanner from '#Components/Banner';
 import useWebDevelopment from '#constants/services/webDevelopment';
-import { contactsLinks } from '#app/constants/contacts';
+import useContacts from '#app/constants/contacts';
 
 const Banner = () => {
   const { bannerWebDevelopment } = useWebDevelopment();
+  const { contactsLinks } = useContacts();
   return (
     <WebDevelopmentBanner
       backgroundImage={bannerWebDevelopment.backgroundImage}

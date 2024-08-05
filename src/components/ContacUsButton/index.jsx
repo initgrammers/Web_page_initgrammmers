@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Button, Link } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import styles from '#app/assets/styles/ContacUsButton';
 
 const ContactUsButton = ({
@@ -11,7 +11,7 @@ const ContactUsButton = ({
   children = undefined,
   mr = 0,
 }) => {
-  const { t } = useTranslation();
+  const t = useTranslations('Index');
   return (
     <Link target="_parent" rel="noopener" href={href} sx={styles.link(mr)}>
       <Button variant={variant} color={color}>

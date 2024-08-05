@@ -1,5 +1,5 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -11,12 +11,14 @@ import LinkWithIcon from './components/LinkWithIcon';
 import LinkIcon from './components/LinkIcon';
 import CustomLink from '#Components/CustomLink';
 import ContactUs from './ContactUs';
-import { contactsLinks } from '#app/constants/contacts';
+import useContacts from '#app/constants/contacts';
 import routes from '#app/routes/';
 import styles from './styles';
 
 const CustomFooter = () => {
-  const { t } = useTranslation();
+
+  const { contactsLinks } = useContacts();
+  const t = useTranslations('Index');
 
   const services = [
     {

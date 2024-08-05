@@ -1,9 +1,10 @@
 import React from 'react';
 import ContactUsBanner from '#Components/Banner';
 import useContactUs from '#app/constants/ContactUs';
-import { contactsLinks } from '#app/constants/contacts';
+import useContacts from '#app/constants/contacts';
 
 const Banner = () => {
+  const { contactsLinks } = useContacts();
   const { bannerContactUsPage } = useContactUs();
   return (
     <ContactUsBanner

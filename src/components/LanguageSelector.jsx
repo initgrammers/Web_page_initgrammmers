@@ -2,18 +2,16 @@
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useLocale, useTranslations } from 'next-intl';
 import { Box, Button, Popover, Typography } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
-import i18nConfig from '../../i18nConfig';
 import styles from './Menu/styles/MenuDesktop';
 
 const LanguageSelector = () => {
   const router = useRouter();
   const [showLanguages, setShowLanguages] = useState(null);
-  const { i18n } = useTranslation();
   const open = Boolean(showLanguages);
-  const currentLocale = i18n.language;
+  const currentLocale = useLocale();
   const currentPathname = usePathname();
 
   const handleClick = (event) => {
@@ -25,23 +23,15 @@ const LanguageSelector = () => {
   };
 
   const changeLanguage = (newLocale) => {
-    const days = 30;
-    const date = new Date();
-    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-    const expires = `; expires= ${date.toUTCString()}`;
-    document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires}:path/`;
-
-    if (
-      currentLocale === i18nConfig.defaultLocale && !i18nConfig.prefixDefault
-    ) {
-      router.push(`/${newLocale}${currentPathname}`);
-    } else {
-      router.push(
-        currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
-      );
-    }
-
-    router.refresh();
+    const currentSegments = currentPathname.split('/');
+    const newSegments = currentSegments.map((segment) => {
+      if (segment === 'es' || segment === 'en') {
+        return newLocale;
+      }
+      return segment;
+    });
+    const newPathname = newSegments.join('/');
+    router.replace(newPathname); 
   };
 
   return (

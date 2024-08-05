@@ -1,7 +1,6 @@
 import React from 'react';
 import LandingPage from '#screens/landingPage';
 import LandingPageSEO from '#app/constants/seo/LandingPage';
-import Head from 'next/head';
 
 export function generateViewport() {
   return {

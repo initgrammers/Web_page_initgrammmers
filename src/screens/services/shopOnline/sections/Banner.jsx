@@ -1,10 +1,11 @@
 import { useTheme } from '@mui/material';
 import ShopOnlineBanner from '#Components/Banner';
 import { bannerShopOnline } from '#constants/services/ShopOnline';
-import { contactsLinks } from '#app/constants/contacts';
+import useContacts from '#app/constants/contacts';
 
 const Banner = () => {
   const { palette } = useTheme();
+  const { contactsLinks } = useContacts();
   return (
     <ShopOnlineBanner
       backgroundImage={bannerShopOnline.backgroundImage}

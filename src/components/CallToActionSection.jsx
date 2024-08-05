@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { Box, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import Subtitle from '#Components/Subtitle';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import ContactUsButton from './ContacUsButton';
-import { contactsLinks } from '#app/constants/contacts';
+import useContacts from '#app/constants/contacts';
 import styles from '../assets/styles/CallToActionType';
 
 const CallToActionSection = ({
@@ -20,7 +20,8 @@ const CallToActionSection = ({
   backgroundColor = '',
   imageSizes,
 }) => {
-  const { t } = useTranslation();
+  const { contactsLinks } = useContacts();
+  const t = useTranslations('Index');
 
   return (
     <Box component="section" position="relative" bgcolor={backgroundColor}>

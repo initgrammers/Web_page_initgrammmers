@@ -1,14 +1,15 @@
 import Image from 'next/image';
 import { Box, Container, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import ContactUsButton from '#Components/ContacUsButton';
-import { contactsLinks } from '#app/constants/contacts';
+import useContacts from '#app/constants/contacts';
 import useMobileDevelopment from '#constants/services/MobileDevelopment';
 import styles from '../styles/Banner';
 
 const Banner = () => {
   const { bannerMobileDevelopment } = useMobileDevelopment();
-  const { t } = useTranslation();
+  const { contactsLinks } = useContacts();
+  const t = useTranslations('Index');
   return (
     <Box component="section" sx={styles.mainSection}>
       <Box sx={styles.containerBackgroundImage}>

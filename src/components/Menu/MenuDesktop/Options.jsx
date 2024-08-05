@@ -5,7 +5,7 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { Box, Button, Grid, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { useLocale, useTranslations } from 'next-intl';
 import useMenu from '#constants/Menu';
 import styles from '../styles/Options';
 
@@ -17,37 +17,40 @@ const Service = ({
   indexMenu = '',
   id = '',
   handleDrawerOpen = () => {},
-}) => (
-  <Link href={href} legacyBehavior>
-    <a style={styles.service}>
-      <Button
-        fullWidth
-        onClick={handleDrawerOpen}
-        sx={{
-          ...styles.button,
-          ...(indexMenu === id && styles.selected),
-        }}
-      >
-        {icon}
-        <Box sx={styles.descriptionService}>
-          <Typography
-            variant="subtitle1"
-            color={indexMenu === id ? styles.selected.color : 'inherit'}
-          >
-            {title}
-          </Typography>
-          <Typography
-            variant="caption"
-            color={indexMenu === id ? styles.selected.color : 'inherit'}
-          >
-            {subtitle}
-          </Typography>
-        </Box>
-      </Button>
-    </a>
-  </Link>
-);
-
+}) => {
+  const locale = useLocale();
+  const localizedHref = `/${locale}/${href}`;
+  return(
+    <Link href={localizedHref} legacyBehavior>
+      <a style={styles.service}>
+        <Button
+          fullWidth
+          onClick={handleDrawerOpen}
+          sx={{
+            ...styles.button,
+            ...(indexMenu === id && styles.selected),
+          }}
+        >
+          {icon}
+          <Box sx={styles.descriptionService}>
+            <Typography
+              variant="subtitle1"
+              color={indexMenu === id ? styles.selected.color : 'inherit'}
+            >
+              {title}
+            </Typography>
+            <Typography
+              variant="caption"
+              color={indexMenu === id ? styles.selected.color : 'inherit'}
+            >
+              {subtitle}
+            </Typography>
+          </Box>
+        </Button>
+      </a>
+    </Link>
+  );
+}
 Service.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
@@ -59,9 +62,8 @@ Service.propTypes = {
 };
 
 const Options = ({ indexMenu, handleDrawerOpen }) => {
-  const { t } = useTranslation();
+  const t = useTranslations('Index');
   const { data } = useMenu();
-  console.log('Options')
   return (
     <Box sx={styles.root}>
       <Typography color="primary" sx={styles.title}>

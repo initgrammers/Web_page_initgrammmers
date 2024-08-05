@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 const useMobileDevelopment = () => {
-  const { t } = useTranslation();
+  const t = useTranslations('Index');
 
   const bannerMobileDevelopment = {
     titlePar1: t('mobileDevelopmentBannerTitlePart1'),

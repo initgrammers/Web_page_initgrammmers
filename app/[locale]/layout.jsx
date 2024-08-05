@@ -1,27 +1,36 @@
 import PropTypes from 'prop-types';
-import { dir } from 'i18next';
 import './globals.css';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import Script from 'next/script';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
+import { getMessages } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
+import {unstable_setRequestLocale} from 'next-intl/server';
 import { GA_TRACKING_ID } from '#app/lib/gtag';
-import initTranslations from '../i18n';
-import TranslationsProvider from '#Components/TranslationsProvider';
 import FB_PIXEL_ID from '#app/lib/facebookPixel';
 import MuiThemeProvider from '#app/shared/config/MuiThemeProvider';
 
-const i18nNamespaces = ['common', 'common'];
+const locales = ['es', 'en'];
+ 
+export function generateStaticParams() {
+  return locales.map((locale) => ({locale}));
+}
 
-export default function RootLayout({ children, params: { locale = 'es' } }) {
-  const { resources } = initTranslations(locale, i18nNamespaces);
+export default async function RootLayout({ children, params: { locale = 'es' } }) {
+  unstable_setRequestLocale(locale);
+  const messages = await getMessages();
   return (
-    <html lang={locale} dir={dir(locale)}>
+    <html lang={locale} >
       <head>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, viewport-fit=cover, shrink-to-fit=no"
         />
         <meta name="emotion-insertion-point" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+        />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
           rel="preconnect"
@@ -29,10 +38,6 @@ export default function RootLayout({ children, params: { locale = 'es' } }) {
           crossOrigin="true"
         />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com/" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
 
         <link rel="dns-prefetch" href="https://initgrammers.com" />
         <link
@@ -84,15 +89,17 @@ export default function RootLayout({ children, params: { locale = 'es' } }) {
         <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
       </head>
       <body>
-        <TranslationsProvider
+        {/* <TranslationsProvider
           resources={resources}
           locale={locale}
           namespaces={i18nNamespaces}
-        >
+        > */}
+        <NextIntlClientProvider messages={messages}>
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <MuiThemeProvider>{children}</MuiThemeProvider>
           </AppRouterCacheProvider>
-        </TranslationsProvider>
+        </NextIntlClientProvider>
+        {/* </TranslationsProvider> */}
         <GoogleAnalytics gaId={GA_TRACKING_ID} />
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`

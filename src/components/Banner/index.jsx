@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { Box, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import ContactUsButton from '#Components/ContacUsButton';
-import { contactsLinks } from '#app/constants/contacts';
+import useContacts from '#app/constants/contacts';
 import styles from './styles';
 
 const Banner = ({
@@ -18,9 +18,10 @@ const Banner = ({
   image = '',
   backgroundColor = '',
   buttonColor = 'secondary',
-  hrefContactUs = `${contactsLinks.general}`,
+  hrefContactUs = ``,
 }) => {
-  const { t } = useTranslation();
+  const { contactsLinks } = useContacts();
+  const t = useTranslations('Index');
   return (
     <Box component="section" position="relative" bgcolor={backgroundColor}>
       <BackgroundImage image={backgroundImage} height={heightImage} />
@@ -42,7 +43,7 @@ const Banner = ({
             <ContactUsButton
               color={buttonColor}
               label={t('homeLearnButton')}
-              href={hrefContactUs}
+              href={contactsLinks.general}
             />
           </Box>
           <Box sx={styles.containerImage}>

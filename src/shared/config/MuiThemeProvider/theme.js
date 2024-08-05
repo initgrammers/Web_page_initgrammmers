@@ -4,6 +4,13 @@ import { primary, secondary } from '../theme/colors';
 import { typography } from '../theme/typography';
 
 const baseTheme = createTheme({
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: `
+      @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+      `,
+    },
+  },
   typography,
   palette: {
     primary,

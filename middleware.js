@@ -1,10 +1,14 @@
-import { i18nRouter } from 'next-i18n-router';
-import i18nConfig from './i18nConfig';
-
-export function middleware(request) {
-  return i18nRouter(request, i18nConfig);
-}
-
+import createMiddleware from 'next-intl/middleware';
+ 
+export default createMiddleware({
+  // A list of all locales that are supported
+  locales: ['es', 'en'],
+ 
+  // Used when no locale matches
+  defaultLocale: 'es'
+});
+ 
 export const config = {
-  matcher: '/((?!api|static|.*\\..*|_next).*)',
+  // Match only internationalized pathnames
+  matcher: ['/', '/(es|en)/:path*']
 };

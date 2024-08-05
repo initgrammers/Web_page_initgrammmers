@@ -1,7 +1,7 @@
-const { useTranslation } = require('react-i18next');
+import { useTranslations } from 'next-intl';
 
 const useContactUs = () => {
-  const { t } = useTranslation();
+  const t = useTranslations('Index');
 
   const bannerContactUsPage = {
     backgroundImage:

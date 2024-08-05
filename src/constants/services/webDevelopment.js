@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 const useWebDevelopment = () => {
-  const { t } = useTranslation();
+  const t = useTranslations('Index');
 
   const bannerWebDevelopment = {
     backgroundImage:

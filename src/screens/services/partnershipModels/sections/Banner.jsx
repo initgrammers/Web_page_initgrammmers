@@ -1,11 +1,12 @@
 import { useTheme } from '@mui/material';
 import PartnershipModelsBanner from '#Components/Banner';
 import usePartnershipModels from '#constants/services/partnershipModels';
-import { contactsLinks } from '#app/constants/contacts';
+import useContacts from '#app/constants/contacts';
 
 const Banner = () => {
   const { palette } = useTheme();
   const { bannerPartnershipModels } = usePartnershipModels();
+  const { contactsLinks } = useContacts();
   return (
     <PartnershipModelsBanner
       backgroundImage={bannerPartnershipModels.backgroundImage}

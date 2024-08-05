@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, styled, TextField, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
@@ -12,7 +12,7 @@ import styles from '../styles/ContactForm';
 const ContactForm = ({
   image = 'https://res.cloudinary.com/initgrammers/image/upload/v1609863472/LandingPage/soporte-adicional-sin-costo.png',
 }) => {
-  const { t } = useTranslation();
+  const t = useTranslations('Index');
 
   const validationSchema = Yup.object({
     name: Yup.string().required(t('contactUsFormNameError')),
