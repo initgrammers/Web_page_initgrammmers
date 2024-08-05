@@ -25,7 +25,7 @@ const ContactForm = ({
 
   const StyledTextField = styled(TextField)({
     '& .MuiOutlinedInput-root': {
-      minHeight: '56px', 
+      minHeight: '56px',
       '& fieldset': {
         borderColor: 'rgba(255, 255, 255, 0.3)',
       },
