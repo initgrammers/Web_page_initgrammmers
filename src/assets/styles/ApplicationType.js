@@ -4,7 +4,7 @@ import theme from '../../shared/config/MuiThemeProvider/theme';
 const styles = {
   root: {
     color: theme.palette.primary.contrastText,
-    width: { xs: "90vw", sm: 552, md: 512 },
+    width: { xs: '90vw', sm: 552, md: 512 },
     padding: { lg: theme.spacing(12, 0) },
   },
   backgroundGray: {

@@ -50,11 +50,11 @@ const styles = {
   }),
   container: {
     display: { lg: 'flex' },
-    width: { xs: "100%", sm: 552, md: 544, lg: 1024 },
+    width: { xs: '100%', sm: 552, md: 544, lg: 1024 },
   },
   detailsSingleContent: {
     color: theme.palette.primary.contrastText,
-    width: { xs: "100", sm: 552, md: 512 },
+    width: { xs: '100%', sm: 552, md: 512 },
     padding: { lg: theme.spacing(12, 0) },
     paddingTop: { xs: theme.spacing(6) },
   },
