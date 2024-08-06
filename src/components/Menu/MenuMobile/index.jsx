@@ -6,6 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import LogoInitgrammers from '#svg/LogoInitgrammers';
 import styles from './styles';
+import LanguageSelector from '#Components/LanguageSelector';
 
 const AppBarMobile = ({ showDrawer = false, handleDrawerOpen }) => (
   <>
@@ -19,9 +20,12 @@ const AppBarMobile = ({ showDrawer = false, handleDrawerOpen }) => (
       >
         {showDrawer ? <CloseIcon /> : <MenuIcon />}
       </IconButton>
-      <Button size="small" sx={styles.button} href="/">
-        <LogoInitgrammers />
-      </Button>
+      <Box display="flex" gap={3}>
+        <LanguageSelector />
+        <Button size="small" sx={styles.button} href="/">
+          <LogoInitgrammers />
+        </Button>
+      </Box>
     </Box>
   </>
 );

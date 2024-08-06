@@ -20,6 +20,12 @@ const styles = {
     textTransform: 'capitalize',
     color: theme.palette.common.black,
   },
+  languageText: {
+    textTransform: 'capitalize',
+    color: theme.palette.common.black,
+    fontSize: '0.875rem',
+    fontWeight: 400,
+  },
   sectionMenu: {
     flex: 1,
     alignItems: 'center',

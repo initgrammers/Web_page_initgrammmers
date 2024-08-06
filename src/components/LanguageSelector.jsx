@@ -62,14 +62,14 @@ const LanguageSelector = () => {
         {currentLocale === 'es' ? (
           <Button
             onClick={() => changeLanguage('en')}
-            sx={styles.services}
+            sx={styles.languageText}
           >
             English
           </Button>
         ) : (
           <Button
             onClick={() => changeLanguage('es')}
-            sx={styles.services}
+            sx={styles.languageText}
           >
             Español
           </Button>
