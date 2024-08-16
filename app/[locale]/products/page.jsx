@@ -1,10 +1,6 @@
-import Index from '#screens/products/Index';
 import React from 'react';
+import Index from '#screens/products/Index';
 
-const Page = () => {
-  return (
-    <Index />
-  );
-};
+const Page = () => <Index />;
 
 export default Page;
