@@ -29,6 +29,9 @@ const styles = {
     color: theme.palette.primary.contrastText,
     textAlign: 'center',
   },
+  paddingTitle: {
+    paddingBottom: `${theme.spacing(4)}`,
+  },
   textPrimaryMain: {
     color: theme.palette.primary.light,
   },
@@ -39,6 +42,12 @@ const styles = {
     padding: `${theme.spacing(4)} 0 0 0`,
     textAlign: 'justify',
     color: theme.palette.primary.contrastText,
+  },
+  options: {
+    display: 'flex',
+    alignItems: 'start',
+    gap: 1,
+    marginBottom: { xs: 1, lg: 0 },
   },
 
   containerImage: (isImageRight) => ({
@@ -72,6 +81,7 @@ const styles = {
         : `0 ${theme.spacing(2)} 0 0`
     }` },
     paddingRight: { lg: theme.spacing(2) },
+    gap: 1,
   }),
 };
 

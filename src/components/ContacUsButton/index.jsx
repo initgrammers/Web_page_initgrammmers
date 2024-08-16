@@ -10,11 +10,12 @@ const ContactUsButton = ({
   variant = 'contained',
   children = undefined,
   mr = 0,
+  sx,
 }) => {
   const t = useTranslations('Index');
   return (
     <Link target="_parent" rel="noopener" href={href} sx={styles.link(mr)}>
-      <Button variant={variant} color={color}>
+      <Button variant={variant} color={color} sx={sx}>
         {label || t('contactUs') || children}
       </Button>
     </Link>
@@ -27,5 +28,6 @@ ContactUsButton.propTypes = {
   label: PropTypes.string,
   children: PropTypes.element,
   mr: PropTypes.number,
+  sx: PropTypes.string,
 };
 export default ContactUsButton;

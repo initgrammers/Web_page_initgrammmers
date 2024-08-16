@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { Box, Typography } from '@mui/material';
+import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
 import BackgroundImage from '#Components/BackgroundImage';
 import CustomContainer from '#Components/CustomContainer';
 import styles from '../assets/styles/InformationWithImageSection';
@@ -21,6 +22,8 @@ const InformationWithImageSection = ({
   titleBlack = false,
   descriptionPrimaryLight = false,
   descriptionBlack = false,
+  showOptions = false,
+  options,
 }) => (
   <Box
     component="section"
@@ -43,20 +46,43 @@ const InformationWithImageSection = ({
               ...styles.title,
               ...(titlePrimaryMain && styles.textPrimaryMain),
               ...(titleBlack && styles.textBlack),
+              ...(showOptions && styles.paddingTitle),
             }}
           >
             {title}
           </Typography>
-          <Typography
-            variant="body1"
-            sx={{
-              ...styles.description,
-              ...(descriptionPrimaryLight && styles.textPrimaryMain),
-              ...(descriptionBlack && styles.textBlack),
-            }}
-          >
-            {description}
-          </Typography>
+          {!showOptions ? (
+            <Typography
+              variant="body1"
+              sx={{
+                ...styles.description,
+                ...(descriptionPrimaryLight && styles.textPrimaryMain),
+                ...(descriptionBlack && styles.textBlack),
+              }}
+            >
+              {description}
+            </Typography>
+          ) : (
+            options.map((opt) => (
+              <Box sx={styles.options}>
+                <CheckCircleOutlinedIcon color="secondary" />
+                <Box
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <Typography variant="body1">
+                    {opt.title}
+                  </Typography>
+                  <Typography variant="body2">
+                    {opt.description}
+                  </Typography>
+                </Box>
+              </Box>
+            ))
+          )
+          }
         </Box>
         <Box sx={styles.containerImage(isImageRight)}>
           <Box component="figure" sx={styles.image(imageSizes)}>
@@ -67,7 +93,6 @@ const InformationWithImageSection = ({
     </CustomContainer>
   </Box>
 );
-
 InformationWithImageSection.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
@@ -101,6 +126,13 @@ InformationWithImageSection.propTypes = {
   titleBlack: PropTypes.bool,
   descriptionPrimaryLight: PropTypes.bool,
   descriptionBlack: PropTypes.bool,
+  showOptions: PropTypes.bool,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default InformationWithImageSection;
