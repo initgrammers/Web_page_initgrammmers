@@ -1,6 +1,14 @@
 import theme from '../../../shared/config/MuiThemeProvider/theme';
 
 const styles = {
+  container: { 
+    background: theme.palette.primary.light,
+    height: 'max(100vh, 650px)',
+    maxHeight: "800px",
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   title: {
     color: theme.palette.primary.contrastText,
   },

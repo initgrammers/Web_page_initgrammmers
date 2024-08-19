@@ -6,7 +6,6 @@ import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
 import Image from 'next/image';
 import CustomContainer from '#Components/CustomContainer';
-import { primary } from '#app/shared/config/theme/colors';
 import styles from '../styles/ContactForm';
 
 const ContactForm = ({
@@ -27,7 +26,7 @@ const ContactForm = ({
     '& .MuiOutlinedInput-root': {
       minHeight: '56px',
       '& fieldset': {
-        borderColor: 'rgba(255, 255, 255, 0.3)',
+        borderColor: '#810e47',
       },
       '&:hover fieldset': {
         borderColor: 'white',
@@ -39,7 +38,7 @@ const ContactForm = ({
         color: 'white',
       },
       '&.MuiInputBase-root': {
-        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        backgroundColor: '#810e47aa',
       },
     },
     '& label': {
@@ -80,15 +79,16 @@ const ContactForm = ({
 
   return (
     <Box
+      id='contactUsForm'
       component="section"
       position="relative"
-      sx={{ background: primary.light, paddingY: { lg: 0, xs: 3, md: 3 } }}
+      sx={styles.container}
     >
       <CustomContainer>
         <Box
           display="flex"
           flexDirection="row-reverse"
-          gap={3}
+          gap={18}
           justifyContent="center"
           alignContent="center"
         >
