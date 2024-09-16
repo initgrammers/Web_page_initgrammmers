@@ -3,7 +3,7 @@ import routes from '#app/routes/';
 
 const useLandingPage = () => {
   const t = useTranslations('Index');
-
+  // banner
   const bannerLandingPage = {
     backgroundImage:
       'https://res.cloudinary.com/initgrammers/image/upload/v1607008550/LandingPage/figures/bloque1.png',
