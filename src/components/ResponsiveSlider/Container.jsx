@@ -11,8 +11,15 @@ const Container = ({
   disableLeft,
   disableRight,
 }) => (
-  <Box display="flex" justifyContent="space-between" alignItems="center">
-    <Box onClick={onPrevStep}>
+  <Box 
+    display="flex"
+    justifyContent="space-between"
+    alignItems="center"
+    sx={{
+      width: { xs: "85vw", lg: "95vw"}
+    }}
+  >
+    <Box onClick={onPrevStep} sx={{cursor: "pointer"}}>
       <ArrowBackIosIcon
         sx={{
           ...styles.arrow,
@@ -21,7 +28,7 @@ const Container = ({
       />
     </Box>
     <Box sx={styles.imagesContent}>{children}</Box>
-    <Box onClick={onNextStep}>
+    <Box onClick={onNextStep} sx={{cursor: "pointer"}}>
       <ArrowForwardIosIcon
         sx={{
           ...styles.arrow,

@@ -11,7 +11,7 @@ const routes = {
     shopOnline: `${servicesBaseURL}tiendas-en-linea-ecuador`,
     marketingDigital: `${servicesBaseURL}marketing-diseno-digital-ecuador`,
   },
-  portfolio: 'https://issuu.com/initgrammers/docs/initgrammers_9e0652a0bcb56e',
+  portfolio: 'portfolio',
   aboutUs: '/aboutUs',
   contactUs: '/contact-us',
   blog: '/blog',

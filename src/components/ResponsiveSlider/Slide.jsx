@@ -10,12 +10,14 @@ const Slide = ({
   step = 2,
   showTitleImage = true,
   imageIsLarge = false,
+  autoPlay = false,
 }) => {
   const lengthData = data.length;
   const [index, setIndex] = useState({
     from: 0,
     to: step,
   });
+  const [isReversing, setIsReversing] = useState(false);
 
   useEffect(() => {
     setIndex({
@@ -26,23 +28,39 @@ const Slide = ({
 
   const onNextStep = () =>
     setIndex((prev) => {
-      const newFrom = prev.from + step - 1;
-      const newTo = prev.to + step - 1;
-      if (newTo >= lengthData - 1 || newFrom >= lengthData - 1) {
-        return { from: lengthData - step, to: lengthData };
-      }
+      const newFrom = Math.min(prev.from + step, lengthData - step);
+      const newTo = Math.min(prev.to + step, lengthData);
+      return { from: newFrom, to: newTo };
+    });
+  
+  const onPrevStep = () =>
+    setIndex((prev) => {
+      const newFrom = Math.max(prev.from - step, 0);
+      const newTo = Math.max(prev.to - step, step);
       return { from: newFrom, to: newTo };
     });
 
-  const onPrevStep = () =>
-    setIndex((prev) => {
-      const newFrom = prev.from - step + 1;
-      const newTo = prev.to - step + 1;
-      if (newTo <= 0 || newFrom <= 0) {
-        return { from: 0, to: step };
+  useEffect(() => {
+    if (!autoPlay) return;
+
+    const autoPlayInterval = setInterval(() => {
+      if (index.from === 0) {
+        setIsReversing(false);
       }
-      return { from: newFrom, to: newTo };
-    });
+      
+      if (index.to >= lengthData) {
+        setIsReversing(true);
+      }
+
+      if (isReversing) {
+        onPrevStep();
+      } else {
+        onNextStep();
+      }
+    }, 1500);
+
+    return () => clearInterval(autoPlayInterval);
+  }, [index, autoPlay, step]);
 
   const arrayData = [];
   const limitDown = index.from > index.to ? index.to : index.from;
@@ -90,6 +108,7 @@ Slide.propTypes = {
   step: PropTypes.number,
   showTitleImage: PropTypes.bool,
   imageIsLarge: PropTypes.bool,
+  autoPlay: PropTypes.bool,
 };
 
 export default Slide;
