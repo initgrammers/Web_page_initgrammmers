@@ -1,0 +1,62 @@
+.cover {
+  perspective: 1500px;
+}
+
+.frontPage {
+  position: relative;
+}
+.frontPage:hover {
+  transform: rotateY(-10deg);
+  transform-origin: center left;
+  transition: 0.5s;
+}
+
+.frontPageAnimation {
+  animation: frontPageAnimation 2s normal;
+}
+.frontPageAnimationReverse {
+  animation: frontPageAnimation 2s reverse;
+}
+
+.bookAnimation {
+  animation: bookAnimationForward 2s forwards;
+}
+.bookAnimationReverse {
+  animation: bookAnimationReverse 2s forwards;
+}
+
+@keyframes frontPageAnimation {
+  0% {
+    transform: rotateY(0deg) translateX(0%);
+    transform-origin: center left;
+  }
+  20%{
+    filter: blur(0px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(-170deg) translateX(-50%);
+    transform-origin: center left;
+    opacity: 0.2;
+    filter: blur(10px);
+  }
+}
+
+@keyframes bookAnimationForward {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bookAnimationReverse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}

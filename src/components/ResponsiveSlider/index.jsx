@@ -10,19 +10,28 @@ const Slider = ({
 }) => {
   const { breakpoints } = useTheme();
   const matchXS = useMediaQuery(breakpoints.down('sm'));
+  const matchMD = useMediaQuery(breakpoints.only('md'));
   const matchLG = useMediaQuery(breakpoints.up('lg'));
 
   let steps;
+  let autoPlay;
+  
   if (imageIsLarge) {
     steps = matchXS ? 1 : 2;
   } else {
     steps = matchXS ? 2 : 4;
   }
+  
 
-  if (matchLG) {
+  if (matchLG && data.length < 6) {
     return (
       <>
-        <Box display="flex" justifyContent="space-between" gap={3}>
+        <Box display="flex" justifyContent="space-between" gap={3}
+          sx={{
+            width: "100vw",
+            overflow: "hidden"
+          }}
+        >
           {data.map((item) => (
             <Image
               key={item.label}
@@ -36,13 +45,18 @@ const Slider = ({
         </Box>
       </>
     );
+  } else {
+    steps = matchLG ? 4 : matchMD ? 3 : matchXS ? 1 : 2;
+    autoPlay = true;
   }
+
   return (
     <Slide
       data={data}
       step={steps}
       showTitleImage={showTitleImage}
       imageIsLarge={imageIsLarge}
+      autoPlay={autoPlay}
     />
   );
 };

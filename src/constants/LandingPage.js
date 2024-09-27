@@ -3,7 +3,7 @@ import routes from '#app/routes/';
 
 const useLandingPage = () => {
   const t = useTranslations('Index');
-
+  // banner
   const bannerLandingPage = {
     backgroundImage:
       'https://res.cloudinary.com/initgrammers/image/upload/v1607008550/LandingPage/figures/bloque1.png',
@@ -132,9 +132,19 @@ const useLandingPage = () => {
 
   const clients = [
     {
+      label: 'Starups',
+      image:
+        'https://res.cloudinary.com/initgrammers/image/upload/c_scale,w_220/v1726509050/LandingPage/startups_pyx4jd.png',
+    },
+    {
       label: 'Atenas Education',
       image:
         'https://res.cloudinary.com/initgrammers/image/upload/v1609862938/LandingPage/atenas-education.png',
+    },
+    {
+      label: 'Nomads',
+      image:
+        'https://res.cloudinary.com/initgrammers/image/upload/c_scale,w_210/v1726518026/nomads_rzbi1w.png',
     },
     {
       label: 'La Casa del Carpintero',
@@ -142,19 +152,44 @@ const useLandingPage = () => {
         'https://res.cloudinary.com/initgrammers/image/upload/v1609862948/LandingPage/la-casa-del-carpintero.png',
     },
     {
-      label: 'JRTEC',
-      image:
-        'https://res.cloudinary.com/initgrammers/image/upload/v1609862943/LandingPage/JRTEC.png',
-    },
-    {
       label: 'Escuela Politécnica Nacional',
       image:
-        'https://res.cloudinary.com/initgrammers/image/upload/v1609862939/LandingPage/Escuela-Politecnica-Nacional.png',
+        'https://res.cloudinary.com/initgrammers/image/upload/v1726509049/LandingPage/escuela-politecnica-nacional_gnnb2l.png',
     },
     {
       label: 'Solufer Ecuador',
       image:
         'https://res.cloudinary.com/initgrammers/image/upload/v1609862938/LandingPage/solufer.png',
+    },
+    {
+      label: 'Conquito',
+      image:
+        'https://res.cloudinary.com/initgrammers/image/upload/c_scale,w_206/v1726509050/LandingPage/conquito_ofiiwn.png',
+    },
+    {
+      label: 'JRTEC',
+      image:
+        'https://res.cloudinary.com/initgrammers/image/upload/v1609862943/LandingPage/JRTEC.png',
+    },
+    {
+      label: 'Metropolitana',
+      image:
+        'https://res.cloudinary.com/initgrammers/image/upload/c_scale,w_213/v1726509052/LandingPage/agencia-metropolitana-de-seguros_qatihr.png',
+    },
+    {
+      label: 'Grupo Transoceánica',
+      image:
+        'https://res.cloudinary.com/initgrammers/image/upload/c_scale,w_209/v1726509052/LandingPage/grupo-trasnoceanica_h1ffqq.png',
+    },
+    {
+      label: 'Transpoint',
+      image:
+        'https://res.cloudinary.com/initgrammers/image/upload/c_scale,w_212/v1726509051/LandingPage/transpoint_qf99j3.png',
+    },
+    {
+      label: 'Avis',
+      image:
+        'https://res.cloudinary.com/initgrammers/image/upload/v1726509050/LandingPage/avis_tyh17y.png',
     },
   ];
 
