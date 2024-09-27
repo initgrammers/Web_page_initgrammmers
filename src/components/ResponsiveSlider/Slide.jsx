@@ -32,7 +32,7 @@ const Slide = ({
       const newTo = Math.min(prev.to + step, lengthData);
       return { from: newFrom, to: newTo };
     });
-  
+
   const onPrevStep = () =>
     setIndex((prev) => {
       const newFrom = Math.max(prev.from - step, 0);
@@ -41,13 +41,15 @@ const Slide = ({
     });
 
   useEffect(() => {
-    if (!autoPlay) return;
+    if (!autoPlay) {
+      return undefined;
+    }
 
     const autoPlayInterval = setInterval(() => {
       if (index.from === 0) {
         setIsReversing(false);
       }
-      
+
       if (index.to >= lengthData) {
         setIsReversing(true);
       }
@@ -59,7 +61,9 @@ const Slide = ({
       }
     }, 1500);
 
-    return () => clearInterval(autoPlayInterval);
+    return () => {
+      clearInterval(autoPlayInterval);
+    };
   }, [index, autoPlay, step]);
 
   const arrayData = [];

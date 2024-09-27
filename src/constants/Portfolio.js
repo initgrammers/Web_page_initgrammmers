@@ -28,8 +28,8 @@ const usePortfolio = () => {
   };
 
   return {
-    FAQPortfolio
-  }
+    FAQPortfolio,
+  };
 };
 
 export default usePortfolio;

@@ -2,7 +2,7 @@ import FAQ from '#Components/FAQ';
 import usePortfolio from '#app/constants/Portfolio';
 
 const Questions = () => {
-  const { FAQPortfolio } = usePortfolio()
+  const { FAQPortfolio } = usePortfolio();
   return (
     <FAQ
       titlePart1={FAQPortfolio.titlePart1}
