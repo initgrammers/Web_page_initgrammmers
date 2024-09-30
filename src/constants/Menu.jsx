@@ -72,7 +72,13 @@ const useMenu = () => {
   const portfolio = {
     id: 'portfolio',
     title: t('portfolio'),
-    href: `/${locale}/${routes.portfolio}`,
+    href: `${routes.portfolio}`,
+  };
+
+  const products = {
+    id: 'productos',
+    title: t('products'),
+    href: `/${locale}/${routes.products}`,
   };
 
   const menuServices = {
@@ -81,7 +87,7 @@ const useMenu = () => {
   };
 
   const menuInitgrammers = {
-    menu: [menuServices, aboutUs, portfolio],
+    menu: [menuServices, aboutUs, portfolio, products],
   };
 
   return { data, menuServices, menuInitgrammers };
