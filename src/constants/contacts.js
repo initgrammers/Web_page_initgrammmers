@@ -2,7 +2,7 @@ const { useLocale } = require('next-intl');
 
 const useContacts = () => {
   const locale = useLocale();
-  const localizedHref = `/${locale}/contact-us`;
+  const localizedHref = `/${locale}/contact-us#contactUsForm`;
 
   const contactsLinks = {
     landing: localizedHref,

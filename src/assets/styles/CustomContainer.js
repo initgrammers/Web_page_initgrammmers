@@ -6,7 +6,13 @@ const styles = {
     display: 'flex',
     position: 'relative',
     zIndex: 1,
-    padding: { xs: `0 ${theme.spacing(2)}`, sm: `0 ${theme.spacing(3)}`, md: `0 ${theme.spacing(26)}`, lg: `0 ${theme.spacing(16)}` },
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: {
+      xs: `0 ${theme.spacing(2)}`,
+      md: `0 ${theme.spacing(16)}`,
+      lg: `0 ${theme.spacing(10)}`,
+    },
   },
 };
 
