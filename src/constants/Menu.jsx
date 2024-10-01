@@ -75,11 +75,11 @@ const useMenu = () => {
     href: `/${locale}/${routes.portfolio}`,
   };
 
-  const products = {
-    id: 'productos',
-    title: t('products'),
-    href: `/${locale}/${routes.products}`,
-  };
+  // const products = {
+  //   id: 'productos',
+  //   title: t('products'),
+  //   href: `/${locale}/${routes.products}`,
+  // };
 
   const menuServices = {
     title: t('services'),
