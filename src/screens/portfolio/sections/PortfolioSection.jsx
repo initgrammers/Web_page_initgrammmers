@@ -1,12 +1,15 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect, useMemo, useState } from 'react';
 import { Box } from '@mui/material';
-import PdfPage from '../components/PdfPage';
-import FrontPage from '../components/FrontPage';
+import dynamic from 'next/dynamic';
 import usePdfPages from '../hooks/usePdfPages';
 import styles from '../styles/PortfolioSection';
 import '../styles/animation.css';
-import Book from '../components/Book';
-import BackButton from '../components/BackButton';
+
+const PdfPage = dynamic(() => import('../components/PdfPage'), { ssr: false });
+const FrontPage = dynamic(() => import('../components/FrontPage'), { ssr: false });
+const Book = dynamic(() => import('../components/Book'), { ssr: false });
+const BackButton = dynamic(() => import('../components/BackButton'), { ssr: false });
 
 const PortfolioSection = () => {
   const [showFrontPage, setShowFrontPage] = useState(true);
@@ -17,12 +20,14 @@ const PortfolioSection = () => {
   const pages = usePdfPages(pdfPath);
 
   useEffect(() => {
-    setTimeout(() => {
-      setBack(false);
-    }, 4000);
+    if (back) {
+      setTimeout(() => {
+        setBack(false);
+      }, 4000);
+    }
   }, [back]);
 
-  const frontElement = useMemo(() => <PdfPage pdfData={pages[0]} justOne />, [
+  const frontElement = useMemo(() => pages?.length > 0 && <PdfPage pdfData={pages[0]} justOne />, [
     pages,
   ]);
 

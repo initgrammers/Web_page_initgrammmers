@@ -49,11 +49,9 @@ export const metadata = {
 };
 
 export default async function Page() {
-  if (typeof window !== 'undefined') {
-    return (
-      <>
-        <Index />
-      </>
-    );
-  }
+  return (
+    <>
+      <Index />
+    </>
+  );
 }
