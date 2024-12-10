@@ -123,9 +123,9 @@ const useAboutUs = () => {
 
   const team = {
     teamPlayer,
-    title: 'Equipo fundador',
+    title: t('founderTeam'),
     backgroundImage:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque3.png',
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque4.png',
     heightImage: 574,
   };
 
@@ -133,7 +133,7 @@ const useAboutUs = () => {
     valores,
     title: t('ourValuesTitle'),
     backgroundImage:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque4.png',
+      'https://res.cloudinary.com/initgrammers/image/upload/v1611679369/quienes-somos/figures/bloque3.png',
     heightImage: 648,
   };
 
