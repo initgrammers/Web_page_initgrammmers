@@ -2,7 +2,7 @@ import routes from '#app/routes';
 
 const title = 'Portafolio | Initgrammers';
 
-const description = '¿Quiénes somos?, Conoce la misión, visión, valores y equipo de trabajo de Initgrammers ';
+const description = 'Descubre cómo nuestras soluciones web, móviles y de diseño impulsan marcas hacia el éxito. ';
 
 const url = `https://initgrammers.com${routes.portfolio}`;
 

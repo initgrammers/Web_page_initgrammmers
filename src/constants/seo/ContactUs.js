@@ -2,7 +2,7 @@ import routes from '#app/routes';
 
 const title = 'Contáctanos | Initgrammers';
 
-const description = '¿Quiénes somos?, Conoce la misión, visión, valores y equipo de trabajo de Initgrammers ';
+const description = '	¿Tienes un proyecto en mente? Escríbenos y déjanos ayudarte a transformar tus ideas.';
 
 const url = `https://initgrammers.com${routes.contactUs}`;
 
