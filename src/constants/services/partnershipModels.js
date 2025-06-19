@@ -118,7 +118,7 @@ const usePartnershipModels = () => {
     titlePrimaryMain: true,
     descriptionBlack: true,
     image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1722371642/Company-amico_1_qm737a.png',
+      'https://res.cloudinary.com/initgrammers/image/upload/f_auto,q_50,w_700/v1722371642/Company-amico_1_qm737a.png',
     imageSizes: {
       xs: {
         width: 288,
@@ -165,7 +165,7 @@ const usePartnershipModels = () => {
     description:
       t('partnershipModelsOportunitieDescription'),
     image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1609854277/servicios/seo/oportunidades-para-negocio.png',
+      'https://res.cloudinary.com/initgrammers/image/upload/f_auto,q_60,w_700/v1609854277/servicios/seo/oportunidades-para-negocio.png',
     backgroundImage:
       'https://res.cloudinary.com/initgrammers/image/upload/v1609856760/servicios/marketing-digital/figures/bloque4.png',
     heightImage: 895,
