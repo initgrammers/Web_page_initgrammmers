@@ -260,6 +260,22 @@
     "cardsPricingPrice3": "$399",
     "cardsPricingTitle4": "Expert",
     "cardsPricingSubtitle4": "Lorem adipiscing elit.",
-    "cardsPricingPrice4": "$899"
+    "cardsPricingPrice4": "$899",
+
+    "softwareIaBannerTitle": "AI-Powered Software Development",
+    "softwareIaBannerDescription": "We create intelligent digital solutions by optimizing with artificial intelligence tools.",
+    "softwareIaDevelopmentTitle": "Smart Development, Superior Results",
+    "softwareIaDevelopmentDescription": "AI is transforming the way software is built. At InitGrammers, we apply artificial intelligence in our analysis, design, development, and testing processes to create robust, personalized, and highly efficient digital products.",
+    "softwareIaHowWeApplyTitle": "How Do We Apply AI in Your Software Development?",
+    "softwareIaCtaTitle": "Boost your brand — don’t miss out on the digital world",
+    "softwareIaRequirementsTitle": "Intelligent Requirements Analysis",
+    "softwareIaRequirementsDescription": "We use AI to analyze and refine your business requirements, identifying risks, dependencies, and optimization opportunities from the early stages of the project.",
+    "softwareIaCodeGenTitle": "Code Generation and Optimization",
+    "softwareIaCodeGenDescription": "We integrate generative AI tools to speed up code writing, identify programming patterns, and apply best practices from the start, reducing errors and delivery times.",
+    "softwareIaTestingTitle": "Automated Testing with AI",
+    "softwareIaTestingDescription": "We use AI algorithms to generate test cases, detect potential errors, and simulate multiple scenarios—ensuring higher quality, reliability, and stability of the final solution.",
+    "softwareIaFinalTitle": "Achieve your goals — let us be your AI-powered development team",
+    "softwareIaFinalDescription": "With InitGrammers, your software evolves at the pace of your business, powered by artificial intelligence."
+
   }
 }
