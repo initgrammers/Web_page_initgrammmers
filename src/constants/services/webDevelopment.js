@@ -29,7 +29,7 @@ const useWebDevelopment = () => {
     title: t('webDevelopmentNeedUpdateTitle'),
     description: t('webDevelopmentNeedUpdateDescription'),
     image:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1618505016/servicios/desarrollo-web/necesitas-una-actualizacion-web.png',
+      'https://res.cloudinary.com/initgrammers/image/upload/f_auto/v1618505016/servicios/desarrollo-web/necesitas-una-actualizacion-web.png',
     backgroundImage:
       'https://res.cloudinary.com/initgrammers/image/upload/v1609857474/servicios/desarrollo-web/figures/bloque3.png',
     ornamentImage:

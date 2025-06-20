@@ -1,20 +1,26 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect, useMemo, useState } from 'react';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import dynamic from 'next/dynamic';
 import usePdfPages from '../hooks/usePdfPages';
 import styles from '../styles/PortfolioSection';
+import usePortfolio from '#app/constants/Portfolio';
 import '../styles/animation.css';
 
 const PdfPage = dynamic(() => import('../components/PdfPage'), { ssr: false });
-const FrontPage = dynamic(() => import('../components/FrontPage'), { ssr: false });
+const FrontPage = dynamic(() => import('../components/FrontPage'), {
+  ssr: false,
+});
 const Book = dynamic(() => import('../components/Book'), { ssr: false });
-const BackButton = dynamic(() => import('../components/BackButton'), { ssr: false });
+const BackButton = dynamic(() => import('../components/BackButton'), {
+  ssr: false,
+});
 
 const PortfolioSection = () => {
   const [showFrontPage, setShowFrontPage] = useState(true);
   const [currentPage, setCurrentPage] = useState(0);
   const [back, setBack] = useState(false);
+  const { bannerPortfolioPage } = usePortfolio();
 
   const pdfPath = '/Catalogo_2024.pdf';
   const pages = usePdfPages(pdfPath);
@@ -27,34 +33,42 @@ const PortfolioSection = () => {
     }
   }, [back]);
 
-  const frontElement = useMemo(() => pages?.length > 0 && <PdfPage pdfData={pages[0]} justOne />, [
-    pages,
-  ]);
+  const frontElement = useMemo(
+    () => pages?.length > 0 && <PdfPage pdfData={pages[0]} justOne />,
+    [pages]
+  );
 
   return (
-    <Box sx={styles.container}>
-      {showFrontPage && (
-        <FrontPage
+    <>
+      <Box sx={styles.headerContainer}>
+        <Typography variant="h1" sx={styles.pageTitle}>
+          {bannerPortfolioPage.titlePart1}
+        </Typography>
+      </Box>
+      <Box sx={styles.container}>
+        {showFrontPage && (
+          <FrontPage
+            showFrontPage={showFrontPage}
+            setShowFrontPage={setShowFrontPage}
+            back={back}
+          >
+            {frontElement}
+          </FrontPage>
+        )}
+
+        <Book
           showFrontPage={showFrontPage}
           setShowFrontPage={setShowFrontPage}
+          pages={pages}
+          setCurrentPage={setCurrentPage}
           back={back}
-        >
-          {frontElement}
-        </FrontPage>
-      )}
+        />
 
-      <Book
-        showFrontPage={showFrontPage}
-        setShowFrontPage={setShowFrontPage}
-        pages={pages}
-        setCurrentPage={setCurrentPage}
-        back={back}
-      />
-
-      {currentPage === 0 && (
-        <BackButton setShowFrontPage={setShowFrontPage} setBack={setBack} />
-      )}
-    </Box>
+        {currentPage === 0 && (
+          <BackButton setShowFrontPage={setShowFrontPage} setBack={setBack} />
+        )}
+      </Box>
+    </>
   );
 };
 

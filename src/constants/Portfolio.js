@@ -3,6 +3,10 @@ import { useTranslations } from 'next-intl';
 const usePortfolio = () => {
   const t = useTranslations('Index');
 
+  const bannerPortfolioPage = {
+    titlePart1: t('portfolio'),
+  };
+
   const questions = [
     {
       id: 0,
@@ -28,6 +32,7 @@ const usePortfolio = () => {
   };
 
   return {
+    bannerPortfolioPage,
     FAQPortfolio,
   };
 };
