@@ -26,6 +26,7 @@ const Article = ({
           articleBody: `${mainArticle}`,
 
           author: {
+            url: `${url}`,
             '@type': 'Organization',
             name: 'InitGrammers',
           },
@@ -38,8 +39,8 @@ const Article = ({
                 'https://res.cloudinary.com/initgrammers/image/upload/v1614019631/logo-initGrammers.png',
             },
           },
-          datePublished: '2021-02-22',
-          dateModified: '2021-02-22',
+          datePublished: '2021-02-22T09:30:00-05:00',
+          dateModified: '2025-06-23T09:30:00-05:00',
         }),
       }}
     />
