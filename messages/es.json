@@ -5,6 +5,7 @@
     "portfolio": "Portafolio",
     "contactUs": "Contáctanos",
     "products": "Productos",
+    "write": "Escribenos",
     "webDevelopment": "Desarrollo Web",
     "ux/uiDesign": "Diseño UX/UI",
     "mobileDevelopment": "Desarrollo de aplicaciones móviles",
@@ -261,7 +262,6 @@
     "cardsPricingTitle4": "Expert",
     "cardsPricingSubtitle4": "Lorem adipiscing elit.",
     "cardsPricingPrice4": "$899",
-    
     "softwareIaBannerTitle": "Desarrollo de Software Potenciado con IA",
     "softwareIaBannerDescription": "Creamos soluciones digitales inteligentes, optimizando con herramientas de inteligencia artificial. ",
     "softwareIaDevelopmentTitle": "Desarrollo Inteligente, Resultados Superiores",
@@ -274,7 +274,8 @@
     "softwareIaCodeGenDescription": "Integramos herramientas de IA generativa para acelerar la escritura de código, identificar patrones de programación y aplicar buenas prácticas de desarrollo desde el inicio, reduciendo errores y tiempos de entrega.",
     "softwareIaTestingTitle": "Pruebas Automatizadas con IA",
     "softwareIaTestingDescription": "Aplicamos algoritmos de IA para generar casos de prueba, detectar errores potenciales y simular múltiples escenarios. Esto asegura mayor calidad, confiabilidad y estabilidad de la solución final.",
-    "softwareIaFinalTitle": "Alcance sus objetivos, y déjenos ser su equipo de programación potenciado con IA",
+    "softwareIaFinalTitle1": "Alcance sus objetivos, y déjenos ser su ",
+    "softwareIaFinalTitle2": "equipo de programación potenciado con IA",
     "softwareIaFinalDescription": "Con InitGrammers, su software evoluciona al ritmo de su negocio, respaldado por inteligencia artificial."
 
 

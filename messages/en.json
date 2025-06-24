@@ -5,6 +5,7 @@
     "portfolio": "Portfolio",
     "contactUs": "Contact Us",
     "products": "Products",
+    "write": "Write to us at",
     "webDevelopment": "Web Development",
     "ux/uiDesign": "UX/UI Design",
     "mobileDevelopment": "Mobile Development",
@@ -261,7 +262,6 @@
     "cardsPricingTitle4": "Expert",
     "cardsPricingSubtitle4": "Lorem adipiscing elit.",
     "cardsPricingPrice4": "$899",
-
     "softwareIaBannerTitle": "AI-Powered Software Development",
     "softwareIaBannerDescription": "We create intelligent digital solutions by optimizing with artificial intelligence tools.",
     "softwareIaDevelopmentTitle": "Smart Development, Superior Results",
@@ -274,7 +274,8 @@
     "softwareIaCodeGenDescription": "We integrate generative AI tools to speed up code writing, identify programming patterns, and apply best practices from the start, reducing errors and delivery times.",
     "softwareIaTestingTitle": "Automated Testing with AI",
     "softwareIaTestingDescription": "We use AI algorithms to generate test cases, detect potential errors, and simulate multiple scenarios—ensuring higher quality, reliability, and stability of the final solution.",
-    "softwareIaFinalTitle": "Achieve your goals — let us be your AI-powered development team",
+    "softwareIaFinalTitle1": "Achieve your goals, and let us be your ",
+    "softwareIaFinalTitle2": "AI-powered development team",
     "softwareIaFinalDescription": "With InitGrammers, your software evolves at the pace of your business, powered by artificial intelligence."
 
   }
