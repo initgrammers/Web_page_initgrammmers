@@ -10,6 +10,7 @@ const routes = {
     partnershipModels: `${servicesBaseURL}partnershipModels`,
     shopOnline: `${servicesBaseURL}tiendas-en-linea-ecuador`,
     marketingDigital: `${servicesBaseURL}marketing-diseno-digital-ecuador`,
+    softwareIa: `${servicesBaseURL}software-ia`,
   },
   portfolio: 'portfolio',
   products: 'products',

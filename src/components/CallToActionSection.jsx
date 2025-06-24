@@ -19,6 +19,7 @@ const CallToActionSection = ({
   heightImage = 0,
   backgroundColor = '',
   imageSizes,
+  imageFirst = false,
 }) => {
   const { contactsLinks } = useContacts();
   const t = useTranslations('Index');
@@ -28,6 +29,17 @@ const CallToActionSection = ({
       <BackgroundImage image={backgroundImage} height={heightImage} />
       <CustomContainer>
         <Box component="article" sx={styles.content}>
+          {imageFirst && (
+            <Box sx={styles.imageStyle(imageSizes)}>
+              <Image
+                quality={100}
+                src={image}
+                fill
+                alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
+                style={{ objectFit: 'contain' }}
+              />
+            </Box>
+          )}
           <Subtitle
             black
             head={titlePart1}
@@ -51,18 +63,19 @@ const CallToActionSection = ({
             label={t('homeLearnButton')}
             href={contactsLinks.general}
           />
-
-          <Box sx={styles.imageStyle(imageSizes)}>
-            <Image
-              quality={100}
-              src={image}
-              fill
-              alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
-              style={{
-                objectFit: 'contain',
-              }}
-            />
-          </Box>
+          {!imageFirst && (
+            <Box sx={styles.imageStyle(imageSizes)}>
+              <Image
+                quality={100}
+                src={image}
+                fill
+                alt={`${titlePart1} ${titlePart2} ${titlePart3}`}
+                style={{
+                  objectFit: 'contain',
+                }}
+              />
+            </Box>
+          )}
         </Box>
       </CustomContainer>
     </Box>
@@ -77,6 +90,7 @@ CallToActionSection.propTypes = {
   image: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string,
   heightImage: PropTypes.number,
+  backgroundColor: PropTypes.string,
   imageSizes: PropTypes.shape({
     xs: PropTypes.shape({
       width: PropTypes.number,
@@ -95,7 +109,7 @@ CallToActionSection.propTypes = {
       height: PropTypes.number,
     }),
   }).isRequired,
-  backgroundColor: PropTypes.string,
+  imageFirst: PropTypes.bool,
 };
 
 export default CallToActionSection;

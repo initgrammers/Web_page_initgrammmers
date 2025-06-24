@@ -48,6 +48,10 @@ const CustomFooter = () => {
       label: 'Modelos de Partnership',
       href: routes.services.partnershipModels,
     },
+    {
+      label: 'Software IA',
+      href: routes.services.softwareIa,
+    },
   ];
 
   const portfolio = [

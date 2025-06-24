@@ -5,6 +5,7 @@
     "portfolio": "Portafolio",
     "contactUs": "Contáctanos",
     "products": "Productos",
+    "write": "Escribenos",
     "webDevelopment": "Desarrollo Web",
     "ux/uiDesign": "Diseño UX/UI",
     "mobileDevelopment": "Desarrollo de aplicaciones móviles",
@@ -260,6 +261,23 @@
     "cardsPricingPrice3": "$399",
     "cardsPricingTitle4": "Expert",
     "cardsPricingSubtitle4": "Lorem adipiscing elit.",
-    "cardsPricingPrice4": "$899"
+    "cardsPricingPrice4": "$899",
+    "softwareIaBannerTitle": "Desarrollo de Software Potenciado con IA",
+    "softwareIaBannerDescription": "Creamos soluciones digitales inteligentes, optimizando con herramientas de inteligencia artificial. ",
+    "softwareIaDevelopmentTitle": "Desarrollo Inteligente, Resultados Superiores",
+    "softwareIaDevelopmentDescription": "La IA está transformando la forma en que se desarrolla el software. En InitGrammers aplicamos inteligencia artificial en nuestros procesos de análisis, diseño, desarrollo y pruebas para crear productos digitales robustos, personalizados y altamente eficientes.",
+    "softwareIaHowWeApplyTitle": "¿Cómo aplicamos IA en el desarrollo de su software?",
+    "softwareIaCtaTitle": "Impulsa tu marca, no te quedes fuera del mundo del internet",
+    "softwareIaRequirementsTitle": "Análisis Inteligente de Requerimientos",
+    "softwareIaRequirementsDescription": "Utilizamos IA para analizar y depurar los requerimientos de su negocio, identificando riesgos, dependencias y oportunidades de optimización desde las primeras fases del proyecto.",
+    "softwareIaCodeGenTitle": "Generación y Optimización de Código",
+    "softwareIaCodeGenDescription": "Integramos herramientas de IA generativa para acelerar la escritura de código, identificar patrones de programación y aplicar buenas prácticas de desarrollo desde el inicio, reduciendo errores y tiempos de entrega.",
+    "softwareIaTestingTitle": "Pruebas Automatizadas con IA",
+    "softwareIaTestingDescription": "Aplicamos algoritmos de IA para generar casos de prueba, detectar errores potenciales y simular múltiples escenarios. Esto asegura mayor calidad, confiabilidad y estabilidad de la solución final.",
+    "softwareIaFinalTitle1": "Alcance sus objetivos, y déjenos ser su ",
+    "softwareIaFinalTitle2": "equipo de programación potenciado con IA",
+    "softwareIaFinalDescription": "Con InitGrammers, su software evoluciona al ritmo de su negocio, respaldado por inteligencia artificial."
+
+
   }
 }

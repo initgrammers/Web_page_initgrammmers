@@ -61,6 +61,13 @@ const useMenu = () => {
       href: `/${locale}/${routes.services.partnershipModels}`,
       icon: <SearchOutlinedIcon sx={styles.icon} />,
     },
+    {
+      id: 'softwareIa',
+      title: t('softwareIaBannerTitle'),
+      subtitle: t('softwareIaBannerDescription'),
+      href: `/${locale}/${routes.services.softwareIa}`,
+      icon: <SearchOutlinedIcon sx={styles.icon} />,
+    },
   ];
 
   const aboutUs = {
