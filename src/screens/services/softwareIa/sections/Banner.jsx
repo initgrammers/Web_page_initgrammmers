@@ -26,7 +26,7 @@ const Banner = () => {
       <Container fixed sx={styles.container}>
         <Box component="article" sx={styles.detailsContent}>
           <Typography variant="h1" sx={styles.title}>
-            {bannerSoftwareIa.title }
+            {bannerSoftwareIa.title}
           </Typography>
           <Typography variant="h3" component="p" sx={styles.description}>
             {bannerSoftwareIa.description}
@@ -34,7 +34,7 @@ const Banner = () => {
           <ContactUsButton
             color="secondary"
             label={t('homeLearnButton')}
-            href={contactsLinks.partnershipModelsPage}  
+            href={contactsLinks.partnershipModelsPage}
           />
         </Box>
         <Box sx={styles.containerImage}>

@@ -1,5 +1,5 @@
 'use client';
-import { useTheme } from '@mui/material/styles';
+
 import Image from 'next/image';
 import { Box, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
@@ -12,7 +12,6 @@ const HowWeApply = () => {
   const { howWeApply } = useSoftwareIa();
   const { contactsLinks } = useContacts();
   const t = useTranslations('Index');
-  const theme = useTheme();
 
   return (
     <Box component="section" sx={styles.background}>
@@ -36,7 +35,7 @@ const HowWeApply = () => {
           {howWeApply.cta}
         </Typography>
 
-        <Box sx={{ marginBottom: theme.spacing(6) }}>
+        <Box sx={{ marginBottom: 6 }}>
           <ContactUsButton
             color="secondary"
             label={t('write')}
@@ -51,12 +50,11 @@ const HowWeApply = () => {
                 <Image
                   src={item.icon}
                   alt={item.title}
-                  width={88}
-                  height={88}
+                  width={48}
+                  height={48}
                   style={{ objectFit: 'contain' }}
                 />
               </Box>
-
               <Typography variant="h3" sx={styles.itemTitle}>
                 {item.title}
               </Typography>

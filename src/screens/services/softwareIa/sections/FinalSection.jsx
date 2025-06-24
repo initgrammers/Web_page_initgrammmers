@@ -13,7 +13,7 @@ const FinalSection = () => {
       description={softwareIaFinal.description}
       backgroundImage={softwareIaFinal.backgroundImage}
       heightImage={softwareIaFinal.heightImage}
-      backgroundColor="" 
+      imageFirst
     />
   );
 };

@@ -5,7 +5,7 @@ const useSoftwareIa = () => {
 
   const bannerSoftwareIa = {
     backgroundImage:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1750696661/servicios/software-ia/figures/bloque1.png',
+      'https://res.cloudinary.com/initgrammers/image/upload/v1750696661/servicios/software-ia/figures/bloque6.png',
     heightImage: 696,
     title: t('softwareIaBannerTitle'),
     description: t('softwareIaBannerDescription'),
@@ -16,7 +16,7 @@ const useSoftwareIa = () => {
 
   const softwareIaDevelopment = {
     backgroundImage:
-      'https://res.cloudinary.com/initgrammers/image/upload/v1750696661/servicios/software-ia/figures/bloque2.png',
+      'https://res.cloudinary.com/initgrammers/image/upload/v1750696661/servicios/software-ia/figures/bloque6.png',
     heightImage: 598,
     backgroundGray: true,
     title: t('softwareIaDevelopmentTitle'),
@@ -80,6 +80,7 @@ const useSoftwareIa = () => {
       lg: { width: 608, height: 496 },
     },
   };
+
   const questions = [
     {
       id: 0,
@@ -111,9 +112,7 @@ const useSoftwareIa = () => {
       title: t('mobileDevelopmentQuestion5'),
       details: t('mobileDevelopmentDetailsQuestion5'),
     },
-
   ];
-  
 
   return {
     bannerSoftwareIa,
