@@ -1,5 +1,5 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -18,19 +18,20 @@ import styles from './styles';
 const CustomFooter = () => {
   const { contactsLinks } = useContacts();
   const t = useTranslations('Index');
+  const locale = useLocale();
 
   const services = [
     {
       label: t('webDevelopment'),
-      href: routes.services.webDevelopment,
+      href: `/${locale}/${routes.services.webDevelopment}`,
     },
     {
       label: t('mobileDevelopment'),
-      href: routes.services.mobileDevelopment,
+      href: `/${locale}/${routes.services.mobileDevelopment}`,
     },
     {
       label: t('ux/uiDesign'),
-      href: routes.services.uxUiDesign,
+      href: `/${locale}/${routes.services.uxUiDesign}`,
     },
     // {
     //   label: 'Comercio Electrónico',
@@ -38,7 +39,7 @@ const CustomFooter = () => {
     // },
     {
       label: t('training'),
-      href: routes.services.trainings,
+      href: `/${locale}/${routes.services.trainings}`,
     },
     // {
     //   label: 'Marketing Digital',
@@ -46,17 +47,18 @@ const CustomFooter = () => {
     // },
     {
       label: 'Modelos de Partnership',
-      href: routes.services.partnershipModels,
+      href: `/${locale}/${routes.services.partnershipModels}`,
     },
   ];
 
   const portfolio = [
-    { label: t('portfolio'), href: routes.portfolio },
+    { label: t('portfolio'),
+      href: `/${locale}/${routes.portfolio}`,
+    },
     // { label: '¿Quiénes somos?', href: routes.aboutUs },
     // { label: 'Blog', href: routes.blog },
     // { label: 'Contacto', href: routes.contact },
   ];
-
   return (
     <>
       <ContactUs />
