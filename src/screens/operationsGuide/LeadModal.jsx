@@ -175,7 +175,7 @@ const LeadModal = ({ onClose }) => {
             <Typography component="h3" sx={modalStyles.title}>
               Descarga la guía gratis
             </Typography>
-            <Typography variant='body1' sx={modalStyles.subtitle}>
+            <Typography variant="body1" sx={modalStyles.subtitle}>
               Recíbela al instante. Sin spam, sin compromisos.
             </Typography>
             <Formik
