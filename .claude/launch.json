@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "initgrammers-dev",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "export PATH=\"$HOME/.nvm/versions/node/v20.19.4/bin:$PATH\" && npx next dev -p 3001"],
+      "port": 3001
+    }
+  ]
+}
