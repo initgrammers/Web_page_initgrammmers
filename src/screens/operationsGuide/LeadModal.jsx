@@ -221,7 +221,7 @@ const LeadModal = ({ onClose }) => {
                       sx={modalStyles.textField}
                     />
 
-                    <TextField
+                    {/* <TextField
                       id="f-web"
                       name="web"
                       label="Link de tu página web o LinkedIn"
@@ -330,7 +330,7 @@ const LeadModal = ({ onClose }) => {
                       >
                         {touched.telefono && errors.telefono ? errors.telefono : 'placeholder'}
                       </Typography>
-                    </Box>
+                    </Box> */}
 
                     <Button type="submit" fullWidth sx={sharedStyles.primaryButton}>
                       Descargar guía gratis
