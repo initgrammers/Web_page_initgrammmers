@@ -6,12 +6,14 @@ import AboutUsSeo from '#constants/seo/AboutUs';
 import Values from './sections/Values';
 import Organization from '#Components/StructuredData/Organization';
 import WebSite from '#Components/StructuredData/WebSite';
+import TeamSection from './sections/Team';
 
 const Index = () => (
   <>
     <Banner />
     <MisionVision />
     <Values />
+    <TeamSection />
 
     <Organization />
     <WebSite title={AboutUsSeo.title} url={AboutUsSeo.urlAltern} />
