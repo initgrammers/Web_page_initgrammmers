@@ -8,6 +8,7 @@ import {
   Dialog,
   DialogContent,
   IconButton,
+  // eslint-disable-next-line no-unused-vars -- only used by the fields commented out below
   MenuItem,
   Stack,
   TextField,
@@ -31,14 +32,18 @@ const gestionLabels = {
   otros: 'Otros',
 };
 
+// NOTE: web, gestion, personas and telefono are optional (not `.required()`) while their
+// fields stay commented out below — a visitor can never fill them in, so requiring them
+// would make the form impossible to submit. Restore `.required(...)` alongside the fields
+// if/when they're uncommented.
 const validationSchema = Yup.object({
   nombre: Yup.string().required('Ingresa tu nombre'),
   email: Yup.string().email('Ingresa un correo válido').required('Ingresa un correo válido'),
-  web: Yup.string().required('Ingresa un link'),
-  gestion: Yup.string().required('Selecciona una opción'),
-  personas: Yup.string().required('Selecciona una opción'),
+  web: Yup.string(),
+  gestion: Yup.string(),
+  personas: Yup.string(),
   codigoPais: Yup.string().required(),
-  telefono: Yup.string().matches(/^[\d\s-]{6,}$/, 'Ingresa un número válido').required('Ingresa un número válido'),
+  telefono: Yup.string().matches(/^[\d\s-]{6,}$/, { message: 'Ingresa un número válido', excludeEmptyString: true }),
 });
 
 const initialValues = {
@@ -51,6 +56,7 @@ const initialValues = {
   telefono: '',
 };
 
+// eslint-disable-next-line no-unused-vars -- only used by the fields commented out below
 const gestionOptions = [
   { value: '', label: 'Selecciona una opción' },
   { value: 'excel', label: 'Excel / WhatsApp' },
@@ -59,6 +65,7 @@ const gestionOptions = [
   { value: 'otros', label: 'Otros' },
 ];
 
+// eslint-disable-next-line no-unused-vars -- only used by the fields commented out below
 const personasOptions = [
   { value: '', label: 'Selecciona una opción' },
   { value: '1-10', label: '1 – 10' },
@@ -67,6 +74,7 @@ const personasOptions = [
   { value: '500+', label: 'Más de 500' },
 ];
 
+// eslint-disable-next-line no-unused-vars -- only used by the fields commented out below
 const countryOptions = [
   { value: '+593', label: '🇪🇨 +593' },
   { value: '+57', label: '🇨🇴 +57' },
@@ -79,6 +87,7 @@ const countryOptions = [
   { value: '+1', label: '🇺🇸 +1' },
 ];
 
+// eslint-disable-next-line no-unused-vars -- only used by the fields commented out below
 const menuProps = {
   PaperProps: {
     sx: {
@@ -138,12 +147,20 @@ const LeadModal = ({ onClose }) => {
     const templateId = 'template_zk2w0sn';
     const publicKey = '4cRPDSCYZBosbpavf';
 
+    // web, gestion and personas are only collected once their fields are uncommented;
+    // skip blank lines in the email for whichever ones weren't filled in.
+    const detailLines = [
+      values.web && `Web/LinkedIn: ${values.web}`,
+      values.gestion && `Cómo gestiona la operación hoy: ${gestionLabels[values.gestion] || values.gestion}`,
+      values.personas && `Personas en la operación: ${values.personas}`,
+    ].filter(Boolean);
+
     const templateParams = {
       name: values.nombre,
       lastname: '(Lead: Guía Operativa Logística)',
       email: values.email,
-      phone: `${values.codigoPais} ${values.telefono}`,
-      message: `Web/LinkedIn: ${values.web}\nCómo gestiona la operación hoy: ${gestionLabels[values.gestion] || values.gestion}\nPersonas en la operación: ${values.personas}`,
+      phone: values.telefono ? `${values.codigoPais} ${values.telefono}` : '',
+      message: detailLines.join('\n'),
     };
 
     await Promise.allSettled([
@@ -221,7 +238,7 @@ const LeadModal = ({ onClose }) => {
                       sx={modalStyles.textField}
                     />
 
-                    <TextField
+                    {/* <TextField
                       id="f-web"
                       name="web"
                       label="Link de tu página web o LinkedIn"
@@ -324,13 +341,15 @@ const LeadModal = ({ onClose }) => {
                         sx={{
                           mt: 0.625,
                           minHeight: 20,
-                          color: touched.telefono && errors.telefono ? colors.errorText : 'transparent',
+                          color: touched.telefono && errors.telefono
+                            ? colors.errorText
+                            : 'transparent',
                           fontSize: '0.75rem',
                         }}
                       >
                         {touched.telefono && errors.telefono ? errors.telefono : 'placeholder'}
                       </Typography>
-                    </Box>
+                    </Box> */}
 
                     <Button type="submit" fullWidth sx={sharedStyles.primaryButton}>
                       Descargar guía gratis
