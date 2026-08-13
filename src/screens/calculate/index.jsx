@@ -25,20 +25,6 @@ const clientLogos = [
   '/assets/images/client-logos/image6.png',
 ];
 
-const cases = [
-  { icon: '🏢', title: 'Holding Logístico', value: '200k USD ahorrado en 12 meses' },
-  { icon: '📦', title: 'Operador Terrestre', value: '42% menos retrabajo' },
-  { icon: '✈️', title: 'Carga Aérea', value: '99% menos trabajo manual' },
-];
-
-const testimonials = [
-  {
-    quote: '"Junto a Initgrammers, optimizamos los procesos de bodegaje en el aeropuerto y logramos reducir $200,000 USD en solo 3 meses. Para el cierre de 2026, proyectamos superar el medio millón de dólares en ahorros. Es un equipo disciplinado, multifuncional y un verdadero aliado estratégico para nuestro negocio."',
-    name: 'Manuel Pillapa',
-    role: 'Business Analytics/Grupo TransOceanica',
-  },
-];
-
 const initialInputs = {
   guias: String(DEFAULTS.guias),
   personas: String(DEFAULTS.personas),
@@ -142,24 +128,6 @@ const Calculate = () => {
         </Box>
       </Box>
 
-      <Box component="section" sx={ps.logoBarSection}>
-        <Typography sx={ps.logoBarLabel}>
-          Operaciones que ya controlan su logística
-        </Typography>
-        <Box sx={ps.logoStrip}>
-          {clientLogos.map((logoSrc, index) => (
-            <Box key={logoSrc} sx={ps.logoChip}>
-              <Box
-                component="img"
-                src={logoSrc}
-                alt={`Logo de cliente ${index + 1}`}
-                sx={ps.logoImage}
-              />
-            </Box>
-          ))}
-        </Box>
-      </Box>
-
       <Box id="calculadora" component="section" sx={ps.section}>
         <Box sx={sharedStyles.container} mx="auto">
           <Box sx={sharedStyles.stepBadge}>01</Box>
@@ -178,34 +146,21 @@ const Calculate = () => {
         <Box sx={sharedStyles.container} mx="auto">
           <Box sx={sharedStyles.stepBadge}>02</Box>
           <Box component="span" sx={sharedStyles.stepLabel}>PRUEBA SOCIAL</Box>
-          <Typography component="h2" sx={ps.sectionTitle}>¿De dónde sale este cálculo?</Typography>
-   
-
-          <Box sx={ps.caseGrid}>
-            {cases.map((c) => (
-              <Box key={c.title} sx={ps.caseCard}>
-                <Typography sx={ps.caseIcon}>{c.icon}</Typography>
-                <Typography sx={ps.caseTitle}>{c.title}</Typography>
-                <Typography sx={ps.caseValue}>{c.value}</Typography>
-              </Box>
-            ))}
-          </Box>
-
-          <Typography sx={ps.quoteLabel}>Lo que dicen operaciones como la tuya</Typography>
-          <Box sx={ps.testimonialGrid}>
-            {testimonials.map((t) => (
-              <Box key={t.name} sx={ps.testimonialCard}>
-                <Typography sx={ps.testimonialQuote}>{t.quote}</Typography>
-                <Typography sx={ps.testimonialName}>{t.name}</Typography>
-                <Typography sx={ps.testimonialRole}>{t.role}</Typography>
-              </Box>
-            ))}
-          </Box>
-
-          <Typography sx={ps.methodologyNote}>
-            Esta calculadora replica la metodología con la que InitGrammers
-            diagnosticó +35 operaciones logísticas en los últimos 2 años.
+          <Typography sx={{ ...ps.logoBarLabel, mt: 4 }}>
+            Operaciones que ya controlan su logística
           </Typography>
+          <Box sx={ps.logoStrip}>
+            {clientLogos.map((logoSrc, index) => (
+              <Box key={logoSrc} sx={ps.logoChip}>
+                <Box
+                  component="img"
+                  src={logoSrc}
+                  alt={`Logo de cliente ${index + 1}`}
+                  sx={ps.logoImage}
+                />
+              </Box>
+            ))}
+          </Box>
         </Box>
       </Box>
 
@@ -222,11 +177,6 @@ const Calculate = () => {
           Init
           <Box component="span" sx={{ color: colors.accent }}>Grammers</Box>
         </Typography>
-        <Box sx={ps.footerLinks}>
-          <Box component="a" href="#" sx={ps.footerLink}>Política de privacidad</Box>
-          <Box component="a" href="#" sx={ps.footerLink}>Términos y condiciones</Box>
-          <Box component="a" href="#" sx={ps.footerLink}>Contacto</Box>
-        </Box>
         <Typography sx={ps.footerMuted}>info@initgrammers.com</Typography>
         <Typography sx={ps.footerMuted}>
           © 2026 InitGrammers — Software para Operaciones Logísticas
