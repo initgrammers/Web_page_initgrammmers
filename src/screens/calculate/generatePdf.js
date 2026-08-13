@@ -305,7 +305,7 @@ const generateReportPdfBlob = (results, leadData) => {
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(10);
   doc.setTextColor(...MUTED);
-  doc.text('info@initgrammers.com · +51 XXX XXX XXX', MX, y);
+  doc.text('info@initgrammers.com', MX, y);
   footer(5, TOTAL_PAGES);
 
   return doc.output('blob');

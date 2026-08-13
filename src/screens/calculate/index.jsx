@@ -15,7 +15,15 @@ const stats = [
   { num: '1.5-2h', label: 'recuperadas por turno sin coordinación manual' },
 ];
 
-const clientLogos = ['CargoNorte', 'FlotaXpress', 'BodegaPrime', 'RutaSur Holding', 'TransAndes'];
+const clientLogos = [
+  '/assets/images/client-logos/image.png',
+  '/assets/images/client-logos/image1.png',
+  '/assets/images/client-logos/image2.png',
+  '/assets/images/client-logos/image3.png',
+  '/assets/images/client-logos/image4.png',
+  '/assets/images/client-logos/image5.png',
+  '/assets/images/client-logos/image6.png',
+];
 
 const cases = [
   { icon: '🏢', title: 'Holding Logístico', value: '200k USD ahorrado en 12 meses' },
@@ -25,19 +33,9 @@ const cases = [
 
 const testimonials = [
   {
-    quote: '"Dejamos de perseguir a la gente por WhatsApp. Ahora sabemos dónde está cada carga en segundos."',
-    name: 'Camila Restrepo',
-    role: 'Gerente de Operaciones, ejemplo',
-  },
-  {
-    quote: '"El reporte semanal que nos tomaba un día completo ahora se arma solo."',
-    name: 'Andrés Molina',
-    role: 'Jefe de Flota, ejemplo',
-  },
-  {
-    quote: '"Nos enteramos de los problemas antes que el cliente llame. Eso cambió la relación con nuestras cuentas grandes."',
-    name: 'Laura Gómez',
-    role: 'Directora Logística, ejemplo',
+    quote: '"Junto a Initgrammers, optimizamos los procesos de bodegaje en el aeropuerto y logramos reducir $200,000 USD en solo 3 meses. Para el cierre de 2026, proyectamos superar el medio millón de dólares en ahorros. Es un equipo disciplinado, multifuncional y un verdadero aliado estratégico para nuestro negocio."',
+    name: 'Manuel Pillapa',
+    role: 'Business Analytics/Grupo TransOceanica',
   },
 ];
 
@@ -93,9 +91,6 @@ const Calculate = () => {
             <Typography component="span" sx={ps.wordmarkSub}>· Logística Operativa</Typography>
           </Box>
         </Box>
-        <Box component="a" href="#formulario" sx={ps.navCta}>
-          Agenda Demo
-        </Box>
       </Box>
 
       <Box component="section" sx={ps.heroSection}>
@@ -150,12 +145,17 @@ const Calculate = () => {
       <Box component="section" sx={ps.logoBarSection}>
         <Typography sx={ps.logoBarLabel}>
           Operaciones que ya controlan su logística
-          {' '}
-          <Box component="span" sx={{ color: colors.accent }}>EJEMPLO</Box>
         </Typography>
         <Box sx={ps.logoStrip}>
-          {clientLogos.map((name) => (
-            <Box key={name} sx={ps.logoChip}>{name}</Box>
+          {clientLogos.map((logoSrc, index) => (
+            <Box key={logoSrc} sx={ps.logoChip}>
+              <Box
+                component="img"
+                src={logoSrc}
+                alt={`Logo de cliente ${index + 1}`}
+                sx={ps.logoImage}
+              />
+            </Box>
           ))}
         </Box>
       </Box>
@@ -179,16 +179,11 @@ const Calculate = () => {
           <Box sx={sharedStyles.stepBadge}>02</Box>
           <Box component="span" sx={sharedStyles.stepLabel}>PRUEBA SOCIAL</Box>
           <Typography component="h2" sx={ps.sectionTitle}>¿De dónde sale este cálculo?</Typography>
-          <Typography sx={ps.sectionSubtitle}>
-            Casos ilustrativos — reemplázalos con tus propios clientes.
-          </Typography>
+   
 
           <Box sx={ps.caseGrid}>
             {cases.map((c) => (
               <Box key={c.title} sx={ps.caseCard}>
-                <Box sx={ps.caseBadge}>
-                  <Box component="span" sx={sharedStyles.exampleBadge}>EJEMPLO</Box>
-                </Box>
                 <Typography sx={ps.caseIcon}>{c.icon}</Typography>
                 <Typography sx={ps.caseTitle}>{c.title}</Typography>
                 <Typography sx={ps.caseValue}>{c.value}</Typography>
@@ -200,9 +195,6 @@ const Calculate = () => {
           <Box sx={ps.testimonialGrid}>
             {testimonials.map((t) => (
               <Box key={t.name} sx={ps.testimonialCard}>
-                <Box sx={ps.caseBadge}>
-                  <Box component="span" sx={sharedStyles.exampleBadge}>EJEMPLO</Box>
-                </Box>
                 <Typography sx={ps.testimonialQuote}>{t.quote}</Typography>
                 <Typography sx={ps.testimonialName}>{t.name}</Typography>
                 <Typography sx={ps.testimonialRole}>{t.role}</Typography>
@@ -235,7 +227,7 @@ const Calculate = () => {
           <Box component="a" href="#" sx={ps.footerLink}>Términos y condiciones</Box>
           <Box component="a" href="#" sx={ps.footerLink}>Contacto</Box>
         </Box>
-        <Typography sx={ps.footerMuted}>+51 XXX XXX XXX · ventas@initgrammers.com</Typography>
+        <Typography sx={ps.footerMuted}>info@initgrammers.com</Typography>
         <Typography sx={ps.footerMuted}>
           © 2026 InitGrammers — Software para Operaciones Logísticas
         </Typography>
