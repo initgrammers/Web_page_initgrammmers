@@ -25,6 +25,7 @@
     "clsx": "1.1.1",
     "cross-env": "7.0.3",
     "formik": "^2.4.6",
+    "jspdf": "^4.2.1",
     "next": "^14.2.3",
     "next-intl": "^3.17.2",
     "next-nprogress": "^1.4.0",
